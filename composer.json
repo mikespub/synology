@@ -1,7 +1,7 @@
 {
     "name": "mikespub/synology",
     "description": "Synology API interface",
-    "homepage": "https://github.com/zzarbi/synology",
+    "homepage": "https://github.com/mikespub/synology",
     "keywords" : [
         "synology",
         "nas",
@@ -17,18 +17,23 @@
         {
             "name": "Quentin SOMAZZI",
             "homepage": "http://qsomazzi.fr/"
+        },
+        {
+            "name": "mikespub",
+            "homepage": "https://github.com/mikespub/synology"
         }
     ],
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-        "php": ">=8.1"
+        "php": ">=8.2"
     },
     "require-dev": {
-        "justinrainbow/json-schema": "6.x-dev",
-        "vlucas/phpdotenv": "^5.6@dev"
+        "justinrainbow/json-schema": "^6.4",
+        "vlucas/phpdotenv": "^5.6"
     },
     "support": {
-        "issues": "https://github.com/zzarbi/synology/issues"
+        "issues": "https://github.com/mikespub/synology/issues"
     },
     "autoload": {
         "psr-4": {
