@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -447,6 +446,40 @@ paths:
         - SAS.Guest
       summary: Return get for SYNO.SAS.Guest
       operationId: Guest_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SAS.Guest/v1/get_email:
+    get:
+      tags:
+        - SAS.Guest
+      summary: Return get_email for SYNO.SAS.Guest
+      operationId: Guest_get_email
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SAS.Guest/v1/get_package_url:
+    get:
+      tags:
+        - SAS.Guest
+      summary: Return get_package_url for SYNO.SAS.Guest
+      operationId: Guest_get_package_url
       responses:
         '200':
           description: Normal Response

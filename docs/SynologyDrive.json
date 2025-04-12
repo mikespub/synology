@@ -1,0 +1,1033 @@
+{
+    "SYNO.SynologyDrive": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_status",
+                "get_directory_service_status",
+                "get_extension",
+                "get_client_link",
+                "check_user",
+                "delete_database",
+                "resume_freeze"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Activation": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.AdvanceSharing": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/advance-sharing/SYNO.SynologyDrive.AdvanceSharing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "update",
+                "create",
+                "delete",
+                "verify"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.AdvanceSharing.Public": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/advance-sharing-public/SYNO.SynologyDrive.AdvanceSharing.Public.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "auth"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.AppIntegration": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/app-integration/SYNO.SynologyDrive.AppIntegration.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "update",
+                "create",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Authentication": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/authentication/SYNO.SynologyDrive.Authentication.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "authenticate_by_dsm",
+                "revoke"
+            ],
+            "2": [
+                "authenticate_by_dsm",
+                "revoke",
+                "set_active"
+            ],
+            "3": [
+                "authenticate_by_dsm",
+                "revoke",
+                "set_active"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Config": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Connection": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "delete"
+            ],
+            "2": [
+                "list",
+                "delete",
+                "summary"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.DBUsage": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "status",
+                "start",
+                "stop",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.DSM": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/dsm/SYNO.SynologyDrive.DSM.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Dashboard": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "top_access_files"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Files": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/file/SYNO.SynologyDrive.File.so",
+        "maxVersion": 10,
+        "methods": {
+            "1": [
+                "convert_office",
+                "list",
+                "shared_with_me",
+                "shared_with_others",
+                "get",
+                "update",
+                "download",
+                "create",
+                "upload",
+                "upload_from_dsm",
+                "delete",
+                "copy",
+                "move",
+                "search",
+                "recent",
+                "label",
+                "star",
+                "list_labelled",
+                "list_starred",
+                "request_access",
+                "get_thumbnail",
+                "list_ancestor"
+            ],
+            "10": [
+                "convert_office",
+                "copy",
+                "create",
+                "delete",
+                "download",
+                "list",
+                "get",
+                "label",
+                "list_starred",
+                "recent",
+                "shared_with_me",
+                "list_labelled",
+                "list_ancestor",
+                "shared_with_others",
+                "move",
+                "request_access",
+                "search",
+                "star",
+                "get_thumbnail",
+                "update",
+                "upload",
+                "upload_from_dsm",
+                "list_backup_tasks"
+            ],
+            "2": [
+                "convert_office",
+                "list",
+                "shared_with_me",
+                "shared_with_others",
+                "get",
+                "update",
+                "download",
+                "create",
+                "upload",
+                "upload_from_dsm",
+                "delete",
+                "copy",
+                "move",
+                "search",
+                "recent",
+                "label",
+                "star",
+                "list_labelled",
+                "list_starred",
+                "request_access",
+                "get_thumbnail",
+                "list_ancestor"
+            ],
+            "3": [
+                "convert_office",
+                "list",
+                "shared_with_me",
+                "shared_with_others",
+                "get",
+                "update",
+                "download",
+                "create",
+                "upload",
+                "upload_from_dsm",
+                "delete",
+                "copy",
+                "move",
+                "search",
+                "recent",
+                "label",
+                "star",
+                "list_labelled",
+                "list_starred",
+                "request_access",
+                "get_thumbnail",
+                "list_ancestor",
+                "list_backup_tasks"
+            ],
+            "4": [
+                "convert_office",
+                "list",
+                "shared_with_me",
+                "shared_with_others",
+                "get",
+                "update",
+                "download",
+                "create",
+                "upload",
+                "upload_from_dsm",
+                "delete",
+                "copy",
+                "move",
+                "search",
+                "recent",
+                "label",
+                "star",
+                "list_labelled",
+                "list_starred",
+                "request_access",
+                "get_thumbnail",
+                "list_ancestor",
+                "list_backup_tasks"
+            ],
+            "5": [
+                "convert_office",
+                "list",
+                "shared_with_me",
+                "shared_with_others",
+                "get",
+                "update",
+                "download",
+                "create",
+                "upload",
+                "upload_from_dsm",
+                "delete",
+                "copy",
+                "move",
+                "search",
+                "recent",
+                "label",
+                "star",
+                "list_labelled",
+                "list_starred",
+                "request_access",
+                "get_thumbnail",
+                "list_ancestor",
+                "list_backup_tasks"
+            ],
+            "6": [
+                "convert_office",
+                "list",
+                "shared_with_me",
+                "shared_with_others",
+                "get",
+                "update",
+                "download",
+                "create",
+                "upload",
+                "upload_from_dsm",
+                "delete",
+                "copy",
+                "move",
+                "search",
+                "recent",
+                "label",
+                "star",
+                "list_labelled",
+                "list_starred",
+                "request_access",
+                "get_thumbnail",
+                "list_ancestor",
+                "list_backup_tasks"
+            ],
+            "7": [
+                "convert_office",
+                "list",
+                "shared_with_me",
+                "shared_with_others",
+                "get",
+                "update",
+                "download",
+                "create",
+                "upload",
+                "upload_from_dsm",
+                "delete",
+                "copy",
+                "move",
+                "search",
+                "recent",
+                "label",
+                "star",
+                "list_labelled",
+                "list_starred",
+                "request_access",
+                "get_thumbnail",
+                "list_ancestor",
+                "list_backup_tasks"
+            ],
+            "8": [
+                "convert_office",
+                "list",
+                "shared_with_me",
+                "shared_with_others",
+                "get",
+                "update",
+                "download",
+                "create",
+                "upload",
+                "upload_from_dsm",
+                "delete",
+                "copy",
+                "move",
+                "search",
+                "recent",
+                "label",
+                "star",
+                "list_labelled",
+                "list_starred",
+                "request_access",
+                "get_thumbnail",
+                "list_ancestor",
+                "list_backup_tasks"
+            ],
+            "9": [
+                "convert_office",
+                "list",
+                "shared_with_me",
+                "shared_with_others",
+                "get",
+                "update",
+                "download",
+                "create",
+                "upload",
+                "upload_from_dsm",
+                "delete",
+                "copy",
+                "move",
+                "search",
+                "recent",
+                "label",
+                "star",
+                "list_labelled",
+                "list_starred",
+                "request_access",
+                "get_thumbnail",
+                "list_ancestor",
+                "list_backup_tasks"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.HybridShare.Privilege": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "update"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Index": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_native_client_status",
+                "set_native_client_index_pause"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Info": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/info/SYNO.SynologyDrive.Info.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "noop"
+            ],
+            "2": [
+                "get",
+                "noop",
+                "quota"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.KeyManagement": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set",
+                "delete",
+                "export",
+                "import"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Labels": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/labels/SYNO.SynologyDrive.Labels.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "create",
+                "update",
+                "delete"
+            ],
+            "2": [
+                "list",
+                "create",
+                "update",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Log": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "delete",
+                "export"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Metrics": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/metrics/SYNO.SynologyDrive.Metrics.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Metrics.Token": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/metrics-token/SYNO.SynologyDrive.Metrics.Token.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "refresh"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Migration": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/migration/SYNO.SynologyDrive.Migration.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "import_trash",
+                "import"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Migration.UserHome": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/migration-userhome/SYNO.SynologyDrive.Migration.UserHome.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Mobile.Notification": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/mobile-notification/SYNO.SynologyDrive.Mobile.Notification.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "unsubscribe",
+                "subscribe",
+                "unpair",
+                "pair"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Node": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "list_parent",
+                "list_version",
+                "dry_run"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Node.Delete": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "set_schedule",
+                "get_schedule"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Node.Download": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "stop",
+                "finish"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Node.Restore": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "finish"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Notifications": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/notifications/SYNO.SynologyDrive.Notifications.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "create",
+                "list",
+                "delete"
+            ],
+            "2": [
+                "create",
+                "list",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Office": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/office/SYNO.SynologyDrive.Office.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Photos": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/photos/SYNO.SynologyDrive.Photos.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "get_metadata"
+            ],
+            "2": [
+                "get_metadata",
+                "list",
+                "upload"
+            ],
+            "3": [
+                "get_metadata",
+                "list",
+                "upload"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Privilege": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "set",
+                "status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Profiles": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "set",
+                "delete",
+                "get_sync_profiles"
+            ],
+            "2": [
+                "list",
+                "set",
+                "delete",
+                "get_sync_profiles"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Revisions": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/revision/SYNO.SynologyDrive.Revision.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "download",
+                "restore"
+            ],
+            "2": [
+                "list",
+                "download",
+                "restore"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.SCIM.Photo": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/scim/SYNO.SynologyDrive.SCIM.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.SCIM.User": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/scim/SYNO.SynologyDrive.SCIM.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Services.DocumentViewer": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/services/SYNO.SynologyDrive.Services.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Services.SynologyChat": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/chat/SYNO.SynologyDrive.Chat.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "bind",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Services.VideoStation": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/services/SYNO.SynologyDrive.Services.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Settings": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/settings/SYNO.SynologyDrive.Settings.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "update"
+            ],
+            "2": [
+                "list",
+                "update",
+                "list_targets"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Shard": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/shard/SYNO.SynologyDrive.Shard.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "getjs",
+                "init"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Share": {
+        "lib": "/var/packages/SynologyDrive/target/lib/SYNO.SynologyDrive.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list_active",
+                "list",
+                "set",
+                "get_hybrid_share_rotate_span",
+                "migrate_index_home",
+                "get_migrate_index_home_config"
+            ],
+            "2": [
+                "list_active",
+                "set",
+                "list",
+                "get_hybrid_share_rotate_span",
+                "migrate_index_home",
+                "get_migrate_index_home_config"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Share.Priv": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/share/SYNO.SynologyDrive.Share.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Sharing": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/sharing/SYNO.SynologyDrive.Sharing.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "update",
+                "create_link",
+                "use_link",
+                "sync_to_device"
+            ],
+            "2": [
+                "create_link",
+                "list",
+                "update",
+                "use_link",
+                "sync_to_device",
+                "get_base_url"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Sharing.Report": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/sharing-report/SYNO.SynologyDrive.Sharing.Report.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list_target",
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Statistics": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/statistics/SYNO.SynologyDrive.Statistics.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.String": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/string/SYNO.SynologyDrive.String.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Tasks": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/tasks/SYNO.SynologyDrive.Tasks.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "delete",
+                "get",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.TeamFolders": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/team-folder/SYNO.SynologyDrive.TeamFolder.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "list_members"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Trash": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/trash/SYNO.SynologyDrive.Trash.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "list_ancestor",
+                "empty"
+            ],
+            "2": [
+                "list",
+                "list_ancestor",
+                "empty",
+                "get_size"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Users": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/users/SYNO.SynologyDrive.Users.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "update",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDrive.Webhooks": {
+        "lib": "/var/packages/SynologyDrive/target/webapi/drive/webhooks/SYNO.SynologyDrive.Webhooks.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "create",
+                "delete",
+                "get",
+                "list",
+                "update"
+            ],
+            "2": [
+                "create",
+                "get",
+                "update",
+                "delete",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

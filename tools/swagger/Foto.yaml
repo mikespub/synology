@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -288,7 +287,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Album/v2/count:
+  /SYNO.Foto.Browse.Album/v5/count:
     get:
       tags:
         - Foto.Browse
@@ -305,7 +304,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Album/v2/delete:
+  /SYNO.Foto.Browse.Album/v5/delete:
     get:
       tags:
         - Foto.Browse
@@ -322,7 +321,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Album/v2/download:
+  /SYNO.Foto.Browse.Album/v5/download:
     get:
       tags:
         - Foto.Browse
@@ -339,12 +338,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Album/v2/get:
+  /SYNO.Foto.Browse.Album/v5/get_album_list_display:
     get:
       tags:
         - Foto.Browse
-      summary: Return get for SYNO.Foto.Browse.Album
-      operationId: Browse_Album_get
+      summary: Return get_album_list_display for SYNO.Foto.Browse.Album
+      operationId: Browse_Album_get_album_list_display
       responses:
         '200':
           description: Normal Response
@@ -356,7 +355,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Album/v2/get_album_list_order:
+  /SYNO.Foto.Browse.Album/v5/get_album_list_order:
     get:
       tags:
         - Foto.Browse
@@ -373,7 +372,24 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Album/v2/list:
+  /SYNO.Foto.Browse.Album/v5/get:
+    get:
+      tags:
+        - Foto.Browse
+      summary: Return get for SYNO.Foto.Browse.Album
+      operationId: Browse_Album_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Browse.Album/v5/list:
     get:
       tags:
         - Foto.Browse
@@ -390,7 +406,24 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Album/v2/set_album_list_order:
+  /SYNO.Foto.Browse.Album/v5/set_album_list_display:
+    get:
+      tags:
+        - Foto.Browse
+      summary: Return set_album_list_display for SYNO.Foto.Browse.Album
+      operationId: Browse_Album_set_album_list_display
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Browse.Album/v5/set_album_list_order:
     get:
       tags:
         - Foto.Browse
@@ -407,7 +440,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Album/v2/set_cover:
+  /SYNO.Foto.Browse.Album/v5/set_cover:
     get:
       tags:
         - Foto.Browse
@@ -424,7 +457,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Album/v2/set_name:
+  /SYNO.Foto.Browse.Album/v5/set_name:
     get:
       tags:
         - Foto.Browse
@@ -441,7 +474,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Album/v2/set_order:
+  /SYNO.Foto.Browse.Album/v5/set_order:
     get:
       tags:
         - Foto.Browse
@@ -458,7 +491,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Category/v1/get:
+  /SYNO.Foto.Browse.Category/v2/get:
     get:
       tags:
         - Foto.Browse
@@ -475,7 +508,109 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.ConditionAlbum/v2/count:
+  /SYNO.Foto.Browse.Concept/v2/count:
+    get:
+      tags:
+        - Foto.Browse
+      summary: Return count for SYNO.Foto.Browse.Concept
+      operationId: Browse_Concept_count
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Browse.Concept/v2/get:
+    get:
+      tags:
+        - Foto.Browse
+      summary: Return get for SYNO.Foto.Browse.Concept
+      operationId: Browse_Concept_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Browse.Concept/v2/hide_item:
+    get:
+      tags:
+        - Foto.Browse
+      summary: Return hide_item for SYNO.Foto.Browse.Concept
+      operationId: Browse_Concept_hide_item
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Browse.Concept/v2/list:
+    get:
+      tags:
+        - Foto.Browse
+      summary: Return list for SYNO.Foto.Browse.Concept
+      operationId: Browse_Concept_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Browse.Concept/v2/set_cover:
+    get:
+      tags:
+        - Foto.Browse
+      summary: Return set_cover for SYNO.Foto.Browse.Concept
+      operationId: Browse_Concept_set_cover
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Browse.Concept/v2/set_visibility:
+    get:
+      tags:
+        - Foto.Browse
+      summary: Return set_visibility for SYNO.Foto.Browse.Concept
+      operationId: Browse_Concept_set_visibility
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Browse.ConditionAlbum/v3/count:
     get:
       tags:
         - Foto.Browse
@@ -492,7 +627,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.ConditionAlbum/v2/create:
+  /SYNO.Foto.Browse.ConditionAlbum/v3/create:
     get:
       tags:
         - Foto.Browse
@@ -509,7 +644,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.ConditionAlbum/v2/get:
+  /SYNO.Foto.Browse.ConditionAlbum/v3/get:
     get:
       tags:
         - Foto.Browse
@@ -526,7 +661,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.ConditionAlbum/v2/list:
+  /SYNO.Foto.Browse.ConditionAlbum/v3/list:
     get:
       tags:
         - Foto.Browse
@@ -543,7 +678,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.ConditionAlbum/v2/peek_item_count:
+  /SYNO.Foto.Browse.ConditionAlbum/v3/peek_item_count:
     get:
       tags:
         - Foto.Browse
@@ -560,7 +695,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.ConditionAlbum/v2/set_condition:
+  /SYNO.Foto.Browse.ConditionAlbum/v3/set_condition:
     get:
       tags:
         - Foto.Browse
@@ -577,7 +712,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.ConditionAlbum/v2/suggest:
+  /SYNO.Foto.Browse.ConditionAlbum/v3/suggest:
     get:
       tags:
         - Foto.Browse
@@ -594,7 +729,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Diff/v3/get:
+  /SYNO.Foto.Browse.Diff/v5/get:
     get:
       tags:
         - Foto.Browse
@@ -611,7 +746,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Diff/v3/get_version:
+  /SYNO.Foto.Browse.Diff/v5/get_version:
     get:
       tags:
         - Foto.Browse
@@ -628,7 +763,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Diff/v3/list_item:
+  /SYNO.Foto.Browse.Diff/v5/list_item:
     get:
       tags:
         - Foto.Browse
@@ -951,7 +1086,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/add_tag:
+  /SYNO.Foto.Browse.Item/v6/add_tag:
     get:
       tags:
         - Foto.Browse
@@ -968,7 +1103,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/copy:
+  /SYNO.Foto.Browse.Item/v6/copy:
     get:
       tags:
         - Foto.Browse
@@ -985,7 +1120,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/count:
+  /SYNO.Foto.Browse.Item/v6/count:
     get:
       tags:
         - Foto.Browse
@@ -1002,7 +1137,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/count_with_filter:
+  /SYNO.Foto.Browse.Item/v6/count_with_filter:
     get:
       tags:
         - Foto.Browse
@@ -1019,7 +1154,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/delete:
+  /SYNO.Foto.Browse.Item/v6/delete:
     get:
       tags:
         - Foto.Browse
@@ -1036,7 +1171,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/get_exif:
+  /SYNO.Foto.Browse.Item/v6/get_exif:
     get:
       tags:
         - Foto.Browse
@@ -1053,7 +1188,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/get_tag:
+  /SYNO.Foto.Browse.Item/v6/get_tag:
     get:
       tags:
         - Foto.Browse
@@ -1070,7 +1205,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/get:
+  /SYNO.Foto.Browse.Item/v6/get:
     get:
       tags:
         - Foto.Browse
@@ -1087,12 +1222,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/list:
+  /SYNO.Foto.Browse.Item/v6/list_all:
     get:
       tags:
         - Foto.Browse
-      summary: Return list for SYNO.Foto.Browse.Item
-      operationId: Browse_Item_list
+      summary: Return list_all for SYNO.Foto.Browse.Item
+      operationId: Browse_Item_list_all
       responses:
         '200':
           description: Normal Response
@@ -1104,7 +1239,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/list_basic_timeline_info:
+  /SYNO.Foto.Browse.Item/v6/list_basic_timeline_info:
     get:
       tags:
         - Foto.Browse
@@ -1121,7 +1256,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/list_basic_timeline_info_with_filter:
+  /SYNO.Foto.Browse.Item/v6/list_basic_timeline_info_with_filter:
     get:
       tags:
         - Foto.Browse
@@ -1138,7 +1273,24 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/list_with_filter:
+  /SYNO.Foto.Browse.Item/v6/list:
+    get:
+      tags:
+        - Foto.Browse
+      summary: Return list for SYNO.Foto.Browse.Item
+      operationId: Browse_Item_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Browse.Item/v6/list_with_filter:
     get:
       tags:
         - Foto.Browse
@@ -1155,7 +1307,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/move:
+  /SYNO.Foto.Browse.Item/v6/move:
     get:
       tags:
         - Foto.Browse
@@ -1172,7 +1324,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/remove_tag:
+  /SYNO.Foto.Browse.Item/v6/remove_tag:
     get:
       tags:
         - Foto.Browse
@@ -1189,7 +1341,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/rename:
+  /SYNO.Foto.Browse.Item/v6/rename:
     get:
       tags:
         - Foto.Browse
@@ -1206,7 +1358,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Item/v2/set:
+  /SYNO.Foto.Browse.Item/v6/set:
     get:
       tags:
         - Foto.Browse
@@ -1223,7 +1375,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.NormalAlbum/v2/add_item:
+  /SYNO.Foto.Browse.NormalAlbum/v3/add_item:
     get:
       tags:
         - Foto.Browse
@@ -1240,7 +1392,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.NormalAlbum/v2/copy:
+  /SYNO.Foto.Browse.NormalAlbum/v3/copy:
     get:
       tags:
         - Foto.Browse
@@ -1257,7 +1409,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.NormalAlbum/v2/count:
+  /SYNO.Foto.Browse.NormalAlbum/v3/count:
     get:
       tags:
         - Foto.Browse
@@ -1274,7 +1426,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.NormalAlbum/v2/create:
+  /SYNO.Foto.Browse.NormalAlbum/v3/create:
     get:
       tags:
         - Foto.Browse
@@ -1291,7 +1443,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.NormalAlbum/v2/delete_item:
+  /SYNO.Foto.Browse.NormalAlbum/v3/delete_item:
     get:
       tags:
         - Foto.Browse
@@ -1308,7 +1460,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.NormalAlbum/v2/get:
+  /SYNO.Foto.Browse.NormalAlbum/v3/get:
     get:
       tags:
         - Foto.Browse
@@ -1325,7 +1477,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.NormalAlbum/v2/list:
+  /SYNO.Foto.Browse.NormalAlbum/v3/list:
     get:
       tags:
         - Foto.Browse
@@ -1342,7 +1494,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.NormalAlbum/v2/set_unfreeze:
+  /SYNO.Foto.Browse.NormalAlbum/v3/set_unfreeze:
     get:
       tags:
         - Foto.Browse
@@ -1563,7 +1715,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.RecentlyAdded/v3/count:
+  /SYNO.Foto.Browse.RecentlyAdded/v5/count:
     get:
       tags:
         - Foto.Browse
@@ -1580,7 +1732,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.RecentlyAdded/v3/get_timeline:
+  /SYNO.Foto.Browse.RecentlyAdded/v5/get_timeline:
     get:
       tags:
         - Foto.Browse
@@ -1597,7 +1749,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.RecentlyAdded/v3/list_basic_timeline_info:
+  /SYNO.Foto.Browse.RecentlyAdded/v5/list_basic_timeline_info:
     get:
       tags:
         - Foto.Browse
@@ -1614,7 +1766,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.RecentlyAdded/v3/list:
+  /SYNO.Foto.Browse.RecentlyAdded/v5/list:
     get:
       tags:
         - Foto.Browse
@@ -1631,7 +1783,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Timeline/v3/get_geocoding:
+  /SYNO.Foto.Browse.Timeline/v5/get_geocoding:
     get:
       tags:
         - Foto.Browse
@@ -1648,7 +1800,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Timeline/v3/get_geocoding_with_filter:
+  /SYNO.Foto.Browse.Timeline/v5/get_geocoding_with_filter:
     get:
       tags:
         - Foto.Browse
@@ -1665,7 +1817,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Timeline/v3/get:
+  /SYNO.Foto.Browse.Timeline/v5/get:
     get:
       tags:
         - Foto.Browse
@@ -1682,7 +1834,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Timeline/v3/get_with_filter:
+  /SYNO.Foto.Browse.Timeline/v5/get_with_filter:
     get:
       tags:
         - Foto.Browse
@@ -1699,7 +1851,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Unit/v1/count:
+  /SYNO.Foto.Browse.Unit/v2/count:
     get:
       tags:
         - Foto.Browse
@@ -1716,12 +1868,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Unit/v1/get:
+  /SYNO.Foto.Browse.Unit/v2/get_thumbnail_status:
     get:
       tags:
         - Foto.Browse
-      summary: Return get for SYNO.Foto.Browse.Unit
-      operationId: Browse_Unit_get
+      summary: Return get_thumbnail_status for SYNO.Foto.Browse.Unit
+      operationId: Browse_Unit_get_thumbnail_status
       responses:
         '200':
           description: Normal Response
@@ -1733,12 +1885,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Browse.Unit/v1/get_thumbnail_status:
+  /SYNO.Foto.Browse.Unit/v2/get:
     get:
       tags:
         - Foto.Browse
-      summary: Return get_thumbnail_status for SYNO.Foto.Browse.Unit
-      operationId: Browse_Unit_get_thumbnail_status
+      summary: Return get for SYNO.Foto.Browse.Unit
+      operationId: Browse_Unit_get
       responses:
         '200':
           description: Normal Response
@@ -1767,12 +1919,114 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Download/v1/download:
+  /SYNO.Foto.Development.Admin/v1/regenerate_concept_album:
+    get:
+      tags:
+        - Foto.Development
+      summary: Return regenerate_concept_album for SYNO.Foto.Development.Admin
+      operationId: Development_Admin_regenerate_concept_album
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Development.Admin/v1/update_concept_threshold:
+    get:
+      tags:
+        - Foto.Development
+      summary: Return update_concept_threshold for SYNO.Foto.Development.Admin
+      operationId: Development_Admin_update_concept_threshold
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Download/v2/calculate_cache_size:
+    get:
+      tags:
+        - Foto.Download
+      summary: Return calculate_cache_size for SYNO.Foto.Download
+      operationId: Download_calculate_cache_size
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Download/v2/clear_cache:
+    get:
+      tags:
+        - Foto.Download
+      summary: Return clear_cache for SYNO.Foto.Download
+      operationId: Download_clear_cache
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Download/v2/convert:
+    get:
+      tags:
+        - Foto.Download
+      summary: Return convert for SYNO.Foto.Download
+      operationId: Download_convert
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Download/v2/download:
     get:
       tags:
         - Foto.Download
       summary: Return download for SYNO.Foto.Download
       operationId: Download_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Download/v2/get_cache_status:
+    get:
+      tags:
+        - Foto.Download
+      summary: Return get_cache_status for SYNO.Foto.Download
+      operationId: Download_get_cache_status
       responses:
         '200':
           description: Normal Response
@@ -1818,12 +2072,46 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Foto.Index/v1/index_add:
+    get:
+      tags:
+        - Foto.Index
+      summary: Return index_add for SYNO.Foto.Index
+      operationId: Index_index_add
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Foto.Index/v1/reindex:
     get:
       tags:
         - Foto.Index
       summary: Return reindex for SYNO.Foto.Index
       operationId: Index_reindex
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Index/v1/reindex_all_user:
+    get:
+      tags:
+        - Foto.Index
+      summary: Return reindex_all_user for SYNO.Foto.Index
+      operationId: Index_reindex_all_user
       responses:
         '200':
           description: Normal Response
@@ -2039,7 +2327,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Search.Search/v4/count_album:
+  /SYNO.Foto.Search.Search/v6/count_album:
     get:
       tags:
         - Foto.Search
@@ -2056,7 +2344,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Search.Search/v4/count_item:
+  /SYNO.Foto.Search.Search/v6/count_item:
     get:
       tags:
         - Foto.Search
@@ -2073,7 +2361,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Search.Search/v4/get_geocoding:
+  /SYNO.Foto.Search.Search/v6/get_geocoding:
     get:
       tags:
         - Foto.Search
@@ -2090,7 +2378,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Search.Search/v4/get_search_timeline:
+  /SYNO.Foto.Search.Search/v6/get_search_timeline:
     get:
       tags:
         - Foto.Search
@@ -2107,7 +2395,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Search.Search/v4/list_album:
+  /SYNO.Foto.Search.Search/v6/list_album:
     get:
       tags:
         - Foto.Search
@@ -2124,7 +2412,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Search.Search/v4/list_basic_timeline_info:
+  /SYNO.Foto.Search.Search/v6/list_basic_timeline_info:
     get:
       tags:
         - Foto.Search
@@ -2141,7 +2429,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Search.Search/v4/list_item:
+  /SYNO.Foto.Search.Search/v6/list_item:
     get:
       tags:
         - Foto.Search
@@ -2158,7 +2446,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Search.Search/v4/suggest:
+  /SYNO.Foto.Search.Search/v6/suggest:
     get:
       tags:
         - Foto.Search
@@ -2232,6 +2520,23 @@ paths:
         - Foto.Setting
       summary: Return get for SYNO.Foto.Setting.MobileCompatibility
       operationId: Setting_MobileCompatibility_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Setting.MobileCompatibility/v1/system_info:
+    get:
+      tags:
+        - Foto.Setting
+      summary: Return system_info for SYNO.Foto.Setting.MobileCompatibility
+      operationId: Setting_MobileCompatibility_system_info
       responses:
         '200':
           description: Normal Response
@@ -2515,7 +2820,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Streaming/v1/streaming:
+  /SYNO.Foto.Streaming/v2/streaming:
     get:
       tags:
         - Foto.Streaming
@@ -2549,7 +2854,75 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Upload.Item/v1/backup_check:
+  /SYNO.Foto.Udc/v1/send_event:
+    get:
+      tags:
+        - Foto.Udc
+      summary: Return send_event for SYNO.Foto.Udc
+      operationId: Udc_send_event
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Upload.ConvertedFile/v3/list_convert_needed:
+    get:
+      tags:
+        - Foto.Upload
+      summary: Return list_convert_needed for SYNO.Foto.Upload.ConvertedFile
+      operationId: Upload_ConvertedFile_list_convert_needed
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Upload.ConvertedFile/v3/set_broken:
+    get:
+      tags:
+        - Foto.Upload
+      summary: Return set_broken for SYNO.Foto.Upload.ConvertedFile
+      operationId: Upload_ConvertedFile_set_broken
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Upload.ConvertedFile/v3/upload:
+    get:
+      tags:
+        - Foto.Upload
+      summary: Return upload for SYNO.Foto.Upload.ConvertedFile
+      operationId: Upload_ConvertedFile_upload
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Upload.Item/v6/backup_check:
     get:
       tags:
         - Foto.Upload
@@ -2566,7 +2939,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Upload.Item/v1/backup_to_path:
+  /SYNO.Foto.Upload.Item/v6/backup_to_path:
     get:
       tags:
         - Foto.Upload
@@ -2583,24 +2956,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Upload.Item/v1/upload:
-    get:
-      tags:
-        - Foto.Upload
-      summary: Return upload for SYNO.Foto.Upload.Item
-      operationId: Upload_Item_upload
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Foto.Upload.Item/v1/upload_to_folder:
+  /SYNO.Foto.Upload.Item/v6/upload_to_folder:
     get:
       tags:
         - Foto.Upload
@@ -2617,7 +2973,24 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Foto.Upload.PhotoRequestItem/v1/upload:
+  /SYNO.Foto.Upload.Item/v6/upload:
+    get:
+      tags:
+        - Foto.Upload
+      summary: Return upload for SYNO.Foto.Upload.Item
+      operationId: Upload_Item_upload
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Upload.PhotoRequestItem/v2/upload:
     get:
       tags:
         - Foto.Upload

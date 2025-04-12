@@ -1,4 +1,42 @@
 {
+    "SYNO.SecureSignIn.AMFA.Mail.Ex": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/amfa/SYNO.SecureSignIn.AMFA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "verify",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.AMFA.Policy": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/amfa/SYNO.SecureSignIn.AMFA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.AMFA.SuggestConn": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/amfa/SYNO.SecureSignIn.AMFA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.SecureSignIn.Authenticator": {
         "lib": "/var/packages/SecureSignIn/target/webapi/authenticator/SYNO.SecureSignIn.Authenticator.so",
         "maxVersion": 1,
@@ -52,6 +90,7 @@
                 "available"
             ],
             "2": [
+                "register",
                 "invite"
             ]
         },
@@ -89,12 +128,15 @@
     },
     "SYNO.SecureSignIn.Authenticator.Verdict": {
         "lib": "/var/packages/SecureSignIn/target/webapi/authenticator/SYNO.SecureSignIn.Authenticator.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "get",
                 "approve",
                 "deny"
+            ],
+            "2": [
+                "get"
             ]
         },
         "minVersion": 1,

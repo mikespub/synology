@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -192,6 +191,23 @@ paths:
         - Personal.Application
       summary: Return get_autotest_log for SYNO.Personal.Application.Info
       operationId: Application_Info_get_autotest_log
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Personal.Application.Info.Local/v1/get:
+    get:
+      tags:
+        - Personal.Application
+      summary: Return get for SYNO.Personal.Application.Info.Local
+      operationId: Application_Info_Local_get
       responses:
         '200':
           description: Normal Response
@@ -543,7 +559,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Personal.Notification.Mobile/v2/stat:
+  /SYNO.Personal.Notification.Mobile/v3/stat:
     get:
       tags:
         - Personal.Notification
@@ -560,7 +576,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Personal.Notification.Mobile/v2/pair:
+  /SYNO.Personal.Notification.Mobile/v3/pair:
     get:
       tags:
         - Personal.Notification
@@ -577,7 +593,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Personal.Notification.Mobile/v2/unpair:
+  /SYNO.Personal.Notification.Mobile/v3/unpair:
     get:
       tags:
         - Personal.Notification
@@ -662,24 +678,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Personal.Profile/v2/list:
-    get:
-      tags:
-        - Personal.Profile
-      summary: Return list for SYNO.Personal.Profile
-      operationId: Profile_list
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Personal.Profile/v2/get:
+  /SYNO.Personal.Profile/v3/get:
     get:
       tags:
         - Personal.Profile
@@ -696,7 +695,24 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Personal.Profile.Photo/v1/get:
+  /SYNO.Personal.Profile/v3/list:
+    get:
+      tags:
+        - Personal.Profile
+      summary: Return list for SYNO.Personal.Profile
+      operationId: Profile_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Personal.Profile.Photo/v2/get:
     get:
       tags:
         - Personal.Profile
@@ -713,29 +729,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Personal.Profile.Photo/v1/delete:
+  /SYNO.Personal.Profile.Photo/v2/get_encoded:
     get:
       tags:
         - Personal.Profile
-      summary: Return delete for SYNO.Personal.Profile.Photo
-      operationId: Profile_Photo_delete
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Personal.Profile.Photo/v1/upload:
-    get:
-      tags:
-        - Personal.Profile
-      summary: Return upload for SYNO.Personal.Profile.Photo
-      operationId: Profile_Photo_upload
+      summary: Return get_encoded for SYNO.Personal.Profile.Photo
+      operationId: Profile_Photo_get_encoded
       responses:
         '200':
           description: Normal Response

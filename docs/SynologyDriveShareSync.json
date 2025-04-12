@@ -1,0 +1,72 @@
+{
+    "SYNO.SynologyDriveShareSync.Config": {
+        "lib": "/var/packages/SynologyDrive/target/sharesync/lib/SYNO.SynologyDriveShareSync.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDriveShareSync.Connection": {
+        "lib": "/var/packages/SynologyDrive/target/sharesync/lib/SYNO.SynologyDriveShareSync.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "test",
+                "get",
+                "auth",
+                "create",
+                "set",
+                "delete",
+                "unlink",
+                "pause",
+                "resume"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDriveShareSync.Session": {
+        "lib": "/var/packages/SynologyDrive/target/sharesync/lib/SYNO.SynologyDriveShareSync.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "list_subfolder",
+                "list_sync_history",
+                "list_syncfolder",
+                "get",
+                "test",
+                "set",
+                "create",
+                "enable",
+                "disable",
+                "delete",
+                "refresh"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SynologyDriveShareSync.Session.Set": {
+        "lib": "/var/packages/SynologyDrive/target/sharesync/lib/SYNO.SynologyDriveShareSync.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

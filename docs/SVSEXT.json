@@ -1,0 +1,15 @@
+{
+    "SYNO.SVSEXT.CMSActivation": {
+        "lib": "/var/packages/SurveillanceVideoExtension/target/usr/webapi/SYNO.SVSEXT.CMSActivation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "validate",
+                "activate"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

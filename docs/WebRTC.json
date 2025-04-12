@@ -1,0 +1,28 @@
+{
+    "SYNO.WebRTC.Proxy": {
+        "lib": "/var/packages/QuickConnect/target/webapi/SYNO.WebRTC.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "signal"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.WebRTC.Proxy.Sharing": {
+        "lib": "/var/packages/QuickConnect/target/webapi/SYNO.WebRTC.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "signal"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

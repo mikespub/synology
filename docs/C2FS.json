@@ -96,6 +96,18 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.C2FS.Snapshot": {
+        "lib": "HybridShare/SYNO.C2FS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "add"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.C2FS.Transform": {
         "lib": "HybridShare/SYNO.C2FS.so",
         "maxVersion": 1,

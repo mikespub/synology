@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -294,6 +293,23 @@ paths:
         - Storage.CGI
       summary: Return rescan_quota_v2 for SYNO.Storage.CGI.BtrfsDedupe
       operationId: CGI_BtrfsDedupe_rescan_quota_v2
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.BtrfsDedupe/v1/set_reclaim_type:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return set_reclaim_type for SYNO.Storage.CGI.BtrfsDedupe
+      operationId: CGI_BtrfsDedupe_set_reclaim_type
       responses:
         '200':
           description: Normal Response
@@ -883,6 +899,227 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault/v1/enable:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return enable for SYNO.Storage.CGI.EncryptionKeyVault
+      operationId: CGI_EncryptionKeyVault_enable
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault/v1/disable:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return disable for SYNO.Storage.CGI.EncryptionKeyVault
+      operationId: CGI_EncryptionKeyVault_disable
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault/v1/verify_passwd:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return verify_passwd for SYNO.Storage.CGI.EncryptionKeyVault
+      operationId: CGI_EncryptionKeyVault_verify_passwd
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault/v1/reset:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return reset for SYNO.Storage.CGI.EncryptionKeyVault
+      operationId: CGI_EncryptionKeyVault_reset
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault/v1/repair:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return repair for SYNO.Storage.CGI.EncryptionKeyVault
+      operationId: CGI_EncryptionKeyVault_repair
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault/v1/set_autounlock_key:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return set_autounlock_key for SYNO.Storage.CGI.EncryptionKeyVault
+      operationId: CGI_EncryptionKeyVault_set_autounlock_key
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault/v1/get_info:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return get_info for SYNO.Storage.CGI.EncryptionKeyVault
+      operationId: CGI_EncryptionKeyVault_get_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault/v1/pack_for_ma:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return pack_for_ma for SYNO.Storage.CGI.EncryptionKeyVault
+      operationId: CGI_EncryptionKeyVault_pack_for_ma
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault/v1/set_for_ma:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return set_for_ma for SYNO.Storage.CGI.EncryptionKeyVault
+      operationId: CGI_EncryptionKeyVault_set_for_ma
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault/v1/sync_to_passive:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return sync_to_passive for SYNO.Storage.CGI.EncryptionKeyVault
+      operationId: CGI_EncryptionKeyVault_sync_to_passive
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault.UnlockMode/v1/get_passwd_wrong_record:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return get_passwd_wrong_record for SYNO.Storage.CGI.EncryptionKeyVault.UnlockMode
+      operationId: CGI_EncryptionKeyVault_UnlockMode_get_passwd_wrong_record
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault.UnlockMode/v1/enter_passwd:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return enter_passwd for SYNO.Storage.CGI.EncryptionKeyVault.UnlockMode
+      operationId: CGI_EncryptionKeyVault_UnlockMode_enter_passwd
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.EncryptionKeyVault.UnlockMode/v1/skip_passwd:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return skip_passwd for SYNO.Storage.CGI.EncryptionKeyVault.UnlockMode
+      operationId: CGI_EncryptionKeyVault_UnlockMode_skip_passwd
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Storage.CGI.Flashcache/v1/check_system_raid:
     get:
       tags:
@@ -1240,6 +1477,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Storage.CGI.Flashcache/v1/replace:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return replace for SYNO.Storage.CGI.Flashcache
+      operationId: CGI_Flashcache_replace
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Storage.CGI.HddMan/v1/get:
     get:
       tags:
@@ -1280,6 +1534,295 @@ paths:
         - Storage.CGI
       summary: Return send_health_report for SYNO.Storage.CGI.HddMan
       operationId: CGI_HddMan_send_health_report
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.HddMan/v1/set_all_nodes:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return set_all_nodes for SYNO.Storage.CGI.HddMan
+      operationId: CGI_HddMan_set_all_nodes
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/get:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return get for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/set:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return set for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/erase_all_data:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return erase_all_data for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_erase_all_data
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/transfer_data:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return transfer_data for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_transfer_data
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/get_key_list:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return get_key_list for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_get_key_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/delete_key:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return delete_key for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_delete_key
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/test_conn:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return test_conn for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_test_conn
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/get_server_hostname:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return get_server_hostname for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_get_server_hostname
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/check_loop:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return check_loop for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_check_loop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/get_version_info:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return get_version_info for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_get_version_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/import_cert:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return import_cert for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_import_cert
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/list_cert:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return list_cert for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_list_cert
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/set_cert:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return set_cert for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_set_cert
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/remove_cert:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return remove_cert for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_remove_cert
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/renew_cert:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return renew_cert for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_renew_cert
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.KMIP/v1/import_server_ca:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return import_server_ca for SYNO.Storage.CGI.KMIP
+      operationId: CGI_KMIP_import_server_ca
       responses:
         '200':
           description: Normal Response
@@ -1733,23 +2276,6 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Storage.CGI.Smart/v1/get:
-    get:
-      tags:
-        - Storage.CGI
-      summary: Return get for SYNO.Storage.CGI.Smart
-      operationId: CGI_Smart_get
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
   /SYNO.Storage.CGI.Smart/v1/get_health_info:
     get:
       tags:
@@ -1784,40 +2310,6 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Storage.CGI.Smart/v1/get_smart_test_log:
-    get:
-      tags:
-        - Storage.CGI
-      summary: Return get_smart_test_log for SYNO.Storage.CGI.Smart
-      operationId: CGI_Smart_get_smart_test_log
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Storage.CGI.Smart/v1/do_smart_test:
-    get:
-      tags:
-        - Storage.CGI
-      summary: Return do_smart_test for SYNO.Storage.CGI.Smart
-      operationId: CGI_Smart_do_smart_test
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
   /SYNO.Storage.CGI.Smart/v1/secure_erase:
     get:
       tags:
@@ -1841,6 +2333,23 @@ paths:
         - Storage.CGI
       summary: Return list for SYNO.Storage.CGI.Smart
       operationId: CGI_Smart_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.Smart/v1/get_latest_online_drive_db_info:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return get_latest_online_drive_db_info for SYNO.Storage.CGI.Smart
+      operationId: CGI_Smart_get_latest_online_drive_db_info
       responses:
         '200':
           description: Normal Response
@@ -2198,6 +2707,23 @@ paths:
         - Storage.CGI
       summary: Return repair_system_partition for SYNO.Storage.CGI.Storage
       operationId: CGI_Storage_repair_system_partition
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.Storage/v1/repair_system_partition_list:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return repair_system_partition_list for SYNO.Storage.CGI.Storage
+      operationId: CGI_Storage_repair_system_partition_list
       responses:
         '200':
           description: Normal Response
@@ -3116,6 +3642,176 @@ paths:
         - Storage.CGI
       summary: Return get_dump_volumes for SYNO.Storage.CGI.Volume
       operationId: CGI_Volume_get_dump_volumes
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.Volume/v1/unlock_by_vault:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return unlock_by_vault for SYNO.Storage.CGI.Volume
+      operationId: CGI_Volume_unlock_by_vault
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.Volume/v1/get_recovery_key:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return get_recovery_key for SYNO.Storage.CGI.Volume
+      operationId: CGI_Volume_get_recovery_key
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.Volume/v1/export_recovery_key:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return export_recovery_key for SYNO.Storage.CGI.Volume
+      operationId: CGI_Volume_export_recovery_key
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.Volume/v1/fs_info_on_pool_meta_set:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return fs_info_on_pool_meta_set for SYNO.Storage.CGI.Volume
+      operationId: CGI_Volume_fs_info_on_pool_meta_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.Volume/v1/fs_info_on_pool_meta_update:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return fs_info_on_pool_meta_update for SYNO.Storage.CGI.Volume
+      operationId: CGI_Volume_fs_info_on_pool_meta_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.Volume/v1/change_recovery_key:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return change_recovery_key for SYNO.Storage.CGI.Volume
+      operationId: CGI_Volume_change_recovery_key
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.Volume/v1/set_dek:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return set_dek for SYNO.Storage.CGI.Volume
+      operationId: CGI_Volume_set_dek
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.Volume/v1/clean_dek:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return clean_dek for SYNO.Storage.CGI.Volume
+      operationId: CGI_Volume_clean_dek
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.Volume/v1/unlock_by_recovery_key:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return unlock_by_recovery_key for SYNO.Storage.CGI.Volume
+      operationId: CGI_Volume_unlock_by_recovery_key
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Storage.CGI.Volume/v1/get_recovery_key_info:
+    get:
+      tags:
+        - Storage.CGI
+      summary: Return get_recovery_key_info for SYNO.Storage.CGI.Volume
+      operationId: CGI_Volume_get_recovery_key_info
       responses:
         '200':
           description: Normal Response

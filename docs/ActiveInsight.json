@@ -45,6 +45,18 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.ActiveInsight.RelationManager": {
+        "lib": "ActiveInsight/SYNO.ActiveInsight.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.ActiveInsight.Setting": {
         "lib": "ActiveInsight/SYNO.ActiveInsight.so",
         "maxVersion": 2,

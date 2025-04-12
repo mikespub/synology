@@ -23,7 +23,8 @@
                 "delete",
                 "start",
                 "stop",
-                "test_connection"
+                "test_connection",
+                "export_log"
             ]
         },
         "minVersion": 1,

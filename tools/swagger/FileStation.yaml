@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -1858,6 +1857,91 @@ paths:
         - FileStation.VirtualFolder
       summary: Return list for SYNO.FileStation.VirtualFolder
       operationId: VirtualFolder_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Worm/v1/get:
+    get:
+      tags:
+        - FileStation.Worm
+      summary: Return get for SYNO.FileStation.Worm
+      operationId: Worm_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Worm/v1/get_share_info:
+    get:
+      tags:
+        - FileStation.Worm
+      summary: Return get_share_info for SYNO.FileStation.Worm
+      operationId: Worm_get_share_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Worm.Lock/v1/start:
+    get:
+      tags:
+        - FileStation.Worm
+      summary: Return start for SYNO.FileStation.Worm.Lock
+      operationId: Worm_Lock_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Worm.Lock/v1/stop:
+    get:
+      tags:
+        - FileStation.Worm
+      summary: Return stop for SYNO.FileStation.Worm.Lock
+      operationId: Worm_Lock_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Worm.Lock/v1/status:
+    get:
+      tags:
+        - FileStation.Worm
+      summary: Return status for SYNO.FileStation.Worm.Lock
+      operationId: Worm_Lock_status
       responses:
         '200':
           description: Normal Response

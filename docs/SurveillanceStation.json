@@ -37,7 +37,8 @@
                 "SendData2VS",
                 "GetDeviceDIStatus",
                 "ListViewerTriggerRule",
-                "TriggerViewerRule"
+                "TriggerViewerRule",
+                "GetSampleIngredient"
             ]
         },
         "minVersion": 1,
@@ -56,7 +57,6 @@
                 "BatchEnable",
                 "Restart",
                 "GetInfo",
-                "LoadFile",
                 "GetPkgInfo",
                 "GetAppsStatus",
                 "SetAutoUpdate",
@@ -110,7 +110,8 @@
                 "SaveCamSetting",
                 "GetCamSetting",
                 "GetAdvSetting",
-                "SetAdvSetting"
+                "SetAdvSetting",
+                "GetCamExtSetting"
             ]
         },
         "minVersion": 1,
@@ -247,6 +248,7 @@
                 "ActProgressDone",
                 "CountByCategory",
                 "CountByCategoryCardHolder",
+                "CountByCategoryAcsRule",
                 "CountByCategoryLog",
                 "Delete",
                 "DoorControl",
@@ -260,6 +262,7 @@
                 "ListLog",
                 "ListPrivilege",
                 "Retrieve",
+                "RetrieveHardware",
                 "Monitor",
                 "Save",
                 "SaveCardHolder",
@@ -279,7 +282,8 @@
                 "AddAccessRule",
                 "SaveAccessRule",
                 "DelAccessRule",
-                "UploadCardHolder"
+                "UploadCardHolder",
+                "RelayFromSlave"
             ]
         },
         "minVersion": 1,
@@ -373,12 +377,16 @@
                 "VolumeRemove",
                 "NTPSync",
                 "PushHostInfo",
+                "RelayServerUdc",
+                "RelayServerUdcDone",
                 "OnlineUpgrade",
                 "UploadUpgradeFile",
                 "UpgradeByFile",
                 "GetUpgradeStatus",
                 "SetUpgradeStatus",
-                "GetSnapshotFile"
+                "GetSnapshotFile",
+                "GetDepPkgs",
+                "GetInstalledPkgs"
             ],
             "2": [
                 "GetMDSnapshot"
@@ -441,7 +449,8 @@
                 "EnableCMS",
                 "GetFreeSpace",
                 "MultipartStatusConn",
-                "RecEncryptVerify"
+                "RecEncryptVerify",
+                "WriteHostRelayApiResp"
             ]
         },
         "minVersion": 1,
@@ -500,7 +509,9 @@
                 "Listgroup",
                 "GetInfo",
                 "GetCapability",
-                "StartLive"
+                "StartLive",
+                "GetRetrivingEdgeRecordingInfo",
+                "MigrateGetSynocamDataSize"
             ],
             "2": [
                 "List",
@@ -509,7 +520,9 @@
                 "Listgroup",
                 "GetInfo",
                 "GetCapability",
-                "StartLive"
+                "StartLive",
+                "GetRetrivingEdgeRecordingInfo",
+                "MigrateGetSynocamDataSize"
             ],
             "3": [
                 "List",
@@ -520,7 +533,9 @@
                 "Listgroup",
                 "GetInfo",
                 "GetCapability",
-                "StartLive"
+                "StartLive",
+                "GetRetrivingEdgeRecordingInfo",
+                "MigrateGetSynocamDataSize"
             ],
             "4": [
                 "List",
@@ -532,7 +547,9 @@
                 "GetCapability",
                 "GetCapabilityByCamId",
                 "GetInfo",
-                "StartLive"
+                "StartLive",
+                "GetRetrivingEdgeRecordingInfo",
+                "MigrateGetSynocamDataSize"
             ],
             "5": [
                 "List",
@@ -544,7 +561,9 @@
                 "GetCapability",
                 "GetCapabilityByCamId",
                 "GetInfo",
-                "StartLive"
+                "StartLive",
+                "GetRetrivingEdgeRecordingInfo",
+                "MigrateGetSynocamDataSize"
             ],
             "6": [
                 "List",
@@ -556,7 +575,9 @@
                 "GetCapability",
                 "GetCapabilityByCamId",
                 "GetInfo",
-                "StartLive"
+                "StartLive",
+                "GetRetrivingEdgeRecordingInfo",
+                "MigrateGetSynocamDataSize"
             ],
             "7": [
                 "List",
@@ -568,6 +589,7 @@
                 "GetCapabilityByCamId",
                 "GetInfo",
                 "StartLive",
+                "GetRetrivingEdgeRecordingInfo",
                 "CountByCategory",
                 "GetOccupiedSize",
                 "Delete",
@@ -580,7 +602,8 @@
                 "MigrationCancel",
                 "SaveOptimizeParam",
                 "RecountEventSize",
-                "CheckCamValid"
+                "CheckCamValid",
+                "MigrateGetSynocamDataSize"
             ],
             "8": [
                 "List",
@@ -594,6 +617,7 @@
                 "GetCapabilityByCamId",
                 "GetInfo",
                 "StartLive",
+                "GetRetrivingEdgeRecordingInfo",
                 "CountByCategory",
                 "GetOccupiedSize",
                 "Delete",
@@ -614,7 +638,8 @@
                 "DetectValue",
                 "SetParameter",
                 "SetPtzParameter",
-                "EnumFilterData"
+                "EnumFilterData",
+                "MigrateGetSynocamDataSize"
             ],
             "9": [
                 "Save",
@@ -623,7 +648,9 @@
                 "Disable",
                 "Delete",
                 "GetSnapshot",
-                "GetLiveViewPath"
+                "GetLiveViewPath",
+                "SaveOptimizeParam",
+                "SyncChange"
             ]
         },
         "minVersion": 1,
@@ -639,6 +666,8 @@
                 "StartBatchAdd",
                 "GetBatchAddProgress",
                 "CancelBatchAdd",
+                "GetImportTemplate",
+                "GetImportFailCam",
                 "ExportXlsx"
             ]
         },
@@ -663,6 +692,10 @@
                 "ADParamSave",
                 "TamperingEnum",
                 "TDParamSave",
+                "QRParamGet",
+                "QRParamSave",
+                "DioParamGet",
+                "DioParamSave",
                 "PirEnum",
                 "PDParamSave",
                 "RoiListPoll",
@@ -721,6 +754,29 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.SurveillanceStation.Camera.Integration": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "GetStatus",
+                "AddTask",
+                "Delete",
+                "ManualVerify",
+                "GetManualPreview",
+                "DownloadCap",
+                "Report",
+                "UploadConf",
+                "ImportConf",
+                "LoadConf",
+                "GetCapTable",
+                "GetImportList"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.SurveillanceStation.Camera.Intercom": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
         "maxVersion": 1,
@@ -740,6 +796,19 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.SurveillanceStation.Camera.Schedule.CustomDetection": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "ExtDeviceEnum",
+                "ExtDeviceSave"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.SurveillanceStation.Camera.Search": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
         "maxVersion": 1,
@@ -748,7 +817,8 @@
                 "Start",
                 "GetInfo",
                 "IPRange",
-                "GetIPRangeInfo"
+                "GetIPRangeInfo",
+                "UpdateByUPNPInfo"
             ]
         },
         "minVersion": 1,
@@ -768,6 +838,38 @@
             ],
             "3": [
                 "Cycle"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Camera.Synocam": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "GetCurrentSetting",
+                "SetMiscSetting",
+                "Reset",
+                "UploadUpgradeFile",
+                "UpgradeByFile",
+                "ActivateBatchStart",
+                "ActivateBatchGetInfo",
+                "CheckOnlineUpgrade",
+                "OnlineUpgrade",
+                "Activate",
+                "CheckIPConflict",
+                "NetworkBatchSettingStart",
+                "NetworkBatchSettingGetInfo",
+                "GetLog",
+                "GetLogCount",
+                "DeleteLog",
+                "DownloadLog",
+                "GetInfoFromCam",
+                "UploadCertFile",
+                "DeleteCertFile",
+                "GetSystemReport"
             ]
         },
         "minVersion": 1,
@@ -799,6 +901,7 @@
                 "CheckQuota",
                 "CheckSDCardSize",
                 "FormatSDCard",
+                "MountSDCard",
                 "QuickCreate",
                 "GetBatSaveProgress",
                 "BatAddProgressDone",
@@ -842,12 +945,36 @@
                 "RenewCap",
                 "ChangeCap",
                 "BatLoadCapStart",
-                "BatLoadCapGetInfo"
+                "BatLoadCapGetInfo",
+                "GetSnapshotFromFile"
             ],
             "2": [
                 "CameraTest",
                 "GetSnapshot",
                 "RenewCap"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.DetectionEvent": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/DetectionEvent/src/SYNO.SurveillanceStation.DetectionEvent.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "CountByCategory",
+                "GetCrowdTimes",
+                "Update",
+                "Clear",
+                "GetThumbnail",
+                "GetLPThumbnail",
+                "GetSetting",
+                "SetSetting",
+                "MigratingStatus",
+                "RetrospectImgSave",
+                "LoadThumbnailByConfig"
             ]
         },
         "minVersion": 1,
@@ -1179,6 +1306,7 @@
                 "ListRegisteredFaceWithUuid",
                 "CountRegisteredFace",
                 "SearchRegisteredFace",
+                "LoadRegisteredFaceImage",
                 "CreateFaceGroup",
                 "DeleteFaceGroup",
                 "EditFaceGroup",
@@ -1237,7 +1365,8 @@
                 "GetEventInfo",
                 "Correct",
                 "MarkAsStranger",
-                "DownloadReport"
+                "DownloadReport",
+                "LoadCapturedFaceImage"
             ]
         },
         "minVersion": 1,
@@ -1336,7 +1465,7 @@
     },
     "SYNO.SurveillanceStation.IOModule": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/IOModule/src/SYNO.SurveillanceStation.IOModule.so",
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "Enum",
@@ -1362,6 +1491,9 @@
                 "GetArchiveSetting"
             ],
             "2": [
+                "EnumPort"
+            ],
+            "3": [
                 "EnumPort"
             ]
         },
@@ -1456,7 +1588,24 @@
                 "DeleteTask",
                 "ListTask",
                 "SetTmpFpsUpperBound",
-                "ResetPplCntCounter"
+                "ResetPplCntCounter",
+                "GetPplCnt",
+                "ListCountingSetting",
+                "SaveCountingSetting",
+                "ListCountingStatus",
+                "ResetCounting"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IVA.Analytics": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IVA/src/SYNO.SurveillanceStation.IVA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "DownloadAnalyticsReport"
             ]
         },
         "minVersion": 1,
@@ -1471,6 +1620,20 @@
                 "GetSettings",
                 "SaveSettings",
                 "MigratingStatus"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IVA.CountingTaskGroup": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IVA/src/SYNO.SurveillanceStation.IVA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "Save",
+                "Delete"
             ]
         },
         "minVersion": 1,
@@ -1514,7 +1677,10 @@
                 "Edit",
                 "Delete",
                 "GetReport",
-                "DownloadReport"
+                "DownloadReport",
+                "LoadPlateNumberImage",
+                "LoadVehicleImage",
+                "DownloadDetectionEventReport"
             ]
         },
         "minVersion": 1,
@@ -1535,7 +1701,8 @@
                 "LockFilter",
                 "UnLockFilter",
                 "GetAnalyticsResult",
-                "DownloadReport"
+                "DownloadReport",
+                "SaveMigratingEvent"
             ]
         },
         "minVersion": 1,
@@ -1551,7 +1718,8 @@
                 "GetCount",
                 "Download",
                 "UploadReportImgData",
-                "GetNoRecordDate"
+                "GetNoRecordDate",
+                "GetCountingReport"
             ]
         },
         "minVersion": 1,
@@ -1771,8 +1939,8 @@
                 "GetAutoLogin",
                 "SetAutoLogin",
                 "CheckLogin",
-                "GetResoList",
-                "SetReso",
+                "GetSettings",
+                "SetSettings",
                 "SetDvaFpsLimit"
             ]
         },
@@ -1919,7 +2087,8 @@
                 "GetAdvSetting"
             ],
             "8": [
-                "GetNotiServiceStatus"
+                "GetNotiServiceStatus",
+                "GetMessageParameter"
             ]
         },
         "minVersion": 1,
@@ -2068,6 +2237,36 @@
                 "SetAccessControlSchedule",
                 "SetTransDevSchedule",
                 "SetBatchSchedule"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Notification.Snapshot": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Notification/src/SYNO.SurveillanceStation.Notification.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "GetSnapshot"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Notification.Webhook": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Notification/src/SYNO.SurveillanceStation.Notification.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "Create",
+                "Edit",
+                "Delete",
+                "Enable",
+                "SendTestReq",
+                "Preview"
             ]
         },
         "minVersion": 1,
@@ -2364,7 +2563,8 @@
                 "BrowserStream",
                 "RangeExport",
                 "GetRangeExportProgress",
-                "OnRangeExportDone"
+                "OnRangeExportDone",
+                "RetrospectImgSave"
             ]
         },
         "minVersion": 1,
@@ -2381,7 +2581,9 @@
                 "DeleteBookmark",
                 "CountByCategory",
                 "Lock",
-                "Unlock"
+                "Unlock",
+                "GetThumbnail",
+                "RetrospectImgSave"
             ],
             "2": [
                 "ListBookmark"
@@ -2475,7 +2677,8 @@
                 "EnumInterval",
                 "RecordPartialInfo",
                 "SearchAvaiDate",
-                "SearchLatestDate"
+                "SearchLatestDate",
+                "InstantSearch"
             ]
         },
         "minVersion": 1,
@@ -2635,6 +2838,145 @@
                 "GetSetting",
                 "SetSetting",
                 "LongPolling"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ThirdParty.Bookmark": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ThirdParty/src/SYNO.SurveillanceStation.ThirdParty.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Create",
+                "List",
+                "DownloadRecording",
+                "Edit",
+                "Delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ThirdParty.Camera": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ThirdParty/src/SYNO.SurveillanceStation.ThirdParty.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "Edit",
+                "Get",
+                "PTZControl",
+                "PresetControl",
+                "DOControl",
+                "AudioOut"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ThirdParty.Emap": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ThirdParty/src/SYNO.SurveillanceStation.ThirdParty.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "ChangeLocation"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ThirdParty.License": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ThirdParty/src/SYNO.SurveillanceStation.ThirdParty.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Add",
+                "Delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ThirdParty/src/SYNO.SurveillanceStation.ThirdParty.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Create",
+                "List",
+                "Edit",
+                "Delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ThirdParty.LicensePlate.Event": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ThirdParty/src/SYNO.SurveillanceStation.ThirdParty.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "ListEvent",
+                "DownloadRecording",
+                "DownloadReport"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ThirdParty.PeopleCounting": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ThirdParty/src/SYNO.SurveillanceStation.ThirdParty.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "DownloadReport"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ThirdParty.PeopleVehicle": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ThirdParty/src/SYNO.SurveillanceStation.ThirdParty.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "DownloadRecording"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ThirdParty.Recording": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ThirdParty/src/SYNO.SurveillanceStation.ThirdParty.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Download",
+                "DownloadSnapshot"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ThirdParty.SnapShot": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ThirdParty/src/SYNO.SurveillanceStation.ThirdParty.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Download",
+                "Take"
             ]
         },
         "minVersion": 1,
@@ -2830,7 +3172,8 @@
             "1": [
                 "GenerateToken",
                 "CheckTokenExist",
-                "Incoming"
+                "Incoming",
+                "GetThumbnail"
             ]
         },
         "minVersion": 1,

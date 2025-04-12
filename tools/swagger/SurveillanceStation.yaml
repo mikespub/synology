@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -424,6 +423,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.ActionRule/v3/GetSampleIngredient:
+    get:
+      tags:
+        - SurveillanceStation.ActionRule
+      summary: Return GetSampleIngredient for SYNO.SurveillanceStation.ActionRule
+      operationId: ActionRule_GetSampleIngredient
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.AddOns/v2/GetUpdateInfo:
     get:
       tags:
@@ -736,6 +752,23 @@ paths:
         - SurveillanceStation.Alert
       summary: Return SetAdvSetting for SYNO.SurveillanceStation.Alert.Setting
       operationId: Alert_Setting_SetAdvSetting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Alert.Setting/v1/GetCamExtSetting:
+    get:
+      tags:
+        - SurveillanceStation.Alert
+      summary: Return GetCamExtSetting for SYNO.SurveillanceStation.Alert.Setting
+      operationId: Alert_Setting_GetCamExtSetting
       responses:
         '200':
           description: Normal Response
@@ -1546,6 +1579,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.AxisAcsCtrler/v1/CountByCategoryAcsRule:
+    get:
+      tags:
+        - SurveillanceStation.AxisAcsCtrler
+      summary: Return CountByCategoryAcsRule for SYNO.SurveillanceStation.AxisAcsCtrler
+      operationId: AxisAcsCtrler_CountByCategoryAcsRule
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/CountByCategoryLog:
     get:
       tags:
@@ -1756,6 +1806,23 @@ paths:
         - SurveillanceStation.AxisAcsCtrler
       summary: Return Retrieve for SYNO.SurveillanceStation.AxisAcsCtrler
       operationId: AxisAcsCtrler_Retrieve
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.AxisAcsCtrler/v1/RetrieveHardware:
+    get:
+      tags:
+        - SurveillanceStation.AxisAcsCtrler
+      summary: Return RetrieveHardware for SYNO.SurveillanceStation.AxisAcsCtrler
+      operationId: AxisAcsCtrler_RetrieveHardware
       responses:
         '200':
           description: Normal Response
@@ -2096,6 +2163,23 @@ paths:
         - SurveillanceStation.AxisAcsCtrler
       summary: Return UploadCardHolder for SYNO.SurveillanceStation.AxisAcsCtrler
       operationId: AxisAcsCtrler_UploadCardHolder
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.AxisAcsCtrler/v1/RelayFromSlave:
+    get:
+      tags:
+        - SurveillanceStation.AxisAcsCtrler
+      summary: Return RelayFromSlave for SYNO.SurveillanceStation.AxisAcsCtrler
+      operationId: AxisAcsCtrler_RelayFromSlave
       responses:
         '200':
           description: Normal Response
@@ -3161,6 +3245,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/WriteHostRelayApiResp:
+    get:
+      tags:
+        - SurveillanceStation.CMS
+      summary: Return WriteHostRelayApiResp for SYNO.SurveillanceStation.CMS.GetDsStatus
+      operationId: CMS_GetDsStatus_WriteHostRelayApiResp
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.CMS.SlavedsList/v1/Load:
     get:
       tags:
@@ -3603,6 +3704,40 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.Camera/v9/SaveOptimizeParam:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return SaveOptimizeParam for SYNO.SurveillanceStation.Camera
+      operationId: Camera_SaveOptimizeParam
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera/v9/SyncChange:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return SyncChange for SYNO.SurveillanceStation.Camera
+      operationId: Camera_SyncChange
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.Camera.BatAddByText/v1/UploadXlsx:
     get:
       tags:
@@ -3660,6 +3795,40 @@ paths:
         - SurveillanceStation.Camera
       summary: Return CancelBatchAdd for SYNO.SurveillanceStation.Camera.BatAddByText
       operationId: Camera_BatAddByText_CancelBatchAdd
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.BatAddByText/v1/GetImportTemplate:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return GetImportTemplate for SYNO.SurveillanceStation.Camera.BatAddByText
+      operationId: Camera_BatAddByText_GetImportTemplate
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.BatAddByText/v1/GetImportFailCam:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return GetImportFailCam for SYNO.SurveillanceStation.Camera.BatAddByText
+      operationId: Camera_BatAddByText_GetImportFailCam
       responses:
         '200':
           description: Normal Response
@@ -3881,6 +4050,74 @@ paths:
         - SurveillanceStation.Camera
       summary: Return TDParamSave for SYNO.SurveillanceStation.Camera.Event
       operationId: Camera_Event_TDParamSave
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Event/v1/QRParamGet:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return QRParamGet for SYNO.SurveillanceStation.Camera.Event
+      operationId: Camera_Event_QRParamGet
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Event/v1/QRParamSave:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return QRParamSave for SYNO.SurveillanceStation.Camera.Event
+      operationId: Camera_Event_QRParamSave
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Event/v1/DioParamGet:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return DioParamGet for SYNO.SurveillanceStation.Camera.Event
+      operationId: Camera_Event_DioParamGet
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Event/v1/DioParamSave:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return DioParamSave for SYNO.SurveillanceStation.Camera.Event
+      operationId: Camera_Event_DioParamSave
       responses:
         '200':
           description: Normal Response
@@ -4215,6 +4452,210 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Integration/v1/GetStatus:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return GetStatus for SYNO.SurveillanceStation.Camera.Integration
+      operationId: Camera_Integration_GetStatus
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Integration/v1/AddTask:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return AddTask for SYNO.SurveillanceStation.Camera.Integration
+      operationId: Camera_Integration_AddTask
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Integration/v1/Delete:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return Delete for SYNO.SurveillanceStation.Camera.Integration
+      operationId: Camera_Integration_Delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Integration/v1/ManualVerify:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return ManualVerify for SYNO.SurveillanceStation.Camera.Integration
+      operationId: Camera_Integration_ManualVerify
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Integration/v1/GetManualPreview:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return GetManualPreview for SYNO.SurveillanceStation.Camera.Integration
+      operationId: Camera_Integration_GetManualPreview
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Integration/v1/DownloadCap:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return DownloadCap for SYNO.SurveillanceStation.Camera.Integration
+      operationId: Camera_Integration_DownloadCap
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Integration/v1/Report:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return Report for SYNO.SurveillanceStation.Camera.Integration
+      operationId: Camera_Integration_Report
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Integration/v1/UploadConf:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return UploadConf for SYNO.SurveillanceStation.Camera.Integration
+      operationId: Camera_Integration_UploadConf
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Integration/v1/ImportConf:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return ImportConf for SYNO.SurveillanceStation.Camera.Integration
+      operationId: Camera_Integration_ImportConf
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Integration/v1/LoadConf:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return LoadConf for SYNO.SurveillanceStation.Camera.Integration
+      operationId: Camera_Integration_LoadConf
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Integration/v1/GetCapTable:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return GetCapTable for SYNO.SurveillanceStation.Camera.Integration
+      operationId: Camera_Integration_GetCapTable
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Integration/v1/GetImportList:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return GetImportList for SYNO.SurveillanceStation.Camera.Integration
+      operationId: Camera_Integration_GetImportList
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.Camera.Intercom/v1/EnumLog:
     get:
       tags:
@@ -4351,6 +4792,40 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Schedule.CustomDetection/v1/ExtDeviceEnum:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return ExtDeviceEnum for SYNO.SurveillanceStation.Camera.Schedule.CustomDetection
+      operationId: Camera_Schedule_CustomDetection_ExtDeviceEnum
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Schedule.CustomDetection/v1/ExtDeviceSave:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return ExtDeviceSave for SYNO.SurveillanceStation.Camera.Schedule.CustomDetection
+      operationId: Camera_Schedule_CustomDetection_ExtDeviceSave
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.Camera.Search/v1/Start:
     get:
       tags:
@@ -4419,12 +4894,386 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Search/v1/UpdateByUPNPInfo:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return UpdateByUPNPInfo for SYNO.SurveillanceStation.Camera.Search
+      operationId: Camera_Search_UpdateByUPNPInfo
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.Camera.Status/v3/Cycle:
     get:
       tags:
         - SurveillanceStation.Camera
       summary: Return Cycle for SYNO.SurveillanceStation.Camera.Status
       operationId: Camera_Status_Cycle
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/GetCurrentSetting:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return GetCurrentSetting for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_GetCurrentSetting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/SetMiscSetting:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return SetMiscSetting for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_SetMiscSetting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/Reset:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return Reset for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_Reset
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/UploadUpgradeFile:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return UploadUpgradeFile for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_UploadUpgradeFile
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/UpgradeByFile:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return UpgradeByFile for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_UpgradeByFile
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/ActivateBatchStart:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return ActivateBatchStart for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_ActivateBatchStart
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/ActivateBatchGetInfo:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return ActivateBatchGetInfo for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_ActivateBatchGetInfo
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/CheckOnlineUpgrade:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return CheckOnlineUpgrade for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_CheckOnlineUpgrade
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/OnlineUpgrade:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return OnlineUpgrade for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_OnlineUpgrade
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/Activate:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return Activate for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_Activate
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/CheckIPConflict:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return CheckIPConflict for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_CheckIPConflict
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/NetworkBatchSettingStart:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return NetworkBatchSettingStart for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_NetworkBatchSettingStart
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/NetworkBatchSettingGetInfo:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return NetworkBatchSettingGetInfo for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_NetworkBatchSettingGetInfo
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/GetLog:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return GetLog for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_GetLog
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/GetLogCount:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return GetLogCount for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_GetLogCount
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/DeleteLog:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return DeleteLog for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_DeleteLog
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/DownloadLog:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return DownloadLog for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_DownloadLog
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/GetInfoFromCam:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return GetInfoFromCam for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_GetInfoFromCam
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/UploadCertFile:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return UploadCertFile for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_UploadCertFile
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/DeleteCertFile:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return DeleteCertFile for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_DeleteCertFile
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Camera.Synocam/v1/GetSystemReport:
+    get:
+      tags:
+        - SurveillanceStation.Camera
+      summary: Return GetSystemReport for SYNO.SurveillanceStation.Camera.Synocam
+      operationId: Camera_Synocam_GetSystemReport
       responses:
         '200':
           description: Normal Response
@@ -4510,6 +5359,210 @@ paths:
         - SurveillanceStation.CameraCap
       summary: Return RenewCap for SYNO.SurveillanceStation.CameraCap
       operationId: CameraCap_RenewCap
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.DetectionEvent/v1/List:
+    get:
+      tags:
+        - SurveillanceStation.DetectionEvent
+      summary: Return List for SYNO.SurveillanceStation.DetectionEvent
+      operationId: DetectionEvent_List
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.DetectionEvent/v1/CountByCategory:
+    get:
+      tags:
+        - SurveillanceStation.DetectionEvent
+      summary: Return CountByCategory for SYNO.SurveillanceStation.DetectionEvent
+      operationId: DetectionEvent_CountByCategory
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.DetectionEvent/v1/GetCrowdTimes:
+    get:
+      tags:
+        - SurveillanceStation.DetectionEvent
+      summary: Return GetCrowdTimes for SYNO.SurveillanceStation.DetectionEvent
+      operationId: DetectionEvent_GetCrowdTimes
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.DetectionEvent/v1/Update:
+    get:
+      tags:
+        - SurveillanceStation.DetectionEvent
+      summary: Return Update for SYNO.SurveillanceStation.DetectionEvent
+      operationId: DetectionEvent_Update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.DetectionEvent/v1/Clear:
+    get:
+      tags:
+        - SurveillanceStation.DetectionEvent
+      summary: Return Clear for SYNO.SurveillanceStation.DetectionEvent
+      operationId: DetectionEvent_Clear
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.DetectionEvent/v1/GetThumbnail:
+    get:
+      tags:
+        - SurveillanceStation.DetectionEvent
+      summary: Return GetThumbnail for SYNO.SurveillanceStation.DetectionEvent
+      operationId: DetectionEvent_GetThumbnail
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.DetectionEvent/v1/GetLPThumbnail:
+    get:
+      tags:
+        - SurveillanceStation.DetectionEvent
+      summary: Return GetLPThumbnail for SYNO.SurveillanceStation.DetectionEvent
+      operationId: DetectionEvent_GetLPThumbnail
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.DetectionEvent/v1/GetSetting:
+    get:
+      tags:
+        - SurveillanceStation.DetectionEvent
+      summary: Return GetSetting for SYNO.SurveillanceStation.DetectionEvent
+      operationId: DetectionEvent_GetSetting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.DetectionEvent/v1/SetSetting:
+    get:
+      tags:
+        - SurveillanceStation.DetectionEvent
+      summary: Return SetSetting for SYNO.SurveillanceStation.DetectionEvent
+      operationId: DetectionEvent_SetSetting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.DetectionEvent/v1/MigratingStatus:
+    get:
+      tags:
+        - SurveillanceStation.DetectionEvent
+      summary: Return MigratingStatus for SYNO.SurveillanceStation.DetectionEvent
+      operationId: DetectionEvent_MigratingStatus
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.DetectionEvent/v1/RetrospectImgSave:
+    get:
+      tags:
+        - SurveillanceStation.DetectionEvent
+      summary: Return RetrospectImgSave for SYNO.SurveillanceStation.DetectionEvent
+      operationId: DetectionEvent_RetrospectImgSave
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.DetectionEvent/v1/LoadThumbnailByConfig:
+    get:
+      tags:
+        - SurveillanceStation.DetectionEvent
+      summary: Return LoadThumbnailByConfig for SYNO.SurveillanceStation.DetectionEvent
+      operationId: DetectionEvent_LoadThumbnailByConfig
       responses:
         '200':
           description: Normal Response
@@ -6051,6 +7104,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.Face/v1/LoadRegisteredFaceImage:
+    get:
+      tags:
+        - SurveillanceStation.Face
+      summary: Return LoadRegisteredFaceImage for SYNO.SurveillanceStation.Face
+      operationId: Face_LoadRegisteredFaceImage
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.Face/v1/CreateFaceGroup:
     get:
       tags:
@@ -6493,6 +7563,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.Face.Result/v1/LoadCapturedFaceImage:
+    get:
+      tags:
+        - SurveillanceStation.Face
+      summary: Return LoadCapturedFaceImage for SYNO.SurveillanceStation.Face.Result
+      operationId: Face_Result_LoadCapturedFaceImage
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.Face.Simulator/v1/Acquire:
     get:
       tags:
@@ -6901,7 +7988,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.SurveillanceStation.IOModule/v2/EnumPort:
+  /SYNO.SurveillanceStation.IOModule/v3/EnumPort:
     get:
       tags:
         - SurveillanceStation.IOModule
@@ -7394,6 +8481,108 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.IVA/v1/GetPplCnt:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return GetPplCnt for SYNO.SurveillanceStation.IVA
+      operationId: IVA_GetPplCnt
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.IVA/v1/ListCountingSetting:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return ListCountingSetting for SYNO.SurveillanceStation.IVA
+      operationId: IVA_ListCountingSetting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.IVA/v1/SaveCountingSetting:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return SaveCountingSetting for SYNO.SurveillanceStation.IVA
+      operationId: IVA_SaveCountingSetting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.IVA/v1/ListCountingStatus:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return ListCountingStatus for SYNO.SurveillanceStation.IVA
+      operationId: IVA_ListCountingStatus
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.IVA/v1/ResetCounting:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return ResetCounting for SYNO.SurveillanceStation.IVA
+      operationId: IVA_ResetCounting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.IVA.Analytics/v1/DownloadAnalyticsReport:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return DownloadAnalyticsReport for SYNO.SurveillanceStation.IVA.Analytics
+      operationId: IVA_Analytics_DownloadAnalyticsReport
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.IVA.Archive/v1/GetSettings:
     get:
       tags:
@@ -7434,6 +8623,57 @@ paths:
         - SurveillanceStation.IVA
       summary: Return MigratingStatus for SYNO.SurveillanceStation.IVA.Archive
       operationId: IVA_Archive_MigratingStatus
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.IVA.CountingTaskGroup/v1/List:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return List for SYNO.SurveillanceStation.IVA.CountingTaskGroup
+      operationId: IVA_CountingTaskGroup_List
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.IVA.CountingTaskGroup/v1/Save:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return Save for SYNO.SurveillanceStation.IVA.CountingTaskGroup
+      operationId: IVA_CountingTaskGroup_Save
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.IVA.CountingTaskGroup/v1/Delete:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return Delete for SYNO.SurveillanceStation.IVA.CountingTaskGroup
+      operationId: IVA_CountingTaskGroup_Delete
       responses:
         '200':
           description: Normal Response
@@ -7632,6 +8872,57 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.IVA.LicensePlate.Result/v1/LoadPlateNumberImage:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return LoadPlateNumberImage for SYNO.SurveillanceStation.IVA.LicensePlate.Result
+      operationId: IVA_LicensePlate_Result_LoadPlateNumberImage
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.IVA.LicensePlate.Result/v1/LoadVehicleImage:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return LoadVehicleImage for SYNO.SurveillanceStation.IVA.LicensePlate.Result
+      operationId: IVA_LicensePlate_Result_LoadVehicleImage
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.IVA.LicensePlate.Result/v1/DownloadDetectionEventReport:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return DownloadDetectionEventReport for SYNO.SurveillanceStation.IVA.LicensePlate.Result
+      operationId: IVA_LicensePlate_Result_DownloadDetectionEventReport
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.IVA.Recording/v1/List:
     get:
       tags:
@@ -7802,6 +9093,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.IVA.Recording/v1/SaveMigratingEvent:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return SaveMigratingEvent for SYNO.SurveillanceStation.IVA.Recording
+      operationId: IVA_Recording_SaveMigratingEvent
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.IVA.Report/v1/GetReport:
     get:
       tags:
@@ -7876,6 +9184,23 @@ paths:
         - SurveillanceStation.IVA
       summary: Return GetNoRecordDate for SYNO.SurveillanceStation.IVA.Report
       operationId: IVA_Report_GetNoRecordDate
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.IVA.Report/v1/GetCountingReport:
+    get:
+      tags:
+        - SurveillanceStation.IVA
+      summary: Return GetCountingReport for SYNO.SurveillanceStation.IVA.Report
+      operationId: IVA_Report_GetCountingReport
       responses:
         '200':
           description: Normal Response
@@ -8584,12 +9909,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.SurveillanceStation.LocalDisplay/v1/GetResoList:
+  /SYNO.SurveillanceStation.LocalDisplay/v1/GetSettings:
     get:
       tags:
         - SurveillanceStation.LocalDisplay
-      summary: Return GetResoList for SYNO.SurveillanceStation.LocalDisplay
-      operationId: LocalDisplay_GetResoList
+      summary: Return GetSettings for SYNO.SurveillanceStation.LocalDisplay
+      operationId: LocalDisplay_GetSettings
       responses:
         '200':
           description: Normal Response
@@ -8601,12 +9926,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.SurveillanceStation.LocalDisplay/v1/SetReso:
+  /SYNO.SurveillanceStation.LocalDisplay/v1/SetSettings:
     get:
       tags:
         - SurveillanceStation.LocalDisplay
-      summary: Return SetReso for SYNO.SurveillanceStation.LocalDisplay
-      operationId: LocalDisplay_SetReso
+      summary: Return SetSettings for SYNO.SurveillanceStation.LocalDisplay
+      operationId: LocalDisplay_SetSettings
       responses:
         '200':
           description: Normal Response
@@ -8998,6 +10323,23 @@ paths:
         - SurveillanceStation.Notification
       summary: Return GetNotiServiceStatus for SYNO.SurveillanceStation.Notification
       operationId: Notification_GetNotiServiceStatus
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Notification/v8/GetMessageParameter:
+    get:
+      tags:
+        - SurveillanceStation.Notification
+      summary: Return GetMessageParameter for SYNO.SurveillanceStation.Notification
+      operationId: Notification_GetMessageParameter
       responses:
         '200':
           description: Normal Response
@@ -9644,6 +10986,142 @@ paths:
         - SurveillanceStation.Notification
       summary: Return SetBatchSchedule for SYNO.SurveillanceStation.Notification.Schedule
       operationId: Notification_Schedule_SetBatchSchedule
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Notification.Snapshot/v1/GetSnapshot:
+    get:
+      tags:
+        - SurveillanceStation.Notification
+      summary: Return GetSnapshot for SYNO.SurveillanceStation.Notification.Snapshot
+      operationId: Notification_Snapshot_GetSnapshot
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Notification.Webhook/v1/List:
+    get:
+      tags:
+        - SurveillanceStation.Notification
+      summary: Return List for SYNO.SurveillanceStation.Notification.Webhook
+      operationId: Notification_Webhook_List
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Notification.Webhook/v1/Create:
+    get:
+      tags:
+        - SurveillanceStation.Notification
+      summary: Return Create for SYNO.SurveillanceStation.Notification.Webhook
+      operationId: Notification_Webhook_Create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Notification.Webhook/v1/Edit:
+    get:
+      tags:
+        - SurveillanceStation.Notification
+      summary: Return Edit for SYNO.SurveillanceStation.Notification.Webhook
+      operationId: Notification_Webhook_Edit
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Notification.Webhook/v1/Delete:
+    get:
+      tags:
+        - SurveillanceStation.Notification
+      summary: Return Delete for SYNO.SurveillanceStation.Notification.Webhook
+      operationId: Notification_Webhook_Delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Notification.Webhook/v1/Enable:
+    get:
+      tags:
+        - SurveillanceStation.Notification
+      summary: Return Enable for SYNO.SurveillanceStation.Notification.Webhook
+      operationId: Notification_Webhook_Enable
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Notification.Webhook/v1/SendTestReq:
+    get:
+      tags:
+        - SurveillanceStation.Notification
+      summary: Return SendTestReq for SYNO.SurveillanceStation.Notification.Webhook
+      operationId: Notification_Webhook_SendTestReq
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Notification.Webhook/v1/Preview:
+    get:
+      tags:
+        - SurveillanceStation.Notification
+      summary: Return Preview for SYNO.SurveillanceStation.Notification.Webhook
+      operationId: Notification_Webhook_Preview
       responses:
         '200':
           description: Normal Response
@@ -10658,6 +12136,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.SurveillanceStation.Recording/v6/RetrospectImgSave:
+    get:
+      tags:
+        - SurveillanceStation.Recording
+      summary: Return RetrospectImgSave for SYNO.SurveillanceStation.Recording
+      operationId: Recording_RetrospectImgSave
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.SurveillanceStation.Recording.Bookmark/v2/ListBookmark:
     get:
       tags:
@@ -11089,6 +12584,23 @@ paths:
         - SurveillanceStation.RecordingPicker
       summary: Return SearchLatestDate for SYNO.SurveillanceStation.RecordingPicker
       operationId: RecordingPicker_SearchLatestDate
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.RecordingPicker/v1/InstantSearch:
+    get:
+      tags:
+        - SurveillanceStation.RecordingPicker
+      summary: Return InstantSearch for SYNO.SurveillanceStation.RecordingPicker
+      operationId: RecordingPicker_InstantSearch
       responses:
         '200':
           description: Normal Response
@@ -12296,6 +13808,499 @@ paths:
         - SurveillanceStation.TaskQueue
       summary: Return LongPolling for SYNO.SurveillanceStation.TaskQueue
       operationId: TaskQueue_LongPolling
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Bookmark/v1/Create:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Create for SYNO.SurveillanceStation.ThirdParty.Bookmark
+      operationId: ThirdParty_Bookmark_Create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Bookmark/v1/List:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return List for SYNO.SurveillanceStation.ThirdParty.Bookmark
+      operationId: ThirdParty_Bookmark_List
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Bookmark/v1/DownloadRecording:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return DownloadRecording for SYNO.SurveillanceStation.ThirdParty.Bookmark
+      operationId: ThirdParty_Bookmark_DownloadRecording
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Bookmark/v1/Edit:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Edit for SYNO.SurveillanceStation.ThirdParty.Bookmark
+      operationId: ThirdParty_Bookmark_Edit
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Bookmark/v1/Delete:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Delete for SYNO.SurveillanceStation.ThirdParty.Bookmark
+      operationId: ThirdParty_Bookmark_Delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Camera/v1/List:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return List for SYNO.SurveillanceStation.ThirdParty.Camera
+      operationId: ThirdParty_Camera_List
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Camera/v1/Edit:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Edit for SYNO.SurveillanceStation.ThirdParty.Camera
+      operationId: ThirdParty_Camera_Edit
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Camera/v1/Get:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Get for SYNO.SurveillanceStation.ThirdParty.Camera
+      operationId: ThirdParty_Camera_Get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Camera/v1/PTZControl:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return PTZControl for SYNO.SurveillanceStation.ThirdParty.Camera
+      operationId: ThirdParty_Camera_PTZControl
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Camera/v1/PresetControl:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return PresetControl for SYNO.SurveillanceStation.ThirdParty.Camera
+      operationId: ThirdParty_Camera_PresetControl
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Camera/v1/DOControl:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return DOControl for SYNO.SurveillanceStation.ThirdParty.Camera
+      operationId: ThirdParty_Camera_DOControl
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Camera/v1/AudioOut:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return AudioOut for SYNO.SurveillanceStation.ThirdParty.Camera
+      operationId: ThirdParty_Camera_AudioOut
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Emap/v1/ChangeLocation:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return ChangeLocation for SYNO.SurveillanceStation.ThirdParty.Emap
+      operationId: ThirdParty_Emap_ChangeLocation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.License/v1/Add:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Add for SYNO.SurveillanceStation.ThirdParty.License
+      operationId: ThirdParty_License_Add
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.License/v1/Delete:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Delete for SYNO.SurveillanceStation.ThirdParty.License
+      operationId: ThirdParty_License_Delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database/v1/Create:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Create for SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database
+      operationId: ThirdParty_LicensePlate_Database_Create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database/v1/List:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return List for SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database
+      operationId: ThirdParty_LicensePlate_Database_List
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database/v1/Edit:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Edit for SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database
+      operationId: ThirdParty_LicensePlate_Database_Edit
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database/v1/Delete:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Delete for SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database
+      operationId: ThirdParty_LicensePlate_Database_Delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Event/v1/ListEvent:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return ListEvent for SYNO.SurveillanceStation.ThirdParty.LicensePlate.Event
+      operationId: ThirdParty_LicensePlate_Event_ListEvent
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Event/v1/DownloadRecording:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return DownloadRecording for SYNO.SurveillanceStation.ThirdParty.LicensePlate.Event
+      operationId: ThirdParty_LicensePlate_Event_DownloadRecording
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Event/v1/DownloadReport:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return DownloadReport for SYNO.SurveillanceStation.ThirdParty.LicensePlate.Event
+      operationId: ThirdParty_LicensePlate_Event_DownloadReport
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.PeopleCounting/v1/DownloadReport:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return DownloadReport for SYNO.SurveillanceStation.ThirdParty.PeopleCounting
+      operationId: ThirdParty_PeopleCounting_DownloadReport
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.PeopleVehicle/v1/List:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return List for SYNO.SurveillanceStation.ThirdParty.PeopleVehicle
+      operationId: ThirdParty_PeopleVehicle_List
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.PeopleVehicle/v1/DownloadRecording:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return DownloadRecording for SYNO.SurveillanceStation.ThirdParty.PeopleVehicle
+      operationId: ThirdParty_PeopleVehicle_DownloadRecording
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Recording/v1/Download:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Download for SYNO.SurveillanceStation.ThirdParty.Recording
+      operationId: ThirdParty_Recording_Download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.Recording/v1/DownloadSnapshot:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return DownloadSnapshot for SYNO.SurveillanceStation.ThirdParty.Recording
+      operationId: ThirdParty_Recording_DownloadSnapshot
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.SnapShot/v1/Download:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Download for SYNO.SurveillanceStation.ThirdParty.SnapShot
+      operationId: ThirdParty_SnapShot_Download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.ThirdParty.SnapShot/v1/Take:
+    get:
+      tags:
+        - SurveillanceStation.ThirdParty
+      summary: Return Take for SYNO.SurveillanceStation.ThirdParty.SnapShot
+      operationId: ThirdParty_SnapShot_Take
       responses:
         '200':
           description: Normal Response
@@ -13639,6 +15644,23 @@ paths:
         - SurveillanceStation.Webhook
       summary: Return Incoming for SYNO.SurveillanceStation.Webhook
       operationId: Webhook_Incoming
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SurveillanceStation.Webhook/v1/GetThumbnail:
+    get:
+      tags:
+        - SurveillanceStation.Webhook
+      summary: Return GetThumbnail for SYNO.SurveillanceStation.Webhook
+      operationId: Webhook_GetThumbnail
       responses:
         '200':
           description: Normal Response

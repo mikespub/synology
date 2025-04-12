@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -1042,6 +1041,23 @@ paths:
         - CloudSync.
       summary: Return export_key_by_name for SYNO.CloudSync
       operationId: _export_key_by_name
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/check_server_ever_encrypted:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return check_server_ever_encrypted for SYNO.CloudSync
+      operationId: _check_server_ever_encrypted
       responses:
         '200':
           description: Normal Response

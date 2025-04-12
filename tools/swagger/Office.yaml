@@ -1,0 +1,1683 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are many versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: diskstation
+basePath: /rest.php
+schemes:
+  - http
+securityDefinitions:
+  query_sid:
+    type: apiKey
+    name: _sid
+    in: query
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
+  /SYNO.API.Info/v1/query:
+    get:
+      tags:
+        - API
+      summary: Return query for SYNO.API.Info
+      operationId: API_Info_query
+      parameters:
+        - in: query
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/login:
+    get:
+      tags:
+        - API
+      summary: Return login for SYNO.API.Auth
+      operationId: API_Auth_login
+      parameters:
+        - in: query
+          name: account
+          description: Username
+          required: false
+          type: string
+          default: username
+        - in: query
+          name: passwd
+          description: Password
+          required: false
+          type: string
+          default: passwd
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: query
+          name: format
+          description: Format (cookie or sid)
+          required: false
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Dictionary/v1/set:
+    get:
+      tags:
+        - Office.Dictionary
+      summary: Return set for SYNO.Office.Dictionary
+      operationId: Dictionary_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Dictionary/v1/list:
+    get:
+      tags:
+        - Office.Dictionary
+      summary: Return list for SYNO.Office.Dictionary
+      operationId: Dictionary_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Doc.Snapshot/v1/get:
+    get:
+      tags:
+        - Office.Doc
+      summary: Return get for SYNO.Office.Doc.Snapshot
+      operationId: Doc_Snapshot_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Doc.Snapshot/v1/update:
+    get:
+      tags:
+        - Office.Doc
+      summary: Return update for SYNO.Office.Doc.Snapshot
+      operationId: Doc_Snapshot_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Doc.Snapshot/v1/update_html:
+    get:
+      tags:
+        - Office.Doc
+      summary: Return update_html for SYNO.Office.Doc.Snapshot
+      operationId: Doc_Snapshot_update_html
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Export/v1/download:
+    get:
+      tags:
+        - Office.Export
+      summary: Return download for SYNO.Office.Export
+      operationId: Export_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Export/v1/save:
+    get:
+      tags:
+        - Office.Export
+      summary: Return save for SYNO.Office.Export
+      operationId: Export_save
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Import/v1/start:
+    get:
+      tags:
+        - Office.Import
+      summary: Return start for SYNO.Office.Import
+      operationId: Import_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Import/v1/status:
+    get:
+      tags:
+        - Office.Import
+      summary: Return status for SYNO.Office.Import
+      operationId: Import_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Import/v1/stop:
+    get:
+      tags:
+        - Office.Import
+      summary: Return stop for SYNO.Office.Import
+      operationId: Import_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Import/v1/convert:
+    get:
+      tags:
+        - Office.Import
+      summary: Return convert for SYNO.Office.Import
+      operationId: Import_convert
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Import/v1/info:
+    get:
+      tags:
+        - Office.Import
+      summary: Return info for SYNO.Office.Import
+      operationId: Import_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Import/v1/check:
+    get:
+      tags:
+        - Office.Import
+      summary: Return check for SYNO.Office.Import
+      operationId: Import_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Info/v1/get:
+    get:
+      tags:
+        - Office.Info
+      summary: Return get for SYNO.Office.Info
+      operationId: Info_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Info.Constants/v1/get:
+    get:
+      tags:
+        - Office.Info
+      summary: Return get for SYNO.Office.Info.Constants
+      operationId: Info_Constants_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Locale/v1/get:
+    get:
+      tags:
+        - Office.Locale
+      summary: Return get for SYNO.Office.Locale
+      operationId: Locale_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Locale/v1/list_datetime:
+    get:
+      tags:
+        - Office.Locale
+      summary: Return list_datetime for SYNO.Office.Locale
+      operationId: Locale_list_datetime
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Locale/v1/list_currency:
+    get:
+      tags:
+        - Office.Locale
+      summary: Return list_currency for SYNO.Office.Locale
+      operationId: Locale_list_currency
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Locale/v1/get_default:
+    get:
+      tags:
+        - Office.Locale
+      summary: Return get_default for SYNO.Office.Locale
+      operationId: Locale_get_default
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Locale/v1/list:
+    get:
+      tags:
+        - Office.Locale
+      summary: Return list for SYNO.Office.Locale
+      operationId: Locale_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Log/v1/create:
+    get:
+      tags:
+        - Office.Log
+      summary: Return create for SYNO.Office.Log
+      operationId: Log_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Metrics/v1/get:
+    get:
+      tags:
+        - Office.Metrics
+      summary: Return get for SYNO.Office.Metrics
+      operationId: Metrics_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node/v2/touch:
+    get:
+      tags:
+        - Office.Node
+      summary: Return touch for SYNO.Office.Node
+      operationId: Node_touch
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node/v2/copy:
+    get:
+      tags:
+        - Office.Node
+      summary: Return copy for SYNO.Office.Node
+      operationId: Node_copy
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Attachment/v2/list:
+    get:
+      tags:
+        - Office.Node
+      summary: Return list for SYNO.Office.Node.Attachment
+      operationId: Node_Attachment_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Attachment/v2/delete:
+    get:
+      tags:
+        - Office.Node
+      summary: Return delete for SYNO.Office.Node.Attachment
+      operationId: Node_Attachment_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Attachment/v2/get:
+    get:
+      tags:
+        - Office.Node
+      summary: Return get for SYNO.Office.Node.Attachment
+      operationId: Node_Attachment_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Attachment/v2/create:
+    get:
+      tags:
+        - Office.Node
+      summary: Return create for SYNO.Office.Node.Attachment
+      operationId: Node_Attachment_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Delete/v1/start:
+    get:
+      tags:
+        - Office.Node
+      summary: Return start for SYNO.Office.Node.Delete
+      operationId: Node_Delete_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Delete/v1/status:
+    get:
+      tags:
+        - Office.Node
+      summary: Return status for SYNO.Office.Node.Delete
+      operationId: Node_Delete_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Delete/v1/stop:
+    get:
+      tags:
+        - Office.Node
+      summary: Return stop for SYNO.Office.Node.Delete
+      operationId: Node_Delete_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Encrypt/v1/check:
+    get:
+      tags:
+        - Office.Node
+      summary: Return check for SYNO.Office.Node.Encrypt
+      operationId: Node_Encrypt_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Owner/v1/set:
+    get:
+      tags:
+        - Office.Node
+      summary: Return set for SYNO.Office.Node.Owner
+      operationId: Node_Owner_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Version/v1/get:
+    get:
+      tags:
+        - Office.Node
+      summary: Return get for SYNO.Office.Node.Version
+      operationId: Node_Version_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Version/v1/list:
+    get:
+      tags:
+        - Office.Node
+      summary: Return list for SYNO.Office.Node.Version
+      operationId: Node_Version_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Version/v1/restore:
+    get:
+      tags:
+        - Office.Node
+      summary: Return restore for SYNO.Office.Node.Version
+      operationId: Node_Version_restore
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Node.Version/v1/rename:
+    get:
+      tags:
+        - Office.Node
+      summary: Return rename for SYNO.Office.Node.Version
+      operationId: Node_Version_rename
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Notification/v1/send:
+    get:
+      tags:
+        - Office.Notification
+      summary: Return send for SYNO.Office.Notification
+      operationId: Notification_send
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.OFile/v1/update:
+    get:
+      tags:
+        - Office.OFile
+      summary: Return update for SYNO.Office.OFile
+      operationId: OFile_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Permission/v1/check:
+    get:
+      tags:
+        - Office.Permission
+      summary: Return check for SYNO.Office.Permission
+      operationId: Permission_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Permission.User/v1/check:
+    get:
+      tags:
+        - Office.Permission
+      summary: Return check for SYNO.Office.Permission.User
+      operationId: Permission_User_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Presentation.Snapshot/v1/get:
+    get:
+      tags:
+        - Office.Presentation
+      summary: Return get for SYNO.Office.Presentation.Snapshot
+      operationId: Presentation_Snapshot_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Presentation.Snapshot/v1/update:
+    get:
+      tags:
+        - Office.Presentation
+      summary: Return update for SYNO.Office.Presentation.Snapshot
+      operationId: Presentation_Snapshot_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Resource/v2/get:
+    get:
+      tags:
+        - Office.Resource
+      summary: Return get for SYNO.Office.Resource
+      operationId: Resource_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.SCIM.Photo/v1/get:
+    get:
+      tags:
+        - Office.SCIM
+      summary: Return get for SYNO.Office.SCIM.Photo
+      operationId: SCIM_Photo_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.SCIM.User/v1/get:
+    get:
+      tags:
+        - Office.SCIM
+      summary: Return get for SYNO.Office.SCIM.User
+      operationId: SCIM_User_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.SCIM.UserGroup/v1/get:
+    get:
+      tags:
+        - Office.SCIM
+      summary: Return get for SYNO.Office.SCIM.UserGroup
+      operationId: SCIM_UserGroup_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting/v1/get:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return get for SYNO.Office.Setting
+      operationId: Setting_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting/v1/set:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return set for SYNO.Office.Setting
+      operationId: Setting_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting.Font/v1/list:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return list for SYNO.Office.Setting.Font
+      operationId: Setting_Font_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting.Font/v1/add:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return add for SYNO.Office.Setting.Font
+      operationId: Setting_Font_add
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting.Font/v1/enable:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return enable for SYNO.Office.Setting.Font
+      operationId: Setting_Font_enable
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting.Font/v1/disable:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return disable for SYNO.Office.Setting.Font
+      operationId: Setting_Font_disable
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting.Font/v1/delete:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return delete for SYNO.Office.Setting.Font
+      operationId: Setting_Font_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting.Person/v1/get:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return get for SYNO.Office.Setting.Person
+      operationId: Setting_Person_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting.Person/v1/set:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return set for SYNO.Office.Setting.Person
+      operationId: Setting_Person_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting.System/v1/get:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return get for SYNO.Office.Setting.System
+      operationId: Setting_System_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting.System/v1/set:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return set for SYNO.Office.Setting.System
+      operationId: Setting_System_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting.UI/v1/get:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return get for SYNO.Office.Setting.UI
+      operationId: Setting_UI_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Setting.UI/v1/set:
+    get:
+      tags:
+        - Office.Setting
+      summary: Return set for SYNO.Office.Setting.UI
+      operationId: Setting_UI_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Shard/v1/get:
+    get:
+      tags:
+        - Office.Shard
+      summary: Return get for SYNO.Office.Shard
+      operationId: Shard_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Shard.Def/v1/get:
+    get:
+      tags:
+        - Office.Shard
+      summary: Return get for SYNO.Office.Shard.Def
+      operationId: Shard_Def_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Shard.Framework/v1/init:
+    get:
+      tags:
+        - Office.Shard
+      summary: Return init for SYNO.Office.Shard.Framework
+      operationId: Shard_Framework_init
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Shard.Info/v1/get:
+    get:
+      tags:
+        - Office.Shard
+      summary: Return get for SYNO.Office.Shard.Info
+      operationId: Shard_Info_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Shard.JSConfig/v1/get:
+    get:
+      tags:
+        - Office.Shard
+      summary: Return get for SYNO.Office.Shard.JSConfig
+      operationId: Shard_JSConfig_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Shard.Session/v1/get:
+    get:
+      tags:
+        - Office.Shard
+      summary: Return get for SYNO.Office.Shard.Session
+      operationId: Shard_Session_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Shard.Token/v1/get:
+    get:
+      tags:
+        - Office.Shard
+      summary: Return get for SYNO.Office.Shard.Token
+      operationId: Shard_Token_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Shard.Type/v1/get:
+    get:
+      tags:
+        - Office.Shard
+      summary: Return get for SYNO.Office.Shard.Type
+      operationId: Shard_Type_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Sheet.MruFc/v1/list:
+    get:
+      tags:
+        - Office.Sheet
+      summary: Return list for SYNO.Office.Sheet.MruFc
+      operationId: Sheet_MruFc_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Sheet.MruFc/v1/create:
+    get:
+      tags:
+        - Office.Sheet
+      summary: Return create for SYNO.Office.Sheet.MruFc
+      operationId: Sheet_MruFc_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Sheet.Snapshot/v2/create:
+    get:
+      tags:
+        - Office.Sheet
+      summary: Return create for SYNO.Office.Sheet.Snapshot
+      operationId: Sheet_Snapshot_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Sheet.Snapshot.History/v1/get:
+    get:
+      tags:
+        - Office.Sheet
+      summary: Return get for SYNO.Office.Sheet.Snapshot.History
+      operationId: Sheet_Snapshot_History_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Snapshot/v4/get:
+    get:
+      tags:
+        - Office.Snapshot
+      summary: Return get for SYNO.Office.Snapshot
+      operationId: Snapshot_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Template/v1/publish:
+    get:
+      tags:
+        - Office.Template
+      summary: Return publish for SYNO.Office.Template
+      operationId: Template_publish
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Template/v1/save:
+    get:
+      tags:
+        - Office.Template
+      summary: Return save for SYNO.Office.Template
+      operationId: Template_save
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Template/v1/make:
+    get:
+      tags:
+        - Office.Template
+      summary: Return make for SYNO.Office.Template
+      operationId: Template_make
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Template/v1/list:
+    get:
+      tags:
+        - Office.Template
+      summary: Return list for SYNO.Office.Template
+      operationId: Template_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Template/v1/get:
+    get:
+      tags:
+        - Office.Template
+      summary: Return get for SYNO.Office.Template
+      operationId: Template_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Template/v1/set:
+    get:
+      tags:
+        - Office.Template
+      summary: Return set for SYNO.Office.Template
+      operationId: Template_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Template/v1/delete:
+    get:
+      tags:
+        - Office.Template
+      summary: Return delete for SYNO.Office.Template
+      operationId: Template_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Template/v1/request:
+    get:
+      tags:
+        - Office.Template
+      summary: Return request for SYNO.Office.Template
+      operationId: Template_request
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Template.Permission/v1/set:
+    get:
+      tags:
+        - Office.Template
+      summary: Return set for SYNO.Office.Template.Permission
+      operationId: Template_Permission_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Template.Sharing.Group/v1/list:
+    get:
+      tags:
+        - Office.Template
+      summary: Return list for SYNO.Office.Template.Sharing.Group
+      operationId: Template_Sharing_Group_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Template.Thumb/v1/get:
+    get:
+      tags:
+        - Office.Template
+      summary: Return get for SYNO.Office.Template.Thumb
+      operationId: Template_Thumb_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Theme/v1/apply:
+    get:
+      tags:
+        - Office.Theme
+      summary: Return apply for SYNO.Office.Theme
+      operationId: Theme_apply
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Theme/v1/list:
+    get:
+      tags:
+        - Office.Theme
+      summary: Return list for SYNO.Office.Theme
+      operationId: Theme_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Theme.Thumb/v1/get:
+    get:
+      tags:
+        - Office.Theme
+      summary: Return get for SYNO.Office.Theme.Thumb
+      operationId: Theme_Thumb_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.UserStatistics.Event/v1/create:
+    get:
+      tags:
+        - Office.UserStatistics
+      summary: Return create for SYNO.Office.UserStatistics.Event
+      operationId: UserStatistics_Event_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Video/v1/download:
+    get:
+      tags:
+        - Office.Video
+      summary: Return download for SYNO.Office.Video
+      operationId: Video_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Office.Video.Thumb/v1/get:
+    get:
+      tags:
+        - Office.Video
+      summary: Return get for SYNO.Office.Video.Thumb
+      operationId: Video_Thumb_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

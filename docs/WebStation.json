@@ -1,4 +1,19 @@
 {
+    "SYNO.WebStation.Backup": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "remove",
+                "export",
+                "get",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.WebStation.Default": {
         "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
         "maxVersion": 1,
@@ -6,6 +21,19 @@
             "1": [
                 "get",
                 "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.WebStation.Docker": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "hash",
+                "tags"
             ]
         },
         "minVersion": 1,
@@ -73,6 +101,26 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.WebStation.Package": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "restore",
+                "upgrade",
+                "rebuild",
+                "pause",
+                "start",
+                "remove",
+                "update",
+                "list",
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.WebStation.Python": {
         "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
         "maxVersion": 1,
@@ -96,6 +144,39 @@
                 "update",
                 "add",
                 "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.WebStation.ScriptLanguage": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "restore",
+                "upgrade",
+                "rebuild",
+                "pause",
+                "start",
+                "update",
+                "remove",
+                "create",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.WebStation.ScriptLanguage.Utils": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_version",
+                "get"
             ]
         },
         "minVersion": 1,
@@ -129,6 +210,19 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.WebStation.Task": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.WebStation.WebService.Portal": {
         "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
         "maxVersion": 1,
@@ -144,11 +238,29 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.WebStation.WebService.Portal.Log": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "export",
+                "remove",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.WebStation.WebService.Service": {
         "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
         "maxVersion": 1,
         "methods": {
             "1": [
+                "check",
+                "remove",
+                "update",
+                "create",
                 "list"
             ]
         },

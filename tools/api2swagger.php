@@ -67,7 +67,7 @@ function get_ip_address()
     return 'diskstation';
 }
 
-function generate_swagger($apilist, $debug=false)
+function generate_swagger($apilist, $debug = false)
 {
     // if running on the Synology, this should be enough to start
     //$host = get_ip_address();
@@ -119,7 +119,11 @@ function generate_swagger($apilist, $debug=false)
             $params['tag'] = explode('.', $api)[1];
             $params['tag2'] = explode('.', $api)[2];
             foreach ($values as $idx => $val) {
-                echo "\t\t".$idx.":".$val."\n";
+                if (is_array($val)) {
+                    echo "\t\t".$idx.":".json_encode($val)."\n";
+                } else {
+                    echo "\t\t".$idx.":".$val."\n";
+                }
             }
             //continue;
             $path = $values['path'];
@@ -145,7 +149,7 @@ function generate_swagger($apilist, $debug=false)
             if (!$methods) {
                 var_dump($values);
                 var_dump($params);
-                $methods = $values['methods'][$values['minVersion']];
+                $methods = $values['methods'][$values['minVersion']] ?? [];
                 $params['version'] = $values['minVersion'];
                 //exit;
             }
@@ -330,7 +334,7 @@ function combine_json_files()
         foreach ($json as $api => $values) {
             $values = clean_values($values);
             if (strpos($api, 'PhotoStation') === false) {
-                if (!$auth[$api]) {
+                if (empty($auth[$api])) {
                     echo "Unknown api $api\n";
                     //continue;
                     exit;
@@ -341,24 +345,26 @@ function combine_json_files()
                         }
                     }
                 } else {
-                    if ($values['path'] && $values['path'] != $auth[$api]['path']) {
+                    if (!empty($values['path']) && $values['path'] != $auth[$api]['path']) {
                         echo "Invalid path ".$values['path']." for api $api in $file\n";
                         //continue;
-                        exit;
+                        //exit;
+                        $values['path'] = $auth[$api]['path'];
                     }
-                    if ($values['maxVersion'] && $values['maxVersion'] != $auth[$api]['maxVersion']) {
+                    if (!empty($values['maxVersion']) && $values['maxVersion'] != $auth[$api]['maxVersion']) {
                         echo "Invalid maxVersion ".$values['maxVersion']." for api $api in $file\n";
                         exit;
                     }
                 }
             }
             $root = implode('.', array_slice(explode('.', $api), 0, 2));
-            if ($apilist[$root] && $apilist[$root][$api]) {
+            if (!empty($apilist[$root]) && !empty($apilist[$root][$api])) {
                 echo "Already seen $api\n";
                 $apilist[$root][$api] = array_merge($apilist[$root][$api], $values);
                 continue;
                 //exit;
             }
+            $apilist[$root] ??= [];
             if ($auth[$api]) {
                 $apilist[$root][$api] = array_merge($values, $auth[$api]);
             } else {
@@ -395,18 +401,17 @@ function refresh_api_files($basedir)
     $found = `find $path -name '*.api' -exec cp -p {} $basedir \;`;
     #$found = `find $path -path '*Station/*' -name '*.lib' -exec cp {} $basedir \;`;
     $found = `find $path -name '*.lib' -exec cp -p {} $basedir \;`;
+    // Find *.api files in the webapi itself
+    $path = '/usr/syno/synoman/webapi/';
+    $found = `find $path -name '*.api' -exec cp -p {} $basedir \;`;
+    $found = `find $path -name '*.lib' -exec cp -p {} $basedir \;`;
     // Some cleanup of incomplete API files
-    //$checkme = ['Auth.api', 'Query.api', 'NoteStation.lib'];
-    $checkme = ['query.api'];
+    $checkme = ['query.api', 'NoteStation.lib', 'office.lib'];
     foreach ($checkme as $file) {
         if (is_file($basedir.$file)) {
             unlink($basedir.$file);
         }
     }
-    // Find *.api files in the webapi itself
-    $path = '/usr/syno/synoman/webapi/';
-    $found = `find $path -name '*.api' -exec cp -p {} $basedir \;`;
-    $found = `find $path -name '*.lib' -exec cp -p {} $basedir \;`;
     $files = scandir($basedir);
     $count = count($files) - 2;
     echo "Found ".$count." API files...\n";

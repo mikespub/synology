@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -617,6 +616,23 @@ paths:
         - Core.BackgroundTask
       summary: Return get for SYNO.Core.BackgroundTask
       operationId: BackgroundTask_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Backup.ED/v1/ensure_package_installed_and_started:
+    get:
+      tags:
+        - Core.Backup
+      summary: Return ensure_package_installed_and_started for SYNO.Core.Backup.ED
+      operationId: Backup_ED_ensure_package_installed_and_started
       responses:
         '200':
           description: Normal Response
@@ -2124,7 +2140,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Directory.Domain/v2/set:
+  /SYNO.Core.Directory.Domain/v3/set:
     get:
       tags:
         - Core.Directory
@@ -2141,46 +2157,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Directory.Domain/v2/get_domain_list:
-    get:
-      tags:
-        - Core.Directory
-      summary: Return get_domain_list for SYNO.Core.Directory.Domain
-      operationId: Directory_Domain_get_domain_list
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Core.Directory.Domain.Conf/v2/set:
+  /SYNO.Core.Directory.Domain.Conf/v3/set:
     get:
       tags:
         - Core.Directory
       summary: Return set for SYNO.Core.Directory.Domain.Conf
       operationId: Directory_Domain_Conf_set
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Core.Directory.Domain.Conf/v2/get:
-    get:
-      tags:
-        - Core.Directory
-      summary: Return get for SYNO.Core.Directory.Domain.Conf
-      operationId: Directory_Domain_Conf_get
       responses:
         '200':
           description: Normal Response
@@ -2215,6 +2197,74 @@ paths:
         - Core.Directory
       summary: Return get for SYNO.Core.Directory.Domain.Schedule
       operationId: Directory_Domain_Schedule_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Directory.Domain.Trust/v1/get:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return get for SYNO.Core.Directory.Domain.Trust
+      operationId: Directory_Domain_Trust_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Directory.Domain.Trust/v1/set:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return set for SYNO.Core.Directory.Domain.Trust
+      operationId: Directory_Domain_Trust_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Directory.Domain.Trust/v1/list:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return list for SYNO.Core.Directory.Domain.Trust
+      operationId: Directory_Domain_Trust_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Directory.Domain.Trust/v1/set_allow_domain:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return set_allow_domain for SYNO.Core.Directory.Domain.Trust
+      operationId: Directory_Domain_Trust_set_allow_domain
       responses:
         '200':
           description: Normal Response
@@ -2396,6 +2446,40 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Core.Directory.SSO.CAS/v1/set:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return set for SYNO.Core.Directory.SSO.CAS
+      operationId: Directory_SSO_CAS_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Directory.SSO.CAS/v1/get:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return get for SYNO.Core.Directory.SSO.CAS
+      operationId: Directory_SSO_CAS_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Core.Directory.SSO.Profile/v1/list:
     get:
       tags:
@@ -2447,7 +2531,75 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Directory.SSO/v1/get:
+  /SYNO.Core.Directory.SSO.SAML/v1/set:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return set for SYNO.Core.Directory.SSO.SAML
+      operationId: Directory_SSO_SAML_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Directory.SSO.SAML/v1/get:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return get for SYNO.Core.Directory.SSO.SAML
+      operationId: Directory_SSO_SAML_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Directory.SSO.SAML.Metadata/v1/import:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return import for SYNO.Core.Directory.SSO.SAML.Metadata
+      operationId: Directory_SSO_SAML_Metadata_import
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Directory.SSO.SAML.Status/v1/set:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return set for SYNO.Core.Directory.SSO.SAML.Status
+      operationId: Directory_SSO_SAML_Status_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Directory.SSO/v2/get:
     get:
       tags:
         - Core.Directory
@@ -2464,29 +2616,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Directory.SSO/v1/set:
+  /SYNO.Core.Directory.SSO/v2/set:
     get:
       tags:
         - Core.Directory
       summary: Return set for SYNO.Core.Directory.SSO
       operationId: Directory_SSO_set
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Core.Directory.SSO/v1/register:
-    get:
-      tags:
-        - Core.Directory
-      summary: Return register for SYNO.Core.Directory.SSO
-      operationId: Directory_SSO_register
       responses:
         '200':
           description: Normal Response
@@ -2521,6 +2656,57 @@ paths:
         - Core.Directory
       summary: Return get for SYNO.Core.Directory.SSO.IWA
       operationId: Directory_SSO_IWA_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Directory.SSO.Setting/v1/get:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return get for SYNO.Core.Directory.SSO.Setting
+      operationId: Directory_SSO_Setting_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Directory.SSO.Setting/v1/set:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return set for SYNO.Core.Directory.SSO.Setting
+      operationId: Directory_SSO_Setting_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Directory.SSO.Status/v1/set:
+    get:
+      tags:
+        - Core.Directory
+      summary: Return set for SYNO.Core.Directory.SSO.Status
+      operationId: Directory_SSO_Status_set
       responses:
         '200':
           description: Normal Response
@@ -3042,6 +3228,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Core.DirectoryServiceCheck.DomainValidation/v1/check_domain_files:
+    get:
+      tags:
+        - Core.DirectoryServiceCheck
+      summary: Return check_domain_files for SYNO.Core.DirectoryServiceCheck.DomainValidation
+      operationId: DirectoryServiceCheck_DomainValidation_check_domain_files
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Core.DirectoryServiceCheck.DomainValidation/v1/check_dc_connection:
     get:
       tags:
@@ -3059,12 +3262,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.DirectoryServiceCheck.DomainValidation/v1/check_nss:
+  /SYNO.Core.DirectoryServiceCheck.DomainValidation/v1/check_winbind_get:
     get:
       tags:
         - Core.DirectoryServiceCheck
-      summary: Return check_nss for SYNO.Core.DirectoryServiceCheck.DomainValidation
-      operationId: DirectoryServiceCheck_DomainValidation_check_nss
+      summary: Return check_winbind_get for SYNO.Core.DirectoryServiceCheck.DomainValidation
+      operationId: DirectoryServiceCheck_DomainValidation_check_winbind_get
       responses:
         '200':
           description: Normal Response
@@ -3082,6 +3285,40 @@ paths:
         - Core.DirectoryServiceCheck
       summary: Return check_userget for SYNO.Core.DirectoryServiceCheck.DomainValidation
       operationId: DirectoryServiceCheck_DomainValidation_check_userget
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.DirectoryServiceCheck.DomainValidation/v1/check_trust_direction:
+    get:
+      tags:
+        - Core.DirectoryServiceCheck
+      summary: Return check_trust_direction for SYNO.Core.DirectoryServiceCheck.DomainValidation
+      operationId: DirectoryServiceCheck_DomainValidation_check_trust_direction
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.DirectoryServiceCheck.DomainValidation/v1/check_trustrpc:
+    get:
+      tags:
+        - Core.DirectoryServiceCheck
+      summary: Return check_trustrpc for SYNO.Core.DirectoryServiceCheck.DomainValidation
+      operationId: DirectoryServiceCheck_DomainValidation_check_trustrpc
       responses:
         '200':
           description: Normal Response
@@ -3677,6 +3914,40 @@ paths:
         - Core.EventScheduler
       summary: Return event_list for SYNO.Core.EventScheduler
       operationId: EventScheduler_event_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.EventScheduler.Root/v1/set:
+    get:
+      tags:
+        - Core.EventScheduler
+      summary: Return set for SYNO.Core.EventScheduler.Root
+      operationId: EventScheduler_Root_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.EventScheduler.Root/v1/create:
+    get:
+      tags:
+        - Core.EventScheduler
+      summary: Return create for SYNO.Core.EventScheduler.Root
+      operationId: EventScheduler_Root_create
       responses:
         '200':
           description: Normal Response
@@ -4793,6 +5064,125 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Core.FileServ.NFS.ConfBackup/v1/get_conf:
+    get:
+      tags:
+        - Core.FileServ
+      summary: Return get_conf for SYNO.Core.FileServ.NFS.ConfBackup
+      operationId: FileServ_NFS_ConfBackup_get_conf
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.FileServ.NFS.ConfBackup/v1/set_conf:
+    get:
+      tags:
+        - Core.FileServ
+      summary: Return set_conf for SYNO.Core.FileServ.NFS.ConfBackup
+      operationId: FileServ_NFS_ConfBackup_set_conf
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.FileServ.NFS.ConfBackup/v1/get_rules:
+    get:
+      tags:
+        - Core.FileServ
+      summary: Return get_rules for SYNO.Core.FileServ.NFS.ConfBackup
+      operationId: FileServ_NFS_ConfBackup_get_rules
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.FileServ.NFS.ConfBackup/v1/set_rules:
+    get:
+      tags:
+        - Core.FileServ
+      summary: Return set_rules for SYNO.Core.FileServ.NFS.ConfBackup
+      operationId: FileServ_NFS_ConfBackup_set_rules
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.FileServ.NFS.ConfBackup/v1/get_idmap:
+    get:
+      tags:
+        - Core.FileServ
+      summary: Return get_idmap for SYNO.Core.FileServ.NFS.ConfBackup
+      operationId: FileServ_NFS_ConfBackup_get_idmap
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.FileServ.NFS.ConfBackup/v1/set_idmap:
+    get:
+      tags:
+        - Core.FileServ
+      summary: Return set_idmap for SYNO.Core.FileServ.NFS.ConfBackup
+      operationId: FileServ_NFS_ConfBackup_set_idmap
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.FileServ.NFS.ConfBackup/v1/remove_keytab:
+    get:
+      tags:
+        - Core.FileServ
+      summary: Return remove_keytab for SYNO.Core.FileServ.NFS.ConfBackup
+      operationId: FileServ_NFS_ConfBackup_remove_keytab
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Core.FileServ.NFS.IDMap/v1/list:
     get:
       tags:
@@ -5167,6 +5557,40 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Core.FileServ.SMB.Control/v1/close_share:
+    get:
+      tags:
+        - Core.FileServ
+      summary: Return close_share for SYNO.Core.FileServ.SMB.Control
+      operationId: FileServ_SMB_Control_close_share
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.FileServ.SMB.Control/v1/reload:
+    get:
+      tags:
+        - Core.FileServ
+      summary: Return reload for SYNO.Core.FileServ.SMB.Control
+      operationId: FileServ_SMB_Control_reload
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Core.FileServ.SMB.MSDFS/v1/get_url:
     get:
       tags:
@@ -5479,6 +5903,74 @@ paths:
         - Core.Group
       summary: Return admin_check for SYNO.Core.Group
       operationId: Group_admin_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Group/v1/export_prepare:
+    get:
+      tags:
+        - Core.Group
+      summary: Return export_prepare for SYNO.Core.Group
+      operationId: Group_export_prepare
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Group/v1/export_prepare_status:
+    get:
+      tags:
+        - Core.Group
+      summary: Return export_prepare_status for SYNO.Core.Group
+      operationId: Group_export_prepare_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Group/v1/export_prepare_stop:
+    get:
+      tags:
+        - Core.Group
+      summary: Return export_prepare_stop for SYNO.Core.Group
+      operationId: Group_export_prepare_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Group/v1/export:
+    get:
+      tags:
+        - Core.Group
+      summary: Return export for SYNO.Core.Group
+      operationId: Group_export
       responses:
         '200':
           description: Normal Response
@@ -7394,6 +7886,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Core.ISCSI.LUN/v1/thick_lun_warn_size_get:
+    get:
+      tags:
+        - Core.ISCSI
+      summary: Return thick_lun_warn_size_get for SYNO.Core.ISCSI.LUN
+      operationId: ISCSI_LUN_thick_lun_warn_size_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Core.ISCSI.Lunbkp/v1/backuplun_move:
     get:
       tags:
@@ -7638,6 +8147,23 @@ paths:
         - Core.ISCSI
       summary: Return trg_limit_check for SYNO.Core.ISCSI.Lunbkp
       operationId: ISCSI_Lunbkp_trg_limit_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.ISCSI.Lunbkp/v1/uuid_get:
+    get:
+      tags:
+        - Core.ISCSI
+      summary: Return uuid_get for SYNO.Core.ISCSI.Lunbkp
+      operationId: ISCSI_Lunbkp_uuid_get
       responses:
         '200':
           description: Normal Response
@@ -10403,6 +10929,108 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Core.Notification.Advance.FilterSettings.Profile/v1/list:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return list for SYNO.Core.Notification.Advance.FilterSettings.Profile
+      operationId: Notification_Advance_FilterSettings_Profile_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Notification.Advance.FilterSettings.Template/v1/delete:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return delete for SYNO.Core.Notification.Advance.FilterSettings.Template
+      operationId: Notification_Advance_FilterSettings_Template_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Notification.Advance.FilterSettings.Template/v1/create:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return create for SYNO.Core.Notification.Advance.FilterSettings.Template
+      operationId: Notification_Advance_FilterSettings_Template_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Notification.Advance.FilterSettings.Template/v1/list:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return list for SYNO.Core.Notification.Advance.FilterSettings.Template
+      operationId: Notification_Advance_FilterSettings_Template_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Notification.Advance.FilterSettings.Template/v1/get:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return get for SYNO.Core.Notification.Advance.FilterSettings.Template
+      operationId: Notification_Advance_FilterSettings_Template_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Notification.Advance.FilterSettings.Template/v1/set:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return set for SYNO.Core.Notification.Advance.FilterSettings.Template
+      operationId: Notification_Advance_FilterSettings_Template_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Core.Notification.Advance.Variables/v1/get:
     get:
       tags:
@@ -10471,7 +11099,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Notification.CMS.Conf/v1/get:
+  /SYNO.Core.Notification.CMS.Conf/v2/get:
     get:
       tags:
         - Core.Notification
@@ -10488,12 +11116,97 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Notification.CMS.Conf/v1/set:
+  /SYNO.Core.Notification.CMS.Conf/v2/set:
     get:
       tags:
         - Core.Notification
       summary: Return set for SYNO.Core.Notification.CMS.Conf
       operationId: Notification_CMS_Conf_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Notification.Line/v1/get_bot_info:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return get_bot_info for SYNO.Core.Notification.Line
+      operationId: Notification_Line_get_bot_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Notification.Line/v1/refresh_token:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return refresh_token for SYNO.Core.Notification.Line
+      operationId: Notification_Line_refresh_token
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Notification.Line/v1/verify_token:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return verify_token for SYNO.Core.Notification.Line
+      operationId: Notification_Line_verify_token
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Notification.Line/v1/revoke_token:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return revoke_token for SYNO.Core.Notification.Line
+      operationId: Notification_Line_revoke_token
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Notification.Line/v1/send_test:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return send_test for SYNO.Core.Notification.Line
+      operationId: Notification_Line_send_test
       responses:
         '200':
           description: Normal Response
@@ -10641,6 +11354,57 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Core.Notification.Mail.Profile.Conf/v1/create:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return create for SYNO.Core.Notification.Mail.Profile.Conf
+      operationId: Notification_Mail_Profile_Conf_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Notification.Mail.Profile.Conf/v1/set:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return set for SYNO.Core.Notification.Mail.Profile.Conf
+      operationId: Notification_Mail_Profile_Conf_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Notification.Mail.Profile.Conf/v1/delete:
+    get:
+      tags:
+        - Core.Notification
+      summary: Return delete for SYNO.Core.Notification.Mail.Profile.Conf
+      operationId: Notification_Mail_Profile_Conf_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Core.Notification.Push/v1/send_test:
     get:
       tags:
@@ -10726,7 +11490,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Notification.Push.Mail/v1/get:
+  /SYNO.Core.Notification.Push.Mail/v2/get:
     get:
       tags:
         - Core.Notification
@@ -10743,7 +11507,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Notification.Push.Mail/v1/set:
+  /SYNO.Core.Notification.Push.Mail/v2/set:
     get:
       tags:
         - Core.Notification
@@ -10760,58 +11524,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Notification.Push.Mail/v1/status:
-    get:
-      tags:
-        - Core.Notification
-      summary: Return status for SYNO.Core.Notification.Push.Mail
-      operationId: Notification_Push_Mail_status
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Core.Notification.Push.Mail/v1/send_verify:
-    get:
-      tags:
-        - Core.Notification
-      summary: Return send_verify for SYNO.Core.Notification.Push.Mail
-      operationId: Notification_Push_Mail_send_verify
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Core.Notification.Push.Mail/v1/send_test:
-    get:
-      tags:
-        - Core.Notification
-      summary: Return send_test for SYNO.Core.Notification.Push.Mail
-      operationId: Notification_Push_Mail_send_test
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Core.Notification.Push.Mobile/v1/list:
+  /SYNO.Core.Notification.Push.Mobile/v2/list:
     get:
       tags:
         - Core.Notification
@@ -10828,7 +11541,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Notification.Push.Mobile/v1/unpair:
+  /SYNO.Core.Notification.Push.Mobile/v2/unpair:
     get:
       tags:
         - Core.Notification
@@ -10845,7 +11558,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Notification.Push.Webhook.Provider/v1/delete:
+  /SYNO.Core.Notification.Push.Webhook.Provider/v2/delete:
     get:
       tags:
         - Core.Notification
@@ -10862,7 +11575,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Notification.Push.Webhook.Provider/v1/create:
+  /SYNO.Core.Notification.Push.Webhook.Provider/v2/create:
     get:
       tags:
         - Core.Notification
@@ -10879,7 +11592,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Notification.Push.Webhook.Provider/v1/set:
+  /SYNO.Core.Notification.Push.Webhook.Provider/v2/set:
     get:
       tags:
         - Core.Notification
@@ -10896,7 +11609,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Notification.Push.Webhook.Provider/v1/get:
+  /SYNO.Core.Notification.Push.Webhook.Provider/v2/get:
     get:
       tags:
         - Core.Notification
@@ -10913,7 +11626,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Notification.Push.Webhook.Provider/v1/list:
+  /SYNO.Core.Notification.Push.Webhook.Provider/v2/list:
     get:
       tags:
         - Core.Notification
@@ -10930,7 +11643,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Notification.Push.Webhook.Provider/v1/send_test:
+  /SYNO.Core.Notification.Push.Webhook.Provider/v2/send_test:
     get:
       tags:
         - Core.Notification
@@ -12630,6 +13343,193 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Core.Promotion.PreInstall/v1/set_never_show:
+    get:
+      tags:
+        - Core.Promotion
+      summary: Return set_never_show for SYNO.Core.Promotion.PreInstall
+      operationId: Promotion_PreInstall_set_never_show
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Promotion.PreInstall/v1/set_installing_pkg:
+    get:
+      tags:
+        - Core.Promotion
+      summary: Return set_installing_pkg for SYNO.Core.Promotion.PreInstall
+      operationId: Promotion_PreInstall_set_installing_pkg
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Promotion.PreInstall/v1/set_not_install:
+    get:
+      tags:
+        - Core.Promotion
+      summary: Return set_not_install for SYNO.Core.Promotion.PreInstall
+      operationId: Promotion_PreInstall_set_not_install
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Promotion.PreInstall/v1/set_pkg_should_install:
+    get:
+      tags:
+        - Core.Promotion
+      summary: Return set_pkg_should_install for SYNO.Core.Promotion.PreInstall
+      operationId: Promotion_PreInstall_set_pkg_should_install
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Promotion.PreInstall/v1/set_preinstall_cnt:
+    get:
+      tags:
+        - Core.Promotion
+      summary: Return set_preinstall_cnt for SYNO.Core.Promotion.PreInstall
+      operationId: Promotion_PreInstall_set_preinstall_cnt
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Promotion.PreInstall/v1/start_preinstall:
+    get:
+      tags:
+        - Core.Promotion
+      summary: Return start_preinstall for SYNO.Core.Promotion.PreInstall
+      operationId: Promotion_PreInstall_start_preinstall
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Promotion.PreInstall/v1/get_install_confirm:
+    get:
+      tags:
+        - Core.Promotion
+      summary: Return get_install_confirm for SYNO.Core.Promotion.PreInstall
+      operationId: Promotion_PreInstall_get_install_confirm
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Promotion.PreInstall/v1/get_never_show:
+    get:
+      tags:
+        - Core.Promotion
+      summary: Return get_never_show for SYNO.Core.Promotion.PreInstall
+      operationId: Promotion_PreInstall_get_never_show
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Promotion.PreInstall/v1/get_pkg_should_install:
+    get:
+      tags:
+        - Core.Promotion
+      summary: Return get_pkg_should_install for SYNO.Core.Promotion.PreInstall
+      operationId: Promotion_PreInstall_get_pkg_should_install
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Promotion.PreInstall/v1/enable_preinstall:
+    get:
+      tags:
+        - Core.Promotion
+      summary: Return enable_preinstall for SYNO.Core.Promotion.PreInstall
+      operationId: Promotion_PreInstall_enable_preinstall
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Promotion.Info/v1/is_AMFA_enabled:
+    get:
+      tags:
+        - Core.Promotion
+      summary: Return is_AMFA_enabled for SYNO.Core.Promotion.Info
+      operationId: Promotion_Info_is_AMFA_enabled
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Core.Promotion.Info/v1/hide_promotion:
     get:
       tags:
@@ -12653,6 +13553,23 @@ paths:
         - Core.Promotion
       summary: Return get_old_patch for SYNO.Core.Promotion.Info
       operationId: Promotion_Info_get_old_patch
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Promotion.Info/v1/is_2FA_enabled:
+    get:
+      tags:
+        - Core.Promotion
+      summary: Return is_2FA_enabled for SYNO.Core.Promotion.Info
+      operationId: Promotion_Info_is_2FA_enabled
       responses:
         '200':
           description: Normal Response
@@ -12738,6 +13655,23 @@ paths:
         - Core.QuickConnect
       summary: Return register_crt for SYNO.Core.QuickConnect
       operationId: QuickConnect_register_crt
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.QuickConnect/v3/get_server_alias:
+    get:
+      tags:
+        - Core.QuickConnect
+      summary: Return get_server_alias for SYNO.Core.QuickConnect
+      operationId: QuickConnect_get_server_alias
       responses:
         '200':
           description: Normal Response
@@ -13242,7 +14176,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Region.NTP/v2/get:
+  /SYNO.Core.Region.NTP/v3/get:
     get:
       tags:
         - Core.Region
@@ -13259,7 +14193,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Region.NTP/v2/set:
+  /SYNO.Core.Region.NTP/v3/set:
     get:
       tags:
         - Core.Region
@@ -13480,29 +14414,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Report.Analyzer.File/v1/duplicate:
+  /SYNO.Core.Report.Analyzer.File/v2/duplicate:
     get:
       tags:
         - Core.Report
       summary: Return duplicate for SYNO.Core.Report.Analyzer.File
       operationId: Report_Analyzer_File_duplicate
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Core.Report.Analyzer.File/v1/status:
-    get:
-      tags:
-        - Core.Report
-      summary: Return status for SYNO.Core.Report.Analyzer.File
-      operationId: Report_Analyzer_File_status
       responses:
         '200':
           description: Normal Response
@@ -13724,6 +14641,57 @@ paths:
         - Core.SNMP
       summary: Return get for SYNO.Core.SNMP
       operationId: SNMP_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.SNMP/v1/get_run_conf:
+    get:
+      tags:
+        - Core.SNMP
+      summary: Return get_run_conf for SYNO.Core.SNMP
+      operationId: SNMP_get_run_conf
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.SNMP/v1/gen_run_conf:
+    get:
+      tags:
+        - Core.SNMP
+      summary: Return gen_run_conf for SYNO.Core.SNMP
+      operationId: SNMP_gen_run_conf
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.SNMP/v1/gen_syno_conf:
+    get:
+      tags:
+        - Core.SNMP
+      summary: Return gen_syno_conf for SYNO.Core.SNMP
+      operationId: SNMP_gen_syno_conf
       responses:
         '200':
           description: Normal Response
@@ -14347,7 +15315,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Security.DSM/v4/get:
+  /SYNO.Core.Security.DSM/v5/get:
     get:
       tags:
         - Core.Security
@@ -14364,7 +15332,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Security.DSM/v4/set:
+  /SYNO.Core.Security.DSM/v5/set:
     get:
       tags:
         - Core.Security
@@ -16115,12 +17083,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Storage.Disk/v1/get_synoblock:
+  /SYNO.Core.Storage.Disk/v1/export_test_log_content:
     get:
       tags:
         - Core.Storage
-      summary: Return get_synoblock for SYNO.Core.Storage.Disk
-      operationId: Storage_Disk_get_synoblock
+      summary: Return export_test_log_content for SYNO.Core.Storage.Disk
+      operationId: Storage_Disk_export_test_log_content
       responses:
         '200':
           description: Normal Response
@@ -16132,12 +17100,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Storage.Disk/v1/export_disk_log:
+  /SYNO.Core.Storage.Disk/v1/get_synoblock:
     get:
       tags:
         - Core.Storage
-      summary: Return export_disk_log for SYNO.Core.Storage.Disk
-      operationId: Storage_Disk_export_disk_log
+      summary: Return get_synoblock for SYNO.Core.Storage.Disk
+      operationId: Storage_Disk_get_synoblock
       responses:
         '200':
           description: Normal Response
@@ -16387,12 +17355,182 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Core.Storage.Disk/v1/load_local_info:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return load_local_info for SYNO.Core.Storage.Disk
+      operationId: Storage_Disk_load_local_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk/v1/load_info:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return load_info for SYNO.Core.Storage.Disk
+      operationId: Storage_Disk_load_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk/v1/emit_info:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return emit_info for SYNO.Core.Storage.Disk
+      operationId: Storage_Disk_emit_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk/v1/control_local_sofs_daemon:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return control_local_sofs_daemon for SYNO.Core.Storage.Disk
+      operationId: Storage_Disk_control_local_sofs_daemon
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk/v1/control_sofs_daemon:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return control_sofs_daemon for SYNO.Core.Storage.Disk
+      operationId: Storage_Disk_control_sofs_daemon
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk/v1/health_report_get:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return health_report_get for SYNO.Core.Storage.Disk
+      operationId: Storage_Disk_health_report_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk/v1/health_record_update:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return health_record_update for SYNO.Core.Storage.Disk
+      operationId: Storage_Disk_health_record_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk/v1/check_ui_open:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return check_ui_open for SYNO.Core.Storage.Disk
+      operationId: Storage_Disk_check_ui_open
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk/v1/reset_metadata:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return reset_metadata for SYNO.Core.Storage.Disk
+      operationId: Storage_Disk_reset_metadata
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Core.Storage.Disk.FWUpgrade/v1/list_drive:
     get:
       tags:
         - Core.Storage
       summary: Return list_drive for SYNO.Core.Storage.Disk.FWUpgrade
       operationId: Storage_Disk_FWUpgrade_list_drive
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk.FWUpgrade/v1/list_drive_group:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return list_drive_group for SYNO.Core.Storage.Disk.FWUpgrade
+      operationId: Storage_Disk_FWUpgrade_list_drive_group
       responses:
         '200':
           description: Normal Response
@@ -16421,12 +17559,97 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Core.Storage.Disk.FWUpgrade/v1/get_latest_auto_upgrade_result:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return get_latest_auto_upgrade_result for SYNO.Core.Storage.Disk.FWUpgrade
+      operationId: Storage_Disk_FWUpgrade_get_latest_auto_upgrade_result
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk.FWUpgrade/v1/prepare_group:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return prepare_group for SYNO.Core.Storage.Disk.FWUpgrade
+      operationId: Storage_Disk_FWUpgrade_prepare_group
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk.FWUpgrade/v1/get_upgrade_method:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return get_upgrade_method for SYNO.Core.Storage.Disk.FWUpgrade
+      operationId: Storage_Disk_FWUpgrade_get_upgrade_method
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Core.Storage.Disk.FWUpgrade/v1/start_upgrade:
     get:
       tags:
         - Core.Storage
       summary: Return start_upgrade for SYNO.Core.Storage.Disk.FWUpgrade
       operationId: Storage_Disk_FWUpgrade_start_upgrade
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk.FWUpgrade/v1/get_firm_path:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return get_firm_path for SYNO.Core.Storage.Disk.FWUpgrade
+      operationId: Storage_Disk_FWUpgrade_get_firm_path
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk.FWUpgrade/v1/upgrade:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return upgrade for SYNO.Core.Storage.Disk.FWUpgrade
+      operationId: Storage_Disk_FWUpgrade_upgrade
       responses:
         '200':
           description: Normal Response
@@ -16461,6 +17684,23 @@ paths:
         - Core.Storage
       summary: Return poll for SYNO.Core.Storage.Disk.FWUpgrade
       operationId: Storage_Disk_FWUpgrade_poll
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk.FWUpgrade/v1/check_continue:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return check_continue for SYNO.Core.Storage.Disk.FWUpgrade
+      operationId: Storage_Disk_FWUpgrade_check_continue
       responses:
         '200':
           description: Normal Response
@@ -16529,6 +17769,23 @@ paths:
         - Core.Storage
       summary: Return send_notification for SYNO.Core.Storage.Disk.FWUpgrade
       operationId: Storage_Disk_FWUpgrade_send_notification
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Storage.Disk.FWUpgrade/v1/send_notification_group:
+    get:
+      tags:
+        - Core.Storage
+      summary: Return send_notification_group for SYNO.Core.Storage.Disk.FWUpgrade
+      operationId: Storage_Disk_FWUpgrade_send_notification_group
       responses:
         '200':
           description: Normal Response
@@ -17424,7 +18681,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.TaskScheduler/v3/get:
+  /SYNO.Core.TaskScheduler/v4/get:
     get:
       tags:
         - Core.TaskScheduler
@@ -17441,7 +18698,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.TaskScheduler/v3/set:
+  /SYNO.Core.TaskScheduler/v4/set:
     get:
       tags:
         - Core.TaskScheduler
@@ -17458,12 +18715,46 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.TaskScheduler/v3/create:
+  /SYNO.Core.TaskScheduler/v4/create:
     get:
       tags:
         - Core.TaskScheduler
       summary: Return create for SYNO.Core.TaskScheduler
       operationId: TaskScheduler_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.TaskScheduler.Root/v4/set:
+    get:
+      tags:
+        - Core.TaskScheduler
+      summary: Return set for SYNO.Core.TaskScheduler.Root
+      operationId: TaskScheduler_Root_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.TaskScheduler.Root/v4/create:
+    get:
+      tags:
+        - Core.TaskScheduler
+      summary: Return create for SYNO.Core.TaskScheduler.Root
+      operationId: TaskScheduler_Root_create
       responses:
         '200':
           description: Normal Response
@@ -17900,6 +19191,74 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Core.Upgrade.Cluster.Patch/v1/upload:
+    get:
+      tags:
+        - Core.Upgrade
+      summary: Return upload for SYNO.Core.Upgrade.Cluster.Patch
+      operationId: Upgrade_Cluster_Patch_upload
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Upgrade.Cluster.Server/v1/check:
+    get:
+      tags:
+        - Core.Upgrade
+      summary: Return check for SYNO.Core.Upgrade.Cluster.Server
+      operationId: Upgrade_Cluster_Server_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Upgrade.Cluster.Server/v1/check_target:
+    get:
+      tags:
+        - Core.Upgrade
+      summary: Return check_target for SYNO.Core.Upgrade.Cluster.Server
+      operationId: Upgrade_Cluster_Server_check_target
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Upgrade.Cluster.Server.Download/v1/start:
+    get:
+      tags:
+        - Core.Upgrade
+      summary: Return start for SYNO.Core.Upgrade.Cluster.Server.Download
+      operationId: Upgrade_Cluster_Server_Download_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Core.Upgrade.Group/v1/info:
     get:
       tags:
@@ -18087,7 +19446,24 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.Upgrade.PreCheck/v1/start:
+  /SYNO.Core.Upgrade.Patch/v2/find_destination:
+    get:
+      tags:
+        - Core.Upgrade
+      summary: Return find_destination for SYNO.Core.Upgrade.Patch
+      operationId: Upgrade_Patch_find_destination
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.Upgrade.PreCheck/v2/start:
     get:
       tags:
         - Core.Upgrade
@@ -18359,6 +19735,91 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Core.User/v1/export_prepare:
+    get:
+      tags:
+        - Core.User
+      summary: Return export_prepare for SYNO.Core.User
+      operationId: User_export_prepare
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.User/v1/export_prepare_status:
+    get:
+      tags:
+        - Core.User
+      summary: Return export_prepare_status for SYNO.Core.User
+      operationId: User_export_prepare_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.User/v1/export_prepare_stop:
+    get:
+      tags:
+        - Core.User
+      summary: Return export_prepare_stop for SYNO.Core.User
+      operationId: User_export_prepare_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.User/v1/export:
+    get:
+      tags:
+        - Core.User
+      summary: Return export for SYNO.Core.User
+      operationId: User_export
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.User/v1/invite:
+    get:
+      tags:
+        - Core.User
+      summary: Return invite for SYNO.Core.User
+      operationId: User_invite
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Core.User.Group/v1/join:
     get:
       tags:
@@ -18416,6 +19877,23 @@ paths:
         - Core.User
       summary: Return join_status for SYNO.Core.User.Group
       operationId: User_Group_join_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.User.Group/v1/get:
+    get:
+      tags:
+        - Core.User
+      summary: Return get for SYNO.Core.User.Group
+      operationId: User_Group_get
       responses:
         '200':
           description: Normal Response
@@ -18529,7 +20007,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Core.User.PasswordConfirm/v1/auth:
+  /SYNO.Core.User.PasswordConfirm/v2/auth:
     get:
       tags:
         - Core.User
@@ -18705,6 +20183,40 @@ paths:
         - Core.Virtualization
       summary: Return get for SYNO.Core.Virtualization.Host.Capability
       operationId: Virtualization_Host_Capability_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.VolEncKeepKey/v1/get:
+    get:
+      tags:
+        - Core.VolEncKeepKey
+      summary: Return get for SYNO.Core.VolEncKeepKey
+      operationId: VolEncKeepKey_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Core.VolEncKeepKey/v1/ignore:
+    get:
+      tags:
+        - Core.VolEncKeepKey
+      summary: Return ignore for SYNO.Core.VolEncKeepKey
+      operationId: VolEncKeepKey_ignore
       responses:
         '200':
           description: Normal Response

@@ -458,7 +458,8 @@
                 "error_detect",
                 "error_detect_cancel",
                 "status",
-                "damage_report_download"
+                "damage_report_download",
+                "ip_lookup"
             ]
         },
         "minVersion": 1,
@@ -498,7 +499,9 @@
                 "status",
                 "get",
                 "mark",
-                "get_support_cloud"
+                "get_support_cloud",
+                "correct_synorbd",
+                "get_current_dsm_storage_layout"
             ]
         },
         "minVersion": 1,
