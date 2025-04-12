@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -209,6 +208,23 @@ paths:
         - DownloadStation2.BTSearch
       summary: Return start for SYNO.DownloadStation2.BTSearch
       operationId: BTSearch_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.BTSearch/v1/list_plugin_status:
+    get:
+      tags:
+        - DownloadStation2.BTSearch
+      summary: Return list_plugin_status for SYNO.DownloadStation2.BTSearch
+      operationId: BTSearch_list_plugin_status
       responses:
         '200':
           description: Normal Response
@@ -889,6 +905,23 @@ paths:
         - DownloadStation2.Settings
       summary: Return toggle_plugins for SYNO.DownloadStation2.Settings.BTSearch
       operationId: Settings_BTSearch_toggle_plugins
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.BTSearch/v1/test_connection:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return test_connection for SYNO.DownloadStation2.Settings.BTSearch
+      operationId: Settings_BTSearch_test_connection
       responses:
         '200':
           description: Normal Response

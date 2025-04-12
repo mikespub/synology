@@ -1,0 +1,10 @@
+{
+    "SYNO.Default.API": {
+        "lib": "",
+        "maxVersion": 1,
+        "methods": [],
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

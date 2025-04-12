@@ -7,7 +7,8 @@
                 "list_category",
                 "list",
                 "stop",
-                "start"
+                "start",
+                "list_plugin_status"
             ]
         },
         "minVersion": 1,
@@ -155,7 +156,8 @@
                 "delete",
                 "update_check",
                 "update",
-                "toggle_plugins"
+                "toggle_plugins",
+                "test_connection"
             ]
         },
         "minVersion": 1,

@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -203,7 +202,109 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Diff/v3/get:
+  /SYNO.FotoTeam.Browse.Concept/v2/count:
+    get:
+      tags:
+        - FotoTeam.Browse
+      summary: Return count for SYNO.FotoTeam.Browse.Concept
+      operationId: Browse_Concept_count
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Browse.Concept/v2/get:
+    get:
+      tags:
+        - FotoTeam.Browse
+      summary: Return get for SYNO.FotoTeam.Browse.Concept
+      operationId: Browse_Concept_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Browse.Concept/v2/hide_item:
+    get:
+      tags:
+        - FotoTeam.Browse
+      summary: Return hide_item for SYNO.FotoTeam.Browse.Concept
+      operationId: Browse_Concept_hide_item
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Browse.Concept/v2/list:
+    get:
+      tags:
+        - FotoTeam.Browse
+      summary: Return list for SYNO.FotoTeam.Browse.Concept
+      operationId: Browse_Concept_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Browse.Concept/v2/set_cover:
+    get:
+      tags:
+        - FotoTeam.Browse
+      summary: Return set_cover for SYNO.FotoTeam.Browse.Concept
+      operationId: Browse_Concept_set_cover
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Browse.Concept/v2/set_visibility:
+    get:
+      tags:
+        - FotoTeam.Browse
+      summary: Return set_visibility for SYNO.FotoTeam.Browse.Concept
+      operationId: Browse_Concept_set_visibility
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Browse.Diff/v5/get:
     get:
       tags:
         - FotoTeam.Browse
@@ -220,7 +321,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Diff/v3/get_version:
+  /SYNO.FotoTeam.Browse.Diff/v5/get_version:
     get:
       tags:
         - FotoTeam.Browse
@@ -237,7 +338,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Diff/v3/list_item:
+  /SYNO.FotoTeam.Browse.Diff/v5/list_item:
     get:
       tags:
         - FotoTeam.Browse
@@ -560,7 +661,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/add_tag:
+  /SYNO.FotoTeam.Browse.Item/v6/add_tag:
     get:
       tags:
         - FotoTeam.Browse
@@ -577,7 +678,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/copy:
+  /SYNO.FotoTeam.Browse.Item/v6/copy:
     get:
       tags:
         - FotoTeam.Browse
@@ -594,7 +695,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/count:
+  /SYNO.FotoTeam.Browse.Item/v6/count:
     get:
       tags:
         - FotoTeam.Browse
@@ -611,7 +712,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/count_with_filter:
+  /SYNO.FotoTeam.Browse.Item/v6/count_with_filter:
     get:
       tags:
         - FotoTeam.Browse
@@ -628,7 +729,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/delete:
+  /SYNO.FotoTeam.Browse.Item/v6/delete:
     get:
       tags:
         - FotoTeam.Browse
@@ -645,7 +746,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/get_exif:
+  /SYNO.FotoTeam.Browse.Item/v6/get_exif:
     get:
       tags:
         - FotoTeam.Browse
@@ -662,7 +763,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/get_tag:
+  /SYNO.FotoTeam.Browse.Item/v6/get_tag:
     get:
       tags:
         - FotoTeam.Browse
@@ -679,7 +780,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/get:
+  /SYNO.FotoTeam.Browse.Item/v6/get:
     get:
       tags:
         - FotoTeam.Browse
@@ -696,12 +797,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/list:
+  /SYNO.FotoTeam.Browse.Item/v6/list_all:
     get:
       tags:
         - FotoTeam.Browse
-      summary: Return list for SYNO.FotoTeam.Browse.Item
-      operationId: Browse_Item_list
+      summary: Return list_all for SYNO.FotoTeam.Browse.Item
+      operationId: Browse_Item_list_all
       responses:
         '200':
           description: Normal Response
@@ -713,7 +814,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/list_basic_timeline_info:
+  /SYNO.FotoTeam.Browse.Item/v6/list_basic_timeline_info:
     get:
       tags:
         - FotoTeam.Browse
@@ -730,7 +831,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/list_basic_timeline_info_with_filter:
+  /SYNO.FotoTeam.Browse.Item/v6/list_basic_timeline_info_with_filter:
     get:
       tags:
         - FotoTeam.Browse
@@ -747,7 +848,24 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/list_with_filter:
+  /SYNO.FotoTeam.Browse.Item/v6/list:
+    get:
+      tags:
+        - FotoTeam.Browse
+      summary: Return list for SYNO.FotoTeam.Browse.Item
+      operationId: Browse_Item_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Browse.Item/v6/list_with_filter:
     get:
       tags:
         - FotoTeam.Browse
@@ -764,7 +882,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/move:
+  /SYNO.FotoTeam.Browse.Item/v6/move:
     get:
       tags:
         - FotoTeam.Browse
@@ -781,7 +899,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/remove_tag:
+  /SYNO.FotoTeam.Browse.Item/v6/remove_tag:
     get:
       tags:
         - FotoTeam.Browse
@@ -798,7 +916,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/rename:
+  /SYNO.FotoTeam.Browse.Item/v6/rename:
     get:
       tags:
         - FotoTeam.Browse
@@ -815,7 +933,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Item/v2/set:
+  /SYNO.FotoTeam.Browse.Item/v6/set:
     get:
       tags:
         - FotoTeam.Browse
@@ -1036,7 +1154,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.RecentlyAdded/v3/count:
+  /SYNO.FotoTeam.Browse.RecentlyAdded/v5/count:
     get:
       tags:
         - FotoTeam.Browse
@@ -1053,7 +1171,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.RecentlyAdded/v3/get_timeline:
+  /SYNO.FotoTeam.Browse.RecentlyAdded/v5/get_timeline:
     get:
       tags:
         - FotoTeam.Browse
@@ -1070,7 +1188,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.RecentlyAdded/v3/list_basic_timeline_info:
+  /SYNO.FotoTeam.Browse.RecentlyAdded/v5/list_basic_timeline_info:
     get:
       tags:
         - FotoTeam.Browse
@@ -1087,7 +1205,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.RecentlyAdded/v3/list:
+  /SYNO.FotoTeam.Browse.RecentlyAdded/v5/list:
     get:
       tags:
         - FotoTeam.Browse
@@ -1104,7 +1222,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Timeline/v3/get_geocoding:
+  /SYNO.FotoTeam.Browse.Timeline/v5/get_geocoding:
     get:
       tags:
         - FotoTeam.Browse
@@ -1121,7 +1239,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Timeline/v3/get_geocoding_with_filter:
+  /SYNO.FotoTeam.Browse.Timeline/v5/get_geocoding_with_filter:
     get:
       tags:
         - FotoTeam.Browse
@@ -1138,7 +1256,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Timeline/v3/get:
+  /SYNO.FotoTeam.Browse.Timeline/v5/get:
     get:
       tags:
         - FotoTeam.Browse
@@ -1155,7 +1273,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Timeline/v3/get_with_filter:
+  /SYNO.FotoTeam.Browse.Timeline/v5/get_with_filter:
     get:
       tags:
         - FotoTeam.Browse
@@ -1172,7 +1290,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Unit/v1/count:
+  /SYNO.FotoTeam.Browse.Unit/v2/count:
     get:
       tags:
         - FotoTeam.Browse
@@ -1189,24 +1307,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Browse.Unit/v1/get:
-    get:
-      tags:
-        - FotoTeam.Browse
-      summary: Return get for SYNO.FotoTeam.Browse.Unit
-      operationId: Browse_Unit_get
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.FotoTeam.Browse.Unit/v1/get_thumbnail_status:
+  /SYNO.FotoTeam.Browse.Unit/v2/get_thumbnail_status:
     get:
       tags:
         - FotoTeam.Browse
@@ -1223,12 +1324,97 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Download/v1/download:
+  /SYNO.FotoTeam.Browse.Unit/v2/get:
+    get:
+      tags:
+        - FotoTeam.Browse
+      summary: Return get for SYNO.FotoTeam.Browse.Unit
+      operationId: Browse_Unit_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Download/v2/calculate_cache_size:
+    get:
+      tags:
+        - FotoTeam.Download
+      summary: Return calculate_cache_size for SYNO.FotoTeam.Download
+      operationId: Download_calculate_cache_size
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Download/v2/clear_cache:
+    get:
+      tags:
+        - FotoTeam.Download
+      summary: Return clear_cache for SYNO.FotoTeam.Download
+      operationId: Download_clear_cache
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Download/v2/convert:
+    get:
+      tags:
+        - FotoTeam.Download
+      summary: Return convert for SYNO.FotoTeam.Download
+      operationId: Download_convert
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Download/v2/download:
     get:
       tags:
         - FotoTeam.Download
       summary: Return download for SYNO.FotoTeam.Download
       operationId: Download_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Download/v2/get_cache_status:
+    get:
+      tags:
+        - FotoTeam.Download
+      summary: Return get_cache_status for SYNO.FotoTeam.Download
+      operationId: Download_get_cache_status
       responses:
         '200':
           description: Normal Response
@@ -1246,6 +1432,23 @@ paths:
         - FotoTeam.Index
       summary: Return get for SYNO.FotoTeam.Index
       operationId: Index_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Index/v1/index_add:
+    get:
+      tags:
+        - FotoTeam.Index
+      summary: Return index_add for SYNO.FotoTeam.Index
+      operationId: Index_index_add
       responses:
         '200':
           description: Normal Response
@@ -1291,7 +1494,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Search.Search/v4/count_album:
+  /SYNO.FotoTeam.Search.Search/v6/count_album:
     get:
       tags:
         - FotoTeam.Search
@@ -1308,7 +1511,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Search.Search/v4/count_item:
+  /SYNO.FotoTeam.Search.Search/v6/count_item:
     get:
       tags:
         - FotoTeam.Search
@@ -1325,7 +1528,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Search.Search/v4/get_geocoding:
+  /SYNO.FotoTeam.Search.Search/v6/get_geocoding:
     get:
       tags:
         - FotoTeam.Search
@@ -1342,7 +1545,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Search.Search/v4/get_search_timeline:
+  /SYNO.FotoTeam.Search.Search/v6/get_search_timeline:
     get:
       tags:
         - FotoTeam.Search
@@ -1359,7 +1562,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Search.Search/v4/list_album:
+  /SYNO.FotoTeam.Search.Search/v6/list_album:
     get:
       tags:
         - FotoTeam.Search
@@ -1376,7 +1579,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Search.Search/v4/list_basic_timeline_info:
+  /SYNO.FotoTeam.Search.Search/v6/list_basic_timeline_info:
     get:
       tags:
         - FotoTeam.Search
@@ -1393,7 +1596,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Search.Search/v4/list_item:
+  /SYNO.FotoTeam.Search.Search/v6/list_item:
     get:
       tags:
         - FotoTeam.Search
@@ -1410,7 +1613,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Search.Search/v4/suggest:
+  /SYNO.FotoTeam.Search.Search/v6/suggest:
     get:
       tags:
         - FotoTeam.Search
@@ -1614,7 +1817,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Streaming/v1/streaming:
+  /SYNO.FotoTeam.Streaming/v2/streaming:
     get:
       tags:
         - FotoTeam.Streaming
@@ -1648,7 +1851,58 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Upload.Item/v1/backup_check:
+  /SYNO.FotoTeam.Upload.ConvertedFile/v3/list_convert_needed:
+    get:
+      tags:
+        - FotoTeam.Upload
+      summary: Return list_convert_needed for SYNO.FotoTeam.Upload.ConvertedFile
+      operationId: Upload_ConvertedFile_list_convert_needed
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Upload.ConvertedFile/v3/set_broken:
+    get:
+      tags:
+        - FotoTeam.Upload
+      summary: Return set_broken for SYNO.FotoTeam.Upload.ConvertedFile
+      operationId: Upload_ConvertedFile_set_broken
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Upload.ConvertedFile/v3/upload:
+    get:
+      tags:
+        - FotoTeam.Upload
+      summary: Return upload for SYNO.FotoTeam.Upload.ConvertedFile
+      operationId: Upload_ConvertedFile_upload
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FotoTeam.Upload.Item/v6/backup_check:
     get:
       tags:
         - FotoTeam.Upload
@@ -1665,7 +1919,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Upload.Item/v1/backup_to_path:
+  /SYNO.FotoTeam.Upload.Item/v6/backup_to_path:
     get:
       tags:
         - FotoTeam.Upload
@@ -1682,12 +1936,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Upload.Item/v1/upload:
+  /SYNO.FotoTeam.Upload.Item/v6/upload_to_folder:
     get:
       tags:
         - FotoTeam.Upload
-      summary: Return upload for SYNO.FotoTeam.Upload.Item
-      operationId: Upload_Item_upload
+      summary: Return upload_to_folder for SYNO.FotoTeam.Upload.Item
+      operationId: Upload_Item_upload_to_folder
       responses:
         '200':
           description: Normal Response
@@ -1699,12 +1953,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.FotoTeam.Upload.Item/v1/upload_to_folder:
+  /SYNO.FotoTeam.Upload.Item/v6/upload:
     get:
       tags:
         - FotoTeam.Upload
-      summary: Return upload_to_folder for SYNO.FotoTeam.Upload.Item
-      operationId: Upload_Item_upload_to_folder
+      summary: Return upload for SYNO.FotoTeam.Upload.Item
+      operationId: Upload_Item_upload
       responses:
         '200':
           description: Normal Response

@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -237,6 +236,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.DisasterRecovery.Retention/v1/get_worm_lock:
+    get:
+      tags:
+        - DisasterRecovery.Retention
+      summary: Return get_worm_lock for SYNO.DisasterRecovery.Retention
+      operationId: Retention_get_worm_lock
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.DisasterRecovery.Retention/v1/set:
     get:
       tags:
@@ -271,6 +287,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.DisasterRecovery.Retention/v1/set_worm_lock:
+    get:
+      tags:
+        - DisasterRecovery.Retention
+      summary: Return set_worm_lock for SYNO.DisasterRecovery.Retention
+      operationId: Retention_set_worm_lock
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.DisasterRecovery.Retention/v1/delete:
     get:
       tags:
@@ -294,6 +327,57 @@ paths:
         - DisasterRecovery.Retention
       summary: Return info for SYNO.DisasterRecovery.Retention
       operationId: Retention_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DisasterRecovery.Retention/v1/check_worm_lockable:
+    get:
+      tags:
+        - DisasterRecovery.Retention
+      summary: Return check_worm_lockable for SYNO.DisasterRecovery.Retention
+      operationId: Retention_check_worm_lockable
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DisasterRecovery.Retention/v1/notify_worm_lock_disable:
+    get:
+      tags:
+        - DisasterRecovery.Retention
+      summary: Return notify_worm_lock_disable for SYNO.DisasterRecovery.Retention
+      operationId: Retention_notify_worm_lock_disable
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DisasterRecovery.Retention/v1/clear_worm_lock_notify_time:
+    get:
+      tags:
+        - DisasterRecovery.Retention
+      summary: Return clear_worm_lock_notify_time for SYNO.DisasterRecovery.Retention
+      operationId: Retention_clear_worm_lock_notify_time
       responses:
         '200':
           description: Normal Response

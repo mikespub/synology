@@ -8,7 +8,9 @@
                 "test_sync_speed",
                 "test_download_speed",
                 "test_privilege",
-                "test_connection"
+                "test_connection",
+                "reset",
+                "check_and_reset"
             ]
         },
         "minVersion": 1,
@@ -46,7 +48,8 @@
                 "create",
                 "temp_create",
                 "get",
-                "delete"
+                "delete",
+                "find"
             ],
             "2": [
                 "create"

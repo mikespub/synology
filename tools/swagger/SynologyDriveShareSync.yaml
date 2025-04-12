@@ -1,0 +1,595 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are many versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: diskstation
+basePath: /rest.php
+schemes:
+  - http
+securityDefinitions:
+  query_sid:
+    type: apiKey
+    name: _sid
+    in: query
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
+  /SYNO.API.Info/v1/query:
+    get:
+      tags:
+        - API
+      summary: Return query for SYNO.API.Info
+      operationId: API_Info_query
+      parameters:
+        - in: query
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/login:
+    get:
+      tags:
+        - API
+      summary: Return login for SYNO.API.Auth
+      operationId: API_Auth_login
+      parameters:
+        - in: query
+          name: account
+          description: Username
+          required: false
+          type: string
+          default: username
+        - in: query
+          name: passwd
+          description: Password
+          required: false
+          type: string
+          default: passwd
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: query
+          name: format
+          description: Format (cookie or sid)
+          required: false
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Config/v1/get:
+    get:
+      tags:
+        - SynologyDriveShareSync.Config
+      summary: Return get for SYNO.SynologyDriveShareSync.Config
+      operationId: Config_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Config/v1/set:
+    get:
+      tags:
+        - SynologyDriveShareSync.Config
+      summary: Return set for SYNO.SynologyDriveShareSync.Config
+      operationId: Config_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Connection/v1/list:
+    get:
+      tags:
+        - SynologyDriveShareSync.Connection
+      summary: Return list for SYNO.SynologyDriveShareSync.Connection
+      operationId: Connection_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Connection/v1/test:
+    get:
+      tags:
+        - SynologyDriveShareSync.Connection
+      summary: Return test for SYNO.SynologyDriveShareSync.Connection
+      operationId: Connection_test
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Connection/v1/get:
+    get:
+      tags:
+        - SynologyDriveShareSync.Connection
+      summary: Return get for SYNO.SynologyDriveShareSync.Connection
+      operationId: Connection_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Connection/v1/auth:
+    get:
+      tags:
+        - SynologyDriveShareSync.Connection
+      summary: Return auth for SYNO.SynologyDriveShareSync.Connection
+      operationId: Connection_auth
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Connection/v1/create:
+    get:
+      tags:
+        - SynologyDriveShareSync.Connection
+      summary: Return create for SYNO.SynologyDriveShareSync.Connection
+      operationId: Connection_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Connection/v1/set:
+    get:
+      tags:
+        - SynologyDriveShareSync.Connection
+      summary: Return set for SYNO.SynologyDriveShareSync.Connection
+      operationId: Connection_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Connection/v1/delete:
+    get:
+      tags:
+        - SynologyDriveShareSync.Connection
+      summary: Return delete for SYNO.SynologyDriveShareSync.Connection
+      operationId: Connection_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Connection/v1/unlink:
+    get:
+      tags:
+        - SynologyDriveShareSync.Connection
+      summary: Return unlink for SYNO.SynologyDriveShareSync.Connection
+      operationId: Connection_unlink
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Connection/v1/pause:
+    get:
+      tags:
+        - SynologyDriveShareSync.Connection
+      summary: Return pause for SYNO.SynologyDriveShareSync.Connection
+      operationId: Connection_pause
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Connection/v1/resume:
+    get:
+      tags:
+        - SynologyDriveShareSync.Connection
+      summary: Return resume for SYNO.SynologyDriveShareSync.Connection
+      operationId: Connection_resume
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session/v1/list:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return list for SYNO.SynologyDriveShareSync.Session
+      operationId: Session_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session/v1/list_subfolder:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return list_subfolder for SYNO.SynologyDriveShareSync.Session
+      operationId: Session_list_subfolder
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session/v1/list_sync_history:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return list_sync_history for SYNO.SynologyDriveShareSync.Session
+      operationId: Session_list_sync_history
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session/v1/list_syncfolder:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return list_syncfolder for SYNO.SynologyDriveShareSync.Session
+      operationId: Session_list_syncfolder
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session/v1/get:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return get for SYNO.SynologyDriveShareSync.Session
+      operationId: Session_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session/v1/test:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return test for SYNO.SynologyDriveShareSync.Session
+      operationId: Session_test
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session/v1/set:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return set for SYNO.SynologyDriveShareSync.Session
+      operationId: Session_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session/v1/create:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return create for SYNO.SynologyDriveShareSync.Session
+      operationId: Session_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session/v1/enable:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return enable for SYNO.SynologyDriveShareSync.Session
+      operationId: Session_enable
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session/v1/disable:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return disable for SYNO.SynologyDriveShareSync.Session
+      operationId: Session_disable
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session/v1/delete:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return delete for SYNO.SynologyDriveShareSync.Session
+      operationId: Session_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session/v1/refresh:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return refresh for SYNO.SynologyDriveShareSync.Session
+      operationId: Session_refresh
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session.Set/v1/start:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return start for SYNO.SynologyDriveShareSync.Session.Set
+      operationId: Session_Set_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDriveShareSync.Session.Set/v1/status:
+    get:
+      tags:
+        - SynologyDriveShareSync.Session
+      summary: Return status for SYNO.SynologyDriveShareSync.Session.Set
+      operationId: Session_Set_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

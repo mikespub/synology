@@ -57,6 +57,7 @@
                 "create_session",
                 "export_key",
                 "export_key_by_name",
+                "check_server_ever_encrypted",
                 "get_conn_auth_info",
                 "get_server_folder_list",
                 "create_server_folder",

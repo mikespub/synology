@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -407,6 +406,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Docker.Container/v1/stats:
+    get:
+      tags:
+        - Docker.Container
+      summary: Return stats for SYNO.Docker.Container
+      operationId: Container_stats
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Docker.Container/v1/upload:
     get:
       tags:
@@ -509,6 +525,40 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Docker.Container.PkgProfile/v1/create:
+    get:
+      tags:
+        - Docker.Container
+      summary: Return create for SYNO.Docker.Container.PkgProfile
+      operationId: Container_PkgProfile_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Container.PkgProfile/v1/remove:
+    get:
+      tags:
+        - Docker.Container
+      summary: Return remove for SYNO.Docker.Container.PkgProfile
+      operationId: Container_PkgProfile_remove
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Docker.Container.Profile/v1/duplicate:
     get:
       tags:
@@ -594,29 +644,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Docker.Container.PkgProfile/v1/create:
+  /SYNO.Docker.Image/v1/prune:
     get:
       tags:
-        - Docker.Container
-      summary: Return create for SYNO.Docker.Container.PkgProfile
-      operationId: Container_PkgProfile_create
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Docker.Container.PkgProfile/v1/remove:
-    get:
-      tags:
-        - Docker.Container
-      summary: Return remove for SYNO.Docker.Container.PkgProfile
-      operationId: Container_PkgProfile_remove
+        - Docker.Image
+      summary: Return prune for SYNO.Docker.Image
+      operationId: Image_prune
       responses:
         '200':
           description: Normal Response
@@ -668,6 +701,40 @@ paths:
         - Docker.Image
       summary: Return pull_status for SYNO.Docker.Image
       operationId: Image_pull_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Image/v1/upgrade_start:
+    get:
+      tags:
+        - Docker.Image
+      summary: Return upgrade_start for SYNO.Docker.Image
+      operationId: Image_upgrade_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Image/v1/upgrade_status:
+    get:
+      tags:
+        - Docker.Image
+      summary: Return upgrade_status for SYNO.Docker.Image
+      operationId: Image_upgrade_status
       responses:
         '200':
           description: Normal Response
@@ -815,12 +882,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Docker.Registry/v1/search:
+  /SYNO.Docker.Migrate/v1/import_status:
     get:
       tags:
-        - Docker.Registry
-      summary: Return search for SYNO.Docker.Registry
-      operationId: Registry_search
+        - Docker.Migrate
+      summary: Return import_status for SYNO.Docker.Migrate
+      operationId: Migrate_import_status
       responses:
         '200':
           description: Normal Response
@@ -832,12 +899,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Docker.Registry/v1/tags:
+  /SYNO.Docker.Migrate/v1/status:
     get:
       tags:
-        - Docker.Registry
-      summary: Return tags for SYNO.Docker.Registry
-      operationId: Registry_tags
+        - Docker.Migrate
+      summary: Return status for SYNO.Docker.Migrate
+      operationId: Migrate_status
       responses:
         '200':
           description: Normal Response
@@ -849,80 +916,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Docker.Registry/v1/get:
+  /SYNO.Docker.Migrate/v1/import:
     get:
       tags:
-        - Docker.Registry
-      summary: Return get for SYNO.Docker.Registry
-      operationId: Registry_get
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Docker.Registry/v1/create:
-    get:
-      tags:
-        - Docker.Registry
-      summary: Return create for SYNO.Docker.Registry
-      operationId: Registry_create
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Docker.Registry/v1/set:
-    get:
-      tags:
-        - Docker.Registry
-      summary: Return set for SYNO.Docker.Registry
-      operationId: Registry_set
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Docker.Registry/v1/using:
-    get:
-      tags:
-        - Docker.Registry
-      summary: Return using for SYNO.Docker.Registry
-      operationId: Registry_using
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.Docker.Registry/v1/delete:
-    get:
-      tags:
-        - Docker.Registry
-      summary: Return delete for SYNO.Docker.Registry
-      operationId: Registry_delete
+        - Docker.Migrate
+      summary: Return import for SYNO.Docker.Migrate
+      operationId: Migrate_import
       responses:
         '200':
           description: Normal Response
@@ -1070,12 +1069,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Docker.Migrate/v1/import_status:
+  /SYNO.Docker.Project/v1/log:
     get:
       tags:
-        - Docker.Migrate
-      summary: Return import_status for SYNO.Docker.Migrate
-      operationId: Migrate_import_status
+        - Docker.Project
+      summary: Return log for SYNO.Docker.Project
+      operationId: Project_log
       responses:
         '200':
           description: Normal Response
@@ -1087,12 +1086,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Docker.Migrate/v1/status:
+  /SYNO.Docker.Project/v1/get_share_info:
     get:
       tags:
-        - Docker.Migrate
-      summary: Return status for SYNO.Docker.Migrate
-      operationId: Migrate_status
+        - Docker.Project
+      summary: Return get_share_info for SYNO.Docker.Project
+      operationId: Project_get_share_info
       responses:
         '200':
           description: Normal Response
@@ -1104,12 +1103,301 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.Docker.Migrate/v1/import:
+  /SYNO.Docker.Project/v1/build_stream:
     get:
       tags:
-        - Docker.Migrate
-      summary: Return import for SYNO.Docker.Migrate
-      operationId: Migrate_import
+        - Docker.Project
+      summary: Return build_stream for SYNO.Docker.Project
+      operationId: Project_build_stream
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/start_stream:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return start_stream for SYNO.Docker.Project
+      operationId: Project_start_stream
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/stop_stream:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return stop_stream for SYNO.Docker.Project
+      operationId: Project_stop_stream
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/restart_stream:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return restart_stream for SYNO.Docker.Project
+      operationId: Project_restart_stream
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/clean_stream:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return clean_stream for SYNO.Docker.Project
+      operationId: Project_clean_stream
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/delete_stream:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return delete_stream for SYNO.Docker.Project
+      operationId: Project_delete_stream
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/clean:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return clean for SYNO.Docker.Project
+      operationId: Project_clean
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/stop:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return stop for SYNO.Docker.Project
+      operationId: Project_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/delete:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return delete for SYNO.Docker.Project
+      operationId: Project_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/build:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return build for SYNO.Docker.Project
+      operationId: Project_build
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/start:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return start for SYNO.Docker.Project
+      operationId: Project_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/restart:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return restart for SYNO.Docker.Project
+      operationId: Project_restart
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/get:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return get for SYNO.Docker.Project
+      operationId: Project_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/update:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return update for SYNO.Docker.Project
+      operationId: Project_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/list:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return list for SYNO.Docker.Project
+      operationId: Project_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Project/v1/create:
+    get:
+      tags:
+        - Docker.Project
+      summary: Return create for SYNO.Docker.Project
+      operationId: Project_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Registry/v2/tags:
+    get:
+      tags:
+        - Docker.Registry
+      summary: Return tags for SYNO.Docker.Registry
+      operationId: Registry_tags
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Utils/v1/getAllShare:
+    get:
+      tags:
+        - Docker.Utils
+      summary: Return getAllShare for SYNO.Docker.Utils
+      operationId: Utils_getAllShare
       responses:
         '200':
           description: Normal Response

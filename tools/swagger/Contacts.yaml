@@ -1,0 +1,952 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are many versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: diskstation
+basePath: /rest.php
+schemes:
+  - http
+securityDefinitions:
+  query_sid:
+    type: apiKey
+    name: _sid
+    in: query
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
+  /SYNO.API.Info/v1/query:
+    get:
+      tags:
+        - API
+      summary: Return query for SYNO.API.Info
+      operationId: API_Info_query
+      parameters:
+        - in: query
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/login:
+    get:
+      tags:
+        - API
+      summary: Return login for SYNO.API.Auth
+      operationId: API_Auth_login
+      parameters:
+        - in: query
+          name: account
+          description: Username
+          required: false
+          type: string
+          default: username
+        - in: query
+          name: passwd
+          description: Password
+          required: false
+          type: string
+          default: passwd
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: query
+          name: format
+          description: Format (cookie or sid)
+          required: false
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/copy_member:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return copy_member for SYNO.Contacts.Addressbook
+      operationId: Addressbook_copy_member
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/create:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return create for SYNO.Contacts.Addressbook
+      operationId: Addressbook_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/delete:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return delete for SYNO.Contacts.Addressbook
+      operationId: Addressbook_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/export:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return export for SYNO.Contacts.Addressbook
+      operationId: Addressbook_export
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/get:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return get for SYNO.Contacts.Addressbook
+      operationId: Addressbook_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/import:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return import for SYNO.Contacts.Addressbook
+      operationId: Addressbook_import
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/import_preview:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return import_preview for SYNO.Contacts.Addressbook
+      operationId: Addressbook_import_preview
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/list:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return list for SYNO.Contacts.Addressbook
+      operationId: Addressbook_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/list_principal:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return list_principal for SYNO.Contacts.Addressbook
+      operationId: Addressbook_list_principal
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/move_member:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return move_member for SYNO.Contacts.Addressbook
+      operationId: Addressbook_move_member
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/set:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return set for SYNO.Contacts.Addressbook
+      operationId: Addressbook_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/set_addressbook_display:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return set_addressbook_display for SYNO.Contacts.Addressbook
+      operationId: Addressbook_set_addressbook_display
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Addressbook/v1/share_addressbook:
+    get:
+      tags:
+        - Contacts.Addressbook
+      summary: Return share_addressbook for SYNO.Contacts.Addressbook
+      operationId: Addressbook_share_addressbook
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.AdminSetting/v1/get:
+    get:
+      tags:
+        - Contacts.AdminSetting
+      summary: Return get for SYNO.Contacts.AdminSetting
+      operationId: AdminSetting_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.AdminSetting/v1/migrate:
+    get:
+      tags:
+        - Contacts.AdminSetting
+      summary: Return migrate for SYNO.Contacts.AdminSetting
+      operationId: AdminSetting_migrate
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.AdminSetting/v1/set:
+    get:
+      tags:
+        - Contacts.AdminSetting
+      summary: Return set for SYNO.Contacts.AdminSetting
+      operationId: AdminSetting_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.AdminSetting/v1/set_sharing:
+    get:
+      tags:
+        - Contacts.AdminSetting
+      summary: Return set_sharing for SYNO.Contacts.AdminSetting
+      operationId: AdminSetting_set_sharing
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/create:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return create for SYNO.Contacts.Contact
+      operationId: Contact_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/delete:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return delete for SYNO.Contacts.Contact
+      operationId: Contact_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/export:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return export for SYNO.Contacts.Contact
+      operationId: Contact_export
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/get_photo:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return get_photo for SYNO.Contacts.Contact
+      operationId: Contact_get_photo
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/get:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return get for SYNO.Contacts.Contact
+      operationId: Contact_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/list:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return list for SYNO.Contacts.Contact
+      operationId: Contact_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/list_group:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return list_group for SYNO.Contacts.Contact
+      operationId: Contact_list_group
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/list_team_contact:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return list_team_contact for SYNO.Contacts.Contact
+      operationId: Contact_list_team_contact
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/set:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return set for SYNO.Contacts.Contact
+      operationId: Contact_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/toggle_group:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return toggle_group for SYNO.Contacts.Contact
+      operationId: Contact_toggle_group
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/toggle_member:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return toggle_member for SYNO.Contacts.Contact
+      operationId: Contact_toggle_member
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/toggle_person:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return toggle_person for SYNO.Contacts.Contact
+      operationId: Contact_toggle_person
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Contact/v2/update_usage_frequency:
+    get:
+      tags:
+        - Contacts.Contact
+      summary: Return update_usage_frequency for SYNO.Contacts.Contact
+      operationId: Contact_update_usage_frequency
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.ExternalSource/v1/create:
+    get:
+      tags:
+        - Contacts.ExternalSource
+      summary: Return create for SYNO.Contacts.ExternalSource
+      operationId: ExternalSource_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.ExternalSource/v1/create_carddav:
+    get:
+      tags:
+        - Contacts.ExternalSource
+      summary: Return create_carddav for SYNO.Contacts.ExternalSource
+      operationId: ExternalSource_create_carddav
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.ExternalSource/v1/get:
+    get:
+      tags:
+        - Contacts.ExternalSource
+      summary: Return get for SYNO.Contacts.ExternalSource
+      operationId: ExternalSource_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.ExternalSource/v1/list:
+    get:
+      tags:
+        - Contacts.ExternalSource
+      summary: Return list for SYNO.Contacts.ExternalSource
+      operationId: ExternalSource_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.ExternalSource/v1/refresh:
+    get:
+      tags:
+        - Contacts.ExternalSource
+      summary: Return refresh for SYNO.Contacts.ExternalSource
+      operationId: ExternalSource_refresh
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.ExternalSource/v1/set:
+    get:
+      tags:
+        - Contacts.ExternalSource
+      summary: Return set for SYNO.Contacts.ExternalSource
+      operationId: ExternalSource_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.ExternalSource/v1/set_carddav:
+    get:
+      tags:
+        - Contacts.ExternalSource
+      summary: Return set_carddav for SYNO.Contacts.ExternalSource
+      operationId: ExternalSource_set_carddav
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Info/v1/get:
+    get:
+      tags:
+        - Contacts.Info
+      summary: Return get for SYNO.Contacts.Info
+      operationId: Info_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Info/v1/get_timezone:
+    get:
+      tags:
+        - Contacts.Info
+      summary: Return get_timezone for SYNO.Contacts.Info
+      operationId: Info_get_timezone
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Label/v2/add_member:
+    get:
+      tags:
+        - Contacts.Label
+      summary: Return add_member for SYNO.Contacts.Label
+      operationId: Label_add_member
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Label/v2/create:
+    get:
+      tags:
+        - Contacts.Label
+      summary: Return create for SYNO.Contacts.Label
+      operationId: Label_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Label/v2/delete:
+    get:
+      tags:
+        - Contacts.Label
+      summary: Return delete for SYNO.Contacts.Label
+      operationId: Label_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Label/v2/export:
+    get:
+      tags:
+        - Contacts.Label
+      summary: Return export for SYNO.Contacts.Label
+      operationId: Label_export
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Label/v2/list:
+    get:
+      tags:
+        - Contacts.Label
+      summary: Return list for SYNO.Contacts.Label
+      operationId: Label_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Label/v2/remove_member:
+    get:
+      tags:
+        - Contacts.Label
+      summary: Return remove_member for SYNO.Contacts.Label
+      operationId: Label_remove_member
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.Label/v2/set:
+    get:
+      tags:
+        - Contacts.Label
+      summary: Return set for SYNO.Contacts.Label
+      operationId: Label_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Contacts.OU/v1/list:
+    get:
+      tags:
+        - Contacts.OU
+      summary: Return list for SYNO.Contacts.OU
+      operationId: OU_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

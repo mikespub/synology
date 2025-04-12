@@ -702,5 +702,32 @@
         "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Worm": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Worm.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "get_share_info"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Worm.Lock": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Worm.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "start",
+                "stop",
+                "status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     }
 }

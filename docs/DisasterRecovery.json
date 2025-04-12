@@ -20,10 +20,15 @@
             "1": [
                 "get",
                 "get_timezone",
+                "get_worm_lock",
                 "set",
                 "set_timezone",
+                "set_worm_lock",
                 "delete",
-                "info"
+                "info",
+                "check_worm_lockable",
+                "notify_worm_lock_disable",
+                "clear_worm_lock_notify_time"
             ]
         },
         "minVersion": 1,

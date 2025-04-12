@@ -1,0 +1,15 @@
+{
+    "SYNO.SupportService.Setting": {
+        "lib": "/var/packages/SupportService/target/webapi/SYNO.SupportService.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

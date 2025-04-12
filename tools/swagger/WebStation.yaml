@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -152,6 +151,74 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.WebStation.Backup/v1/remove:
+    get:
+      tags:
+        - WebStation.Backup
+      summary: Return remove for SYNO.WebStation.Backup
+      operationId: Backup_remove
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Backup/v1/export:
+    get:
+      tags:
+        - WebStation.Backup
+      summary: Return export for SYNO.WebStation.Backup
+      operationId: Backup_export
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Backup/v1/get:
+    get:
+      tags:
+        - WebStation.Backup
+      summary: Return get for SYNO.WebStation.Backup
+      operationId: Backup_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Backup/v1/list:
+    get:
+      tags:
+        - WebStation.Backup
+      summary: Return list for SYNO.WebStation.Backup
+      operationId: Backup_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.WebStation.Default/v1/get:
     get:
       tags:
@@ -175,6 +242,40 @@ paths:
         - WebStation.Default
       summary: Return set for SYNO.WebStation.Default
       operationId: Default_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Docker/v1/hash:
+    get:
+      tags:
+        - WebStation.Docker
+      summary: Return hash for SYNO.WebStation.Docker
+      operationId: Docker_hash
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Docker/v1/tags:
+    get:
+      tags:
+        - WebStation.Docker
+      summary: Return tags for SYNO.WebStation.Docker
+      operationId: Docker_tags
       responses:
         '200':
           description: Normal Response
@@ -475,6 +576,159 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.WebStation.Package/v1/restore:
+    get:
+      tags:
+        - WebStation.Package
+      summary: Return restore for SYNO.WebStation.Package
+      operationId: Package_restore
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Package/v1/upgrade:
+    get:
+      tags:
+        - WebStation.Package
+      summary: Return upgrade for SYNO.WebStation.Package
+      operationId: Package_upgrade
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Package/v1/rebuild:
+    get:
+      tags:
+        - WebStation.Package
+      summary: Return rebuild for SYNO.WebStation.Package
+      operationId: Package_rebuild
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Package/v1/pause:
+    get:
+      tags:
+        - WebStation.Package
+      summary: Return pause for SYNO.WebStation.Package
+      operationId: Package_pause
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Package/v1/start:
+    get:
+      tags:
+        - WebStation.Package
+      summary: Return start for SYNO.WebStation.Package
+      operationId: Package_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Package/v1/remove:
+    get:
+      tags:
+        - WebStation.Package
+      summary: Return remove for SYNO.WebStation.Package
+      operationId: Package_remove
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Package/v1/update:
+    get:
+      tags:
+        - WebStation.Package
+      summary: Return update for SYNO.WebStation.Package
+      operationId: Package_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Package/v1/list:
+    get:
+      tags:
+        - WebStation.Package
+      summary: Return list for SYNO.WebStation.Package
+      operationId: Package_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Package/v1/create:
+    get:
+      tags:
+        - WebStation.Package
+      summary: Return create for SYNO.WebStation.Package
+      operationId: Package_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.WebStation.Python/v1/get_version:
     get:
       tags:
@@ -594,6 +848,193 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.WebStation.ScriptLanguage/v1/restore:
+    get:
+      tags:
+        - WebStation.ScriptLanguage
+      summary: Return restore for SYNO.WebStation.ScriptLanguage
+      operationId: ScriptLanguage_restore
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.ScriptLanguage/v1/upgrade:
+    get:
+      tags:
+        - WebStation.ScriptLanguage
+      summary: Return upgrade for SYNO.WebStation.ScriptLanguage
+      operationId: ScriptLanguage_upgrade
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.ScriptLanguage/v1/rebuild:
+    get:
+      tags:
+        - WebStation.ScriptLanguage
+      summary: Return rebuild for SYNO.WebStation.ScriptLanguage
+      operationId: ScriptLanguage_rebuild
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.ScriptLanguage/v1/pause:
+    get:
+      tags:
+        - WebStation.ScriptLanguage
+      summary: Return pause for SYNO.WebStation.ScriptLanguage
+      operationId: ScriptLanguage_pause
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.ScriptLanguage/v1/start:
+    get:
+      tags:
+        - WebStation.ScriptLanguage
+      summary: Return start for SYNO.WebStation.ScriptLanguage
+      operationId: ScriptLanguage_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.ScriptLanguage/v1/update:
+    get:
+      tags:
+        - WebStation.ScriptLanguage
+      summary: Return update for SYNO.WebStation.ScriptLanguage
+      operationId: ScriptLanguage_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.ScriptLanguage/v1/remove:
+    get:
+      tags:
+        - WebStation.ScriptLanguage
+      summary: Return remove for SYNO.WebStation.ScriptLanguage
+      operationId: ScriptLanguage_remove
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.ScriptLanguage/v1/create:
+    get:
+      tags:
+        - WebStation.ScriptLanguage
+      summary: Return create for SYNO.WebStation.ScriptLanguage
+      operationId: ScriptLanguage_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.ScriptLanguage/v1/list:
+    get:
+      tags:
+        - WebStation.ScriptLanguage
+      summary: Return list for SYNO.WebStation.ScriptLanguage
+      operationId: ScriptLanguage_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.ScriptLanguage.Utils/v1/get_version:
+    get:
+      tags:
+        - WebStation.ScriptLanguage
+      summary: Return get_version for SYNO.WebStation.ScriptLanguage.Utils
+      operationId: ScriptLanguage_Utils_get_version
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.ScriptLanguage.Utils/v1/get:
+    get:
+      tags:
+        - WebStation.ScriptLanguage
+      summary: Return get for SYNO.WebStation.ScriptLanguage.Utils
+      operationId: ScriptLanguage_Utils_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.WebStation.Shortcut/v1/remove:
     get:
       tags:
@@ -679,6 +1120,40 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.WebStation.Task/v1/get:
+    get:
+      tags:
+        - WebStation.Task
+      summary: Return get for SYNO.WebStation.Task
+      operationId: Task_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.Task/v1/list:
+    get:
+      tags:
+        - WebStation.Task
+      summary: Return list for SYNO.WebStation.Task
+      operationId: Task_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.WebStation.WebService.Portal/v1/remove:
     get:
       tags:
@@ -736,6 +1211,125 @@ paths:
         - WebStation.WebService
       summary: Return list for SYNO.WebStation.WebService.Portal
       operationId: WebService_Portal_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.WebService.Portal.Log/v1/export:
+    get:
+      tags:
+        - WebStation.WebService
+      summary: Return export for SYNO.WebStation.WebService.Portal.Log
+      operationId: WebService_Portal_Log_export
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.WebService.Portal.Log/v1/remove:
+    get:
+      tags:
+        - WebStation.WebService
+      summary: Return remove for SYNO.WebStation.WebService.Portal.Log
+      operationId: WebService_Portal_Log_remove
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.WebService.Portal.Log/v1/get:
+    get:
+      tags:
+        - WebStation.WebService
+      summary: Return get for SYNO.WebStation.WebService.Portal.Log
+      operationId: WebService_Portal_Log_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.WebService.Service/v1/check:
+    get:
+      tags:
+        - WebStation.WebService
+      summary: Return check for SYNO.WebStation.WebService.Service
+      operationId: WebService_Service_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.WebService.Service/v1/remove:
+    get:
+      tags:
+        - WebStation.WebService
+      summary: Return remove for SYNO.WebStation.WebService.Service
+      operationId: WebService_Service_remove
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.WebService.Service/v1/update:
+    get:
+      tags:
+        - WebStation.WebService
+      summary: Return update for SYNO.WebStation.WebService.Service
+      operationId: WebService_Service_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.WebStation.WebService.Service/v1/create:
+    get:
+      tags:
+        - WebStation.WebService
+      summary: Return create for SYNO.WebStation.WebService.Service
+      operationId: WebService_Service_create
       responses:
         '200':
           description: Normal Response

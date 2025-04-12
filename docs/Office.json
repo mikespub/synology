@@ -1,0 +1,675 @@
+{
+    "SYNO.Office.Dictionary": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/dictionary/SYNO.Office.Dictionary.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Doc.Snapshot": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/doc/snapshot/SYNO.Office.Doc.Snapshot.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "update",
+                "update_html"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Export": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/export/SYNO.Office.Export.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "download",
+                "save"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Import": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/import/SYNO.Office.Import.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "stop",
+                "convert",
+                "info",
+                "check"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Info": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/info/SYNO.Office.Info.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Info.Constants": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/info/SYNO.Office.Info.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Locale": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/locale/SYNO.Office.Locale.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "list_datetime",
+                "list_currency",
+                "get_default",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Log": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/log/SYNO.Office.Log.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Metrics": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/metrics/SYNO.Office.Metrics.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Node": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/node/SYNO.Office.Node.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "create",
+                "delete",
+                "copy"
+            ],
+            "2": [
+                "touch",
+                "copy"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Node.Attachment": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/node_attachment/SYNO.Office.Node.Attachment.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "create",
+                "get",
+                "delete",
+                "list"
+            ],
+            "2": [
+                "list",
+                "delete",
+                "get",
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Node.Delete": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/node/SYNO.Office.Node.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Node.Encrypt": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/node/SYNO.Office.Node.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "check"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Node.Owner": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/node/SYNO.Office.Node.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Node.Version": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/version/SYNO.Office.Node.Version.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "list",
+                "restore",
+                "rename"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Notification": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/notification/SYNO.Office.Notification.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "send"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.OFile": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/ofile/SYNO.Office.OFile.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "update"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Permission": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/permission/SYNO.Office.Permission.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "check"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Permission.User": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/permission/SYNO.Office.Permission.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "check"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Presentation.Snapshot": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/presentation/snapshot/SYNO.Office.Presentation.Snapshot.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "update"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Resource": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/resource/SYNO.Office.Resource.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get"
+            ],
+            "2": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.SCIM.Photo": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/scim/SYNO.Office.SCIM.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.SCIM.User": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/scim/SYNO.Office.SCIM.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.SCIM.UserGroup": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/scim/SYNO.Office.SCIM.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Setting": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/setting/SYNO.Office.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Setting.Font": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/setting/SYNO.Office.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "add",
+                "enable",
+                "disable",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Setting.Person": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/setting/SYNO.Office.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Setting.System": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/setting/SYNO.Office.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Setting.UI": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/setting/SYNO.Office.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Shard": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/shard/SYNO.Office.Shard.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Shard.Def": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/shard/SYNO.Office.Shard.Def.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Shard.Framework": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/shard/SYNO.Office.Shard.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "init"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Shard.Info": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/shard/SYNO.Office.Shard.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Shard.JSConfig": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/shard/SYNO.Office.Shard.JSConfig.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Shard.Session": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/shard/SYNO.Office.Shard.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Shard.Token": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/shard/SYNO.Office.Shard.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Shard.Type": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/shard/SYNO.Office.Shard.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Sheet.MruFc": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/sheet/mru_fc/SYNO.Office.Sheet.MruFc.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Sheet.Snapshot": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/sheet/snapshot/SYNO.Office.Sheet.Snapshot.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "copy_images",
+                "get",
+                "gc",
+                "init"
+            ],
+            "2": [
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Sheet.Snapshot.History": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/sheet/snapshot/SYNO.Office.Sheet.Snapshot.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Snapshot": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/snapshot/SYNO.Office.Snapshot.so",
+        "maxVersion": 4,
+        "methods": {
+            "1": [
+                "create",
+                "get"
+            ],
+            "2": [
+                "create",
+                "get"
+            ],
+            "3": [
+                "get"
+            ],
+            "4": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Template": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/template/SYNO.Office.Template.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "publish",
+                "save",
+                "make",
+                "list",
+                "get",
+                "set",
+                "delete",
+                "request"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Template.Permission": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/template_permission/SYNO.Office.Template.Permission.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Template.Sharing.Group": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/template/SYNO.Office.Template.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Template.Thumb": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/template_thumb/SYNO.Office.Template.Thumb.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Theme": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/theme/SYNO.Office.Theme.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "apply",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Theme.Thumb": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/theme/SYNO.Office.Theme.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.UserStatistics.Event": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/user_statistics/SYNO.Office.UserStatistics.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Video": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/video/SYNO.Office.Video.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "download"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Office.Video.Thumb": {
+        "lib": "/var/packages/Spreadsheet/target/webapi/mgr/video/SYNO.Office.Video.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

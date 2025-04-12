@@ -76,7 +76,9 @@
                 "stat",
                 "invite",
                 "set",
-                "get"
+                "get",
+                "get_email",
+                "get_package_url"
             ]
         },
         "minVersion": 1,

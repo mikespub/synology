@@ -1,51 +1,12 @@
 {
-    "SYNO.AME.Config": {
-        "lib": "/var/packages/CodecPack/target/usr/webapi/SYNO.AME.Config.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "get",
-                "set"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
-    "SYNO.AME.License": {
-        "lib": "/var/packages/CodecPack/target/usr/webapi/SYNO.AME.License.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "check",
-                "activate_free_license"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
     "SYNO.AME.Pack": {
         "lib": "/var/packages/CodecPack/target/usr/webapi/SYNO.AME.Pack.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "check_activation",
                 "get_info",
                 "get_plugin_app_id",
                 "manual_update"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
-    "SYNO.AME.Payment": {
-        "lib": "/var/packages/CodecPack/target/usr/webapi/SYNO.AME.Payment.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "get_myds_info"
             ]
         },
         "minVersion": 1,

@@ -1,6 +1,6 @@
 {
     "SYNO.Storage.CGI.BtrfsDedupe": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -13,6 +13,7 @@
                 "get_schedule_plan",
                 "check_quota",
                 "rescan_quota_v2",
+                "set_reclaim_type",
                 "stop"
             ]
         },
@@ -21,7 +22,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Cache.Protection": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -38,7 +39,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Check": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -60,7 +61,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.DetectedPool": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -73,7 +74,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.DualEnclosure": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -85,7 +86,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Enclosure": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -108,8 +109,43 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.Storage.CGI.EncryptionKeyVault": {
+        "lib": "StorageManager/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "enable",
+                "disable",
+                "verify_passwd",
+                "reset",
+                "repair",
+                "set_autounlock_key",
+                "get_info",
+                "pack_for_ma",
+                "set_for_ma",
+                "sync_to_passive"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.EncryptionKeyVault.UnlockMode": {
+        "lib": "StorageManager/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_passwd_wrong_record",
+                "enter_passwd",
+                "skip_passwd"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.Storage.CGI.Flashcache": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -133,7 +169,8 @@
                 "check_pin_metadata_and_rec_size",
                 "advisor_history_get",
                 "advisor_start",
-                "advisor_stop"
+                "advisor_stop",
+                "replace"
             ]
         },
         "minVersion": 1,
@@ -141,13 +178,41 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.HddMan": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
                 "get",
                 "set",
-                "send_health_report"
+                "send_health_report",
+                "set_all_nodes"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.KMIP": {
+        "lib": "StorageManager/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "erase_all_data",
+                "transfer_data",
+                "get_key_list",
+                "delete_key",
+                "test_conn",
+                "get_server_hostname",
+                "check_loop",
+                "get_version_info",
+                "import_cert",
+                "list_cert",
+                "set_cert",
+                "remove_cert",
+                "renew_cert",
+                "import_server_ca"
             ]
         },
         "minVersion": 1,
@@ -155,7 +220,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Pool": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -191,7 +256,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Scrubbing": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -203,17 +268,15 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Smart": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "get",
                 "get_health_info",
                 "get_smart_info",
-                "get_smart_test_log",
-                "do_smart_test",
                 "secure_erase",
                 "list",
+                "get_latest_online_drive_db_info",
                 "update_smartctl_db",
                 "smart_warning_set",
                 "smart_warning_get"
@@ -224,7 +287,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Smart.Scheduler": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -241,7 +304,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Spare": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -257,7 +320,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Spare.Conf": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -270,7 +333,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Storage": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -279,6 +342,7 @@
                 "login_check",
                 "repair_sys_partition",
                 "repair_system_partition",
+                "repair_system_partition_list",
                 "repair_rootbackup",
                 "set_schedule_plan",
                 "get_schedule_plan",
@@ -305,7 +369,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.TaipeiEnclosure": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -317,7 +381,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Volume": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -354,7 +418,17 @@
                 "disable_space_usage",
                 "set_setting",
                 "failover_keep_rw",
-                "get_dump_volumes"
+                "get_dump_volumes",
+                "unlock_by_vault",
+                "get_recovery_key",
+                "export_recovery_key",
+                "fs_info_on_pool_meta_set",
+                "fs_info_on_pool_meta_update",
+                "change_recovery_key",
+                "set_dek",
+                "clean_dek",
+                "unlock_by_recovery_key",
+                "get_recovery_key_info"
             ]
         },
         "minVersion": 1,
@@ -362,7 +436,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Volume.Installer": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -375,7 +449,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Storage.CGI.Volume.OfflineOp": {
-        "lib": "lib/libStorage.so",
+        "lib": "StorageManager/libStorage.so",
         "maxVersion": 1,
         "methods": {
             "1": [

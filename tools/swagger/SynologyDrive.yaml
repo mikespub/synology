@@ -1,0 +1,3026 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are many versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: diskstation
+basePath: /rest.php
+schemes:
+  - http
+securityDefinitions:
+  query_sid:
+    type: apiKey
+    name: _sid
+    in: query
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
+  /SYNO.API.Info/v1/query:
+    get:
+      tags:
+        - API
+      summary: Return query for SYNO.API.Info
+      operationId: API_Info_query
+      parameters:
+        - in: query
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/login:
+    get:
+      tags:
+        - API
+      summary: Return login for SYNO.API.Auth
+      operationId: API_Auth_login
+      parameters:
+        - in: query
+          name: account
+          description: Username
+          required: false
+          type: string
+          default: username
+        - in: query
+          name: passwd
+          description: Password
+          required: false
+          type: string
+          default: passwd
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: query
+          name: format
+          description: Format (cookie or sid)
+          required: false
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive/v1/get_status:
+    get:
+      tags:
+        - SynologyDrive.
+      summary: Return get_status for SYNO.SynologyDrive
+      operationId: _get_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive/v1/get_directory_service_status:
+    get:
+      tags:
+        - SynologyDrive.
+      summary: Return get_directory_service_status for SYNO.SynologyDrive
+      operationId: _get_directory_service_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive/v1/get_extension:
+    get:
+      tags:
+        - SynologyDrive.
+      summary: Return get_extension for SYNO.SynologyDrive
+      operationId: _get_extension
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive/v1/get_client_link:
+    get:
+      tags:
+        - SynologyDrive.
+      summary: Return get_client_link for SYNO.SynologyDrive
+      operationId: _get_client_link
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive/v1/check_user:
+    get:
+      tags:
+        - SynologyDrive.
+      summary: Return check_user for SYNO.SynologyDrive
+      operationId: _check_user
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive/v1/delete_database:
+    get:
+      tags:
+        - SynologyDrive.
+      summary: Return delete_database for SYNO.SynologyDrive
+      operationId: _delete_database
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive/v1/resume_freeze:
+    get:
+      tags:
+        - SynologyDrive.
+      summary: Return resume_freeze for SYNO.SynologyDrive
+      operationId: _resume_freeze
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Activation/v1/get:
+    get:
+      tags:
+        - SynologyDrive.Activation
+      summary: Return get for SYNO.SynologyDrive.Activation
+      operationId: Activation_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Activation/v1/set:
+    get:
+      tags:
+        - SynologyDrive.Activation
+      summary: Return set for SYNO.SynologyDrive.Activation
+      operationId: Activation_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.AdvanceSharing/v1/get:
+    get:
+      tags:
+        - SynologyDrive.AdvanceSharing
+      summary: Return get for SYNO.SynologyDrive.AdvanceSharing
+      operationId: AdvanceSharing_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.AdvanceSharing/v1/update:
+    get:
+      tags:
+        - SynologyDrive.AdvanceSharing
+      summary: Return update for SYNO.SynologyDrive.AdvanceSharing
+      operationId: AdvanceSharing_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.AdvanceSharing/v1/create:
+    get:
+      tags:
+        - SynologyDrive.AdvanceSharing
+      summary: Return create for SYNO.SynologyDrive.AdvanceSharing
+      operationId: AdvanceSharing_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.AdvanceSharing/v1/delete:
+    get:
+      tags:
+        - SynologyDrive.AdvanceSharing
+      summary: Return delete for SYNO.SynologyDrive.AdvanceSharing
+      operationId: AdvanceSharing_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.AdvanceSharing/v1/verify:
+    get:
+      tags:
+        - SynologyDrive.AdvanceSharing
+      summary: Return verify for SYNO.SynologyDrive.AdvanceSharing
+      operationId: AdvanceSharing_verify
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.AdvanceSharing.Public/v1/auth:
+    get:
+      tags:
+        - SynologyDrive.AdvanceSharing
+      summary: Return auth for SYNO.SynologyDrive.AdvanceSharing.Public
+      operationId: AdvanceSharing_Public_auth
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.AppIntegration/v1/list:
+    get:
+      tags:
+        - SynologyDrive.AppIntegration
+      summary: Return list for SYNO.SynologyDrive.AppIntegration
+      operationId: AppIntegration_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.AppIntegration/v1/get:
+    get:
+      tags:
+        - SynologyDrive.AppIntegration
+      summary: Return get for SYNO.SynologyDrive.AppIntegration
+      operationId: AppIntegration_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.AppIntegration/v1/update:
+    get:
+      tags:
+        - SynologyDrive.AppIntegration
+      summary: Return update for SYNO.SynologyDrive.AppIntegration
+      operationId: AppIntegration_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.AppIntegration/v1/create:
+    get:
+      tags:
+        - SynologyDrive.AppIntegration
+      summary: Return create for SYNO.SynologyDrive.AppIntegration
+      operationId: AppIntegration_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.AppIntegration/v1/delete:
+    get:
+      tags:
+        - SynologyDrive.AppIntegration
+      summary: Return delete for SYNO.SynologyDrive.AppIntegration
+      operationId: AppIntegration_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Authentication/v3/authenticate_by_dsm:
+    get:
+      tags:
+        - SynologyDrive.Authentication
+      summary: Return authenticate_by_dsm for SYNO.SynologyDrive.Authentication
+      operationId: Authentication_authenticate_by_dsm
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Authentication/v3/revoke:
+    get:
+      tags:
+        - SynologyDrive.Authentication
+      summary: Return revoke for SYNO.SynologyDrive.Authentication
+      operationId: Authentication_revoke
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Authentication/v3/set_active:
+    get:
+      tags:
+        - SynologyDrive.Authentication
+      summary: Return set_active for SYNO.SynologyDrive.Authentication
+      operationId: Authentication_set_active
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Config/v1/get:
+    get:
+      tags:
+        - SynologyDrive.Config
+      summary: Return get for SYNO.SynologyDrive.Config
+      operationId: Config_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Config/v1/set:
+    get:
+      tags:
+        - SynologyDrive.Config
+      summary: Return set for SYNO.SynologyDrive.Config
+      operationId: Config_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Connection/v2/list:
+    get:
+      tags:
+        - SynologyDrive.Connection
+      summary: Return list for SYNO.SynologyDrive.Connection
+      operationId: Connection_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Connection/v2/delete:
+    get:
+      tags:
+        - SynologyDrive.Connection
+      summary: Return delete for SYNO.SynologyDrive.Connection
+      operationId: Connection_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Connection/v2/summary:
+    get:
+      tags:
+        - SynologyDrive.Connection
+      summary: Return summary for SYNO.SynologyDrive.Connection
+      operationId: Connection_summary
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.DBUsage/v1/status:
+    get:
+      tags:
+        - SynologyDrive.DBUsage
+      summary: Return status for SYNO.SynologyDrive.DBUsage
+      operationId: DBUsage_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.DBUsage/v1/start:
+    get:
+      tags:
+        - SynologyDrive.DBUsage
+      summary: Return start for SYNO.SynologyDrive.DBUsage
+      operationId: DBUsage_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.DBUsage/v1/stop:
+    get:
+      tags:
+        - SynologyDrive.DBUsage
+      summary: Return stop for SYNO.SynologyDrive.DBUsage
+      operationId: DBUsage_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.DBUsage/v1/get:
+    get:
+      tags:
+        - SynologyDrive.DBUsage
+      summary: Return get for SYNO.SynologyDrive.DBUsage
+      operationId: DBUsage_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.DSM/v1/get:
+    get:
+      tags:
+        - SynologyDrive.DSM
+      summary: Return get for SYNO.SynologyDrive.DSM
+      operationId: DSM_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Dashboard/v1/top_access_files:
+    get:
+      tags:
+        - SynologyDrive.Dashboard
+      summary: Return top_access_files for SYNO.SynologyDrive.Dashboard
+      operationId: Dashboard_top_access_files
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/convert_office:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return convert_office for SYNO.SynologyDrive.Files
+      operationId: Files_convert_office
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/copy:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return copy for SYNO.SynologyDrive.Files
+      operationId: Files_copy
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/create:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return create for SYNO.SynologyDrive.Files
+      operationId: Files_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/delete:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return delete for SYNO.SynologyDrive.Files
+      operationId: Files_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/download:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return download for SYNO.SynologyDrive.Files
+      operationId: Files_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/list:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return list for SYNO.SynologyDrive.Files
+      operationId: Files_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/get:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return get for SYNO.SynologyDrive.Files
+      operationId: Files_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/label:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return label for SYNO.SynologyDrive.Files
+      operationId: Files_label
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/list_starred:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return list_starred for SYNO.SynologyDrive.Files
+      operationId: Files_list_starred
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/recent:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return recent for SYNO.SynologyDrive.Files
+      operationId: Files_recent
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/shared_with_me:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return shared_with_me for SYNO.SynologyDrive.Files
+      operationId: Files_shared_with_me
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/list_labelled:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return list_labelled for SYNO.SynologyDrive.Files
+      operationId: Files_list_labelled
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/list_ancestor:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return list_ancestor for SYNO.SynologyDrive.Files
+      operationId: Files_list_ancestor
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/shared_with_others:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return shared_with_others for SYNO.SynologyDrive.Files
+      operationId: Files_shared_with_others
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/move:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return move for SYNO.SynologyDrive.Files
+      operationId: Files_move
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/request_access:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return request_access for SYNO.SynologyDrive.Files
+      operationId: Files_request_access
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/search:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return search for SYNO.SynologyDrive.Files
+      operationId: Files_search
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/star:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return star for SYNO.SynologyDrive.Files
+      operationId: Files_star
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/get_thumbnail:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return get_thumbnail for SYNO.SynologyDrive.Files
+      operationId: Files_get_thumbnail
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/update:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return update for SYNO.SynologyDrive.Files
+      operationId: Files_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/upload:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return upload for SYNO.SynologyDrive.Files
+      operationId: Files_upload
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/upload_from_dsm:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return upload_from_dsm for SYNO.SynologyDrive.Files
+      operationId: Files_upload_from_dsm
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Files/v10/list_backup_tasks:
+    get:
+      tags:
+        - SynologyDrive.Files
+      summary: Return list_backup_tasks for SYNO.SynologyDrive.Files
+      operationId: Files_list_backup_tasks
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.HybridShare.Privilege/v1/list:
+    get:
+      tags:
+        - SynologyDrive.HybridShare
+      summary: Return list for SYNO.SynologyDrive.HybridShare.Privilege
+      operationId: HybridShare_Privilege_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.HybridShare.Privilege/v1/update:
+    get:
+      tags:
+        - SynologyDrive.HybridShare
+      summary: Return update for SYNO.SynologyDrive.HybridShare.Privilege
+      operationId: HybridShare_Privilege_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Index/v1/get_native_client_status:
+    get:
+      tags:
+        - SynologyDrive.Index
+      summary: Return get_native_client_status for SYNO.SynologyDrive.Index
+      operationId: Index_get_native_client_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Index/v1/set_native_client_index_pause:
+    get:
+      tags:
+        - SynologyDrive.Index
+      summary: Return set_native_client_index_pause for SYNO.SynologyDrive.Index
+      operationId: Index_set_native_client_index_pause
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Info/v2/get:
+    get:
+      tags:
+        - SynologyDrive.Info
+      summary: Return get for SYNO.SynologyDrive.Info
+      operationId: Info_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Info/v2/noop:
+    get:
+      tags:
+        - SynologyDrive.Info
+      summary: Return noop for SYNO.SynologyDrive.Info
+      operationId: Info_noop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Info/v2/quota:
+    get:
+      tags:
+        - SynologyDrive.Info
+      summary: Return quota for SYNO.SynologyDrive.Info
+      operationId: Info_quota
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.KeyManagement/v1/list:
+    get:
+      tags:
+        - SynologyDrive.KeyManagement
+      summary: Return list for SYNO.SynologyDrive.KeyManagement
+      operationId: KeyManagement_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.KeyManagement/v1/get:
+    get:
+      tags:
+        - SynologyDrive.KeyManagement
+      summary: Return get for SYNO.SynologyDrive.KeyManagement
+      operationId: KeyManagement_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.KeyManagement/v1/set:
+    get:
+      tags:
+        - SynologyDrive.KeyManagement
+      summary: Return set for SYNO.SynologyDrive.KeyManagement
+      operationId: KeyManagement_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.KeyManagement/v1/delete:
+    get:
+      tags:
+        - SynologyDrive.KeyManagement
+      summary: Return delete for SYNO.SynologyDrive.KeyManagement
+      operationId: KeyManagement_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.KeyManagement/v1/export:
+    get:
+      tags:
+        - SynologyDrive.KeyManagement
+      summary: Return export for SYNO.SynologyDrive.KeyManagement
+      operationId: KeyManagement_export
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.KeyManagement/v1/import:
+    get:
+      tags:
+        - SynologyDrive.KeyManagement
+      summary: Return import for SYNO.SynologyDrive.KeyManagement
+      operationId: KeyManagement_import
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Labels/v2/list:
+    get:
+      tags:
+        - SynologyDrive.Labels
+      summary: Return list for SYNO.SynologyDrive.Labels
+      operationId: Labels_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Labels/v2/create:
+    get:
+      tags:
+        - SynologyDrive.Labels
+      summary: Return create for SYNO.SynologyDrive.Labels
+      operationId: Labels_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Labels/v2/update:
+    get:
+      tags:
+        - SynologyDrive.Labels
+      summary: Return update for SYNO.SynologyDrive.Labels
+      operationId: Labels_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Labels/v2/delete:
+    get:
+      tags:
+        - SynologyDrive.Labels
+      summary: Return delete for SYNO.SynologyDrive.Labels
+      operationId: Labels_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Log/v1/list:
+    get:
+      tags:
+        - SynologyDrive.Log
+      summary: Return list for SYNO.SynologyDrive.Log
+      operationId: Log_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Log/v1/delete:
+    get:
+      tags:
+        - SynologyDrive.Log
+      summary: Return delete for SYNO.SynologyDrive.Log
+      operationId: Log_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Log/v1/export:
+    get:
+      tags:
+        - SynologyDrive.Log
+      summary: Return export for SYNO.SynologyDrive.Log
+      operationId: Log_export
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Metrics/v1/get:
+    get:
+      tags:
+        - SynologyDrive.Metrics
+      summary: Return get for SYNO.SynologyDrive.Metrics
+      operationId: Metrics_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Metrics.Token/v1/get:
+    get:
+      tags:
+        - SynologyDrive.Metrics
+      summary: Return get for SYNO.SynologyDrive.Metrics.Token
+      operationId: Metrics_Token_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Metrics.Token/v1/refresh:
+    get:
+      tags:
+        - SynologyDrive.Metrics
+      summary: Return refresh for SYNO.SynologyDrive.Metrics.Token
+      operationId: Metrics_Token_refresh
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Migration/v1/import_trash:
+    get:
+      tags:
+        - SynologyDrive.Migration
+      summary: Return import_trash for SYNO.SynologyDrive.Migration
+      operationId: Migration_import_trash
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Migration/v1/import:
+    get:
+      tags:
+        - SynologyDrive.Migration
+      summary: Return import for SYNO.SynologyDrive.Migration
+      operationId: Migration_import
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Migration.UserHome/v1/start:
+    get:
+      tags:
+        - SynologyDrive.Migration
+      summary: Return start for SYNO.SynologyDrive.Migration.UserHome
+      operationId: Migration_UserHome_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Migration.UserHome/v1/status:
+    get:
+      tags:
+        - SynologyDrive.Migration
+      summary: Return status for SYNO.SynologyDrive.Migration.UserHome
+      operationId: Migration_UserHome_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Migration.UserHome/v1/list:
+    get:
+      tags:
+        - SynologyDrive.Migration
+      summary: Return list for SYNO.SynologyDrive.Migration.UserHome
+      operationId: Migration_UserHome_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Mobile.Notification/v1/unsubscribe:
+    get:
+      tags:
+        - SynologyDrive.Mobile
+      summary: Return unsubscribe for SYNO.SynologyDrive.Mobile.Notification
+      operationId: Mobile_Notification_unsubscribe
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Mobile.Notification/v1/subscribe:
+    get:
+      tags:
+        - SynologyDrive.Mobile
+      summary: Return subscribe for SYNO.SynologyDrive.Mobile.Notification
+      operationId: Mobile_Notification_subscribe
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Mobile.Notification/v1/unpair:
+    get:
+      tags:
+        - SynologyDrive.Mobile
+      summary: Return unpair for SYNO.SynologyDrive.Mobile.Notification
+      operationId: Mobile_Notification_unpair
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Mobile.Notification/v1/pair:
+    get:
+      tags:
+        - SynologyDrive.Mobile
+      summary: Return pair for SYNO.SynologyDrive.Mobile.Notification
+      operationId: Mobile_Notification_pair
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node/v1/list:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return list for SYNO.SynologyDrive.Node
+      operationId: Node_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node/v1/list_parent:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return list_parent for SYNO.SynologyDrive.Node
+      operationId: Node_list_parent
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node/v1/list_version:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return list_version for SYNO.SynologyDrive.Node
+      operationId: Node_list_version
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node/v1/dry_run:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return dry_run for SYNO.SynologyDrive.Node
+      operationId: Node_dry_run
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node.Delete/v1/start:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return start for SYNO.SynologyDrive.Node.Delete
+      operationId: Node_Delete_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node.Delete/v1/status:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return status for SYNO.SynologyDrive.Node.Delete
+      operationId: Node_Delete_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node.Delete/v1/set_schedule:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return set_schedule for SYNO.SynologyDrive.Node.Delete
+      operationId: Node_Delete_set_schedule
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node.Delete/v1/get_schedule:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return get_schedule for SYNO.SynologyDrive.Node.Delete
+      operationId: Node_Delete_get_schedule
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node.Download/v1/start:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return start for SYNO.SynologyDrive.Node.Download
+      operationId: Node_Download_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node.Download/v1/status:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return status for SYNO.SynologyDrive.Node.Download
+      operationId: Node_Download_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node.Download/v1/stop:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return stop for SYNO.SynologyDrive.Node.Download
+      operationId: Node_Download_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node.Download/v1/finish:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return finish for SYNO.SynologyDrive.Node.Download
+      operationId: Node_Download_finish
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node.Restore/v1/start:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return start for SYNO.SynologyDrive.Node.Restore
+      operationId: Node_Restore_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node.Restore/v1/status:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return status for SYNO.SynologyDrive.Node.Restore
+      operationId: Node_Restore_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Node.Restore/v1/finish:
+    get:
+      tags:
+        - SynologyDrive.Node
+      summary: Return finish for SYNO.SynologyDrive.Node.Restore
+      operationId: Node_Restore_finish
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Notifications/v2/create:
+    get:
+      tags:
+        - SynologyDrive.Notifications
+      summary: Return create for SYNO.SynologyDrive.Notifications
+      operationId: Notifications_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Notifications/v2/list:
+    get:
+      tags:
+        - SynologyDrive.Notifications
+      summary: Return list for SYNO.SynologyDrive.Notifications
+      operationId: Notifications_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Notifications/v2/delete:
+    get:
+      tags:
+        - SynologyDrive.Notifications
+      summary: Return delete for SYNO.SynologyDrive.Notifications
+      operationId: Notifications_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Office/v1/status:
+    get:
+      tags:
+        - SynologyDrive.Office
+      summary: Return status for SYNO.SynologyDrive.Office
+      operationId: Office_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Photos/v3/get_metadata:
+    get:
+      tags:
+        - SynologyDrive.Photos
+      summary: Return get_metadata for SYNO.SynologyDrive.Photos
+      operationId: Photos_get_metadata
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Photos/v3/list:
+    get:
+      tags:
+        - SynologyDrive.Photos
+      summary: Return list for SYNO.SynologyDrive.Photos
+      operationId: Photos_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Photos/v3/upload:
+    get:
+      tags:
+        - SynologyDrive.Photos
+      summary: Return upload for SYNO.SynologyDrive.Photos
+      operationId: Photos_upload
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Privilege/v1/list:
+    get:
+      tags:
+        - SynologyDrive.Privilege
+      summary: Return list for SYNO.SynologyDrive.Privilege
+      operationId: Privilege_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Privilege/v1/set:
+    get:
+      tags:
+        - SynologyDrive.Privilege
+      summary: Return set for SYNO.SynologyDrive.Privilege
+      operationId: Privilege_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Privilege/v1/status:
+    get:
+      tags:
+        - SynologyDrive.Privilege
+      summary: Return status for SYNO.SynologyDrive.Privilege
+      operationId: Privilege_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Profiles/v2/list:
+    get:
+      tags:
+        - SynologyDrive.Profiles
+      summary: Return list for SYNO.SynologyDrive.Profiles
+      operationId: Profiles_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Profiles/v2/set:
+    get:
+      tags:
+        - SynologyDrive.Profiles
+      summary: Return set for SYNO.SynologyDrive.Profiles
+      operationId: Profiles_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Profiles/v2/delete:
+    get:
+      tags:
+        - SynologyDrive.Profiles
+      summary: Return delete for SYNO.SynologyDrive.Profiles
+      operationId: Profiles_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Profiles/v2/get_sync_profiles:
+    get:
+      tags:
+        - SynologyDrive.Profiles
+      summary: Return get_sync_profiles for SYNO.SynologyDrive.Profiles
+      operationId: Profiles_get_sync_profiles
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Revisions/v2/list:
+    get:
+      tags:
+        - SynologyDrive.Revisions
+      summary: Return list for SYNO.SynologyDrive.Revisions
+      operationId: Revisions_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Revisions/v2/download:
+    get:
+      tags:
+        - SynologyDrive.Revisions
+      summary: Return download for SYNO.SynologyDrive.Revisions
+      operationId: Revisions_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Revisions/v2/restore:
+    get:
+      tags:
+        - SynologyDrive.Revisions
+      summary: Return restore for SYNO.SynologyDrive.Revisions
+      operationId: Revisions_restore
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.SCIM.Photo/v1/get:
+    get:
+      tags:
+        - SynologyDrive.SCIM
+      summary: Return get for SYNO.SynologyDrive.SCIM.Photo
+      operationId: SCIM_Photo_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.SCIM.User/v1/get:
+    get:
+      tags:
+        - SynologyDrive.SCIM
+      summary: Return get for SYNO.SynologyDrive.SCIM.User
+      operationId: SCIM_User_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Services.DocumentViewer/v1/create:
+    get:
+      tags:
+        - SynologyDrive.Services
+      summary: Return create for SYNO.SynologyDrive.Services.DocumentViewer
+      operationId: Services_DocumentViewer_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Services.SynologyChat/v1/bind:
+    get:
+      tags:
+        - SynologyDrive.Services
+      summary: Return bind for SYNO.SynologyDrive.Services.SynologyChat
+      operationId: Services_SynologyChat_bind
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Services.SynologyChat/v1/list:
+    get:
+      tags:
+        - SynologyDrive.Services
+      summary: Return list for SYNO.SynologyDrive.Services.SynologyChat
+      operationId: Services_SynologyChat_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Services.VideoStation/v1/create:
+    get:
+      tags:
+        - SynologyDrive.Services
+      summary: Return create for SYNO.SynologyDrive.Services.VideoStation
+      operationId: Services_VideoStation_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Settings/v2/list:
+    get:
+      tags:
+        - SynologyDrive.Settings
+      summary: Return list for SYNO.SynologyDrive.Settings
+      operationId: Settings_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Settings/v2/update:
+    get:
+      tags:
+        - SynologyDrive.Settings
+      summary: Return update for SYNO.SynologyDrive.Settings
+      operationId: Settings_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Settings/v2/list_targets:
+    get:
+      tags:
+        - SynologyDrive.Settings
+      summary: Return list_targets for SYNO.SynologyDrive.Settings
+      operationId: Settings_list_targets
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Shard/v1/get:
+    get:
+      tags:
+        - SynologyDrive.Shard
+      summary: Return get for SYNO.SynologyDrive.Shard
+      operationId: Shard_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Shard/v1/getjs:
+    get:
+      tags:
+        - SynologyDrive.Shard
+      summary: Return getjs for SYNO.SynologyDrive.Shard
+      operationId: Shard_getjs
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Shard/v1/init:
+    get:
+      tags:
+        - SynologyDrive.Shard
+      summary: Return init for SYNO.SynologyDrive.Shard
+      operationId: Shard_init
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Share/v2/list_active:
+    get:
+      tags:
+        - SynologyDrive.Share
+      summary: Return list_active for SYNO.SynologyDrive.Share
+      operationId: Share_list_active
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Share/v2/set:
+    get:
+      tags:
+        - SynologyDrive.Share
+      summary: Return set for SYNO.SynologyDrive.Share
+      operationId: Share_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Share/v2/list:
+    get:
+      tags:
+        - SynologyDrive.Share
+      summary: Return list for SYNO.SynologyDrive.Share
+      operationId: Share_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Share/v2/get_hybrid_share_rotate_span:
+    get:
+      tags:
+        - SynologyDrive.Share
+      summary: Return get_hybrid_share_rotate_span for SYNO.SynologyDrive.Share
+      operationId: Share_get_hybrid_share_rotate_span
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Share/v2/migrate_index_home:
+    get:
+      tags:
+        - SynologyDrive.Share
+      summary: Return migrate_index_home for SYNO.SynologyDrive.Share
+      operationId: Share_migrate_index_home
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Share/v2/get_migrate_index_home_config:
+    get:
+      tags:
+        - SynologyDrive.Share
+      summary: Return get_migrate_index_home_config for SYNO.SynologyDrive.Share
+      operationId: Share_get_migrate_index_home_config
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Share.Priv/v1/list:
+    get:
+      tags:
+        - SynologyDrive.Share
+      summary: Return list for SYNO.SynologyDrive.Share.Priv
+      operationId: Share_Priv_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Sharing/v2/create_link:
+    get:
+      tags:
+        - SynologyDrive.Sharing
+      summary: Return create_link for SYNO.SynologyDrive.Sharing
+      operationId: Sharing_create_link
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Sharing/v2/list:
+    get:
+      tags:
+        - SynologyDrive.Sharing
+      summary: Return list for SYNO.SynologyDrive.Sharing
+      operationId: Sharing_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Sharing/v2/update:
+    get:
+      tags:
+        - SynologyDrive.Sharing
+      summary: Return update for SYNO.SynologyDrive.Sharing
+      operationId: Sharing_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Sharing/v2/use_link:
+    get:
+      tags:
+        - SynologyDrive.Sharing
+      summary: Return use_link for SYNO.SynologyDrive.Sharing
+      operationId: Sharing_use_link
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Sharing/v2/sync_to_device:
+    get:
+      tags:
+        - SynologyDrive.Sharing
+      summary: Return sync_to_device for SYNO.SynologyDrive.Sharing
+      operationId: Sharing_sync_to_device
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Sharing/v2/get_base_url:
+    get:
+      tags:
+        - SynologyDrive.Sharing
+      summary: Return get_base_url for SYNO.SynologyDrive.Sharing
+      operationId: Sharing_get_base_url
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Sharing.Report/v1/list_target:
+    get:
+      tags:
+        - SynologyDrive.Sharing
+      summary: Return list_target for SYNO.SynologyDrive.Sharing.Report
+      operationId: Sharing_Report_list_target
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Sharing.Report/v1/start:
+    get:
+      tags:
+        - SynologyDrive.Sharing
+      summary: Return start for SYNO.SynologyDrive.Sharing.Report
+      operationId: Sharing_Report_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Sharing.Report/v1/status:
+    get:
+      tags:
+        - SynologyDrive.Sharing
+      summary: Return status for SYNO.SynologyDrive.Sharing.Report
+      operationId: Sharing_Report_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Sharing.Report/v1/stop:
+    get:
+      tags:
+        - SynologyDrive.Sharing
+      summary: Return stop for SYNO.SynologyDrive.Sharing.Report
+      operationId: Sharing_Report_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Statistics/v1/get:
+    get:
+      tags:
+        - SynologyDrive.Statistics
+      summary: Return get for SYNO.SynologyDrive.Statistics
+      operationId: Statistics_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.String/v1/get:
+    get:
+      tags:
+        - SynologyDrive.String
+      summary: Return get for SYNO.SynologyDrive.String
+      operationId: String_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Tasks/v1/delete:
+    get:
+      tags:
+        - SynologyDrive.Tasks
+      summary: Return delete for SYNO.SynologyDrive.Tasks
+      operationId: Tasks_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Tasks/v1/get:
+    get:
+      tags:
+        - SynologyDrive.Tasks
+      summary: Return get for SYNO.SynologyDrive.Tasks
+      operationId: Tasks_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Tasks/v1/list:
+    get:
+      tags:
+        - SynologyDrive.Tasks
+      summary: Return list for SYNO.SynologyDrive.Tasks
+      operationId: Tasks_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.TeamFolders/v1/list:
+    get:
+      tags:
+        - SynologyDrive.TeamFolders
+      summary: Return list for SYNO.SynologyDrive.TeamFolders
+      operationId: TeamFolders_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.TeamFolders/v1/list_members:
+    get:
+      tags:
+        - SynologyDrive.TeamFolders
+      summary: Return list_members for SYNO.SynologyDrive.TeamFolders
+      operationId: TeamFolders_list_members
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Trash/v2/list:
+    get:
+      tags:
+        - SynologyDrive.Trash
+      summary: Return list for SYNO.SynologyDrive.Trash
+      operationId: Trash_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Trash/v2/list_ancestor:
+    get:
+      tags:
+        - SynologyDrive.Trash
+      summary: Return list_ancestor for SYNO.SynologyDrive.Trash
+      operationId: Trash_list_ancestor
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Trash/v2/empty:
+    get:
+      tags:
+        - SynologyDrive.Trash
+      summary: Return empty for SYNO.SynologyDrive.Trash
+      operationId: Trash_empty
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Trash/v2/get_size:
+    get:
+      tags:
+        - SynologyDrive.Trash
+      summary: Return get_size for SYNO.SynologyDrive.Trash
+      operationId: Trash_get_size
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Users/v1/get:
+    get:
+      tags:
+        - SynologyDrive.Users
+      summary: Return get for SYNO.SynologyDrive.Users
+      operationId: Users_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Users/v1/update:
+    get:
+      tags:
+        - SynologyDrive.Users
+      summary: Return update for SYNO.SynologyDrive.Users
+      operationId: Users_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Users/v1/list:
+    get:
+      tags:
+        - SynologyDrive.Users
+      summary: Return list for SYNO.SynologyDrive.Users
+      operationId: Users_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Webhooks/v2/create:
+    get:
+      tags:
+        - SynologyDrive.Webhooks
+      summary: Return create for SYNO.SynologyDrive.Webhooks
+      operationId: Webhooks_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Webhooks/v2/get:
+    get:
+      tags:
+        - SynologyDrive.Webhooks
+      summary: Return get for SYNO.SynologyDrive.Webhooks
+      operationId: Webhooks_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Webhooks/v2/update:
+    get:
+      tags:
+        - SynologyDrive.Webhooks
+      summary: Return update for SYNO.SynologyDrive.Webhooks
+      operationId: Webhooks_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Webhooks/v2/delete:
+    get:
+      tags:
+        - SynologyDrive.Webhooks
+      summary: Return delete for SYNO.SynologyDrive.Webhooks
+      operationId: Webhooks_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SynologyDrive.Webhooks/v2/list:
+    get:
+      tags:
+        - SynologyDrive.Webhooks
+      summary: Return list for SYNO.SynologyDrive.Webhooks
+      operationId: Webhooks_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

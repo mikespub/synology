@@ -32,7 +32,6 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
-  - https
   - http
 securityDefinitions:
   query_sid:
@@ -152,91 +151,6 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AME.Config/v1/get:
-    get:
-      tags:
-        - AME.Config
-      summary: Return get for SYNO.AME.Config
-      operationId: Config_get
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AME.Config/v1/set:
-    get:
-      tags:
-        - AME.Config
-      summary: Return set for SYNO.AME.Config
-      operationId: Config_set
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AME.License/v1/check:
-    get:
-      tags:
-        - AME.License
-      summary: Return check for SYNO.AME.License
-      operationId: License_check
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AME.License/v1/activate_free_license:
-    get:
-      tags:
-        - AME.License
-      summary: Return activate_free_license for SYNO.AME.License
-      operationId: License_activate_free_license
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AME.Pack/v1/check_activation:
-    get:
-      tags:
-        - AME.Pack
-      summary: Return check_activation for SYNO.AME.Pack
-      operationId: Pack_check_activation
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
   /SYNO.AME.Pack/v1/get_info:
     get:
       tags:
@@ -277,23 +191,6 @@ paths:
         - AME.Pack
       summary: Return manual_update for SYNO.AME.Pack
       operationId: Pack_manual_update
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AME.Payment/v1/get_myds_info:
-    get:
-      tags:
-        - AME.Payment
-      summary: Return get_myds_info for SYNO.AME.Payment
-      operationId: Payment_get_myds_info
       responses:
         '200':
           description: Normal Response

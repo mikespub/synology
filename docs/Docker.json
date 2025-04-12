@@ -1,7 +1,6 @@
 {
     "SYNO.Docker.Container": {
-        "lib": "/var/packages/Docker/target/webapi/container/SYNO.Docker.Container.so",
-        "minVersion": 1,
+        "lib": "/var/packages/ContainerManager/target/webapi/container/SYNO.Docker.Container.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -20,15 +19,16 @@
                 "signal",
                 "start",
                 "stop",
+                "stats",
                 "upload"
             ]
         },
+        "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.Docker.Container.Log": {
-        "lib": "/var/packages/Docker/target/webapi/container/SYNO.Docker.Container.so",
-        "minVersion": 1,
+        "lib": "/var/packages/ContainerManager/target/webapi/container/SYNO.Docker.Container.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -39,12 +39,12 @@
                 "search"
             ]
         },
+        "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.Docker.Container.PkgProfile": {
-        "lib": "/var/packages/Docker/target/webapi/container/SYNO.Docker.Container.so",
-        "minVersion": 1,
+        "lib": "/var/packages/ContainerManager/target/webapi/container/SYNO.Docker.Container.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -52,12 +52,12 @@
                 "remove"
             ]
         },
+        "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.Docker.Container.Profile": {
-        "lib": "/var/packages/Docker/target/webapi/container/SYNO.Docker.Container.so",
-        "minVersion": 1,
+        "lib": "/var/packages/ContainerManager/target/webapi/container/SYNO.Docker.Container.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -67,30 +67,33 @@
                 "upload"
             ]
         },
+        "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.Docker.Container.Resource": {
-        "lib": "/var/packages/Docker/target/webapi/container/SYNO.Docker.Container.so",
-        "minVersion": 1,
+        "lib": "/var/packages/ContainerManager/target/webapi/container/SYNO.Docker.Container.so",
         "maxVersion": 1,
         "methods": {
             "1": [
                 "get"
             ]
         },
+        "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.Docker.Image": {
-        "lib": "/var/packages/Docker/target/webapi/image/SYNO.Docker.Image.so",
-        "minVersion": 1,
+        "lib": "/var/packages/ContainerManager/target/webapi/image/SYNO.Docker.Image.so",
         "maxVersion": 1,
         "methods": {
             "1": [
+                "prune",
                 "list",
                 "pull_start",
                 "pull_status",
+                "upgrade_start",
+                "upgrade_status",
                 "export",
                 "import",
                 "delete",
@@ -98,12 +101,12 @@
                 "get"
             ]
         },
+        "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.Docker.Log": {
-        "lib": "/var/packages/Docker/target/webapi/log/SYNO.Docker.Log.so",
-        "minVersion": 1,
+        "lib": "/var/packages/ContainerManager/target/webapi/log/SYNO.Docker.Log.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -112,11 +115,12 @@
                 "export"
             ]
         },
+        "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.Docker.Migrate": {
-        "lib": "/var/packages/Docker/target/webapi/migrate/SYNO.Docker.Migrate.so",
+        "lib": "/var/packages/ContainerManager/target/webapi/migrate/SYNO.Docker.Migrate.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -130,8 +134,7 @@
         "requestFormat": "JSON"
     },
     "SYNO.Docker.Network": {
-        "lib": "/var/packages/Docker/target/webapi/network/SYNO.Docker.Network.so",
-        "minVersion": 1,
+        "lib": "/var/packages/ContainerManager/target/webapi/network/SYNO.Docker.Network.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -145,12 +148,42 @@
                 "get"
             ]
         },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Docker.Project": {
+        "lib": "/var/packages/ContainerManager/target/webapi/project/SYNO.Docker.Project.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "log",
+                "get_share_info",
+                "build_stream",
+                "start_stream",
+                "stop_stream",
+                "restart_stream",
+                "clean_stream",
+                "delete_stream",
+                "clean",
+                "stop",
+                "delete",
+                "build",
+                "start",
+                "restart",
+                "get",
+                "update",
+                "list",
+                "create"
+            ]
+        },
+        "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.Docker.Registry": {
-        "lib": "/var/packages/Docker/target/webapi/registry/SYNO.Docker.Registry.so",
-        "maxVersion": 1,
+        "lib": "/var/packages/ContainerManager/target/webapi/registry/SYNO.Docker.Registry.so",
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "search",
@@ -160,6 +193,21 @@
                 "set",
                 "using",
                 "delete"
+            ],
+            "2": [
+                "tags"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Docker.Utils": {
+        "lib": "/var/packages/ContainerManager/target/webapi/utils/SYNO.Docker.Utils.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "getAllShare"
             ]
         },
         "minVersion": 1,

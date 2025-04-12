@@ -1,0 +1,51 @@
+{
+    "SYNO.ShareLink.Action": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.ShareLink.Action.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "convert",
+                "upload",
+                "copy",
+                "remove",
+                "link_by_appid",
+                "list"
+            ],
+            "2": [
+                "upload",
+                "remove",
+                "link_by_appid",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.ShareLink.Download": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.ShareLink.Download.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "download"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.ShareLink.Manage": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.ShareLink.Manage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_config",
+                "set_config",
+                "get_quota"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

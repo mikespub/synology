@@ -1,0 +1,312 @@
+{
+    "SYNO.Cal.AuthForeign": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.AuthForeign.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "delete",
+                "list",
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.Cal": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.Cal.so",
+        "maxVersion": 5,
+        "methods": {
+            "1": [
+                "export",
+                "import",
+                "create",
+                "delete",
+                "list",
+                "get",
+                "set"
+            ],
+            "2": [
+                "create",
+                "list"
+            ],
+            "5": [
+                "create",
+                "set",
+                "delete",
+                "list",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.Chatbot": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.Chatbot.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "receive",
+                "send",
+                "cancel"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.Contact": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.Contact.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get_user_info",
+                "notify_update_contact",
+                "notify_reset_contact"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.Event": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.Event.so",
+        "maxVersion": 5,
+        "methods": {
+            "1": [
+                "create_by_ics",
+                "search",
+                "list",
+                "get",
+                "set",
+                "create",
+                "create_simple",
+                "delete",
+                "reply"
+            ],
+            "2": [
+                "set",
+                "set_attach",
+                "create",
+                "list",
+                "get"
+            ],
+            "3": [
+                "set",
+                "set_attach",
+                "create",
+                "list",
+                "get"
+            ],
+            "4": [
+                "list",
+                "get"
+            ],
+            "5": [
+                "create",
+                "set",
+                "subevent_set",
+                "invite_event_set",
+                "invite_subevent_set",
+                "delete",
+                "list",
+                "get",
+                "set_exdate",
+                "set_personal_property"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.InviteMail": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.InviteMail.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "reply"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.InviteMailInit": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.InviteMailInit.so",
+        "maxVersion": 5,
+        "methods": {
+            "1": [
+                "token",
+                "tokens"
+            ],
+            "5": [
+                "token",
+                "tokens"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.Proxy": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.Proxy.so",
+        "maxVersion": 5,
+        "methods": {
+            "1": [
+                "cal_list",
+                "task_create",
+                "task_create_ics",
+                "task_list",
+                "task_update"
+            ],
+            "5": [
+                "jitsi_list",
+                "jitsi",
+                "set_config",
+                "get_config"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.SendMail": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.SendMail.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "send_cancel"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.Setting": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.Setting.so",
+        "maxVersion": 5,
+        "methods": {
+            "1": [
+                "list",
+                "set",
+                "get"
+            ],
+            "2": [
+                "list",
+                "set",
+                "get"
+            ],
+            "5": [
+                "list",
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.Share.Priv": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.Share.Priv.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.Sharing": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.Sharing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.SyncUser": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.SyncUser.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "sync",
+                "convert_fake_email",
+                "check_convert_fake_email_status",
+                "has_converted_fake_email"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.Timezone": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.Timezone.so",
+        "maxVersion": 5,
+        "methods": {
+            "1": [
+                "list"
+            ],
+            "2": [
+                "list"
+            ],
+            "5": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.Todo": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.Todo.so",
+        "maxVersion": 5,
+        "methods": {
+            "1": [
+                "search",
+                "list",
+                "get",
+                "set",
+                "create",
+                "delete",
+                "set_order",
+                "list_count",
+                "count_todo",
+                "clean_complete"
+            ],
+            "5": [
+                "list",
+                "get",
+                "set",
+                "create",
+                "delete",
+                "count_todo"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Cal.UserAction": {
+        "lib": "/var/packages/Calendar/target/webapi/SYNO.Cal.UserAction.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

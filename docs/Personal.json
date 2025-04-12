@@ -13,6 +13,18 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.Personal.Application.Info.Local": {
+        "lib": "/var/packages/SynologyApplicationService/target/webapi/application/SYNO.Personal.Application.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.Personal.MailAccount": {
         "lib": "/var/packages/SynologyApplicationService/target/webapi/mail/SYNO.Personal.MailAccount.so",
         "maxVersion": 1,
@@ -148,7 +160,7 @@
     },
     "SYNO.Personal.Notification.Mobile": {
         "lib": "/var/packages/SynologyApplicationService/target/webapi/notification/SYNO.Personal.Notification.so",
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "stat",
@@ -156,6 +168,11 @@
                 "unpair"
             ],
             "2": [
+                "stat",
+                "pair",
+                "unpair"
+            ],
+            "3": [
                 "stat",
                 "pair",
                 "unpair"
@@ -209,7 +226,7 @@
     },
     "SYNO.Personal.Profile": {
         "lib": "/var/packages/SynologyApplicationService/target/webapi/profile/SYNO.Personal.Profile.so",
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "list",
@@ -220,6 +237,10 @@
             "2": [
                 "list",
                 "get"
+            ],
+            "3": [
+                "get",
+                "list"
             ]
         },
         "minVersion": 1,
@@ -228,12 +249,16 @@
     },
     "SYNO.Personal.Profile.Photo": {
         "lib": "/var/packages/SynologyApplicationService/target/webapi/profile/SYNO.Personal.Profile.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "get",
                 "delete",
                 "upload"
+            ],
+            "2": [
+                "get",
+                "get_encoded"
             ]
         },
         "minVersion": 1,

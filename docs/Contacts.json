@@ -1,0 +1,150 @@
+{
+    "SYNO.Contacts.Addressbook": {
+        "lib": "/var/packages/Contacts/target/webapi/SYNO.Contacts.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "copy_member",
+                "create",
+                "delete",
+                "export",
+                "get",
+                "import",
+                "import_preview",
+                "list",
+                "list_principal",
+                "move_member",
+                "set",
+                "set_addressbook_display",
+                "share_addressbook"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Contacts.AdminSetting": {
+        "lib": "/var/packages/Contacts/target/webapi/SYNO.Contacts.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "migrate",
+                "set",
+                "set_sharing"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Contacts.Contact": {
+        "lib": "/var/packages/Contacts/target/webapi/SYNO.Contacts.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "create",
+                "delete",
+                "export",
+                "get",
+                "get_photo",
+                "list",
+                "list_group",
+                "list_team_contact",
+                "set",
+                "toggle_group",
+                "toggle_member",
+                "toggle_person",
+                "update_usage_frequency"
+            ],
+            "2": [
+                "create",
+                "delete",
+                "export",
+                "get_photo",
+                "get",
+                "list",
+                "list_group",
+                "list_team_contact",
+                "set",
+                "toggle_group",
+                "toggle_member",
+                "toggle_person",
+                "update_usage_frequency"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Contacts.ExternalSource": {
+        "lib": "/var/packages/Contacts/target/webapi/SYNO.Contacts.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "create_carddav",
+                "get",
+                "list",
+                "refresh",
+                "set",
+                "set_carddav"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Contacts.Info": {
+        "lib": "/var/packages/Contacts/target/webapi/SYNO.Contacts.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "get_timezone"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Contacts.Label": {
+        "lib": "/var/packages/Contacts/target/webapi/SYNO.Contacts.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "add_member",
+                "create",
+                "delete",
+                "export",
+                "list",
+                "remove_member",
+                "set"
+            ],
+            "2": [
+                "add_member",
+                "create",
+                "delete",
+                "export",
+                "list",
+                "remove_member",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Contacts.OU": {
+        "lib": "/var/packages/Contacts/target/webapi/SYNO.Contacts.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}
