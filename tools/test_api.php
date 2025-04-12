@@ -57,7 +57,7 @@ foreach ($api_list as $root => $json) {
         $methods = $values['methods'][$version] ?? [];
         if (!$methods) {
             $version = $values['minVersion'];
-            $methods = $values['methods'][$version];
+            $methods = $values['methods'][$version] ?? [];
         }
         echo "\t$api_name\n";
         //$synology = ClientFactory::getClient($service, $api_host, $api_port, $api_http, $version);
@@ -106,6 +106,7 @@ foreach ($api_list as $root => $json) {
                         foreach ($validator->getErrors() as $error) {
                             printf("[%s] %s\n", $error['property'], $error['message']);
                         }
+                        echo "Schema: $schema_file\n";
                         exit;
                     }
                 }

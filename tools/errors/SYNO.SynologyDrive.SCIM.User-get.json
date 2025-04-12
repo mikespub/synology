@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": 101,
+        "message": "No parameter of API, method or version"
+    }
+}

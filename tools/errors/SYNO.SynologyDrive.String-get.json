@@ -1,0 +1,6 @@
+{
+    "error": {
+        "code": 104,
+        "message": "The requested version does not support the functionality"
+    }
+}
