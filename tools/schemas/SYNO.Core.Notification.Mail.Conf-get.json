@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_mail": {
+      "type": "boolean"
+    },
+    "enable_oauth": {
+      "type": "boolean"
+    },
+    "in_use": {
+      "type": "array"
+    },
+    "mail": {
+      "type": "array"
+    },
+    "send_welcome_mail": {
+      "type": "boolean"
+    },
+    "sender_mail": {
+      "type": "string"
+    },
+    "sender_name": {
+      "type": "string"
+    },
+    "smtp_auth": {
+      "type": "object",
+      "properties": {
+        "enable": {
+          "type": "boolean"
+        },
+        "user": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "enable",
+        "user"
+      ]
+    },
+    "smtp_info": {
+      "type": "object",
+      "properties": {
+        "port": {
+          "type": "integer"
+        },
+        "server": {
+          "type": "string"
+        },
+        "ssl": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "port",
+        "server",
+        "ssl"
+      ]
+    },
+    "subject_prefix": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "enable_mail",
+    "enable_oauth",
+    "in_use",
+    "mail",
+    "send_welcome_mail",
+    "sender_mail",
+    "sender_name",
+    "smtp_auth",
+    "smtp_info",
+    "subject_prefix"
+  ]
+}

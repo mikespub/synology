@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "sso_default_login": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "sso_default_login"
+  ]
+}

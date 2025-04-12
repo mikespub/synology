@@ -1,0 +1,388 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "AppPrivilege": {
+      "type": "object",
+      "properties": {
+        "SYNO.AFP": {
+          "type": "boolean"
+        },
+        "SYNO.Cal.Application": {
+          "type": "boolean"
+        },
+        "SYNO.Contacts.AppInstance": {
+          "type": "boolean"
+        },
+        "SYNO.Desktop": {
+          "type": "boolean"
+        },
+        "SYNO.FTP": {
+          "type": "boolean"
+        },
+        "SYNO.Finder.Application": {
+          "type": "boolean"
+        },
+        "SYNO.Foto.AppInstance": {
+          "type": "boolean"
+        },
+        "SYNO.Rsync": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.App.FileStation3.Instance": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.AudioStation.Application": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.BackupService.Instance": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.CSTN.Instance": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.DSCloudSync.Instance": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.DSCloudSync.TrayApp": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.DownloadStation.Application": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.Drive.Application": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.MailPlusServer.Instance": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.MailServer.Instance": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.NoteStation.Application": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.SMBService.AppPrivilege.Instance": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.SurveillanceStation": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.VideoStation.AppInstance": {
+          "type": "boolean"
+        },
+        "SYNO.SDS.Virtualization.Application": {
+          "type": "boolean"
+        },
+        "SYNO.SDS._ThirdParty.App.ddnsupdater2": {
+          "type": "boolean"
+        },
+        "SYNO.SDS._ThirdParty.App.ipkgui": {
+          "type": "boolean"
+        },
+        "SYNO.SFTP": {
+          "type": "boolean"
+        },
+        "SYNO.TextEditor.Application": {
+          "type": "boolean"
+        },
+        "SYNO.WebDav": {
+          "type": "boolean"
+        },
+        "com.synocommunity.packages.bicbucstriim": {
+          "type": "boolean"
+        },
+        "com.synocommunity.packages.cops": {
+          "type": "boolean"
+        },
+        "com.synocommunity.packages.couchpotatoserver-custom": {
+          "type": "boolean"
+        },
+        "com.synocommunity.packages.sickbeard-custom": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "SYNO.AFP",
+        "SYNO.Cal.Application",
+        "SYNO.Contacts.AppInstance",
+        "SYNO.Desktop",
+        "SYNO.FTP",
+        "SYNO.Finder.Application",
+        "SYNO.Foto.AppInstance",
+        "SYNO.Rsync",
+        "SYNO.SDS.App.FileStation3.Instance",
+        "SYNO.SDS.AudioStation.Application",
+        "SYNO.SDS.BackupService.Instance",
+        "SYNO.SDS.CSTN.Instance",
+        "SYNO.SDS.DSCloudSync.Instance",
+        "SYNO.SDS.DSCloudSync.TrayApp",
+        "SYNO.SDS.DownloadStation.Application",
+        "SYNO.SDS.Drive.Application",
+        "SYNO.SDS.MailPlusServer.Instance",
+        "SYNO.SDS.MailServer.Instance",
+        "SYNO.SDS.NoteStation.Application",
+        "SYNO.SDS.SMBService.AppPrivilege.Instance",
+        "SYNO.SDS.SurveillanceStation",
+        "SYNO.SDS.VideoStation.AppInstance",
+        "SYNO.SDS.Virtualization.Application",
+        "SYNO.SDS._ThirdParty.App.ddnsupdater2",
+        "SYNO.SDS._ThirdParty.App.ipkgui",
+        "SYNO.SFTP",
+        "SYNO.TextEditor.Application",
+        "SYNO.WebDav",
+        "com.synocommunity.packages.bicbucstriim",
+        "com.synocommunity.packages.cops",
+        "com.synocommunity.packages.couchpotatoserver-custom",
+        "com.synocommunity.packages.sickbeard-custom"
+      ]
+    },
+    "ServiceStatus": {
+      "type": "object"
+    },
+    "Session": {
+      "type": "object",
+      "properties": {
+        "AdvControlPanel": {
+          "type": "boolean"
+        },
+        "allow_stay_signed_in_option": {
+          "type": "string"
+        },
+        "allow_trust_device_2fa_option": {
+          "type": "string"
+        },
+        "authType": {
+          "type": "string"
+        },
+        "boot_done": {
+          "type": "boolean"
+        },
+        "brm_enable": {
+          "type": "string"
+        },
+        "builddate": {
+          "type": "string"
+        },
+        "buildphase": {
+          "type": "string"
+        },
+        "cas_name": {
+          "type": "string"
+        },
+        "cas_service_ids": {
+          "type": "string"
+        },
+        "cas_sso_enable": {
+          "type": "boolean"
+        },
+        "configured": {
+          "type": "boolean"
+        },
+        "custom_login_title": {
+          "type": "string"
+        },
+        "date_format": {
+          "type": "string"
+        },
+        "diskless": {
+          "type": "boolean"
+        },
+        "domainUser": {
+          "type": "string"
+        },
+        "dsm_http_port": {
+          "type": "integer"
+        },
+        "dsm_https_port": {
+          "type": "integer"
+        },
+        "dsm_timeout": {
+          "type": "integer"
+        },
+        "enable_http_negotiate": {
+          "type": "boolean"
+        },
+        "enable_syno_token": {
+          "type": "string"
+        },
+        "fullversion": {
+          "type": "string"
+        },
+        "gpo_enable_java": {
+          "type": "string"
+        },
+        "hostname": {
+          "type": "string"
+        },
+        "ip_country": {
+          "type": "string"
+        },
+        "isLogined": {
+          "type": "boolean"
+        },
+        "isMobile": {
+          "type": "boolean"
+        },
+        "isMobileDevice": {
+          "type": "boolean"
+        },
+        "is_admin": {
+          "type": "boolean"
+        },
+        "is_secure": {
+          "type": "boolean"
+        },
+        "is_system_recovering": {
+          "type": "boolean"
+        },
+        "is_system_recovering_type": {
+          "type": "string"
+        },
+        "is_upgrading": {
+          "type": "boolean"
+        },
+        "is_volume_unlock": {
+          "type": "boolean"
+        },
+        "join_dsm_cms": {
+          "type": "boolean"
+        },
+        "lang": {
+          "type": "string"
+        },
+        "majorversion": {
+          "type": "string"
+        },
+        "minorversion": {
+          "type": "string"
+        },
+        "oidc_sso_enable": {
+          "type": "boolean"
+        },
+        "productversion": {
+          "type": "string"
+        },
+        "promote_ew": {
+          "type": "boolean"
+        },
+        "public_access": {
+          "type": "boolean"
+        },
+        "remove_banner": {
+          "type": "string"
+        },
+        "saml_name": {
+          "type": "string"
+        },
+        "saml_sso_acs": {
+          "type": "string"
+        },
+        "saml_sso_enable": {
+          "type": "boolean"
+        },
+        "smallfixnumber": {
+          "type": "string"
+        },
+        "sso_appid": {
+          "type": "string"
+        },
+        "sso_default_login": {
+          "type": "boolean"
+        },
+        "sso_name": {
+          "type": "string"
+        },
+        "sso_server": {
+          "type": "string"
+        },
+        "sso_support": {
+          "type": "boolean"
+        },
+        "sys_lang": {
+          "type": "string"
+        },
+        "theme_cls": {
+          "type": "string"
+        },
+        "time_format": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "user": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "AdvControlPanel",
+        "allow_stay_signed_in_option",
+        "allow_trust_device_2fa_option",
+        "authType",
+        "boot_done",
+        "brm_enable",
+        "builddate",
+        "buildphase",
+        "cas_name",
+        "cas_service_ids",
+        "cas_sso_enable",
+        "configured",
+        "custom_login_title",
+        "date_format",
+        "diskless",
+        "domainUser",
+        "dsm_http_port",
+        "dsm_https_port",
+        "dsm_timeout",
+        "enable_http_negotiate",
+        "enable_syno_token",
+        "fullversion",
+        "gpo_enable_java",
+        "hostname",
+        "ip_country",
+        "isLogined",
+        "isMobile",
+        "isMobileDevice",
+        "is_admin",
+        "is_secure",
+        "is_system_recovering",
+        "is_system_recovering_type",
+        "is_upgrading",
+        "is_volume_unlock",
+        "join_dsm_cms",
+        "lang",
+        "majorversion",
+        "minorversion",
+        "oidc_sso_enable",
+        "productversion",
+        "promote_ew",
+        "public_access",
+        "remove_banner",
+        "saml_name",
+        "saml_sso_acs",
+        "saml_sso_enable",
+        "smallfixnumber",
+        "sso_appid",
+        "sso_default_login",
+        "sso_name",
+        "sso_server",
+        "sso_support",
+        "sys_lang",
+        "theme_cls",
+        "time_format",
+        "timezone",
+        "user",
+        "version"
+      ]
+    }
+  },
+  "required": [
+    "AppPrivilege",
+    "ServiceStatus",
+    "Session"
+  ]
+}

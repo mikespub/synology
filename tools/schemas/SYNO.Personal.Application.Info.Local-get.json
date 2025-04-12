@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "applications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "appname": {
+            "type": "string"
+          },
+          "badge": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "launch_url": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "appname",
+          "badge",
+          "description",
+          "id",
+          "launch_url",
+          "name",
+          "type"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "applications",
+    "total"
+  ]
+}

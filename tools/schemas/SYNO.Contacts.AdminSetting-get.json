@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "bound_domain_name": {
+      "type": "string"
+    },
+    "bound_domain_type": {
+      "type": "string"
+    },
+    "dsm_domain_name": {
+      "type": "string"
+    },
+    "dsm_domain_type": {
+      "type": "string"
+    },
+    "is_migrating": {
+      "type": "boolean"
+    },
+    "migration": {
+      "type": "object",
+      "properties": {
+        "is_mailclient_with_data": {
+          "type": "boolean"
+        },
+        "last_migration_end_time": {
+          "type": "integer"
+        },
+        "migration_status": {
+          "type": "integer"
+        },
+        "not_migrated_count": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "is_mailclient_with_data",
+        "last_migration_end_time",
+        "migration_status",
+        "not_migrated_count"
+      ]
+    }
+  },
+  "required": [
+    "bound_domain_name",
+    "bound_domain_type",
+    "dsm_domain_name",
+    "dsm_domain_type",
+    "is_migrating",
+    "migration"
+  ]
+}

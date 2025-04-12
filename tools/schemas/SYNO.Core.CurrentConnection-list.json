@@ -13,7 +13,25 @@
           "descr": {
             "type": "string"
           },
+          "did": {
+            "type": "string"
+          },
+          "first_login_time": {
+            "type": "string"
+          },
           "from": {
+            "type": "string"
+          },
+          "is_amfa": {
+            "type": "boolean"
+          },
+          "is_current_connected": {
+            "type": "boolean"
+          },
+          "is_otp_trusted": {
+            "type": "boolean"
+          },
+          "location": {
             "type": "string"
           },
           "pid": {
@@ -28,6 +46,9 @@
           "type": {
             "type": "string"
           },
+          "user_agent": {
+            "type": "string"
+          },
           "user_can_be_disabled": {
             "type": "boolean"
           },
@@ -38,11 +59,18 @@
         "required": [
           "can_be_kicked",
           "descr",
+          "did",
+          "first_login_time",
           "from",
+          "is_amfa",
+          "is_current_connected",
+          "is_otp_trusted",
+          "location",
           "pid",
           "protocol",
           "time",
           "type",
+          "user_agent",
           "user_can_be_disabled",
           "who"
         ]

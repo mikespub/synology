@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "gids": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "is_manager": {
+      "type": "boolean"
+    },
+    "is_user_event_enabled": {
+      "type": "boolean"
+    },
+    "mobile_compatibility": {
+      "type": "object",
+      "properties": {
+        "major": {
+          "type": "string"
+        },
+        "minor": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "major",
+        "minor"
+      ]
+    },
+    "schema_doc": {
+      "type": "integer"
+    },
+    "schema_mobile": {
+      "type": "integer"
+    },
+    "schema_sheet": {
+      "type": "integer"
+    },
+    "schema_slide": {
+      "type": "integer"
+    },
+    "uid": {
+      "type": "integer"
+    },
+    "username": {
+      "type": "string"
+    },
+    "version": {
+      "type": "object",
+      "properties": {
+        "build": {
+          "type": "string"
+        },
+        "hotfix": {
+          "type": "string"
+        },
+        "major": {
+          "type": "string"
+        },
+        "minor": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "build",
+        "hotfix",
+        "major",
+        "minor"
+      ]
+    }
+  },
+  "required": [
+    "gids",
+    "is_manager",
+    "is_user_event_enabled",
+    "mobile_compatibility",
+    "schema_doc",
+    "schema_mobile",
+    "schema_sheet",
+    "schema_slide",
+    "uid",
+    "username",
+    "version"
+  ]
+}

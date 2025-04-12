@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enabled_count": {
+      "type": "integer"
+    },
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "enabled",
+          "id",
+          "name"
+        ]
+      }
+    },
+    "offset": {
+      "type": "integer"
+    },
+    "quota": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "enabled_count",
+    "list",
+    "offset",
+    "quota",
+    "total"
+  ]
+}

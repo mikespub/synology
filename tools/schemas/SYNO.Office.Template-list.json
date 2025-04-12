@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "capabilities": {
+            "type": "object",
+            "properties": {
+              "can_download": {
+                "type": "boolean"
+              },
+              "can_preview": {
+                "type": "boolean"
+              },
+              "can_read": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "can_download",
+              "can_preview",
+              "can_read"
+            ]
+          },
+          "category": {
+            "type": "string"
+          },
+          "ctime": {
+            "type": "integer"
+          },
+          "encrypt": {
+            "type": "boolean"
+          },
+          "is_template": {
+            "type": "boolean"
+          },
+          "mtime": {
+            "type": "integer"
+          },
+          "ntype": {
+            "type": "string"
+          },
+          "object_id": {
+            "type": "string"
+          },
+          "perm": {
+            "type": "string"
+          },
+          "system": {
+            "type": "boolean"
+          },
+          "title": {
+            "type": "string"
+          },
+          "ver": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "capabilities",
+          "category",
+          "ctime",
+          "encrypt",
+          "is_template",
+          "mtime",
+          "ntype",
+          "object_id",
+          "perm",
+          "system",
+          "title",
+          "ver"
+        ]
+      }
+    },
+    "offset": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "items",
+    "offset",
+    "total"
+  ]
+}

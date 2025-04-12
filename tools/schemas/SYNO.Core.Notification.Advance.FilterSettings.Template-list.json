@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "templates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "config": {
+            "type": "object",
+            "properties": {
+              "default_enabled_rule_level": {
+                "type": "string"
+              },
+              "default_type": {
+                "type": "string"
+              },
+              "is_default": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "default_enabled_rule_level",
+              "default_type",
+              "is_default"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "template_id": {
+            "type": "integer"
+          },
+          "used_by": {
+            "type": "array"
+          }
+        },
+        "required": [
+          "config",
+          "name",
+          "template_id",
+          "used_by"
+        ]
+      }
+    }
+  },
+  "required": [
+    "templates"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "absolute_path": {
+            "type": "string"
+          },
+          "file_type": {
+            "type": "integer"
+          },
+          "is_removed": {
+            "type": "boolean"
+          },
+          "is_share": {
+            "type": "boolean"
+          },
+          "mtime": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "node_id": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "ver_cnt": {
+            "type": "string"
+          },
+          "view_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "absolute_path",
+          "file_type",
+          "is_removed",
+          "is_share",
+          "mtime",
+          "name",
+          "node_id",
+          "path",
+          "ver_cnt",
+          "view_id"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "items",
+    "total"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "share_mode": {
+      "type": "string"
+    },
+    "vol_path": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "share_mode",
+    "vol_path"
+  ]
+}

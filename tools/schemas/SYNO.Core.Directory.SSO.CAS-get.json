@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "cas_allow_local_user": {
+      "type": "boolean"
+    },
+    "cas_auth_url": {
+      "type": "string"
+    },
+    "cas_name": {
+      "type": "string"
+    },
+    "cas_service_ids": {
+      "type": "string"
+    },
+    "cas_validate_url": {
+      "type": "string"
+    },
+    "sso_cas_enable": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "cas_allow_local_user",
+    "cas_auth_url",
+    "cas_name",
+    "cas_service_ids",
+    "cas_validate_url",
+    "sso_cas_enable"
+  ]
+}

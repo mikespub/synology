@@ -7,26 +7,26 @@
       "items": {
         "type": "object",
         "properties": {
-          "display_name": {
-            "type": "string"
-          },
-          "enable_redirect": {
-            "type": "boolean"
-          },
-          "id": {
-            "type": "string"
-          },
           "acl": {
             "type": "null"
           },
           "alias": {
             "type": "string"
           },
+          "display_name": {
+            "type": "string"
+          },
+          "enable_redirect": {
+            "type": "boolean"
+          },
           "fqdn": {
             "type": "null"
           },
           "hsts": {
             "type": "boolean"
+          },
+          "id": {
+            "type": "string"
           }
         },
         "required": [

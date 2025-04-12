@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "addressbook": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "member_count": {
+            "type": "integer"
+          },
+          "mode": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "owned_shared": {
+            "type": "boolean"
+          },
+          "shared_from": {
+            "type": "string"
+          },
+          "shared_with": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "integer"
+          },
+          "uri": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "member_count",
+          "mode",
+          "name",
+          "owned_shared",
+          "shared_from",
+          "shared_with",
+          "status",
+          "type",
+          "uri"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "addressbook",
+    "total"
+  ]
+}

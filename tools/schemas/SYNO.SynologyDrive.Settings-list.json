@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "default_displayname": {
+      "type": "string"
+    },
+    "default_enable_full_content_indexing": {
+      "type": "boolean"
+    },
+    "enable_c2share_offload": {
+      "type": "boolean"
+    },
+    "enable_normal_user_sharing": {
+      "type": "boolean"
+    },
+    "enable_public_sharing": {
+      "type": "boolean"
+    },
+    "enable_sharing_link_customization": {
+      "type": "boolean"
+    },
+    "force_https_sharing_link": {
+      "type": "boolean"
+    },
+    "global_hide_prompt_toast": {
+      "type": "boolean"
+    },
+    "sharing_force_expiration": {
+      "type": "integer"
+    },
+    "sharing_force_password": {
+      "type": "boolean"
+    },
+    "sharing_force_selected": {
+      "type": "boolean"
+    },
+    "sharing_force_selected_groups": {
+      "type": "array"
+    },
+    "sharing_force_selected_users": {
+      "type": "array"
+    },
+    "sharing_internal_level": {
+      "type": "string"
+    },
+    "sharing_level": {
+      "type": "string"
+    },
+    "sharing_link_by_email": {
+      "type": "boolean"
+    },
+    "sharing_link_customization": {
+      "type": "string"
+    },
+    "sharing_link_fully_custom_url": {
+      "type": "string"
+    },
+    "sharing_link_options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "option_id": {
+            "type": "string"
+          },
+          "valid": {
+            "type": "boolean"
+          },
+          "preview": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "option_id",
+          "valid"
+        ]
+      }
+    },
+    "sharing_permission": {
+      "type": "object",
+      "properties": {
+        "internal_link_sharing": {
+          "type": "boolean"
+        },
+        "invite_sharing": {
+          "type": "boolean"
+        },
+        "public_force_expiration_days": {
+          "type": "integer"
+        },
+        "public_force_password": {
+          "type": "boolean"
+        },
+        "public_sharing": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "internal_link_sharing",
+        "invite_sharing",
+        "public_force_expiration_days",
+        "public_force_password",
+        "public_sharing"
+      ]
+    }
+  },
+  "required": [
+    "default_displayname",
+    "default_enable_full_content_indexing",
+    "enable_c2share_offload",
+    "enable_normal_user_sharing",
+    "enable_public_sharing",
+    "enable_sharing_link_customization",
+    "force_https_sharing_link",
+    "global_hide_prompt_toast",
+    "sharing_force_expiration",
+    "sharing_force_password",
+    "sharing_force_selected",
+    "sharing_force_selected_groups",
+    "sharing_force_selected_users",
+    "sharing_internal_level",
+    "sharing_level",
+    "sharing_link_by_email",
+    "sharing_link_customization",
+    "sharing_link_fully_custom_url",
+    "sharing_link_options",
+    "sharing_permission"
+  ]
+}

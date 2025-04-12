@@ -1,0 +1,300 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "Andale mono": {
+      "type": "object"
+    },
+    "Angsana New": {
+      "type": "object"
+    },
+    "Arial": {
+      "type": "object"
+    },
+    "Arial Black": {
+      "type": "object"
+    },
+    "Book Antiqua": {
+      "type": "object"
+    },
+    "Browallia New": {
+      "type": "object"
+    },
+    "Calibri": {
+      "type": "object"
+    },
+    "Cambria": {
+      "type": "object"
+    },
+    "Comic Sans MS": {
+      "type": "object"
+    },
+    "Consolas": {
+      "type": "object"
+    },
+    "Cordia New": {
+      "type": "object"
+    },
+    "Courier": {
+      "type": "object"
+    },
+    "Courier New": {
+      "type": "object"
+    },
+    "Dotum": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "Georgia": {
+      "type": "object"
+    },
+    "Gulim": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "Helvetica": {
+      "type": "object"
+    },
+    "Helvetica     Neue": {
+      "type": "object"
+    },
+    "Impact": {
+      "type": "object"
+    },
+    "KaiTi": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "Lucida Console": {
+      "type": "object"
+    },
+    "Lucida Sans Unicode": {
+      "type": "object"
+    },
+    "Malgun Gothic": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "Meiryo": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "Microsoft JhengHei": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "Microsoft Yahei": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "MingLiu": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "NSimSun": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "PMingLiu": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "Roman": {
+      "type": "object"
+    },
+    "SimHei": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "SimSun": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "TH Sarabun New": {
+      "type": "object"
+    },
+    "Tahoma": {
+      "type": "object"
+    },
+    "Terminal": {
+      "type": "object"
+    },
+    "Times New Roman": {
+      "type": "object"
+    },
+    "Trebuchet MS": {
+      "type": "object"
+    },
+    "Verdana": {
+      "type": "object"
+    },
+    "Yu Gothic": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "Yu Mincho": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "YuKyokasho": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "display"
+      ]
+    },
+    "\u6a19\u6977\u9ad4": {
+      "type": "object"
+    },
+    "\uad81\uc11c\uccb4": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "Andale mono",
+    "Angsana New",
+    "Arial",
+    "Arial Black",
+    "Book Antiqua",
+    "Browallia New",
+    "Calibri",
+    "Cambria",
+    "Comic Sans MS",
+    "Consolas",
+    "Cordia New",
+    "Courier",
+    "Courier New",
+    "Dotum",
+    "Georgia",
+    "Gulim",
+    "Helvetica",
+    "Helvetica     Neue",
+    "Impact",
+    "KaiTi",
+    "Lucida Console",
+    "Lucida Sans Unicode",
+    "Malgun Gothic",
+    "Meiryo",
+    "Microsoft JhengHei",
+    "Microsoft Yahei",
+    "MingLiu",
+    "NSimSun",
+    "PMingLiu",
+    "Roman",
+    "SimHei",
+    "SimSun",
+    "TH Sarabun New",
+    "Tahoma",
+    "Terminal",
+    "Times New Roman",
+    "Trebuchet MS",
+    "Verdana",
+    "Yu Gothic",
+    "Yu Mincho",
+    "YuKyokasho",
+    "\u6a19\u6977\u9ad4",
+    "\uad81\uc11c\uccb4"
+  ]
+}

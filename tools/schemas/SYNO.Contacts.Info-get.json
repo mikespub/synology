@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "is_migrating": {
+      "type": "boolean"
+    },
+    "is_sharing_addressbook_prohibited": {
+      "type": "boolean"
+    },
+    "principal": {
+      "type": "object",
+      "properties": {
+        "account_name": {
+          "type": "string"
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "type": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "account_name",
+        "display_name",
+        "id",
+        "type"
+      ]
+    }
+  },
+  "required": [
+    "is_migrating",
+    "is_sharing_addressbook_prohibited",
+    "principal"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "All": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "appid": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "tag": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "warnPercent": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "appid",
+          "format",
+          "group",
+          "level",
+          "name",
+          "source",
+          "tag",
+          "title",
+          "warnPercent"
+        ]
+      }
+    }
+  },
+  "required": [
+    "All"
+  ]
+}

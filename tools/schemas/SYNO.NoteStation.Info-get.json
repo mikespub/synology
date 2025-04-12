@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "allow_share": {
+      "type": "boolean"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "is_admin": {
+      "type": "boolean"
+    },
+    "search_precisely": {
+      "type": "boolean"
+    },
+    "uid": {
+      "type": "integer"
+    },
+    "username": {
+      "type": "string"
+    },
+    "version": {
+      "type": "object",
+      "properties": {
+        "build": {
+          "type": "string"
+        },
+        "hotfix": {
+          "type": "string"
+        },
+        "major": {
+          "type": "string"
+        },
+        "minor": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "build",
+        "hotfix",
+        "major",
+        "minor"
+      ]
+    }
+  },
+  "required": [
+    "allow_share",
+    "hash",
+    "is_admin",
+    "search_precisely",
+    "uid",
+    "username",
+    "version"
+  ]
+}

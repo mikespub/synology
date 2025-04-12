@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "advanced_feature_activated": {
+      "type": "boolean"
+    },
+    "del_cnt": {
+      "type": "integer"
+    },
+    "del_span": {
+      "type": "integer"
+    },
+    "display_index_home_promotion": {
+      "type": "boolean"
+    },
+    "display_vmtouch_option": {
+      "type": "boolean"
+    },
+    "ds_id": {
+      "type": "string"
+    },
+    "enable_non_admin_user_sync": {
+      "type": "boolean"
+    },
+    "enable_vmtouch": {
+      "type": "boolean"
+    },
+    "support_moving_repository": {
+      "type": "boolean"
+    },
+    "use_del_by_cnt": {
+      "type": "boolean"
+    },
+    "use_del_by_span": {
+      "type": "boolean"
+    },
+    "vmtouch_reserve_mem": {
+      "type": "integer"
+    },
+    "volume_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "desc": {
+            "type": "string"
+          },
+          "display": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "mount_point": {
+            "type": "string"
+          },
+          "size_free": {
+            "type": "string"
+          },
+          "size_total": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "desc",
+          "display",
+          "id",
+          "mount_point",
+          "size_free",
+          "size_total",
+          "value"
+        ]
+      }
+    },
+    "volume_select": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "advanced_feature_activated",
+    "del_cnt",
+    "del_span",
+    "display_index_home_promotion",
+    "display_vmtouch_option",
+    "ds_id",
+    "enable_non_admin_user_sync",
+    "enable_vmtouch",
+    "support_moving_repository",
+    "use_del_by_cnt",
+    "use_del_by_span",
+    "vmtouch_reserve_mem",
+    "volume_list",
+    "volume_select"
+  ]
+}

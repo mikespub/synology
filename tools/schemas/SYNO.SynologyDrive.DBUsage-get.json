@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "database_size": {
+      "type": "integer"
+    },
+    "office_size": {
+      "type": "integer"
+    },
+    "repo_size": {
+      "type": "integer"
+    },
+    "update_time": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "database_size",
+    "office_size",
+    "repo_size",
+    "update_time"
+  ]
+}

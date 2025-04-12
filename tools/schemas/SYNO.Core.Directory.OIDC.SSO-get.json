@@ -2,6 +2,9 @@
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "properties": {
+    "oidc_allow_local_user": {
+      "type": "boolean"
+    },
     "oidc_authorization_endpoint": {
       "type": "string"
     },
@@ -31,6 +34,7 @@
     }
   },
   "required": [
+    "oidc_allow_local_user",
     "oidc_authorization_endpoint",
     "oidc_client_id",
     "oidc_client_secret",

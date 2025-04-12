@@ -1,6 +1,0 @@
-{
-    "error": {
-        "code": 119,
-        "message": "Invalid session (starts with number)"
-    }
-}

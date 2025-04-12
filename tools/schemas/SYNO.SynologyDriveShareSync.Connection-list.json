@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "conn": {
+      "type": "array"
+    },
+    "is_pause": {
+      "type": "boolean"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "conn",
+    "is_pause",
+    "total"
+  ]
+}

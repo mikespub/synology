@@ -2,49 +2,6 @@
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "properties": {
-    "ame_status": {
-      "type": "object",
-      "properties": {
-        "ame_major_version": {
-          "type": "integer"
-        },
-        "has_aac": {
-          "type": "boolean"
-        },
-        "has_hevc": {
-          "type": "boolean"
-        },
-        "has_license": {
-          "type": "boolean"
-        },
-        "is_aac_activated": {
-          "type": "boolean"
-        },
-        "is_ame_broken": {
-          "type": "boolean"
-        },
-        "is_ame_install": {
-          "type": "boolean"
-        },
-        "is_ame_v2": {
-          "type": "boolean"
-        },
-        "is_ame_v3": {
-          "type": "boolean"
-        }
-      },
-      "required": [
-        "ame_major_version",
-        "has_aac",
-        "has_hevc",
-        "has_license",
-        "is_aac_activated",
-        "is_ame_broken",
-        "is_ame_install",
-        "is_ame_v2",
-        "is_ame_v3"
-      ]
-    },
     "is_dtv_enabled": {
       "type": "boolean"
     },
@@ -52,12 +9,6 @@
       "type": "boolean"
     },
     "is_subtitle_search_enabled": {
-      "type": "boolean"
-    },
-    "need_aac": {
-      "type": "boolean"
-    },
-    "need_hevc": {
       "type": "boolean"
     },
     "privilege": {
@@ -128,12 +79,9 @@
     }
   },
   "required": [
-    "ame_status",
     "is_dtv_enabled",
     "is_manager",
     "is_subtitle_search_enabled",
-    "need_aac",
-    "need_hevc",
     "privilege",
     "timezone",
     "timezone_offset",

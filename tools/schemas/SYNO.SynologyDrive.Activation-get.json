@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "activated": {
+      "type": "boolean"
+    },
+    "activation_time": {
+      "type": "integer"
+    },
+    "serial_number": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "activated",
+    "activation_time",
+    "serial_number"
+  ]
+}

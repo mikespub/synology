@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "temp": {
+            "type": "string"
+          },
+          "tzid": {
+            "type": "string"
+          },
+          "vtimezone": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "active",
+          "temp",
+          "tzid",
+          "vtimezone"
+        ]
+      }
+    }
+  },
+  "required": [
+    "list"
+  ]
+}

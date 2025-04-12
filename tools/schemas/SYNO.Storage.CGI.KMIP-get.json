@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "client_cert_info": {
+      "type": "null"
+    },
+    "client_enable": {
+      "type": "boolean"
+    },
+    "conn_success": {
+      "type": "boolean"
+    },
+    "conn_time": {
+      "type": "string"
+    },
+    "kmip_conn_server_desc": {
+      "type": "string"
+    },
+    "kmip_conn_server_port": {
+      "type": "string"
+    },
+    "kmip_db_loc": {
+      "type": "string"
+    },
+    "kmip_enabled": {
+      "type": "string"
+    },
+    "kmip_mode": {
+      "type": "string"
+    },
+    "kmip_server": {
+      "type": "string"
+    },
+    "kmip_server_port": {
+      "type": "string"
+    },
+    "server_cert_info": {
+      "type": "null"
+    },
+    "server_enable": {
+      "type": "boolean"
+    },
+    "support_kmip": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "client_cert_info",
+    "client_enable",
+    "conn_success",
+    "conn_time",
+    "kmip_conn_server_desc",
+    "kmip_conn_server_port",
+    "kmip_db_loc",
+    "kmip_enabled",
+    "kmip_mode",
+    "kmip_server",
+    "kmip_server_port",
+    "server_cert_info",
+    "server_enable",
+    "support_kmip"
+  ]
+}

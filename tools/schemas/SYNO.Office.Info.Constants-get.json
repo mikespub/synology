@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "sheet_max_cell_count": {
+      "type": "integer"
+    },
+    "sheet_pivot_table_enabled": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "sheet_max_cell_count",
+    "sheet_pivot_table_enabled"
+  ]
+}

@@ -7,11 +7,73 @@
       "items": {
         "type": "object",
         "properties": {
+          "State": {
+            "type": "object",
+            "properties": {
+              "Dead": {
+                "type": "boolean"
+              },
+              "Error": {
+                "type": "string"
+              },
+              "ExitCode": {
+                "type": "integer"
+              },
+              "FinishedAt": {
+                "type": "string"
+              },
+              "FinishedTs": {
+                "type": "integer"
+              },
+              "OOMKilled": {
+                "type": "boolean"
+              },
+              "Paused": {
+                "type": "boolean"
+              },
+              "Pid": {
+                "type": "integer"
+              },
+              "Restarting": {
+                "type": "boolean"
+              },
+              "Running": {
+                "type": "boolean"
+              },
+              "StartedAt": {
+                "type": "string"
+              },
+              "StartedTs": {
+                "type": "integer"
+              },
+              "Status": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "Dead",
+              "Error",
+              "ExitCode",
+              "FinishedAt",
+              "FinishedTs",
+              "OOMKilled",
+              "Paused",
+              "Pid",
+              "Restarting",
+              "Running",
+              "StartedAt",
+              "StartedTs",
+              "Status"
+            ]
+          },
           "cmd": {
             "type": "string"
           },
           "created": {
             "type": "integer"
+          },
+          "enable_service_portal": {
+            "type": "boolean"
           },
           "exporting": {
             "type": "boolean"
@@ -34,6 +96,9 @@
           "name": {
             "type": "string"
           },
+          "services": {
+            "type": "null"
+          },
           "status": {
             "type": "string"
           },
@@ -45,8 +110,10 @@
           }
         },
         "required": [
+          "State",
           "cmd",
           "created",
+          "enable_service_portal",
           "exporting",
           "finish_time",
           "id",
@@ -54,6 +121,7 @@
           "is_ddsm",
           "is_package",
           "name",
+          "services",
           "status",
           "up_status",
           "up_time"

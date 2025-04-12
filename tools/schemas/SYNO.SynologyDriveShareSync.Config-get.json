@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "conflict_policy": {
+      "type": "string"
+    },
+    "rename_conflict": {
+      "type": "boolean"
+    },
+    "repo_loc": {
+      "type": "string"
+    },
+    "synchronization_mode": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "conflict_policy",
+    "rename_conflict",
+    "repo_loc",
+    "synchronization_mode"
+  ]
+}

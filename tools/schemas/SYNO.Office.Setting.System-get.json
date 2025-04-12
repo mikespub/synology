@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "history_prune": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "history_prune"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "notebooks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "acl": {
+            "type": "object"
+          },
+          "archive": {
+            "type": "boolean"
+          },
+          "category": {
+            "type": "string"
+          },
+          "ctime": {
+            "type": "integer"
+          },
+          "individual_shared": {
+            "type": "boolean"
+          },
+          "items": {
+            "type": "array"
+          },
+          "link_id": {
+            "type": "string"
+          },
+          "mtime": {
+            "type": "integer"
+          },
+          "object_id": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "object",
+            "properties": {
+              "display_name": {
+                "type": "string"
+              },
+              "uid": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "display_name",
+              "uid"
+            ]
+          },
+          "perm": {
+            "type": "string"
+          },
+          "preset": {
+            "type": "boolean"
+          },
+          "stack": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "ver": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "acl",
+          "archive",
+          "category",
+          "ctime",
+          "individual_shared",
+          "items",
+          "link_id",
+          "mtime",
+          "object_id",
+          "owner",
+          "perm",
+          "preset",
+          "stack",
+          "title",
+          "ver"
+        ]
+      }
+    },
+    "offset": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "notebooks",
+    "offset",
+    "total"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "contact": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "additional": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "array"
+              }
+            },
+            "required": [
+              "label"
+            ]
+          },
+          "addressbook_id": {
+            "type": "integer"
+          },
+          "company": {
+            "type": "string"
+          },
+          "department": {
+            "type": "string"
+          },
+          "full_name": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "is_editable": {
+            "type": "boolean"
+          },
+          "is_hidden": {
+            "type": "boolean"
+          },
+          "photo": {
+            "type": "string"
+          },
+          "primary_mail": {
+            "type": "string"
+          },
+          "primary_tel": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "usage_frequency": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "additional",
+          "addressbook_id",
+          "company",
+          "department",
+          "full_name",
+          "id",
+          "is_editable",
+          "is_hidden",
+          "photo",
+          "primary_mail",
+          "primary_tel",
+          "title",
+          "usage_frequency"
+        ]
+      }
+    },
+    "offset": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "contact",
+    "offset"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "copy_delete_orig": {
+      "type": "boolean"
+    },
+    "font_size": {
+      "type": "string"
+    },
+    "inline_thumb": {
+      "type": "boolean"
+    },
+    "pointer_color": {
+      "type": "string"
+    },
+    "search_attachment": {
+      "type": "boolean"
+    },
+    "slide_theme": {
+      "type": "string"
+    },
+    "spell_check": {
+      "type": "boolean"
+    },
+    "todo_due_date_day": {
+      "type": "string"
+    },
+    "todo_export_info": {
+      "type": "string"
+    },
+    "todo_priority": {
+      "type": "integer"
+    },
+    "todo_purge": {
+      "type": "string"
+    },
+    "todo_reminder_offset": {
+      "type": "integer"
+    },
+    "todo_reminder_predefined": {
+      "type": "string"
+    },
+    "todo_reminder_unit": {
+      "type": "string"
+    },
+    "todo_reminder_value": {
+      "type": "integer"
+    },
+    "todo_show_badge": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "copy_delete_orig",
+    "font_size",
+    "inline_thumb",
+    "pointer_color",
+    "search_attachment",
+    "slide_theme",
+    "spell_check",
+    "todo_due_date_day",
+    "todo_export_info",
+    "todo_priority",
+    "todo_purge",
+    "todo_reminder_offset",
+    "todo_reminder_predefined",
+    "todo_reminder_unit",
+    "todo_reminder_value",
+    "todo_show_badge"
+  ]
+}

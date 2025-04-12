@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "saml_allow_local_user": {
+      "type": "boolean"
+    },
+    "saml_cert_detail": {
+      "type": "string"
+    },
+    "saml_idp_entity_id": {
+      "type": "string"
+    },
+    "saml_idp_signin_url": {
+      "type": "string"
+    },
+    "saml_name": {
+      "type": "string"
+    },
+    "saml_response_signature": {
+      "type": "string"
+    },
+    "saml_system_date": {
+      "type": "string"
+    },
+    "saml_valid_date": {
+      "type": "string"
+    },
+    "sso_saml_enable": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "saml_allow_local_user",
+    "saml_cert_detail",
+    "saml_idp_entity_id",
+    "saml_idp_signin_url",
+    "saml_name",
+    "saml_response_signature",
+    "saml_system_date",
+    "saml_valid_date",
+    "sso_saml_enable"
+  ]
+}

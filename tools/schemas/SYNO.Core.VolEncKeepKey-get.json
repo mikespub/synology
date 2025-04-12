@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "notify_vol_enc_keep_key": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "notify_vol_enc_keep_key"
+  ]
+}

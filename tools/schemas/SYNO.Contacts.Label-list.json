@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "color": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "member": {
+            "type": "array"
+          },
+          "member_count": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "color",
+          "id",
+          "member",
+          "member_count",
+          "name",
+          "type"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "label",
+    "total"
+  ]
+}

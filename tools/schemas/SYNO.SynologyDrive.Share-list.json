@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "disable_download": {
+            "type": "boolean"
+          },
+          "enable_watermark": {
+            "type": "boolean"
+          },
+          "force_watermark_download": {
+            "type": "boolean"
+          },
+          "rotate_cnt": {
+            "type": [
+              "integer",
+              "string"
+            ]
+          },
+          "rotate_days": {
+            "type": "integer"
+          },
+          "rotate_policy": {
+            "type": "string"
+          },
+          "share_enable": {
+            "type": "boolean"
+          },
+          "share_name": {
+            "type": "string"
+          },
+          "share_status": {
+            "type": "string"
+          },
+          "share_type": {
+            "type": "string"
+          },
+          "watermark_density": {
+            "type": "string"
+          },
+          "watermark_font": {
+            "type": "string"
+          },
+          "watermark_font_color": {
+            "type": "string"
+          },
+          "watermark_font_px_size": {
+            "type": [
+              "integer",
+              "string"
+            ]
+          },
+          "watermark_is_repeat": {
+            "type": "boolean"
+          },
+          "watermark_opacity_percent": {
+            "type": [
+              "integer",
+              "string"
+            ]
+          },
+          "watermark_rotate_degree": {
+            "type": "string"
+          },
+          "watermark_text": {
+            "type": "string"
+          },
+          "watermark_version": {
+            "type": [
+              "integer",
+              "string"
+            ]
+          }
+        },
+        "required": [
+          "disable_download",
+          "enable_watermark",
+          "force_watermark_download",
+          "rotate_cnt",
+          "rotate_days",
+          "rotate_policy",
+          "share_enable",
+          "share_name",
+          "share_status",
+          "share_type",
+          "watermark_density",
+          "watermark_font",
+          "watermark_font_color",
+          "watermark_font_px_size",
+          "watermark_is_repeat",
+          "watermark_opacity_percent",
+          "watermark_rotate_degree",
+          "watermark_text",
+          "watermark_version"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "items",
+    "total"
+  ]
+}

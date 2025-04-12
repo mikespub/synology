@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "default_locale": {
+      "type": "string"
+    },
+    "focus_mode": {
+      "type": "object"
+    },
+    "formatting_marks": {
+      "type": "object"
+    },
+    "formula_preview": {
+      "type": "boolean"
+    },
+    "hide_hint": {
+      "type": "object"
+    },
+    "preference_settings": {
+      "type": "object"
+    },
+    "ruler": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "default_locale",
+    "focus_mode",
+    "formatting_marks",
+    "formula_preview",
+    "hide_hint",
+    "preference_settings",
+    "ruler"
+  ]
+}

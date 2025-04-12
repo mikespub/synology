@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "app_folder_path": {
+      "type": "string"
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "app_folder_path": {
+            "type": "string"
+          },
+          "app_id": {
+            "type": "string"
+          },
+          "app_secret": {
+            "type": "string"
+          },
+          "namespace": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "app_folder_path",
+          "app_id",
+          "app_secret",
+          "namespace"
+        ]
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "app_folder_path": {
+            "type": "string"
+          },
+          "app_id": {
+            "type": "string"
+          },
+          "app_secret": {
+            "type": "string"
+          },
+          "namespace": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "app_folder_path",
+          "app_id",
+          "app_secret",
+          "namespace"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "app_folder_path",
+    "data",
+    "items",
+    "total"
+  ]
+}

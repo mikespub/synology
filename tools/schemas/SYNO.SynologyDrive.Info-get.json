@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "beta": {
+      "type": "boolean"
+    },
+    "displayname_result": {
+      "type": "string"
+    },
+    "ds_id": {
+      "type": "string"
+    },
+    "enable_mydrive_versioning": {
+      "type": "boolean"
+    },
+    "enable_non_admin_user_sync": {
+      "type": "boolean"
+    },
+    "has_ame": {
+      "type": "boolean"
+    },
+    "has_backup": {
+      "type": "boolean"
+    },
+    "is_home": {
+      "type": "boolean"
+    },
+    "is_manager": {
+      "type": "boolean"
+    },
+    "mobile_compatibility": {
+      "type": "object",
+      "properties": {
+        "major": {
+          "type": "string"
+        },
+        "minor": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "major",
+        "minor"
+      ]
+    },
+    "mydrive_keep_versions": {
+      "type": "integer"
+    },
+    "nickname": {
+      "type": "string"
+    },
+    "support_hevc": {
+      "type": "boolean"
+    },
+    "uid": {
+      "type": "integer"
+    },
+    "username": {
+      "type": "string"
+    },
+    "version": {
+      "type": "object",
+      "properties": {
+        "build": {
+          "type": "string"
+        },
+        "hotfix": {
+          "type": "string"
+        },
+        "major": {
+          "type": "string"
+        },
+        "minor": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "build",
+        "hotfix",
+        "major",
+        "minor"
+      ]
+    }
+  },
+  "required": [
+    "beta",
+    "displayname_result",
+    "ds_id",
+    "enable_mydrive_versioning",
+    "enable_non_admin_user_sync",
+    "has_ame",
+    "has_backup",
+    "is_home",
+    "is_manager",
+    "mobile_compatibility",
+    "mydrive_keep_versions",
+    "nickname",
+    "support_hevc",
+    "uid",
+    "username",
+    "version"
+  ]
+}
