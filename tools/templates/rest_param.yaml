@@ -1,0 +1,5 @@
+        - in: query
+          name: %name%
+          required: true
+          type: string
+          default: %value%

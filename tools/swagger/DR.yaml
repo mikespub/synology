@@ -168,6 +168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node/v1/test_sync_speed:
     get:
       tags:
@@ -185,6 +186,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node/v1/test_download_speed:
     get:
       tags:
@@ -202,6 +204,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node/v1/test_privilege:
     get:
       tags:
@@ -219,6 +222,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node/v1/test_connection:
     get:
       tags:
@@ -236,6 +240,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node/v1/reset:
     get:
       tags:
@@ -253,6 +258,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node/v1/check_and_reset:
     get:
       tags:
@@ -270,6 +276,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Credential/v1/create:
     get:
       tags:
@@ -287,6 +294,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Credential/v1/set:
     get:
       tags:
@@ -304,6 +312,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Credential/v1/get:
     get:
       tags:
@@ -321,6 +330,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Credential/v1/list:
     get:
       tags:
@@ -338,6 +348,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Credential/v1/relay:
     get:
       tags:
@@ -355,6 +366,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Credential/v1/reverse_create:
     get:
       tags:
@@ -372,6 +384,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Credential/v1/test_create:
     get:
       tags:
@@ -389,6 +402,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Credential/v1/test_reverse_create:
     get:
       tags:
@@ -406,6 +420,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Credential/v1/test_set:
     get:
       tags:
@@ -423,6 +438,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Credential/v1/temp_create:
     get:
       tags:
@@ -440,6 +456,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Credential/v1/temp_reverse_create:
     get:
       tags:
@@ -457,6 +474,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Credential/v1/delete:
     get:
       tags:
@@ -474,6 +492,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.DR.Node.Session/v2/create:
     get:
       tags:
@@ -491,3 +510,4 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:

@@ -168,6 +168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/List:
     get:
       tags:
@@ -185,6 +186,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/Enable:
     get:
       tags:
@@ -202,6 +204,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/Disable:
     get:
       tags:
@@ -219,6 +222,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/ListHistory:
     get:
       tags:
@@ -236,6 +240,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/DeleteHistory:
     get:
       tags:
@@ -253,6 +258,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/SendSsdCmd:
     get:
       tags:
@@ -270,6 +276,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/SendActruledCmd:
     get:
       tags:
@@ -287,6 +294,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/DownloadHistory:
     get:
       tags:
@@ -304,6 +312,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/LoadAdvanced:
     get:
       tags:
@@ -321,6 +330,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/SaveAdvanced:
     get:
       tags:
@@ -338,6 +348,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/SendData2Player:
     get:
       tags:
@@ -355,6 +366,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/SendData2VS:
     get:
       tags:
@@ -372,6 +384,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/GetDeviceDIStatus:
     get:
       tags:
@@ -389,6 +402,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/ListViewerTriggerRule:
     get:
       tags:
@@ -406,6 +420,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/TriggerViewerRule:
     get:
       tags:
@@ -423,6 +438,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ActionRule/v3/GetSampleIngredient:
     get:
       tags:
@@ -440,6 +456,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AddOns/v2/GetUpdateInfo:
     get:
       tags:
@@ -457,6 +474,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AddOns/v2/GetPkgInfo:
     get:
       tags:
@@ -474,6 +492,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/Enum:
     get:
       tags:
@@ -491,6 +510,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/RecServerEnum:
     get:
       tags:
@@ -508,6 +528,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/Lock:
     get:
       tags:
@@ -525,6 +546,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/Unlock:
     get:
       tags:
@@ -542,6 +564,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/Clear:
     get:
       tags:
@@ -559,6 +582,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/ClearSelected:
     get:
       tags:
@@ -576,6 +600,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/RecServerClear:
     get:
       tags:
@@ -593,6 +618,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/Trigger:
     get:
       tags:
@@ -610,6 +636,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/EventFlushHeader:
     get:
       tags:
@@ -627,6 +654,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/EventCount:
     get:
       tags:
@@ -644,6 +672,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/RecServerEventCount:
     get:
       tags:
@@ -661,6 +690,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/MarkAsViewed:
     get:
       tags:
@@ -678,6 +708,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert/v1/AllDeviceAlert:
     get:
       tags:
@@ -695,6 +726,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert.Setting/v1/SaveCamSetting:
     get:
       tags:
@@ -712,6 +744,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert.Setting/v1/GetCamSetting:
     get:
       tags:
@@ -729,6 +762,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert.Setting/v1/GetAdvSetting:
     get:
       tags:
@@ -746,6 +780,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert.Setting/v1/SetAdvSetting:
     get:
       tags:
@@ -763,6 +798,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Alert.Setting/v1/GetCamExtSetting:
     get:
       tags:
@@ -780,6 +816,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Analytics.Setting/v1/Save:
     get:
       tags:
@@ -797,6 +834,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AppCenter/v1/List:
     get:
       tags:
@@ -814,6 +852,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AppCenter/v1/GetInfo:
     get:
       tags:
@@ -831,6 +870,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AppCenter/v1/Operation:
     get:
       tags:
@@ -848,6 +888,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/SendTask:
     get:
       tags:
@@ -865,6 +906,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/SaveTask:
     get:
       tags:
@@ -882,6 +924,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/BatchEditTask:
     get:
       tags:
@@ -899,6 +942,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/GetBatchEditProgress:
     get:
       tags:
@@ -916,6 +960,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/BatchEditProgressDone:
     get:
       tags:
@@ -933,6 +978,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/DeleteTask:
     get:
       tags:
@@ -950,6 +996,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/ListTask:
     get:
       tags:
@@ -967,6 +1014,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/EnableTask:
     get:
       tags:
@@ -984,6 +1032,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/DisableTask:
     get:
       tags:
@@ -1001,6 +1050,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/LoginSourceDS:
     get:
       tags:
@@ -1018,6 +1068,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/SaveTieringConfig:
     get:
       tags:
@@ -1035,6 +1086,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/LoadTieringConfig:
     get:
       tags:
@@ -1052,6 +1104,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/ListUsingTask:
     get:
       tags:
@@ -1069,6 +1122,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/CheckSrcRecording:
     get:
       tags:
@@ -1086,6 +1140,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/LocalRecRangeValid:
     get:
       tags:
@@ -1103,6 +1158,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/CheckConnectFile:
     get:
       tags:
@@ -1120,6 +1176,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/GetRecordSize:
     get:
       tags:
@@ -1137,6 +1194,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Pull/v1/VerifyRecordEncrypt:
     get:
       tags:
@@ -1154,6 +1212,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Push/v1/SyncFiles:
     get:
       tags:
@@ -1171,6 +1230,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Push/v1/CreateDirs:
     get:
       tags:
@@ -1188,6 +1248,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Archiving.Push/v1/MoveDir:
     get:
       tags:
@@ -1205,6 +1266,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioOut/v2/LiveStart:
     get:
       tags:
@@ -1222,6 +1284,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioOut/v2/Stop:
     get:
       tags:
@@ -1239,6 +1302,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioOut/v2/FileStart:
     get:
       tags:
@@ -1256,6 +1320,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioOut/v2/SetupChannel:
     get:
       tags:
@@ -1273,6 +1338,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioOut/v2/CheckOccupied:
     get:
       tags:
@@ -1290,6 +1356,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioOut/v2/SendFileData:
     get:
       tags:
@@ -1307,6 +1374,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioOut/v2/StopSendFileData:
     get:
       tags:
@@ -1324,6 +1392,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioPattern/v1/List:
     get:
       tags:
@@ -1341,6 +1410,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioPattern/v1/Set:
     get:
       tags:
@@ -1358,6 +1428,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioPattern/v1/Delete:
     get:
       tags:
@@ -1375,6 +1446,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioPattern/v1/Upload:
     get:
       tags:
@@ -1392,6 +1464,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioPattern/v1/Cancel:
     get:
       tags:
@@ -1409,6 +1482,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioPattern/v1/LoadFile:
     get:
       tags:
@@ -1426,6 +1500,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioPattern/v1/SetupRecChannel:
     get:
       tags:
@@ -1443,6 +1518,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AudioPattern/v1/PlayPattern:
     get:
       tags:
@@ -1460,6 +1536,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/BlockCardHolder:
     get:
       tags:
@@ -1477,6 +1554,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/SyncAllCtrlerCardHolder:
     get:
       tags:
@@ -1494,6 +1572,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/ImportCardHolder:
     get:
       tags:
@@ -1511,6 +1590,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/GetActProgress:
     get:
       tags:
@@ -1528,6 +1608,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/ActProgressDone:
     get:
       tags:
@@ -1545,6 +1626,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/CountByCategory:
     get:
       tags:
@@ -1562,6 +1644,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/CountByCategoryCardHolder:
     get:
       tags:
@@ -1579,6 +1662,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/CountByCategoryAcsRule:
     get:
       tags:
@@ -1596,6 +1680,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/CountByCategoryLog:
     get:
       tags:
@@ -1613,6 +1698,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/Delete:
     get:
       tags:
@@ -1630,6 +1716,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/DoorControl:
     get:
       tags:
@@ -1647,6 +1734,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/EnableCtrler:
     get:
       tags:
@@ -1664,6 +1752,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/Enum:
     get:
       tags:
@@ -1681,6 +1770,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/EnumCardHolder:
     get:
       tags:
@@ -1698,6 +1788,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/EnumLogConfig:
     get:
       tags:
@@ -1715,6 +1806,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/GetDoorData:
     get:
       tags:
@@ -1732,6 +1824,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/GetUpdateInfo:
     get:
       tags:
@@ -1749,6 +1842,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/ListDoor:
     get:
       tags:
@@ -1766,6 +1860,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/ListLog:
     get:
       tags:
@@ -1783,6 +1878,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/ListPrivilege:
     get:
       tags:
@@ -1800,6 +1896,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/Retrieve:
     get:
       tags:
@@ -1817,6 +1914,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/RetrieveHardware:
     get:
       tags:
@@ -1834,6 +1932,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/Monitor:
     get:
       tags:
@@ -1851,6 +1950,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/Save:
     get:
       tags:
@@ -1868,6 +1968,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/SaveCardHolder:
     get:
       tags:
@@ -1885,6 +1986,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/BatEditCardHolder:
     get:
       tags:
@@ -1902,6 +2004,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/AddCardHolder:
     get:
       tags:
@@ -1919,6 +2022,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/DelCardHolder:
     get:
       tags:
@@ -1936,6 +2040,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/SavePrivilege:
     get:
       tags:
@@ -1953,6 +2058,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/SaveLogConfig:
     get:
       tags:
@@ -1970,6 +2076,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/TestConnect:
     get:
       tags:
@@ -1987,6 +2094,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/GetStandAloneMode:
     get:
       tags:
@@ -2004,6 +2112,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/RetrieveLastCard:
     get:
       tags:
@@ -2021,6 +2130,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/ClearLog:
     get:
       tags:
@@ -2038,6 +2148,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/DownloadLog:
     get:
       tags:
@@ -2055,6 +2166,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/AckAlarm:
     get:
       tags:
@@ -2072,6 +2184,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/GetCardholderPhoto:
     get:
       tags:
@@ -2089,6 +2202,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/EnumAccessRule:
     get:
       tags:
@@ -2106,6 +2220,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/AddAccessRule:
     get:
       tags:
@@ -2123,6 +2238,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/SaveAccessRule:
     get:
       tags:
@@ -2140,6 +2256,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/DelAccessRule:
     get:
       tags:
@@ -2157,6 +2274,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/UploadCardHolder:
     get:
       tags:
@@ -2174,6 +2292,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler/v1/RelayFromSlave:
     get:
       tags:
@@ -2191,6 +2310,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler.Search/v1/Start:
     get:
       tags:
@@ -2208,6 +2328,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.AxisAcsCtrler.Search/v1/InfoGet:
     get:
       tags:
@@ -2225,6 +2346,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/GetInfo:
     get:
       tags:
@@ -2242,6 +2364,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/GetLoginInfo:
     get:
       tags:
@@ -2259,6 +2382,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/GetAccessToken:
     get:
       tags:
@@ -2276,6 +2400,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/PollingLoginResult:
     get:
       tags:
@@ -2293,6 +2418,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/Logout:
     get:
       tags:
@@ -2310,6 +2436,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/GetSubscriptions:
     get:
       tags:
@@ -2327,6 +2454,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/GetPlanInfos:
     get:
       tags:
@@ -2344,6 +2472,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/GetCameraList:
     get:
       tags:
@@ -2361,6 +2490,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/GetEUC2CameraList:
     get:
       tags:
@@ -2378,6 +2508,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/GetUSC2CameraList:
     get:
       tags:
@@ -2395,6 +2526,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/BindCamera:
     get:
       tags:
@@ -2412,6 +2544,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/UnbindCamera:
     get:
       tags:
@@ -2429,6 +2562,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/ChangePlan:
     get:
       tags:
@@ -2446,6 +2580,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/UpdateCam:
     get:
       tags:
@@ -2463,6 +2598,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/SelectSite:
     get:
       tags:
@@ -2480,6 +2616,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/GetFileSize:
     get:
       tags:
@@ -2497,6 +2634,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/GetNeedUploadEvtNumByCam:
     get:
       tags:
@@ -2514,6 +2652,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/TriggerUpdate:
     get:
       tags:
@@ -2531,6 +2670,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2/v1/GetUploadInfo:
     get:
       tags:
@@ -2548,6 +2688,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/PreRegister:
     get:
       tags:
@@ -2565,6 +2706,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/Register:
     get:
       tags:
@@ -2582,6 +2724,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/PreRecover:
     get:
       tags:
@@ -2599,6 +2742,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/Recover:
     get:
       tags:
@@ -2616,6 +2760,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/PreVerify:
     get:
       tags:
@@ -2633,6 +2778,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/Verify:
     get:
       tags:
@@ -2650,6 +2796,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/PreDiscard:
     get:
       tags:
@@ -2667,6 +2814,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/Discard:
     get:
       tags:
@@ -2684,6 +2832,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/ForceDiscard:
     get:
       tags:
@@ -2701,6 +2850,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/CheckDiscarded:
     get:
       tags:
@@ -2718,6 +2868,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/PreChange:
     get:
       tags:
@@ -2735,6 +2886,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/Change:
     get:
       tags:
@@ -2752,6 +2904,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.C2.Encryption/v1/CheckRemoteEncRegistered:
     get:
       tags:
@@ -2769,6 +2922,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS/v2/GetMDSnapshot:
     get:
       tags:
@@ -2786,6 +2940,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.DsSearch/v1/Start:
     get:
       tags:
@@ -2803,6 +2958,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.DsSearch/v1/GetInfo:
     get:
       tags:
@@ -2820,6 +2976,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/LoadSetting:
     get:
       tags:
@@ -2837,6 +2994,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/SaveSetting:
     get:
       tags:
@@ -2854,6 +3012,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/ApplyServSetting:
     get:
       tags:
@@ -2871,6 +3030,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/ResetServSetting:
     get:
       tags:
@@ -2888,6 +3048,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/ManualFailover:
     get:
       tags:
@@ -2905,6 +3066,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/ManualRestore:
     get:
       tags:
@@ -2922,6 +3084,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/Hibernate:
     get:
       tags:
@@ -2939,6 +3102,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/StopRecovering:
     get:
       tags:
@@ -2956,6 +3120,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/ReplaceServer:
     get:
       tags:
@@ -2973,6 +3138,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/UpdateCentralInfo:
     get:
       tags:
@@ -2990,6 +3156,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/CancelFailover:
     get:
       tags:
@@ -3007,6 +3174,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/NotifyPushServSetting:
     get:
       tags:
@@ -3024,6 +3192,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/RedirectTestConnect:
     get:
       tags:
@@ -3041,6 +3210,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.Failover/v1/GetRestoreParam:
     get:
       tags:
@@ -3058,6 +3228,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/Login:
     get:
       tags:
@@ -3075,6 +3246,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/Logout:
     get:
       tags:
@@ -3092,6 +3264,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/Lock:
     get:
       tags:
@@ -3109,6 +3282,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/Pair:
     get:
       tags:
@@ -3126,6 +3300,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/UnPair:
     get:
       tags:
@@ -3143,6 +3318,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/Test:
     get:
       tags:
@@ -3160,6 +3336,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/TestHostDs:
     get:
       tags:
@@ -3177,6 +3354,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/EnableCMS:
     get:
       tags:
@@ -3194,6 +3372,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/GetFreeSpace:
     get:
       tags:
@@ -3211,6 +3390,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/MultipartStatusConn:
     get:
       tags:
@@ -3228,6 +3408,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/RecEncryptVerify:
     get:
       tags:
@@ -3245,6 +3426,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.GetDsStatus/v1/WriteHostRelayApiResp:
     get:
       tags:
@@ -3262,6 +3444,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsList/v1/Load:
     get:
       tags:
@@ -3279,6 +3462,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsList/v1/Auth:
     get:
       tags:
@@ -3296,6 +3480,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsList/v1/Delete:
     get:
       tags:
@@ -3313,6 +3498,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsList/v1/Enable:
     get:
       tags:
@@ -3330,6 +3516,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsList/v1/Disable:
     get:
       tags:
@@ -3347,6 +3534,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsList/v1/Lock:
     get:
       tags:
@@ -3364,6 +3552,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsList/v1/Unlock:
     get:
       tags:
@@ -3381,6 +3570,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsList/v1/LockAll:
     get:
       tags:
@@ -3398,6 +3588,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsList/v1/UnlockAll:
     get:
       tags:
@@ -3415,6 +3606,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsList/v1/CheckCMS:
     get:
       tags:
@@ -3432,6 +3624,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsWizard/v1/Save:
     get:
       tags:
@@ -3449,6 +3642,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsWizard/v1/Test:
     get:
       tags:
@@ -3466,6 +3660,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsWizard/v1/Enable:
     get:
       tags:
@@ -3483,6 +3678,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsWizard/v1/Load:
     get:
       tags:
@@ -3500,6 +3696,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsWizard/v1/BatchSave:
     get:
       tags:
@@ -3517,6 +3714,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsWizard/v1/BatchVerify:
     get:
       tags:
@@ -3534,6 +3732,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsWizard/v1/GetRelayInfo:
     get:
       tags:
@@ -3551,6 +3750,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsWizard/v1/GetRelaySystemInfo:
     get:
       tags:
@@ -3568,6 +3768,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CMS.SlavedsWizard/v1/RecEncryptVerify:
     get:
       tags:
@@ -3585,6 +3786,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera/v9/Save:
     get:
       tags:
@@ -3602,6 +3804,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera/v9/List:
     get:
       tags:
@@ -3619,6 +3822,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera/v9/Enable:
     get:
       tags:
@@ -3636,6 +3840,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera/v9/Disable:
     get:
       tags:
@@ -3653,6 +3858,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera/v9/Delete:
     get:
       tags:
@@ -3670,6 +3876,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera/v9/GetSnapshot:
     get:
       tags:
@@ -3687,6 +3894,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera/v9/GetLiveViewPath:
     get:
       tags:
@@ -3704,6 +3912,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera/v9/SaveOptimizeParam:
     get:
       tags:
@@ -3721,6 +3930,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera/v9/SyncChange:
     get:
       tags:
@@ -3738,6 +3948,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.BatAddByText/v1/UploadXlsx:
     get:
       tags:
@@ -3755,6 +3966,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.BatAddByText/v1/StartBatchAdd:
     get:
       tags:
@@ -3772,6 +3984,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.BatAddByText/v1/GetBatchAddProgress:
     get:
       tags:
@@ -3789,6 +4002,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.BatAddByText/v1/CancelBatchAdd:
     get:
       tags:
@@ -3806,6 +4020,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.BatAddByText/v1/GetImportTemplate:
     get:
       tags:
@@ -3823,6 +4038,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.BatAddByText/v1/GetImportFailCam:
     get:
       tags:
@@ -3840,6 +4056,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.BatAddByText/v1/ExportXlsx:
     get:
       tags:
@@ -3857,6 +4074,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/DIEnum:
     get:
       tags:
@@ -3874,6 +4092,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/DIStsPolling:
     get:
       tags:
@@ -3891,6 +4110,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/DIParamSave:
     get:
       tags:
@@ -3908,6 +4128,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/MotionEnum:
     get:
       tags:
@@ -3925,6 +4146,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/MDParamLoad:
     get:
       tags:
@@ -3942,6 +4164,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/MDParamSave:
     get:
       tags:
@@ -3959,6 +4182,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/AppParamSave:
     get:
       tags:
@@ -3976,6 +4200,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/AppLiveViewParamSave:
     get:
       tags:
@@ -3993,6 +4218,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/AudioEnum:
     get:
       tags:
@@ -4010,6 +4236,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/ADParamSave:
     get:
       tags:
@@ -4027,6 +4254,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/TamperingEnum:
     get:
       tags:
@@ -4044,6 +4272,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/TDParamSave:
     get:
       tags:
@@ -4061,6 +4290,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/QRParamGet:
     get:
       tags:
@@ -4078,6 +4308,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/QRParamSave:
     get:
       tags:
@@ -4095,6 +4326,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/DioParamGet:
     get:
       tags:
@@ -4112,6 +4344,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/DioParamSave:
     get:
       tags:
@@ -4129,6 +4362,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/PirEnum:
     get:
       tags:
@@ -4146,6 +4380,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/PDParamSave:
     get:
       tags:
@@ -4163,6 +4398,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/RoiListPoll:
     get:
       tags:
@@ -4180,6 +4416,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/RoiListSave:
     get:
       tags:
@@ -4197,6 +4434,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/RoiAdd:
     get:
       tags:
@@ -4214,6 +4452,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/RoiDel:
     get:
       tags:
@@ -4231,6 +4470,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/GetApplicationInfo:
     get:
       tags:
@@ -4248,6 +4488,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/AppEnum:
     get:
       tags:
@@ -4265,6 +4506,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Event/v1/AppSyncData:
     get:
       tags:
@@ -4282,6 +4524,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Export/v1/Save:
     get:
       tags:
@@ -4299,6 +4542,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Export/v1/CheckName:
     get:
       tags:
@@ -4316,6 +4560,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Export/v1/GetCamRelatedData:
     get:
       tags:
@@ -4333,6 +4578,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Group/v1/Enum:
     get:
       tags:
@@ -4350,6 +4596,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Group/v1/Delete:
     get:
       tags:
@@ -4367,6 +4614,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Group/v1/Save:
     get:
       tags:
@@ -4384,6 +4632,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Import/v1/Save:
     get:
       tags:
@@ -4401,6 +4650,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Import/v1/LoadData:
     get:
       tags:
@@ -4418,6 +4668,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Import/v1/ArchiveEnum:
     get:
       tags:
@@ -4435,6 +4686,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Import/v1/ArchiveCamEnum:
     get:
       tags:
@@ -4452,6 +4704,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Integration/v1/GetStatus:
     get:
       tags:
@@ -4469,6 +4722,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Integration/v1/AddTask:
     get:
       tags:
@@ -4486,6 +4740,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Integration/v1/Delete:
     get:
       tags:
@@ -4503,6 +4758,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Integration/v1/ManualVerify:
     get:
       tags:
@@ -4520,6 +4776,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Integration/v1/GetManualPreview:
     get:
       tags:
@@ -4537,6 +4794,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Integration/v1/DownloadCap:
     get:
       tags:
@@ -4554,6 +4812,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Integration/v1/Report:
     get:
       tags:
@@ -4571,6 +4830,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Integration/v1/UploadConf:
     get:
       tags:
@@ -4588,6 +4848,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Integration/v1/ImportConf:
     get:
       tags:
@@ -4605,6 +4866,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Integration/v1/LoadConf:
     get:
       tags:
@@ -4622,6 +4884,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Integration/v1/GetCapTable:
     get:
       tags:
@@ -4639,6 +4902,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Integration/v1/GetImportList:
     get:
       tags:
@@ -4656,6 +4920,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Intercom/v1/EnumLog:
     get:
       tags:
@@ -4673,6 +4938,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Intercom/v1/CountByCategory:
     get:
       tags:
@@ -4690,6 +4956,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Intercom/v1/ClearLog:
     get:
       tags:
@@ -4707,6 +4974,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Intercom/v1/DownloadLog:
     get:
       tags:
@@ -4724,6 +4992,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Intercom/v1/GetArchSetting:
     get:
       tags:
@@ -4741,6 +5010,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Intercom/v1/SetArchSetting:
     get:
       tags:
@@ -4758,6 +5028,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Intercom/v1/DoorControl:
     get:
       tags:
@@ -4775,6 +5046,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Intercom/v1/GetDoorSts:
     get:
       tags:
@@ -4792,6 +5064,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Schedule.CustomDetection/v1/ExtDeviceEnum:
     get:
       tags:
@@ -4809,6 +5082,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Schedule.CustomDetection/v1/ExtDeviceSave:
     get:
       tags:
@@ -4826,6 +5100,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Search/v1/Start:
     get:
       tags:
@@ -4843,6 +5118,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Search/v1/GetInfo:
     get:
       tags:
@@ -4860,6 +5136,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Search/v1/IPRange:
     get:
       tags:
@@ -4877,6 +5154,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Search/v1/GetIPRangeInfo:
     get:
       tags:
@@ -4894,6 +5172,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Search/v1/UpdateByUPNPInfo:
     get:
       tags:
@@ -4911,6 +5190,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Status/v3/Cycle:
     get:
       tags:
@@ -4928,6 +5208,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/GetCurrentSetting:
     get:
       tags:
@@ -4945,6 +5226,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/SetMiscSetting:
     get:
       tags:
@@ -4962,6 +5244,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/Reset:
     get:
       tags:
@@ -4979,6 +5262,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/UploadUpgradeFile:
     get:
       tags:
@@ -4996,6 +5280,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/UpgradeByFile:
     get:
       tags:
@@ -5013,6 +5298,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/ActivateBatchStart:
     get:
       tags:
@@ -5030,6 +5316,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/ActivateBatchGetInfo:
     get:
       tags:
@@ -5047,6 +5334,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/CheckOnlineUpgrade:
     get:
       tags:
@@ -5064,6 +5352,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/OnlineUpgrade:
     get:
       tags:
@@ -5081,6 +5370,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/Activate:
     get:
       tags:
@@ -5098,6 +5388,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/CheckIPConflict:
     get:
       tags:
@@ -5115,6 +5406,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/NetworkBatchSettingStart:
     get:
       tags:
@@ -5132,6 +5424,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/NetworkBatchSettingGetInfo:
     get:
       tags:
@@ -5149,6 +5442,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/GetLog:
     get:
       tags:
@@ -5166,6 +5460,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/GetLogCount:
     get:
       tags:
@@ -5183,6 +5478,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/DeleteLog:
     get:
       tags:
@@ -5200,6 +5496,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/DownloadLog:
     get:
       tags:
@@ -5217,6 +5514,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/GetInfoFromCam:
     get:
       tags:
@@ -5234,6 +5532,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/UploadCertFile:
     get:
       tags:
@@ -5251,6 +5550,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/DeleteCertFile:
     get:
       tags:
@@ -5268,6 +5568,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Synocam/v1/GetSystemReport:
     get:
       tags:
@@ -5285,6 +5586,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.VolEval/v1/CamVolEval:
     get:
       tags:
@@ -5302,6 +5604,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Camera.Wizard/v3/CamBatAddCheck:
     get:
       tags:
@@ -5319,6 +5622,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CameraCap/v2/CameraTest:
     get:
       tags:
@@ -5336,6 +5640,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CameraCap/v2/GetSnapshot:
     get:
       tags:
@@ -5353,6 +5658,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.CameraCap/v2/RenewCap:
     get:
       tags:
@@ -5370,6 +5676,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DetectionEvent/v1/List:
     get:
       tags:
@@ -5387,6 +5694,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DetectionEvent/v1/CountByCategory:
     get:
       tags:
@@ -5404,6 +5712,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DetectionEvent/v1/GetCrowdTimes:
     get:
       tags:
@@ -5421,6 +5730,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DetectionEvent/v1/Update:
     get:
       tags:
@@ -5438,6 +5748,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DetectionEvent/v1/Clear:
     get:
       tags:
@@ -5455,6 +5766,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DetectionEvent/v1/GetThumbnail:
     get:
       tags:
@@ -5472,6 +5784,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DetectionEvent/v1/GetLPThumbnail:
     get:
       tags:
@@ -5489,6 +5802,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DetectionEvent/v1/GetSetting:
     get:
       tags:
@@ -5506,6 +5820,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DetectionEvent/v1/SetSetting:
     get:
       tags:
@@ -5523,6 +5838,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DetectionEvent/v1/MigratingStatus:
     get:
       tags:
@@ -5540,6 +5856,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DetectionEvent/v1/RetrospectImgSave:
     get:
       tags:
@@ -5557,6 +5874,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DetectionEvent/v1/LoadThumbnailByConfig:
     get:
       tags:
@@ -5574,6 +5892,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DigitalOutput/v1/Enum:
     get:
       tags:
@@ -5591,6 +5910,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DigitalOutput/v1/PollState:
     get:
       tags:
@@ -5608,6 +5928,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DigitalOutput/v1/Save:
     get:
       tags:
@@ -5625,6 +5946,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DigitalOutput/v1/SaveMulti:
     get:
       tags:
@@ -5642,6 +5964,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DigitalOutput/v1/CtrlWiper:
     get:
       tags:
@@ -5659,6 +5982,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DigitalOutput/v1/CtrlLED:
     get:
       tags:
@@ -5676,6 +6000,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DualAuth/v1/List:
     get:
       tags:
@@ -5693,6 +6018,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DualAuth/v1/Save:
     get:
       tags:
@@ -5710,6 +6036,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DualAuth/v1/Enable:
     get:
       tags:
@@ -5727,6 +6054,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DualAuth/v1/Disable:
     get:
       tags:
@@ -5744,6 +6072,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DualAuth/v1/Delete:
     get:
       tags:
@@ -5761,6 +6090,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DualAuth/v1/SetProfile:
     get:
       tags:
@@ -5778,6 +6108,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.DualAuth/v1/CheckProfile:
     get:
       tags:
@@ -5795,6 +6126,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap/v2/List:
     get:
       tags:
@@ -5812,6 +6144,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap/v2/Load:
     get:
       tags:
@@ -5829,6 +6162,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap/v2/Save:
     get:
       tags:
@@ -5846,6 +6180,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap/v2/Delete:
     get:
       tags:
@@ -5863,6 +6198,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap/v2/CheckEmapValid:
     get:
       tags:
@@ -5880,6 +6216,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap/v2/UpdateEmapAdjList:
     get:
       tags:
@@ -5897,6 +6234,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap/v2/GetCommonSetting:
     get:
       tags:
@@ -5914,6 +6252,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap/v2/SetCommonSetting:
     get:
       tags:
@@ -5931,6 +6270,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.FavorView/v1/Save:
     get:
       tags:
@@ -5948,6 +6288,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.FavorView/v1/Delete:
     get:
       tags:
@@ -5965,6 +6306,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.GeoMap/v1/Save:
     get:
       tags:
@@ -5982,6 +6324,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.GeoMap/v1/Load:
     get:
       tags:
@@ -5999,6 +6342,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.GeoMap/v1/GetSetting:
     get:
       tags:
@@ -6016,6 +6360,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.GeoMap/v1/SetSetting:
     get:
       tags:
@@ -6033,6 +6378,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.Group/v1/Enum:
     get:
       tags:
@@ -6050,6 +6396,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.Group/v1/Delete:
     get:
       tags:
@@ -6067,6 +6414,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.Group/v1/Save:
     get:
       tags:
@@ -6084,6 +6432,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.Group/v1/ChangeGroup:
     get:
       tags:
@@ -6101,6 +6450,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.Group/v1/RemoveItem:
     get:
       tags:
@@ -6118,6 +6468,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.Image/v1/Upload:
     get:
       tags:
@@ -6135,6 +6486,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.Image/v1/Load:
     get:
       tags:
@@ -6152,6 +6504,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Emap.Image/v1/Download:
     get:
       tags:
@@ -6169,6 +6522,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Encryption/v1/KeyExchange:
     get:
       tags:
@@ -6186,6 +6540,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/Query:
     get:
       tags:
@@ -6203,6 +6558,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/DeleteMulti:
     get:
       tags:
@@ -6220,6 +6576,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/DeleteFilter:
     get:
       tags:
@@ -6237,6 +6594,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/DeleteAll:
     get:
       tags:
@@ -6254,6 +6612,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/List:
     get:
       tags:
@@ -6271,6 +6630,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/CountByCategory:
     get:
       tags:
@@ -6288,6 +6648,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/Lock:
     get:
       tags:
@@ -6305,6 +6666,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/UnLock:
     get:
       tags:
@@ -6322,6 +6684,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/LockFilter:
     get:
       tags:
@@ -6339,6 +6702,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/UnLockFilter:
     get:
       tags:
@@ -6356,6 +6720,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/Trunc:
     get:
       tags:
@@ -6373,6 +6738,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/Keepalive:
     get:
       tags:
@@ -6390,6 +6756,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/Download:
     get:
       tags:
@@ -6407,6 +6774,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/SaveMigrateEvent:
     get:
       tags:
@@ -6424,6 +6792,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/DelMigratedEvent:
     get:
       tags:
@@ -6441,6 +6810,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/CheckEventValid:
     get:
       tags:
@@ -6458,6 +6828,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/LoadAdvanced:
     get:
       tags:
@@ -6475,6 +6846,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/ApplyAdvanced:
     get:
       tags:
@@ -6492,6 +6864,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event/v5/UpdateIndex:
     get:
       tags:
@@ -6509,6 +6882,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Export/v1/Save:
     get:
       tags:
@@ -6526,6 +6900,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Export/v1/Load:
     get:
       tags:
@@ -6543,6 +6918,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Export/v1/CamEnum:
     get:
       tags:
@@ -6560,6 +6936,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Export/v1/CheckAvailableExport:
     get:
       tags:
@@ -6577,6 +6954,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Export/v1/GetEvtExpInfo:
     get:
       tags:
@@ -6594,6 +6972,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Export/v1/CamEvtRotCtrl:
     get:
       tags:
@@ -6611,6 +6990,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Export/v1/DumpEvtExpDB:
     get:
       tags:
@@ -6628,6 +7008,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Export/v1/CheckName:
     get:
       tags:
@@ -6645,6 +7026,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Export/v1/Delete:
     get:
       tags:
@@ -6662,6 +7044,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Mount/v1/Load:
     get:
       tags:
@@ -6679,6 +7062,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Mount/v1/Delete:
     get:
       tags:
@@ -6696,6 +7080,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Mount/v1/Enable:
     get:
       tags:
@@ -6713,6 +7098,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Mount/v1/Disable:
     get:
       tags:
@@ -6730,6 +7116,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Mount.Wizard/v1/Save:
     get:
       tags:
@@ -6747,6 +7134,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Event.Mount.Wizard/v1/BackupEnum:
     get:
       tags:
@@ -6764,6 +7152,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ExternalDevice.IFTTT/v1/TestSendReq:
     get:
       tags:
@@ -6781,6 +7170,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ExternalDevice.Storage.USB/v1/List:
     get:
       tags:
@@ -6798,6 +7188,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ExternalDevice.Storage.USB/v1/Eject:
     get:
       tags:
@@ -6815,6 +7206,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ExternalDevice.Webhook/v1/TestSendReq:
     get:
       tags:
@@ -6832,6 +7224,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ExternalEvent/v1/Trigger:
     get:
       tags:
@@ -6849,6 +7242,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ExternalRecording/v3/Record:
     get:
       tags:
@@ -6866,6 +7260,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/EnableTask:
     get:
       tags:
@@ -6883,6 +7278,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/DisableTask:
     get:
       tags:
@@ -6900,6 +7296,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/SaveTask:
     get:
       tags:
@@ -6917,6 +7314,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/DeleteTask:
     get:
       tags:
@@ -6934,6 +7332,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/ListTask:
     get:
       tags:
@@ -6951,6 +7350,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/ListPlayableTask:
     get:
       tags:
@@ -6968,6 +7368,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/ListTaskEventCount:
     get:
       tags:
@@ -6985,6 +7386,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/CreateRegisteredFace:
     get:
       tags:
@@ -7002,6 +7404,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/DeleteRegisteredFace:
     get:
       tags:
@@ -7019,6 +7422,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/EditRegisteredFace:
     get:
       tags:
@@ -7036,6 +7440,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/ListRegisteredFace:
     get:
       tags:
@@ -7053,6 +7458,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/ListRegisteredFaceWithUuid:
     get:
       tags:
@@ -7070,6 +7476,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/CountRegisteredFace:
     get:
       tags:
@@ -7087,6 +7494,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/SearchRegisteredFace:
     get:
       tags:
@@ -7104,6 +7512,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/LoadRegisteredFaceImage:
     get:
       tags:
@@ -7121,6 +7530,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/CreateFaceGroup:
     get:
       tags:
@@ -7138,6 +7548,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/DeleteFaceGroup:
     get:
       tags:
@@ -7155,6 +7566,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/EditFaceGroup:
     get:
       tags:
@@ -7172,6 +7584,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/ListFaceGroup:
     get:
       tags:
@@ -7189,6 +7602,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/CountFaceGroup:
     get:
       tags:
@@ -7206,6 +7620,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/DetectImageFace:
     get:
       tags:
@@ -7223,6 +7638,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/DownloadImportFaceXlsx:
     get:
       tags:
@@ -7240,6 +7656,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/QuickCreateRegisteredFace:
     get:
       tags:
@@ -7257,6 +7674,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/ConvertImportXlsxToJson:
     get:
       tags:
@@ -7274,6 +7692,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/LoadDeepLearningModel:
     get:
       tags:
@@ -7291,6 +7710,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face/v1/UpdateIdPatcher:
     get:
       tags:
@@ -7308,6 +7728,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Archive/v1/GetSettings:
     get:
       tags:
@@ -7325,6 +7746,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Archive/v1/SaveSettings:
     get:
       tags:
@@ -7342,6 +7764,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Archive/v1/MigratingStatus:
     get:
       tags:
@@ -7359,6 +7782,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.CMS/v1/CheckIsProxyDva:
     get:
       tags:
@@ -7376,6 +7800,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.CMS/v1/DumpMapping:
     get:
       tags:
@@ -7393,6 +7818,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Result/v1/List:
     get:
       tags:
@@ -7410,6 +7836,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Result/v1/Delete:
     get:
       tags:
@@ -7427,6 +7854,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Result/v1/EventFlushHeader:
     get:
       tags:
@@ -7444,6 +7872,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Result/v1/Lock:
     get:
       tags:
@@ -7461,6 +7890,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Result/v1/Unlock:
     get:
       tags:
@@ -7478,6 +7908,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Result/v1/GetAnalyticsResult:
     get:
       tags:
@@ -7495,6 +7926,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Result/v1/GetEventInfo:
     get:
       tags:
@@ -7512,6 +7944,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Result/v1/Correct:
     get:
       tags:
@@ -7529,6 +7962,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Result/v1/MarkAsStranger:
     get:
       tags:
@@ -7546,6 +7980,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Result/v1/DownloadReport:
     get:
       tags:
@@ -7563,6 +7998,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Result/v1/LoadCapturedFaceImage:
     get:
       tags:
@@ -7580,6 +8016,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Simulator/v1/Acquire:
     get:
       tags:
@@ -7597,6 +8034,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Simulator/v1/Add:
     get:
       tags:
@@ -7614,6 +8052,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Simulator/v1/Remove:
     get:
       tags:
@@ -7631,6 +8070,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Face.Simulator/v1/KeepAlive:
     get:
       tags:
@@ -7648,6 +8088,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Fisheye/v1/Load:
     get:
       tags:
@@ -7665,6 +8106,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Fisheye/v1/Save:
     get:
       tags:
@@ -7682,6 +8124,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Fisheye/v1/Delete:
     get:
       tags:
@@ -7699,6 +8142,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.GlobalSearch/v1/Search:
     get:
       tags:
@@ -7716,6 +8160,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Help/v1/GetTreeList:
     get:
       tags:
@@ -7733,6 +8178,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Help/v1/GetSearchResult:
     get:
       tags:
@@ -7750,6 +8196,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode/v1/GetInfo:
     get:
       tags:
@@ -7767,6 +8214,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode/v1/Switch:
     get:
       tags:
@@ -7784,6 +8232,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode/v1/SwitchSetting:
     get:
       tags:
@@ -7801,6 +8250,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode/v1/SaveSysSetting:
     get:
       tags:
@@ -7818,6 +8268,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode/v1/SaveGeofence:
     get:
       tags:
@@ -7835,6 +8286,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode/v1/SaveAdvanced:
     get:
       tags:
@@ -7852,6 +8304,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode/v1/SaveProfileGeneral:
     get:
       tags:
@@ -7869,6 +8322,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode/v1/SaveSchedule:
     get:
       tags:
@@ -7886,6 +8340,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode/v1/SaveNotifyFilter:
     get:
       tags:
@@ -7903,6 +8358,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode/v1/SaveOneTimeSwitch:
     get:
       tags:
@@ -7920,6 +8376,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode.Mobile/v1/List:
     get:
       tags:
@@ -7937,6 +8394,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode.Mobile/v1/Bind:
     get:
       tags:
@@ -7954,6 +8412,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode.Mobile/v1/Unbind:
     get:
       tags:
@@ -7971,6 +8430,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.HomeMode.Mobile/v1/EnterHome:
     get:
       tags:
@@ -7988,6 +8448,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IOModule/v3/EnumPort:
     get:
       tags:
@@ -8005,6 +8466,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IOModule.Search/v1/Start:
     get:
       tags:
@@ -8022,6 +8484,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IOModule.Search/v1/InfoGet:
     get:
       tags:
@@ -8039,6 +8502,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker/v1/Save:
     get:
       tags:
@@ -8056,6 +8520,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker/v1/Enable:
     get:
       tags:
@@ -8073,6 +8538,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker/v1/Disable:
     get:
       tags:
@@ -8090,6 +8556,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker/v1/Delete:
     get:
       tags:
@@ -8107,6 +8574,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker/v1/SetGrouped:
     get:
       tags:
@@ -8124,6 +8592,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker/v1/Enum:
     get:
       tags:
@@ -8141,6 +8610,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker/v1/CountByCategory:
     get:
       tags:
@@ -8158,6 +8628,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker/v1/EnumVendorModel:
     get:
       tags:
@@ -8175,6 +8646,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker/v1/GetCap:
     get:
       tags:
@@ -8192,6 +8664,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker/v1/TestConn:
     get:
       tags:
@@ -8209,6 +8682,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker.Broadcast/v1/Enum:
     get:
       tags:
@@ -8226,6 +8700,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker.Broadcast/v1/Delete:
     get:
       tags:
@@ -8243,6 +8718,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker.Broadcast/v1/Save:
     get:
       tags:
@@ -8260,6 +8736,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker.Broadcast/v1/UpdateStatus:
     get:
       tags:
@@ -8277,6 +8754,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker.Group/v1/Enum:
     get:
       tags:
@@ -8294,6 +8772,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker.Group/v1/Delete:
     get:
       tags:
@@ -8311,6 +8790,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker.Group/v1/Save:
     get:
       tags:
@@ -8328,6 +8808,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker.Search/v1/Start:
     get:
       tags:
@@ -8345,6 +8826,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IPSpeaker.Search/v1/InfoGet:
     get:
       tags:
@@ -8362,6 +8844,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA/v1/EnableTask:
     get:
       tags:
@@ -8379,6 +8862,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA/v1/DisableTask:
     get:
       tags:
@@ -8396,6 +8880,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA/v1/SaveTask:
     get:
       tags:
@@ -8413,6 +8898,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA/v1/DeleteTask:
     get:
       tags:
@@ -8430,6 +8916,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA/v1/ListTask:
     get:
       tags:
@@ -8447,6 +8934,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA/v1/SetTmpFpsUpperBound:
     get:
       tags:
@@ -8464,6 +8952,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA/v1/ResetPplCntCounter:
     get:
       tags:
@@ -8481,6 +8970,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA/v1/GetPplCnt:
     get:
       tags:
@@ -8498,6 +8988,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA/v1/ListCountingSetting:
     get:
       tags:
@@ -8515,6 +9006,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA/v1/SaveCountingSetting:
     get:
       tags:
@@ -8532,6 +9024,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA/v1/ListCountingStatus:
     get:
       tags:
@@ -8549,6 +9042,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA/v1/ResetCounting:
     get:
       tags:
@@ -8566,6 +9060,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Analytics/v1/DownloadAnalyticsReport:
     get:
       tags:
@@ -8583,6 +9078,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Archive/v1/GetSettings:
     get:
       tags:
@@ -8600,6 +9096,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Archive/v1/SaveSettings:
     get:
       tags:
@@ -8617,6 +9114,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Archive/v1/MigratingStatus:
     get:
       tags:
@@ -8634,6 +9132,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.CountingTaskGroup/v1/List:
     get:
       tags:
@@ -8651,6 +9150,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.CountingTaskGroup/v1/Save:
     get:
       tags:
@@ -8668,6 +9168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.CountingTaskGroup/v1/Delete:
     get:
       tags:
@@ -8685,6 +9186,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.License/v1/List:
     get:
       tags:
@@ -8702,6 +9204,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate/v1/List:
     get:
       tags:
@@ -8719,6 +9222,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate/v1/Create:
     get:
       tags:
@@ -8736,6 +9240,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate/v1/Edit:
     get:
       tags:
@@ -8753,6 +9258,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate/v1/Delete:
     get:
       tags:
@@ -8770,6 +9276,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate.Result/v1/List:
     get:
       tags:
@@ -8787,6 +9294,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate.Result/v1/Create:
     get:
       tags:
@@ -8804,6 +9312,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate.Result/v1/Edit:
     get:
       tags:
@@ -8821,6 +9330,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate.Result/v1/Delete:
     get:
       tags:
@@ -8838,6 +9348,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate.Result/v1/GetReport:
     get:
       tags:
@@ -8855,6 +9366,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate.Result/v1/DownloadReport:
     get:
       tags:
@@ -8872,6 +9384,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate.Result/v1/LoadPlateNumberImage:
     get:
       tags:
@@ -8889,6 +9402,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate.Result/v1/LoadVehicleImage:
     get:
       tags:
@@ -8906,6 +9420,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.LicensePlate.Result/v1/DownloadDetectionEventReport:
     get:
       tags:
@@ -8923,6 +9438,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Recording/v1/List:
     get:
       tags:
@@ -8940,6 +9456,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Recording/v1/CountByCategory:
     get:
       tags:
@@ -8957,6 +9474,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Recording/v1/Delete:
     get:
       tags:
@@ -8974,6 +9492,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Recording/v1/EventFlushHeader:
     get:
       tags:
@@ -8991,6 +9510,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Recording/v1/Lock:
     get:
       tags:
@@ -9008,6 +9528,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Recording/v1/Unlock:
     get:
       tags:
@@ -9025,6 +9546,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Recording/v1/LockFilter:
     get:
       tags:
@@ -9042,6 +9564,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Recording/v1/UnLockFilter:
     get:
       tags:
@@ -9059,6 +9582,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Recording/v1/GetAnalyticsResult:
     get:
       tags:
@@ -9076,6 +9600,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Recording/v1/DownloadReport:
     get:
       tags:
@@ -9093,6 +9618,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Recording/v1/SaveMigratingEvent:
     get:
       tags:
@@ -9110,6 +9636,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Report/v1/GetReport:
     get:
       tags:
@@ -9127,6 +9654,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Report/v1/GetCount:
     get:
       tags:
@@ -9144,6 +9672,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Report/v1/Download:
     get:
       tags:
@@ -9161,6 +9690,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Report/v1/UploadReportImgData:
     get:
       tags:
@@ -9178,6 +9708,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Report/v1/GetNoRecordDate:
     get:
       tags:
@@ -9195,6 +9726,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Report/v1/GetCountingReport:
     get:
       tags:
@@ -9212,6 +9744,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Simulator/v1/Acquire:
     get:
       tags:
@@ -9229,6 +9762,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Simulator/v1/Add:
     get:
       tags:
@@ -9246,6 +9780,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Simulator/v1/Remove:
     get:
       tags:
@@ -9263,6 +9798,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.Simulator/v1/KeepAlive:
     get:
       tags:
@@ -9280,6 +9816,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.TaskGroup/v1/List:
     get:
       tags:
@@ -9297,6 +9834,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.TaskGroup/v1/Create:
     get:
       tags:
@@ -9314,6 +9852,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.TaskGroup/v1/GetByTaskId:
     get:
       tags:
@@ -9331,6 +9870,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.TaskGroup/v1/Edit:
     get:
       tags:
@@ -9348,6 +9888,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.TaskGroup/v1/Delete:
     get:
       tags:
@@ -9365,6 +9906,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.TaskGroup/v1/Enable:
     get:
       tags:
@@ -9382,6 +9924,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.TaskGroup/v1/Disable:
     get:
       tags:
@@ -9399,6 +9942,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.TaskGroup/v1/GetPeopleCount:
     get:
       tags:
@@ -9416,6 +9960,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.IVA.TaskGroup/v1/ResetPeopleCount:
     get:
       tags:
@@ -9433,6 +9978,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Info/v8/GetInfo:
     get:
       tags:
@@ -9450,6 +9996,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Info.InstallVs/v2/Start:
     get:
       tags:
@@ -9467,6 +10014,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Info.InstallVs/v2/Finish:
     get:
       tags:
@@ -9484,6 +10032,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Info.InstallVs/v2/GetProgress:
     get:
       tags:
@@ -9501,6 +10050,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Info.InstallVs/v2/Upload:
     get:
       tags:
@@ -9518,6 +10068,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.JoystickSetting/v2/Save:
     get:
       tags:
@@ -9535,6 +10086,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.JoystickSetting/v2/Get:
     get:
       tags:
@@ -9552,6 +10104,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.JoystickSetting/v2/Export:
     get:
       tags:
@@ -9569,6 +10122,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.JoystickSetting/v2/Import:
     get:
       tags:
@@ -9586,6 +10140,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.JoystickSetting/v2/ArchiveEnum:
     get:
       tags:
@@ -9603,6 +10158,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout/v2/List:
     get:
       tags:
@@ -9620,6 +10176,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout/v2/CamLoad:
     get:
       tags:
@@ -9637,6 +10194,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout/v2/LayoutSave:
     get:
       tags:
@@ -9654,6 +10212,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout/v2/CheckLayoutValid:
     get:
       tags:
@@ -9671,6 +10230,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout/v2/FisheyeRegionLoad:
     get:
       tags:
@@ -9688,6 +10248,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout/v2/CamEnumAll:
     get:
       tags:
@@ -9705,6 +10266,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout/v2/ItemEnum:
     get:
       tags:
@@ -9722,6 +10284,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout/v2/LayoutLoad:
     get:
       tags:
@@ -9739,6 +10302,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout/v2/LayoutLoadDefault:
     get:
       tags:
@@ -9756,6 +10320,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout/v2/LayoutDelete:
     get:
       tags:
@@ -9773,6 +10338,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout/v2/IOModuleLoad:
     get:
       tags:
@@ -9790,6 +10356,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout.Item/v1/Save:
     get:
       tags:
@@ -9807,6 +10374,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Layout.Item/v1/Load:
     get:
       tags:
@@ -9824,6 +10392,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.License/v2/VerifyKey:
     get:
       tags:
@@ -9841,6 +10410,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.LocalDisplay/v1/GetUid:
     get:
       tags:
@@ -9858,6 +10428,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.LocalDisplay/v1/GetAutoLogin:
     get:
       tags:
@@ -9875,6 +10446,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.LocalDisplay/v1/SetAutoLogin:
     get:
       tags:
@@ -9892,6 +10464,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.LocalDisplay/v1/CheckLogin:
     get:
       tags:
@@ -9909,6 +10482,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.LocalDisplay/v1/GetSettings:
     get:
       tags:
@@ -9926,6 +10500,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.LocalDisplay/v1/SetSettings:
     get:
       tags:
@@ -9943,6 +10518,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.LocalDisplay/v1/SetDvaFpsLimit:
     get:
       tags:
@@ -9960,6 +10536,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/List:
     get:
       tags:
@@ -9977,6 +10554,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/CountByCategory:
     get:
       tags:
@@ -9994,6 +10572,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/Clear:
     get:
       tags:
@@ -10011,6 +10590,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/AddSlaveDSLog:
     get:
       tags:
@@ -10028,6 +10608,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/AddLogFromPlugin:
     get:
       tags:
@@ -10045,6 +10626,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/Download:
     get:
       tags:
@@ -10062,6 +10644,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/GetSetting:
     get:
       tags:
@@ -10079,6 +10662,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/SetSetting:
     get:
       tags:
@@ -10096,6 +10680,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/BatSetSetting:
     get:
       tags:
@@ -10113,6 +10698,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/BatSetDone:
     get:
       tags:
@@ -10130,6 +10716,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/GetBatProgress:
     get:
       tags:
@@ -10147,6 +10734,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/VsLog:
     get:
       tags:
@@ -10164,6 +10752,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/GetArchiveSetting:
     get:
       tags:
@@ -10181,6 +10770,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/SetArchiveSetting:
     get:
       tags:
@@ -10198,6 +10788,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/GetSendLogSetting:
     get:
       tags:
@@ -10215,6 +10806,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/SetSendLogSetting:
     get:
       tags:
@@ -10232,6 +10824,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/SendTestLog:
     get:
       tags:
@@ -10249,6 +10842,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/UploadCrt:
     get:
       tags:
@@ -10266,6 +10860,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/CheckLogValid:
     get:
       tags:
@@ -10283,6 +10878,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Log/v3/GetLogDetail:
     get:
       tags:
@@ -10300,6 +10896,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.MobileCam/v1/UploadEdge:
     get:
       tags:
@@ -10317,6 +10914,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification/v8/GetNotiServiceStatus:
     get:
       tags:
@@ -10334,6 +10932,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification/v8/GetMessageParameter:
     get:
       tags:
@@ -10351,6 +10950,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Email/v1/GetSetting:
     get:
       tags:
@@ -10368,6 +10968,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Email/v1/SetSetting:
     get:
       tags:
@@ -10385,6 +10986,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Email/v1/SendTestMail:
     get:
       tags:
@@ -10402,6 +11004,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Filter/v2/Get:
     get:
       tags:
@@ -10419,6 +11022,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.MobileSetting/v2/GetSetting:
     get:
       tags:
@@ -10436,6 +11040,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.PushService/v1/GetSetting:
     get:
       tags:
@@ -10453,6 +11058,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.PushService/v1/SetSetting:
     get:
       tags:
@@ -10470,6 +11076,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.PushService/v1/SendTestMessage:
     get:
       tags:
@@ -10487,6 +11094,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.PushService/v1/SendVerificationMail:
     get:
       tags:
@@ -10504,6 +11112,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.PushService/v1/ListMobileDevice:
     get:
       tags:
@@ -10521,6 +11130,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.PushService/v1/UnpairMobileDevice:
     get:
       tags:
@@ -10538,6 +11148,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.SMS/v1/GetSetting:
     get:
       tags:
@@ -10555,6 +11166,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.SMS/v1/SetSetting:
     get:
       tags:
@@ -10572,6 +11184,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.SMS/v1/SendTestMessage:
     get:
       tags:
@@ -10589,6 +11202,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.SMS/v1/UpdateShmConf:
     get:
       tags:
@@ -10606,6 +11220,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.SMS.ServiceProvider/v1/List:
     get:
       tags:
@@ -10623,6 +11238,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.SMS.ServiceProvider/v1/Delete:
     get:
       tags:
@@ -10640,6 +11256,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.SMS.ServiceProvider/v1/Create:
     get:
       tags:
@@ -10657,6 +11274,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.SMS.ServiceProvider/v1/Set:
     get:
       tags:
@@ -10674,6 +11292,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/GetSystemDependentSchedule:
     get:
       tags:
@@ -10691,6 +11310,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/GetCameraSchedule:
     get:
       tags:
@@ -10708,6 +11328,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/GetCameraDISchedule:
     get:
       tags:
@@ -10725,6 +11346,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/GetCameraNotifyScheduleByIdx:
     get:
       tags:
@@ -10742,6 +11364,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/GetAccessControlDoorSchedule:
     get:
       tags:
@@ -10759,6 +11382,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/GetAccessControlControllerSchedule:
     get:
       tags:
@@ -10776,6 +11400,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/GetIOModuleSchedule:
     get:
       tags:
@@ -10793,6 +11418,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/GetIOModuleDISchedule:
     get:
       tags:
@@ -10810,6 +11436,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/GetTransDevSchedule:
     get:
       tags:
@@ -10827,6 +11454,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/GetIPSpeakerSchedule:
     get:
       tags:
@@ -10844,6 +11472,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/GetActionRuleSchedule:
     get:
       tags:
@@ -10861,6 +11490,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/SetSystemDependentSchedule:
     get:
       tags:
@@ -10878,6 +11508,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/SetCameraSchedule:
     get:
       tags:
@@ -10895,6 +11526,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/SetIOModuleSchedule:
     get:
       tags:
@@ -10912,6 +11544,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/SetIPSpeakerSchedule:
     get:
       tags:
@@ -10929,6 +11562,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/SetActionRuleSchedule:
     get:
       tags:
@@ -10946,6 +11580,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/SetAccessControlSchedule:
     get:
       tags:
@@ -10963,6 +11598,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/SetTransDevSchedule:
     get:
       tags:
@@ -10980,6 +11616,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Schedule/v2/SetBatchSchedule:
     get:
       tags:
@@ -10997,6 +11634,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Snapshot/v1/GetSnapshot:
     get:
       tags:
@@ -11014,6 +11652,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Webhook/v1/List:
     get:
       tags:
@@ -11031,6 +11670,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Webhook/v1/Create:
     get:
       tags:
@@ -11048,6 +11688,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Webhook/v1/Edit:
     get:
       tags:
@@ -11065,6 +11706,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Webhook/v1/Delete:
     get:
       tags:
@@ -11082,6 +11724,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Webhook/v1/Enable:
     get:
       tags:
@@ -11099,6 +11742,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Webhook/v1/SendTestReq:
     get:
       tags:
@@ -11116,6 +11760,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Notification.Webhook/v1/Preview:
     get:
       tags:
@@ -11133,6 +11778,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/Move:
     get:
       tags:
@@ -11150,6 +11796,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/Zoom:
     get:
       tags:
@@ -11167,6 +11814,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/Focus:
     get:
       tags:
@@ -11184,6 +11832,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/Iris:
     get:
       tags:
@@ -11201,6 +11850,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/AutoFocus:
     get:
       tags:
@@ -11218,6 +11868,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/AbsPtz:
     get:
       tags:
@@ -11235,6 +11886,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/ListPreset:
     get:
       tags:
@@ -11252,6 +11904,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/GoPreset:
     get:
       tags:
@@ -11269,6 +11922,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/ListPatrol:
     get:
       tags:
@@ -11286,6 +11940,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/RunPatrol:
     get:
       tags:
@@ -11303,6 +11958,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/Home:
     get:
       tags:
@@ -11320,6 +11976,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/AutoPan:
     get:
       tags:
@@ -11337,6 +11994,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/ObjTracking:
     get:
       tags:
@@ -11354,6 +12012,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ/v6/SpeedDry:
     get:
       tags:
@@ -11371,6 +12030,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Patrol/v1/Enum:
     get:
       tags:
@@ -11388,6 +12048,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Patrol/v1/EnumPartial:
     get:
       tags:
@@ -11405,6 +12066,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Patrol/v1/Load:
     get:
       tags:
@@ -11422,6 +12084,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Patrol/v1/Save:
     get:
       tags:
@@ -11439,6 +12102,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Patrol/v1/Delete:
     get:
       tags:
@@ -11456,6 +12120,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Patrol/v1/Execute:
     get:
       tags:
@@ -11473,6 +12138,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Patrol/v1/Stop:
     get:
       tags:
@@ -11490,6 +12156,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Preset/v1/Enum:
     get:
       tags:
@@ -11507,6 +12174,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Preset/v1/GetInfo:
     get:
       tags:
@@ -11524,6 +12192,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Preset/v1/SetPreset:
     get:
       tags:
@@ -11541,6 +12210,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Preset/v1/DelPreset:
     get:
       tags:
@@ -11558,6 +12228,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Preset/v1/Execute:
     get:
       tags:
@@ -11575,6 +12246,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Preset/v1/SetHome:
     get:
       tags:
@@ -11592,6 +12264,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Preset/v1/GetDelProgress:
     get:
       tags:
@@ -11609,6 +12282,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PTZ.Preset/v1/DelProgressDone:
     get:
       tags:
@@ -11626,6 +12300,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Image/v1/List:
     get:
       tags:
@@ -11643,6 +12318,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Image/v1/Get:
     get:
       tags:
@@ -11660,6 +12336,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Image/v1/Upload:
     get:
       tags:
@@ -11677,6 +12354,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Image/v1/GetWallpaper:
     get:
       tags:
@@ -11694,6 +12372,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Image/v1/Load:
     get:
       tags:
@@ -11711,6 +12390,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Image/v1/Save:
     get:
       tags:
@@ -11728,6 +12408,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Image/v1/Reset:
     get:
       tags:
@@ -11745,6 +12426,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Image/v1/ClearAll:
     get:
       tags:
@@ -11762,6 +12444,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Image/v1/UploadWatermark:
     get:
       tags:
@@ -11779,6 +12462,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Image/v1/GetWatermark:
     get:
       tags:
@@ -11796,6 +12480,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Layout/v1/SaveSetting:
     get:
       tags:
@@ -11813,6 +12498,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Layout/v1/LoadSetting:
     get:
       tags:
@@ -11830,6 +12516,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Photo/v1/Load:
     get:
       tags:
@@ -11847,6 +12534,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Photo/v1/LoadBase64:
     get:
       tags:
@@ -11864,6 +12552,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.PersonalSettings.Photo/v1/Upload:
     get:
       tags:
@@ -11881,6 +12570,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Player/v1/EnumEvent:
     get:
       tags:
@@ -11898,6 +12588,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Player/v1/SearchAvailDate:
     get:
       tags:
@@ -11915,6 +12606,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Player/v1/LoadCamera:
     get:
       tags:
@@ -11932,6 +12624,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Player.LiveviewSrc/v1/Play:
     get:
       tags:
@@ -11949,6 +12642,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Preload/v2/GetSession:
     get:
       tags:
@@ -11966,6 +12660,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording/v6/List:
     get:
       tags:
@@ -11983,6 +12678,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording/v6/Delete:
     get:
       tags:
@@ -12000,6 +12696,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording/v6/Lock:
     get:
       tags:
@@ -12017,6 +12714,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording/v6/UnLock:
     get:
       tags:
@@ -12034,6 +12732,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording/v6/Download:
     get:
       tags:
@@ -12051,6 +12750,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording/v6/Stream:
     get:
       tags:
@@ -12068,6 +12768,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording/v6/BrowserStream:
     get:
       tags:
@@ -12085,6 +12786,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording/v6/RangeExport:
     get:
       tags:
@@ -12102,6 +12804,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording/v6/GetRangeExportProgress:
     get:
       tags:
@@ -12119,6 +12822,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording/v6/OnRangeExportDone:
     get:
       tags:
@@ -12136,6 +12840,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording/v6/RetrospectImgSave:
     get:
       tags:
@@ -12153,6 +12858,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Bookmark/v2/ListBookmark:
     get:
       tags:
@@ -12170,6 +12876,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Export/v1/Save:
     get:
       tags:
@@ -12187,6 +12894,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Export/v1/Load:
     get:
       tags:
@@ -12204,6 +12912,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Export/v1/CamEnum:
     get:
       tags:
@@ -12221,6 +12930,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Export/v1/CheckAvailableExport:
     get:
       tags:
@@ -12238,6 +12948,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Export/v1/GetEvtExpInfo:
     get:
       tags:
@@ -12255,6 +12966,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Export/v1/CamEvtRotCtrl:
     get:
       tags:
@@ -12272,6 +12984,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Export/v1/DumpEvtExpDB:
     get:
       tags:
@@ -12289,6 +13002,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Export/v1/CheckName:
     get:
       tags:
@@ -12306,6 +13020,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Export/v1/Delete:
     get:
       tags:
@@ -12323,6 +13038,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Mount/v1/Load:
     get:
       tags:
@@ -12340,6 +13056,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Mount/v1/Delete:
     get:
       tags:
@@ -12357,6 +13074,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Mount/v1/Enable:
     get:
       tags:
@@ -12374,6 +13092,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Mount/v1/Disable:
     get:
       tags:
@@ -12391,6 +13110,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Mount.Wizard/v1/Save:
     get:
       tags:
@@ -12408,6 +13128,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Mount.Wizard/v1/BackupEnum:
     get:
       tags:
@@ -12425,6 +13146,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Reindex/v1/Start:
     get:
       tags:
@@ -12442,6 +13164,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.Reindex/v1/Stop:
     get:
       tags:
@@ -12459,6 +13182,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.ShareRecording/v1/EnableShare:
     get:
       tags:
@@ -12476,6 +13200,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.ShareRecording/v1/Download:
     get:
       tags:
@@ -12493,6 +13218,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.ShareRecording/v1/Play:
     get:
       tags:
@@ -12510,6 +13236,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Recording.ShareRecording/v1/PlayHtmlEmbedded:
     get:
       tags:
@@ -12527,6 +13254,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.RecordingPicker/v1/EnumInterval:
     get:
       tags:
@@ -12544,6 +13272,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.RecordingPicker/v1/RecordPartialInfo:
     get:
       tags:
@@ -12561,6 +13290,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.RecordingPicker/v1/SearchAvaiDate:
     get:
       tags:
@@ -12578,6 +13308,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.RecordingPicker/v1/SearchLatestDate:
     get:
       tags:
@@ -12595,6 +13326,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.RecordingPicker/v1/InstantSearch:
     get:
       tags:
@@ -12612,6 +13344,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ReportCenter/v1/CameraReport:
     get:
       tags:
@@ -12629,6 +13362,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ReportCenter/v1/CameraStorage:
     get:
       tags:
@@ -12646,6 +13380,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/List:
     get:
       tags:
@@ -12663,6 +13398,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/ListRecShare:
     get:
       tags:
@@ -12680,6 +13416,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/CreateRecShare:
     get:
       tags:
@@ -12697,6 +13434,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/DelRecShare:
     get:
       tags:
@@ -12714,6 +13452,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/EditRecShare:
     get:
       tags:
@@ -12731,6 +13470,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/ListUsingCam:
     get:
       tags:
@@ -12748,6 +13488,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/CheckStorageMigrating:
     get:
       tags:
@@ -12765,6 +13506,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/ListMountedFolder:
     get:
       tags:
@@ -12782,6 +13524,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/CreateRemoteRecShare:
     get:
       tags:
@@ -12799,6 +13542,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/ReconnetRemoteMount:
     get:
       tags:
@@ -12816,6 +13560,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/DecryptByFile:
     get:
       tags:
@@ -12833,6 +13578,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/ListShareUsage:
     get:
       tags:
@@ -12850,6 +13596,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/CheckSharePriv:
     get:
       tags:
@@ -12867,6 +13614,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Share/v1/SetSharePriv:
     get:
       tags:
@@ -12884,6 +13632,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/List:
     get:
       tags:
@@ -12901,6 +13650,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/CountByCategory:
     get:
       tags:
@@ -12918,6 +13668,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/ChkFileExist:
     get:
       tags:
@@ -12935,6 +13686,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/Download:
     get:
       tags:
@@ -12952,6 +13704,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/ChkContainLocked:
     get:
       tags:
@@ -12969,6 +13722,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/GetSetting:
     get:
       tags:
@@ -12986,6 +13740,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/SaveSetting:
     get:
       tags:
@@ -13003,6 +13758,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/LoadSnapshot:
     get:
       tags:
@@ -13020,6 +13776,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/ChkSnapshotValid:
     get:
       tags:
@@ -13037,6 +13794,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/Save:
     get:
       tags:
@@ -13054,6 +13812,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/Edit:
     get:
       tags:
@@ -13071,6 +13830,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/Lock:
     get:
       tags:
@@ -13088,6 +13848,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/Unlock:
     get:
       tags:
@@ -13105,6 +13866,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/LockFiltered:
     get:
       tags:
@@ -13122,6 +13884,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/UnlockFiltered:
     get:
       tags:
@@ -13139,6 +13902,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/Delete:
     get:
       tags:
@@ -13156,6 +13920,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/DeleteFiltered:
     get:
       tags:
@@ -13173,6 +13938,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/TakeSnapshot:
     get:
       tags:
@@ -13190,6 +13956,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/MigratingStatus:
     get:
       tags:
@@ -13207,6 +13974,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.SnapShot/v1/GetPushServSnapshot:
     get:
       tags:
@@ -13224,6 +13992,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Sort/v1/Set:
     get:
       tags:
@@ -13241,6 +14010,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Stream/v1/EventStream:
     get:
       tags:
@@ -13258,6 +14028,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Stream/v1/EventMultipartFetch:
     get:
       tags:
@@ -13275,6 +14046,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Stream.VideoStreaming/v1/Stream:
     get:
       tags:
@@ -13292,6 +14064,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Stream.VideoStreaming/v1/Open:
     get:
       tags:
@@ -13309,6 +14082,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Stream.VideoStreaming/v1/Close:
     get:
       tags:
@@ -13326,6 +14100,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Stream.VideoStreaming/v1/Query:
     get:
       tags:
@@ -13343,6 +14118,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/Reboot:
     get:
       tags:
@@ -13360,6 +14136,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/Shutdown:
     get:
       tags:
@@ -13377,6 +14154,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/Network:
     get:
       tags:
@@ -13394,6 +14172,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/Info:
     get:
       tags:
@@ -13411,6 +14190,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/TimeGet:
     get:
       tags:
@@ -13428,6 +14208,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/TimeSet:
     get:
       tags:
@@ -13445,6 +14226,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/SyncNtp:
     get:
       tags:
@@ -13462,6 +14244,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/GetFirmwareInfo:
     get:
       tags:
@@ -13479,6 +14262,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/CheckUpgradeEnv:
     get:
       tags:
@@ -13496,6 +14280,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/Upgrade:
     get:
       tags:
@@ -13513,6 +14298,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/GetUpgradeProgress:
     get:
       tags:
@@ -13530,6 +14316,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/AutoUpdateEnable:
     get:
       tags:
@@ -13547,6 +14334,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/AutoUpdateDisable:
     get:
       tags:
@@ -13564,6 +14352,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/SystemLanguage:
     get:
       tags:
@@ -13581,6 +14370,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/GetTlsProfile:
     get:
       tags:
@@ -13598,6 +14388,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/BeepPause:
     get:
       tags:
@@ -13615,6 +14406,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/GetBeepStatus:
     get:
       tags:
@@ -13632,6 +14424,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/SetWatermarkData:
     get:
       tags:
@@ -13649,6 +14442,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/SetRecordEncryptKey:
     get:
       tags:
@@ -13666,6 +14460,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/DisableRecordEncryptKey:
     get:
       tags:
@@ -13683,6 +14478,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/ForceChangeRecordEncryptKey:
     get:
       tags:
@@ -13700,6 +14496,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/VerifyRecordEncryptKey:
     get:
       tags:
@@ -13717,6 +14514,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.System/v1/ExportRecordEncryptKey:
     get:
       tags:
@@ -13734,6 +14532,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TaskQueue/v1/List:
     get:
       tags:
@@ -13751,6 +14550,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TaskQueue/v1/Clear:
     get:
       tags:
@@ -13768,6 +14568,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TaskQueue/v1/GetSetting:
     get:
       tags:
@@ -13785,6 +14586,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TaskQueue/v1/SetSetting:
     get:
       tags:
@@ -13802,6 +14604,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TaskQueue/v1/LongPolling:
     get:
       tags:
@@ -13819,6 +14622,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Bookmark/v1/Create:
     get:
       tags:
@@ -13836,6 +14640,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Bookmark/v1/List:
     get:
       tags:
@@ -13853,6 +14658,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Bookmark/v1/DownloadRecording:
     get:
       tags:
@@ -13870,6 +14676,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Bookmark/v1/Edit:
     get:
       tags:
@@ -13887,6 +14694,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Bookmark/v1/Delete:
     get:
       tags:
@@ -13904,6 +14712,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Camera/v1/List:
     get:
       tags:
@@ -13921,6 +14730,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Camera/v1/Edit:
     get:
       tags:
@@ -13938,6 +14748,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Camera/v1/Get:
     get:
       tags:
@@ -13955,6 +14766,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Camera/v1/PTZControl:
     get:
       tags:
@@ -13972,6 +14784,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Camera/v1/PresetControl:
     get:
       tags:
@@ -13989,6 +14802,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Camera/v1/DOControl:
     get:
       tags:
@@ -14006,6 +14820,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Camera/v1/AudioOut:
     get:
       tags:
@@ -14023,6 +14838,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Emap/v1/ChangeLocation:
     get:
       tags:
@@ -14040,6 +14856,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.License/v1/Add:
     get:
       tags:
@@ -14057,6 +14874,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.License/v1/Delete:
     get:
       tags:
@@ -14074,6 +14892,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database/v1/Create:
     get:
       tags:
@@ -14091,6 +14910,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database/v1/List:
     get:
       tags:
@@ -14108,6 +14928,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database/v1/Edit:
     get:
       tags:
@@ -14125,6 +14946,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Database/v1/Delete:
     get:
       tags:
@@ -14142,6 +14964,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Event/v1/ListEvent:
     get:
       tags:
@@ -14159,6 +14982,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Event/v1/DownloadRecording:
     get:
       tags:
@@ -14176,6 +15000,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.LicensePlate.Event/v1/DownloadReport:
     get:
       tags:
@@ -14193,6 +15018,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.PeopleCounting/v1/DownloadReport:
     get:
       tags:
@@ -14210,6 +15036,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.PeopleVehicle/v1/List:
     get:
       tags:
@@ -14227,6 +15054,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.PeopleVehicle/v1/DownloadRecording:
     get:
       tags:
@@ -14244,6 +15072,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Recording/v1/Download:
     get:
       tags:
@@ -14261,6 +15090,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.Recording/v1/DownloadSnapshot:
     get:
       tags:
@@ -14278,6 +15108,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.SnapShot/v1/Download:
     get:
       tags:
@@ -14295,6 +15126,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.ThirdParty.SnapShot/v1/Take:
     get:
       tags:
@@ -14312,6 +15144,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse/v1/SaveTask:
     get:
       tags:
@@ -14329,6 +15162,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse/v1/ListTask:
     get:
       tags:
@@ -14346,6 +15180,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse/v1/DeleteTask:
     get:
       tags:
@@ -14363,6 +15198,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse/v1/EnableTask:
     get:
       tags:
@@ -14380,6 +15216,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse/v1/DisableTask:
     get:
       tags:
@@ -14397,6 +15234,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse/v1/TestRecordingExist:
     get:
       tags:
@@ -14414,6 +15252,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse.Recording/v1/List:
     get:
       tags:
@@ -14431,6 +15270,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse.Recording/v1/CountByCategory:
     get:
       tags:
@@ -14448,6 +15288,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse.Recording/v1/Lock:
     get:
       tags:
@@ -14465,6 +15306,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse.Recording/v1/Unlock:
     get:
       tags:
@@ -14482,6 +15324,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse.Recording/v1/Delete:
     get:
       tags:
@@ -14499,6 +15342,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse.Recording/v1/LockFilter:
     get:
       tags:
@@ -14516,6 +15360,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse.Recording/v1/UnlockFilter:
     get:
       tags:
@@ -14533,6 +15378,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse.Recording/v1/DeleteFilter:
     get:
       tags:
@@ -14550,6 +15396,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse.Recording/v1/DeleteAll:
     get:
       tags:
@@ -14567,6 +15414,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.TimeLapse.Recording/v1/EventFlushHeader:
     get:
       tags:
@@ -14584,6 +15432,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/Enum:
     get:
       tags:
@@ -14601,6 +15450,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/CountByCategory:
     get:
       tags:
@@ -14618,6 +15468,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/Save:
     get:
       tags:
@@ -14635,6 +15486,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/Delete:
     get:
       tags:
@@ -14652,6 +15504,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/Enable:
     get:
       tags:
@@ -14669,6 +15522,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/Disable:
     get:
       tags:
@@ -14686,6 +15540,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/GetEventConf:
     get:
       tags:
@@ -14703,6 +15558,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/SetEventConf:
     get:
       tags:
@@ -14720,6 +15576,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/ConnectAnonymousDevice:
     get:
       tags:
@@ -14737,6 +15594,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/DisconnectAnonymousDevice:
     get:
       tags:
@@ -14754,6 +15612,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/PauseAnonymousDevice:
     get:
       tags:
@@ -14771,6 +15630,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/ResumeAnonymousDevice:
     get:
       tags:
@@ -14788,6 +15648,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/GetAnonymousDeviceData:
     get:
       tags:
@@ -14805,6 +15666,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/ClearAnonymousDeviceData:
     get:
       tags:
@@ -14822,6 +15684,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Device/v1/GetEncodingList:
     get:
       tags:
@@ -14839,6 +15702,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/Enum:
     get:
       tags:
@@ -14856,6 +15720,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/CountByCategory:
     get:
       tags:
@@ -14873,6 +15738,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/Lock:
     get:
       tags:
@@ -14890,6 +15756,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/Unlock:
     get:
       tags:
@@ -14907,6 +15774,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/Delete:
     get:
       tags:
@@ -14924,6 +15792,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/Begin:
     get:
       tags:
@@ -14941,6 +15810,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/Complete:
     get:
       tags:
@@ -14958,6 +15828,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/Cancel:
     get:
       tags:
@@ -14975,6 +15846,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/AppendData:
     get:
       tags:
@@ -14992,6 +15864,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/Insert:
     get:
       tags:
@@ -15009,6 +15882,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/Test:
     get:
       tags:
@@ -15026,6 +15900,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/SetArchiveConf:
     get:
       tags:
@@ -15043,6 +15918,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/GetArchiveConf:
     get:
       tags:
@@ -15060,6 +15936,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/MigratingStatus:
     get:
       tags:
@@ -15077,6 +15954,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/EventFlushHeader:
     get:
       tags:
@@ -15094,6 +15972,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/DownloadLog:
     get:
       tags:
@@ -15111,6 +15990,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Transactions.Transaction/v2/Download:
     get:
       tags:
@@ -15128,6 +16008,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/Enum:
     get:
       tags:
@@ -15145,6 +16026,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/LoadProfile:
     get:
       tags:
@@ -15162,6 +16044,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/LoadOptions:
     get:
       tags:
@@ -15179,6 +16062,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/Detail:
     get:
       tags:
@@ -15196,6 +16080,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/CheckUsername:
     get:
       tags:
@@ -15213,6 +16098,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/CheckPwdrules:
     get:
       tags:
@@ -15230,6 +16116,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/CheckUserExist:
     get:
       tags:
@@ -15247,6 +16134,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/SaveOptions:
     get:
       tags:
@@ -15264,6 +16152,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/Cancel:
     get:
       tags:
@@ -15281,6 +16170,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/DeleteProfile:
     get:
       tags:
@@ -15298,6 +16188,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/EditUser:
     get:
       tags:
@@ -15315,6 +16206,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/EditPrivilege:
     get:
       tags:
@@ -15332,6 +16224,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/Enable:
     get:
       tags:
@@ -15349,6 +16242,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/Disable:
     get:
       tags:
@@ -15366,6 +16260,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/DeleteUser:
     get:
       tags:
@@ -15383,6 +16278,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/CreateUser:
     get:
       tags:
@@ -15400,6 +16296,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/SaveViewMode:
     get:
       tags:
@@ -15417,6 +16314,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/CheckHomeEnable:
     get:
       tags:
@@ -15434,6 +16332,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/Download:
     get:
       tags:
@@ -15451,6 +16350,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/SetRemindQuickConnectTunnel:
     get:
       tags:
@@ -15468,6 +16368,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/UpdateDomain:
     get:
       tags:
@@ -15485,6 +16386,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/DeleteGroup:
     get:
       tags:
@@ -15502,6 +16404,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/SaveGroup:
     get:
       tags:
@@ -15519,6 +16422,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/CheckGroupExist:
     get:
       tags:
@@ -15536,6 +16440,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/SetAdvSettings:
     get:
       tags:
@@ -15553,6 +16458,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.UserPrivilege/v2/GetAdvSettings:
     get:
       tags:
@@ -15570,6 +16476,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.VideoStreaming/v1/Stream:
     get:
       tags:
@@ -15587,6 +16494,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.VideoStreaming/v1/Query:
     get:
       tags:
@@ -15604,6 +16512,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Webhook/v1/GenerateToken:
     get:
       tags:
@@ -15621,6 +16530,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Webhook/v1/CheckTokenExist:
     get:
       tags:
@@ -15638,6 +16548,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Webhook/v1/Incoming:
     get:
       tags:
@@ -15655,6 +16566,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.Webhook/v1/GetThumbnail:
     get:
       tags:
@@ -15672,6 +16584,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.YoutubeLive/v1/Load:
     get:
       tags:
@@ -15689,6 +16602,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.YoutubeLive/v1/Save:
     get:
       tags:
@@ -15706,6 +16620,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.YoutubeLive/v1/CloseLive:
     get:
       tags:
@@ -15723,6 +16638,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SurveillanceStation.YoutubeLive/v1/GetConnectStatus:
     get:
       tags:
@@ -15740,3 +16656,4 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:

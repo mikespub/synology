@@ -168,6 +168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.Bookmark/v1/del:
     get:
       tags:
@@ -185,6 +186,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.Bookmark/v1/get:
     get:
       tags:
@@ -202,6 +204,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.Bookmark/v1/add:
     get:
       tags:
@@ -219,6 +222,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.Elastic.SearchHistory/v1/delete:
     get:
       tags:
@@ -236,6 +240,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.Elastic.SearchHistory/v1/get:
     get:
       tags:
@@ -253,6 +258,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.Elastic.Spotlight/v1/boost:
     get:
       tags:
@@ -270,6 +276,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.Elastic.Term/v1/list_avail_db:
     get:
       tags:
@@ -287,6 +294,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.Elastic.Term/v1/suggest:
     get:
       tags:
@@ -304,6 +312,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.File/v1/get:
     get:
       tags:
@@ -321,6 +330,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: path
+          required: true
+          type: string
+          default: required
   /SYNO.Finder.File.Cover/v1/get:
     get:
       tags:
@@ -338,6 +353,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: full_path
+          required: true
+          type: string
+          default: required
   /SYNO.Finder.File.Thumbnail/v1/get:
     get:
       tags:
@@ -355,6 +376,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: full_path
+          required: true
+          type: string
+          default: required
   /SYNO.Finder.FileIndexing.Folder/v1/reindex:
     get:
       tags:
@@ -372,6 +399,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Folder/v1/delete:
     get:
       tags:
@@ -389,6 +417,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Folder/v1/check:
     get:
       tags:
@@ -406,6 +435,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Folder/v1/stop_check:
     get:
       tags:
@@ -423,6 +453,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Folder/v1/list:
     get:
       tags:
@@ -440,6 +471,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Folder/v1/list_group:
     get:
       tags:
@@ -457,6 +489,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Folder/v1/summary:
     get:
       tags:
@@ -474,6 +507,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Folder/v1/set:
     get:
       tags:
@@ -491,6 +525,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Folder/v1/add:
     get:
       tags:
@@ -508,6 +543,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Folder/v1/get:
     get:
       tags:
@@ -525,6 +561,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Highlight/v1/highlight:
     get:
       tags:
@@ -542,6 +579,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Indicate/v1/indicate:
     get:
       tags:
@@ -559,6 +597,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Search/v1/search:
     get:
       tags:
@@ -576,6 +615,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Status/v1/resume:
     get:
       tags:
@@ -593,6 +633,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Status/v1/pause:
     get:
       tags:
@@ -610,6 +651,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Status/v1/get:
     get:
       tags:
@@ -627,6 +669,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.FileIndexing.Term/v1/update:
     get:
       tags:
@@ -644,6 +687,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.Preference/v1/set:
     get:
       tags:
@@ -661,6 +705,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.Preference/v1/get:
     get:
       tags:
@@ -678,6 +723,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.Settings/v1/set:
     get:
       tags:
@@ -695,6 +741,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.Settings/v1/get:
     get:
       tags:
@@ -712,6 +759,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.UserGrp/v1/list_group:
     get:
       tags:
@@ -729,6 +777,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Finder.UserGrp/v1/list_user:
     get:
       tags:
@@ -746,3 +795,4 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:

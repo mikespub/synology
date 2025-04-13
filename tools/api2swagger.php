@@ -19,11 +19,11 @@
 
 // TODO: run example.php afterwards to copy files for Swagger Editor
 //
-//refresh_api_files('../docs/');
+//refresh_api_files(dirname(__DIR__) . '/docs/');
 //merge_query_files();
 //exit;
 
-$json_file = 'combined.json';
+$json_file = __DIR__ . '/combined.json';
 //if (true || !is_file($json_file)) {
 if (!is_file($json_file)) {
     combine_json_files();
@@ -35,16 +35,25 @@ if (!$apilist) {
     echo json_last_error();
     exit;
 }
-generate_swagger($apilist, true);
+$required = [];
+$json_file = __DIR__ . '/required.json';
+if (is_file($json_file)) {
+    $contents = file_get_contents($json_file);
+    $required = json_decode($contents, true);
+}
+//$basedir = __DIR__ . '/errors/';
+//$required = check_required_errors($basedir, $required);
+//file_put_contents($json_file, json_encode($required, JSON_PRETTY_PRINT));
+generate_swagger($apilist, $required, true);
 exit;
 
 function load_template($name)
 {
-    $file = 'templates' . DIRECTORY_SEPARATOR . $name . '.yaml';
+    $file = __DIR__ . '/templates/' . $name . '.yaml';
     return file_get_contents($file);
 }
 
-function replace_params($template, $params)
+function replace_params($template, $params = [])
 {
     $search = [];
     $replace = [];
@@ -67,7 +76,7 @@ function get_ip_address()
     return 'diskstation';
 }
 
-function generate_swagger($apilist, $debug = false)
+function generate_swagger($apilist, $required, $debug = false)
 {
     // if running on the Synology, this should be enough to start
     //$host = get_ip_address();
@@ -83,10 +92,14 @@ function generate_swagger($apilist, $debug = false)
     }
 
     $header_tmpl = load_template('header');
-    $path_tmpl = load_template('path');
-    $query_tmpl = load_template('query');
-    $rest_tmpl = load_template('rest');
-    $header_rest_tmpl = load_template('header_rest');
+    $path_api_tmpl = load_template('path_api');
+    $path_method_tmpl = load_template('path_method');
+    $query_api_tmpl = load_template('query_api');
+    $query_path_tmpl = load_template('query_path');
+    $rest_header_tmpl = load_template('rest_header');
+    $rest_api_tmpl = load_template('rest_api');
+    $rest_method_tmpl = load_template('rest_method');
+    $rest_param_tmpl = load_template('rest_param');
 
     $params = [];
     $params['host'] = $host;
@@ -94,12 +107,10 @@ function generate_swagger($apilist, $debug = false)
     $params['http'] = $http;
     $params['location'] = 'path';
     $path_output = replace_params($header_tmpl, $params);
-    $path_output .= load_template('api_path');
+    $path_output .= $path_api_tmpl;
     $params['location'] = 'query';
     $query_output = replace_params($header_tmpl, $params);
-    $query_output .= load_template('api_query');
-    //$rest_output = replace_params($header_tmpl, $params);
-    //$rest_output .= load_template('api_rest');
+    $query_output .= $query_api_tmpl;
 
     $api2url = [];
     $paths = [];
@@ -110,19 +121,19 @@ function generate_swagger($apilist, $debug = false)
         $params['port'] = $port;
         $params['http'] = $http;
         $params['location'] = 'query';
-        $rest_output = replace_params($header_rest_tmpl, $params);
-        $rest_output .= load_template('api_rest');
+        $rest_output = replace_params($rest_header_tmpl, $params);
+        $rest_output .= $rest_api_tmpl;
         foreach ($json as $api => $values) {
             $params = [];
             $params['api'] = $api;
             echo "\t" . $api . "\n";
             $params['tag'] = explode('.', $api)[1];
-            $params['tag2'] = explode('.', $api)[2];
+            $params['tag2'] = explode('.', $api)[2] ?? '';
             foreach ($values as $idx => $val) {
                 if (is_array($val)) {
-                    echo "\t\t".$idx.":".json_encode($val)."\n";
+                    echo "\t\t" . $idx . ":" . json_encode($val) . "\n";
                 } else {
-                    echo "\t\t".$idx.":".$val."\n";
+                    echo "\t\t" . $idx . ":" . $val . "\n";
                 }
             }
             //continue;
@@ -141,16 +152,14 @@ function generate_swagger($apilist, $debug = false)
             $api2url[$api] = $path;
             $paths[$path] = $api;
             $params['path'] = $path;
-            if ($values['lib']) {
+            if (!empty($values['lib'])) {
                 $params['lib'] = $values['lib'];
             }
             $params['version'] = $values['maxVersion'];
-            $methods = $values['methods'][$params['version']];
+            $methods = $values['methods'][$params['version']] ?? false;
             if (!$methods) {
-                var_dump($values);
-                var_dump($params);
-                $methods = $values['methods'][$values['minVersion']] ?? [];
                 $params['version'] = $values['minVersion'];
+                $methods = $values['methods'][$values['minVersion']] ?? [];
                 //exit;
             }
             echo "\t\t(" . count($methods) . ") " . implode(',', $methods) . "\n";
@@ -170,37 +179,38 @@ function generate_swagger($apilist, $debug = false)
             }
             $params['methodlist'] = implode(', ', $methods);
             $params['api2'] = implode('_', array_slice(explode('.', $api), 2));
-            $query_output .= replace_params($query_tmpl, $params);
+            $query_output .= replace_params($query_path_tmpl, $params);
             foreach ($methods as $method) {
                 $params['method'] = $method;
-                $path_output .= replace_params($path_tmpl, $params);
-                $rest_output .= replace_params($rest_tmpl, $params);
+                $path_output .= replace_params($path_method_tmpl, $params);
+                if ($api == 'SYNO.API.Info' && $method == 'query') {
+                    continue;
+                }
+                $rest_output .= replace_params($rest_method_tmpl, $params);
+                if (empty($required[$api][$method])) {
+                    continue;
+                }
+                // @todo add required params
+                foreach ($required[$api][$method] as $name => $value) {
+                    $rest_output .= replace_params($rest_param_tmpl, ['name' => $name, 'value' => $value]);
+                }
             }
         }
         $tag = explode('.', $root)[1];
-        //$rest_file = 'swagger_'.$tag.'.yaml';
-        $rest_file = $tag . '.yaml';
+        $rest_file = __DIR__ . '/swagger/' . $tag . '.yaml';
         file_put_contents($rest_file, $rest_output);
         echo 'Generated ' . $rest_file . "\n";
     }
-    //exit;
 
-    //$path_file = 'swagger_path.yaml';
-    $path_file = 'path.yaml';
+    $path_file = __DIR__ . '/swagger/path.yaml';
     file_put_contents($path_file, $path_output);
     echo 'Generated ' . $path_file . "\n";
 
-    //$query_file = 'swagger_query.yaml';
-    $query_file = 'query.yaml';
+    $query_file = __DIR__ . '/swagger/query.yaml';
     file_put_contents($query_file, $query_output);
     echo 'Generated ' . $query_file . "\n";
 
-    //$rest_file = 'swagger_rest.yaml';
-    //$rest_file = 'rest.yaml';
-    //file_put_contents($rest_file, $rest_output);
-    //echo 'Generated '.$rest_file."\n";
-
-    $map_file = 'rest_mapping.php';
+    $map_file = __DIR__ . '/rest_mapping.php';
     $map_output = '<?php
 
 const API_PATH = \'entry.cgi\';
@@ -218,6 +228,54 @@ $api2url = [];
     }
     file_put_contents($map_file, $map_output);
     echo 'Generated ' . $map_file . "\n";
+}
+
+/**
+ * {
+ *     "error": {
+ *         "code": 120,
+ *         "errors": {
+ *             "name": "node",
+ *             "reason": "required"
+ *         }
+ *     },
+ *     "success": false
+ * }
+ */
+function check_required_errors($basedir, $required = [])
+{
+    $files = scandir($basedir);
+    $errors = [];
+    foreach ($files as $file) {
+        $filepath = $basedir . DIRECTORY_SEPARATOR . $file;
+        if (!is_file($filepath)) {
+            continue;
+        }
+        $contents = file_get_contents($filepath);
+        if (!str_contains($contents, 'required')) {
+            continue;
+        }
+        $json = json_decode($contents, true);
+        if (empty($json) || empty($json['error']) || empty($json['error']['code'])) {
+            echo $file . "\n";
+            continue;
+        }
+        if ($json['error']['code'] != 120) {
+            echo $file . ' ' . $json['error']['code'] . "\n";
+            continue;
+        }
+        [$api_name, $method] = explode('-', str_replace('.json', '', $file));
+        $name = $json['error']['errors']['name'];
+        $required[$api_name] ??= [];
+        $required[$api_name][$method] ??= [];
+        if (isset($required[$api_name][$method][$name])) {
+            echo $api_name . ' ' . $method . ' ' . $name . '=' . $required[$api_name][$method][$name] . "\n";
+        } else {
+            echo $api_name . ' ' . $method . ' ' . $name . "\n";
+            $required[$api_name][$method][$name] = 'required';
+        }
+    }
+    return $required;
 }
 
 function clean_values($values)
@@ -274,16 +332,16 @@ function merge_assoc_array($old, $new)
 function merge_query_files()
 {
     $files = [];
-    $files['old'] = 'query.old.json';
-    $files['cur'] = 'query.cur.json';
-    $files['new'] = 'query.new.json';
+    $files['old'] = __DIR__ . '/query.old.json';
+    $files['cur'] = __DIR__ . '/query.cur.json';
+    $files['new'] = __DIR__ . '/query.new.json';
     $json = [];
     $apilist = [];
     foreach ($files as $key => $filepath) {
         $contents = file_get_contents($filepath);
         $json[$key] = json_decode($contents, true);
     }
-    $files['tmp'] = 'query.tmp.json';
+    $files['tmp'] = __DIR__ . '/query.tmp.json';
     $json['tmp'] = merge_assoc_array($json['old'], $json['cur']);
     $json['tmp'] = merge_assoc_array($json['tmp'], $json['new']);
     $json_output = json_encode($json['tmp'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
@@ -296,7 +354,7 @@ function combine_json_files()
     // TODO: retrieve current paths for active packages
     // http://192.168.x.x/rest.php/SYNO.API.Info/v1/query
     // http://localhost:5000/webapi/query.cgi?api=SYNO.API.Info&version=1&method=query&query=ALL
-    $filepath = 'query.json';
+    $filepath = __DIR__ . '/query.json';
     $auth = [];
     if (is_file($filepath)) {
         $contents = file_get_contents($filepath);
@@ -313,7 +371,7 @@ function combine_json_files()
     //exit;
 
     // Load API json files from ../docs directory
-    $dir = '..' . DIRECTORY_SEPARATOR . 'docs';
+    $dir = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'docs';
     $files = scandir($dir);
     $apilist = [];
     foreach ($files as $file) {
@@ -346,13 +404,13 @@ function combine_json_files()
                     }
                 } else {
                     if (!empty($values['path']) && $values['path'] != $auth[$api]['path']) {
-                        echo "Invalid path ".$values['path']." for api $api in $file\n";
+                        echo "Invalid path " . $values['path'] . " for api $api in $file\n";
                         //continue;
                         //exit;
                         $values['path'] = $auth[$api]['path'];
                     }
                     if (!empty($values['maxVersion']) && $values['maxVersion'] != $auth[$api]['maxVersion']) {
-                        echo "Invalid maxVersion ".$values['maxVersion']." for api $api in $file\n";
+                        echo "Invalid maxVersion " . $values['maxVersion'] . " for api $api in $file\n";
                         exit;
                     }
                 }
@@ -375,18 +433,17 @@ function combine_json_files()
     //exit;
     ksort($apilist);
     $json_output = json_encode($apilist, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-    $json_file = 'combined.json';
+    $json_file = __DIR__ . '/combined.json';
     file_put_contents($json_file, $json_output);
     echo 'Generated ' . $json_file . "\n";
     foreach ($apilist as $root => $json) {
         ksort($json);
         $json_output = json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
         $tag = explode('.', $root)[1];
-        $json_file = $tag . '.json';
+        $json_file = dirname(__DIR__) . '/docs/' . $tag . '.json';
         file_put_contents($json_file, $json_output);
         echo 'Generated ' . $json_file . "\n";
     }
-    //var_dump($apilist);
 }
 
 function refresh_api_files($basedir)

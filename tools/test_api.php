@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file tries to call the 'getinfo', 'list' or 'get' method for
  * every API defined in combined.json. Results are matched against a
@@ -54,7 +55,7 @@ foreach ($api_list as $root => $json) {
     ksort($json);
     foreach ($json as $api_name => $values) {
         $version = $values['maxVersion'];
-        $methods = $values['methods'][$version] ?? [];
+        $methods = $values['methods'][$version] ?? false;
         if (!$methods) {
             $version = $values['minVersion'];
             $methods = $values['methods'][$version] ?? [];
@@ -97,7 +98,7 @@ foreach ($api_list as $root => $json) {
 
                     // Validate
                     $validator = new JsonSchema\Validator();
-                    $validator->validate($data, (object)['$ref' => 'file://' . realpath($schema_file)]);
+                    $validator->validate($data, (object) ['$ref' => 'file://' . realpath($schema_file)]);
 
                     if ($validator->isValid()) {
                         echo "The supplied JSON validates against the schema.\n";

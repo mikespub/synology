@@ -168,6 +168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Lunbackup/v1/space_check:
     get:
       tags:
@@ -185,6 +186,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Lunbackup/v1/dir_check:
     get:
       tags:
@@ -202,6 +204,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Lunbackup/v1/task_owner_check:
     get:
       tags:
@@ -219,6 +222,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Lunbackup/v1/task_folder_enum:
     get:
       tags:
@@ -236,6 +240,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Lunbackup/v1/file_config_get:
     get:
       tags:
@@ -253,6 +258,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Lunbackup/v1/file_config_set:
     get:
       tags:
@@ -270,6 +276,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Lunbackup/v1/cksum_do:
     get:
       tags:
@@ -287,6 +294,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Lunbackup/v1/cksum_gen:
     get:
       tags:
@@ -304,6 +312,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Lunbackup/v1/cksum_status_get:
     get:
       tags:
@@ -321,3 +330,4 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:

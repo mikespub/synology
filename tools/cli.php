@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file provides a command line interface and menu to call
  * the Synology API.
@@ -119,10 +120,10 @@ class ApiCommand
         $api_names = [];
         foreach ($json as $api_name => $values) {
             $version = $values['maxVersion'];
-            $methods = $values['methods'][$version];
+            $methods = $values['methods'][$version] ?? false;
             if (!$methods) {
                 $version = $values['minVersion'];
-                $methods = $values['methods'][$version];
+                $methods = $values['methods'][$version] ?? [];
             }
             $api_names[$api_name] = implode(', ', $methods);
         }
@@ -135,10 +136,10 @@ class ApiCommand
         $json = $this->api_list[$root];
         $values = $json[$api_name];
         $version = $values['maxVersion'];
-        $methods = $values['methods'][$version];
+        $methods = $values['methods'][$version] ?? false;
         if (!$methods) {
             $version = $values['minVersion'];
-            $methods = $values['methods'][$version];
+            $methods = $values['methods'][$version] ?? [];
         }
         $params = [];
         if (array_key_exists($api_name, $this->required)) {

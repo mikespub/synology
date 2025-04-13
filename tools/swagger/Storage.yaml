@@ -168,6 +168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.BtrfsDedupe/v1/manual_dedupe:
     get:
       tags:
@@ -185,6 +186,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.BtrfsDedupe/v1/dry_run:
     get:
       tags:
@@ -202,6 +204,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.BtrfsDedupe/v1/get_volume_info:
     get:
       tags:
@@ -219,6 +222,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.BtrfsDedupe/v1/set_volume_schedule_config:
     get:
       tags:
@@ -236,6 +240,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.BtrfsDedupe/v1/set_schedule_plan:
     get:
       tags:
@@ -253,6 +258,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.BtrfsDedupe/v1/get_schedule_plan:
     get:
       tags:
@@ -270,6 +276,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.BtrfsDedupe/v1/check_quota:
     get:
       tags:
@@ -287,6 +294,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.BtrfsDedupe/v1/rescan_quota_v2:
     get:
       tags:
@@ -304,6 +312,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.BtrfsDedupe/v1/set_reclaim_type:
     get:
       tags:
@@ -321,6 +330,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.BtrfsDedupe/v1/stop:
     get:
       tags:
@@ -338,6 +348,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Cache.Protection/v1/get_config:
     get:
       tags:
@@ -355,6 +366,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Cache.Protection/v1/update_config:
     get:
       tags:
@@ -372,6 +384,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Cache.Protection/v1/enable_passive:
     get:
       tags:
@@ -389,6 +402,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Cache.Protection/v1/disable_passive:
     get:
       tags:
@@ -406,6 +420,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Cache.Protection/v1/get_status:
     get:
       tags:
@@ -423,6 +438,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Cache.Protection/v1/get_status_all:
     get:
       tags:
@@ -440,6 +456,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Check/v1/do_disk_scan:
     get:
       tags:
@@ -457,6 +474,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Check/v1/remove_ask_for_remap_scan:
     get:
       tags:
@@ -474,6 +492,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Check/v1/remove_ask_for_wcache_lost_data_scrubbing:
     get:
       tags:
@@ -491,6 +510,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Check/v1/remove_ask_for_fsck_scan:
     get:
       tags:
@@ -508,6 +528,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Check/v1/remove_ask_for_fsck:
     get:
       tags:
@@ -525,6 +546,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Check/v1/is_data_scrubbing:
     get:
       tags:
@@ -542,6 +564,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Check/v1/do_data_scrubbing:
     get:
       tags:
@@ -559,6 +582,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Check/v1/ignore_data_scrubbing:
     get:
       tags:
@@ -576,6 +600,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Check/v1/is_building:
     get:
       tags:
@@ -593,6 +618,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Check/v1/reboot_after_rebuild:
     get:
       tags:
@@ -610,6 +636,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Check/v1/should_ask_for_fsck_scan:
     get:
       tags:
@@ -627,6 +654,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.DetectedPool/v1/assemble:
     get:
       tags:
@@ -644,6 +672,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.DetectedPool/v1/remove:
     get:
       tags:
@@ -661,6 +690,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.DualEnclosure/v1/load:
     get:
       tags:
@@ -678,6 +708,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/load:
     get:
       tags:
@@ -695,6 +726,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/exp_fw_update:
     get:
       tags:
@@ -712,6 +744,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/exp_fw_fail_get:
     get:
       tags:
@@ -729,6 +762,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/exp_fw_update_list_get:
     get:
       tags:
@@ -746,6 +780,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/exp_fw_update_status_get:
     get:
       tags:
@@ -763,6 +798,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/exp_fw_update_cancel_notify:
     get:
       tags:
@@ -780,6 +816,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/is_exp_connected:
     get:
       tags:
@@ -797,6 +834,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/sha_exp_fw_update:
     get:
       tags:
@@ -814,6 +852,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/sha_exp_fw_fail_get:
     get:
       tags:
@@ -831,6 +870,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/sha_exp_fw_update_list_get:
     get:
       tags:
@@ -848,6 +888,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/sha_exp_fw_update_status_get:
     get:
       tags:
@@ -865,6 +906,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/sha_exp_fw_update_cancel_notify:
     get:
       tags:
@@ -882,6 +924,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Enclosure/v1/sha_is_exp_connected:
     get:
       tags:
@@ -899,6 +942,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault/v1/enable:
     get:
       tags:
@@ -916,6 +960,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault/v1/disable:
     get:
       tags:
@@ -933,6 +978,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault/v1/verify_passwd:
     get:
       tags:
@@ -950,6 +996,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault/v1/reset:
     get:
       tags:
@@ -967,6 +1014,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault/v1/repair:
     get:
       tags:
@@ -984,6 +1032,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault/v1/set_autounlock_key:
     get:
       tags:
@@ -1001,6 +1050,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault/v1/get_info:
     get:
       tags:
@@ -1018,6 +1068,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault/v1/pack_for_ma:
     get:
       tags:
@@ -1035,6 +1086,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault/v1/set_for_ma:
     get:
       tags:
@@ -1052,6 +1104,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault/v1/sync_to_passive:
     get:
       tags:
@@ -1069,6 +1122,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault.UnlockMode/v1/get_passwd_wrong_record:
     get:
       tags:
@@ -1086,6 +1140,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault.UnlockMode/v1/enter_passwd:
     get:
       tags:
@@ -1103,6 +1158,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.EncryptionKeyVault.UnlockMode/v1/skip_passwd:
     get:
       tags:
@@ -1120,6 +1176,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/check_system_raid:
     get:
       tags:
@@ -1137,6 +1194,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/configure:
     get:
       tags:
@@ -1154,6 +1212,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/shared_cache_config_get:
     get:
       tags:
@@ -1171,6 +1230,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/shared_cache_config_set:
     get:
       tags:
@@ -1188,6 +1248,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/check_can_create:
     get:
       tags:
@@ -1205,6 +1266,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/is_redundancy_degraded:
     get:
       tags:
@@ -1222,6 +1284,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/estimate_raid_size:
     get:
       tags:
@@ -1239,6 +1302,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/estimate_mem_size:
     get:
       tags:
@@ -1256,6 +1320,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/check_volume_abnormal_cant_create_cache:
     get:
       tags:
@@ -1273,6 +1338,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/remove:
     get:
       tags:
@@ -1290,6 +1356,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/remove_cancel:
     get:
       tags:
@@ -1307,6 +1374,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/repair:
     get:
       tags:
@@ -1324,6 +1392,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/add_drive:
     get:
       tags:
@@ -1341,6 +1410,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/create_feasibility_hard_check:
     get:
       tags:
@@ -1358,6 +1428,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/enable:
     get:
       tags:
@@ -1375,6 +1446,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/check_can_lock_space:
     get:
       tags:
@@ -1392,6 +1464,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/advisor_poll:
     get:
       tags:
@@ -1409,6 +1482,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/check_pin_metadata_and_rec_size:
     get:
       tags:
@@ -1426,6 +1500,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/advisor_history_get:
     get:
       tags:
@@ -1443,6 +1518,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/advisor_start:
     get:
       tags:
@@ -1460,6 +1536,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/advisor_stop:
     get:
       tags:
@@ -1477,6 +1554,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Flashcache/v1/replace:
     get:
       tags:
@@ -1494,6 +1572,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.HddMan/v1/get:
     get:
       tags:
@@ -1511,6 +1590,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.HddMan/v1/set:
     get:
       tags:
@@ -1528,6 +1608,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.HddMan/v1/send_health_report:
     get:
       tags:
@@ -1545,6 +1626,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.HddMan/v1/set_all_nodes:
     get:
       tags:
@@ -1562,6 +1644,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/get:
     get:
       tags:
@@ -1579,6 +1662,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/set:
     get:
       tags:
@@ -1596,6 +1680,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/erase_all_data:
     get:
       tags:
@@ -1613,6 +1698,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/transfer_data:
     get:
       tags:
@@ -1630,6 +1716,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/get_key_list:
     get:
       tags:
@@ -1647,6 +1734,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/delete_key:
     get:
       tags:
@@ -1664,6 +1752,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/test_conn:
     get:
       tags:
@@ -1681,6 +1770,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/get_server_hostname:
     get:
       tags:
@@ -1698,6 +1788,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/check_loop:
     get:
       tags:
@@ -1715,6 +1806,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/get_version_info:
     get:
       tags:
@@ -1732,6 +1824,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/import_cert:
     get:
       tags:
@@ -1749,6 +1842,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/list_cert:
     get:
       tags:
@@ -1766,6 +1860,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/set_cert:
     get:
       tags:
@@ -1783,6 +1878,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/remove_cert:
     get:
       tags:
@@ -1800,6 +1896,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/renew_cert:
     get:
       tags:
@@ -1817,6 +1914,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.KMIP/v1/import_server_ca:
     get:
       tags:
@@ -1834,6 +1932,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/pre_delete_check:
     get:
       tags:
@@ -1851,6 +1950,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/cancel_data_scrubbing:
     get:
       tags:
@@ -1868,6 +1968,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/pause_data_scrubbing:
     get:
       tags:
@@ -1885,6 +1986,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/create:
     get:
       tags:
@@ -1902,6 +2004,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/data_scrubbing:
     get:
       tags:
@@ -1919,6 +2022,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/data_scrubbing_plain:
     get:
       tags:
@@ -1936,6 +2040,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/delete:
     get:
       tags:
@@ -1953,6 +2058,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/deactivate:
     get:
       tags:
@@ -1970,6 +2076,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/edit_desc:
     get:
       tags:
@@ -1987,6 +2094,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/get_setting:
     get:
       tags:
@@ -2004,6 +2112,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/set_setting:
     get:
       tags:
@@ -2021,6 +2130,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/enum_resource:
     get:
       tags:
@@ -2038,6 +2148,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/estimate_size:
     get:
       tags:
@@ -2055,6 +2166,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/expand_by_add_disk:
     get:
       tags:
@@ -2072,6 +2184,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/expand_unallocated:
     get:
       tags:
@@ -2089,6 +2202,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/expand_unfinished_shr:
     get:
       tags:
@@ -2106,6 +2220,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/migrate:
     get:
       tags:
@@ -2123,6 +2238,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/repair:
     get:
       tags:
@@ -2140,6 +2256,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/replace:
     get:
       tags:
@@ -2157,6 +2274,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/check_fast_repair:
     get:
       tags:
@@ -2174,6 +2292,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/is_disk_detected_old_info:
     get:
       tags:
@@ -2191,6 +2310,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/reassemble:
     get:
       tags:
@@ -2208,6 +2328,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/remove_missing_pool:
     get:
       tags:
@@ -2225,6 +2346,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/update_raid_sb_cache:
     get:
       tags:
@@ -2242,6 +2364,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Pool/v1/remove_raid_sb_cache:
     get:
       tags:
@@ -2259,6 +2382,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Scrubbing/v1/get_state:
     get:
       tags:
@@ -2276,6 +2400,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart/v1/get_health_info:
     get:
       tags:
@@ -2293,6 +2418,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart/v1/get_smart_info:
     get:
       tags:
@@ -2310,6 +2436,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart/v1/secure_erase:
     get:
       tags:
@@ -2327,6 +2454,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart/v1/list:
     get:
       tags:
@@ -2344,6 +2472,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart/v1/get_latest_online_drive_db_info:
     get:
       tags:
@@ -2361,6 +2490,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart/v1/update_smartctl_db:
     get:
       tags:
@@ -2378,6 +2508,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart/v1/smart_warning_set:
     get:
       tags:
@@ -2395,6 +2526,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart/v1/smart_warning_get:
     get:
       tags:
@@ -2412,6 +2544,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart.Scheduler/v1/get:
     get:
       tags:
@@ -2429,6 +2562,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart.Scheduler/v1/set:
     get:
       tags:
@@ -2446,6 +2580,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart.Scheduler/v1/list:
     get:
       tags:
@@ -2463,6 +2598,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart.Scheduler/v1/delete:
     get:
       tags:
@@ -2480,6 +2616,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart.Scheduler/v1/run:
     get:
       tags:
@@ -2497,6 +2634,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Smart.Scheduler/v1/change_state:
     get:
       tags:
@@ -2514,6 +2652,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Spare/v1/add:
     get:
       tags:
@@ -2531,6 +2670,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Spare/v1/edit:
     get:
       tags:
@@ -2548,6 +2688,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Spare/v1/delete:
     get:
       tags:
@@ -2565,6 +2706,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Spare/v1/potential_spares_dump:
     get:
       tags:
@@ -2582,6 +2724,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Spare/v1/list:
     get:
       tags:
@@ -2599,6 +2742,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Spare.Conf/v1/get:
     get:
       tags:
@@ -2616,6 +2760,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Spare.Conf/v1/set:
     get:
       tags:
@@ -2633,6 +2778,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/load_info:
     get:
       tags:
@@ -2650,6 +2796,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/load_bad_disks:
     get:
       tags:
@@ -2667,6 +2814,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/login_check:
     get:
       tags:
@@ -2684,6 +2832,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/repair_sys_partition:
     get:
       tags:
@@ -2701,6 +2850,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/repair_system_partition:
     get:
       tags:
@@ -2718,6 +2868,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/repair_system_partition_list:
     get:
       tags:
@@ -2735,6 +2886,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/repair_rootbackup:
     get:
       tags:
@@ -2752,6 +2904,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/set_schedule_plan:
     get:
       tags:
@@ -2769,6 +2922,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/get_schedule_plan:
     get:
       tags:
@@ -2786,6 +2940,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/set_resync_speed:
     get:
       tags:
@@ -2803,6 +2958,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/get_resync_speed:
     get:
       tags:
@@ -2820,6 +2976,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/set_data_scrubbing_schedule:
     get:
       tags:
@@ -2837,6 +2994,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/set_data_scrubbing_schedule_status:
     get:
       tags:
@@ -2854,6 +3012,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/set_fast_repair_config:
     get:
       tags:
@@ -2871,6 +3030,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/get_fast_repair_config:
     get:
       tags:
@@ -2888,6 +3048,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/set_auto_repair_config:
     get:
       tags:
@@ -2905,6 +3066,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/get_auto_repair_config:
     get:
       tags:
@@ -2922,6 +3084,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/get_sche_task_list:
     get:
       tags:
@@ -2939,6 +3102,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/reload_raid_config:
     get:
       tags:
@@ -2956,6 +3120,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/get_space_reclaim_status:
     get:
       tags:
@@ -2973,6 +3138,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/get_space_reclaim_schedule:
     get:
       tags:
@@ -2990,6 +3156,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/set_space_reclaim_schedule:
     get:
       tags:
@@ -3007,6 +3174,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/delay_space_reclaim:
     get:
       tags:
@@ -3024,6 +3192,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/delete_space_reclaim_background_task:
     get:
       tags:
@@ -3041,6 +3210,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Storage/v1/get_mib_collector_result:
     get:
       tags:
@@ -3058,6 +3228,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.TaipeiEnclosure/v1/load:
     get:
       tags:
@@ -3075,6 +3246,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/pre_delete_check:
     get:
       tags:
@@ -3092,6 +3264,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/cancel_data_scrubbing:
     get:
       tags:
@@ -3109,6 +3282,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/pause_data_scrubbing:
     get:
       tags:
@@ -3126,6 +3300,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/cancel_defrag:
     get:
       tags:
@@ -3143,6 +3318,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/cancel_fs_scrubbing:
     get:
       tags:
@@ -3160,6 +3336,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/create_on_existing_pool:
     get:
       tags:
@@ -3177,6 +3354,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/create:
     get:
       tags:
@@ -3194,6 +3372,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/data_scrubbing:
     get:
       tags:
@@ -3211,6 +3390,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/defrag:
     get:
       tags:
@@ -3228,6 +3408,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/delete:
     get:
       tags:
@@ -3245,6 +3426,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/deploy_unused:
     get:
       tags:
@@ -3262,6 +3444,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/enum_resource:
     get:
       tags:
@@ -3279,6 +3462,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/estimate_size:
     get:
       tags:
@@ -3296,6 +3480,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/expand_by_add_disk:
     get:
       tags:
@@ -3313,6 +3498,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/expand_pool_child:
     get:
       tags:
@@ -3330,6 +3516,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/expand_unallocated:
     get:
       tags:
@@ -3347,6 +3534,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/expand_unfinished_shr:
     get:
       tags:
@@ -3364,6 +3552,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/convert_shr_to_pool:
     get:
       tags:
@@ -3381,6 +3570,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/convert_shr_without_drive:
     get:
       tags:
@@ -3398,6 +3588,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/fs_scrubbing:
     get:
       tags:
@@ -3415,6 +3606,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/migrate:
     get:
       tags:
@@ -3432,6 +3624,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/next_trim_time_get:
     get:
       tags:
@@ -3449,6 +3642,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/repair:
     get:
       tags:
@@ -3466,6 +3660,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/ssd_trim_get:
     get:
       tags:
@@ -3483,6 +3678,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/ssd_trim_save:
     get:
       tags:
@@ -3500,6 +3696,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/vol_extent_size_get:
     get:
       tags:
@@ -3517,6 +3714,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/vol_extent_size_set:
     get:
       tags:
@@ -3534,6 +3732,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/transfer_to_rw:
     get:
       tags:
@@ -3551,6 +3750,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/get_space_usage:
     get:
       tags:
@@ -3568,6 +3768,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/enable_space_usage:
     get:
       tags:
@@ -3585,6 +3786,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/disable_space_usage:
     get:
       tags:
@@ -3602,6 +3804,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/set_setting:
     get:
       tags:
@@ -3619,6 +3822,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/failover_keep_rw:
     get:
       tags:
@@ -3636,6 +3840,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/get_dump_volumes:
     get:
       tags:
@@ -3653,6 +3858,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/unlock_by_vault:
     get:
       tags:
@@ -3670,6 +3876,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/get_recovery_key:
     get:
       tags:
@@ -3687,6 +3894,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/export_recovery_key:
     get:
       tags:
@@ -3704,6 +3912,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/fs_info_on_pool_meta_set:
     get:
       tags:
@@ -3721,6 +3930,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/fs_info_on_pool_meta_update:
     get:
       tags:
@@ -3738,6 +3948,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/change_recovery_key:
     get:
       tags:
@@ -3755,6 +3966,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/set_dek:
     get:
       tags:
@@ -3772,6 +3984,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/clean_dek:
     get:
       tags:
@@ -3789,6 +4002,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/unlock_by_recovery_key:
     get:
       tags:
@@ -3806,6 +4020,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume/v1/get_recovery_key_info:
     get:
       tags:
@@ -3823,6 +4038,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume.Installer/v1/quick_create_precheck:
     get:
       tags:
@@ -3840,6 +4056,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume.Installer/v1/quick_create:
     get:
       tags:
@@ -3857,6 +4074,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume.OfflineOp/v1/pre_estimate:
     get:
       tags:
@@ -3874,6 +4092,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume.OfflineOp/v1/execute:
     get:
       tags:
@@ -3891,6 +4110,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Storage.CGI.Volume.OfflineOp/v1/stop:
     get:
       tags:
@@ -3908,3 +4128,4 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:

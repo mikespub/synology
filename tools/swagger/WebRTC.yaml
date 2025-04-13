@@ -168,6 +168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebRTC.Proxy/v1/signal:
     get:
       tags:
@@ -185,6 +186,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebRTC.Proxy.Sharing/v1/create:
     get:
       tags:
@@ -202,6 +204,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebRTC.Proxy.Sharing/v1/signal:
     get:
       tags:
@@ -219,3 +222,4 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:

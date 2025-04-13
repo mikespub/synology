@@ -168,6 +168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Config/v1/set:
     get:
       tags:
@@ -185,6 +186,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Connection/v1/list:
     get:
       tags:
@@ -202,6 +204,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Connection/v1/test:
     get:
       tags:
@@ -219,6 +222,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Connection/v1/get:
     get:
       tags:
@@ -236,6 +240,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Connection/v1/auth:
     get:
       tags:
@@ -253,6 +258,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Connection/v1/create:
     get:
       tags:
@@ -270,6 +276,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Connection/v1/set:
     get:
       tags:
@@ -287,6 +294,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Connection/v1/delete:
     get:
       tags:
@@ -304,6 +312,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Connection/v1/unlink:
     get:
       tags:
@@ -321,6 +330,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Connection/v1/pause:
     get:
       tags:
@@ -338,6 +348,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Connection/v1/resume:
     get:
       tags:
@@ -355,6 +366,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session/v1/list:
     get:
       tags:
@@ -372,6 +384,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session/v1/list_subfolder:
     get:
       tags:
@@ -389,6 +402,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session/v1/list_sync_history:
     get:
       tags:
@@ -406,6 +420,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session/v1/list_syncfolder:
     get:
       tags:
@@ -423,6 +438,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session/v1/get:
     get:
       tags:
@@ -440,6 +456,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session/v1/test:
     get:
       tags:
@@ -457,6 +474,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session/v1/set:
     get:
       tags:
@@ -474,6 +492,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session/v1/create:
     get:
       tags:
@@ -491,6 +510,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session/v1/enable:
     get:
       tags:
@@ -508,6 +528,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session/v1/disable:
     get:
       tags:
@@ -525,6 +546,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session/v1/delete:
     get:
       tags:
@@ -542,6 +564,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session/v1/refresh:
     get:
       tags:
@@ -559,6 +582,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session.Set/v1/start:
     get:
       tags:
@@ -576,6 +600,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.SynologyDriveShareSync.Session.Set/v1/status:
     get:
       tags:
@@ -593,3 +618,4 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:

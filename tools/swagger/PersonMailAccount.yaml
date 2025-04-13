@@ -168,6 +168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.PersonMailAccount/v1/delete:
     get:
       tags:
@@ -185,6 +186,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.PersonMailAccount/v1/get:
     get:
       tags:
@@ -202,6 +204,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.PersonMailAccount/v1/update:
     get:
       tags:
@@ -219,6 +222,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.PersonMailAccount/v1/test:
     get:
       tags:
@@ -236,6 +240,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.PersonMailAccount.Contacts/v1/list:
     get:
       tags:
@@ -253,6 +258,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.PersonMailAccount.Mail/v1/send:
     get:
       tags:
@@ -270,6 +276,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.PersonMailAccount.Mail/v1/status:
     get:
       tags:
@@ -287,6 +294,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.PersonMailAccount.Mail/v1/stop:
     get:
       tags:
@@ -304,6 +312,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.PersonMailAccount.Mail/v1/clean:
     get:
       tags:
@@ -321,6 +330,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.PersonMailAccount.Mail.Oauth/v1/outlook:
     get:
       tags:
@@ -338,6 +348,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.PersonMailAccount.Mail.Oauth/v1/gmail:
     get:
       tags:
@@ -355,3 +366,4 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:

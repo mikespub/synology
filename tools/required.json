@@ -1,190 +1,479 @@
 {
-  "SYNO.Docker.Container": {
-    "list": {
-      "offset": 0,
-      "limit": 10
+    "SYNO.Docker.Container": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.Docker.Image": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.Foto.Browse.Album": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.Foto.Browse.ConditionAlbum": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.Foto.Browse.Folder": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.Foto.Browse.GeneralTag": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.Foto.Browse.Geocoding": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.Foto.Browse.Item": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.Foto.Browse.NormalAlbum": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.Foto.Browse.Person": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.Foto.Browse.RecentlyAdded": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.Foto.Favorite": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.Foto.PhotoRequest": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.FotoTeam.Browse.Folder": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.FotoTeam.Browse.GeneralTag": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.FotoTeam.Browse.Geocoding": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.FotoTeam.Browse.Item": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.FotoTeam.Browse.Person": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.FotoTeam.Browse.RecentlyAdded": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.SDS.Backup.Client.Common.Log": {
+        "list": {
+            "offset": 0,
+            "limit": 10
+        }
+    },
+    "SYNO.VideoStation2.Collection": {
+        "list": {
+            "limit": 10
+        },
+        "getinfo": {
+            "id": "required"
+        }
+    },
+    "SYNO.VideoStation2.Controller.Device": {
+        "list": {
+            "limit": 10
+        }
+    },
+    "SYNO.VideoStation2.DTV.Tuner": {
+        "list": {
+            "limit": 10
+        }
+    },
+    "SYNO.VideoStation2.Folder": {
+        "list": {
+            "limit": 10,
+            "library_id": 0,
+            "type": "movie"
+        }
+    },
+    "SYNO.VideoStation2.HomeVideo": {
+        "list": {
+            "limit": 10,
+            "library_id": 0
+        },
+        "getinfo": {
+            "id": "required"
+        }
+    },
+    "SYNO.VideoStation2.Metadata": {
+        "list": {
+            "limit": 10,
+            "library_id": 0,
+            "type": "movie",
+            "category": "required"
+        }
+    },
+    "SYNO.VideoStation2.Movie": {
+        "list": {
+            "limit": 10,
+            "library_id": 0
+        },
+        "getinfo": {
+            "id": "required"
+        }
+    },
+    "SYNO.VideoStation2.ParentalControl": {
+        "list": {
+            "limit": 10
+        }
+    },
+    "SYNO.VideoStation2.PluginSearch": {
+        "list": {
+            "limit": 10,
+            "task_id": "required"
+        }
+    },
+    "SYNO.VideoStation2.TVRecording": {
+        "list": {
+            "limit": 10
+        },
+        "getinfo": {
+            "id": "required"
+        }
+    },
+    "SYNO.VideoStation2.TVShow": {
+        "list": {
+            "limit": 10,
+            "library_id": 0
+        },
+        "getinfo": {
+            "id": "required"
+        }
+    },
+    "SYNO.VideoStation2.TVShowEpisode": {
+        "list": {
+            "limit": 10,
+            "library_id": 0,
+            "tvshow_id": "required"
+        },
+        "getinfo": {
+            "id": "required"
+        }
+    },
+    "SYNO.Backup.App.Backup": {
+        "list": {
+            "node": "required"
+        }
+    },
+    "SYNO.Backup.App.Restore": {
+        "list": {
+            "node": "required"
+        }
+    },
+    "SYNO.Backup.Config.Restore": {
+        "list": {
+            "dss_id": "required"
+        }
+    },
+    "SYNO.Backup.Storage.AmazonCloudDrive.Container": {
+        "list": {
+            "transfer_type": "required"
+        }
+    },
+    "SYNO.Backup.Storage.Azure.Container": {
+        "list": {
+            "key": "required"
+        }
+    },
+    "SYNO.Backup.Storage.Dropbox.Container": {
+        "list": {
+            "transfer_type": "required"
+        }
+    },
+    "SYNO.Backup.Storage.GoogleDrive.Container": {
+        "list": {
+            "transfer_type": "required"
+        }
+    },
+    "SYNO.Backup.Storage.HiDrive.Container": {
+        "list": {
+            "transfer_type": "required"
+        }
+    },
+    "SYNO.Backup.Storage.OpenStack.Container": {
+        "list": {
+            "transfer_type": "required"
+        }
+    },
+    "SYNO.Backup.Storage.OpenStack.Region": {
+        "list": {
+            "transfer_type": "required"
+        }
+    },
+    "SYNO.Backup.Storage.S3.Bucket": {
+        "list": {
+            "key": "required"
+        }
+    },
+    "SYNO.Backup.Storage.WebDAV.Container": {
+        "list": {
+            "transfer_type": "required"
+        }
+    },
+    "SYNO.Backup.Storage.hubiC.Container": {
+        "list": {
+            "transfer_type": "required"
+        }
+    },
+    "SYNO.Core.Package.Log": {
+        "get": {
+            "name": "required"
+        }
+    },
+    "SYNO.Core.PhotoViewer": {
+        "list": {
+            "share": "required"
+        }
+    },
+    "SYNO.DownloadStation2.BTSearch": {
+        "list": {
+            "id": "required"
+        }
+    },
+    "SYNO.DownloadStation2.RSS.Filter": {
+        "list": {
+            "feed_id": "required"
+        }
+    },
+    "SYNO.DownloadStation2.RSS.Item": {
+        "list": {
+            "feed_id": "required"
+        }
+    },
+    "SYNO.DownloadStation2.Task.BT": {
+        "get": {
+            "task_id": "required"
+        }
+    },
+    "SYNO.DownloadStation2.Task.BT.File": {
+        "list": {
+            "task_id": "required"
+        }
+    },
+    "SYNO.DownloadStation2.Task.BT.Peer": {
+        "list": {
+            "task_id": "required"
+        }
+    },
+    "SYNO.DownloadStation2.Task.BT.Tracker": {
+        "list": {
+            "task_id": "required"
+        }
+    },
+    "SYNO.DownloadStation2.Task.List": {
+        "get": {
+            "list_id": "required"
+        }
+    },
+    "SYNO.DownloadStation2.Task.NZB.File": {
+        "list": {
+            "task_id": "required"
+        }
+    },
+    "SYNO.DownloadStation2.Task.NZB.Log": {
+        "get": {
+            "task_id": "required"
+        }
+    },
+    "SYNO.DownloadStation2.Thumbnail": {
+        "get": {
+            "id": "required"
+        }
+    },
+    "SYNO.DownloadStation2.eMule.Search": {
+        "list": {
+            "id": "required"
+        }
+    },
+    "SYNO.Entry.Request.Polling": {
+        "list": {
+            "task_id_prefix": "required"
+        }
+    },
+    "SYNO.Finder.File": {
+        "get": {
+            "path": "required"
+        }
+    },
+    "SYNO.Finder.File.Cover": {
+        "get": {
+            "full_path": "required"
+        }
+    },
+    "SYNO.Finder.File.Thumbnail": {
+        "get": {
+            "full_path": "required"
+        }
+    },
+    "SYNO.Foto.Browse.Diff": {
+        "get": {
+            "diff_version": "required"
+        }
+    },
+    "SYNO.Foto.Browse.Unit": {
+        "get": {
+            "id_item": "required"
+        }
+    },
+    "SYNO.Foto.PublicSharing": {
+        "get": {
+            "passphrase": "required"
+        }
+    },
+    "SYNO.Foto.Sharing.Passphrase": {
+        "get": {
+            "passphrase": "required"
+        }
+    },
+    "SYNO.Foto.Thumbnail": {
+        "get": {
+            "id": "required"
+        }
+    },
+    "SYNO.Foto.UserInfo": {
+        "get": {
+            "id": "required"
+        }
+    },
+    "SYNO.FotoTeam.Browse.Diff": {
+        "get": {
+            "diff_version": "required"
+        }
+    },
+    "SYNO.FotoTeam.Browse.Unit": {
+        "get": {
+            "id_item": "required"
+        }
+    },
+    "SYNO.FotoTeam.Sharing.Passphrase": {
+        "get": {
+            "passphrase": "required"
+        }
+    },
+    "SYNO.FotoTeam.Thumbnail": {
+        "get": {
+            "id": "required"
+        }
+    },
+    "SYNO.MediaServer.IndexedFolder": {
+        "list": {
+            "media_type": "required"
+        }
+    },
+    "SYNO.MediaServer.Menu": {
+        "get": {
+            "template": "required"
+        }
+    },
+    "SYNO.MediaServer.Setting": {
+        "get": {
+            "section": "required"
+        }
+    },
+    "SYNO.SDS.Backup.Client.Common.Statistic": {
+        "get": {
+            "task_id": "required"
+        }
+    },
+    "SYNO.VideoStation2.Controller.Volume": {
+        "get": {
+            "device_id": "required"
+        }
+    },
+    "SYNO.VideoStation2.DTV.Channel": {
+        "getinfo": {
+            "tuner_id": "required"
+        },
+        "list": {
+            "tuner_id": "required"
+        }
+    },
+    "SYNO.VideoStation2.DTV.ChannelScan": {
+        "getinfo": {
+            "tuner_id": "required"
+        }
+    },
+    "SYNO.VideoStation2.DTV.Program": {
+        "list": {
+            "tuner_id": "required"
+        }
+    },
+    "SYNO.VideoStation2.DTV.Schedule": {
+        "list": {
+            "tuner_id": "required"
+        }
+    },
+    "SYNO.VideoStation2.Poster": {
+        "get": {
+            "id": "required"
+        }
+    },
+    "SYNO.VideoStation2.Sharing": {
+        "get": {
+            "video_id": "required"
+        }
+    },
+    "SYNO.VideoStation2.VoiceAssistant": {
+        "list": {
+            "keyword": "required"
+        }
     }
-  },
-  "SYNO.Docker.Image": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.Foto.Browse.Album": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.Foto.Browse.ConditionAlbum": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.Foto.Browse.Folder": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.Foto.Browse.GeneralTag": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.Foto.Browse.Geocoding": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.Foto.Browse.Item": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.Foto.Browse.NormalAlbum": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.Foto.Browse.Person": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.Foto.Browse.RecentlyAdded": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.Foto.Favorite": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.Foto.PhotoRequest": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.FotoTeam.Browse.Folder": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.FotoTeam.Browse.GeneralTag": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.FotoTeam.Browse.Geocoding": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.FotoTeam.Browse.Item": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.FotoTeam.Browse.Person": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.FotoTeam.Browse.RecentlyAdded": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.SDS.Backup.Client.Common.Log": {
-    "list": {
-      "offset": 0,
-      "limit": 10
-    }
-  },
-  "SYNO.VideoStation2.Collection": {
-    "list": {
-      "limit": 10
-    }
-  },
-  "SYNO.VideoStation2.Controller.Device": {
-    "list": {
-      "limit": 10
-    }
-  },
-  "SYNO.VideoStation2.DTV.Tuner": {
-    "list": {
-      "limit": 10
-    }
-  },
-  "SYNO.VideoStation2.Folder": {
-    "list": {
-      "limit": 10,
-      "library_id": 0,
-      "type": "movie"
-    }
-  },
-  "SYNO.VideoStation2.HomeVideo": {
-    "list": {
-      "limit": 10,
-      "library_id": 0
-    }
-  },
-  "SYNO.VideoStation2.Metadata": {
-    "list": {
-      "limit": 10,
-      "library_id": 0,
-      "type": "movie"
-    }
-  },
-  "SYNO.VideoStation2.Movie": {
-    "list": {
-      "limit": 10,
-      "library_id": 0
-    }
-  },
-  "SYNO.VideoStation2.ParentalControl": {
-    "list": {
-      "limit": 10
-    }
-  },
-  "SYNO.VideoStation2.PluginSearch": {
-    "list": {
-      "limit": 10
-    }
-  },
-  "SYNO.VideoStation2.TVRecording": {
-    "list": {
-      "limit": 10
-    }
-  },
-  "SYNO.VideoStation2.TVShow": {
-    "list": {
-      "limit": 10,
-      "library_id": 0
-    }
-  },
-  "SYNO.VideoStation2.TVShowEpisode": {
-    "list": {
-      "limit": 10,
-      "library_id": 0
-    }
-  }
 }

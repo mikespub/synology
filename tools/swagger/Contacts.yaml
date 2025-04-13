@@ -168,6 +168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Addressbook/v1/create:
     get:
       tags:
@@ -185,6 +186,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Addressbook/v1/delete:
     get:
       tags:
@@ -202,6 +204,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Addressbook/v1/export:
     get:
       tags:
@@ -219,6 +222,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Addressbook/v1/get:
     get:
       tags:
@@ -236,6 +240,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Addressbook/v1/import:
     get:
       tags:
@@ -253,6 +258,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Addressbook/v1/import_preview:
     get:
       tags:
@@ -270,6 +276,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Addressbook/v1/list:
     get:
       tags:
@@ -287,6 +294,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Addressbook/v1/list_principal:
     get:
       tags:
@@ -304,6 +312,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Addressbook/v1/move_member:
     get:
       tags:
@@ -321,6 +330,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Addressbook/v1/set:
     get:
       tags:
@@ -338,6 +348,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Addressbook/v1/set_addressbook_display:
     get:
       tags:
@@ -355,6 +366,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Addressbook/v1/share_addressbook:
     get:
       tags:
@@ -372,6 +384,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.AdminSetting/v1/get:
     get:
       tags:
@@ -389,6 +402,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.AdminSetting/v1/migrate:
     get:
       tags:
@@ -406,6 +420,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.AdminSetting/v1/set:
     get:
       tags:
@@ -423,6 +438,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.AdminSetting/v1/set_sharing:
     get:
       tags:
@@ -440,6 +456,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/create:
     get:
       tags:
@@ -457,6 +474,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/delete:
     get:
       tags:
@@ -474,6 +492,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/export:
     get:
       tags:
@@ -491,6 +510,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/get_photo:
     get:
       tags:
@@ -508,6 +528,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/get:
     get:
       tags:
@@ -525,6 +546,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/list:
     get:
       tags:
@@ -542,6 +564,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/list_group:
     get:
       tags:
@@ -559,6 +582,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/list_team_contact:
     get:
       tags:
@@ -576,6 +600,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/set:
     get:
       tags:
@@ -593,6 +618,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/toggle_group:
     get:
       tags:
@@ -610,6 +636,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/toggle_member:
     get:
       tags:
@@ -627,6 +654,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/toggle_person:
     get:
       tags:
@@ -644,6 +672,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Contact/v2/update_usage_frequency:
     get:
       tags:
@@ -661,6 +690,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.ExternalSource/v1/create:
     get:
       tags:
@@ -678,6 +708,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.ExternalSource/v1/create_carddav:
     get:
       tags:
@@ -695,6 +726,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.ExternalSource/v1/get:
     get:
       tags:
@@ -712,6 +744,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.ExternalSource/v1/list:
     get:
       tags:
@@ -729,6 +762,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.ExternalSource/v1/refresh:
     get:
       tags:
@@ -746,6 +780,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.ExternalSource/v1/set:
     get:
       tags:
@@ -763,6 +798,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.ExternalSource/v1/set_carddav:
     get:
       tags:
@@ -780,6 +816,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Info/v1/get:
     get:
       tags:
@@ -797,6 +834,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Info/v1/get_timezone:
     get:
       tags:
@@ -814,6 +852,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Label/v2/add_member:
     get:
       tags:
@@ -831,6 +870,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Label/v2/create:
     get:
       tags:
@@ -848,6 +888,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Label/v2/delete:
     get:
       tags:
@@ -865,6 +906,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Label/v2/export:
     get:
       tags:
@@ -882,6 +924,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Label/v2/list:
     get:
       tags:
@@ -899,6 +942,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Label/v2/remove_member:
     get:
       tags:
@@ -916,6 +960,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.Label/v2/set:
     get:
       tags:
@@ -933,6 +978,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Contacts.OU/v1/list:
     get:
       tags:
@@ -950,3 +996,4 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:

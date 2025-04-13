@@ -168,6 +168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.VideoPlayer.SynologyDrive.Subtitle/v1/get:
     get:
       tags:
@@ -185,3 +186,4 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:

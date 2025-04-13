@@ -495,8 +495,8 @@ paths:
     get:
       tags:
         - SYNO.API
-      summary: Return ??? for SYNO.API.Info
-      operationId: SYNO.API.Info.???
+      summary: Return query for SYNO.API.Info
+      operationId: SYNO.API.Info.query
       parameters:
         - in: query
           name: api
@@ -516,7 +516,7 @@ paths:
           required: true
           type: string
           enum: [query]
-          #default: ???
+          default: query
         - $ref: '#/parameters/query_sid'
       responses:
         '200':

@@ -168,6 +168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Backup/v1/export:
     get:
       tags:
@@ -185,6 +186,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Backup/v1/get:
     get:
       tags:
@@ -202,6 +204,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Backup/v1/list:
     get:
       tags:
@@ -219,6 +222,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Default/v1/get:
     get:
       tags:
@@ -236,6 +240,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Default/v1/set:
     get:
       tags:
@@ -253,6 +258,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Docker/v1/hash:
     get:
       tags:
@@ -270,6 +276,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Docker/v1/tags:
     get:
       tags:
@@ -287,6 +294,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ErrorPage/v1/import:
     get:
       tags:
@@ -304,6 +312,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ErrorPage/v1/export:
     get:
       tags:
@@ -321,6 +330,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ErrorPage/v1/remove:
     get:
       tags:
@@ -338,6 +348,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ErrorPage/v1/update:
     get:
       tags:
@@ -355,6 +366,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ErrorPage/v1/create:
     get:
       tags:
@@ -372,6 +384,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ErrorPage/v1/list:
     get:
       tags:
@@ -389,6 +402,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.HTTP.VHost/v1/list:
     get:
       tags:
@@ -406,6 +420,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.HTTP.VHost/v1/add:
     get:
       tags:
@@ -423,6 +438,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.HTTP.VHost/v1/delete:
     get:
       tags:
@@ -440,6 +456,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.HTTP.VHost/v1/update:
     get:
       tags:
@@ -457,6 +474,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.PHP/v1/get:
     get:
       tags:
@@ -474,6 +492,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.PHP/v1/set:
     get:
       tags:
@@ -491,6 +510,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.PHP/v1/set_advanced:
     get:
       tags:
@@ -508,6 +528,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.PHP.Profile/v1/list:
     get:
       tags:
@@ -525,6 +546,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.PHP.Profile/v1/add:
     get:
       tags:
@@ -542,6 +564,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.PHP.Profile/v1/update:
     get:
       tags:
@@ -559,6 +582,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.PHP.Profile/v1/delete:
     get:
       tags:
@@ -576,6 +600,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Package/v1/restore:
     get:
       tags:
@@ -593,6 +618,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Package/v1/upgrade:
     get:
       tags:
@@ -610,6 +636,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Package/v1/rebuild:
     get:
       tags:
@@ -627,6 +654,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Package/v1/pause:
     get:
       tags:
@@ -644,6 +672,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Package/v1/start:
     get:
       tags:
@@ -661,6 +690,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Package/v1/remove:
     get:
       tags:
@@ -678,6 +708,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Package/v1/update:
     get:
       tags:
@@ -695,6 +726,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Package/v1/list:
     get:
       tags:
@@ -712,6 +744,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Package/v1/create:
     get:
       tags:
@@ -729,6 +762,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Python/v1/get_version:
     get:
       tags:
@@ -746,6 +780,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Python/v1/search:
     get:
       tags:
@@ -763,6 +798,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Python/v1/get:
     get:
       tags:
@@ -780,6 +816,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Python.Profile/v1/delete:
     get:
       tags:
@@ -797,6 +834,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Python.Profile/v1/update:
     get:
       tags:
@@ -814,6 +852,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Python.Profile/v1/add:
     get:
       tags:
@@ -831,6 +870,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Python.Profile/v1/list:
     get:
       tags:
@@ -848,6 +888,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ScriptLanguage/v1/restore:
     get:
       tags:
@@ -865,6 +906,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ScriptLanguage/v1/upgrade:
     get:
       tags:
@@ -882,6 +924,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ScriptLanguage/v1/rebuild:
     get:
       tags:
@@ -899,6 +942,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ScriptLanguage/v1/pause:
     get:
       tags:
@@ -916,6 +960,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ScriptLanguage/v1/start:
     get:
       tags:
@@ -933,6 +978,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ScriptLanguage/v1/update:
     get:
       tags:
@@ -950,6 +996,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ScriptLanguage/v1/remove:
     get:
       tags:
@@ -967,6 +1014,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ScriptLanguage/v1/create:
     get:
       tags:
@@ -984,6 +1032,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ScriptLanguage/v1/list:
     get:
       tags:
@@ -1001,6 +1050,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ScriptLanguage.Utils/v1/get_version:
     get:
       tags:
@@ -1018,6 +1068,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.ScriptLanguage.Utils/v1/get:
     get:
       tags:
@@ -1035,6 +1086,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Shortcut/v1/remove:
     get:
       tags:
@@ -1052,6 +1104,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Shortcut/v1/list:
     get:
       tags:
@@ -1069,6 +1122,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Shortcut/v1/update:
     get:
       tags:
@@ -1086,6 +1140,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Shortcut/v1/create:
     get:
       tags:
@@ -1103,6 +1158,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Status/v1/get:
     get:
       tags:
@@ -1120,6 +1176,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Task/v1/get:
     get:
       tags:
@@ -1137,6 +1194,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.Task/v1/list:
     get:
       tags:
@@ -1154,6 +1212,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.WebService.Portal/v1/remove:
     get:
       tags:
@@ -1171,6 +1230,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.WebService.Portal/v1/create:
     get:
       tags:
@@ -1188,6 +1248,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.WebService.Portal/v1/update:
     get:
       tags:
@@ -1205,6 +1266,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.WebService.Portal/v1/list:
     get:
       tags:
@@ -1222,6 +1284,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.WebService.Portal.Log/v1/export:
     get:
       tags:
@@ -1239,6 +1302,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.WebService.Portal.Log/v1/remove:
     get:
       tags:
@@ -1256,6 +1320,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.WebService.Portal.Log/v1/get:
     get:
       tags:
@@ -1273,6 +1338,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.WebService.Service/v1/check:
     get:
       tags:
@@ -1290,6 +1356,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.WebService.Service/v1/remove:
     get:
       tags:
@@ -1307,6 +1374,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.WebService.Service/v1/update:
     get:
       tags:
@@ -1324,6 +1392,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.WebService.Service/v1/create:
     get:
       tags:
@@ -1341,6 +1410,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.WebStation.WebService.Service/v1/list:
     get:
       tags:
@@ -1358,3 +1428,4 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:

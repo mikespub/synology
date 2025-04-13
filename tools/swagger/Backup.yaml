@@ -168,6 +168,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.App.Backup/v1/list:
     get:
       tags:
@@ -185,6 +186,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: node
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.App.Backup/v1/mysql_check:
     get:
       tags:
@@ -202,6 +209,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.App.Backup/v1/surveillance_check:
     get:
       tags:
@@ -219,6 +227,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.App.Restore/v1/list:
     get:
       tags:
@@ -236,6 +245,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: node
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.App.Restore/v1/mysql_check:
     get:
       tags:
@@ -253,6 +268,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.App.Restore/v1/surveillance_check:
     get:
       tags:
@@ -270,6 +286,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.AutoBackup/v1/set:
     get:
       tags:
@@ -287,6 +304,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.AutoBackup/v1/get:
     get:
       tags:
@@ -304,6 +322,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.AutoBackup/v1/backup:
     get:
       tags:
@@ -321,6 +340,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.AutoBackup/v1/list:
     get:
       tags:
@@ -338,6 +358,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.AutoBackup/v1/restore:
     get:
       tags:
@@ -355,6 +376,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.AutoBackup/v1/get_meta:
     get:
       tags:
@@ -372,6 +394,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.AutoBackup/v1/download_private_key:
     get:
       tags:
@@ -389,6 +412,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.AutoBackup/v1/upload_private_key:
     get:
       tags:
@@ -406,6 +430,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.AutoBackup/v1/status:
     get:
       tags:
@@ -423,6 +448,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.Backup/v1/list:
     get:
       tags:
@@ -440,6 +466,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.Backup/v1/start:
     get:
       tags:
@@ -457,6 +484,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.Backup/v1/status:
     get:
       tags:
@@ -474,6 +502,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.Backup/v1/download:
     get:
       tags:
@@ -491,6 +520,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Config.Restore/v2/list:
     get:
       tags:
@@ -508,6 +538,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: dss_id
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.Service.NetworkBackup/v1/get:
     get:
       tags:
@@ -525,6 +561,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Service.NetworkBackup/v1/set:
     get:
       tags:
@@ -542,6 +579,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.AmazonCloudDrive.Container/v1/list:
     get:
       tags:
@@ -559,6 +597,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: transfer_type
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.Storage.AmazonCloudDrive.Container/v1/create:
     get:
       tags:
@@ -576,6 +620,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.Azure.Container/v1/list:
     get:
       tags:
@@ -593,6 +638,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: key
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.Storage.Azure.Container/v1/create:
     get:
       tags:
@@ -610,6 +661,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.Dropbox.Container/v1/list:
     get:
       tags:
@@ -627,6 +679,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: transfer_type
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.Storage.Dropbox.Container/v1/create:
     get:
       tags:
@@ -644,6 +702,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.GoogleDrive.Container/v1/list:
     get:
       tags:
@@ -661,6 +720,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: transfer_type
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.Storage.GoogleDrive.Container/v1/create:
     get:
       tags:
@@ -678,6 +743,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.HiDrive.Container/v1/list:
     get:
       tags:
@@ -695,6 +761,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: transfer_type
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.Storage.HiDrive.Container/v1/create:
     get:
       tags:
@@ -712,6 +784,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.OpenStack.Container/v1/list:
     get:
       tags:
@@ -729,6 +802,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: transfer_type
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.Storage.OpenStack.Container/v1/create:
     get:
       tags:
@@ -746,6 +825,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.OpenStack.Region/v1/list:
     get:
       tags:
@@ -763,6 +843,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: transfer_type
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.Storage.S3.Bucket/v1/list:
     get:
       tags:
@@ -780,6 +866,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: key
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.Storage.S3.Bucket/v1/create:
     get:
       tags:
@@ -797,6 +889,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.WebDAV.Container/v1/list:
     get:
       tags:
@@ -814,6 +907,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: transfer_type
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.Storage.WebDAV.Container/v1/create:
     get:
       tags:
@@ -831,6 +930,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.hubiC.Container/v1/list:
     get:
       tags:
@@ -848,6 +948,12 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: transfer_type
+          required: true
+          type: string
+          default: required
   /SYNO.Backup.Storage.hubiC.Container/v1/create:
     get:
       tags:
@@ -865,6 +971,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.App2.Backup/v2/list:
     get:
       tags:
@@ -882,6 +989,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.App2.Restore/v2/list:
     get:
       tags:
@@ -899,6 +1007,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/apply_lun:
     get:
       tags:
@@ -916,6 +1025,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/restore_lun:
     get:
       tags:
@@ -933,6 +1043,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/enum_lun:
     get:
       tags:
@@ -950,6 +1061,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/check_dir:
     get:
       tags:
@@ -967,6 +1079,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/check_lun:
     get:
       tags:
@@ -984,6 +1097,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/test_connections:
     get:
       tags:
@@ -1001,6 +1115,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/enum_remote_share:
     get:
       tags:
@@ -1018,6 +1133,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/remote_version_check:
     get:
       tags:
@@ -1035,6 +1151,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/enum_local_lun_dir:
     get:
       tags:
@@ -1052,6 +1169,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/enum_net_lun_dir:
     get:
       tags:
@@ -1069,6 +1187,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/enum_local_restore_lun_name:
     get:
       tags:
@@ -1086,6 +1205,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/enum_net_restore_lun_name:
     get:
       tags:
@@ -1103,6 +1223,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/load_lun_bkp_conf:
     get:
       tags:
@@ -1120,6 +1241,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/get_self_host:
     get:
       tags:
@@ -1137,6 +1259,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/is_bkp_set_conflict:
     get:
       tags:
@@ -1154,6 +1277,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/get_local_dest_dir:
     get:
       tags:
@@ -1171,6 +1295,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/enum_local_bkp_dest:
     get:
       tags:
@@ -1188,6 +1313,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/net_bkp_host:
     get:
       tags:
@@ -1205,6 +1331,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/load_default_adv_schedule:
     get:
       tags:
@@ -1222,6 +1349,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/get_remote_dest_dir:
     get:
       tags:
@@ -1239,6 +1367,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/enum_local_share:
     get:
       tags:
@@ -1256,6 +1385,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/enum_volume:
     get:
       tags:
@@ -1273,6 +1403,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/load_schedule:
     get:
       tags:
@@ -1290,6 +1421,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/delete:
     get:
       tags:
@@ -1307,6 +1439,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/bkpnow:
     get:
       tags:
@@ -1324,6 +1457,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/cancel:
     get:
       tags:
@@ -1341,6 +1475,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/restore_cancel:
     get:
       tags:
@@ -1358,6 +1493,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/load_task:
     get:
       tags:
@@ -1375,6 +1511,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/load_restore_progress:
     get:
       tags:
@@ -1392,6 +1529,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/load_dest_status:
     get:
       tags:
@@ -1409,6 +1547,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/do_cksum:
     get:
       tags:
@@ -1426,6 +1565,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Lunbackup/v1/get_cksum_status:
     get:
       tags:
@@ -1443,6 +1583,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Repository/v1/list:
     get:
       tags:
@@ -1460,6 +1601,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Repository/v1/delete:
     get:
       tags:
@@ -1477,6 +1619,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Repository/v1/create:
     get:
       tags:
@@ -1494,6 +1637,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Repository/v1/get:
     get:
       tags:
@@ -1511,6 +1655,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Repository/v1/set:
     get:
       tags:
@@ -1528,6 +1673,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Repository/v1/find:
     get:
       tags:
@@ -1545,6 +1691,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Repository/v1/mount_fireball:
     get:
       tags:
@@ -1562,6 +1709,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Repository.Certificate/v1/verify:
     get:
       tags:
@@ -1579,6 +1727,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Repository.Certificate/v1/ignore:
     get:
       tags:
@@ -1596,6 +1745,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Repository.LoginPort/v1/get:
     get:
       tags:
@@ -1613,6 +1763,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Restore/v2/restore:
     get:
       tags:
@@ -1630,6 +1781,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Share.Restore/v1/list:
     get:
       tags:
@@ -1647,6 +1799,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Source.Folder/v1/list:
     get:
       tags:
@@ -1664,6 +1817,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.Connect.Network/v1/list:
     get:
       tags:
@@ -1681,6 +1835,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.Share.Local/v1/list:
     get:
       tags:
@@ -1698,6 +1853,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.Share.Network/v1/list:
     get:
       tags:
@@ -1715,6 +1871,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Storage.Share.Rsync/v1/list:
     get:
       tags:
@@ -1732,6 +1889,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/create:
     get:
       tags:
@@ -1749,6 +1907,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/delete:
     get:
       tags:
@@ -1766,6 +1925,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/set:
     get:
       tags:
@@ -1783,6 +1943,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/list:
     get:
       tags:
@@ -1800,6 +1961,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/get_candidate_dir:
     get:
       tags:
@@ -1817,6 +1979,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/get:
     get:
       tags:
@@ -1834,6 +1997,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/get_ai_info:
     get:
       tags:
@@ -1851,6 +2015,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/private_key_download_by_password:
     get:
       tags:
@@ -1868,6 +2033,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/create_cache:
     get:
       tags:
@@ -1885,6 +2051,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/error_detect:
     get:
       tags:
@@ -1902,6 +2069,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/error_detect_cancel:
     get:
       tags:
@@ -1919,6 +2087,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/status:
     get:
       tags:
@@ -1936,6 +2105,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/damage_report_download:
     get:
       tags:
@@ -1953,6 +2123,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target/v1/ip_lookup:
     get:
       tags:
@@ -1970,6 +2141,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Target.Config/v1/list:
     get:
       tags:
@@ -1987,6 +2159,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/list:
     get:
       tags:
@@ -2004,6 +2177,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/delete:
     get:
       tags:
@@ -2021,6 +2195,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/backup:
     get:
       tags:
@@ -2038,6 +2213,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/resume:
     get:
       tags:
@@ -2055,6 +2231,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/cancel:
     get:
       tags:
@@ -2072,6 +2249,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/suspend:
     get:
       tags:
@@ -2089,6 +2267,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/discard:
     get:
       tags:
@@ -2106,6 +2285,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/cancel_and_discard:
     get:
       tags:
@@ -2123,6 +2303,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/create:
     get:
       tags:
@@ -2140,6 +2321,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/relink:
     get:
       tags:
@@ -2157,6 +2339,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/import:
     get:
       tags:
@@ -2174,6 +2357,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/reauth:
     get:
       tags:
@@ -2191,6 +2375,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/set:
     get:
       tags:
@@ -2208,6 +2393,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/status:
     get:
       tags:
@@ -2225,6 +2411,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/get:
     get:
       tags:
@@ -2242,6 +2429,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/mark:
     get:
       tags:
@@ -2259,6 +2447,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/get_support_cloud:
     get:
       tags:
@@ -2276,6 +2465,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/correct_synorbd:
     get:
       tags:
@@ -2293,6 +2483,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Task/v1/get_current_dsm_storage_layout:
     get:
       tags:
@@ -2310,6 +2501,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Version/v2/list:
     get:
       tags:
@@ -2327,6 +2519,7 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
   /SYNO.Backup.Version.History/v1/get:
     get:
       tags:
@@ -2344,3 +2537,4 @@ paths:
             type: object
       security:
         - query_sid: []
+      parameters:
