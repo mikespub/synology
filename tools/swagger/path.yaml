@@ -497,25 +497,6 @@ paths:
             type: object
       #security:
       #  - query_sid: []
-  '/entry.cgi?api=SYNO.API.Info&version=1&method=Query&_sid={_sid}':
-    get:
-      tags:
-        - SYNO.API
-      summary: Return Query for SYNO.API.Info
-      operationId: SYNO.API.Info.Query
-      parameters:
-        - $ref: '#/parameters/path_sid'
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      #security:
-      #  - query_sid: []
   '/entry.cgi?api=SYNO.ActiveInsight.CompleteCollection&version=1&method=get&_sid={_sid}':
     get:
       tags:

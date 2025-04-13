@@ -124,8 +124,7 @@
         "maxVersion": 1,
         "methods": {
             "1": [
-                "query",
-                "Query"
+                "query"
             ]
         },
         "minVersion": 1,

@@ -515,7 +515,7 @@ paths:
           description: Method of the API requested
           required: true
           type: string
-          enum: [query, Query]
+          enum: [query]
           #default: ???
         - $ref: '#/parameters/query_sid'
       responses:
