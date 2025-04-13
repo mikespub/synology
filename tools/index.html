@@ -8,12 +8,12 @@
       content="SwaggerIU"
     />
     <title>SwaggerUI</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@4.10.3/swagger-ui.css" integrity="sha256-QSOVchRKjsGl8CgCJl4qiOphj7VB5r6BvtAe0RBA+9c=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css" />
   </head>
   <body>
   <div id="swagger-ui"></div>
-  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@4.10.3/swagger-ui-bundle.js" integrity="sha256-y1ORTyowE35/8unGbK4xf9LATKBi0KRHLsqfdaparo8=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@4.10.3/swagger-ui-standalone-preset.js" integrity="sha256-GIUijY9zaRrQ2i6AOqWjnyNFsNpA2Hi+E7LtgiS4XjA=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js" crossorigin></script>
+  <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-standalone-preset.js" crossorigin></script>
   <script>
     window.onload = () => {
       window.ui = SwaggerUIBundle({
@@ -91,6 +91,7 @@
           {"name": "query", "url": "./swagger/query.yaml"},
         ],
         dom_id: '#swagger-ui',
+        queryConfigEnabled: true,
         deepLinking: true,
         presets: [
           SwaggerUIBundle.presets.apis,
