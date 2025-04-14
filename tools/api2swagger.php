@@ -136,13 +136,12 @@ function generate_swagger($apilist, $required, $debug = false)
                     echo "\t\t" . $idx . ":" . $val . "\n";
                 }
             }
-            //continue;
             $path = $values['path'];
-            // FIXME: dirty hack for relative PhotoStation URIs - this uses a PHP session id to authenticate?
+            // dirty hack for relative PhotoStation URIs - this uses a PHP session id to authenticate?
             if ($params['tag'] == 'PhotoStation' && strpos($path, '/') === false) {
                 $path = 'photo/webapi/' . $path;
             }
-            /*
+            /**
             if ($path && array_key_exists($path, $paths)) {
                 echo $path." is already defined: ".$paths[$path]."\n";
                 exit;
@@ -160,7 +159,6 @@ function generate_swagger($apilist, $required, $debug = false)
             if (!$methods) {
                 $params['version'] = $values['minVersion'];
                 $methods = $values['methods'][$values['minVersion']] ?? [];
-                //exit;
             }
             echo "\t\t(" . count($methods) . ") " . implode(',', $methods) . "\n";
             $params['hash'] = '';
@@ -175,7 +173,6 @@ function generate_swagger($apilist, $required, $debug = false)
             } else {
                 $params['default'] = '???';
                 $params['hash'] = '#';
-                //continue;
             }
             $params['methodlist'] = implode(', ', $methods);
             $params['api2'] = implode('_', array_slice(explode('.', $api), 2));
@@ -190,7 +187,7 @@ function generate_swagger($apilist, $required, $debug = false)
                 if (empty($required[$api][$method])) {
                     continue;
                 }
-                // @todo add required params
+                // add required params
                 foreach ($required[$api][$method] as $name => $value) {
                     $rest_output .= replace_params($rest_param_tmpl, ['name' => $name, 'value' => $value]);
                 }
@@ -245,7 +242,6 @@ $api2url = [];
 function check_required_errors($basedir, $required = [])
 {
     $files = scandir($basedir);
-    $errors = [];
     foreach ($files as $file) {
         $filepath = $basedir . DIRECTORY_SEPARATOR . $file;
         if (!is_file($filepath)) {
@@ -351,7 +347,6 @@ function merge_query_files()
 function combine_json_files()
 {
     // Get current paths from SYNO.API.Info
-    // TODO: retrieve current paths for active packages
     // http://192.168.x.x/rest.php/SYNO.API.Info/v1/query
     // http://localhost:5000/webapi/query.cgi?api=SYNO.API.Info&version=1&method=query&query=ALL
     $filepath = __DIR__ . '/query.json';
@@ -368,7 +363,6 @@ function combine_json_files()
             $auth[$key] = $values;
         }
     }
-    //exit;
 
     // Load API json files from ../docs directory
     $dir = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'docs';
@@ -394,7 +388,6 @@ function combine_json_files()
             if (strpos($api, 'PhotoStation') === false) {
                 if (empty($auth[$api])) {
                     echo "Unknown api $api\n";
-                    //continue;
                     exit;
                     if (empty($values['path'])) {
                         $values['path'] = 'entry.cgi';
@@ -405,8 +398,6 @@ function combine_json_files()
                 } else {
                     if (!empty($values['path']) && $values['path'] != $auth[$api]['path']) {
                         echo "Invalid path " . $values['path'] . " for api $api in $file\n";
-                        //continue;
-                        //exit;
                         $values['path'] = $auth[$api]['path'];
                     }
                     if (!empty($values['maxVersion']) && $values['maxVersion'] != $auth[$api]['maxVersion']) {
@@ -420,7 +411,6 @@ function combine_json_files()
                 echo "Already seen $api\n";
                 $apilist[$root][$api] = array_merge($apilist[$root][$api], $values);
                 continue;
-                //exit;
             }
             $apilist[$root] ??= [];
             if ($auth[$api]) {
@@ -430,7 +420,6 @@ function combine_json_files()
             }
         }
     }
-    //exit;
     ksort($apilist);
     $json_output = json_encode($apilist, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     $json_file = __DIR__ . '/combined.json';

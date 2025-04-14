@@ -2,7 +2,7 @@
 /**
  * This file is an example on how to use Synology\Api
  */
-require dirname(__DIR__) . '/vendor/autoload.php';
+require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 use Synology\Applications\ClientFactory;
 

@@ -129,28 +129,7 @@ class RestApiGateway
         } else {
             $content .= '<li><form action="./rest.php/SYNO.API.Auth/v7/login" method="GET">Account: <input type="text" name="account" value=""> Password: <input type="password" name="passwd" value=""> Session: <input type="text" name="session" value="DownloadStation"> <input type="hidden" name="format" value="sid"><input type="submit" value="Login"></form></li>';
         }
-        if (!empty($extra['portainer'])) {
-            $content .= '<li><a href="/swagger/ui/?urls.primaryName=Portainer">Portainer</a><ul>';
-            $content .= '<li><a href="./rest.php/portainer/stacks">Stacks</a></li>';
-            $content .= '</ul></li>';
-            if (!empty($extra['docker'])) {
-                $content .= '<li><a href="/swagger/ui/?urls.primaryName=DockerViaPortainer">Docker</a><ul>';
-                $content .= '<li><a href="./rest.php/docker/containers/json">Containers</a></li>';
-                $content .= '</ul></li>';
-            }
-        }
-        if (!empty($extra['traefik'])) {
-            $content .= '<li>Traefik</a><ul>';
-            $content .= '<li><a href="./rest.php/traefik/entrypoints">Entrypoints</a></li>';
-            $content .= '<li><a href="./rest.php/traefik/rawdata">Raw Data</a></li>';
-            $content .= '</ul></li>';
-        }
-        if (!empty($extra['radarr'])) {
-            $content .= '<li><a href="/swagger/ui/?urls.primaryName=Radarr">Radarr</a><ul>';
-            //$content .= '<li><a href="./rest.php/radarr/system/status">System Status</a></li>';
-            $content .= '<li><a href="./rest.php/radarr/movie">Movie</a></li>';
-            $content .= '</ul></li>';
-        }
+        $content = $this->getExtraContent($content, $extra);
         foreach ($apilist as $root => $json) {
             $content .= '<li>' . $root . '<ul>';
             ksort($json);
@@ -165,7 +144,7 @@ class RestApiGateway
                 foreach ($methods as $method) {
                     if (!empty($values['path'])) {
                         if (!empty($required[$api]) && !empty($required[$api][$method])) {
-                            // @todo check if values are "required"
+                            // check if values are "required"
                             $params = $required[$api][$method];
                             if ($sid) {
                                 $params['_sid'] = $sid;
@@ -188,6 +167,39 @@ class RestApiGateway
     }
 
     /**
+     * Summary of getExtra
+     * @param string $content
+     * @param array<string, mixed> $extra
+     * @return string
+     */
+    public function getExtraContent($content, $extra)
+    {
+        if (!empty($extra['portainer'])) {
+            $content .= '<li><a href="/swagger/ui/?urls.primaryName=Portainer">Portainer</a><ul>';
+            $content .= '<li><a href="./rest.php/portainer/stacks">Stacks</a></li>';
+            $content .= '</ul></li>';
+            if (!empty($extra['docker'])) {
+                $content .= '<li><a href="/swagger/ui/?urls.primaryName=DockerViaPortainer">Docker</a><ul>';
+                $content .= '<li><a href="./rest.php/docker/containers/json">Containers</a></li>';
+                $content .= '</ul></li>';
+            }
+        }
+        if (!empty($extra['traefik'])) {
+            $content .= '<li>Traefik</a><ul>';
+            $content .= '<li><a href="./rest.php/traefik/entrypoints">Entrypoints</a></li>';
+            $content .= '<li><a href="./rest.php/traefik/rawdata">Raw Data</a></li>';
+            $content .= '</ul></li>';
+        }
+        if (!empty($extra['radarr'])) {
+            $content .= '<li><a href="/swagger/ui/?urls.primaryName=Radarr">Radarr</a><ul>';
+            //$content .= '<li><a href="./rest.php/radarr/system/status">System Status</a></li>';
+            $content .= '<li><a href="./rest.php/radarr/movie">Movie</a></li>';
+            $content .= '</ul></li>';
+        }
+        return $content;
+    }
+
+    /**
      * Summary of sendHtmlPage
      * @param string $content
      * @return void
@@ -196,7 +208,6 @@ class RestApiGateway
     {
         $type = 'text/html';
         header("Content-type: $type");
-        //header("Content-disposition: attachment; filename=" . urlencode(basename($file)));
         echo $content;
     }
 
@@ -210,18 +221,13 @@ class RestApiGateway
     {
         $pieces = explode('/', $path);
         $api = $pieces[1];
-        switch ($api) {
-            case 'portainer':
-                return $this->callPortainer($path, $query);
-            case 'docker':
-                return $this->callDocker($path, $query);
-            case 'traefik':
-                return $this->callTraefik($path, $query);
-            case 'radarr':
-                return $this->callRadarr($path, $query);
-            default:
-                return $this->callSynology($path, $query);
-        }
+        return match ($api) {
+            'portainer' => $this->callPortainer($path, $query),
+            'docker' => $this->callDocker($path, $query),
+            'traefik' => $this->callTraefik($path, $query),
+            'radarr' => $this->callRadarr($path, $query),
+            default => $this->callSynology($path, $query),
+        };
     }
 
     /**
@@ -243,7 +249,7 @@ class RestApiGateway
         }
         $path = $api2url[$api];
 
-        // FIXME: if we use the Swagger UI
+        // if we use the Swagger UI
         if (!empty($query) && strpos($query, 'api_key=') !== false) {
             $query = str_replace('api_key=', '_sid=', $query);
         }
@@ -278,11 +284,10 @@ class RestApiGateway
             $url .= '?' . $query;
         }
         $headers = [];
-        // TODO: set curl header for X-API-Key
-        if (!empty($this->server['HTTP_X_API_KEY'])) {
+        // set curl header for X-API-Key
+        if (!empty($this->server['HTTP_X_API_KEY']) && !preg_match('/[\r\n]/', $this->server['HTTP_X_API_KEY'])) {
             $headers[] = 'X-API-Key: ' . $this->server['HTTP_X_API_KEY'];
-            //$headers[] = 'Accept: application/json';
-        } elseif (!empty($this->server['HTTP_AUTHORIZATION'])) {
+        } elseif (!empty($this->server['HTTP_AUTHORIZATION']) && !preg_match('/[\r\n]/', $this->server['HTTP_AUTHORIZATION'])) {
             $headers[] = 'Authorization: ' . $this->server['HTTP_AUTHORIZATION'];
         } elseif (!empty($path)) {
             $apikey = API_KEY_PORTAINER;
@@ -310,11 +315,9 @@ class RestApiGateway
             $url .= '?' . $query;
         }
         $headers = [];
-        // TODO: set curl header for X-API-Key
-        if (!empty($this->server['HTTP_X_API_KEY'])) {
+        if (!empty($this->server['HTTP_X_API_KEY']) && !preg_match('/[\r\n]/', $this->server['HTTP_X_API_KEY'])) {
             $headers[] = 'X-API-Key: ' . $this->server['HTTP_X_API_KEY'];
-            //$headers[] = 'Accept: application/json';
-        } elseif (!empty($this->server['HTTP_AUTHORIZATION'])) {
+        } elseif (!empty($this->server['HTTP_AUTHORIZATION']) && !preg_match('/[\r\n]/', $this->server['HTTP_AUTHORIZATION'])) {
             $headers[] = 'Authorization: ' . $this->server['HTTP_AUTHORIZATION'];
         } elseif (!empty($path)) {
             $apikey = API_KEY_PORTAINER;
@@ -342,8 +345,7 @@ class RestApiGateway
             $url .= '?' . $query;
         }
         $headers = [];
-        // TODO: set curl header for X-API-Key
-        //if (!empty($this->server['HTTP_X_API_KEY'])) {
+        //if (!empty($this->server['HTTP_X_API_KEY']) && !preg_match('/[\r\n]/', $this->server['HTTP_X_API_KEY'])) {
         //    $headers[] = 'X-API-Key: ' . $this->server['HTTP_X_API_KEY'];
         //    $headers[] = 'Accept: application/json';
         //}
@@ -371,8 +373,7 @@ class RestApiGateway
             $url .= '?' . $apikey;
         }
         $headers = [];
-        // TODO: set curl header for X-API-Key
-        //if (!empty($this->server['HTTP_X_API_KEY'])) {
+        //if (!empty($this->server['HTTP_X_API_KEY']) && !preg_match('/[\r\n]/', $this->server['HTTP_X_API_KEY'])) {
         //    $headers[] = 'X-API-Key: ' . $this->server['HTTP_X_API_KEY'];
         //    $headers[] = 'Accept: application/json';
         //}
@@ -422,10 +423,10 @@ class RestApiGateway
             curl_setopt($ch, CURLOPT_WRITEFUNCTION, $callback);
             curl_exec($ch);
             $info = curl_getinfo($ch);
+            curl_close($ch);
             */
             $result = file_get_contents($url);
             $info = $this->parseHeaders($http_response_header);
-            //curl_close($ch);
         } else {
             // grab URL and pass it to the browser
             $result = curl_exec($ch);
@@ -488,7 +489,7 @@ class RestApiGateway
                 $head[ trim($t[0]) ] = trim($t[1]);
             } else {
                 $head[] = $v;
-                if (preg_match("#HTTP/[0-9\.]+\s+([0-9]+)#", $v, $out)) {
+                if (preg_match("#HTTP/[0-9\.]+\s+(\d+)#", $v, $out)) {
                     $head['http_code'] = intval($out[1]);
                 }
             }

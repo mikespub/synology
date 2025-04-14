@@ -91,7 +91,7 @@ class DSM extends Authenticate
                 $path = 'dsm/iscsi.cgi';
                 break;
             default:
-                new Exception('Unknown "' . $type . '" object');
+                throw new Exception('Unknown "' . $type . '" object');
         }
 
         return $this->_request($type, $path, 'list', ['limit' => $limit, 'offset' => $offset]);

@@ -38,7 +38,6 @@ class ClientFactory
             $className = "\\Synology\\Applications\\" . $serviceName;
             return new $className($address, $port, $protocol, $version);
         }
-        //throw new Exception('Unknown "' . $serviceName . '" serviceName');
         return static::getGeneric($serviceName, $address, $port, $protocol, $version);
     }
 
