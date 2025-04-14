@@ -65,7 +65,6 @@
     "enable_mail",
     "enable_oauth",
     "in_use",
-    "mail",
     "send_welcome_mail",
     "sender_mail",
     "sender_name",
