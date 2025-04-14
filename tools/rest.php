@@ -16,6 +16,7 @@ const API_KEY_RADARR = '...';
  */
 class RestApiGateway
 {
+    public string $scheme = 'http://';
     public string $address = 'diskstation';
     /** @var array<string, mixed> */
     public array $options = [];
@@ -122,43 +123,17 @@ class RestApiGateway
     {
         $content = '<html><head><title>Synology Web API Explorer</title></head><body><h1>Synology Web API Explorer</h1><ul>';
         $sid = apcu_fetch('rest_sid');
-        $more = '';
         if ($sid) {
-            $more = '?_sid=' . $sid;
             $content .= '<li>Session ID: ' . $sid . ' <a href="./rest.php/SYNO.API.Auth/v7/logout">Logout</a></li>';
         } else {
             $content .= '<li><form action="./rest.php/SYNO.API.Auth/v7/login" method="GET">Account: <input type="text" name="account" value=""> Password: <input type="password" name="passwd" value=""> Session: <input type="text" name="session" value="DownloadStation"> <input type="hidden" name="format" value="sid"><input type="submit" value="Login"></form></li>';
         }
-        $content = $this->getExtraContent($content, $extra);
+        $content .= $this->addExtraContent($extra);
         foreach ($apilist as $root => $json) {
             $content .= '<li>' . $root . '<ul>';
             ksort($json);
             foreach ($json as $api => $values) {
-                $version = $values['maxVersion'];
-                $methods = $values['methods'][$version] ?? false;
-                if (!$methods) {
-                    $version = $values['minVersion'];
-                    $methods = $values['methods'][$version] ?? [];
-                }
-                $content .= '<li>' . $api . ': ';
-                foreach ($methods as $method) {
-                    if (!empty($values['path'])) {
-                        if (!empty($required[$api]) && !empty($required[$api][$method])) {
-                            // check if values are "required"
-                            $params = $required[$api][$method];
-                            if ($sid) {
-                                $params['_sid'] = $sid;
-                            }
-                            $query = http_build_query($params);
-                            $content .= '<a href="./rest.php/' . $api . '/v' . $version . '/' . $method . '?' . $query . '">' . $method . '</a> ';
-                        } else {
-                            $content .= '<a href="./rest.php/' . $api . '/v' . $version . '/' . $method . $more . '">' . $method . '</a> ';
-                        }
-                    } else {
-                        $content .= $method . ' ';
-                    }
-                }
-                $content .= '</li>';
+                $content .= $this->addApiMethods($api, $values, $required, $sid);
             }
             $content .= '</ul></li>';
         }
@@ -167,13 +142,13 @@ class RestApiGateway
     }
 
     /**
-     * Summary of getExtra
-     * @param string $content
+     * Summary of addExtraContent
      * @param array<string, mixed> $extra
      * @return string
      */
-    public function getExtraContent($content, $extra)
+    public function addExtraContent($extra)
     {
+        $content = '';
         if (!empty($extra['portainer'])) {
             $content .= '<li><a href="/swagger/ui/?urls.primaryName=Portainer">Portainer</a><ul>';
             $content .= '<li><a href="./rest.php/portainer/stacks">Stacks</a></li>';
@@ -196,6 +171,38 @@ class RestApiGateway
             $content .= '<li><a href="./rest.php/radarr/movie">Movie</a></li>';
             $content .= '</ul></li>';
         }
+        return $content;
+    }
+
+    public function addApiMethods($api, $values, $required, $sid)
+    {
+        $version = $values['maxVersion'];
+        $methods = $values['methods'][$version] ?? false;
+        if (!$methods) {
+            $version = $values['minVersion'];
+            $methods = $values['methods'][$version] ?? [];
+        }
+        $content = '<li>' . $api . ': ';
+        foreach ($methods as $method) {
+            if (empty($values['path'])) {
+                $content .= $method . ' ';
+                continue;
+            }
+            if (!empty($required[$api]) && !empty($required[$api][$method])) {
+                // check if values are "required"
+                $params = $required[$api][$method];
+                if ($sid) {
+                    $params['_sid'] = $sid;
+                }
+                $query = http_build_query($params);
+                $content .= '<a href="./rest.php/' . $api . '/v' . $version . '/' . $method . '?' . $query . '">' . $method . '</a> ';
+            } elseif ($sid) {
+                $content .= '<a href="./rest.php/' . $api . '/v' . $version . '/' . $method . '?_sid=' . $sid . '">' . $method . '</a> ';
+            } else {
+                $content .= '<a href="./rest.php/' . $api . '/v' . $version . '/' . $method . '">' . $method . '</a> ';
+            }
+        }
+        $content .= '</li>';
         return $content;
     }
 
@@ -243,7 +250,7 @@ class RestApiGateway
         $version = substr($pieces[2], 1);
         $method = $pieces[3];
 
-        include $this->config_dir . '/rest_mapping.php';
+        $api2url = require $this->config_dir . '/rest_mapping.php';
         if (!$api2url[$api]) {
             $path = $api . " is unknown";
         }
@@ -254,9 +261,9 @@ class RestApiGateway
             $query = str_replace('api_key=', '_sid=', $query);
         }
         if (strpos($path, 'photo/webapi/') === 0) {
-            $url = 'http://' . $this->address . '/' . $path . '?api=' . $api . '&version=' . $version . '&method=' . $method;
+            $url = $this->scheme . $this->address . '/' . $path . '?api=' . $api . '&version=' . $version . '&method=' . $method;
         } else {
-            $url = 'http://' . $this->address . ':5000/webapi/' . $path . '?api=' . $api . '&version=' . $version . '&method=' . $method;
+            $url = $this->scheme . $this->address . ':5000/webapi/' . $path . '?api=' . $api . '&version=' . $version . '&method=' . $method;
         }
         if ($query) {
             $url .= '&' . $query;
@@ -279,7 +286,7 @@ class RestApiGateway
     {
         $pieces = explode('/', $path);
         $path = implode("/", array_slice($pieces, 2));
-        $url = 'http://' . $this->address . ':9000/api/' . $path;
+        $url = $this->scheme . $this->address . ':9000/api/' . $path;
         if (!empty($query)) {
             $url .= '?' . $query;
         }
@@ -310,7 +317,7 @@ class RestApiGateway
     {
         $pieces = explode('/', $path);
         $path = implode("/", array_slice($pieces, 2));
-        $url = 'http://' . $this->address . ':9000/api/endpoints/2/docker/' . $path;
+        $url = $this->scheme . $this->address . ':9000/api/endpoints/2/docker/' . $path;
         if (!empty($query)) {
             $url .= '?' . $query;
         }
@@ -340,7 +347,7 @@ class RestApiGateway
     {
         $pieces = explode('/', $path);
         $path = implode("/", array_slice($pieces, 2));
-        $url = 'http://' . $this->address . ':8181/api/' . $path;
+        $url = $this->scheme . $this->address . ':8181/api/' . $path;
         if (!empty($query)) {
             $url .= '?' . $query;
         }
@@ -365,7 +372,7 @@ class RestApiGateway
     {
         $pieces = explode('/', $path);
         $path = implode("/", array_slice($pieces, 2));
-        $url = 'http://' . $this->address . ':7878/api/v3/' . $path;
+        $url = $this->scheme . $this->address . ':7878/api/v3/' . $path;
         $apikey = 'apikey=' . API_KEY_RADARR;
         if (!empty($query)) {
             $url .= '?' . $query . '&' . $apikey;
@@ -375,7 +382,6 @@ class RestApiGateway
         $headers = [];
         //if (!empty($this->server['HTTP_X_API_KEY']) && !preg_match('/[\r\n]/', $this->server['HTTP_X_API_KEY'])) {
         //    $headers[] = 'X-API-Key: ' . $this->server['HTTP_X_API_KEY'];
-        //    $headers[] = 'Accept: application/json';
         //}
         $headers[] = 'Accept: application/json';
         //$headers[] = 'Origin: http://' . $this->server['HTTP_HOST'];

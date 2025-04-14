@@ -1140,3 +1140,5 @@ $api2url['SYNO.WebStation.Task'] = API_PATH;
 $api2url['SYNO.WebStation.WebService.Portal'] = API_PATH;
 $api2url['SYNO.WebStation.WebService.Portal.Log'] = API_PATH;
 $api2url['SYNO.WebStation.WebService.Service'] = API_PATH;
+
+return $api2url;

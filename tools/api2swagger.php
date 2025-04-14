@@ -223,6 +223,7 @@ $api2url = [];
             $map_output .= "\$api2url['$api'] = '$path';\n";
         }
     }
+    $map_output .= "\nreturn \$api2url;\n";
     file_put_contents($map_file, $map_output);
     echo 'Generated ' . $map_file . "\n";
 }
