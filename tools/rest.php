@@ -4,6 +4,7 @@ namespace Synology;
 
 //const API_HOST = '192.168.2.127';
 const API_HOST = 'diskstation';
+const API_PORT = 5000;
 
 const API_KEY_PORTAINER = 'ptr_...';
 const API_KEY_TRAEFIK = '...';
@@ -18,6 +19,7 @@ class RestApiGateway
 {
     public string $scheme = 'http://';
     public string $address = 'diskstation';
+    public int $port = 5000;
     /** @var array<string, mixed> */
     public array $options = [];
     public string $config_dir = __DIR__;
@@ -27,11 +29,20 @@ class RestApiGateway
     /**
      * Summary of __construct
      * @param string $address
+     * @param int $port
      * @param array<string, mixed> $options
      */
-    public function __construct($address, $options = [])
+    public function __construct($address, $port = 5000, $options = [])
     {
         $this->address = $address;
+        if (!empty($port) && is_numeric($port)) {
+            $this->port = (int) $port;
+        }
+        if ($this->port == 5001) {
+            $this->scheme = 'https://';
+        } else {
+            $this->scheme = 'http://';
+        }
         $this->options = $options;
         $this->config_dir = $options['config_dir'] ?? __DIR__;
     }
@@ -251,8 +262,8 @@ class RestApiGateway
         $method = $pieces[3];
 
         $api2url = require $this->config_dir . '/rest_mapping.php';
-        if (!$api2url[$api]) {
-            $path = $api . " is unknown";
+        if (empty($api2url[$api])) {
+            throw new Exception($api . " is unknown");
         }
         $path = $api2url[$api];
 
@@ -263,7 +274,7 @@ class RestApiGateway
         if (strpos($path, 'photo/webapi/') === 0) {
             $url = $this->scheme . $this->address . '/' . $path . '?api=' . $api . '&version=' . $version . '&method=' . $method;
         } else {
-            $url = $this->scheme . $this->address . ':5000/webapi/' . $path . '?api=' . $api . '&version=' . $version . '&method=' . $method;
+            $url = $this->scheme . $this->address . ':' . strval($this->port) . '/webapi/' . $path . '?api=' . $api . '&version=' . $version . '&method=' . $method;
         }
         if ($query) {
             $url .= '&' . $query;
@@ -521,6 +532,7 @@ class RestApiGateway
 }
 
 $address = API_HOST;
+$port = API_PORT;
 $options = [
     //'config_dir' => 'api/example',
     'config_dir' => __DIR__,
@@ -531,5 +543,5 @@ $options = [
 ];
 $serverVars = $_SERVER;
 
-$gateway = new RestApiGateway($address, $options);
+$gateway = new RestApiGateway($address, $port, $options);
 $gateway->handleRequest($serverVars);
