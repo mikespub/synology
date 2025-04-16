@@ -1,0 +1,147 @@
+urls:
+  - name: ACEEditor
+    url: ./openapi/ACEEditor.yaml
+  - name: AME
+    url: ./openapi/AME.yaml
+  - name: API
+    url: ./openapi/API.yaml
+  - name: ActiveInsight
+    url: ./openapi/ActiveInsight.yaml
+  - name: AudioPlayer
+    url: ./openapi/AudioPlayer.yaml
+  - name: AudioStation
+    url: ./openapi/AudioStation.yaml
+  - name: Auth
+    url: ./openapi/Auth.yaml
+  - name: Aviary
+    url: ./openapi/Aviary.yaml
+  - name: Backup
+    url: ./openapi/Backup.yaml
+  - name: C2FS
+    url: ./openapi/C2FS.yaml
+  - name: Cal
+    url: ./openapi/Cal.yaml
+  - name: CloudStation
+    url: ./openapi/CloudStation.yaml
+  - name: CloudSync
+    url: ./openapi/CloudSync.yaml
+  - name: Contacts
+    url: ./openapi/Contacts.yaml
+  - name: Core
+    url: ./openapi/Core.yaml
+  - name: DR
+    url: ./openapi/DR.yaml
+  - name: DSM
+    url: ./openapi/DSM.yaml
+  - name: DTV
+    url: ./openapi/DTV.yaml
+  - name: Default
+    url: ./openapi/Default.yaml
+  - name: DisasterRecovery
+    url: ./openapi/DisasterRecovery.yaml
+  - name: Docker
+    url: ./openapi/Docker.yaml
+  - name: DownloadStation
+    url: ./openapi/DownloadStation.yaml
+  - name: DownloadStation2
+    url: ./openapi/DownloadStation2.yaml
+  - name: Entry
+    url: ./openapi/Entry.yaml
+  - name: FileStation
+    url: ./openapi/FileStation.yaml
+  - name: Finder
+    url: ./openapi/Finder.yaml
+  - name: FolderSharing
+    url: ./openapi/FolderSharing.yaml
+  - name: Foto
+    url: ./openapi/Foto.yaml
+  - name: FotoTeam
+    url: ./openapi/FotoTeam.yaml
+  - name: License
+    url: ./openapi/License.yaml
+  - name: Lunbackup
+    url: ./openapi/Lunbackup.yaml
+  - name: MariaDB10
+    url: ./openapi/MariaDB10.yaml
+  - name: MediaServer
+    url: ./openapi/MediaServer.yaml
+  - name: Network
+    url: ./openapi/Network.yaml
+  - name: NoteStation
+    url: ./openapi/NoteStation.yaml
+  - name: OAUTH
+    url: ./openapi/OAUTH.yaml
+  - name: Office
+    url: ./openapi/Office.yaml
+  - name: Package
+    url: ./openapi/Package.yaml
+  - name: PersonMailAccount
+    url: ./openapi/PersonMailAccount.yaml
+  - name: Personal
+    url: ./openapi/Personal.yaml
+  - name: PhotoStation
+    url: ./openapi/PhotoStation.yaml
+  - name: Remote
+    url: ./openapi/Remote.yaml
+  - name: ResourceMonitor
+    url: ./openapi/ResourceMonitor.yaml
+  - name: S2S
+    url: ./openapi/S2S.yaml
+  - name: SAS
+    url: ./openapi/SAS.yaml
+  - name: SDS
+    url: ./openapi/SDS.yaml
+  - name: SVSEXT
+    url: ./openapi/SVSEXT.yaml
+  - name: SecureSignIn
+    url: ./openapi/SecureSignIn.yaml
+  - name: SecurityAdvisor
+    url: ./openapi/SecurityAdvisor.yaml
+  - name: ShareLink
+    url: ./openapi/ShareLink.yaml
+  - name: Snap
+    url: ./openapi/Snap.yaml
+  - name: SocialAccount
+    url: ./openapi/SocialAccount.yaml
+  - name: Storage
+    url: ./openapi/Storage.yaml
+  - name: SupportService
+    url: ./openapi/SupportService.yaml
+  - name: SurveillanceStation
+    url: ./openapi/SurveillanceStation.yaml
+  - name: SynologyDrive
+    url: ./openapi/SynologyDrive.yaml
+  - name: SynologyDriveShareSync
+    url: ./openapi/SynologyDriveShareSync.yaml
+  - name: TextEditor
+    url: ./openapi/TextEditor.yaml
+  - name: USBCopy
+    url: ./openapi/USBCopy.yaml
+  - name: Utils
+    url: ./openapi/Utils.yaml
+  - name: VideoController
+    url: ./openapi/VideoController.yaml
+  - name: VideoPlayer
+    url: ./openapi/VideoPlayer.yaml
+  - name: VideoStataion
+    url: ./openapi/VideoStataion.yaml
+  - name: VideoStation
+    url: ./openapi/VideoStation.yaml
+  - name: VideoStation2
+    url: ./openapi/VideoStation2.yaml
+  - name: WebRTC
+    url: ./openapi/WebRTC.yaml
+  - name: WebStation
+    url: ./openapi/WebStation.yaml
+  - name: path
+    url: ./openapi/path.yaml
+  - name: query
+    url: ./openapi/query.yaml
+  - name: Synology_Calendar
+    url: ./openapi/Synology_Calendar.yaml
+  - name: Synology_Drive
+    url: ./openapi/Synology_Drive.yaml
+  - name: Synology_MailPlus
+    url: ./openapi/Synology_MailPlus.yaml
+  - name: Synology_Spreadsheet
+    url: ./openapi/Synology_Spreadsheet.yaml

@@ -1,20 +1,20 @@
 <?php
 
 /**
- * Generate new swagger files for Synology Web APIs
+ * Generate new OpenAPI files for Synology Web APIs
  *
  * This PHP script will analyze the API json files available in ../docs
- * when you install this package with composer, and generate new swagger
+ * when you install this package with composer, and generate new OpenAPI
  * files based on the APIs and templates provided.
  *
  * If you install Swagger Editor or Swagger UI under your Web Station, and
- * adapt the .htaccess file as mentioned in the swagger file, you can then
+ * adapt the .htaccess file as mentioned in the OpenAPI file, you can then
  * explore some of the Synology Web APIs directly in your browser.
  *
  *
  * If you have an older DSM release or older packages that don't support the
  * latest API version, you can refresh the API files by calling the function
- * refresh_api_files() below and generate the swagger files again.
+ * refresh_api_files() below and generate the OpenAPI files again.
  */
 
 // TODO: run example.php afterwards to copy files for Swagger Editor
@@ -44,7 +44,7 @@ if (is_file($json_file)) {
 //$basedir = __DIR__ . '/errors/';
 //$required = check_required_errors($basedir, $required);
 //file_put_contents($json_file, json_encode($required, JSON_PRETTY_PRINT));
-generate_swagger($apilist, $required, true);
+generate_openapi($apilist, $required, true);
 exit;
 
 function load_template($name)
@@ -76,7 +76,7 @@ function get_ip_address()
     return 'diskstation';
 }
 
-function generate_swagger($apilist, $required, $debug = false)
+function generate_openapi($apilist, $required, $debug = false)
 {
     // if running on the Synology, this should be enough to start
     //$host = get_ip_address();
@@ -194,16 +194,16 @@ function generate_swagger($apilist, $required, $debug = false)
             }
         }
         $tag = explode('.', $root)[1];
-        $rest_file = __DIR__ . '/swagger/' . $tag . '.yaml';
+        $rest_file = __DIR__ . '/openapi/' . $tag . '.yaml';
         file_put_contents($rest_file, $rest_output);
         echo 'Generated ' . $rest_file . "\n";
     }
 
-    $path_file = __DIR__ . '/swagger/path.yaml';
+    $path_file = __DIR__ . '/openapi/path.yaml';
     file_put_contents($path_file, $path_output);
     echo 'Generated ' . $path_file . "\n";
 
-    $query_file = __DIR__ . '/swagger/query.yaml';
+    $query_file = __DIR__ . '/openapi/query.yaml';
     file_put_contents($query_file, $query_output);
     echo 'Generated ' . $query_file . "\n";
 
