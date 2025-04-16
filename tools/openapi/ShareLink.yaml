@@ -193,7 +193,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.ShareLink.Action/v2/remove:
     get:
       tags:
@@ -215,7 +215,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.ShareLink.Action/v2/link_by_appid:
     get:
       tags:
@@ -237,7 +237,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.ShareLink.Action/v2/list:
     get:
       tags:
@@ -259,7 +259,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.ShareLink.Download/v1/download:
     get:
       tags:
@@ -281,7 +281,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.ShareLink.Manage/v1/get_config:
     get:
       tags:
@@ -303,7 +303,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.ShareLink.Manage/v1/set_config:
     get:
       tags:
@@ -325,7 +325,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.ShareLink.Manage/v1/get_quota:
     get:
       tags:
@@ -347,4 +347,4 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:

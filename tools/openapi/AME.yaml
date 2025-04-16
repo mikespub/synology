@@ -193,7 +193,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.AME.Pack/v1/get_plugin_app_id:
     get:
       tags:
@@ -215,7 +215,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.AME.Pack/v1/manual_update:
     get:
       tags:
@@ -237,4 +237,4 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:

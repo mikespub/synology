@@ -193,4 +193,4 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:

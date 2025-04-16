@@ -193,7 +193,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.API.Auth/v7/resume:
     get:
       tags:
@@ -215,7 +215,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.API.Auth/v7/reset:
     get:
       tags:
@@ -237,7 +237,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.API.Auth/v7/logout:
     get:
       tags:
@@ -259,7 +259,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.API.Auth/v7/login:
     get:
       tags:
@@ -281,7 +281,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.API.Auth.Key/v7/grant:
     get:
       tags:
@@ -303,7 +303,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.API.Auth.Key/v7/get:
     get:
       tags:
@@ -325,7 +325,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.API.Auth.Key.Code/v7/get:
     get:
       tags:
@@ -347,7 +347,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.API.Auth.RedirectURI/v1/run:
     get:
       tags:
@@ -369,7 +369,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.API.Auth.RedirectURI/v1/check:
     get:
       tags:
@@ -391,7 +391,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.API.Auth.Type/v1/get:
     get:
       tags:
@@ -413,7 +413,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.API.Auth.UIConfig/v1/get:
     get:
       tags:
@@ -435,7 +435,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.API.Encryption/v1/getinfo:
     get:
       tags:
@@ -457,4 +457,4 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:

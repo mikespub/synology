@@ -193,7 +193,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SupportService.Setting/v1/set:
     get:
       tags:
@@ -215,4 +215,4 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:

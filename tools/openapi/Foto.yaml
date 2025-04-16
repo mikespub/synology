@@ -193,7 +193,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.BackgroundTask.File/v1/delete:
     get:
       tags:
@@ -215,7 +215,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.BackgroundTask.File/v1/move:
     get:
       tags:
@@ -237,7 +237,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.BackgroundTask.Info/v1/abort_task:
     get:
       tags:
@@ -259,7 +259,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.BackgroundTask.Info/v1/clear_completed_task:
     get:
       tags:
@@ -281,7 +281,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.BackgroundTask.Info/v1/get_error_detail:
     get:
       tags:
@@ -303,7 +303,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.BackgroundTask.Info/v1/get_status:
     get:
       tags:
@@ -325,7 +325,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.BackgroundTask.Info/v1/list_user_task:
     get:
       tags:
@@ -347,7 +347,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Album/v5/count:
     get:
       tags:
@@ -369,7 +369,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Album/v5/delete:
     get:
       tags:
@@ -391,7 +391,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Album/v5/download:
     get:
       tags:
@@ -413,7 +413,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Album/v5/get_album_list_display:
     get:
       tags:
@@ -435,7 +435,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Album/v5/get_album_list_order:
     get:
       tags:
@@ -457,7 +457,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Album/v5/get:
     get:
       tags:
@@ -479,7 +479,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Album/v5/list:
     get:
       tags:
@@ -501,7 +501,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: offset
           required: true
@@ -535,7 +535,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Album/v5/set_album_list_order:
     get:
       tags:
@@ -557,7 +557,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Album/v5/set_cover:
     get:
       tags:
@@ -579,7 +579,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Album/v5/set_name:
     get:
       tags:
@@ -601,7 +601,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Album/v5/set_order:
     get:
       tags:
@@ -623,7 +623,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Category/v2/get:
     get:
       tags:
@@ -645,7 +645,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Concept/v2/count:
     get:
       tags:
@@ -667,7 +667,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Concept/v2/get:
     get:
       tags:
@@ -689,7 +689,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Concept/v2/hide_item:
     get:
       tags:
@@ -711,7 +711,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Concept/v2/list:
     get:
       tags:
@@ -733,7 +733,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Concept/v2/set_cover:
     get:
       tags:
@@ -755,7 +755,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Concept/v2/set_visibility:
     get:
       tags:
@@ -777,7 +777,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.ConditionAlbum/v3/count:
     get:
       tags:
@@ -799,7 +799,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.ConditionAlbum/v3/create:
     get:
       tags:
@@ -821,7 +821,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.ConditionAlbum/v3/get:
     get:
       tags:
@@ -843,7 +843,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.ConditionAlbum/v3/list:
     get:
       tags:
@@ -865,7 +865,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: offset
           required: true
@@ -899,7 +899,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.ConditionAlbum/v3/set_condition:
     get:
       tags:
@@ -921,7 +921,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.ConditionAlbum/v3/suggest:
     get:
       tags:
@@ -943,7 +943,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Diff/v5/get:
     get:
       tags:
@@ -965,7 +965,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: diff_version
           required: true
@@ -993,7 +993,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Diff/v5/list_item:
     get:
       tags:
@@ -1015,7 +1015,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Folder/v2/copy:
     get:
       tags:
@@ -1037,7 +1037,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Folder/v2/count:
     get:
       tags:
@@ -1059,7 +1059,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Folder/v2/create:
     get:
       tags:
@@ -1081,7 +1081,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Folder/v2/delete:
     get:
       tags:
@@ -1103,7 +1103,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Folder/v2/get:
     get:
       tags:
@@ -1125,7 +1125,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Folder/v2/list_parents:
     get:
       tags:
@@ -1147,7 +1147,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Folder/v2/list:
     get:
       tags:
@@ -1169,7 +1169,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: offset
           required: true
@@ -1203,7 +1203,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Folder/v2/rename:
     get:
       tags:
@@ -1225,7 +1225,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Folder/v2/set_cover:
     get:
       tags:
@@ -1247,7 +1247,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Folder/v2/set_order:
     get:
       tags:
@@ -1269,7 +1269,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.GeneralTag/v1/count:
     get:
       tags:
@@ -1291,7 +1291,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.GeneralTag/v1/create:
     get:
       tags:
@@ -1313,7 +1313,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.GeneralTag/v1/get:
     get:
       tags:
@@ -1335,7 +1335,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.GeneralTag/v1/list:
     get:
       tags:
@@ -1357,7 +1357,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: offset
           required: true
@@ -1391,7 +1391,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Geocoding/v1/get:
     get:
       tags:
@@ -1413,7 +1413,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Geocoding/v1/list:
     get:
       tags:
@@ -1435,7 +1435,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: offset
           required: true
@@ -1469,7 +1469,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/copy:
     get:
       tags:
@@ -1491,7 +1491,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/count:
     get:
       tags:
@@ -1513,7 +1513,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/count_with_filter:
     get:
       tags:
@@ -1535,7 +1535,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/delete:
     get:
       tags:
@@ -1557,7 +1557,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/get_exif:
     get:
       tags:
@@ -1579,7 +1579,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/get_tag:
     get:
       tags:
@@ -1601,7 +1601,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/get:
     get:
       tags:
@@ -1623,7 +1623,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/list_all:
     get:
       tags:
@@ -1645,7 +1645,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/list_basic_timeline_info:
     get:
       tags:
@@ -1667,7 +1667,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/list_basic_timeline_info_with_filter:
     get:
       tags:
@@ -1689,7 +1689,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/list:
     get:
       tags:
@@ -1711,7 +1711,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: offset
           required: true
@@ -1745,7 +1745,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/move:
     get:
       tags:
@@ -1767,7 +1767,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/remove_tag:
     get:
       tags:
@@ -1789,7 +1789,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/rename:
     get:
       tags:
@@ -1811,7 +1811,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Item/v6/set:
     get:
       tags:
@@ -1833,7 +1833,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.NormalAlbum/v3/add_item:
     get:
       tags:
@@ -1855,7 +1855,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.NormalAlbum/v3/copy:
     get:
       tags:
@@ -1877,7 +1877,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.NormalAlbum/v3/count:
     get:
       tags:
@@ -1899,7 +1899,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.NormalAlbum/v3/create:
     get:
       tags:
@@ -1921,7 +1921,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.NormalAlbum/v3/delete_item:
     get:
       tags:
@@ -1943,7 +1943,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.NormalAlbum/v3/get:
     get:
       tags:
@@ -1965,7 +1965,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.NormalAlbum/v3/list:
     get:
       tags:
@@ -1987,7 +1987,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: offset
           required: true
@@ -2021,7 +2021,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Person/v2/count:
     get:
       tags:
@@ -2043,7 +2043,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Person/v2/delete_face:
     get:
       tags:
@@ -2065,7 +2065,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Person/v2/get:
     get:
       tags:
@@ -2087,7 +2087,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Person/v2/get_migration_status:
     get:
       tags:
@@ -2109,7 +2109,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Person/v2/list:
     get:
       tags:
@@ -2131,7 +2131,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: offset
           required: true
@@ -2165,7 +2165,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Person/v2/merge:
     get:
       tags:
@@ -2187,7 +2187,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Person/v2/separate:
     get:
       tags:
@@ -2209,7 +2209,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Person/v2/set:
     get:
       tags:
@@ -2231,7 +2231,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Person/v2/set_cover:
     get:
       tags:
@@ -2253,7 +2253,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Person/v2/show:
     get:
       tags:
@@ -2275,7 +2275,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Person/v2/suggest:
     get:
       tags:
@@ -2297,7 +2297,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.RecentlyAdded/v5/count:
     get:
       tags:
@@ -2319,7 +2319,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.RecentlyAdded/v5/get_timeline:
     get:
       tags:
@@ -2341,7 +2341,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.RecentlyAdded/v5/list_basic_timeline_info:
     get:
       tags:
@@ -2363,7 +2363,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.RecentlyAdded/v5/list:
     get:
       tags:
@@ -2385,7 +2385,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: offset
           required: true
@@ -2419,7 +2419,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Timeline/v5/get_geocoding_with_filter:
     get:
       tags:
@@ -2441,7 +2441,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Timeline/v5/get:
     get:
       tags:
@@ -2463,7 +2463,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Timeline/v5/get_with_filter:
     get:
       tags:
@@ -2485,7 +2485,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Unit/v2/count:
     get:
       tags:
@@ -2507,7 +2507,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Unit/v2/get_thumbnail_status:
     get:
       tags:
@@ -2529,7 +2529,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Browse.Unit/v2/get:
     get:
       tags:
@@ -2551,7 +2551,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: id_item
           required: true
@@ -2579,7 +2579,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Development.Admin/v1/regenerate_concept_album:
     get:
       tags:
@@ -2601,7 +2601,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Development.Admin/v1/update_concept_threshold:
     get:
       tags:
@@ -2623,7 +2623,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Download/v2/calculate_cache_size:
     get:
       tags:
@@ -2645,7 +2645,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Download/v2/clear_cache:
     get:
       tags:
@@ -2667,7 +2667,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Download/v2/convert:
     get:
       tags:
@@ -2689,7 +2689,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Download/v2/download:
     get:
       tags:
@@ -2711,7 +2711,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Download/v2/get_cache_status:
     get:
       tags:
@@ -2733,7 +2733,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Favorite/v1/list:
     get:
       tags:
@@ -2755,7 +2755,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: offset
           required: true
@@ -2789,7 +2789,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Index/v1/index_add:
     get:
       tags:
@@ -2811,7 +2811,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Index/v1/reindex:
     get:
       tags:
@@ -2833,7 +2833,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Index/v1/reindex_all_user:
     get:
       tags:
@@ -2855,7 +2855,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Migration/v1/get_status:
     get:
       tags:
@@ -2877,7 +2877,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Notification/v1/subscribe:
     get:
       tags:
@@ -2899,7 +2899,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Notification/v1/unsubscribe:
     get:
       tags:
@@ -2921,7 +2921,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.PhotoRequest/v1/create:
     get:
       tags:
@@ -2943,7 +2943,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.PhotoRequest/v1/delete:
     get:
       tags:
@@ -2965,7 +2965,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.PhotoRequest/v1/get:
     get:
       tags:
@@ -2987,7 +2987,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.PhotoRequest/v1/list:
     get:
       tags:
@@ -3009,7 +3009,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: offset
           required: true
@@ -3043,7 +3043,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.PublicSharing/v1/get:
     get:
       tags:
@@ -3065,7 +3065,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: passphrase
           required: true
@@ -3093,7 +3093,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.PublicSharing/v1/get_ui_string:
     get:
       tags:
@@ -3115,7 +3115,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Search.Filter/v2/list:
     get:
       tags:
@@ -3137,7 +3137,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Search.Search/v6/count_album:
     get:
       tags:
@@ -3159,7 +3159,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Search.Search/v6/count_item:
     get:
       tags:
@@ -3181,7 +3181,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Search.Search/v6/get_geocoding:
     get:
       tags:
@@ -3203,7 +3203,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Search.Search/v6/get_search_timeline:
     get:
       tags:
@@ -3225,7 +3225,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Search.Search/v6/list_album:
     get:
       tags:
@@ -3247,7 +3247,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Search.Search/v6/list_basic_timeline_info:
     get:
       tags:
@@ -3269,7 +3269,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Search.Search/v6/list_item:
     get:
       tags:
@@ -3291,7 +3291,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Search.Search/v6/suggest:
     get:
       tags:
@@ -3313,7 +3313,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.Admin/v1/get:
     get:
       tags:
@@ -3335,7 +3335,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.Admin/v1/set:
     get:
       tags:
@@ -3357,7 +3357,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.Guest/v1/get:
     get:
       tags:
@@ -3379,7 +3379,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.MobileCompatibility/v1/get:
     get:
       tags:
@@ -3401,7 +3401,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.MobileCompatibility/v1/system_info:
     get:
       tags:
@@ -3423,7 +3423,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.TeamSpace/v1/get:
     get:
       tags:
@@ -3445,7 +3445,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.TeamSpace/v1/list_permission:
     get:
       tags:
@@ -3467,7 +3467,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.TeamSpace/v1/set:
     get:
       tags:
@@ -3489,7 +3489,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.TeamSpace/v1/set_enable:
     get:
       tags:
@@ -3511,7 +3511,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.TeamSpace/v1/update_permission:
     get:
       tags:
@@ -3533,7 +3533,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.User/v1/get:
     get:
       tags:
@@ -3555,7 +3555,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.User/v1/set:
     get:
       tags:
@@ -3577,7 +3577,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.Wizard/v1/get:
     get:
       tags:
@@ -3599,7 +3599,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Setting.Wizard/v1/set:
     get:
       tags:
@@ -3621,7 +3621,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Sharing.Misc/v2/list_shared_with_me_album:
     get:
       tags:
@@ -3643,7 +3643,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Sharing.Misc/v2/list_user_group:
     get:
       tags:
@@ -3665,7 +3665,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Sharing.Passphrase/v1/get:
     get:
       tags:
@@ -3687,7 +3687,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: passphrase
           required: true
@@ -3715,7 +3715,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Sharing.Passphrase/v1/get_photo_request_info:
     get:
       tags:
@@ -3737,7 +3737,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Sharing.Passphrase/v1/set_shared:
     get:
       tags:
@@ -3759,7 +3759,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Sharing.Passphrase/v1/update:
     get:
       tags:
@@ -3781,7 +3781,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Streaming/v2/streaming:
     get:
       tags:
@@ -3803,7 +3803,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Thumbnail/v2/get:
     get:
       tags:
@@ -3825,7 +3825,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: id
           required: true
@@ -3853,7 +3853,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Upload.ConvertedFile/v3/list_convert_needed:
     get:
       tags:
@@ -3875,7 +3875,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Upload.ConvertedFile/v3/set_broken:
     get:
       tags:
@@ -3897,7 +3897,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Upload.ConvertedFile/v3/upload:
     get:
       tags:
@@ -3919,7 +3919,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Upload.Item/v6/backup_check:
     get:
       tags:
@@ -3941,7 +3941,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Upload.Item/v6/backup_to_path:
     get:
       tags:
@@ -3963,7 +3963,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Upload.Item/v6/upload_to_folder:
     get:
       tags:
@@ -3985,7 +3985,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Upload.Item/v6/upload:
     get:
       tags:
@@ -4007,7 +4007,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.Upload.PhotoRequestItem/v2/upload:
     get:
       tags:
@@ -4029,7 +4029,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Foto.UserInfo/v1/get:
     get:
       tags:
@@ -4051,7 +4051,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
         - in: query
           name: id
           required: true
@@ -4079,4 +4079,4 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:

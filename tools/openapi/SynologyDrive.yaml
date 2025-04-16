@@ -193,7 +193,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive/v1/get_directory_service_status:
     get:
       tags:
@@ -215,7 +215,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive/v1/get_extension:
     get:
       tags:
@@ -237,7 +237,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive/v1/get_client_link:
     get:
       tags:
@@ -259,7 +259,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive/v1/check_user:
     get:
       tags:
@@ -281,7 +281,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive/v1/delete_database:
     get:
       tags:
@@ -303,7 +303,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive/v1/resume_freeze:
     get:
       tags:
@@ -325,7 +325,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Activation/v1/get:
     get:
       tags:
@@ -347,7 +347,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Activation/v1/set:
     get:
       tags:
@@ -369,7 +369,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.AdvanceSharing/v1/get:
     get:
       tags:
@@ -391,7 +391,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.AdvanceSharing/v1/update:
     get:
       tags:
@@ -413,7 +413,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.AdvanceSharing/v1/create:
     get:
       tags:
@@ -435,7 +435,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.AdvanceSharing/v1/delete:
     get:
       tags:
@@ -457,7 +457,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.AdvanceSharing/v1/verify:
     get:
       tags:
@@ -479,7 +479,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.AdvanceSharing.Public/v1/auth:
     get:
       tags:
@@ -501,7 +501,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.AppIntegration/v1/list:
     get:
       tags:
@@ -523,7 +523,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.AppIntegration/v1/get:
     get:
       tags:
@@ -545,7 +545,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.AppIntegration/v1/update:
     get:
       tags:
@@ -567,7 +567,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.AppIntegration/v1/create:
     get:
       tags:
@@ -589,7 +589,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.AppIntegration/v1/delete:
     get:
       tags:
@@ -611,7 +611,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Authentication/v3/authenticate_by_dsm:
     get:
       tags:
@@ -633,7 +633,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Authentication/v3/revoke:
     get:
       tags:
@@ -655,7 +655,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Authentication/v3/set_active:
     get:
       tags:
@@ -677,7 +677,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Config/v1/get:
     get:
       tags:
@@ -699,7 +699,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Config/v1/set:
     get:
       tags:
@@ -721,7 +721,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Connection/v2/list:
     get:
       tags:
@@ -743,7 +743,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Connection/v2/delete:
     get:
       tags:
@@ -765,7 +765,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Connection/v2/summary:
     get:
       tags:
@@ -787,7 +787,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.DBUsage/v1/status:
     get:
       tags:
@@ -809,7 +809,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.DBUsage/v1/start:
     get:
       tags:
@@ -831,7 +831,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.DBUsage/v1/stop:
     get:
       tags:
@@ -853,7 +853,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.DBUsage/v1/get:
     get:
       tags:
@@ -875,7 +875,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.DSM/v1/get:
     get:
       tags:
@@ -897,7 +897,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Dashboard/v1/top_access_files:
     get:
       tags:
@@ -919,7 +919,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/convert_office:
     get:
       tags:
@@ -941,7 +941,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/copy:
     get:
       tags:
@@ -963,7 +963,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/create:
     get:
       tags:
@@ -985,7 +985,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/delete:
     get:
       tags:
@@ -1007,7 +1007,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/download:
     get:
       tags:
@@ -1029,7 +1029,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/list:
     get:
       tags:
@@ -1051,7 +1051,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/get:
     get:
       tags:
@@ -1073,7 +1073,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/label:
     get:
       tags:
@@ -1095,7 +1095,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/list_starred:
     get:
       tags:
@@ -1117,7 +1117,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/recent:
     get:
       tags:
@@ -1139,7 +1139,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/shared_with_me:
     get:
       tags:
@@ -1161,7 +1161,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/list_labelled:
     get:
       tags:
@@ -1183,7 +1183,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/list_ancestor:
     get:
       tags:
@@ -1205,7 +1205,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/shared_with_others:
     get:
       tags:
@@ -1227,7 +1227,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/move:
     get:
       tags:
@@ -1249,7 +1249,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/request_access:
     get:
       tags:
@@ -1271,7 +1271,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/search:
     get:
       tags:
@@ -1293,7 +1293,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/star:
     get:
       tags:
@@ -1315,7 +1315,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/get_thumbnail:
     get:
       tags:
@@ -1337,7 +1337,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/update:
     get:
       tags:
@@ -1359,7 +1359,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/upload:
     get:
       tags:
@@ -1381,7 +1381,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/upload_from_dsm:
     get:
       tags:
@@ -1403,7 +1403,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Files/v10/list_backup_tasks:
     get:
       tags:
@@ -1425,7 +1425,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.HybridShare.Privilege/v1/list:
     get:
       tags:
@@ -1447,7 +1447,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.HybridShare.Privilege/v1/update:
     get:
       tags:
@@ -1469,7 +1469,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Index/v1/get_native_client_status:
     get:
       tags:
@@ -1491,7 +1491,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Index/v1/set_native_client_index_pause:
     get:
       tags:
@@ -1513,7 +1513,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Info/v2/get:
     get:
       tags:
@@ -1535,7 +1535,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Info/v2/noop:
     get:
       tags:
@@ -1557,7 +1557,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Info/v2/quota:
     get:
       tags:
@@ -1579,7 +1579,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.KeyManagement/v1/list:
     get:
       tags:
@@ -1601,7 +1601,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.KeyManagement/v1/get:
     get:
       tags:
@@ -1623,7 +1623,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.KeyManagement/v1/set:
     get:
       tags:
@@ -1645,7 +1645,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.KeyManagement/v1/delete:
     get:
       tags:
@@ -1667,7 +1667,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.KeyManagement/v1/export:
     get:
       tags:
@@ -1689,7 +1689,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.KeyManagement/v1/import:
     get:
       tags:
@@ -1711,7 +1711,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Labels/v2/list:
     get:
       tags:
@@ -1733,7 +1733,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Labels/v2/create:
     get:
       tags:
@@ -1755,7 +1755,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Labels/v2/update:
     get:
       tags:
@@ -1777,7 +1777,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Labels/v2/delete:
     get:
       tags:
@@ -1799,7 +1799,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Log/v1/list:
     get:
       tags:
@@ -1821,7 +1821,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Log/v1/delete:
     get:
       tags:
@@ -1843,7 +1843,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Log/v1/export:
     get:
       tags:
@@ -1865,7 +1865,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Metrics/v1/get:
     get:
       tags:
@@ -1887,7 +1887,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Metrics.Token/v1/get:
     get:
       tags:
@@ -1909,7 +1909,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Metrics.Token/v1/refresh:
     get:
       tags:
@@ -1931,7 +1931,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Migration/v1/import_trash:
     get:
       tags:
@@ -1953,7 +1953,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Migration/v1/import:
     get:
       tags:
@@ -1975,7 +1975,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Migration.UserHome/v1/start:
     get:
       tags:
@@ -1997,7 +1997,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Migration.UserHome/v1/status:
     get:
       tags:
@@ -2019,7 +2019,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Migration.UserHome/v1/list:
     get:
       tags:
@@ -2041,7 +2041,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Mobile.Notification/v1/unsubscribe:
     get:
       tags:
@@ -2063,7 +2063,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Mobile.Notification/v1/subscribe:
     get:
       tags:
@@ -2085,7 +2085,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Mobile.Notification/v1/unpair:
     get:
       tags:
@@ -2107,7 +2107,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Mobile.Notification/v1/pair:
     get:
       tags:
@@ -2129,7 +2129,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node/v1/list:
     get:
       tags:
@@ -2151,7 +2151,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node/v1/list_parent:
     get:
       tags:
@@ -2173,7 +2173,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node/v1/list_version:
     get:
       tags:
@@ -2195,7 +2195,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node/v1/dry_run:
     get:
       tags:
@@ -2217,7 +2217,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node.Delete/v1/start:
     get:
       tags:
@@ -2239,7 +2239,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node.Delete/v1/status:
     get:
       tags:
@@ -2261,7 +2261,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node.Delete/v1/set_schedule:
     get:
       tags:
@@ -2283,7 +2283,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node.Delete/v1/get_schedule:
     get:
       tags:
@@ -2305,7 +2305,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node.Download/v1/start:
     get:
       tags:
@@ -2327,7 +2327,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node.Download/v1/status:
     get:
       tags:
@@ -2349,7 +2349,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node.Download/v1/stop:
     get:
       tags:
@@ -2371,7 +2371,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node.Download/v1/finish:
     get:
       tags:
@@ -2393,7 +2393,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node.Restore/v1/start:
     get:
       tags:
@@ -2415,7 +2415,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node.Restore/v1/status:
     get:
       tags:
@@ -2437,7 +2437,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Node.Restore/v1/finish:
     get:
       tags:
@@ -2459,7 +2459,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Notifications/v2/create:
     get:
       tags:
@@ -2481,7 +2481,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Notifications/v2/list:
     get:
       tags:
@@ -2503,7 +2503,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Notifications/v2/delete:
     get:
       tags:
@@ -2525,7 +2525,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Office/v1/status:
     get:
       tags:
@@ -2547,7 +2547,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Photos/v3/get_metadata:
     get:
       tags:
@@ -2569,7 +2569,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Photos/v3/list:
     get:
       tags:
@@ -2591,7 +2591,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Photos/v3/upload:
     get:
       tags:
@@ -2613,7 +2613,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Privilege/v1/list:
     get:
       tags:
@@ -2635,7 +2635,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Privilege/v1/set:
     get:
       tags:
@@ -2657,7 +2657,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Privilege/v1/status:
     get:
       tags:
@@ -2679,7 +2679,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Profiles/v2/list:
     get:
       tags:
@@ -2701,7 +2701,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Profiles/v2/set:
     get:
       tags:
@@ -2723,7 +2723,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Profiles/v2/delete:
     get:
       tags:
@@ -2745,7 +2745,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Profiles/v2/get_sync_profiles:
     get:
       tags:
@@ -2767,7 +2767,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Revisions/v2/list:
     get:
       tags:
@@ -2789,7 +2789,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Revisions/v2/download:
     get:
       tags:
@@ -2811,7 +2811,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Revisions/v2/restore:
     get:
       tags:
@@ -2833,7 +2833,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.SCIM.Photo/v1/get:
     get:
       tags:
@@ -2855,7 +2855,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.SCIM.User/v1/get:
     get:
       tags:
@@ -2877,7 +2877,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Services.DocumentViewer/v1/create:
     get:
       tags:
@@ -2899,7 +2899,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Services.SynologyChat/v1/bind:
     get:
       tags:
@@ -2921,7 +2921,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Services.SynologyChat/v1/list:
     get:
       tags:
@@ -2943,7 +2943,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Services.VideoStation/v1/create:
     get:
       tags:
@@ -2965,7 +2965,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Settings/v2/list:
     get:
       tags:
@@ -2987,7 +2987,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Settings/v2/update:
     get:
       tags:
@@ -3009,7 +3009,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Settings/v2/list_targets:
     get:
       tags:
@@ -3031,7 +3031,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Shard/v1/get:
     get:
       tags:
@@ -3053,7 +3053,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Shard/v1/getjs:
     get:
       tags:
@@ -3075,7 +3075,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Shard/v1/init:
     get:
       tags:
@@ -3097,7 +3097,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Share/v2/list_active:
     get:
       tags:
@@ -3119,7 +3119,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Share/v2/set:
     get:
       tags:
@@ -3141,7 +3141,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Share/v2/list:
     get:
       tags:
@@ -3163,7 +3163,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Share/v2/get_hybrid_share_rotate_span:
     get:
       tags:
@@ -3185,7 +3185,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Share/v2/migrate_index_home:
     get:
       tags:
@@ -3207,7 +3207,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Share/v2/get_migrate_index_home_config:
     get:
       tags:
@@ -3229,7 +3229,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Share.Priv/v1/list:
     get:
       tags:
@@ -3251,7 +3251,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Sharing/v2/create_link:
     get:
       tags:
@@ -3273,7 +3273,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Sharing/v2/list:
     get:
       tags:
@@ -3295,7 +3295,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Sharing/v2/update:
     get:
       tags:
@@ -3317,7 +3317,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Sharing/v2/use_link:
     get:
       tags:
@@ -3339,7 +3339,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Sharing/v2/sync_to_device:
     get:
       tags:
@@ -3361,7 +3361,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Sharing/v2/get_base_url:
     get:
       tags:
@@ -3383,7 +3383,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Sharing.Report/v1/list_target:
     get:
       tags:
@@ -3405,7 +3405,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Sharing.Report/v1/start:
     get:
       tags:
@@ -3427,7 +3427,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Sharing.Report/v1/status:
     get:
       tags:
@@ -3449,7 +3449,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Sharing.Report/v1/stop:
     get:
       tags:
@@ -3471,7 +3471,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Statistics/v1/get:
     get:
       tags:
@@ -3493,7 +3493,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.String/v1/get:
     get:
       tags:
@@ -3515,7 +3515,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Tasks/v1/delete:
     get:
       tags:
@@ -3537,7 +3537,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Tasks/v1/get:
     get:
       tags:
@@ -3559,7 +3559,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Tasks/v1/list:
     get:
       tags:
@@ -3581,7 +3581,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.TeamFolders/v1/list:
     get:
       tags:
@@ -3603,7 +3603,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.TeamFolders/v1/list_members:
     get:
       tags:
@@ -3625,7 +3625,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Trash/v2/list:
     get:
       tags:
@@ -3647,7 +3647,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Trash/v2/list_ancestor:
     get:
       tags:
@@ -3669,7 +3669,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Trash/v2/empty:
     get:
       tags:
@@ -3691,7 +3691,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Trash/v2/get_size:
     get:
       tags:
@@ -3713,7 +3713,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Users/v1/get:
     get:
       tags:
@@ -3735,7 +3735,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Users/v1/update:
     get:
       tags:
@@ -3757,7 +3757,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Users/v1/list:
     get:
       tags:
@@ -3779,7 +3779,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Webhooks/v2/create:
     get:
       tags:
@@ -3801,7 +3801,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Webhooks/v2/get:
     get:
       tags:
@@ -3823,7 +3823,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Webhooks/v2/update:
     get:
       tags:
@@ -3845,7 +3845,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Webhooks/v2/delete:
     get:
       tags:
@@ -3867,7 +3867,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.SynologyDrive.Webhooks/v2/list:
     get:
       tags:
@@ -3889,4 +3889,4 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:

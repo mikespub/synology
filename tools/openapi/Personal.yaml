@@ -193,7 +193,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Application.Info/v1/setorder:
     get:
       tags:
@@ -215,7 +215,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Application.Info/v1/get_autotest_log:
     get:
       tags:
@@ -237,7 +237,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Application.Info.Local/v1/get:
     get:
       tags:
@@ -259,7 +259,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.MailAccount/v1/set:
     get:
       tags:
@@ -281,7 +281,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.MailAccount/v1/delete:
     get:
       tags:
@@ -303,7 +303,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.MailAccount/v1/get:
     get:
       tags:
@@ -325,7 +325,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.MailAccount/v1/update:
     get:
       tags:
@@ -347,7 +347,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.MailAccount/v1/test:
     get:
       tags:
@@ -369,7 +369,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.MailAccount.Contacts/v1/list:
     get:
       tags:
@@ -391,7 +391,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.MailAccount.Mail/v1/send:
     get:
       tags:
@@ -413,7 +413,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.MailAccount.Mail/v1/status:
     get:
       tags:
@@ -435,7 +435,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.MailAccount.Mail/v1/stop:
     get:
       tags:
@@ -457,7 +457,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.MailAccount.Mail/v1/clean:
     get:
       tags:
@@ -479,7 +479,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Conf/v2/get:
     get:
       tags:
@@ -501,7 +501,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Conf/v2/set:
     get:
       tags:
@@ -523,7 +523,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Device/v2/list:
     get:
       tags:
@@ -545,7 +545,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Event/v2/list:
     get:
       tags:
@@ -567,7 +567,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Event/v2/delete:
     get:
       tags:
@@ -589,7 +589,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Filter/v1/set:
     get:
       tags:
@@ -611,7 +611,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Filter/v1/list:
     get:
       tags:
@@ -633,7 +633,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.GDPR/v1/set:
     get:
       tags:
@@ -655,7 +655,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.GDPR/v1/get:
     get:
       tags:
@@ -677,7 +677,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Identifier/v1/get:
     get:
       tags:
@@ -699,7 +699,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Mobile/v3/stat:
     get:
       tags:
@@ -721,7 +721,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Mobile/v3/pair:
     get:
       tags:
@@ -743,7 +743,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Mobile/v3/unpair:
     get:
       tags:
@@ -765,7 +765,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Settings/v2/get:
     get:
       tags:
@@ -787,7 +787,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Settings/v2/set:
     get:
       tags:
@@ -809,7 +809,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.Token/v1/get:
     get:
       tags:
@@ -831,7 +831,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Notification.VapidPublicKey/v1/get:
     get:
       tags:
@@ -853,7 +853,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Profile/v3/get:
     get:
       tags:
@@ -875,7 +875,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Profile/v3/list:
     get:
       tags:
@@ -897,7 +897,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Profile.Photo/v2/get:
     get:
       tags:
@@ -919,7 +919,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Personal.Profile.Photo/v2/get_encoded:
     get:
       tags:
@@ -941,4 +941,4 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:

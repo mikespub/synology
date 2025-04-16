@@ -193,7 +193,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Log/v1/export:
     get:
       tags:
@@ -215,7 +215,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Log/v1/clear:
     get:
       tags:
@@ -237,7 +237,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Retention/v1/get:
     get:
       tags:
@@ -259,7 +259,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Retention/v1/get_timezone:
     get:
       tags:
@@ -281,7 +281,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Retention/v1/get_worm_lock:
     get:
       tags:
@@ -303,7 +303,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Retention/v1/set:
     get:
       tags:
@@ -325,7 +325,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Retention/v1/set_timezone:
     get:
       tags:
@@ -347,7 +347,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Retention/v1/set_worm_lock:
     get:
       tags:
@@ -369,7 +369,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Retention/v1/delete:
     get:
       tags:
@@ -391,7 +391,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Retention/v1/info:
     get:
       tags:
@@ -413,7 +413,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Retention/v1/check_worm_lockable:
     get:
       tags:
@@ -435,7 +435,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Retention/v1/notify_worm_lock_disable:
     get:
       tags:
@@ -457,7 +457,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.DisasterRecovery.Retention/v1/clear_worm_lock_notify_time:
     get:
       tags:
@@ -479,4 +479,4 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:

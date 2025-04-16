@@ -193,7 +193,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.BackgroundTask/v3/clear_finished:
     get:
       tags:
@@ -215,7 +215,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.CheckExist/v2/check:
     get:
       tags:
@@ -237,7 +237,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.CheckPermission/v3/write:
     get:
       tags:
@@ -259,7 +259,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Compress/v3/start:
     get:
       tags:
@@ -281,7 +281,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Compress/v3/status:
     get:
       tags:
@@ -303,7 +303,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Compress/v3/stop:
     get:
       tags:
@@ -325,7 +325,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.CopyMove/v3/start:
     get:
       tags:
@@ -347,7 +347,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.CopyMove/v3/status:
     get:
       tags:
@@ -369,7 +369,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.CopyMove/v3/stop:
     get:
       tags:
@@ -391,7 +391,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.CreateFolder/v2/create:
     get:
       tags:
@@ -413,7 +413,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Delete/v2/start:
     get:
       tags:
@@ -435,7 +435,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Delete/v2/stop:
     get:
       tags:
@@ -457,7 +457,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Delete/v2/status:
     get:
       tags:
@@ -479,7 +479,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Delete/v2/delete:
     get:
       tags:
@@ -501,7 +501,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.DirSize/v2/start:
     get:
       tags:
@@ -523,7 +523,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.DirSize/v2/status:
     get:
       tags:
@@ -545,7 +545,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.DirSize/v2/stop:
     get:
       tags:
@@ -567,7 +567,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Download/v2/download:
     get:
       tags:
@@ -589,7 +589,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.External.GoogleDrive/v2/open:
     get:
       tags:
@@ -611,7 +611,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Extract/v2/list:
     get:
       tags:
@@ -633,7 +633,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Extract/v2/start:
     get:
       tags:
@@ -655,7 +655,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Extract/v2/status:
     get:
       tags:
@@ -677,7 +677,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Extract/v2/stop:
     get:
       tags:
@@ -699,7 +699,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Favorite/v2/list:
     get:
       tags:
@@ -721,7 +721,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Favorite/v2/edit:
     get:
       tags:
@@ -743,7 +743,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Favorite/v2/delete:
     get:
       tags:
@@ -765,7 +765,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Favorite/v2/add:
     get:
       tags:
@@ -787,7 +787,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Favorite/v2/clear_broken:
     get:
       tags:
@@ -809,7 +809,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Favorite/v2/replace_all:
     get:
       tags:
@@ -831,7 +831,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.FormUpload/v2/start:
     get:
       tags:
@@ -853,7 +853,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.FormUpload/v2/status:
     get:
       tags:
@@ -875,7 +875,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.FormUpload/v2/cancel:
     get:
       tags:
@@ -897,7 +897,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Info/v2/get:
     get:
       tags:
@@ -919,7 +919,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.List/v2/list:
     get:
       tags:
@@ -941,7 +941,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.List/v2/list_share:
     get:
       tags:
@@ -963,7 +963,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.List/v2/getinfo:
     get:
       tags:
@@ -985,7 +985,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.MD5/v2/start:
     get:
       tags:
@@ -1007,7 +1007,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.MD5/v2/status:
     get:
       tags:
@@ -1029,7 +1029,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.MD5/v2/stop:
     get:
       tags:
@@ -1051,7 +1051,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Mount/v1/mount_iso:
     get:
       tags:
@@ -1073,7 +1073,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Mount/v1/mount_remote:
     get:
       tags:
@@ -1095,7 +1095,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Mount/v1/unmount:
     get:
       tags:
@@ -1117,7 +1117,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Mount.List/v1/get:
     get:
       tags:
@@ -1139,7 +1139,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Mount.List/v1/unmount:
     get:
       tags:
@@ -1161,7 +1161,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Mount.List/v1/reconnect:
     get:
       tags:
@@ -1183,7 +1183,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Mount.List/v1/remount:
     get:
       tags:
@@ -1205,7 +1205,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Notify/v1/all:
     get:
       tags:
@@ -1227,7 +1227,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Notify/v1/one:
     get:
       tags:
@@ -1249,7 +1249,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.PhotoUpload/v3/upload:
     get:
       tags:
@@ -1271,7 +1271,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Property/v1/set:
     get:
       tags:
@@ -1293,7 +1293,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Property/v1/status:
     get:
       tags:
@@ -1315,7 +1315,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Property/v1/stop:
     get:
       tags:
@@ -1337,7 +1337,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Property.ACLOwner/v1/get:
     get:
       tags:
@@ -1359,7 +1359,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Property.CompressSize/v1/get:
     get:
       tags:
@@ -1381,7 +1381,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Property.Mtime/v1/get:
     get:
       tags:
@@ -1403,7 +1403,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Rename/v2/rename:
     get:
       tags:
@@ -1425,7 +1425,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Search/v2/list:
     get:
       tags:
@@ -1447,7 +1447,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Search/v2/start:
     get:
       tags:
@@ -1469,7 +1469,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Search/v2/stop:
     get:
       tags:
@@ -1491,7 +1491,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Search/v2/clean:
     get:
       tags:
@@ -1513,7 +1513,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Search.History/v1/get:
     get:
       tags:
@@ -1535,7 +1535,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Search.History/v1/set:
     get:
       tags:
@@ -1557,7 +1557,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Search.History/v1/delete:
     get:
       tags:
@@ -1579,7 +1579,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Settings/v1/get:
     get:
       tags:
@@ -1601,7 +1601,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Settings/v1/set:
     get:
       tags:
@@ -1623,7 +1623,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Sharing/v3/create:
     get:
       tags:
@@ -1645,7 +1645,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Sharing/v3/list:
     get:
       tags:
@@ -1667,7 +1667,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Sharing/v3/list_share_me:
     get:
       tags:
@@ -1689,7 +1689,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Sharing/v3/edit:
     get:
       tags:
@@ -1711,7 +1711,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Sharing/v3/delete:
     get:
       tags:
@@ -1733,7 +1733,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Sharing/v3/clear_invalid:
     get:
       tags:
@@ -1755,7 +1755,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Sharing/v3/getinfo:
     get:
       tags:
@@ -1777,7 +1777,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Sharing.Download/v1/download:
     get:
       tags:
@@ -1799,7 +1799,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Snapshot/v2/list:
     get:
       tags:
@@ -1821,7 +1821,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Snapshot/v2/history:
     get:
       tags:
@@ -1843,7 +1843,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Snapshot/v2/desc:
     get:
       tags:
@@ -1865,7 +1865,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Thumb/v3/get:
     get:
       tags:
@@ -1887,7 +1887,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Timeout/v1/avoid:
     get:
       tags:
@@ -1909,7 +1909,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.UIString/v1/getjs:
     get:
       tags:
@@ -1931,7 +1931,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Upload/v3/upload:
     get:
       tags:
@@ -1953,7 +1953,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.UserGrp/v1/list_user:
     get:
       tags:
@@ -1975,7 +1975,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.UserGrp/v1/list_group:
     get:
       tags:
@@ -1997,7 +1997,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.UserGrp/v1/list_all:
     get:
       tags:
@@ -2019,7 +2019,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.Connection/v1/create:
     get:
       tags:
@@ -2041,7 +2041,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.Connection/v1/set:
     get:
       tags:
@@ -2063,7 +2063,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.Connection/v1/delete:
     get:
       tags:
@@ -2085,7 +2085,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.Connection/v1/list:
     get:
       tags:
@@ -2107,7 +2107,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.Connection/v1/get:
     get:
       tags:
@@ -2129,7 +2129,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.File/v1/get:
     get:
       tags:
@@ -2151,7 +2151,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.File/v1/set:
     get:
       tags:
@@ -2173,7 +2173,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.GDrive/v1/download:
     get:
       tags:
@@ -2195,7 +2195,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.Profile/v1/create:
     get:
       tags:
@@ -2217,7 +2217,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.Profile/v1/set:
     get:
       tags:
@@ -2239,7 +2239,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.Profile/v1/delete:
     get:
       tags:
@@ -2261,7 +2261,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.Profile/v1/get:
     get:
       tags:
@@ -2283,7 +2283,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.Profile/v1/list:
     get:
       tags:
@@ -2305,7 +2305,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.Protocol/v1/list:
     get:
       tags:
@@ -2327,7 +2327,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.User/v1/get:
     get:
       tags:
@@ -2349,7 +2349,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VFS.User/v1/set:
     get:
       tags:
@@ -2371,7 +2371,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.VirtualFolder/v2/list:
     get:
       tags:
@@ -2393,7 +2393,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Worm/v1/get:
     get:
       tags:
@@ -2415,7 +2415,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Worm/v1/get_share_info:
     get:
       tags:
@@ -2437,7 +2437,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Worm.Lock/v1/start:
     get:
       tags:
@@ -2459,7 +2459,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Worm.Lock/v1/stop:
     get:
       tags:
@@ -2481,7 +2481,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.FileStation.Worm.Lock/v1/status:
     get:
       tags:
@@ -2503,4 +2503,4 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:

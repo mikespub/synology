@@ -193,7 +193,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Bucket/v1/ask_account:
     get:
       tags:
@@ -215,7 +215,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Bucket/v1/password_key_export:
     get:
       tags:
@@ -237,7 +237,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Bucket/v1/get_account_mount:
     get:
       tags:
@@ -259,7 +259,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Bucket/v1/decrypt:
     get:
       tags:
@@ -281,7 +281,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Bucket/v1/encrypt:
     get:
       tags:
@@ -303,7 +303,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Conf/v1/confbackup_import:
     get:
       tags:
@@ -325,7 +325,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Conf/v1/confbackup_export:
     get:
       tags:
@@ -347,7 +347,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.File/v2/evict:
     get:
       tags:
@@ -369,7 +369,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/list_accessible:
     get:
       tags:
@@ -391,7 +391,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/set_permission:
     get:
       tags:
@@ -413,7 +413,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/stop_daemons:
     get:
       tags:
@@ -435,7 +435,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/start_daemons:
     get:
       tags:
@@ -457,7 +457,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/restart_daemons:
     get:
       tags:
@@ -479,7 +479,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/set:
     get:
       tags:
@@ -501,7 +501,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/validate_set:
     get:
       tags:
@@ -523,7 +523,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/unmount:
     get:
       tags:
@@ -545,7 +545,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/mount:
     get:
       tags:
@@ -567,7 +567,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/remount:
     get:
       tags:
@@ -589,7 +589,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/validate_delete:
     get:
       tags:
@@ -611,7 +611,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/delete:
     get:
       tags:
@@ -633,7 +633,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/list:
     get:
       tags:
@@ -655,7 +655,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/create:
     get:
       tags:
@@ -677,7 +677,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share/v1/reauth:
     get:
       tags:
@@ -699,7 +699,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Share.Status/v1/is_connected_to_server:
     get:
       tags:
@@ -721,7 +721,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Snapshot/v1/add:
     get:
       tags:
@@ -743,7 +743,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Transform/v1/re_add_progress:
     get:
       tags:
@@ -765,7 +765,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Transform/v1/list_progress:
     get:
       tags:
@@ -787,7 +787,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Transform/v1/export_invalid_files:
     get:
       tags:
@@ -809,7 +809,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Transform/v1/cancel:
     get:
       tags:
@@ -831,7 +831,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Transform/v1/transform_to_c2share:
     get:
       tags:
@@ -853,7 +853,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Transform/v1/validate_for_service:
     get:
       tags:
@@ -875,7 +875,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Transform/v1/get_progress:
     get:
       tags:
@@ -897,7 +897,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Utils/v1/file_dup:
     get:
       tags:
@@ -919,7 +919,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Utils/v1/load_global_config:
     get:
       tags:
@@ -941,7 +941,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Utils/v1/get_ds_info:
     get:
       tags:
@@ -963,7 +963,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Utils/v1/get_share_quota_status:
     get:
       tags:
@@ -985,7 +985,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Utils/v1/get_share_space_usage:
     get:
       tags:
@@ -1007,7 +1007,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.C2FS.Utils/v1/check_ntp_enable:
     get:
       tags:
@@ -1029,4 +1029,4 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:

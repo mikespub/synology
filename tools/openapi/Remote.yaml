@@ -193,7 +193,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Remote.Credential.Challenge/v1/get:
     get:
       tags:
@@ -215,7 +215,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Remote.Credential.Info/v1/get:
     get:
       tags:
@@ -237,7 +237,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
   /SYNO.Remote.Credential.Verifier/v1/get:
     get:
       tags:
@@ -259,4 +259,4 @@ paths:
                 type: object
       security:
         - query_sid: []
-      parameters:
+      #parameters:
