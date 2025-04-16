@@ -41,32 +41,6 @@ servers:
         default: diskstation
       base:
         default: rest.php
-components:
-  securitySchemes:
-    query_sid:
-      type: apiKey
-      name: _sid
-      in: query
-  schemas:
-    NormalResponse:
-      type: object
-      properties:
-        success:
-          type: boolean
-          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
-        data:
-          type: object
-          description: The data object contains all the response information described in each method.
-        error:
-          type: object
-          properties:
-            code:
-              type: integer
-              description: An integer number error code will be returned when a request fails.
-            errors:
-              type: array
-              items:
-                type: object
 paths:
   /SYNO.API.Info/v1/query:
     get:
@@ -294,7 +268,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ActionPriv.Role_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -338,7 +312,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.AppNotify_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -404,7 +378,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.AppPortal_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -448,7 +422,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.AppPortal.AccessControl_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -514,7 +488,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.AppPortal.Config_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -580,7 +554,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.AppPortal.ReverseProxy_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -668,7 +642,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.AppPriv.App_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -778,7 +752,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.BackgroundTask_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -888,7 +862,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.BandwidthControl.Status_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -976,7 +950,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.CMS.Info_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -1372,7 +1346,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Certificate.CRT_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -1526,7 +1500,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Certificate.LetsEncrypt.Account_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -1636,7 +1610,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.CurrentConnection_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -1768,7 +1742,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.DDNS.Ethernet_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -1790,7 +1764,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.DDNS.ExtIP_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -1812,7 +1786,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.DDNS.Provider_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -1900,7 +1874,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.DDNS.Record_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -2208,7 +2182,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.DSMNotify.Strings_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -2230,7 +2204,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.DataCollect_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -2384,7 +2358,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Desktop.Initdata_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -2604,7 +2578,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Desktop.Timeout_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -2714,7 +2688,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Directory.Azure.SSO_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -2824,7 +2798,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Directory.Domain.Schedule_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -3110,7 +3084,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Directory.OIDC.SSO_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -3176,7 +3150,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Directory.SSO.CAS_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -3198,7 +3172,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Directory.SSO.Profile_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -3286,7 +3260,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Directory.SSO.SAML_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -3352,7 +3326,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Directory.SSO_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -3418,7 +3392,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Directory.SSO.IWA_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -3440,7 +3414,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Directory.SSO.Setting_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -3528,7 +3502,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Directory.WebSphere.SSO_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -4716,7 +4690,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.DisableAdmin_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -4760,7 +4734,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.EW.Info_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -4782,7 +4756,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.EventScheduler_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -5288,7 +5262,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ExternalDevice.Printer_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -5354,7 +5328,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ExternalDevice.Printer.BonjourSharing_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -5398,7 +5372,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ExternalDevice.Printer.Driver_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -5530,7 +5504,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ExternalDevice.Printer.OAuth_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -5684,7 +5658,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ExternalDevice.Storage.EUnit_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -5706,7 +5680,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ExternalDevice.Storage.Setting_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -5750,7 +5724,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ExternalDevice.Storage.USB_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -5816,7 +5790,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ExternalDevice.Storage.eSATA_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -5882,7 +5856,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ExternalDevice.UPS_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -5970,7 +5944,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Factory.Manutild_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -6102,7 +6076,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileHandle_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -6234,7 +6208,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.AFP_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -6278,7 +6252,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.FTP_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -6366,7 +6340,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.FTP.SFTP_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -6410,7 +6384,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.FTP.Security_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -6476,7 +6450,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.NFS_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -6520,7 +6494,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.NFS.AdvancedSetting_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -6696,7 +6670,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.NFS.IDMap_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -6828,7 +6802,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.NFS.Kerberos_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -6916,7 +6890,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.ReflinkCopy_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -6938,7 +6912,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.Rsync.Account_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -7048,7 +7022,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.SMB_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -7114,7 +7088,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.SMB.ConfBackup_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -7378,7 +7352,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.SMB.MSDFS_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -7422,7 +7396,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.ServiceDiscovery.WSTransfer_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -7466,7 +7440,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.FileServ.ServiceDiscovery_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -7488,7 +7462,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Findhost_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -7510,7 +7484,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Group_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -7928,7 +7902,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Group.ValidLocalAdmin_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -7950,7 +7924,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.GroupSettings_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -7994,7 +7968,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Hardware.BeepControl_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -8060,7 +8034,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Hardware.FanSpeed_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -8104,7 +8078,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Hardware.Hibernation_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -8148,7 +8122,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Hardware.LCM_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -8192,7 +8166,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Hardware.Led.Brightness_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -8302,7 +8276,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Hardware.MemoryLayout_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -8346,7 +8320,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Hardware.NeedReboot_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -8500,7 +8474,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Hardware.PowerRecovery_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -8610,7 +8584,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Hardware.SpectreMeltdown_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -8654,7 +8628,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Hardware.VideoTranscoding_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -8698,7 +8672,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Hardware.ZRAM_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -8830,7 +8804,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ISCSI.FCTarget_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -9028,7 +9002,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ISCSI.Host_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -9226,7 +9200,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ISCSI.LUN_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -10612,7 +10586,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ISCSI.Node_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -10898,7 +10872,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ISCSI.Replication_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -11316,7 +11290,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ISCSI.Target_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -11624,7 +11598,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.ISCSI.VMware_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -11690,7 +11664,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.MediaIndexing.IndexFolder_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -11800,7 +11774,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.MediaIndexing.Scheduler_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -11844,7 +11818,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.MediaIndexing.ThumbnailQuality_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -12064,7 +12038,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.MyDSCenter.Account_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -12350,7 +12324,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Network_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -12548,7 +12522,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Network.Bond_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -12702,7 +12676,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Network.Ethernet_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -12900,7 +12874,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Network.IPv6.Router.Prefix_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -12922,7 +12896,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Network.Interface_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -13010,7 +12984,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Network.OVS_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -13142,7 +13116,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Network.PPPoE_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -13252,7 +13226,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Network.Proxy_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -13604,7 +13578,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Network.VPN.L2TP_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -13692,7 +13666,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Network.VPN.OpenVPN_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -13802,7 +13776,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Network.VPN.OpenVPNWithConf_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -13912,7 +13886,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Network.VPN.PPTP_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -14000,7 +13974,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.Advance.CustomizedData_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -14110,7 +14084,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.Advance.FilterSettings_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -14132,7 +14106,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.Advance.FilterSettings.Profile_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -14198,7 +14172,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.Advance.FilterSettings.Template_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -14264,7 +14238,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.Advance.Variables_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -14352,7 +14326,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.CMS.Conf_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -14550,7 +14524,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.Mail.Auth_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -14616,7 +14590,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.Mail.Conf_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -14770,7 +14744,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.Push.AuthToken_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -14792,7 +14766,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.Push.Conf_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -14858,7 +14832,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.Push.Mail_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -14902,7 +14876,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.Push.Mobile_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -15034,7 +15008,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.Push.Webhook.Provider_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -15122,7 +15096,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.SMS.Conf_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -15232,7 +15206,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Notification.SMS.Provider_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -15320,7 +15294,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.OAuth.Scope_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -15386,7 +15360,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.OAuth.Server_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -15716,7 +15690,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Package_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -15738,7 +15712,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Package.AutoUpgrade.Progress_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -15804,7 +15778,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Package.FakeIFrame_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -15826,7 +15800,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Package.Feed_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -15914,7 +15888,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Package.Info_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -16002,7 +15976,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Package.Log_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -16030,7 +16004,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Package.MyDS_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -16140,7 +16114,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Package.Server_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -16162,7 +16136,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Package.Setting_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -16382,7 +16356,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.PersonalNotification.Device_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -16740,7 +16714,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Polling.Data_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -16960,7 +16934,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.PortForwarding.RouterConf_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -16982,7 +16956,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.PortForwarding.RouterInfo_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -17026,7 +17000,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.PortForwarding.RouterList_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -17730,7 +17704,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.QuickConnect.Permission_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -17774,7 +17748,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.QuickConnect.RegisterSite_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -17818,7 +17792,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.QuickConnect.Upnp_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -18214,7 +18188,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.RecycleBin_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -18280,7 +18254,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.RecycleBin.User_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -18302,7 +18276,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Region.Language_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -18346,7 +18320,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Region.NTP_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -18390,7 +18364,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Region.NTP.DateTimeFormat_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -18434,7 +18408,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Region.NTP.Server_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -18478,7 +18452,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Report_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -18742,7 +18716,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Report.Config_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -18940,7 +18914,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.SNMP_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -19028,7 +19002,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Security.AutoBlock_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -19292,7 +19266,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Security.Firewall_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -19358,7 +19332,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Security.Firewall.Adapter_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -19380,7 +19354,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Security.Firewall.Conf_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -19424,7 +19398,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Security.Firewall.Geoip_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -19512,7 +19486,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Security.Firewall.Profile_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -19820,7 +19794,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Security.DSM_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -19864,7 +19838,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Security.DSM.Embed_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -19908,7 +19882,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Security.DSM.Proxy_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -19974,7 +19948,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.SecurityScan.Conf_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -20216,7 +20190,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Service_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -20238,7 +20212,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Service.Conf_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -20414,7 +20388,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Share_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -20700,7 +20674,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Share.KeyManager.AutoKey_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -20744,7 +20718,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Share.KeyManager.Key_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -20920,7 +20894,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Share.KeyManager.MachineKey_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -21338,7 +21312,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Sharing_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -21448,7 +21422,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Sharing.Initdata_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -21492,7 +21466,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Sharing.Session_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -21514,7 +21488,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.SmartBlock_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -21624,7 +21598,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.SmartBlock.Trusted_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -21668,7 +21642,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.SmartBlock.Untrusted_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -21734,7 +21708,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.SmartBlock.User_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -23340,7 +23314,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.SupportForm.Form_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -23472,7 +23446,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.SupportForm.Service_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -23560,7 +23534,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Synohdpack_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -23582,7 +23556,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.SyslogClient.FileTransfer_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -23670,7 +23644,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.SyslogClient.Log_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -23824,7 +23798,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.SyslogClient.Setting.Notify_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -23956,7 +23930,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.System.Status_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -24000,7 +23974,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.System.Process_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -24022,7 +23996,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.System.ProcessGroup_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -24044,7 +24018,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.System.ResetButton_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -24088,7 +24062,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.System.SystemHealth_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -24110,7 +24084,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.System.Utilization_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -24132,7 +24106,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.TFTP_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -24308,7 +24282,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Terminal_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -24374,7 +24348,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Theme.Desktop_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -24418,7 +24392,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Theme.FileSharingLogin_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -24550,7 +24524,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Theme.Login_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -25012,7 +24986,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Upgrade.Group.Setting_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -25298,7 +25272,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Upgrade.Setting_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -25342,7 +25316,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.User_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -25760,7 +25734,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.User.Home_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -25914,7 +25888,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.User.PasswordExpiry_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -25980,7 +25954,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.User.PasswordPolicy_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -26046,7 +26020,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.User.UsernamePolicy_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -26068,7 +26042,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.UserSettings_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -26112,7 +26086,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Virtualization.Host.Capability_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -26134,7 +26108,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.VolEncKeepKey_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -26178,7 +26152,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Web.DSM_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -26222,7 +26196,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Web.DSM.External_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -26266,7 +26240,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Web.Security.HTTPCompression_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -26310,7 +26284,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Core.Web.Security.TLSProfile_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -26342,3 +26316,3539 @@ paths:
       security:
         - query_sid: []
       #parameters:
+components:
+  securitySchemes:
+    query_sid:
+      type: apiKey
+      name: _sid
+      in: query
+  schemas:
+    NormalResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          type: object
+          description: The data object contains all the response information described in each method.
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ActionPriv.Role_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.AppNotify_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.AppPortal_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.AppPortal.AccessControl_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.AppPortal.Config_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.AppPortal.ReverseProxy_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.AppPriv.App_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.BackgroundTask_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.BandwidthControl.Status_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.CMS.Info_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Certificate.CRT_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Certificate.LetsEncrypt.Account_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.CurrentConnection_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.DDNS.Ethernet_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.DDNS.ExtIP_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.DDNS.Provider_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.DDNS.Record_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.DSMNotify.Strings_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.DataCollect_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Desktop.Initdata_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Desktop.Timeout_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Directory.Azure.SSO_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Directory.Domain.Schedule_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Directory.OIDC.SSO_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Directory.SSO.CAS_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Directory.SSO.Profile_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Directory.SSO.SAML_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Directory.SSO_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Directory.SSO.IWA_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Directory.SSO.Setting_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Directory.WebSphere.SSO_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.DisableAdmin_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.EW.Info_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.EventScheduler_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ExternalDevice.Printer_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ExternalDevice.Printer.BonjourSharing_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ExternalDevice.Printer.Driver_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ExternalDevice.Printer.OAuth_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ExternalDevice.Storage.EUnit_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ExternalDevice.Storage.Setting_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ExternalDevice.Storage.USB_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ExternalDevice.Storage.eSATA_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ExternalDevice.UPS_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Factory.Manutild_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileHandle_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.AFP_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.FTP_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.FTP.SFTP_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.FTP.Security_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.NFS_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.NFS.AdvancedSetting_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.NFS.IDMap_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.NFS.Kerberos_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.ReflinkCopy_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.Rsync.Account_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.SMB_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.SMB.ConfBackup_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.SMB.MSDFS_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.ServiceDiscovery.WSTransfer_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.FileServ.ServiceDiscovery_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Findhost_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Group_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Group.ValidLocalAdmin_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.GroupSettings_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Hardware.BeepControl_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Hardware.FanSpeed_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Hardware.Hibernation_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Hardware.LCM_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Hardware.Led.Brightness_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Hardware.MemoryLayout_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Hardware.NeedReboot_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Hardware.PowerRecovery_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Hardware.SpectreMeltdown_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Hardware.VideoTranscoding_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Hardware.ZRAM_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ISCSI.FCTarget_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ISCSI.Host_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ISCSI.LUN_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ISCSI.Node_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ISCSI.Replication_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ISCSI.Target_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.ISCSI.VMware_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.MediaIndexing.IndexFolder_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.MediaIndexing.Scheduler_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.MediaIndexing.ThumbnailQuality_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.MyDSCenter.Account_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Network_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Network.Bond_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Network.Ethernet_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Network.IPv6.Router.Prefix_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Network.Interface_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Network.OVS_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Network.PPPoE_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Network.Proxy_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Network.VPN.L2TP_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Network.VPN.OpenVPN_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Network.VPN.OpenVPNWithConf_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Network.VPN.PPTP_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.Advance.CustomizedData_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.Advance.FilterSettings_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.Advance.FilterSettings.Profile_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.Advance.FilterSettings.Template_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.Advance.Variables_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.CMS.Conf_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.Mail.Auth_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.Mail.Conf_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.Push.AuthToken_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.Push.Conf_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.Push.Mail_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.Push.Mobile_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.Push.Webhook.Provider_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.SMS.Conf_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Notification.SMS.Provider_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.OAuth.Scope_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.OAuth.Server_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Package_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Package.AutoUpgrade.Progress_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Package.FakeIFrame_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Package.Feed_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Package.Info_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Package.Log_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Package.MyDS_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Package.Server_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Package.Setting_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.PersonalNotification.Device_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Polling.Data_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.PortForwarding.RouterConf_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.PortForwarding.RouterInfo_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.PortForwarding.RouterList_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.QuickConnect.Permission_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.QuickConnect.RegisterSite_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.QuickConnect.Upnp_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.RecycleBin_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.RecycleBin.User_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Region.Language_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Region.NTP_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Region.NTP.DateTimeFormat_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Region.NTP.Server_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Report_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Report.Config_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.SNMP_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Security.AutoBlock_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Security.Firewall_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Security.Firewall.Adapter_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Security.Firewall.Conf_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Security.Firewall.Geoip_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Security.Firewall.Profile_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Security.DSM_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Security.DSM.Embed_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Security.DSM.Proxy_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.SecurityScan.Conf_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Service_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Service.Conf_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Share_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Share.KeyManager.AutoKey_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Share.KeyManager.Key_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Share.KeyManager.MachineKey_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Sharing_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Sharing.Initdata_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Sharing.Session_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.SmartBlock_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.SmartBlock.Trusted_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.SmartBlock.Untrusted_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.SmartBlock.User_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.SupportForm.Form_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.SupportForm.Service_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Synohdpack_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.SyslogClient.FileTransfer_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.SyslogClient.Log_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.SyslogClient.Setting.Notify_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.System.Status_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.System.Process_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.System.ProcessGroup_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.System.ResetButton_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.System.SystemHealth_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.System.Utilization_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.TFTP_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Terminal_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Theme.Desktop_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Theme.FileSharingLogin_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Theme.Login_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Upgrade.Group.Setting_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Upgrade.Setting_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.User_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.User.Home_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.User.PasswordExpiry_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.User.PasswordPolicy_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.User.UsernamePolicy_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.UserSettings_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Virtualization.Host.Capability_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.VolEncKeepKey_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Web.DSM_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Web.DSM.External_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Web.Security.HTTPCompression_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Core.Web.Security.TLSProfile_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object

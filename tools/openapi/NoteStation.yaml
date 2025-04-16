@@ -41,32 +41,6 @@ servers:
         default: diskstation
       base:
         default: rest.php
-components:
-  securitySchemes:
-    query_sid:
-      type: apiKey
-      name: _sid
-      in: query
-  schemas:
-    NormalResponse:
-      type: object
-      properties:
-        success:
-          type: boolean
-          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
-        data:
-          type: object
-          description: The data object contains all the response information described in each method.
-        error:
-          type: object
-          properties:
-            code:
-              type: integer
-              description: An integer number error code will be returned when a request fails.
-            errors:
-              type: array
-              items:
-                type: object
 paths:
   /SYNO.API.Info/v1/query:
     get:
@@ -888,7 +862,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/NoteStation.Info_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -954,7 +928,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/NoteStation.Note_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -1570,7 +1544,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/NoteStation.Notebook_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -1966,7 +1940,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/NoteStation.Setting_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -2010,7 +1984,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/NoteStation.Setting.DSM_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -2032,7 +2006,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/NoteStation.Setting.Global_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -2208,7 +2182,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/NoteStation.Share.Priv_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -2230,7 +2204,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/NoteStation.Shortcut_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -2340,7 +2314,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/NoteStation.Smart_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -2450,7 +2424,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/NoteStation.Tag_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -2516,7 +2490,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/NoteStation.Todo_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -2636,3 +2610,227 @@ paths:
       security:
         - query_sid: []
       #parameters:
+components:
+  securitySchemes:
+    query_sid:
+      type: apiKey
+      name: _sid
+      in: query
+  schemas:
+    NormalResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          type: object
+          description: The data object contains all the response information described in each method.
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    NoteStation.Info_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    NoteStation.Note_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    NoteStation.Notebook_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    NoteStation.Setting_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    NoteStation.Setting.DSM_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    NoteStation.Setting.Global_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    NoteStation.Share.Priv_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    NoteStation.Shortcut_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    NoteStation.Smart_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    NoteStation.Tag_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    NoteStation.Todo_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object

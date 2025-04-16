@@ -41,32 +41,6 @@ servers:
         default: diskstation
       base:
         default: rest.php
-components:
-  securitySchemes:
-    query_sid:
-      type: apiKey
-      name: _sid
-      in: query
-  schemas:
-    NormalResponse:
-      type: object
-      properties:
-        success:
-          type: boolean
-          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
-        data:
-          type: object
-          description: The data object contains all the response information described in each method.
-        error:
-          type: object
-          properties:
-            code:
-              type: integer
-              description: An integer number error code will be returned when a request fails.
-            errors:
-              type: array
-              items:
-                type: object
 paths:
   /SYNO.API.Info/v1/query:
     get:
@@ -206,7 +180,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/DownloadStation.BTSearch_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -294,7 +268,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/DownloadStation.Info_GetinfoResponse'
         default:
           description: Abnormal Response
           content:
@@ -382,7 +356,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/DownloadStation.RSS.Site_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -470,7 +444,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/DownloadStation.Statistic_GetinfoResponse'
         default:
           description: Abnormal Response
           content:
@@ -492,7 +466,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/DownloadStation.Task_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -514,7 +488,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/DownloadStation.Task_GetinfoResponse'
         default:
           description: Abnormal Response
           content:
@@ -634,3 +608,137 @@ paths:
       security:
         - query_sid: []
       #parameters:
+components:
+  securitySchemes:
+    query_sid:
+      type: apiKey
+      name: _sid
+      in: query
+  schemas:
+    NormalResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          type: object
+          description: The data object contains all the response information described in each method.
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    DownloadStation.BTSearch_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    DownloadStation.Info_GetinfoResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    DownloadStation.RSS.Site_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    DownloadStation.Statistic_GetinfoResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    DownloadStation.Task_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    DownloadStation.Task_GetinfoResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object

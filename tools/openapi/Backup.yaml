@@ -41,32 +41,6 @@ servers:
         default: diskstation
       base:
         default: rest.php
-components:
-  securitySchemes:
-    query_sid:
-      type: apiKey
-      name: _sid
-      in: query
-  schemas:
-    NormalResponse:
-      type: object
-      properties:
-        success:
-          type: boolean
-          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
-        data:
-          type: object
-          description: The data object contains all the response information described in each method.
-        error:
-          type: object
-          properties:
-            code:
-              type: integer
-              description: An integer number error code will be returned when a request fails.
-            errors:
-              type: array
-              items:
-                type: object
 paths:
   /SYNO.API.Info/v1/query:
     get:
@@ -416,7 +390,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Backup.Config.AutoBackup_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -548,7 +522,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Backup.Config.Backup_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -664,7 +638,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Backup.Service.NetworkBackup_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -1186,7 +1160,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Backup.App2.Backup_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -1934,7 +1908,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Backup.Repository_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -2242,7 +2216,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Backup.Storage.Share.Local_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -2638,7 +2612,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Backup.Task_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -3088,3 +3062,155 @@ paths:
       security:
         - query_sid: []
       #parameters:
+components:
+  securitySchemes:
+    query_sid:
+      type: apiKey
+      name: _sid
+      in: query
+  schemas:
+    NormalResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          type: object
+          description: The data object contains all the response information described in each method.
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Backup.Config.AutoBackup_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Backup.Config.Backup_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Backup.Service.NetworkBackup_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Backup.App2.Backup_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Backup.Repository_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Backup.Storage.Share.Local_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Backup.Task_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object

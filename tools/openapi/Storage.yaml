@@ -41,32 +41,6 @@ servers:
         default: diskstation
       base:
         default: rest.php
-components:
-  securitySchemes:
-    query_sid:
-      type: apiKey
-      name: _sid
-      in: query
-  schemas:
-    NormalResponse:
-      type: object
-      properties:
-        success:
-          type: boolean
-          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
-        data:
-          type: object
-          description: The data object contains all the response information described in each method.
-        error:
-          type: object
-          properties:
-            code:
-              type: integer
-              description: An integer number error code will be returned when a request fails.
-            errors:
-              type: array
-              items:
-                type: object
 paths:
   /SYNO.API.Info/v1/query:
     get:
@@ -1922,7 +1896,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Storage.CGI.HddMan_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -2010,7 +1984,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Storage.CGI.KMIP_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -3154,7 +3128,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Storage.CGI.Smart.Scheduler_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -3330,7 +3304,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Storage.CGI.Spare_ListResponse'
         default:
           description: Abnormal Response
           content:
@@ -3352,7 +3326,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Storage.CGI.Spare.Conf_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -5034,3 +5008,119 @@ paths:
       security:
         - query_sid: []
       #parameters:
+components:
+  securitySchemes:
+    query_sid:
+      type: apiKey
+      name: _sid
+      in: query
+  schemas:
+    NormalResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          type: object
+          description: The data object contains all the response information described in each method.
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Storage.CGI.HddMan_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Storage.CGI.KMIP_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Storage.CGI.Smart.Scheduler_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Storage.CGI.Spare_ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Storage.CGI.Spare.Conf_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/../schemas/object.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object

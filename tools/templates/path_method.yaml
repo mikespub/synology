@@ -12,7 +12,7 @@
           content:
             application/json:
               schema:
-                $ref: '#/definitions/NormalResponse'
+                $ref: '#/components/schemas/%schema%'
         default:
           description: Abnormal Response
           content:

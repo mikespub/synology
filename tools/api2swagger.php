@@ -64,6 +64,15 @@ function replace_params($template, $params = [])
     return str_replace($search, $replace, $template);
 }
 
+function get_schema_file($api, $method)
+{
+    $result_file = __DIR__ . '/results/' . $api . '-' . $method . '.json';
+    if (file_exists($result_file)) {
+        return $result_file;
+    }
+    return null;
+}
+
 function get_ip_address()
 {
     $hostname = gethostname();
@@ -96,10 +105,13 @@ function generate_openapi($apilist, $required, $debug = false)
     $path_method_tmpl = load_template('path_method');
     $query_api_tmpl = load_template('query_api');
     $query_path_tmpl = load_template('query_path');
+    $footer_tmpl = load_template('components');
     $rest_header_tmpl = load_template('rest_header');
     $rest_api_tmpl = load_template('rest_api');
     $rest_method_tmpl = load_template('rest_method');
     $rest_param_tmpl = load_template('rest_param');
+    $rest_footer_tmpl = load_template('rest_components');
+    $schema_tmpl = load_template('schema');
 
     $params = [];
     $params['host'] = $host;
@@ -108,9 +120,11 @@ function generate_openapi($apilist, $required, $debug = false)
     $params['location'] = 'path';
     $path_output = replace_params($header_tmpl, $params);
     $path_output .= $path_api_tmpl;
+    $path_footer = replace_params($footer_tmpl, $params);
     $params['location'] = 'query';
     $query_output = replace_params($header_tmpl, $params);
     $query_output .= $query_api_tmpl;
+    $query_footer = replace_params($footer_tmpl, $params);
 
     $api2url = [];
     $paths = [];
@@ -122,7 +136,8 @@ function generate_openapi($apilist, $required, $debug = false)
         $params['http'] = $http;
         $params['location'] = 'query';
         $rest_output = replace_params($rest_header_tmpl, $params);
-        $rest_output .= $rest_api_tmpl;
+        $rest_output .= replace_params($rest_api_tmpl, $params);
+        $rest_footer = replace_params($rest_footer_tmpl, $params);
         foreach ($json as $api => $values) {
             $params = [];
             $params['api'] = $api;
@@ -179,6 +194,19 @@ function generate_openapi($apilist, $required, $debug = false)
             $query_output .= replace_params($query_path_tmpl, $params);
             foreach ($methods as $method) {
                 $params['method'] = $method;
+                // find out if we have a specific schema file for this api method
+                $schema_file = get_schema_file($api, $method);
+                if (!empty($schema_file)) {
+                    $params['schema'] = str_replace('SYNO.', '', $api) . '_' . ucfirst($method) . 'Response';
+                    // @todo schemas including type: array without items causes problems for Swagger UI
+                    //$params['file'] = basename($schema_file);
+                    $params['file'] = '../schemas/object.json';
+                    $path_footer .= replace_params($schema_tmpl, $params);
+                    $rest_footer .= replace_params($schema_tmpl, $params);
+                    $query_footer .= replace_params($schema_tmpl, $params);
+                } else {
+                    $params['schema'] = 'NormalResponse';
+                }
                 $path_output .= replace_params($path_method_tmpl, $params);
                 if ($api == 'SYNO.API.Info' && $method == 'query') {
                     continue;
@@ -193,16 +221,19 @@ function generate_openapi($apilist, $required, $debug = false)
                 }
             }
         }
+        $rest_output .= $rest_footer;
         $tag = explode('.', $root)[1];
         $rest_file = __DIR__ . '/openapi/' . $tag . '.yaml';
         file_put_contents($rest_file, $rest_output);
         echo 'Generated ' . $rest_file . "\n";
     }
 
+    $path_output .= $path_footer;
     $path_file = __DIR__ . '/openapi/path.yaml';
     file_put_contents($path_file, $path_output);
     echo 'Generated ' . $path_file . "\n";
 
+    $query_output .= $query_footer;
     $query_file = __DIR__ . '/openapi/query.yaml';
     file_put_contents($query_file, $query_output);
     echo 'Generated ' . $query_file . "\n";
