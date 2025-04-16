@@ -25,7 +25,7 @@
             application/json:
               schema:
                 type: object
-  '/auth.cgi?api=SYNO.API.Auth&version=4&method=login&account={account}&passwd={passwd}&session={session}&format={format}':
+  '/auth.cgi?api=SYNO.API.Auth&version=6&method=login&account={account}&passwd={passwd}&session={session}&format={format}':
     get:
       tags:
         - SYNO.API
@@ -73,7 +73,7 @@
             application/json:
               schema:
                 type: object
-  '/auth.cgi?api=SYNO.API.Auth&version=4&method=logout&session={session}&_sid={_sid}':
+  '/auth.cgi?api=SYNO.API.Auth&version=6&method=logout&session={session}&_sid={_sid}':
     get:
       tags:
         - SYNO.API

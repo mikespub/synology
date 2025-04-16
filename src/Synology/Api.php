@@ -11,6 +11,7 @@ class Api extends AbstractApi
 {
     public const API_SERVICE_NAME = 'API';
     public const API_NAMESPACE = 'SYNO';
+    public const API_AUTH_VERSION = '6';
 
     private $_sid = null;
     private $_sessionName = 'default';
@@ -56,7 +57,7 @@ class Api extends AbstractApi
      *
      * @return Api
      */
-    public function connect($username, $password, $sessionName = null, $code = null, $auth_version = '3')
+    public function connect($username, $password, $sessionName = null, $code = null, $auth_version = self::API_AUTH_VERSION)
     {
         if (!empty($sessionName)) {
             $this->_sessionName = $sessionName;

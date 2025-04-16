@@ -25,7 +25,7 @@
             application/json:
               schema:
                 type: object
-  /SYNO.API.Auth/v4/login:
+  /SYNO.API.Auth/v6/login:
     get:
       tags:
         - API
@@ -73,7 +73,7 @@
             application/json:
               schema:
                 type: object
-  /SYNO.API.Auth/v4/logout:
+  /SYNO.API.Auth/v6/logout:
     get:
       tags:
         - API

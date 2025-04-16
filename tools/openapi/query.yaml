@@ -165,7 +165,7 @@ paths:
           required: true
           schema:
             type: integer
-            default: 4
+            default: 6
         - in: query
           name: method
           description: Method of the API requested
