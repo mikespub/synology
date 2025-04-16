@@ -9,17 +9,22 @@
           name: query
           description: Requested API information
           required: true
-          type: string
-          default: all
+          schema:
+            type: string
+            default: all
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
   '/auth.cgi?api=SYNO.API.Auth&version=4&method=login&account={account}&passwd={passwd}&session={session}&format={format}':
     get:
       tags:
@@ -31,35 +36,43 @@
           name: account
           description: Username
           required: true
-          type: string
-          default: username
+          schema:
+            type: string
+            default: username
         - in: path
           name: passwd
           description: Password
           required: true
-          type: string
-          default: passwd
+          schema:
+            type: string
+            default: passwd
         - in: path
           name: session
           description: Session Name
           required: true
-          type: string
-          default: DownloadStation
+          schema:
+            type: string
+            default: DownloadStation
         - in: path
           name: format
           description: Format (cookie or sid)
           required: true
-          type: string
-          default: sid
+          schema:
+            type: string
+            default: sid
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
   '/auth.cgi?api=SYNO.API.Auth&version=4&method=logout&session={session}&_sid={_sid}':
     get:
       tags:
@@ -71,17 +84,22 @@
           name: session
           description: Session Name
           required: true
-          type: string
-          default: DownloadStation
-        - $ref: '#/parameters/path_sid'
+          schema:
+            type: string
+            default: DownloadStation
+        - $ref: '#/components/parameters/path_sid'
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
       #security:
       #  - query_sid: []

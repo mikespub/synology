@@ -9,36 +9,44 @@
           name: api
           description: Name of the API requested
           required: true
-          type: string
-          default: SYNO.API.Info
+          schema:
+            type: string
+            default: SYNO.API.Info
         - in: query
           name: version
           description: Version of the API requested
           required: true
-          type: integer
-          default: 1
+          schema:
+            type: integer
+            default: 1
         - in: query
           name: method
           description: Method of the API requested
           required: true
-          type: string
-          enum: [query]
-          default: query
+          schema:
+            type: string
+            enum: [query]
+            default: query
         - in: query
           name: query
           description: Requested API information
           required: true
-          type: string
-          default: all
+          schema:
+            type: string
+            default: all
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
   /auth.cgi:
     get:
       tags:
@@ -50,51 +58,62 @@
           name: api
           description: Name of the API requested
           required: true
-          type: string
-          default: SYNO.API.Auth
+          schema:
+            type: string
+            default: SYNO.API.Auth
         - in: query
           name: version
           description: Version of the API requested
           required: true
-          type: integer
-          default: 4
+          schema:
+            type: integer
+            default: 4
         - in: query
           name: method
           description: Method of the API requested
           required: true
-          type: string
-          enum: [login, logout]
-          default: login
+          schema:
+            type: string
+            enum: [login, logout]
+            default: login
         - in: query
           name: account
           description: Username
           required: false
-          type: string
-          default: username
+          schema:
+            type: string
+            default: username
         - in: query
           name: passwd
           description: Password
           required: false
-          type: string
-          default: passwd
+          schema:
+            type: string
+            default: passwd
         - in: query
           name: session
           description: Session Name
           required: true
-          type: string
-          default: DownloadStation
+          schema:
+            type: string
+            default: DownloadStation
         - in: query
           name: format
           description: Format (cookie or sid)
           required: false
-          type: string
-          default: sid
+          schema:
+            type: string
+            default: sid
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object

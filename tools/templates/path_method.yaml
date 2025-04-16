@@ -5,15 +5,19 @@
       summary: Return %method% for %api%
       operationId: %api%.%method%
       parameters:
-        - $ref: '#/parameters/path_sid'
+        - $ref: '#/components/parameters/path_sid'
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/definitions/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
       #security:
       #  - query_sid: []

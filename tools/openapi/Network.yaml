@@ -1,8 +1,8 @@
-swagger: '2.0'
+openapi: 3.0.3
 info:
   description: >
-    This is a sample swagger file to explore some of the Synology Web APIs.
-    [Generate your own swagger file](https://github.com/mikespub/synology)
+    This is a sample OpenAPI file to explore some of the Synology Web APIs.
+    [Generate your own OpenAPI file](https://github.com/mikespub/synology)
 
 
     If you want to try this out on your own Synology, this requires adding
@@ -13,57 +13,60 @@ info:
     Except for SYNO.API.Info query, most API calls assume that you have
     logged in first via SYNO.API.Auth, and received a session id (sid).
     You will need to update the default value of the _sid parameter below
-    in your swagger file so that all API calls can use the right value.
+    in your OpenAPI file so that all API calls can use the right value.
 
 
-    There are many versions of the swagger file available, one using short
+    There are many versions of the OpenAPI file available, one using short
     urls with query parameters, and the other specifying the complete path
     including the 4 standard parameters for each API method. Any special
     additional parameters needed for a particular API method are not taken
     into account here (except for login).
 
-  version: 1.0.0
+  version: 3.0.0
   title: Synology Web API Explorer
   contact:
-    url: 'https://github.com/mikespub/synology/issues'
+    url: https://github.com/mikespub/synology/issues
   license:
     name: MIT
-    url: 'https://opensource.org/licenses/MIT'
-host: diskstation
-basePath: /rest.php
-schemes:
-  - http
-securityDefinitions:
-  query_sid:
-    type: apiKey
-    name: _sid
-    in: query
-consumes:
-  - application/json
-  - text/plain
-produces:
-  - application/json
-  - text/plain
-definitions:
-  NormalResponse:
-    type: object
-    properties:
-      success:
-        type: boolean
-        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
-      data:
-        type: object
-        description: The data object contains all the response information described in each method.
-      error:
-        type: object
-        properties:
-          code:
-            type: integer
-            description: An integer number error code will be returned when a request fails.
-          errors:
-            type: array
-            items:
-              type: object
+    url: https://opensource.org/licenses/MIT
+servers:
+  - url: '{scheme}://{hostname}/{base}'
+    variables:
+      scheme:
+        default: http
+        enum:
+          - http
+          - https
+      hostname:
+        default: diskstation
+      base:
+        default: rest.php
+components:
+  securitySchemes:
+    query_sid:
+      type: apiKey
+      name: _sid
+      in: query
+  schemas:
+    NormalResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          type: object
+          description: The data object contains all the response information described in each method.
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
 paths:
   /SYNO.API.Info/v1/query:
     get:
@@ -76,17 +79,22 @@ paths:
           name: query
           description: Requested API information
           required: true
-          type: string
-          default: all
+          schema:
+            type: string
+            default: all
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
   /SYNO.API.Auth/v4/login:
     get:
       tags:
@@ -98,35 +106,43 @@ paths:
           name: account
           description: Username
           required: false
-          type: string
-          default: username
+          schema:
+            type: string
+            default: username
         - in: query
           name: passwd
           description: Password
           required: false
-          type: string
-          default: passwd
+          schema:
+            type: string
+            default: passwd
         - in: query
           name: session
           description: Session Name
           required: true
-          type: string
-          default: DownloadStation
+          schema:
+            type: string
+            default: DownloadStation
         - in: query
           name: format
           description: Format (cookie or sid)
           required: false
-          type: string
-          default: sid
+          schema:
+            type: string
+            default: sid
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
   /SYNO.API.Auth/v4/logout:
     get:
       tags:
@@ -138,17 +154,22 @@ paths:
           name: session
           description: Session Name
           required: true
-          type: string
-          default: DownloadStation
+          schema:
+            type: string
+            default: DownloadStation
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
       security:
         - query_sid: []
   /SYNO.Network.DHCPServer/v4/get:
@@ -160,12 +181,16 @@ paths:
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
       security:
         - query_sid: []
       parameters:
@@ -178,12 +203,16 @@ paths:
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
       security:
         - query_sid: []
       parameters:
@@ -196,12 +225,16 @@ paths:
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
       security:
         - query_sid: []
       parameters:
@@ -214,12 +247,16 @@ paths:
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
       security:
         - query_sid: []
       parameters:
@@ -232,12 +269,16 @@ paths:
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
       security:
         - query_sid: []
       parameters:
@@ -250,12 +291,16 @@ paths:
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
       security:
         - query_sid: []
       parameters:
@@ -268,12 +313,16 @@ paths:
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
       security:
         - query_sid: []
       parameters:
@@ -286,12 +335,16 @@ paths:
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
       security:
         - query_sid: []
       parameters:
@@ -304,12 +357,16 @@ paths:
       responses:
         '200':
           description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NormalResponse'
         default:
           description: Abnormal Response
-          schema:
-            type: object
+          content:
+            application/json:
+              schema:
+                type: object
       security:
         - query_sid: []
       parameters:
