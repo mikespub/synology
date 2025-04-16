@@ -1,0 +1,2656 @@
+{
+    "info": {
+        "description": "Synology MailPlus APIs provide seamless integration with business systems, so users can manage mail, mailboxes, and more in one place. Simplify email management, automate workflows, and enhance communication efficiency with a robust REST API solution.{X-SYSTEM-REQUIREMENTS}",
+        "title": "Synology MailPlus",
+        "version": "1",
+        "termsOfService": "https://office-suite-api.synology.com/"
+    },
+    "externalDocs": {
+        "description": "Synology Office Suite WebAPI Document",
+        "url": "https://office-suite-api.synology.com/"
+    },
+    "x-system-requirements": {
+        "dsmMinVersion": "7.2.2 nano3",
+        "packageMinVersion": "3.3.1"
+    },
+    "servers": [
+        {
+            "url": "{protocol}://{nas_url}",
+            "variables": {
+                "protocol": {
+                    "default": "https",
+                    "enum": [
+                        "http",
+                        "https"
+                    ]
+                },
+                "nas_url": {
+                    "default": "{nas_url}",
+                    "description": "NAS URL"
+                }
+            }
+        }
+    ],
+    "security": [
+        {
+            "sid": []
+        }
+    ],
+    "paths": {
+        "/api/MailClient/default/v1/login": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "required": [
+                                        "success"
+                                    ],
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "required": [
+                                                "did",
+                                                "sid"
+                                            ],
+                                            "properties": {
+                                                "did": {
+                                                    "type": "string",
+                                                    "description": "Device ID."
+                                                },
+                                                "sid": {
+                                                    "type": "string",
+                                                    "description": "Session ID required for subsequent API calls."
+                                                }
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "object",
+                                            "required": [
+                                                "code"
+                                            ],
+                                            "properties": {
+                                                "code": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success": {
+                                        "value": {
+                                            "success": true,
+                                            "data": {
+                                                "did": "your device id",
+                                                "sid": "your session id required for subsequent API calls"
+                                            }
+                                        }
+                                    },
+                                    "failed": {
+                                        "value": {
+                                            "success": false,
+                                            "error": {
+                                                "code": 400
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Authorization"
+                ],
+                "summary": "Sign in",
+                "description": "Sign in DSM to obtain `sid` which is required for subsequent API calls.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "format",
+                                    "account",
+                                    "passwd"
+                                ],
+                                "properties": {
+                                    "format": {
+                                        "type": "string",
+                                        "enum": [
+                                            "sid"
+                                        ],
+                                        "description": "Session id return format. Set it to literal `sid` to ensure compatibility."
+                                    },
+                                    "account": {
+                                        "type": "string",
+                                        "example": "admin",
+                                        "description": "DSM account"
+                                    },
+                                    "passwd": {
+                                        "type": "string",
+                                        "example": "password",
+                                        "description": "DSM password"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [],
+                "x-syno-method": "login",
+                "x-syno-version": 6
+            },
+            "x-syno-api": "SYNO.API.Auth"
+        },
+        "/api/MailClient/default/v1/logout": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "required": [
+                                        "success"
+                                    ],
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "error": {
+                                            "type": "object",
+                                            "required": [
+                                                "code"
+                                            ],
+                                            "properties": {
+                                                "code": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success": {
+                                        "value": {
+                                            "success": true
+                                        }
+                                    },
+                                    "failed": {
+                                        "value": {
+                                            "success": false,
+                                            "error": {
+                                                "code": 400
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Authorization"
+                ],
+                "summary": "Sign out",
+                "description": "Sign out the DSM session corresponding to the specified `_sid`.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "_sid"
+                                ],
+                                "properties": {
+                                    "_sid": {
+                                        "type": "string",
+                                        "example": "abcd1234",
+                                        "description": "`sid` obtained from sign in."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "security": [],
+                "x-syno-method": "logout",
+                "x-syno-version": 6
+            },
+            "x-syno-api": "SYNO.API.Auth"
+        },
+        "/api/MailClient/default/v1/drafts/send": {
+            "post": {
+                "x-syno-version": 6,
+                "x-syno-method": "send",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "data": {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "id"
+                                                    ],
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "integer",
+                                                            "description": "id of the sent message"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "Send email": {
+                                        "value": {
+                                            "data": {
+                                                "id": 1
+                                            },
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Send mail"
+                ],
+                "summary": "Send email",
+                "description": "Customize the details of the email to be sent.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [],
+                                "properties": {
+                                    "to": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "description": "message receiver"
+                                    },
+                                    "cc": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "description": "message receiver"
+                                    },
+                                    "bcc": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "description": "message receiver"
+                                    },
+                                    "subject": {
+                                        "type": "string",
+                                        "description": "message subject"
+                                    },
+                                    "body": {
+                                        "type": "string",
+                                        "description": "message body"
+                                    },
+                                    "is_plain": {
+                                        "type": "boolean",
+                                        "description": "true: body is plain text, false: body is html"
+                                    },
+                                    "attachment": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/AttachmentParam_0"
+                                        },
+                                        "description": "array of attachment"
+                                    },
+                                    "temp_attachment": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        },
+                                        "description": "array of temp attachment id"
+                                    },
+                                    "copied_attachment": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/CopiedAttachmentParam_v5_0"
+                                        },
+                                        "description": "array of other attachment"
+                                    },
+                                    "from": {
+                                        "type": "string",
+                                        "description": "message sender"
+                                    },
+                                    "id": {
+                                        "type": "integer",
+                                        "minimum": 0,
+                                        "description": "draft id",
+                                        "exclusiveMinimum": true
+                                    },
+                                    "copy_to": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        },
+                                        "description": "array of mailbox id"
+                                    },
+                                    "schedule_time": {
+                                        "type": "integer",
+                                        "description": "time of schdule send"
+                                    },
+                                    "cms_encrypt": {
+                                        "type": "boolean",
+                                        "description": "Encrypt with SMIME Message"
+                                    },
+                                    "cms_sign": {
+                                        "type": "boolean",
+                                        "description": "Signed with SMIME Message"
+                                    },
+                                    "cms_sign_detached": {
+                                        "type": "boolean",
+                                        "description": "Detached Signed with SMIME Message"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Send email": {
+                                    "value": {
+                                        "bcc": [],
+                                        "from": "Your Name <your_email@example.com>",
+                                        "subject": "[Subject]",
+                                        "body": "<div>\n<p>Dear [Recipient's Name],</p>\n<p>I hope this message finds you well. I am writing to discuss [specific topic or reason for the email].</p>\n<p>[Provide any necessary details or context related to the topic]. I would appreciate your input or thoughts on this matter.</p>\n<p>Please let me know a convenient time for us to discuss this further or if you require any additional information from my side.</p>\n<p>Thank you for your attention to this matter.</p>\n<p>Best regards,</p>\n<p>[Your Name]<br> [Your Position]<br> [Your Company]<br> [Your Contact Information]</p>\n</div>",
+                                        "to": [
+                                            "to@example.com"
+                                        ],
+                                        "cc": [],
+                                        "attachment": []
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            },
+            "x-syno-api": "SYNO.MailClient.Draft"
+        },
+        "/api/MailClient/default/v1/mailboxes": {
+            "get": {
+                "x-syno-version": 7,
+                "x-syno-method": "get",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "data": {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "mailbox"
+                                                    ],
+                                                    "properties": {
+                                                        "mailbox": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "$ref": "#/components/schemas/Mailbox_0"
+                                                            },
+                                                            "description": "List of mailboxes"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "Get mailboxes": {
+                                        "value": {
+                                            "data": {
+                                                "mailbox": [
+                                                    {
+                                                        "additional": {
+                                                            "unread_count": 0
+                                                        },
+                                                        "id": -1,
+                                                        "path": "INBOX",
+                                                        "subscribed": true
+                                                    }
+                                                ]
+                                            },
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Mailbox configuration"
+                ],
+                "summary": "Get",
+                "description": "Get mailboxes.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            },
+                            "description": "Mailboxes' id"
+                        },
+                        "description": "Mailboxes' id",
+                        "required": true,
+                        "examples": {
+                            "Get mailboxes": {
+                                "description": "Get mailboxes",
+                                "value": [
+                                    -1,
+                                    -2,
+                                    -3,
+                                    -4,
+                                    -5,
+                                    -6
+                                ]
+                            }
+                        },
+                        "x-syno-param": "id",
+                        "style": "json"
+                    },
+                    {
+                        "name": "conversation_view",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean",
+                            "description": "Enable conversation view (true or false)"
+                        },
+                        "description": "Enable conversation view (true or false)",
+                        "required": false,
+                        "examples": {
+                            "Get mailboxes": {
+                                "description": "Get mailboxes",
+                                "value": true
+                            }
+                        },
+                        "x-syno-param": "conversation_view"
+                    },
+                    {
+                        "name": "additional",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "unread_count",
+                                    "draft_total_count"
+                                ]
+                            },
+                            "description": "Additional mailbox attribute (unread_count, draft_total_count)"
+                        },
+                        "description": "Additional mailbox attribute (unread_count, draft_total_count)",
+                        "required": false,
+                        "examples": {
+                            "Get mailboxes": {
+                                "description": "Get mailboxes",
+                                "value": [
+                                    "unread_count",
+                                    "draft_total_count"
+                                ]
+                            }
+                        },
+                        "x-syno-param": "additional",
+                        "style": "json"
+                    }
+                ]
+            },
+            "x-syno-api": "SYNO.MailClient.Mailbox",
+            "post": {
+                "x-syno-version": 7,
+                "x-syno-method": "create",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "data": {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "id"
+                                                    ],
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "integer",
+                                                            "description": "Mailbox id, MUST greater than 0"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "Create a mailbox": {
+                                        "value": {
+                                            "data": {
+                                                "id": 1
+                                            },
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Mailbox configuration"
+                ],
+                "summary": "Create",
+                "description": "Create a mailbox.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "Mailbox name (maximum 200 characters)"
+                                    },
+                                    "parent_id": {
+                                        "type": "integer",
+                                        "description": "Parent mailbox ID (0 for top-level mailbox)"
+                                    },
+                                    "subscribed": {
+                                        "type": "boolean",
+                                        "description": "Mailbox visibility on main UI"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Create a mailbox": {
+                                    "value": {
+                                        "parent_id": 0,
+                                        "name": "New Mailbox",
+                                        "subscribed": true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            },
+            "put": {
+                "x-syno-version": 7,
+                "x-syno-method": "set",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "Set properties of a mailbox": {
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Mailbox configuration"
+                ],
+                "summary": "Set properties",
+                "description": "Set properties for a mailbox.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "id"
+                                ],
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "description": "Mailbox ID"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "description": "Mailbox name (maximum 200 characters)"
+                                    },
+                                    "parent_id": {
+                                        "type": "integer",
+                                        "description": "Parent mailbox ID (0 for top-level mailbox)"
+                                    },
+                                    "subscribed": {
+                                        "type": "boolean",
+                                        "description": "Mailbox visibility on main UI"
+                                    },
+                                    "permission": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/MailBoxPermission_0"
+                                        },
+                                        "description": "permission objects of the mailbox"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Set properties of a mailbox": {
+                                    "value": {
+                                        "subscribed": true,
+                                        "parent_id": 0,
+                                        "name": "Update Mailbox",
+                                        "id": 1
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            },
+            "delete": {
+                "x-syno-version": 7,
+                "x-syno-method": "delete",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "": {
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Mailbox configuration"
+                ],
+                "summary": "Delete",
+                "description": "Delete mailboxes.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            },
+                            "description": "Mailbox ID"
+                        },
+                        "description": "Mailbox ID",
+                        "required": true,
+                        "examples": {
+                            "": {
+                                "description": "",
+                                "value": [
+                                    1
+                                ]
+                            }
+                        },
+                        "x-syno-param": "id",
+                        "style": "json"
+                    },
+                    {
+                        "name": "conversation_view",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean",
+                            "description": "Enable conversation view (true or false)"
+                        },
+                        "description": "Enable conversation view (true or false)",
+                        "required": true,
+                        "examples": {
+                            "": {
+                                "description": "",
+                                "value": true
+                            }
+                        },
+                        "x-syno-param": "conversation_view"
+                    }
+                ]
+            }
+        },
+        "/api/MailClient/default/v1/mailboxes/list": {
+            "get": {
+                "x-syno-version": 7,
+                "x-syno-method": "list",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "data": {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "mailbox",
+                                                        "total"
+                                                    ],
+                                                    "properties": {
+                                                        "mailbox": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "$ref": "#/components/schemas/Mailbox_0"
+                                                            },
+                                                            "description": "List of personal mailboxes"
+                                                        },
+                                                        "total": {
+                                                            "type": "integer",
+                                                            "description": "total number of personal mailboxes"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "List mailboxes": {
+                                        "value": {
+                                            "data": {
+                                                "mailbox": [
+                                                    {
+                                                        "additional": {
+                                                            "permission": [],
+                                                            "total_count": 0,
+                                                            "unread_count": 0
+                                                        },
+                                                        "has_expired": false,
+                                                        "id": -7,
+                                                        "is_own": true,
+                                                        "my_permission": "mailbox_special",
+                                                        "owner": "user_1",
+                                                        "owner_valid": true,
+                                                        "path": "SYNOMC_SCHEDULED",
+                                                        "subscribed": true
+                                                    },
+                                                    {
+                                                        "additional": {
+                                                            "permission": []
+                                                        },
+                                                        "id": -6,
+                                                        "is_own": true,
+                                                        "my_permission": "mailbox_admin",
+                                                        "owner": "user_1",
+                                                        "owner_valid": true,
+                                                        "path": "Trash",
+                                                        "subscribed": true
+                                                    },
+                                                    {
+                                                        "additional": {
+                                                            "permission": [],
+                                                            "unread_count": 0
+                                                        },
+                                                        "id": -5,
+                                                        "is_own": true,
+                                                        "my_permission": "mailbox_admin",
+                                                        "owner": "user_1",
+                                                        "owner_valid": true,
+                                                        "path": "Junk",
+                                                        "subscribed": true
+                                                    },
+                                                    {
+                                                        "additional": {
+                                                            "permission": []
+                                                        },
+                                                        "id": -4,
+                                                        "is_own": true,
+                                                        "my_permission": "mailbox_admin",
+                                                        "owner": "user_1",
+                                                        "owner_valid": true,
+                                                        "path": "Sent",
+                                                        "subscribed": true
+                                                    },
+                                                    {
+                                                        "additional": {
+                                                            "permission": [],
+                                                            "total_count": 1,
+                                                            "unread_count": 0
+                                                        },
+                                                        "id": -3,
+                                                        "is_own": true,
+                                                        "my_permission": "mailbox_admin",
+                                                        "owner": "user_1",
+                                                        "owner_valid": true,
+                                                        "path": "Drafts",
+                                                        "subscribed": true
+                                                    },
+                                                    {
+                                                        "additional": {
+                                                            "permission": [],
+                                                            "unread_count": 0
+                                                        },
+                                                        "id": -1,
+                                                        "is_own": true,
+                                                        "my_permission": "mailbox_admin",
+                                                        "owner": "user_1",
+                                                        "owner_valid": true,
+                                                        "path": "INBOX",
+                                                        "subscribed": true
+                                                    },
+                                                    {
+                                                        "additional": {
+                                                            "permission": [],
+                                                            "unread_count": 0
+                                                        },
+                                                        "id": 1,
+                                                        "is_own": true,
+                                                        "my_permission": "mailbox_admin",
+                                                        "owner": "user_1",
+                                                        "owner_valid": true,
+                                                        "path": "Archived",
+                                                        "subscribed": true
+                                                    }
+                                                ],
+                                                "total": 7
+                                            },
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Mailbox configuration"
+                ],
+                "summary": "List",
+                "description": "List mailboxes.",
+                "parameters": [
+                    {
+                        "name": "subscription",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean",
+                            "description": "Show only subscribed mailboxes (true or false)"
+                        },
+                        "description": "Show only subscribed mailboxes (true or false)",
+                        "required": false,
+                        "examples": {
+                            "List mailboxes": {
+                                "description": "List mailboxes",
+                                "value": true
+                            }
+                        },
+                        "x-syno-param": "subscription"
+                    },
+                    {
+                        "name": "conversation_view",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean",
+                            "description": "Enable conversation view (true or false)"
+                        },
+                        "description": "Enable conversation view (true or false)",
+                        "required": false,
+                        "examples": {
+                            "List mailboxes": {
+                                "description": "List mailboxes",
+                                "value": true
+                            }
+                        },
+                        "x-syno-param": "conversation_view"
+                    },
+                    {
+                        "name": "additional",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "unread_count",
+                                    "draft_total_count"
+                                ]
+                            },
+                            "description": "Additional mailbox attribute (unread_count, draft_total_count)"
+                        },
+                        "description": "Additional mailbox attribute (unread_count, draft_total_count)",
+                        "required": false,
+                        "x-syno-param": "additional",
+                        "style": "json"
+                    }
+                ]
+            },
+            "x-syno-api": "SYNO.MailClient.Mailbox"
+        },
+        "/api/MailClient/default/v1/labels": {
+            "get": {
+                "x-syno-version": 3,
+                "x-syno-method": "get",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "data": {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "label"
+                                                    ],
+                                                    "properties": {
+                                                        "label": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "$ref": "#/components/schemas/Label_0"
+                                                            },
+                                                            "description": "List of labels"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "Get labels with unread count": {
+                                        "value": {
+                                            "data": {
+                                                "label": [
+                                                    {
+                                                        "additional": {
+                                                            "unread_count": 0
+                                                        },
+                                                        "background_color": "24BFF2",
+                                                        "full_name": "Label_1",
+                                                        "id": 1,
+                                                        "name": "Label_1",
+                                                        "path": "1",
+                                                        "text_color": "FFFFFF"
+                                                    }
+                                                ]
+                                            },
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Label configuration"
+                ],
+                "summary": "Get",
+                "description": "Get labels.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            },
+                            "description": "Label ID"
+                        },
+                        "description": "Label ID",
+                        "required": true,
+                        "examples": {
+                            "Get labels with unread count": {
+                                "description": "Get labels with unread count",
+                                "value": [
+                                    1
+                                ]
+                            }
+                        },
+                        "x-syno-param": "id",
+                        "style": "json"
+                    },
+                    {
+                        "name": "conversation_view",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean",
+                            "description": "Enable conversation view (true or false)"
+                        },
+                        "description": "Enable conversation view (true or false)",
+                        "required": false,
+                        "examples": {
+                            "Get labels with unread count": {
+                                "description": "Get labels with unread count",
+                                "value": true
+                            }
+                        },
+                        "x-syno-param": "conversation_view"
+                    },
+                    {
+                        "name": "additional",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "unread_count"
+                                ]
+                            },
+                            "description": "Additional label attribute (unread_count)"
+                        },
+                        "description": "Additional label attribute (unread_count)",
+                        "required": false,
+                        "examples": {
+                            "Get labels with unread count": {
+                                "description": "Get labels with unread count",
+                                "value": [
+                                    "unread_count"
+                                ]
+                            }
+                        },
+                        "x-syno-param": "additional",
+                        "style": "json"
+                    }
+                ]
+            },
+            "x-syno-api": "SYNO.MailClient.Label",
+            "post": {
+                "x-syno-version": 3,
+                "x-syno-method": "create",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "data": {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "id"
+                                                    ],
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "integer",
+                                                            "description": "Label id"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "Create a label": {
+                                        "value": {
+                                            "data": {
+                                                "id": 1
+                                            },
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Label configuration"
+                ],
+                "summary": "Create",
+                "description": "Create a label.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "name",
+                                    "text_color",
+                                    "background_color"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "Label name (maximum 256 characters)"
+                                    },
+                                    "parent_id": {
+                                        "type": "integer",
+                                        "description": "Parent label ID (0 for top-level label)"
+                                    },
+                                    "text_color": {
+                                        "type": "string",
+                                        "description": "6-digit hex color for text"
+                                    },
+                                    "background_color": {
+                                        "type": "string",
+                                        "description": "6-digit hex color for label color"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Create a label": {
+                                    "value": {
+                                        "background_color": "24BFF2",
+                                        "text_color": "50555A",
+                                        "name": "New Label"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            },
+            "put": {
+                "x-syno-version": 3,
+                "x-syno-method": "set",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "Set properties of a Label": {
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Label configuration"
+                ],
+                "summary": "Set properties",
+                "description": "Set properties for a Label.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "id"
+                                ],
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "description": "Label ID"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "description": "Label name (maximum 256 characters)"
+                                    },
+                                    "parent_id": {
+                                        "type": "integer",
+                                        "description": "Parent label ID (0 for top-level label)"
+                                    },
+                                    "background_color": {
+                                        "type": "string",
+                                        "description": "6-digit hex color for label color"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Set properties of a Label": {
+                                    "value": {
+                                        "background_color": "24BFF2",
+                                        "parent_id": 0,
+                                        "name": "Update Label",
+                                        "id": 1
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            },
+            "delete": {
+                "x-syno-version": 3,
+                "x-syno-method": "delete",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "Delete labels": {
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Label configuration"
+                ],
+                "summary": "Delete",
+                "description": "Delete labels, including their nested labels.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            },
+                            "description": "Label ID"
+                        },
+                        "description": "Label ID",
+                        "required": true,
+                        "examples": {
+                            "Delete labels": {
+                                "description": "Delete labels",
+                                "value": [
+                                    1
+                                ]
+                            }
+                        },
+                        "x-syno-param": "id",
+                        "style": "json"
+                    }
+                ]
+            }
+        },
+        "/api/MailClient/default/v1/labels/list": {
+            "get": {
+                "x-syno-version": 3,
+                "x-syno-method": "list",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "data": {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "label",
+                                                        "total"
+                                                    ],
+                                                    "properties": {
+                                                        "label": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "$ref": "#/components/schemas/Label_0"
+                                                            },
+                                                            "description": "List of labels"
+                                                        },
+                                                        "total": {
+                                                            "type": "integer",
+                                                            "description": "total number of labels"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "List labels": {
+                                        "value": {
+                                            "data": {
+                                                "label": [
+                                                    {
+                                                        "additional": {
+                                                            "unread_count": 0
+                                                        },
+                                                        "background_color": "24BFF2",
+                                                        "full_name": "Label_1",
+                                                        "id": 1,
+                                                        "name": "Label_1",
+                                                        "path": "1",
+                                                        "text_color": "FFFFFF"
+                                                    }
+                                                ],
+                                                "total": 1
+                                            },
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Label configuration"
+                ],
+                "summary": "List",
+                "description": "List labels.",
+                "parameters": [
+                    {
+                        "name": "conversation_view",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean",
+                            "description": "Enable conversation view (true or false)"
+                        },
+                        "description": "Enable conversation view (true or false)",
+                        "required": false,
+                        "examples": {
+                            "List labels": {
+                                "description": "List labels",
+                                "value": true
+                            }
+                        },
+                        "x-syno-param": "conversation_view"
+                    },
+                    {
+                        "name": "additional",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "unread_count"
+                                ]
+                            },
+                            "description": "Additional label attribute (unread_count)"
+                        },
+                        "description": "Additional label attribute (unread_count)",
+                        "required": false,
+                        "examples": {
+                            "List labels": {
+                                "description": "List labels",
+                                "value": [
+                                    "unread_count"
+                                ]
+                            }
+                        },
+                        "x-syno-param": "additional",
+                        "style": "json"
+                    }
+                ]
+            },
+            "x-syno-api": "SYNO.MailClient.Label"
+        },
+        "/api/MailClient/default/v1/filters/list": {
+            "get": {
+                "x-syno-version": 3,
+                "x-syno-method": "list",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "data": {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "filter",
+                                                        "total"
+                                                    ],
+                                                    "properties": {
+                                                        "filter": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "$ref": "#/components/schemas/Filter_0"
+                                                            },
+                                                            "description": "List of filters"
+                                                        },
+                                                        "total": {
+                                                            "type": "integer",
+                                                            "description": "total number of filters"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "List filters": {
+                                        "value": {
+                                            "data": {
+                                                "filter": [
+                                                    {
+                                                        "action": [
+                                                            {
+                                                                "name": "set_label",
+                                                                "value": "42"
+                                                            }
+                                                        ],
+                                                        "condition": [
+                                                            {
+                                                                "name": "subject",
+                                                                "not_operator": false,
+                                                                "value": "[Subject]"
+                                                            }
+                                                        ],
+                                                        "enabled": true,
+                                                        "id": 1
+                                                    }
+                                                ],
+                                                "total": 1
+                                            },
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Filter configuration"
+                ],
+                "summary": "List",
+                "description": "List filters."
+            },
+            "x-syno-api": "SYNO.MailClient.Filter"
+        },
+        "/api/MailClient/default/v1/filters": {
+            "get": {
+                "x-syno-version": 3,
+                "x-syno-method": "get",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "data": {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "filter"
+                                                    ],
+                                                    "properties": {
+                                                        "filter": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "$ref": "#/components/schemas/Filter_0"
+                                                            },
+                                                            "description": "List of filters"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "Get filters": {
+                                        "value": {
+                                            "data": {
+                                                "filter": [
+                                                    {
+                                                        "action": [
+                                                            {
+                                                                "name": "set_label",
+                                                                "value": "42"
+                                                            }
+                                                        ],
+                                                        "condition": [
+                                                            {
+                                                                "name": "subject",
+                                                                "not_operator": false,
+                                                                "value": "[Subject]"
+                                                            }
+                                                        ],
+                                                        "enabled": true,
+                                                        "id": 1
+                                                    }
+                                                ]
+                                            },
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Filter configuration"
+                ],
+                "summary": "Get",
+                "description": "Get filters.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            },
+                            "description": "Filter ID"
+                        },
+                        "description": "Filter ID",
+                        "required": true,
+                        "examples": {
+                            "Get filters": {
+                                "description": "Get filters",
+                                "value": [
+                                    1
+                                ]
+                            }
+                        },
+                        "x-syno-param": "id",
+                        "style": "json"
+                    }
+                ]
+            },
+            "x-syno-api": "SYNO.MailClient.Filter",
+            "post": {
+                "x-syno-version": 3,
+                "x-syno-method": "create",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "data": {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "id"
+                                                    ],
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "integer",
+                                                            "description": "Filter id"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "Create a filter to archive emails": {
+                                        "value": {
+                                            "data": {
+                                                "id": 1
+                                            },
+                                            "success": true
+                                        }
+                                    },
+                                    "Create a filter to delete emails": {
+                                        "value": {
+                                            "data": {
+                                                "id": 1
+                                            },
+                                            "success": true
+                                        }
+                                    },
+                                    "Create a filter to move emails to a specific mailbox": {
+                                        "value": {
+                                            "data": {
+                                                "id": 1
+                                            },
+                                            "success": true
+                                        }
+                                    },
+                                    "Create a filter to mark emails as read": {
+                                        "value": {
+                                            "data": {
+                                                "id": 1
+                                            },
+                                            "success": true
+                                        }
+                                    },
+                                    "Create a filter to mark emails as starred": {
+                                        "value": {
+                                            "data": {
+                                                "id": 1
+                                            },
+                                            "success": true
+                                        }
+                                    },
+                                    "Create a filter to apply labels": {
+                                        "value": {
+                                            "data": {
+                                                "id": 1
+                                            },
+                                            "success": true
+                                        }
+                                    },
+                                    "Create a filter to forward emails": {
+                                        "value": {
+                                            "data": {
+                                                "id": 1
+                                            },
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Filter configuration"
+                ],
+                "summary": "Create",
+                "description": "Create a filter.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "condition",
+                                    "action"
+                                ],
+                                "properties": {
+                                    "condition": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/Condition_0"
+                                        },
+                                        "description": "Filter conditions"
+                                    },
+                                    "action": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/Action_0"
+                                        },
+                                        "description": "Filter actions"
+                                    },
+                                    "enabled": {
+                                        "type": "boolean",
+                                        "description": "Filter is enabled/disabled"
+                                    },
+                                    "apply_exist": {
+                                        "type": "boolean",
+                                        "description": "Filter actions"
+                                    },
+                                    "conversation_view": {
+                                        "type": "boolean",
+                                        "description": "disable conversation mode"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Create a filter to archive emails": {
+                                    "value": {
+                                        "apply_exist": true,
+                                        "condition": [
+                                            {
+                                                "name": "from",
+                                                "value": "from@example.com"
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "to@example.com"
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Subject]"
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Keyword]"
+                                            },
+                                            {
+                                                "name": "larger",
+                                                "value": "10485760"
+                                            },
+                                            {
+                                                "name": "from",
+                                                "value": "except_from@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "except_to@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Except Subject]",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Except Keyword]",
+                                                "not_operator": true
+                                            }
+                                        ],
+                                        "action": [
+                                            {
+                                                "name": "archive",
+                                                "value": "true"
+                                            }
+                                        ],
+                                        "conversation_view": true
+                                    }
+                                },
+                                "Create a filter to delete emails": {
+                                    "value": {
+                                        "apply_exist": true,
+                                        "condition": [
+                                            {
+                                                "name": "from",
+                                                "value": "from@example.com"
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "to@example.com"
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Subject]"
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Keyword]"
+                                            },
+                                            {
+                                                "name": "larger",
+                                                "value": "10485760"
+                                            },
+                                            {
+                                                "name": "from",
+                                                "value": "except_from@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "except_to@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Except Subject]",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Except Keyword]",
+                                                "not_operator": true
+                                            }
+                                        ],
+                                        "action": [
+                                            {
+                                                "name": "trash",
+                                                "value": "true"
+                                            }
+                                        ],
+                                        "conversation_view": true
+                                    }
+                                },
+                                "Create a filter to move emails to a specific mailbox": {
+                                    "value": {
+                                        "apply_exist": true,
+                                        "condition": [
+                                            {
+                                                "name": "from",
+                                                "value": "from@example.com"
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "to@example.com"
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Subject]"
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Keyword]"
+                                            },
+                                            {
+                                                "name": "larger",
+                                                "value": "10485760"
+                                            },
+                                            {
+                                                "name": "from",
+                                                "value": "except_from@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "except_to@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Except Subject]",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Except Keyword]",
+                                                "not_operator": true
+                                            }
+                                        ],
+                                        "action": [
+                                            {
+                                                "name": "move_to",
+                                                "value": "1"
+                                            }
+                                        ],
+                                        "conversation_view": true
+                                    }
+                                },
+                                "Create a filter to mark emails as read": {
+                                    "value": {
+                                        "apply_exist": true,
+                                        "condition": [
+                                            {
+                                                "name": "from",
+                                                "value": "from@example.com"
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "to@example.com"
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Subject]"
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Keyword]"
+                                            },
+                                            {
+                                                "name": "larger",
+                                                "value": "10485760"
+                                            },
+                                            {
+                                                "name": "from",
+                                                "value": "except_from@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "except_to@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Except Subject]",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Except Keyword]",
+                                                "not_operator": true
+                                            }
+                                        ],
+                                        "action": [
+                                            {
+                                                "name": "set_read",
+                                                "value": "true"
+                                            }
+                                        ],
+                                        "conversation_view": true
+                                    }
+                                },
+                                "Create a filter to mark emails as starred": {
+                                    "value": {
+                                        "apply_exist": true,
+                                        "condition": [
+                                            {
+                                                "name": "from",
+                                                "value": "from@example.com"
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "to@example.com"
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Subject]"
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Keyword]"
+                                            },
+                                            {
+                                                "name": "larger",
+                                                "value": "10485760"
+                                            },
+                                            {
+                                                "name": "from",
+                                                "value": "except_from@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "except_to@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Except Subject]",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Except Keyword]",
+                                                "not_operator": true
+                                            }
+                                        ],
+                                        "action": [
+                                            {
+                                                "name": "set_star",
+                                                "value": "true"
+                                            }
+                                        ],
+                                        "conversation_view": true
+                                    }
+                                },
+                                "Create a filter to apply labels": {
+                                    "value": {
+                                        "apply_exist": true,
+                                        "condition": [
+                                            {
+                                                "name": "from",
+                                                "value": "from@example.com"
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "to@example.com"
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Subject]"
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Keyword]"
+                                            },
+                                            {
+                                                "name": "larger",
+                                                "value": "10485760"
+                                            },
+                                            {
+                                                "name": "from",
+                                                "value": "except_from@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "except_to@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Except Subject]",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Except Keyword]",
+                                                "not_operator": true
+                                            }
+                                        ],
+                                        "action": [
+                                            {
+                                                "name": "set_label",
+                                                "value": "1"
+                                            }
+                                        ],
+                                        "conversation_view": true
+                                    }
+                                },
+                                "Create a filter to forward emails": {
+                                    "value": {
+                                        "apply_exist": true,
+                                        "condition": [
+                                            {
+                                                "name": "from",
+                                                "value": "from@example.com"
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "to@example.com"
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Subject]"
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Keyword]"
+                                            },
+                                            {
+                                                "name": "larger",
+                                                "value": "10485760"
+                                            },
+                                            {
+                                                "name": "from",
+                                                "value": "except_from@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "except_to@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Except Subject]",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Except Keyword]",
+                                                "not_operator": true
+                                            }
+                                        ],
+                                        "action": [
+                                            {
+                                                "name": "redirect",
+                                                "value": "forward@example.com"
+                                            }
+                                        ],
+                                        "conversation_view": true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            },
+            "put": {
+                "x-syno-version": 3,
+                "x-syno-method": "set",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "Set a filter": {
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Filter configuration"
+                ],
+                "summary": "Set properties",
+                "description": "Set properties for a filter.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "id",
+                                    "condition",
+                                    "action"
+                                ],
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "description": "Filter id"
+                                    },
+                                    "condition": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/Condition_0"
+                                        },
+                                        "description": "Filter conditions"
+                                    },
+                                    "action": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/components/schemas/Action_0"
+                                        },
+                                        "description": "Filter actions"
+                                    },
+                                    "enabled": {
+                                        "type": "boolean",
+                                        "description": "Enable filter (true or false)"
+                                    },
+                                    "apply_exist": {
+                                        "type": "boolean",
+                                        "description": "Apply actions (true or false)"
+                                    },
+                                    "conversation_view": {
+                                        "type": "boolean",
+                                        "description": "Enable conversation view (true or false)"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Set a filter": {
+                                    "value": {
+                                        "apply_exist": true,
+                                        "condition": [
+                                            {
+                                                "name": "from",
+                                                "value": "from@example.com"
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "to@example.com"
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Subject]"
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Keyword]"
+                                            },
+                                            {
+                                                "name": "larger",
+                                                "value": "10485760"
+                                            },
+                                            {
+                                                "name": "from",
+                                                "value": "except_from@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "to",
+                                                "value": "except_to@example.com",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "subject",
+                                                "value": "[Except Subject]",
+                                                "not_operator": true
+                                            },
+                                            {
+                                                "name": "keyword",
+                                                "value": "[Except Keyword]",
+                                                "not_operator": true
+                                            }
+                                        ],
+                                        "action": [
+                                            {
+                                                "name": "archive",
+                                                "value": "true"
+                                            },
+                                            {
+                                                "name": "set_read",
+                                                "value": "true"
+                                            },
+                                            {
+                                                "name": "set_star",
+                                                "value": "true"
+                                            },
+                                            {
+                                                "name": "set_label",
+                                                "value": "1"
+                                            },
+                                            {
+                                                "name": "redirect",
+                                                "value": "forward@example.com"
+                                            }
+                                        ],
+                                        "conversation_view": true,
+                                        "id": 1
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            },
+            "delete": {
+                "x-syno-version": 3,
+                "x-syno-method": "delete",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/Response.Template"
+                                        }
+                                    ]
+                                },
+                                "examples": {
+                                    "Delete filters": {
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "Filter configuration"
+                ],
+                "summary": "Delete",
+                "description": "Delete filters.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            },
+                            "description": "Filter ID"
+                        },
+                        "description": "Filter ID",
+                        "required": true,
+                        "examples": {
+                            "Delete filters": {
+                                "description": "Delete filters",
+                                "value": [
+                                    1
+                                ]
+                            }
+                        },
+                        "x-syno-param": "id",
+                        "style": "json"
+                    }
+                ]
+            }
+        }
+    },
+    "openapi": "3.0.0",
+    "components": {
+        "schemas": {
+            "Response.Template": {
+                "type": "object",
+                "required": [
+                    "success"
+                ],
+                "properties": {
+                    "success": {
+                        "type": "boolean",
+                        "description": "Indicate whether the request was successful."
+                    },
+                    "error": {
+                        "type": "object",
+                        "required": [
+                            "code"
+                        ],
+                        "properties": {
+                            "code": {
+                                "type": "integer"
+                            }
+                        },
+                        "description": "Indicate the error if the request failed."
+                    }
+                }
+            },
+            "MailboxAdditional_0": {
+                "type": "object"
+            },
+            "Mailbox_0": {
+                "type": "object",
+                "required": [
+                    "additional"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "description": "Mailbox id, default mailbox id are negative"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Mailbox name, max 200 chars"
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "Mailbox path, max 255 chars"
+                    },
+                    "parent_id": {
+                        "type": "integer",
+                        "description": "Parent mailbox id, 0 means top mailbox"
+                    },
+                    "owner": {
+                        "type": "string",
+                        "description": "Mailbox owner"
+                    },
+                    "owner_valid": {
+                        "type": "boolean",
+                        "description": "Mailbox owner is valid or not"
+                    },
+                    "has_expired": {
+                        "type": "boolean",
+                        "description": "Mailbox has expired message or not"
+                    },
+                    "is_own": {
+                        "type": "boolean",
+                        "description": "Mailbox is belong to myself or others"
+                    },
+                    "my_permission": {
+                        "type": "string",
+                        "description": "My permission of the mailbox"
+                    },
+                    "subscribed": {
+                        "type": "boolean",
+                        "description": "Mailbox visibility on main UI"
+                    },
+                    "additional": {
+                        "$ref": "#/components/schemas/MailboxAdditional_0"
+                    }
+                }
+            },
+            "MailBoxPermission_0": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "name of the user or group"
+                    },
+                    "is_user": {
+                        "type": "boolean",
+                        "description": "user is true, group is false"
+                    },
+                    "permission": {
+                        "type": "string",
+                        "description": "permission of the user or group for this mailbox, must be(mailbox_read_only, mailbox_read_write, mailbox_admin)"
+                    }
+                }
+            },
+            "LabelAdditional_0": {
+                "type": "object"
+            },
+            "Label_0": {
+                "type": "object",
+                "required": [
+                    "additional"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "description": "Label id"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Label short name, max 256 chars"
+                    },
+                    "full_name": {
+                        "type": "string",
+                        "description": "Label full_name, max 256 chars"
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "Label path. Consists of the ids on the path."
+                    },
+                    "text_color": {
+                        "type": "string",
+                        "description": "6-digit hex color to display text (TBD, maybe just Param.Object as style?)"
+                    },
+                    "background_color": {
+                        "type": "string",
+                        "description": "6-digit hex color to display background (TBD, maybe just Param.Object as style?)"
+                    },
+                    "additional": {
+                        "$ref": "#/components/schemas/LabelAdditional_0"
+                    }
+                }
+            },
+            "Filter_0": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "description": "Filter id, MUST greater than 0"
+                    },
+                    "enabled": {
+                        "type": "boolean",
+                        "description": "Filter is enabled/disabled"
+                    },
+                    "condition": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Condition_0"
+                        },
+                        "description": "Filter condition fields"
+                    },
+                    "action": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Action_0"
+                        },
+                        "description": "Filter actions"
+                    }
+                }
+            },
+            "Action_0": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Action name, supports move, forward, setlabel, setstar"
+                    },
+                    "value": {
+                        "type": "string",
+                        "description": "Action value, ex mailbox id, label id..."
+                    }
+                }
+            },
+            "Condition_0": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Condition field, ex. from, to, subject, keyword, larger, smaller"
+                    },
+                    "value": {
+                        "type": "string",
+                        "description": "keyword or string reprents size ex. '100'..."
+                    },
+                    "not_operator": {
+                        "type": "boolean",
+                        "description": "add not operator to this conditon"
+                    }
+                }
+            },
+            "AttachmentParam_0": {
+                "type": "object"
+            },
+            "CopiedAttachmentParam_v5_0": {
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "sid": {
+                "name": "cookie",
+                "in": "header",
+                "type": "apiKey"
+            }
+        }
+    },
+    "x-servers-description": "Specify the connection to your Synology NAS.",
+    "x-security-description": "Please [Sign in](#post-/api/MailClient/default/v1/login) first to retrieve your sid.<br>Then, enter your `sid` in the field below using the following format: `id={sid};` to apply your session ID in the cookie header. Once you set the `sid`, it will automatically apply to all APIs.",
+    "x-internalDocs": {
+        "/Support/resources": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "Resources",
+            "description": "<div class=\"sub-title\">Postman Testing Guide</div><div><p>API testing helps teams verify whether Synology Office Suite API endpoints, methods, and integrations function as expected.</p><div><br><div class=\"sub-sub-title\">Step1. Obtain the API Specification</div><div><p>Before testing an API, you need its specification, which outlines the available endpoints, parameters, and methods. Download the API specification for Synology Office Suite packages to explore their API capabilities.</p></div><div><ul><li><a href=\"/specs/Synology-Drive/openapi_v1.json\" download>Synology Drive</a></li><li><a href=\"/specs/Synology-Spreadsheet/openapi.json\" download>Synology Spreadsheet</a></li><li><a href=\"/specs/Synology-MailPlus/openapi_v1.json\" download>Synology MailPlus</a></li><li><a href=\"/specs/Synology-Calendar/openapi_v1.json\" download>Synology Calendar</a></li></ul></div><div class=\"sub-sub-title\">Step2. Import API Spec to Postman. <a href=\"#docs-/Support/resources/postman/import\" style=\"font-weight: normal\">Get started</a></div><div class=\"sub-sub-title\">Step3. Set Up Testing Environment for desired package</div><div><ul><li><a href=\"#docs-/Support/resources/postman/setup-others\">Synology Drive / MailPlus / Calendar</a></li><li><a href=\"#docs-/Support/resources/postman/setup-spreadsheet\">Synology Spreadsheet</a></li></ul></div></div></div><div class=\"sub-title\" style=\"margin-top: 32px\">ChatGPT</div><div><p>Enable the Synology Office Suite API plugin in ChatGPT to generate sample code for you and save your time and effort. <a href=\"#docs-/Support/resources/chatgpt\">Get started</a></p></div>"
+        },
+        "/Support/resources/chatgpt": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "How do I Chat with Synology Office Suite API GPT on ChatGPT?",
+            "description": "<div class=\"sub-title\">Purpose</div><div><p>Synology Office Suite APIs provide developers with powerful tools to automate workflows, enhance productivity, and securely integrate Synology data with third-party platforms through REST APIs and webhook support. To save you time and effort, you can enable the Synology Office Suite API GPT in ChatGPT. It can then search through the Synology Office Suite API documentation, extract relevant parameter formats, and generate sample code for you.</p><p>This article provides a guide on getting started with Synology Office Suite API GPT on ChatGPT.</p></div><br><div class=\"sub-title\">Environment</div><div><ul><li>DSM 7.2.2 nano3 or above</li><li>Synology Drive 3.5.2 version or above</li><li>Synology Office 3.6.0 version or above</li><li>Synology MailPlus 3.3.1 version or above</li><li>Synology Calendar 2.5.3 version or above</li></div><br><div class=\"sub-title\">Resolution</div><div><div class=\"sub-sub-title\">Start Chat</div><ol><li>Click <a href=\"https://chatgpt.com/g/g-673569bbe918819084671e1fe5c05752-synology-office-suite-api\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">this link</a> to start chatting directly, or sign in to the <a href=\"https://chatgpt.com/\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">ChatGPT website</a>, and click on <b>Explore GPTs</b> in the upper left corner.<br><img src=\"/images/gpt/explore-gpts.png\" title=\"Explore GPTs\" alt=\"Explore GPTs\"></li><br><li>In the search box, type in <b>Synology Office Suite API</b>.<br><img src=\"/images/gpt/search-gpts.png\" title=\"Search GPTs\" alt=\"Search GPTs\"></li><br><li>Select and hit <b>Start Chat</b>.<br><img src=\"/images/gpt/start-gpt-chat.png\" title=\"Start Chat\" alt=\"Start Chat\"></li><br><li>You can now interact with Synology Office Suite API GPT. Select <b>Keep in sidebar</b> to save the GPT on top.<br><img src=\"/images/gpt/keep-gpt-in-sidebar.png\" title=\"Keep GPT in Sidebar\" alt=\"Keep GPT in Sidebar\"></li></ol></div><br><div class=\"sub-sub-title\">Example Prompts</div><div><p>Here are some example prompts that illustrate how to interact with the Synology Office Suite API GPT.<br><ul><li><b>Automatically download new files uploaded to a shared folder on Synology Drive</b><br>I have created a folder to which team members should upload their weekly reports. How to auto download new files uploaded to this folder?</li></ul></p></div></div>",
+            "x-hidden-path": true
+        },
+        "/Support/contact-us": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "Contact us",
+            "description": "<div class=\"sub-title\">Feature Request</div><div><p>Fill out the <a href=\"https://www.synology.com/form/inquiry/feature\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">Feature Inquiry form</a> and let us know what API you'd like to see implemented.</p></div><div class=\"sub-title\" style=\"margin-top: 32px\">Community</div><div><p>Ask a question in <a href=\"https://community.synology.com/forum/1\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">Synology Community</a>, or check if there is an existing discussion.</p></div>"
+        },
+        "/Support/resources/postman/import": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "How to Import an API Specification and Start Testing with Postman",
+            "description": "<ol><li>Download and install the <a href=\"https://www.postman.com/downloads/\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">Postman API Platform</a> by selecting the appropriate version for your operating system.</li><br><li>In the workspace, click <b>Import</b> to import the API spec for the packages you need. If you haven't downloaded it yet, the links are available <a href=\"#docs-/Support/resources\">here</a><br><img src=\"/images/postman/import-spec.png\" title=\"Import OpenAPI spec to Postman\" alt=\"Import OpenAPI spec to Postman\"></li><br><li>Select <b>Postman Collection</b> and click <b>View Import Settings</b> to check the additional configuration options.<br><img src=\"/images/postman/import-settings.png\" title=\"Postman import settings\" alt=\"Postman import settings\"></li><br><li>Navigate to <b>Folder Organization</b> and ensure <b>Tags</b> is selected.<br><img src=\"/images/postman/organize-by-tags.png\" title=\"Organize APIs by tags\" alt=\"Organize APIs by tags\"></li><br><li>Return to the previous page and click <b>Import</b>.<img src=\"/images/postman/import-done.png\" title=\"Import done\" alt=\"Import done\"></li><br><li>Set up the testing environment for<ul><li><a href=\"#docs-/Support/resources/postman/setup-others\">Synology Drive, MailPlus, Calendar</a></li><li><a href=\"#docs-/Support/resources/postman/setup-spreadsheet\">Synology Spreadsheet</a></li></ul></li></ol>",
+            "x-hidden-path": true
+        },
+        "/Support/resources/postman/setup-others": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "How to Set Up the Environment for Synology Drive, MailPlus, and Calendar APIs",
+            "description": "If you haven't imported the API spec yet, please follow the instructions [here](#docs-/Support/resources/postman/import).<ol><li>Switch to the <b>Authorization</b> tab and fill in your NAS URL in the <b>baseUrl</b> field.<br><img src=\"/images/postman/others/base-url.png\" title=\"Set base URL\" alt=\"Set base URL\"></li><br><li>Hover <b>{{apiKey}}</b> and click <b>Collection</b> to create the variable for this collection.<br><img src=\"/images/postman/others/create-api-key.png\" title=\"Create apiKey variable\" alt=\"Create apiKey variable\"></li><br><li>Go to <b>Authorization > Sign in</b> and switch to <b>Body</b> tab. Fill in account and password. Click <b>Send</b> to retrieve your <b>sid</b>.<br><img src=\"/images/postman/others/sign-in.png\" title=\"Sign in\" alt=\"Sign in\"></li><br><li>Copy the retrieved <b>sid</b>. Fill in the <b>apiKey</b> field in the format of <b>id={sid}</b>.<br><img src=\"/images/postman/others/set-api-key.png\" title=\"Set apiKey\" alt=\"Set apiKey\"></li><br><li>The <b>apiKey</b> will be applied to all other API endpoints. You can start testing them.</li></ol>",
+            "x-hidden-path": true
+        },
+        "/Support/resources/postman/setup-spreadsheet": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "How to Set Up the Environment for Spreadsheet APIs",
+            "description": "If you haven't imported the API spec yet, please follow the instructions [here](#docs-/Support/resources/postman/import).<ol><li>Switch to the <b>Authorization</b> tab and fill in your Spreadsheet API server URL in the <b>baseUrl</b> field.<br><img src=\"/images/postman/spreadsheet/base-url.png\" title=\"Set base URL\" alt=\"Set base URL\"></li><br><li>Hover <b>{{bearerToken}}</b> and click <b>Collection</b> to create the variable for this collection.<br><img src=\"/images/postman/spreadsheet/create-bearer-token.png\" title=\"Create bearerToken variable\" alt=\"Create bearerToken variable\"></li><br><li>Go to <b>Authorization > Sign in</b> and switch to the <b>Body</b> tab. Fill in username, password, protocol and host for your NAS. Click <b>Send</b> to retrieve your token. For example, if the NAS URL is `https://my-nas:5000`, please fill in `https` for <b>protocol</b> and `my-nas:5000` for <b>host</b>.<br><img src=\"/images/postman/spreadsheet/sign-in.png\" title=\"Sign in\" alt=\"Sign in\"></li><br><li>Fill in the <b>bearerToken</b> field with the retrieved <b>token</b>.<br><img src=\"/images/postman/spreadsheet/set-bearer-token.png\" title=\"Set bearer token\" alt=\"Set bearer token\"></li><br><li>The token will be applied to all other API endpoints. You can start testing them.</li></ol>",
+            "x-hidden-path": true
+        }
+    },
+    "x-ui-sticky-tags": [
+        "Support"
+    ]
+}

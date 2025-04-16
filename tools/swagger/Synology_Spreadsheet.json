@@ -1,0 +1,1593 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Synology Spreadsheet",
+        "description": "Synology Spreadsheet APIs allow developers to create, read, and write spreadsheet data with integrated document management and smart sheet functionalities like time sheets and project tracker templates. With the REST APIs, developers can enhance collaboration, streamline data management, and automate tasks like data analysis and project tracking. Get started with [container setup](#docs-/Support/overview/container-setup).{X-SYSTEM-REQUIREMENTS}\n## API Token\n Retrieve it from [/spreadsheets/authorize](#post-/spreadsheets/authorize) with account and password. The token is in JWT format, which can be decoded to obtain information such as username, server host, and expiration date. It is valid for 28 days and is tied to the DSM session. If DSM is restarted or the user is forcibly logged out, the token will become invalid.",
+        "version": "3.3.2",
+        "termsOfService": "https://office-suite-api.synology.com/"
+    },
+    "externalDocs": {
+        "description": "Synology Office Suite WebAPI Document",
+        "url": "https://office-suite-api.synology.com/"
+    },
+    "x-system-requirements": {
+        "packageMinVersion": "3.6.0"
+    },
+    "servers": [
+        {
+            "url": "{protocol}://{server_url}",
+            "variables": {
+                "protocol": {
+                    "default": "https",
+                    "enum": [
+                        "http",
+                        "https"
+                    ]
+                },
+                "server_url": {
+                    "default": "{server_url}",
+                    "description": "API server url"
+                }
+            }
+        }
+    ],
+    "tags": [
+        {
+            "name": "Authorization"
+        },
+        {
+            "name": "Values"
+        },
+        {
+            "name": "Styles"
+        },
+        {
+            "name": "Workbook"
+        },
+        {
+            "name": "Sheet"
+        },
+        {
+            "name": "Spreadsheet"
+        },
+        {
+            "name": "Statistics"
+        }
+    ],
+    "security": [
+        {
+            "bearerAuth": []
+        }
+    ],
+    "paths": {
+        "/spreadsheets/authorize": {
+            "post": {
+                "tags": [
+                    "Authorization"
+                ],
+                "summary": "Sign in",
+                "description": "Create a new login session. Different accounts have different privilege settings. Accounts without the corresponding permissions cannot access the office file.",
+                "requestBody": {
+                    "description": "Your information needed to log in.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AuthorizationBody"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "token": {
+                                            "type": "string",
+                                            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJiYXNlVVJMIjoiaHR0cDovL3lvdS5kb21haW46NTAwMC8iLCJzaWQiOiJNMjhwMlJ6Y04wTFBWendxdkdXMm9FQ0h3V1dQUkVhNFFDc3dlZl9sQ2Q4OG5FS1JDOVlGWVJUM19Tb2I2Z2s1NF9RUjJQZGlHaUd3cmFkanN0R3k0SSIsInN5bm90b2tlbiI6IllDTmIxRUFUdmNqYWsiLCJ1c2VybmFtZSI6InNxYSIsImlhdCI6MTY3ODk1MDQ5OCwiZXhwIjoxNjgxMzY5Njk4fQ.DOuyXMo8g5Pg4LOwiif79SMhSDcxsBzncpwSTKiGE-8"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {}
+                    }
+                },
+                "security": [],
+                "x-codegen-request-body-name": "body"
+            }
+        },
+        "/spreadsheets/authorize/token/revoke": {
+            "post": {
+                "tags": [
+                    "Authorization"
+                ],
+                "summary": "Revoke",
+                "description": "Revoke the token specified in authorization header. Also immediately log out from the corresponding DSM session.",
+                "responses": {
+                    "200": {
+                        "description": "Successful",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "required": [
+                                        "success"
+                                    ],
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "enum": [
+                                                true
+                                            ],
+                                            "example": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {}
+                    }
+                },
+                "x-codegen-request-body-name": "body"
+            }
+        },
+        "/spreadsheets/{spreadsheetId}/values/{range}": {
+            "get": {
+                "tags": [
+                    "Values"
+                ],
+                "summary": "Get",
+                "description": "Get the cell value within the range.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/spreadsheetId"
+                    },
+                    {
+                        "$ref": "#/components/parameters/range"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetValueResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Values"
+                ],
+                "summary": "Write",
+                "description": "Write the cell value within the range.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/spreadsheetId"
+                    },
+                    {
+                        "$ref": "#/components/parameters/range"
+                    }
+                ],
+                "requestBody": {
+                    "description": "The values you want to write.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/WriteCellBody"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetValueResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                },
+                "x-codegen-request-body-name": "body"
+            }
+        },
+        "/spreadsheets/{spreadsheetId}/values/{range}/append": {
+            "put": {
+                "tags": [
+                    "Values"
+                ],
+                "summary": "Append",
+                "description": "Append the cell value to the last table within the range.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/spreadsheetId"
+                    },
+                    {
+                        "$ref": "#/components/parameters/range"
+                    }
+                ],
+                "requestBody": {
+                    "description": "The values you want to write.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/WriteCellBody"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AppendResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                },
+                "x-codegen-request-body-name": "body"
+            }
+        },
+        "/spreadsheets/{spreadsheetId}/styles/{range}": {
+            "get": {
+                "tags": [
+                    "Styles"
+                ],
+                "summary": "Get",
+                "description": "Get cell styles within the range.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/spreadsheetId"
+                    },
+                    {
+                        "$ref": "#/components/parameters/range"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GetStyleResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/spreadsheets/{spreadsheetId}/styles": {
+            "put": {
+                "tags": [
+                    "Styles"
+                ],
+                "summary": "Write",
+                "description": "Write cell styles within the range.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/spreadsheetId"
+                    }
+                ],
+                "requestBody": {
+                    "description": "The styles you want to write.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/WriteStyleBody"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Empty"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                },
+                "x-codegen-request-body-name": "body"
+            }
+        },
+        "/spreadsheets/{spreadsheetId}/sheet/add": {
+            "post": {
+                "tags": [
+                    "Sheet"
+                ],
+                "summary": "Create",
+                "description": "Add a new sheet to the spreadsheet.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/spreadsheetId"
+                    }
+                ],
+                "requestBody": {
+                    "description": "The name of the new sheet.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddSheetBody"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AddSheetResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                },
+                "x-codegen-request-body-name": "body"
+            }
+        },
+        "/spreadsheets/{spreadsheetId}/sheet/csv": {
+            "get": {
+                "tags": [
+                    "Sheet"
+                ],
+                "summary": "Export",
+                "description": "Apply formats, resolve formulas and export the sheet as in CSV format.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/spreadsheetId"
+                    },
+                    {
+                        "$ref": "#/components/parameters/sheetId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "text/csv": {
+                                "schema": {
+                                    "type": "string",
+                                    "description": "The sheet in csv format."
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/spreadsheets/{spreadsheetId}/sheet/rename": {
+            "post": {
+                "tags": [
+                    "Sheet"
+                ],
+                "summary": "Rename",
+                "description": "Rename a sheet.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/spreadsheetId"
+                    }
+                ],
+                "requestBody": {
+                    "description": "The sheet ID and its new name.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RenameSheetBody"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RenameSheetResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                },
+                "x-codegen-request-body-name": "body"
+            }
+        },
+        "/spreadsheets/{spreadsheetId}/sheet/delete": {
+            "post": {
+                "tags": [
+                    "Sheet"
+                ],
+                "summary": "Delete",
+                "description": "Delete a sheet.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/spreadsheetId"
+                    }
+                ],
+                "requestBody": {
+                    "description": "The id of the deleted sheet.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DeleteSheetBody"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DeleteSheetResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                },
+                "x-codegen-request-body-name": "body"
+            }
+        },
+        "/spreadsheets/create": {
+            "post": {
+                "tags": [
+                    "Spreadsheet"
+                ],
+                "summary": "Create",
+                "description": "Create a new spreadsheet.",
+                "requestBody": {
+                    "description": "The spreadsheet attributes.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateSheetRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DeleteSheetResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/spreadsheets/{spreadsheetId}": {
+            "get": {
+                "tags": [
+                    "Spreadsheet"
+                ],
+                "summary": "Get",
+                "description": "Get spreadsheet data.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/spreadsheetId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SpreadsheetData"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                },
+                "x-codegen-request-body-name": "body"
+            }
+        },
+        "/spreadsheets/{spreadsheetId}/xlsx": {
+            "get": {
+                "tags": [
+                    "Spreadsheet"
+                ],
+                "summary": "Export",
+                "description": "Export the spreadsheet in XLSX format.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/spreadsheetId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": {
+                                "schema": {
+                                    "type": "string",
+                                    "description": "The spreadsheet in xlsx format."
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/spreadsheets/{spreadsheetId}/batchUpdate": {
+            "post": {
+                "tags": [
+                    "Spreadsheet"
+                ],
+                "summary": "Batch Update",
+                "description": "Batch update the spreadsheet, such as inserting or deleting rows and columns.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/spreadsheetId"
+                    }
+                ],
+                "requestBody": {
+                    "description": "Array",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BatchUpdateRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Empty"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                },
+                "x-codegen-request-body-name": "body"
+            }
+        },
+        "/spreadsheets/delete": {
+            "post": {
+                "tags": [
+                    "Spreadsheet"
+                ],
+                "summary": "Delete",
+                "description": "Delete a spreadsheet.",
+                "requestBody": {
+                    "description": "The spreadsheet id you want to delete",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DeleteSheetResponse"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DeleteSheetResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {}
+                    }
+                },
+                "x-codegen-request-body-name": "body"
+            }
+        },
+        "/spreadsheets/admin/fastifyMetrics": {
+            "get": {
+                "tags": [
+                    "Statistics"
+                ],
+                "summary": "Get metric",
+                "description": "Get server metrics in Prometheus format.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/metrics_token"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FastifyMetricsResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvalidMetricsTokenResponse"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": []
+            }
+        },
+        "/spreadsheets/admin/metrics": {
+            "get": {
+                "tags": [
+                    "Statistics"
+                ],
+                "summary": "Get user count",
+                "description": "Get user and worker counts in Prometheus format.",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/metrics_token"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/MetricsResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Argument",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvalidMetricsTokenResponse"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": []
+            }
+        }
+    },
+    "components": {
+        "parameters": {
+            "spreadsheetId": {
+                "name": "spreadsheetId",
+                "in": "path",
+                "description": "ID of a spreadsheet.\n\nYou can extract the spreadsheet ID directly from the spreadsheet URL which is structured as <code>your.domain/oo/r/spreadsheetId</code>.\n\nSpreadsheet ID is a random string of mixed-case English letters and numbers.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                },
+                "example": "rLEyyVwkqWABsmKFrn1OiRXogFCTFIAO"
+            },
+            "range": {
+                "name": "range",
+                "in": "path",
+                "description": "The range you wish to operate on.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                },
+                "example": "Sheet1!A1:C2"
+            },
+            "sheetId": {
+                "name": "sheetId",
+                "in": "query",
+                "description": "ID of a sheet.\n\nIt can be found at the end of URL. For `.../spreadsheetId#tid=1`, the `sheetId` is `sh_1`.",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                },
+                "example": "sh_1"
+            },
+            "metrics_token": {
+                "name": "metrics_token",
+                "in": "query",
+                "description": "The METRICS_TOKEN environment variable",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        },
+        "schemas": {
+            "AuthorizationBody": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "example": "username"
+                    },
+                    "host": {
+                        "type": "string",
+                        "example": "office.synology.com",
+                        "description": "The host must include the port. If it is not using the default port for http or https (i.e. 80 or 443), it should be specified in the host.",
+                        "examples": [
+                            "office.synology.com",
+                            "test.local:5001"
+                        ]
+                    },
+                    "password": {
+                        "type": "string",
+                        "example": "password"
+                    },
+                    "protocol": {
+                        "type": "string",
+                        "examples": [
+                            "https",
+                            "http"
+                        ]
+                    }
+                }
+            },
+            "CompactFontJSON": {
+                "type": "object",
+                "description": "style for the segment",
+                "properties": {
+                    "n": {
+                        "type": "string",
+                        "description": "font family",
+                        "example": "Arial"
+                    },
+                    "sz": {
+                        "type": "number",
+                        "description": "font size",
+                        "example": 10
+                    },
+                    "b": {
+                        "type": "boolean",
+                        "description": "bold",
+                        "default": false
+                    },
+                    "i": {
+                        "type": "boolean",
+                        "description": "italic",
+                        "default": false
+                    },
+                    "s": {
+                        "type": "boolean",
+                        "description": "strike through",
+                        "default": false
+                    },
+                    "u": {
+                        "type": "boolean",
+                        "description": "underline",
+                        "default": false
+                    },
+                    "c": {
+                        "type": "string",
+                        "description": "color",
+                        "example": "ffffee"
+                    }
+                }
+            },
+            "RichTextRunJSON": {
+                "type": "object",
+                "properties": {
+                    "tx": {
+                        "type": "string",
+                        "description": "cell segment",
+                        "example": "Color of this segement is ffffee"
+                    },
+                    "s": {
+                        "$ref": "#/components/schemas/CompactFontJSON"
+                    }
+                }
+            },
+            "RichTextJSON": {
+                "type": "object",
+                "description": "the cell consists of multiple segments, each of which has different styles",
+                "properties": {
+                    "t": {
+                        "type": "string",
+                        "enum": [
+                            "r"
+                        ]
+                    },
+                    "v": {
+                        "type": "array",
+                        "description": "an array of segments",
+                        "items": {
+                            "$ref": "#/components/schemas/RichTextRunJSON"
+                        }
+                    }
+                },
+                "example": {
+                    "t": "r",
+                    "v": [
+                        {
+                            "tx": "This segment is red, bold and Arial",
+                            "s": {
+                                "n": "Arial",
+                                "b": true,
+                                "c": "ff0000"
+                            }
+                        },
+                        {
+                            "tx": "This segment is green, underlined and Georgia",
+                            "s": {
+                                "n": "Georgia",
+                                "u": true,
+                                "c": "00ff00"
+                            }
+                        }
+                    ]
+                }
+            },
+            "CellJSON": {
+                "oneOf": [
+                    {
+                        "type": "number"
+                    },
+                    {
+                        "type": "string"
+                    },
+                    {
+                        "type": "boolean"
+                    },
+                    {
+                        "$ref": "#/components/schemas/RichTextJSON"
+                    }
+                ]
+            },
+            "CellJSON2D": {
+                "type": "array",
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/CellJSON"
+                    }
+                }
+            },
+            "WriteCellBody": {
+                "type": "object",
+                "properties": {
+                    "values": {
+                        "$ref": "#/components/schemas/CellJSON2D"
+                    }
+                }
+            },
+            "WriteStyleBody": {
+                "type": "object",
+                "properties": {
+                    "sheetName": {
+                        "type": "string",
+                        "example": "Sheet1"
+                    },
+                    "startRow": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "startCol": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "rows": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "values": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/WrittenCellStyle"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "AddSheetBody": {
+                "type": "object",
+                "properties": {
+                    "sheetName": {
+                        "type": "string",
+                        "example": "new sheet"
+                    }
+                }
+            },
+            "DeleteSheetBody": {
+                "type": "object",
+                "properties": {
+                    "sheetId": {
+                        "$ref": "#/components/schemas/SheetId"
+                    }
+                }
+            },
+            "RenameSheetBody": {
+                "type": "object",
+                "properties": {
+                    "sheetId": {
+                        "$ref": "#/components/schemas/SheetId"
+                    },
+                    "sheetName": {
+                        "type": "string",
+                        "example": "new name"
+                    }
+                }
+            },
+            "GetValueResponse": {
+                "type": "object",
+                "properties": {
+                    "range": {
+                        "type": "string",
+                        "example": "D6"
+                    },
+                    "majorDimension": {
+                        "$ref": "#/components/schemas/Dimension"
+                    },
+                    "values": {
+                        "$ref": "#/components/schemas/CellJSON2D"
+                    }
+                }
+            },
+            "AppendResponse": {
+                "type": "object",
+                "properties": {
+                    "tableRange": {
+                        "type": "string",
+                        "example": "A1:D6"
+                    },
+                    "updates": {
+                        "type": "object",
+                        "properties": {
+                            "updateRange": {
+                                "type": "string",
+                                "example": "A7:B7"
+                            },
+                            "updateRows": {
+                                "type": "integer",
+                                "example": 1
+                            },
+                            "updateColumns": {
+                                "type": "integer",
+                                "example": 2
+                            }
+                        }
+                    },
+                    "spreadsheetId": {
+                        "type": "string",
+                        "example": "ferjGdIFhVF6LY1LeqtZklcOAukN3Uy7"
+                    }
+                }
+            },
+            "GetStyleResponse": {
+                "type": "object",
+                "properties": {
+                    "range": {
+                        "type": "string",
+                        "example": "A1"
+                    },
+                    "rows": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "values": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/CellStyle"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "AddSheetResponse": {
+                "type": "object",
+                "properties": {
+                    "addSheet": {
+                        "type": "object",
+                        "properties": {
+                            "properties": {
+                                "type": "object",
+                                "properties": {
+                                    "sheetId": {
+                                        "$ref": "#/components/schemas/SheetId"
+                                    },
+                                    "title": {
+                                        "type": "string",
+                                        "example": "new sheet"
+                                    },
+                                    "index": {
+                                        "type": "integer",
+                                        "example": 2
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "DeleteSheetResponse": {
+                "type": "object",
+                "properties": {
+                    "spreadsheetId": {
+                        "type": "string",
+                        "example": "ferjGdIFhVF6LY1LeqtZklcOAukN3Uy7"
+                    }
+                }
+            },
+            "RenameSheetResponse": {
+                "type": "object",
+                "properties": {
+                    "spreadsheetId": {
+                        "type": "string",
+                        "example": "ferjGdIFhVF6LY1LeqtZklcOAukN3Uy7"
+                    },
+                    "sheetId": {
+                        "$ref": "#/components/schemas/SheetId"
+                    },
+                    "sheetName": {
+                        "type": "string",
+                        "example": "new name"
+                    }
+                }
+            },
+            "CreateSheetRequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "File name of the spreadsheet",
+                        "type": "string",
+                        "example": "Spreadsheet Name"
+                    }
+                }
+            },
+            "NumberFormat": {
+                "type": "object",
+                "nullable": true,
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "DEFAULT",
+                            "DATE_TIME",
+                            "DATE",
+                            "TIME",
+                            "TEXT",
+                            "DURATION"
+                        ],
+                        "description": "Readonly. Setting this in write styles API has no effect."
+                    },
+                    "pattern": {
+                        "type": "string",
+                        "example": "0%"
+                    }
+                }
+            },
+            "TextFormat": {
+                "type": "object",
+                "description": "When writing, new attributes overwrite the existing ones.\nFor example, if the current format is **{bold: true}**,\nwriting **{underline: true}** will clear **\"bold\"** and\nresult in **{underline: true}**.\n",
+                "properties": {
+                    "bold": {
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "color": {
+                        "type": "string",
+                        "example": "000000"
+                    },
+                    "italic": {
+                        "type": "boolean",
+                        "example": false
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Arial"
+                    },
+                    "size": {
+                        "type": "integer",
+                        "example": 20
+                    },
+                    "strike": {
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "underline": {
+                        "type": "boolean",
+                        "example": true
+                    }
+                }
+            },
+            "CellFormat": {
+                "type": "object",
+                "description": "When writing, new styles overwrite the existing ones.\nFor example, if the current style is **{bg: \"red\"}**,\nwriting **{horizontalAlignment: \"center\"}** will clear **\"bg\"** and\nresult in **{horizontalAlignment: \"center\"}**.\n",
+                "properties": {
+                    "numberFormat": {
+                        "$ref": "#/components/schemas/NumberFormat"
+                    },
+                    "verticalAlignment": {
+                        "type": "string",
+                        "enum": [
+                            "top",
+                            "middle",
+                            "bottom"
+                        ],
+                        "nullable": true
+                    },
+                    "textFormat": {
+                        "$ref": "#/components/schemas/TextFormat"
+                    },
+                    "bg": {
+                        "type": "string",
+                        "example": "fffffe",
+                        "nullable": true
+                    },
+                    "quotePrefix": {
+                        "type": "boolean",
+                        "description": "Editable in UI only. Writing this field with API has no effect.",
+                        "example": false
+                    },
+                    "horizontalAlignment": {
+                        "type": "string",
+                        "enum": [
+                            "left",
+                            "center",
+                            "right"
+                        ],
+                        "nullable": true
+                    },
+                    "wrapStrategy": {
+                        "type": "string",
+                        "enum": [
+                            "wrap",
+                            "clip"
+                        ],
+                        "nullable": true
+                    },
+                    "borders": {
+                        "type": "array",
+                        "nullable": true,
+                        "items": {
+                            "type": "string",
+                            "nullable": true
+                        },
+                        "description": "Colors of the **top**, **right**, **bottom**, **left** borders respectively.\nWhen writing, new borders are merged with the existing ones.\nNamely, if the example below are the current borders,\nwriting **[null, \"blue\", null, null]** results in **[\"red\", \"blue\", null, null]**.\nSet **borders=null** to clear all.\n",
+                        "example": [
+                            "red",
+                            null,
+                            null,
+                            null
+                        ]
+                    }
+                }
+            },
+            "CellStyle": {
+                "type": "object",
+                "properties": {
+                    "userEnteredValue": {
+                        "$ref": "#/components/schemas/CellJSON",
+                        "example": "hello"
+                    },
+                    "effectiveValue": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "boolean"
+                            },
+                            {
+                                "$ref": "#/components/schemas/FormulaError"
+                            }
+                        ],
+                        "description": "For literals, this is the same as `userEnteredValue`.\nFor formulas, this is the calculated value.\nIf the calculation encounters any error, this field will be an object indicating the error message.\n",
+                        "example": "hello"
+                    },
+                    "formattedValue": {
+                        "type": "string",
+                        "example": "hello"
+                    },
+                    "userEnteredFormat": {
+                        "$ref": "#/components/schemas/CellFormat"
+                    },
+                    "effectiveFormat": {
+                        "$ref": "#/components/schemas/CellFormat",
+                        "description": "The styles actually applied to the cell."
+                    },
+                    "hyperlink": {
+                        "type": "string",
+                        "description": "A hyperlink this cell points to, if any. This field is read-only.\nTo set it, use the `=HYPERLINK` formula with [write value](/paths/spreadsheets-spreadsheetId--values--range/put) API.\n",
+                        "example": "https://www.synology.com"
+                    }
+                }
+            },
+            "WrittenCellStyle": {
+                "type": "object",
+                "properties": {
+                    "userEnteredFormat": {
+                        "$ref": "#/components/schemas/CellFormat"
+                    }
+                }
+            },
+            "FormulaError": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "type": "string",
+                        "example": "#DIV/0!"
+                    }
+                }
+            },
+            "SheetId": {
+                "type": "string",
+                "description": "ID of a sheet.\n\nIt can be found at the end of URL. For `.../spreadsheetId#tid=1`, the `sheetId` is `sh_1`.",
+                "example": "sh_1"
+            },
+            "Dimension": {
+                "type": "string",
+                "enum": [
+                    "ROWS",
+                    "COLUMNS"
+                ],
+                "example": "ROWS"
+            },
+            "DimensionRange": {
+                "type": "object",
+                "properties": {
+                    "sheetId": {
+                        "$ref": "#/components/schemas/SheetId"
+                    },
+                    "dimension": {
+                        "$ref": "#/components/schemas/Dimension"
+                    },
+                    "startIndex": {
+                        "type": "integer",
+                        "example": 1,
+                        "minimum": 0
+                    },
+                    "endIndex": {
+                        "type": "integer",
+                        "example": 2,
+                        "minimum": 0
+                    }
+                }
+            },
+            "SheetProperties": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "example": "Sheet1",
+                        "description": "Sheet name"
+                    },
+                    "sheetId": {
+                        "$ref": "#/components/schemas/SheetId"
+                    },
+                    "index": {
+                        "type": "number"
+                    },
+                    "hidden": {
+                        "type": "boolean",
+                        "example": false
+                    }
+                }
+            },
+            "WorksheetData": {
+                "type": "object",
+                "properties": {
+                    "properties": {
+                        "$ref": "#/components/schemas/SheetProperties"
+                    },
+                    "rowCount": {
+                        "type": "number"
+                    },
+                    "colCount": {
+                        "type": "number"
+                    },
+                    "fixedColumnLeft": {
+                        "type": "number"
+                    },
+                    "fixedRowTop": {
+                        "type": "number"
+                    },
+                    "mergeCells": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "type": "number"
+                            },
+                            "minItems": 4,
+                            "maxItems": 4,
+                            "example": [
+                                0,
+                                0,
+                                2,
+                                3
+                            ]
+                        }
+                    }
+                }
+            },
+            "SpreadsheetProperties": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "example": "Untitled",
+                        "description": "Spreadsheet name"
+                    },
+                    "locale": {
+                        "type": "string"
+                    }
+                }
+            },
+            "SpreadsheetData": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "example": "hbzW1WX7XWKLLl6gVx8zqohVnvtUtoFz"
+                    },
+                    "properties": {
+                        "$ref": "#/components/schemas/SpreadsheetProperties"
+                    },
+                    "sheets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/WorksheetData"
+                        }
+                    }
+                }
+            },
+            "DeleteDimensionRequest": {
+                "type": "object",
+                "properties": {
+                    "range": {
+                        "$ref": "#/components/schemas/DimensionRange"
+                    }
+                }
+            },
+            "InsertDimensionRequest": {
+                "type": "object",
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/DeleteDimensionRequest"
+                    },
+                    {
+                        "properties": {
+                            "inheritFromBefore": {
+                                "type": "boolean",
+                                "default": true
+                            }
+                        }
+                    }
+                ]
+            },
+            "BatchUpdateRequest": {
+                "type": "object",
+                "properties": {
+                    "requests": {
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "insertDimension": {
+                                            "$ref": "#/components/schemas/InsertDimensionRequest"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "deleteDimension": {
+                                            "$ref": "#/components/schemas/DeleteDimensionRequest"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "MetricsResponse": {
+                "type": "string",
+                "example": "spreadsheet_api_server_user_controller_count{user=\"user1\"} 1\nspreadsheet_api_server_worker_count{user=\"user1\"} 1\nspreadsheet_api_server_user_controller_count{user=\"user2\"} 1\nspreadsheet_api_server_worker_count{user=\"user2\"} 3\n"
+            },
+            "FastifyMetricsResponse": {
+                "type": "string",
+                "description": "checkout the available metrics <a href=\"https://github.com/SkeLLLa/fastify-metrics/blob/master/README.md#features-and-requirements\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">here</a>",
+                "example": "nodejs_heap_size_total_bytes 32382976\nnodejs_heap_size_used_bytes 22591672"
+            },
+            "InvalidMetricsTokenResponse": {
+                "type": "object",
+                "description": "Invalid metrics token",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "example": "Invalid metrics_token"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "code": {
+                        "type": "integer",
+                        "example": 400
+                    }
+                }
+            },
+            "Empty": {
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        }
+    },
+    "x-servers-description": "Specify the connection to your Spreadsheet API Server.",
+    "x-security-description": "Please [Sign in](#post-/spreadsheets/authorize) first to retrieve your token.<br>Then, enter your `token` in the field below to apply your `token` in the **Authorization** header. Once you set the `token`, it will automatically apply to all APIs.",
+    "x-internalDocs": {
+        "/Support/overview/container-setup": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "Container",
+            "description": "API server for Synology Spreadsheet. Each worker is dedicated to a single user and a single spreadsheet. An user can have multiple workers for different spreadsheets at the same time.\n\n**Note**: The server performs essential computations when loading spreadsheets. This process can consume significant resources, especially if there are numerous active spreadsheets.\n\n\n## Setup\nPull the image from `synology/spreadsheet-api:{tag}`. Take API version 3.3.2 for example:\n```bash\ndocker pull synology/spreadsheet-api:3.3.2\n```\nRun the server with\n```bash\ndocker run -e AUTH_SECRET=secret-key-for-auth-token -p '3000:3000' synology/spreadsheet-api:3.3.2\n```\nBelow summarizes available environment variables (those with <span style=\"color: red\">*</span> are required):\n| Variables | Default | Description |\n| --------------------- | --------- | ----------- |\n| AUTH_SECRET <span style=\"color: red\">*</span> | `NA`      | The secret key for JWT token. The server **cannot** run without this variable. |\n| METRICS_TOKEN | `NA` | Monitor server health by retrieving real-time [metrics](#get-/spreadsheets/admin/fastifyMetrics) with the token. Keep it secret as the metrics may contain confidential data. Metrics are inaccessible if it is not set. |\n| LOKI_HOST | `NA` |  Send warnings and errors to a Loki server running on this URL. Keep it secret as the logs may contain confidential data. Logs are printed to stdout if it is not set. |\n| HOST | 0.0.0.0 | The address the server listens to. |\n| PORT | 3000 | The port the server listens to. |\n| WORKER_TIMEOUT | 600,000 | Time (milliseconds) before closing an inactive worker. |\n| USER_TIMEOUT | 60,000 | Time (milliseconds) before closing an user with no worker. |\n## Monitor\n### Prometheus\nCreate jobs to collect metrics\n```yaml\n# prometheus.yml\nscrape_configs:\n  - job_name: 'system-metrics'\n    metrics_path: '/spreadsheets/admin/fastifyMetrics'\n    params:\n      metrics_token: ['{your METRICS_TOKEN}']\n    static_configs:\n      - targets: ['{your Spreadsheet API server ip}']\n  - job_name: 'user-metrics'\n    metrics_path: '/spreadsheets/admin/metrics'\n    params:\n      metrics_token: ['{your METRICS_TOKEN}']\n    static_configs:\n      - targets: ['{your Spreadsheet API server ip}']\n```\n### Loki\nRun a Loki server on the URL specified by `LOKI_HOST` to collect logs.\n```yaml\n# loki.yml\ntarget: all\nserver:\n  http_listen_port: 3100\n\ningester:\n  lifecycler:\n    address: 127.0.0.1\n    ring:\n      kvstore:\n        store: inmemory\n      replication_factor: 1\n    final_sleep: 0s\n  wal:\n    dir: /tmp/loki/wal\n  chunk_idle_period: 30m\n  chunk_retain_period: 0s\n  max_transfer_retries: 0\n\nschema_config:\n  configs:\n    - from: 2018-04-15\n      store: boltdb\n      object_store: filesystem\n      schema: v11\n      index:\n        prefix: index_\n        period: 168h\n\nstorage_config:\n  boltdb:\n    directory: /tmp/loki/index\n  filesystem:\n    directory: /tmp/loki/chunks\n```\n### Grafana\n1. Run the server (refer to `docker-compose.yml` below)\n2. Import the dashboards\n: <a href=\"https://grafana.com/grafana/dashboards/22132\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">API</a>, <a href=\"https://grafana.com/grafana/dashboards/22133\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">CPU & Memory</a>, <a href=\"https://grafana.com/grafana/dashboards/22134\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">Node.js</a>\n3. Config `prometheus` & `loki` data sources in UI\n```yaml\n# docker-compose.yml\n\nvolumes:\n  grafana-data-vol:\n\nservices:\n  prometheus:\n    image: prom/prometheus:latest\n    command: [ \"--config.file=/etc/prometheus/prometheus.yml\" ]\n    volumes:\n      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml\n    ports:\n      - \"9090:9090\"\n  loki:\n    image: grafana/loki\n    ports:\n      - 3100:3100\n    command: [ \"-config.file=/etc/loki/loki.yml\" ]\n    volumes:\n      - ./loki/loki.yml:/etc/loki/loki.yml\n      - ./loki/index:/tmp/loki/index\n      - ./loki/chunks:/tmp/loki/chunks\n      - ./loki/wal:/tmp/loki/wal\n  grafana:\n    image: grafana/grafana\n    volumes:\n      - grafana-data-vol:/var/lib/grafana\n    ports:\n      - 3000:3000\n    environment:\n      - GF_SECURITY_ADMIN_USER={your username}\n      - GF_SECURITY_ADMIN_PASSWORD={your password}\n      - GF_SERVER_DOMAIN={your server domain}\n```",
+            "x-hidden-path": true,
+            "x-spec-check-ignore": true
+        },
+        "/Support/resources": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "Resources",
+            "description": "<div class=\"sub-title\">Postman Testing Guide</div><div><p>API testing helps teams verify whether Synology Office Suite API endpoints, methods, and integrations function as expected.</p><div><br><div class=\"sub-sub-title\">Step1. Obtain the API Specification</div><div><p>Before testing an API, you need its specification, which outlines the available endpoints, parameters, and methods. Download the API specification for Synology Office Suite packages to explore their API capabilities.</p></div><div><ul><li><a href=\"/specs/Synology-Drive/openapi_v1.json\" download>Synology Drive</a></li><li><a href=\"/specs/Synology-Spreadsheet/openapi.json\" download>Synology Spreadsheet</a></li><li><a href=\"/specs/Synology-MailPlus/openapi_v1.json\" download>Synology MailPlus</a></li><li><a href=\"/specs/Synology-Calendar/openapi_v1.json\" download>Synology Calendar</a></li></ul></div><div class=\"sub-sub-title\">Step2. Import API Spec to Postman. <a href=\"#docs-/Support/resources/postman/import\" style=\"font-weight: normal\">Get started</a></div><div class=\"sub-sub-title\">Step3. Set Up Testing Environment for desired package</div><div><ul><li><a href=\"#docs-/Support/resources/postman/setup-others\">Synology Drive / MailPlus / Calendar</a></li><li><a href=\"#docs-/Support/resources/postman/setup-spreadsheet\">Synology Spreadsheet</a></li></ul></div></div></div><div class=\"sub-title\" style=\"margin-top: 32px\">ChatGPT</div><div><p>Enable the Synology Office Suite API plugin in ChatGPT to generate sample code for you and save your time and effort. <a href=\"#docs-/Support/resources/chatgpt\">Get started</a></p></div>"
+        },
+        "/Support/contact-us": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "Contact us",
+            "description": "<div class=\"sub-title\">Feature Request</div><div><p>Fill out the <a href=\"https://www.synology.com/form/inquiry/feature\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">Feature Inquiry form</a> and let us know what API you'd like to see implemented.</p></div><div class=\"sub-title\" style=\"margin-top: 32px\">Community</div><div><p>Ask a question in <a href=\"https://community.synology.com/forum/1\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">Synology Community</a>, or check if there is an existing discussion.</p></div>"
+        },
+        "/Support/resources/chatgpt": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "How do I Chat with Synology Office Suite API GPT on ChatGPT?",
+            "description": "<div class=\"sub-title\">Purpose</div><div><p>Synology Office Suite APIs provide developers with powerful tools to automate workflows, enhance productivity, and securely integrate Synology data with third-party platforms through REST APIs and webhook support. To save you time and effort, you can enable the Synology Office Suite API GPT in ChatGPT. It can then search through the Synology Office Suite API documentation, extract relevant parameter formats, and generate sample code for you.</p><p>This article provides a guide on getting started with Synology Office Suite API GPT on ChatGPT.</p></div><br><div class=\"sub-title\">Environment</div><div><ul><li>DSM 7.2.2 nano3 or above</li><li>Synology Drive 3.5.2 version or above</li><li>Synology Office 3.6.0 version or above</li><li>Synology MailPlus 3.3.1 version or above</li><li>Synology Calendar 2.5.3 version or above</li></div><br><div class=\"sub-title\">Resolution</div><div><div class=\"sub-sub-title\">Start Chat</div><ol><li>Click <a href=\"https://chatgpt.com/g/g-673569bbe918819084671e1fe5c05752-synology-office-suite-api\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">this link</a> to start chatting directly, or sign in to the <a href=\"https://chatgpt.com/\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">ChatGPT website</a>, and click on <b>Explore GPTs</b> in the upper left corner.<br><img src=\"/images/gpt/explore-gpts.png\" title=\"Explore GPTs\" alt=\"Explore GPTs\"></li><br><li>In the search box, type in <b>Synology Office Suite API</b>.<br><img src=\"/images/gpt/search-gpts.png\" title=\"Search GPTs\" alt=\"Search GPTs\"></li><br><li>Select and hit <b>Start Chat</b>.<br><img src=\"/images/gpt/start-gpt-chat.png\" title=\"Start Chat\" alt=\"Start Chat\"></li><br><li>You can now interact with Synology Office Suite API GPT. Select <b>Keep in sidebar</b> to save the GPT on top.<br><img src=\"/images/gpt/keep-gpt-in-sidebar.png\" title=\"Keep GPT in Sidebar\" alt=\"Keep GPT in Sidebar\"></li></ol></div><br><div class=\"sub-sub-title\">Example Prompts</div><div><p>Here are some example prompts that illustrate how to interact with the Synology Office Suite API GPT.<br><ul><li><b>Automatically download new files uploaded to a shared folder on Synology Drive</b><br>I have created a folder to which team members should upload their weekly reports. How to auto download new files uploaded to this folder?</li></ul></p></div></div>",
+            "x-hidden-path": true
+        },
+        "/Support/resources/postman/setup-others": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "How to Set Up the Environment for Synology Drive, MailPlus, and Calendar APIs",
+            "description": "If you haven't imported the API spec yet, please follow the instructions [here](#docs-/Support/resources/postman/import).<ol><li>Switch to the <b>Authorization</b> tab and fill in your NAS URL in the <b>baseUrl</b> field.<br><img src=\"/images/postman/others/base-url.png\" title=\"Set base URL\" alt=\"Set base URL\"></li><br><li>Hover <b>{{apiKey}}</b> and click <b>Collection</b> to create the variable for this collection.<br><img src=\"/images/postman/others/create-api-key.png\" title=\"Create apiKey variable\" alt=\"Create apiKey variable\"></li><br><li>Go to <b>Authorization > Sign in</b> and switch to <b>Body</b> tab. Fill in account and password. Click <b>Send</b> to retrieve your <b>sid</b>.<br><img src=\"/images/postman/others/sign-in.png\" title=\"Sign in\" alt=\"Sign in\"></li><br><li>Copy the retrieved <b>sid</b>. Fill in the <b>apiKey</b> field in the format of <b>id={sid}</b>.<br><img src=\"/images/postman/others/set-api-key.png\" title=\"Set apiKey\" alt=\"Set apiKey\"></li><br><li>The <b>apiKey</b> will be applied to all other API endpoints. You can start testing them.</li></ol>",
+            "x-hidden-path": true
+        },
+        "/Support/resources/postman/import": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "How to Import an API Specification and Start Testing with Postman",
+            "description": "<ol><li>Download and install the <a href=\"https://www.postman.com/downloads/\" target=\"_blank\" rel=\"nofollow external noreferrer noopener\">Postman API Platform</a> by selecting the appropriate version for your operating system.</li><br><li>In the workspace, click <b>Import</b> to import the API spec for the packages you need. If you haven't downloaded it yet, the links are available <a href=\"#docs-/Support/resources\">here</a><br><img src=\"/images/postman/import-spec.png\" title=\"Import OpenAPI spec to Postman\" alt=\"Import OpenAPI spec to Postman\"></li><br><li>Select <b>Postman Collection</b> and click <b>View Import Settings</b> to check the additional configuration options.<br><img src=\"/images/postman/import-settings.png\" title=\"Postman import settings\" alt=\"Postman import settings\"></li><br><li>Navigate to <b>Folder Organization</b> and ensure <b>Tags</b> is selected.<br><img src=\"/images/postman/organize-by-tags.png\" title=\"Organize APIs by tags\" alt=\"Organize APIs by tags\"></li><br><li>Return to the previous page and click <b>Import</b>.<img src=\"/images/postman/import-done.png\" title=\"Import done\" alt=\"Import done\"></li><br><li>Set up the testing environment for<ul><li><a href=\"#docs-/Support/resources/postman/setup-others\">Synology Drive, MailPlus, Calendar</a></li><li><a href=\"#docs-/Support/resources/postman/setup-spreadsheet\">Synology Spreadsheet</a></li></ul></li></ol>",
+            "x-hidden-path": true
+        },
+        "/Support/resources/postman/setup-spreadsheet": {
+            "tags": [
+                "Support"
+            ],
+            "summary": "How to Set Up the Environment for Spreadsheet APIs",
+            "description": "If you haven't imported the API spec yet, please follow the instructions [here](#docs-/Support/resources/postman/import).<ol><li>Switch to the <b>Authorization</b> tab and fill in your Spreadsheet API server URL in the <b>baseUrl</b> field.<br><img src=\"/images/postman/spreadsheet/base-url.png\" title=\"Set base URL\" alt=\"Set base URL\"></li><br><li>Hover <b>{{bearerToken}}</b> and click <b>Collection</b> to create the variable for this collection.<br><img src=\"/images/postman/spreadsheet/create-bearer-token.png\" title=\"Create bearerToken variable\" alt=\"Create bearerToken variable\"></li><br><li>Go to <b>Authorization > Sign in</b> and switch to the <b>Body</b> tab. Fill in username, password, protocol and host for your NAS. Click <b>Send</b> to retrieve your token. For example, if the NAS URL is `https://my-nas:5000`, please fill in `https` for <b>protocol</b> and `my-nas:5000` for <b>host</b>.<br><img src=\"/images/postman/spreadsheet/sign-in.png\" title=\"Sign in\" alt=\"Sign in\"></li><br><li>Fill in the <b>bearerToken</b> field with the retrieved <b>token</b>.<br><img src=\"/images/postman/spreadsheet/set-bearer-token.png\" title=\"Set bearer token\" alt=\"Set bearer token\"></li><br><li>The token will be applied to all other API endpoints. You can start testing them.</li></ol>",
+            "x-hidden-path": true
+        }
+    },
+    "x-ui-sticky-tags": [
+        "Support"
+    ]
+}

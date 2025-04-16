@@ -1,5 +1,4 @@
-Synology PHP
-=================
+# Synology PHP
 
 This is an update of ``https://github.com/zzarbi/synology`` with new code standards and namespaces.
 
@@ -95,12 +94,11 @@ $synology->connect('admin', 'xxxx');
 print_r($synology->getInfo());
 ```
 
-Synology Web API Explorer
--------------------------
+## Synology Web API Explorer
+
+### OpenAPI (swagger) files by service
 
 The OpenAPI files below use a path with the api, version, method + session id parameters for each API method, that is mapped to the Synology API by a basic [REST API](./tools/rest.php) script. Any special additional parameters needed for a particular API method are *not* taken into account here (except for login).
-
-OpenAPI (Swagger) files by service:
 
 - [ACEEditor](./tools/swagger/ACEEditor.yaml) - [explore](https://github.mikespub.net/synology/tools/index.html?urls.primaryName=ACEEditor)
 - [AME](./tools/swagger/AME.yaml) - [explore](https://github.mikespub.net/synology/tools/index.html?urls.primaryName=AME)
@@ -170,12 +168,25 @@ OpenAPI (Swagger) files by service:
 - [WebRTC](./tools/swagger/WebRTC.yaml) - [explore](https://github.mikespub.net/synology/tools/index.html?urls.primaryName=WebRTC)
 - [WebStation](./tools/swagger/WebStation.yaml) - [explore](https://github.mikespub.net/synology/tools/index.html?urls.primaryName=WebStation)
 
-OpenAPI (Swagger) files combined:
+### OpenAPI (swagger) files combined
+
+The OpenAPI files below combine all APIs above into a single file. There are two versions of the swagger file available, one using short urls with query parameters, and the other specifying the complete path including the 4 standard parameters for each API method. Any special additional parameters needed for a particular API method are *not* taken into account here (except for login).
 
 - [path](./tools/swagger/path.yaml) - [explore](https://github.mikespub.net/synology/tools/index.html?urls.primaryName=path)
 - [query](./tools/swagger/query.yaml) - [explore](https://github.mikespub.net/synology/tools/index.html?urls.primaryName=query)
 
-Synology REST API Gateway
--------------------------
+### OpenAPI (swagger) files for Synology Office Suite WebAPI
+
+The OpenAPI files below are part of the Synology Office Suite WebAPI. They are documented in more detail at https://office-suite-api.synology.com/ (account required)
+
+- [Synology Calendar](./tools/swagger/Synology_Calendar.json) - [explore](https://github.mikespub.net/synology/tools/index.html?urls.primaryName=Synology_Calendar)
+- [Synology Drive](./tools/swagger/Synology_Drive.json) - [explore](https://github.mikespub.net/synology/tools/index.html?urls.primaryName=Synology_Drive)
+- [Synology MailPlus](./tools/swagger/Synology_MailPlus.json) - [explore](https://github.mikespub.net/synology/tools/index.html?urls.primaryName=Synology_MailPlus)
+- [Synology Spreadsheet](./tools/swagger/Synology_Spreadsheet.json) - [explore](https://github.mikespub.net/synology/tools/index.html?urls.primaryName=Synology_Spreadsheet)
+
+
+## Synology REST API Gateway
 
 The [rest.php](./tools/rest.php) script acts as a basic REST API gateway for exploring the OpenAPI swagger files. It must be copied in the base directory of your Web Station along with the `combined.json`, `required.json` and `rest_mapping.php` files if you want to use it.
+
+For most of the services, only the `list` or `getinfo` methods will actually work without additional parameters...
