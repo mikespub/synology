@@ -30,7 +30,7 @@ class ClientFactory
      * @param string  $address
      * @param ?int    $port
      * @param ?string $protocol
-     * @param ?int    $version
+     * @param ?int    $version @deprecated can vary per api method
      */
     public static function getClient($serviceName, $address, $port = null, $protocol = null, $version = 1)
     {
@@ -48,7 +48,7 @@ class ClientFactory
      * @param string  $address
      * @param ?int    $port
      * @param ?string $protocol
-     * @param ?int    $version
+     * @param ?int    $version @deprecated can vary per api method
      * @return GenericClient
      */
     public static function getGeneric($serviceName, $address, $port = null, $protocol = null, $version = 1)

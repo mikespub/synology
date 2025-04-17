@@ -9,6 +9,8 @@ use Synology\Exception;
  * Class SynologyDriveServer
  *
  * @package Synology\Applications
+ * @deprecated 1.5.4 replaced by Synology Office Suite WebAPI
+ * @see https://office-suite-api.synology.com/ (account required)
  */
 class SynologyDriveServer extends Authenticate
 {
@@ -20,7 +22,7 @@ class SynologyDriveServer extends Authenticate
      * @param string  $address
      * @param ?int    $port
      * @param ?string $protocol
-     * @param ?int    $version
+     * @param ?int    $version @deprecated can vary per api method
      * @param bool    $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)

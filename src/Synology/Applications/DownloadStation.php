@@ -9,6 +9,7 @@ use Synology\Exception;
  * Class DownloadStation
  *
  * @package Synology\Applications
+ * @deprecated 1.5.4 replaced by DownloadStation2 in Web API
  */
 class DownloadStation extends Authenticate
 {
@@ -21,7 +22,7 @@ class DownloadStation extends Authenticate
      * @param string  $address
      * @param ?int    $port
      * @param ?string $protocol
-     * @param ?int    $version
+     * @param ?int    $version @deprecated can vary per api method
      * @param bool    $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)

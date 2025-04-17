@@ -9,6 +9,7 @@ use Synology\Exception;
  * Class Core
  *
  * @package Synology\Applications
+ * @deprecated 1.5.4 objects moved from DSM to Core in Web API
  */
 class Core extends Authenticate
 {
@@ -21,7 +22,7 @@ class Core extends Authenticate
      * @param string  $address
      * @param ?int    $port
      * @param ?string $protocol
-     * @param ?int    $version
+     * @param ?int    $version @deprecated can vary per api method
      * @param bool    $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = self::API_VERSION, $verifySSL = false)

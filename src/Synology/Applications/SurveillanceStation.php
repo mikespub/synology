@@ -21,7 +21,7 @@ class SurveillanceStation extends Authenticate
      * @param string  $address
      * @param ?int    $port
      * @param ?string $protocol
-     * @param ?int    $version
+     * @param ?int    $version @deprecated can vary per api method
      * @param bool    $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
