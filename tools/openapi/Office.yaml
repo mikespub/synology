@@ -2159,7 +2159,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2177,7 +2177,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2195,7 +2195,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2213,7 +2213,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2231,7 +2231,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2249,7 +2249,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2267,7 +2267,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2285,7 +2285,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2303,7 +2303,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2321,7 +2321,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2339,7 +2339,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2357,7 +2357,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2375,7 +2375,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:
@@ -2393,7 +2393,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/../schemas/object.json'
+          $ref: '../schemas/object.json'
         error:
           type: object
           properties:

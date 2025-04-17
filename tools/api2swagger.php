@@ -200,7 +200,7 @@ function generate_openapi($apilist, $required, $debug = false)
                     $params['schema'] = str_replace('SYNO.', '', $api) . '_' . ucfirst($method) . 'Response';
                     // @todo schemas including type: array without items causes problems for Swagger UI
                     //$params['file'] = basename($schema_file);
-                    $params['file'] = '../schemas/object.json';
+                    $params['file'] = 'object.json';
                     $path_footer .= replace_params($schema_tmpl, $params);
                     $rest_footer .= replace_params($schema_tmpl, $params);
                     $query_footer .= replace_params($schema_tmpl, $params);
