@@ -26,11 +26,11 @@ class ClientFactory
     /**
      * Get Synology API Client for serviceName
      *
-     * @param string $serviceName
-     * @param string $address
-     * @param int    $port
-     * @param string $protocol
-     * @param int    $version
+     * @param string  $serviceName
+     * @param string  $address
+     * @param ?int    $port
+     * @param ?string $protocol
+     * @param ?int    $version
      */
     public static function getClient($serviceName, $address, $port = null, $protocol = null, $version = 1)
     {
@@ -44,15 +44,16 @@ class ClientFactory
     /**
      * Get Generic API Client for serviceName
      *
-     * @param string $serviceName
-     * @param string $address
-     * @param int    $port
-     * @param string $protocol
-     * @param int    $version
+     * @param string  $serviceName
+     * @param string  $address
+     * @param ?int    $port
+     * @param ?string $protocol
+     * @param ?int    $version
+     * @return GenericClient
      */
     public static function getGeneric($serviceName, $address, $port = null, $protocol = null, $version = 1)
     {
-        $className = "\\Synology\\Applications\\GenericClient";
+        $className = GenericClient::class;
         return new $className($serviceName, $address, $port, $protocol, $version);
     }
 }

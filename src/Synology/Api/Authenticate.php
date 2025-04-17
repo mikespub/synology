@@ -19,12 +19,12 @@ class Authenticate extends AbstractApi
     /**
      * Constructor
      *
-     * @param string $serviceName
-     * @param string $namespace
-     * @param string $address
-     * @param int    $port
-     * @param string $protocol
-     * @param int    $version
+     * @param string  $serviceName
+     * @param string  $namespace
+     * @param string  $address
+     * @param ?int    $port
+     * @param ?string $protocol
+     * @param ?int    $version
      */
     public function __construct($serviceName, $namespace, $address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {

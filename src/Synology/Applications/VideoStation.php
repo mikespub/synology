@@ -13,16 +13,15 @@ use Synology\Exception;
 class VideoStation extends Authenticate
 {
     public const API_SERVICE_NAME = 'VideoStation';
-    public const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
      *
-     * @param string $address
-     * @param int    $port
-     * @param string $protocol
-     * @param int    $version
-     * @param bool   $verifySSL
+     * @param string  $address
+     * @param ?int    $port
+     * @param ?string $protocol
+     * @param ?int    $version
+     * @param bool    $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {

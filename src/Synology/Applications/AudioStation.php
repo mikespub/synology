@@ -14,16 +14,15 @@ class AudioStation extends Authenticate
 {
     public const API_SERVICE_NAME = 'AudioStation';
     public const API_VERSION = 2;
-    public const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
      *
-     * @param string $address
-     * @param int    $port
-     * @param string $protocol
-     * @param int    $version
-     * @param bool   $verifySSL
+     * @param string  $address
+     * @param ?int    $port
+     * @param ?string $protocol
+     * @param ?int    $version
+     * @param bool    $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = self::API_VERSION, $verifySSL = false)
     {
@@ -47,6 +46,7 @@ class AudioStation extends Authenticate
      * @param string $type (Album|Composer|Genre|Artist|Folder|Song|Radio|Playlist|RemotePlayer|MediaServer)
      * @param int    $limit
      * @param int    $offset
+     * @param string $additional
      *
      * @return array
      *

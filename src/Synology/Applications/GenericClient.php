@@ -17,11 +17,11 @@ class GenericClient extends Authenticate
     /**
      * Info API setup
      *
-     * @param string $address
-     * @param int    $port
-     * @param string $protocol
-     * @param int    $version
-     * @param bool   $verifySSL
+     * @param string  $address
+     * @param ?int    $port
+     * @param ?string $protocol
+     * @param ?int    $version
+     * @param bool    $verifySSL
      */
     public function __construct($serviceName, $address, $port = null, $protocol = null, $version = self::API_VERSION, $verifySSL = false)
     {
@@ -34,8 +34,8 @@ class GenericClient extends Authenticate
      * @param string $api
      * @param string $path
      * @param string $method
-     * @param array  $params
-     * @param int    $version
+     * @param array<mixed> $params
+     * @param ?int   $version
      * @param string $httpMethod
      *
      * @return array|bool|\stdClass

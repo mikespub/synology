@@ -14,16 +14,15 @@ class DownloadStation extends Authenticate
 {
     public const API_SERVICE_NAME = 'DownloadStation';
     public const API_VERSION = 1;
-    public const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
      *
-     * @param string $address
-     * @param int    $port
-     * @param string $protocol
-     * @param int    $version
-     * @param bool   $verifySSL
+     * @param string  $address
+     * @param ?int    $port
+     * @param ?string $protocol
+     * @param ?int    $version
+     * @param bool    $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
@@ -145,11 +144,11 @@ class DownloadStation extends Authenticate
      * Add a new Task
      *
      * @param string $uri
-     * @param string $file
-     * @param string $login
-     * @param string $password
-     * @param string $zipPassword
-     * @param string $destination
+     * @param ?string $file
+     * @param ?string $login
+     * @param ?string $password
+     * @param ?string $zipPassword
+     * @param ?string $destination
      *
      * @return \stdClass
      */

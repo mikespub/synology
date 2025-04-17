@@ -10,7 +10,6 @@ namespace Synology;
 class Api extends AbstractApi
 {
     public const API_SERVICE_NAME = 'API';
-    public const API_NAMESPACE = 'SYNO';
     public const API_AUTH_VERSION = '6';
 
     private $_sid = null;
@@ -26,11 +25,11 @@ class Api extends AbstractApi
     /**
      * Info API setup
      *
-     * @param string $address
-     * @param int    $port
-     * @param string $protocol
-     * @param int    $version
-     * @param bool   $verifySSL
+     * @param string  $address
+     * @param ?int    $port
+     * @param ?string $protocol
+     * @param ?int    $version
+     * @param bool    $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
@@ -44,7 +43,10 @@ class Api extends AbstractApi
      */
     public function getAvailableApi()
     {
-        return $this->_request('Info', 'query.cgi', 'query', ['query' => 'all']);
+        $method = 'query';
+        $params = ['query' => 'all'];
+        $version = 1;
+        return $this->_request('Info', 'query.cgi', $method, $params, $version);
     }
 
     /**
@@ -52,7 +54,7 @@ class Api extends AbstractApi
      *
      * @param string $username
      * @param string $password
-     * @param string $sessionName
+     * @param ?string $sessionName
      * @param int|null $code
      *
      * @return Api

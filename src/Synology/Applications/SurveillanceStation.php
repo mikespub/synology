@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * @author Ondrej Pospisil <https://github.com/pospon>
@@ -13,17 +14,15 @@ use Synology\Exception;
 class SurveillanceStation extends Authenticate
 {
     public const API_SERVICE_NAME = 'SurveillanceStation';
-    public const API_NAMESPACE = 'SYNO';
-    public const API_PATH = 'entry.cgi';
 
     /**
      * Info API setup
      *
-     * @param string $address
-     * @param int    $port
-     * @param string $protocol
-     * @param int    $version
-     * @param bool   $verifySSL
+     * @param string  $address
+     * @param ?int    $port
+     * @param ?string $protocol
+     * @param ?int    $version
+     * @param bool    $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {

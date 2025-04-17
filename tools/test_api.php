@@ -93,7 +93,7 @@ foreach ($api_list as $root => $json) {
                     try {
                         $validator->validate($data, (object) ['$ref' => 'file://' . realpath($schema_file)]);
                     } catch (JsonSchema\Exception\JsonDecodingException $e) {
-                        echo "JSON Error: "  . $e->getMessage() . "\n";
+                        echo "JSON Error: " . $e->getMessage() . "\n";
                         echo "Schema: $schema_file\n";
                         exit;
                     }

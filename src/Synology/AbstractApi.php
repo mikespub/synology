@@ -9,10 +9,10 @@ namespace Synology;
  */
 abstract class AbstractApi
 {
-    public const PROTOCOL_HTTP = 'http';
-    public const PROTOCOL_HTTPS = 'https';
     public const API_NAMESPACE = 'SYNO';
     public const API_PATH = 'entry.cgi';
+    public const PROTOCOL_HTTP = 'http';
+    public const PROTOCOL_HTTPS = 'https';
     public const CONNECT_TIMEOUT = 2000; //2s
     public const REQUEST_TIMEOUT = 30000; //30s
 
@@ -57,13 +57,13 @@ abstract class AbstractApi
     /**
      * Setup API
      *
-     * @param string $serviceName
-     * @param string $namespace
-     * @param string $address
-     * @param int    $port
-     * @param string $protocol
-     * @param int    $version
-     * @param bool   $verifySSL
+     * @param string  $serviceName
+     * @param string  $namespace
+     * @param string  $address
+     * @param ?int    $port
+     * @param ?string $protocol
+     * @param ?int    $version
+     * @param bool    $verifySSL
      */
     public function __construct($serviceName, $namespace, $address, $port = null, $protocol = self::PROTOCOL_HTTP, $version = 1, $verifySSL = false)
     {
@@ -74,7 +74,7 @@ abstract class AbstractApi
         $this->_separator   = ini_get('arg_separator.output');
 
         if (!empty($port) && is_numeric($port)) {
-            $this->_port = (int)$port;
+            $this->_port = (int) $port;
         }
 
         if (!empty($protocol)) {
@@ -112,8 +112,8 @@ abstract class AbstractApi
      * @param string $api
      * @param string $path
      * @param string $method
-     * @param array  $params
-     * @param int    $version
+     * @param array<mixed> $params
+     * @param ?int   $version
      * @param string $httpMethod
      *
      * @return array|bool|\stdClass
@@ -130,7 +130,7 @@ abstract class AbstractApi
             }
         }
         $params['api']     = $this->_getApiName($api);
-        $params['version'] = ((int)$version > 0) ? (int)$version : $this->_version;
+        $params['version'] = ((int) $version > 0) ? (int) $version : $this->_version;
         $params['method']  = $method;
 
         // create a new cURL resource
@@ -233,7 +233,7 @@ abstract class AbstractApi
      * Log different data
      *
      * @param mixed  $value
-     * @param string $key
+     * @param ?string $key
      */
     protected function log($value, $key = null)
     {

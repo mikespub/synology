@@ -94,6 +94,16 @@ $synology->connect('admin', 'xxxx');
 print_r($synology->getInfo());
 ```
 
+Usage for GenericClient:
+```php
+use Synology\Applications\ClientFactory;
+
+$synology = ClientFactory::getGeneric($service, '192.168.10.5', 5001, 'https');
+$synology->connect('admin', '****');
+// use generic client to call any api method
+$result = $synology->call($api, $path, $method, $params, $version);
+```
+
 ## Synology Web API Explorer
 
 ### OpenAPI files by service

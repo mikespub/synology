@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is an example on how to use Synology\Api
  */
@@ -17,3 +18,9 @@ print_r($synology->getAvailableApi());
 $synology = ClientFactory::getClient('Core', '192.168.10.5', 5001, 'https');
 $synology->connect('admin', '****');
 print_r($synology->getObjects('User'));
+
+// using generic client
+$synology = ClientFactory::getGeneric($service, '192.168.10.5', 5001, 'https');
+$synology->connect('admin', '****');
+// use generic client to call any api method
+$result = $synology->call($api, $path, $method, $params, $version);
