@@ -96532,7 +96532,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.API.Auth.Key-get.json'
         error:
           type: object
           properties:
@@ -96550,7 +96550,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.API.Auth.Type-get.json'
         error:
           type: object
           properties:
@@ -96568,7 +96568,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.API.Auth.UIConfig-get.json'
         error:
           type: object
           properties:
@@ -96586,7 +96586,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.API.Encryption-getinfo.json'
         error:
           type: object
           properties:
@@ -96604,7 +96604,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.ActiveInsight.CompleteCollection-get.json'
         error:
           type: object
           properties:
@@ -96622,7 +96622,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.ActiveInsight.RelationManager-get.json'
         error:
           type: object
           properties:
@@ -96640,7 +96640,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.ActiveInsight.Setting-get.json'
         error:
           type: object
           properties:
@@ -96658,7 +96658,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Album-list.json'
         error:
           type: object
           properties:
@@ -96676,7 +96676,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Artist-list.json'
         error:
           type: object
           properties:
@@ -96694,7 +96694,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Composer-list.json'
         error:
           type: object
           properties:
@@ -96712,7 +96712,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Folder-list.json'
         error:
           type: object
           properties:
@@ -96730,7 +96730,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Genre-list.json'
         error:
           type: object
           properties:
@@ -96748,7 +96748,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Info-getinfo.json'
         error:
           type: object
           properties:
@@ -96766,7 +96766,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.MediaServer-list.json'
         error:
           type: object
           properties:
@@ -96784,7 +96784,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Playlist-list.json'
         error:
           type: object
           properties:
@@ -96802,7 +96802,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Radio-list.json'
         error:
           type: object
           properties:
@@ -96820,7 +96820,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.RemotePlayer-list.json'
         error:
           type: object
           properties:
@@ -96838,7 +96838,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.RemotePlayer-getinfo.json'
         error:
           type: object
           properties:
@@ -96856,7 +96856,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Search-list.json'
         error:
           type: object
           properties:
@@ -96874,7 +96874,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Song-list.json'
         error:
           type: object
           properties:
@@ -96892,7 +96892,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Pin-list.json'
         error:
           type: object
           properties:
@@ -96910,7 +96910,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.VoiceAssistant.Challenge-get.json'
         error:
           type: object
           properties:
@@ -96928,7 +96928,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.VoiceAssistant.Info-get.json'
         error:
           type: object
           properties:
@@ -96946,7 +96946,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Auth.RescueEmail-get.json'
         error:
           type: object
           properties:
@@ -96964,7 +96964,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.Config.AutoBackup-list.json'
         error:
           type: object
           properties:
@@ -96982,7 +96982,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.Config.Backup-list.json'
         error:
           type: object
           properties:
@@ -97000,7 +97000,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.Service.NetworkBackup-get.json'
         error:
           type: object
           properties:
@@ -97018,7 +97018,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.App2.Backup-list.json'
         error:
           type: object
           properties:
@@ -97036,7 +97036,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.Repository-list.json'
         error:
           type: object
           properties:
@@ -97054,7 +97054,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.Storage.Share.Local-list.json'
         error:
           type: object
           properties:
@@ -97072,7 +97072,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.Task-list.json'
         error:
           type: object
           properties:
@@ -97090,7 +97090,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.C2FS.Share-list.json'
         error:
           type: object
           properties:
@@ -97108,7 +97108,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Cal.Share.Priv-list.json'
         error:
           type: object
           properties:
@@ -97126,7 +97126,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Cal.Timezone-list.json'
         error:
           type: object
           properties:
@@ -97144,7 +97144,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Contacts.Addressbook-list.json'
         error:
           type: object
           properties:
@@ -97162,7 +97162,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Contacts.AdminSetting-get.json'
         error:
           type: object
           properties:
@@ -97180,7 +97180,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Contacts.Contact-list.json'
         error:
           type: object
           properties:
@@ -97198,7 +97198,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Contacts.ExternalSource-list.json'
         error:
           type: object
           properties:
@@ -97216,7 +97216,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Contacts.Info-get.json'
         error:
           type: object
           properties:
@@ -97234,7 +97234,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Contacts.Label-list.json'
         error:
           type: object
           properties:
@@ -97252,7 +97252,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ActionPriv.Role-list.json'
         error:
           type: object
           properties:
@@ -97270,7 +97270,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.AppNotify-get.json'
         error:
           type: object
           properties:
@@ -97288,7 +97288,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.AppPortal-list.json'
         error:
           type: object
           properties:
@@ -97306,7 +97306,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.AppPortal.AccessControl-list.json'
         error:
           type: object
           properties:
@@ -97324,7 +97324,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.AppPortal.Config-get.json'
         error:
           type: object
           properties:
@@ -97342,7 +97342,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.AppPortal.ReverseProxy-list.json'
         error:
           type: object
           properties:
@@ -97360,7 +97360,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.AppPriv.App-list.json'
         error:
           type: object
           properties:
@@ -97378,7 +97378,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.BackgroundTask-get.json'
         error:
           type: object
           properties:
@@ -97396,7 +97396,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.BandwidthControl.Status-list.json'
         error:
           type: object
           properties:
@@ -97414,7 +97414,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.CMS.Info-get.json'
         error:
           type: object
           properties:
@@ -97432,7 +97432,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Certificate.CRT-list.json'
         error:
           type: object
           properties:
@@ -97450,7 +97450,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Certificate.LetsEncrypt.Account-list.json'
         error:
           type: object
           properties:
@@ -97468,7 +97468,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.CurrentConnection-list.json'
         error:
           type: object
           properties:
@@ -97486,7 +97486,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.DDNS.Ethernet-list.json'
         error:
           type: object
           properties:
@@ -97504,7 +97504,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.DDNS.ExtIP-list.json'
         error:
           type: object
           properties:
@@ -97522,7 +97522,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.DDNS.Provider-list.json'
         error:
           type: object
           properties:
@@ -97540,7 +97540,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.DDNS.Record-list.json'
         error:
           type: object
           properties:
@@ -97558,7 +97558,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.DSMNotify.Strings-get.json'
         error:
           type: object
           properties:
@@ -97576,7 +97576,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.DataCollect-get.json'
         error:
           type: object
           properties:
@@ -97594,7 +97594,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Desktop.Initdata-get.json'
         error:
           type: object
           properties:
@@ -97612,7 +97612,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Desktop.Timeout-get.json'
         error:
           type: object
           properties:
@@ -97630,7 +97630,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Directory.Azure.SSO-get.json'
         error:
           type: object
           properties:
@@ -97648,7 +97648,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Directory.Domain.Schedule-get.json'
         error:
           type: object
           properties:
@@ -97666,7 +97666,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Directory.OIDC.SSO-get.json'
         error:
           type: object
           properties:
@@ -97684,7 +97684,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Directory.SSO.CAS-get.json'
         error:
           type: object
           properties:
@@ -97702,7 +97702,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Directory.SSO.Profile-list.json'
         error:
           type: object
           properties:
@@ -97720,7 +97720,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Directory.SSO.SAML-get.json'
         error:
           type: object
           properties:
@@ -97738,7 +97738,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Directory.SSO-get.json'
         error:
           type: object
           properties:
@@ -97756,7 +97756,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Directory.SSO.IWA-get.json'
         error:
           type: object
           properties:
@@ -97774,7 +97774,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Directory.SSO.Setting-get.json'
         error:
           type: object
           properties:
@@ -97792,7 +97792,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Directory.WebSphere.SSO-get.json'
         error:
           type: object
           properties:
@@ -97810,7 +97810,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.DisableAdmin-get.json'
         error:
           type: object
           properties:
@@ -97828,7 +97828,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.EW.Info-get.json'
         error:
           type: object
           properties:
@@ -97846,7 +97846,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.EventScheduler-list.json'
         error:
           type: object
           properties:
@@ -97864,7 +97864,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ExternalDevice.Printer-list.json'
         error:
           type: object
           properties:
@@ -97882,7 +97882,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ExternalDevice.Printer.BonjourSharing-get.json'
         error:
           type: object
           properties:
@@ -97900,7 +97900,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ExternalDevice.Printer.Driver-list.json'
         error:
           type: object
           properties:
@@ -97918,7 +97918,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ExternalDevice.Printer.OAuth-get.json'
         error:
           type: object
           properties:
@@ -97936,7 +97936,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ExternalDevice.Storage.EUnit-list.json'
         error:
           type: object
           properties:
@@ -97954,7 +97954,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ExternalDevice.Storage.Setting-get.json'
         error:
           type: object
           properties:
@@ -97972,7 +97972,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ExternalDevice.Storage.USB-list.json'
         error:
           type: object
           properties:
@@ -97990,7 +97990,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ExternalDevice.Storage.eSATA-list.json'
         error:
           type: object
           properties:
@@ -98008,7 +98008,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ExternalDevice.UPS-get.json'
         error:
           type: object
           properties:
@@ -98026,7 +98026,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Factory.Manutild-get.json'
         error:
           type: object
           properties:
@@ -98044,7 +98044,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileHandle-get.json'
         error:
           type: object
           properties:
@@ -98062,7 +98062,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.AFP-get.json'
         error:
           type: object
           properties:
@@ -98080,7 +98080,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.FTP-get.json'
         error:
           type: object
           properties:
@@ -98098,7 +98098,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.FTP.SFTP-get.json'
         error:
           type: object
           properties:
@@ -98116,7 +98116,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.FTP.Security-get.json'
         error:
           type: object
           properties:
@@ -98134,7 +98134,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.NFS-get.json'
         error:
           type: object
           properties:
@@ -98152,7 +98152,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.NFS.AdvancedSetting-get.json'
         error:
           type: object
           properties:
@@ -98170,7 +98170,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.NFS.IDMap-list.json'
         error:
           type: object
           properties:
@@ -98188,7 +98188,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.NFS.Kerberos-list.json'
         error:
           type: object
           properties:
@@ -98206,7 +98206,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.ReflinkCopy-get.json'
         error:
           type: object
           properties:
@@ -98224,7 +98224,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.Rsync.Account-list.json'
         error:
           type: object
           properties:
@@ -98242,7 +98242,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.SMB-get.json'
         error:
           type: object
           properties:
@@ -98260,7 +98260,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.SMB.ConfBackup-get.json'
         error:
           type: object
           properties:
@@ -98278,7 +98278,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.SMB.MSDFS-get.json'
         error:
           type: object
           properties:
@@ -98296,7 +98296,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.ServiceDiscovery.WSTransfer-get.json'
         error:
           type: object
           properties:
@@ -98314,7 +98314,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.FileServ.ServiceDiscovery-get.json'
         error:
           type: object
           properties:
@@ -98332,7 +98332,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Findhost-list.json'
         error:
           type: object
           properties:
@@ -98350,7 +98350,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Group-list.json'
         error:
           type: object
           properties:
@@ -98368,7 +98368,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Group.ValidLocalAdmin-list.json'
         error:
           type: object
           properties:
@@ -98386,7 +98386,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.GroupSettings-get.json'
         error:
           type: object
           properties:
@@ -98404,7 +98404,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Hardware.BeepControl-get.json'
         error:
           type: object
           properties:
@@ -98422,7 +98422,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Hardware.FanSpeed-get.json'
         error:
           type: object
           properties:
@@ -98440,7 +98440,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Hardware.Hibernation-get.json'
         error:
           type: object
           properties:
@@ -98458,7 +98458,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Hardware.LCM-get.json'
         error:
           type: object
           properties:
@@ -98476,7 +98476,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Hardware.Led.Brightness-get.json'
         error:
           type: object
           properties:
@@ -98494,7 +98494,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Hardware.MemoryLayout-get.json'
         error:
           type: object
           properties:
@@ -98512,7 +98512,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Hardware.NeedReboot-get.json'
         error:
           type: object
           properties:
@@ -98530,7 +98530,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Hardware.PowerRecovery-get.json'
         error:
           type: object
           properties:
@@ -98548,7 +98548,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Hardware.SpectreMeltdown-get.json'
         error:
           type: object
           properties:
@@ -98566,7 +98566,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Hardware.VideoTranscoding-get.json'
         error:
           type: object
           properties:
@@ -98584,7 +98584,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Hardware.ZRAM-get.json'
         error:
           type: object
           properties:
@@ -98602,7 +98602,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ISCSI.FCTarget-list.json'
         error:
           type: object
           properties:
@@ -98620,7 +98620,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ISCSI.Host-list.json'
         error:
           type: object
           properties:
@@ -98638,7 +98638,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ISCSI.LUN-list.json'
         error:
           type: object
           properties:
@@ -98656,7 +98656,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ISCSI.Node-list.json'
         error:
           type: object
           properties:
@@ -98674,7 +98674,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ISCSI.Replication-list.json'
         error:
           type: object
           properties:
@@ -98692,7 +98692,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ISCSI.Target-list.json'
         error:
           type: object
           properties:
@@ -98710,7 +98710,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.ISCSI.VMware-list.json'
         error:
           type: object
           properties:
@@ -98728,7 +98728,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.MediaIndexing.IndexFolder-get.json'
         error:
           type: object
           properties:
@@ -98746,7 +98746,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.MediaIndexing.Scheduler-get.json'
         error:
           type: object
           properties:
@@ -98764,7 +98764,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.MediaIndexing.ThumbnailQuality-get.json'
         error:
           type: object
           properties:
@@ -98782,7 +98782,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.MyDSCenter.Account-get.json'
         error:
           type: object
           properties:
@@ -98800,7 +98800,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Network-get.json'
         error:
           type: object
           properties:
@@ -98818,7 +98818,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Network.Bond-list.json'
         error:
           type: object
           properties:
@@ -98836,7 +98836,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Network.Ethernet-list.json'
         error:
           type: object
           properties:
@@ -98854,7 +98854,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Network.IPv6.Router.Prefix-list.json'
         error:
           type: object
           properties:
@@ -98872,7 +98872,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Network.Interface-list.json'
         error:
           type: object
           properties:
@@ -98890,7 +98890,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Network.OVS-list.json'
         error:
           type: object
           properties:
@@ -98908,7 +98908,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Network.PPPoE-list.json'
         error:
           type: object
           properties:
@@ -98926,7 +98926,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Network.Proxy-get.json'
         error:
           type: object
           properties:
@@ -98944,7 +98944,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Network.VPN.L2TP-list.json'
         error:
           type: object
           properties:
@@ -98962,7 +98962,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Network.VPN.OpenVPN-list.json'
         error:
           type: object
           properties:
@@ -98980,7 +98980,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Network.VPN.OpenVPNWithConf-list.json'
         error:
           type: object
           properties:
@@ -98998,7 +98998,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Network.VPN.PPTP-list.json'
         error:
           type: object
           properties:
@@ -99016,7 +99016,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.Advance.CustomizedData-get.json'
         error:
           type: object
           properties:
@@ -99034,7 +99034,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.Advance.FilterSettings-list.json'
         error:
           type: object
           properties:
@@ -99052,7 +99052,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.Advance.FilterSettings.Profile-list.json'
         error:
           type: object
           properties:
@@ -99070,7 +99070,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.Advance.FilterSettings.Template-list.json'
         error:
           type: object
           properties:
@@ -99088,7 +99088,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.Advance.Variables-get.json'
         error:
           type: object
           properties:
@@ -99106,7 +99106,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.CMS.Conf-get.json'
         error:
           type: object
           properties:
@@ -99124,7 +99124,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.Mail.Auth-get.json'
         error:
           type: object
           properties:
@@ -99142,7 +99142,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.Mail.Conf-get.json'
         error:
           type: object
           properties:
@@ -99160,7 +99160,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.Push.AuthToken-get.json'
         error:
           type: object
           properties:
@@ -99178,7 +99178,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.Push.Conf-get.json'
         error:
           type: object
           properties:
@@ -99196,7 +99196,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.Push.Mail-get.json'
         error:
           type: object
           properties:
@@ -99214,7 +99214,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.Push.Mobile-list.json'
         error:
           type: object
           properties:
@@ -99232,7 +99232,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.Push.Webhook.Provider-list.json'
         error:
           type: object
           properties:
@@ -99250,7 +99250,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.SMS.Conf-get.json'
         error:
           type: object
           properties:
@@ -99268,7 +99268,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Notification.SMS.Provider-list.json'
         error:
           type: object
           properties:
@@ -99286,7 +99286,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.OAuth.Scope-get.json'
         error:
           type: object
           properties:
@@ -99304,7 +99304,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.OAuth.Server-get.json'
         error:
           type: object
           properties:
@@ -99322,7 +99322,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Package-list.json'
         error:
           type: object
           properties:
@@ -99340,7 +99340,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Package.AutoUpgrade.Progress-get.json'
         error:
           type: object
           properties:
@@ -99358,7 +99358,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Package.FakeIFrame-get.json'
         error:
           type: object
           properties:
@@ -99376,7 +99376,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Package.Feed-list.json'
         error:
           type: object
           properties:
@@ -99394,7 +99394,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Package.Info-get.json'
         error:
           type: object
           properties:
@@ -99412,7 +99412,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Package.Log-get.json'
         error:
           type: object
           properties:
@@ -99430,7 +99430,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Package.MyDS-get.json'
         error:
           type: object
           properties:
@@ -99448,7 +99448,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Package.Server-list.json'
         error:
           type: object
           properties:
@@ -99466,7 +99466,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Package.Setting-get.json'
         error:
           type: object
           properties:
@@ -99484,7 +99484,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.PersonalNotification.Device-list.json'
         error:
           type: object
           properties:
@@ -99502,7 +99502,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Polling.Data-get.json'
         error:
           type: object
           properties:
@@ -99520,7 +99520,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.PortForwarding.RouterConf-get.json'
         error:
           type: object
           properties:
@@ -99538,7 +99538,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.PortForwarding.RouterInfo-get.json'
         error:
           type: object
           properties:
@@ -99556,7 +99556,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.PortForwarding.RouterList-list.json'
         error:
           type: object
           properties:
@@ -99574,7 +99574,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.QuickConnect.Permission-get.json'
         error:
           type: object
           properties:
@@ -99592,7 +99592,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.QuickConnect.RegisterSite-get.json'
         error:
           type: object
           properties:
@@ -99610,7 +99610,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.QuickConnect.Upnp-get.json'
         error:
           type: object
           properties:
@@ -99628,7 +99628,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.RecycleBin-get.json'
         error:
           type: object
           properties:
@@ -99646,7 +99646,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.RecycleBin.User-get.json'
         error:
           type: object
           properties:
@@ -99664,7 +99664,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Region.Language-get.json'
         error:
           type: object
           properties:
@@ -99682,7 +99682,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Region.NTP-get.json'
         error:
           type: object
           properties:
@@ -99700,7 +99700,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Region.NTP.DateTimeFormat-get.json'
         error:
           type: object
           properties:
@@ -99718,7 +99718,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Region.NTP.Server-get.json'
         error:
           type: object
           properties:
@@ -99736,7 +99736,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Report-list.json'
         error:
           type: object
           properties:
@@ -99754,7 +99754,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Report.Config-get.json'
         error:
           type: object
           properties:
@@ -99772,7 +99772,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.SNMP-get.json'
         error:
           type: object
           properties:
@@ -99790,7 +99790,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Security.AutoBlock-get.json'
         error:
           type: object
           properties:
@@ -99808,7 +99808,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Security.Firewall-get.json'
         error:
           type: object
           properties:
@@ -99826,7 +99826,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Security.Firewall.Adapter-list.json'
         error:
           type: object
           properties:
@@ -99844,7 +99844,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Security.Firewall.Conf-get.json'
         error:
           type: object
           properties:
@@ -99862,7 +99862,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Security.Firewall.Geoip-list.json'
         error:
           type: object
           properties:
@@ -99880,7 +99880,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Security.Firewall.Profile-list.json'
         error:
           type: object
           properties:
@@ -99898,7 +99898,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Security.DSM-get.json'
         error:
           type: object
           properties:
@@ -99916,7 +99916,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Security.DSM.Embed-get.json'
         error:
           type: object
           properties:
@@ -99934,7 +99934,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Security.DSM.Proxy-get.json'
         error:
           type: object
           properties:
@@ -99952,7 +99952,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.SecurityScan.Conf-get.json'
         error:
           type: object
           properties:
@@ -99970,7 +99970,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Service-get.json'
         error:
           type: object
           properties:
@@ -99988,7 +99988,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Service.Conf-get.json'
         error:
           type: object
           properties:
@@ -100006,7 +100006,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Share-list.json'
         error:
           type: object
           properties:
@@ -100024,7 +100024,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Share.KeyManager.AutoKey-list.json'
         error:
           type: object
           properties:
@@ -100042,7 +100042,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Share.KeyManager.Key-list.json'
         error:
           type: object
           properties:
@@ -100060,7 +100060,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Share.KeyManager.MachineKey-get.json'
         error:
           type: object
           properties:
@@ -100078,7 +100078,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Sharing-list.json'
         error:
           type: object
           properties:
@@ -100096,7 +100096,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Sharing.Initdata-get.json'
         error:
           type: object
           properties:
@@ -100114,7 +100114,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Sharing.Session-get.json'
         error:
           type: object
           properties:
@@ -100132,7 +100132,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.SmartBlock-get.json'
         error:
           type: object
           properties:
@@ -100150,7 +100150,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.SmartBlock.Trusted-list.json'
         error:
           type: object
           properties:
@@ -100168,7 +100168,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.SmartBlock.Untrusted-list.json'
         error:
           type: object
           properties:
@@ -100186,7 +100186,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.SmartBlock.User-list.json'
         error:
           type: object
           properties:
@@ -100204,7 +100204,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.SupportForm.Form-get.json'
         error:
           type: object
           properties:
@@ -100222,7 +100222,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.SupportForm.Service-get.json'
         error:
           type: object
           properties:
@@ -100240,7 +100240,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Synohdpack-get.json'
         error:
           type: object
           properties:
@@ -100258,7 +100258,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.SyslogClient.FileTransfer-get.json'
         error:
           type: object
           properties:
@@ -100276,7 +100276,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.SyslogClient.Log-list.json'
         error:
           type: object
           properties:
@@ -100294,7 +100294,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.SyslogClient.Setting.Notify-get.json'
         error:
           type: object
           properties:
@@ -100312,7 +100312,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.System.Status-get.json'
         error:
           type: object
           properties:
@@ -100330,7 +100330,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.System.Process-list.json'
         error:
           type: object
           properties:
@@ -100348,7 +100348,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.System.ProcessGroup-list.json'
         error:
           type: object
           properties:
@@ -100366,7 +100366,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.System.ResetButton-get.json'
         error:
           type: object
           properties:
@@ -100384,7 +100384,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.System.SystemHealth-get.json'
         error:
           type: object
           properties:
@@ -100402,7 +100402,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.System.Utilization-get.json'
         error:
           type: object
           properties:
@@ -100420,7 +100420,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.TFTP-get.json'
         error:
           type: object
           properties:
@@ -100438,7 +100438,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Terminal-get.json'
         error:
           type: object
           properties:
@@ -100456,7 +100456,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Theme.Desktop-get.json'
         error:
           type: object
           properties:
@@ -100474,7 +100474,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Theme.FileSharingLogin-get.json'
         error:
           type: object
           properties:
@@ -100492,7 +100492,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Theme.Login-get.json'
         error:
           type: object
           properties:
@@ -100510,7 +100510,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Upgrade.Group.Setting-get.json'
         error:
           type: object
           properties:
@@ -100528,7 +100528,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Upgrade.Setting-get.json'
         error:
           type: object
           properties:
@@ -100546,7 +100546,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.User-list.json'
         error:
           type: object
           properties:
@@ -100564,7 +100564,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.User.Home-get.json'
         error:
           type: object
           properties:
@@ -100582,7 +100582,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.User.PasswordExpiry-get.json'
         error:
           type: object
           properties:
@@ -100600,7 +100600,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.User.PasswordPolicy-get.json'
         error:
           type: object
           properties:
@@ -100618,7 +100618,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.User.UsernamePolicy-list.json'
         error:
           type: object
           properties:
@@ -100636,7 +100636,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.UserSettings-get.json'
         error:
           type: object
           properties:
@@ -100654,7 +100654,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Virtualization.Host.Capability-get.json'
         error:
           type: object
           properties:
@@ -100672,7 +100672,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.VolEncKeepKey-get.json'
         error:
           type: object
           properties:
@@ -100690,7 +100690,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Web.DSM-get.json'
         error:
           type: object
           properties:
@@ -100708,7 +100708,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Web.DSM.External-get.json'
         error:
           type: object
           properties:
@@ -100726,7 +100726,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Web.Security.HTTPCompression-get.json'
         error:
           type: object
           properties:
@@ -100744,7 +100744,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Core.Web.Security.TLSProfile-get.json'
         error:
           type: object
           properties:
@@ -100762,7 +100762,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DR.Node.Credential-list.json'
         error:
           type: object
           properties:
@@ -100780,7 +100780,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DSM.Info-getinfo.json'
         error:
           type: object
           properties:
@@ -100798,7 +100798,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DSM.Network-list.json'
         error:
           type: object
           properties:
@@ -100816,7 +100816,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DisasterRecovery.Log-list.json'
         error:
           type: object
           properties:
@@ -100834,7 +100834,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Docker.Container-list.json'
         error:
           type: object
           properties:
@@ -100852,7 +100852,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Docker.Container.Resource-get.json'
         error:
           type: object
           properties:
@@ -100870,7 +100870,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Docker.Image-list.json'
         error:
           type: object
           properties:
@@ -100888,7 +100888,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Docker.Network-list.json'
         error:
           type: object
           properties:
@@ -100906,7 +100906,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Docker.Project-list.json'
         error:
           type: object
           properties:
@@ -100924,7 +100924,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation.BTSearch-list.json'
         error:
           type: object
           properties:
@@ -100942,7 +100942,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation.Info-getinfo.json'
         error:
           type: object
           properties:
@@ -100960,7 +100960,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation.RSS.Site-list.json'
         error:
           type: object
           properties:
@@ -100978,7 +100978,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation.Statistic-getinfo.json'
         error:
           type: object
           properties:
@@ -100996,7 +100996,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation.Task-list.json'
         error:
           type: object
           properties:
@@ -101014,7 +101014,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation.Task-getinfo.json'
         error:
           type: object
           properties:
@@ -101032,7 +101032,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Captcha-list.json'
         error:
           type: object
           properties:
@@ -101050,7 +101050,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Package.Info-get.json'
         error:
           type: object
           properties:
@@ -101068,7 +101068,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Package.Module-list.json'
         error:
           type: object
           properties:
@@ -101086,7 +101086,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Package.Service-get.json'
         error:
           type: object
           properties:
@@ -101104,7 +101104,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.RSS.Feed-list.json'
         error:
           type: object
           properties:
@@ -101122,7 +101122,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Settings.FileHosting-list.json'
         error:
           type: object
           properties:
@@ -101140,7 +101140,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Settings.AutoExtraction-get.json'
         error:
           type: object
           properties:
@@ -101158,7 +101158,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Settings.BT-get.json'
         error:
           type: object
           properties:
@@ -101176,7 +101176,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Settings.BTSearch-list.json'
         error:
           type: object
           properties:
@@ -101194,7 +101194,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Settings.Emule-get.json'
         error:
           type: object
           properties:
@@ -101212,7 +101212,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Settings.Emule.Location-get.json'
         error:
           type: object
           properties:
@@ -101230,7 +101230,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Settings.FtpHttp-get.json'
         error:
           type: object
           properties:
@@ -101248,7 +101248,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Settings.Global-get.json'
         error:
           type: object
           properties:
@@ -101266,7 +101266,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Settings.Location-get.json'
         error:
           type: object
           properties:
@@ -101284,7 +101284,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Settings.Nzb-get.json'
         error:
           type: object
           properties:
@@ -101302,7 +101302,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Settings.Rss-get.json'
         error:
           type: object
           properties:
@@ -101320,7 +101320,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Settings.Scheduler-get.json'
         error:
           type: object
           properties:
@@ -101338,7 +101338,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Task-list.json'
         error:
           type: object
           properties:
@@ -101356,7 +101356,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation2.Task.Statistic-get.json'
         error:
           type: object
           properties:
@@ -101374,7 +101374,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FileStation.BackgroundTask-list.json'
         error:
           type: object
           properties:
@@ -101392,7 +101392,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FileStation.Favorite-list.json'
         error:
           type: object
           properties:
@@ -101410,7 +101410,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FileStation.Info-get.json'
         error:
           type: object
           properties:
@@ -101428,7 +101428,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FileStation.Mount.List-get.json'
         error:
           type: object
           properties:
@@ -101446,7 +101446,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FileStation.Search.History-get.json'
         error:
           type: object
           properties:
@@ -101464,7 +101464,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FileStation.Settings-get.json'
         error:
           type: object
           properties:
@@ -101482,7 +101482,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FileStation.Sharing-list.json'
         error:
           type: object
           properties:
@@ -101500,7 +101500,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FileStation.VFS.Connection-list.json'
         error:
           type: object
           properties:
@@ -101518,7 +101518,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FileStation.VFS.Profile-list.json'
         error:
           type: object
           properties:
@@ -101536,7 +101536,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FileStation.VFS.Protocol-list.json'
         error:
           type: object
           properties:
@@ -101554,7 +101554,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FileStation.VirtualFolder-list.json'
         error:
           type: object
           properties:
@@ -101572,7 +101572,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Finder.Bookmark-get.json'
         error:
           type: object
           properties:
@@ -101590,7 +101590,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Finder.Elastic.SearchHistory-get.json'
         error:
           type: object
           properties:
@@ -101608,7 +101608,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Finder.FileIndexing.Folder-list.json'
         error:
           type: object
           properties:
@@ -101626,7 +101626,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Finder.FileIndexing.Status-get.json'
         error:
           type: object
           properties:
@@ -101644,7 +101644,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Finder.Preference-get.json'
         error:
           type: object
           properties:
@@ -101662,7 +101662,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Finder.Settings-get.json'
         error:
           type: object
           properties:
@@ -101680,7 +101680,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Album-list.json'
         error:
           type: object
           properties:
@@ -101698,7 +101698,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Category-get.json'
         error:
           type: object
           properties:
@@ -101716,7 +101716,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.ConditionAlbum-list.json'
         error:
           type: object
           properties:
@@ -101734,7 +101734,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Folder-list.json'
         error:
           type: object
           properties:
@@ -101752,7 +101752,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.GeneralTag-list.json'
         error:
           type: object
           properties:
@@ -101770,7 +101770,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Geocoding-list.json'
         error:
           type: object
           properties:
@@ -101788,7 +101788,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Item-list.json'
         error:
           type: object
           properties:
@@ -101806,7 +101806,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.NormalAlbum-list.json'
         error:
           type: object
           properties:
@@ -101824,7 +101824,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Person-list.json'
         error:
           type: object
           properties:
@@ -101842,7 +101842,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.RecentlyAdded-list.json'
         error:
           type: object
           properties:
@@ -101860,7 +101860,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Timeline-get.json'
         error:
           type: object
           properties:
@@ -101878,7 +101878,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Favorite-list.json'
         error:
           type: object
           properties:
@@ -101896,7 +101896,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Index-get.json'
         error:
           type: object
           properties:
@@ -101914,7 +101914,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Search.Filter-list.json'
         error:
           type: object
           properties:
@@ -101932,7 +101932,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Setting.Admin-get.json'
         error:
           type: object
           properties:
@@ -101950,7 +101950,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Setting.Guest-get.json'
         error:
           type: object
           properties:
@@ -101968,7 +101968,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Setting.MobileCompatibility-get.json'
         error:
           type: object
           properties:
@@ -101986,7 +101986,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Setting.TeamSpace-get.json'
         error:
           type: object
           properties:
@@ -102004,7 +102004,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Setting.User-get.json'
         error:
           type: object
           properties:
@@ -102022,7 +102022,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Setting.Wizard-get.json'
         error:
           type: object
           properties:
@@ -102040,7 +102040,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FotoTeam.Browse.Folder-list.json'
         error:
           type: object
           properties:
@@ -102058,7 +102058,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FotoTeam.Browse.GeneralTag-list.json'
         error:
           type: object
           properties:
@@ -102076,7 +102076,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FotoTeam.Browse.Geocoding-list.json'
         error:
           type: object
           properties:
@@ -102094,7 +102094,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FotoTeam.Browse.Item-list.json'
         error:
           type: object
           properties:
@@ -102112,7 +102112,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FotoTeam.Browse.Person-list.json'
         error:
           type: object
           properties:
@@ -102130,7 +102130,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FotoTeam.Browse.RecentlyAdded-list.json'
         error:
           type: object
           properties:
@@ -102148,7 +102148,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FotoTeam.Browse.Timeline-get.json'
         error:
           type: object
           properties:
@@ -102166,7 +102166,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FotoTeam.Index-get.json'
         error:
           type: object
           properties:
@@ -102184,7 +102184,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.FotoTeam.Search.Filter-list.json'
         error:
           type: object
           properties:
@@ -102202,7 +102202,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.MediaServer.Log-get.json'
         error:
           type: object
           properties:
@@ -102220,7 +102220,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.MediaServer.VideoCollection-get.json'
         error:
           type: object
           properties:
@@ -102238,7 +102238,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Network.DHCPServer.PXE-get.json'
         error:
           type: object
           properties:
@@ -102256,7 +102256,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Network.DHCPServer.Vendor-get.json'
         error:
           type: object
           properties:
@@ -102274,7 +102274,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Info-get.json'
         error:
           type: object
           properties:
@@ -102292,7 +102292,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Note-list.json'
         error:
           type: object
           properties:
@@ -102310,7 +102310,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Notebook-list.json'
         error:
           type: object
           properties:
@@ -102328,7 +102328,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Setting-get.json'
         error:
           type: object
           properties:
@@ -102346,7 +102346,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Setting.DSM-get.json'
         error:
           type: object
           properties:
@@ -102364,7 +102364,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Setting.Global-get.json'
         error:
           type: object
           properties:
@@ -102382,7 +102382,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Share.Priv-list.json'
         error:
           type: object
           properties:
@@ -102400,7 +102400,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Shortcut-list.json'
         error:
           type: object
           properties:
@@ -102418,7 +102418,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Smart-list.json'
         error:
           type: object
           properties:
@@ -102436,7 +102436,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Tag-list.json'
         error:
           type: object
           properties:
@@ -102454,7 +102454,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Todo-list.json'
         error:
           type: object
           properties:
@@ -102472,7 +102472,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.OAUTH.Client-list.json'
         error:
           type: object
           properties:
@@ -102490,7 +102490,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.OAUTH.Common-get.json'
         error:
           type: object
           properties:
@@ -102508,7 +102508,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.OAUTH.Log-list.json'
         error:
           type: object
           properties:
@@ -102526,7 +102526,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.OAUTH.Token-list.json'
         error:
           type: object
           properties:
@@ -102544,7 +102544,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Dictionary-list.json'
         error:
           type: object
           properties:
@@ -102562,7 +102562,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Info-get.json'
         error:
           type: object
           properties:
@@ -102580,7 +102580,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Info.Constants-get.json'
         error:
           type: object
           properties:
@@ -102598,7 +102598,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Locale-list.json'
         error:
           type: object
           properties:
@@ -102616,7 +102616,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Setting-get.json'
         error:
           type: object
           properties:
@@ -102634,7 +102634,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Setting.Font-list.json'
         error:
           type: object
           properties:
@@ -102652,7 +102652,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Setting.System-get.json'
         error:
           type: object
           properties:
@@ -102670,7 +102670,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Shard-get.json'
         error:
           type: object
           properties:
@@ -102688,7 +102688,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Shard.Info-get.json'
         error:
           type: object
           properties:
@@ -102706,7 +102706,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Shard.Session-get.json'
         error:
           type: object
           properties:
@@ -102724,7 +102724,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Shard.Token-get.json'
         error:
           type: object
           properties:
@@ -102742,7 +102742,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Sheet.MruFc-list.json'
         error:
           type: object
           properties:
@@ -102760,7 +102760,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Template-list.json'
         error:
           type: object
           properties:
@@ -102778,7 +102778,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Template.Sharing.Group-list.json'
         error:
           type: object
           properties:
@@ -102796,7 +102796,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Package-list.json'
         error:
           type: object
           properties:
@@ -102814,7 +102814,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.PersonMailAccount-get.json'
         error:
           type: object
           properties:
@@ -102832,7 +102832,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Personal.Application.Info-get.json'
         error:
           type: object
           properties:
@@ -102850,7 +102850,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Personal.Application.Info.Local-get.json'
         error:
           type: object
           properties:
@@ -102868,7 +102868,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Personal.MailAccount-get.json'
         error:
           type: object
           properties:
@@ -102886,7 +102886,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Personal.Notification.Device-list.json'
         error:
           type: object
           properties:
@@ -102904,7 +102904,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Personal.Notification.GDPR-get.json'
         error:
           type: object
           properties:
@@ -102922,7 +102922,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Personal.Notification.Identifier-get.json'
         error:
           type: object
           properties:
@@ -102940,7 +102940,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Personal.Notification.Token-get.json'
         error:
           type: object
           properties:
@@ -102958,7 +102958,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Personal.Notification.VapidPublicKey-get.json'
         error:
           type: object
           properties:
@@ -102976,7 +102976,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Personal.Profile-list.json'
         error:
           type: object
           properties:
@@ -102994,7 +102994,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Remote.Credential.Challenge-get.json'
         error:
           type: object
           properties:
@@ -103012,7 +103012,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.ResourceMonitor.EventRule-list.json'
         error:
           type: object
           properties:
@@ -103030,7 +103030,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.ResourceMonitor.Log-list.json'
         error:
           type: object
           properties:
@@ -103048,7 +103048,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.ResourceMonitor.Setting-get.json'
         error:
           type: object
           properties:
@@ -103066,7 +103066,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.S2S.Server-get.json'
         error:
           type: object
           properties:
@@ -103084,7 +103084,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.S2S.Server.Pair-list.json'
         error:
           type: object
           properties:
@@ -103102,7 +103102,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.S2S.Client.Job-list.json'
         error:
           type: object
           properties:
@@ -103120,7 +103120,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SDS.Backup.Client.Common.Log-list.json'
         error:
           type: object
           properties:
@@ -103138,7 +103138,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SDS.Backup.Client.Explore.Job-list.json'
         error:
           type: object
           properties:
@@ -103156,7 +103156,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.AMFA.Policy-get.json'
         error:
           type: object
           properties:
@@ -103174,7 +103174,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.AMFA.SuggestConn-get.json'
         error:
           type: object
           properties:
@@ -103192,7 +103192,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.Authenticator-list.json'
         error:
           type: object
           properties:
@@ -103210,7 +103210,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.Authenticator.Info-get.json'
         error:
           type: object
           properties:
@@ -103228,7 +103228,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.Authenticator.Verdict-get.json'
         error:
           type: object
           properties:
@@ -103246,7 +103246,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.Fido.Manage-list.json'
         error:
           type: object
           properties:
@@ -103264,7 +103264,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.Method-get.json'
         error:
           type: object
           properties:
@@ -103282,7 +103282,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.Package-get.json'
         error:
           type: object
           properties:
@@ -103300,7 +103300,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecurityAdvisor.Conf-get.json'
         error:
           type: object
           properties:
@@ -103318,7 +103318,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecurityAdvisor.LoginActivity-list.json'
         error:
           type: object
           properties:
@@ -103336,7 +103336,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecurityAdvisor.LoginActivity.User-get.json'
         error:
           type: object
           properties:
@@ -103354,7 +103354,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Storage.CGI.HddMan-get.json'
         error:
           type: object
           properties:
@@ -103372,7 +103372,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Storage.CGI.KMIP-get.json'
         error:
           type: object
           properties:
@@ -103390,7 +103390,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Storage.CGI.Smart.Scheduler-list.json'
         error:
           type: object
           properties:
@@ -103408,7 +103408,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Storage.CGI.Spare-list.json'
         error:
           type: object
           properties:
@@ -103426,7 +103426,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Storage.CGI.Spare.Conf-get.json'
         error:
           type: object
           properties:
@@ -103444,7 +103444,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SupportService.Setting-get.json'
         error:
           type: object
           properties:
@@ -103462,7 +103462,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Activation-get.json'
         error:
           type: object
           properties:
@@ -103480,7 +103480,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.AppIntegration-list.json'
         error:
           type: object
           properties:
@@ -103498,7 +103498,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Config-get.json'
         error:
           type: object
           properties:
@@ -103516,7 +103516,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Connection-list.json'
         error:
           type: object
           properties:
@@ -103534,7 +103534,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.DBUsage-get.json'
         error:
           type: object
           properties:
@@ -103552,7 +103552,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.DSM-get.json'
         error:
           type: object
           properties:
@@ -103570,7 +103570,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.HybridShare.Privilege-list.json'
         error:
           type: object
           properties:
@@ -103588,7 +103588,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Info-get.json'
         error:
           type: object
           properties:
@@ -103606,7 +103606,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.KeyManagement-list.json'
         error:
           type: object
           properties:
@@ -103624,7 +103624,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Labels-list.json'
         error:
           type: object
           properties:
@@ -103642,7 +103642,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Metrics.Token-get.json'
         error:
           type: object
           properties:
@@ -103660,7 +103660,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Migration.UserHome-list.json'
         error:
           type: object
           properties:
@@ -103678,7 +103678,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Node-list.json'
         error:
           type: object
           properties:
@@ -103696,7 +103696,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Notifications-list.json'
         error:
           type: object
           properties:
@@ -103714,7 +103714,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Privilege-list.json'
         error:
           type: object
           properties:
@@ -103732,7 +103732,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Profiles-list.json'
         error:
           type: object
           properties:
@@ -103750,7 +103750,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.SCIM.Photo-get.json'
         error:
           type: object
           properties:
@@ -103768,7 +103768,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Settings-list.json'
         error:
           type: object
           properties:
@@ -103786,7 +103786,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Shard-get.json'
         error:
           type: object
           properties:
@@ -103804,7 +103804,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Share-list.json'
         error:
           type: object
           properties:
@@ -103822,7 +103822,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Share.Priv-list.json'
         error:
           type: object
           properties:
@@ -103840,7 +103840,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Statistics-get.json'
         error:
           type: object
           properties:
@@ -103858,7 +103858,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Tasks-list.json'
         error:
           type: object
           properties:
@@ -103876,7 +103876,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.TeamFolders-list.json'
         error:
           type: object
           properties:
@@ -103894,7 +103894,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDriveShareSync.Config-get.json'
         error:
           type: object
           properties:
@@ -103912,7 +103912,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDriveShareSync.Connection-list.json'
         error:
           type: object
           properties:
@@ -103930,7 +103930,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.TextEditor.Preference-get.json'
         error:
           type: object
           properties:
@@ -103948,7 +103948,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.USBCopy-list.json'
         error:
           type: object
           properties:
@@ -103966,7 +103966,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.Backup-list.json'
         error:
           type: object
           properties:
@@ -103984,7 +103984,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.Default-get.json'
         error:
           type: object
           properties:
@@ -104002,7 +104002,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.ErrorPage-list.json'
         error:
           type: object
           properties:
@@ -104020,7 +104020,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.HTTP.VHost-list.json'
         error:
           type: object
           properties:
@@ -104038,7 +104038,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.PHP-get.json'
         error:
           type: object
           properties:
@@ -104056,7 +104056,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.PHP.Profile-list.json'
         error:
           type: object
           properties:
@@ -104074,7 +104074,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.Package-list.json'
         error:
           type: object
           properties:
@@ -104092,7 +104092,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.Python-get.json'
         error:
           type: object
           properties:
@@ -104110,7 +104110,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.Python.Profile-list.json'
         error:
           type: object
           properties:
@@ -104128,7 +104128,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.ScriptLanguage-list.json'
         error:
           type: object
           properties:
@@ -104146,7 +104146,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.ScriptLanguage.Utils-get.json'
         error:
           type: object
           properties:
@@ -104164,7 +104164,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.Shortcut-list.json'
         error:
           type: object
           properties:
@@ -104182,7 +104182,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.Status-get.json'
         error:
           type: object
           properties:
@@ -104200,7 +104200,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.Task-list.json'
         error:
           type: object
           properties:
@@ -104218,7 +104218,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.WebService.Portal-list.json'
         error:
           type: object
           properties:
@@ -104236,7 +104236,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.WebStation.WebService.Service-list.json'
         error:
           type: object
           properties:

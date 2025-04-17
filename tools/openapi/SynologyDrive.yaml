@@ -3897,7 +3897,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Activation-get.json'
         error:
           type: object
           properties:
@@ -3915,7 +3915,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.AppIntegration-list.json'
         error:
           type: object
           properties:
@@ -3933,7 +3933,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Config-get.json'
         error:
           type: object
           properties:
@@ -3951,7 +3951,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Connection-list.json'
         error:
           type: object
           properties:
@@ -3969,7 +3969,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.DBUsage-get.json'
         error:
           type: object
           properties:
@@ -3987,7 +3987,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.DSM-get.json'
         error:
           type: object
           properties:
@@ -4005,7 +4005,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.HybridShare.Privilege-list.json'
         error:
           type: object
           properties:
@@ -4023,7 +4023,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Info-get.json'
         error:
           type: object
           properties:
@@ -4041,7 +4041,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.KeyManagement-list.json'
         error:
           type: object
           properties:
@@ -4059,7 +4059,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Labels-list.json'
         error:
           type: object
           properties:
@@ -4077,7 +4077,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Metrics.Token-get.json'
         error:
           type: object
           properties:
@@ -4095,7 +4095,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Migration.UserHome-list.json'
         error:
           type: object
           properties:
@@ -4113,7 +4113,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Node-list.json'
         error:
           type: object
           properties:
@@ -4131,7 +4131,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Notifications-list.json'
         error:
           type: object
           properties:
@@ -4149,7 +4149,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Privilege-list.json'
         error:
           type: object
           properties:
@@ -4167,7 +4167,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Profiles-list.json'
         error:
           type: object
           properties:
@@ -4185,7 +4185,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.SCIM.Photo-get.json'
         error:
           type: object
           properties:
@@ -4203,7 +4203,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Settings-list.json'
         error:
           type: object
           properties:
@@ -4221,7 +4221,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Shard-get.json'
         error:
           type: object
           properties:
@@ -4239,7 +4239,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Share-list.json'
         error:
           type: object
           properties:
@@ -4257,7 +4257,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Share.Priv-list.json'
         error:
           type: object
           properties:
@@ -4275,7 +4275,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Statistics-get.json'
         error:
           type: object
           properties:
@@ -4293,7 +4293,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.Tasks-list.json'
         error:
           type: object
           properties:
@@ -4311,7 +4311,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SynologyDrive.TeamFolders-list.json'
         error:
           type: object
           properties:

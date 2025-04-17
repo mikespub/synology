@@ -1213,7 +1213,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Contacts.Addressbook-list.json'
         error:
           type: object
           properties:
@@ -1231,7 +1231,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Contacts.AdminSetting-get.json'
         error:
           type: object
           properties:
@@ -1249,7 +1249,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Contacts.Contact-list.json'
         error:
           type: object
           properties:
@@ -1267,7 +1267,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Contacts.ExternalSource-list.json'
         error:
           type: object
           properties:
@@ -1285,7 +1285,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Contacts.Info-get.json'
         error:
           type: object
           properties:
@@ -1303,7 +1303,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Contacts.Label-list.json'
         error:
           type: object
           properties:

@@ -5041,7 +5041,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Storage.CGI.HddMan-get.json'
         error:
           type: object
           properties:
@@ -5059,7 +5059,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Storage.CGI.KMIP-get.json'
         error:
           type: object
           properties:
@@ -5077,7 +5077,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Storage.CGI.Smart.Scheduler-list.json'
         error:
           type: object
           properties:
@@ -5095,7 +5095,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Storage.CGI.Spare-list.json'
         error:
           type: object
           properties:
@@ -5113,7 +5113,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Storage.CGI.Spare.Conf-get.json'
         error:
           type: object
           properties:

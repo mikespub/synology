@@ -2159,7 +2159,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Dictionary-list.json'
         error:
           type: object
           properties:
@@ -2177,7 +2177,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Info-get.json'
         error:
           type: object
           properties:
@@ -2195,7 +2195,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Info.Constants-get.json'
         error:
           type: object
           properties:
@@ -2213,7 +2213,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Locale-list.json'
         error:
           type: object
           properties:
@@ -2231,7 +2231,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Setting-get.json'
         error:
           type: object
           properties:
@@ -2249,7 +2249,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Setting.Font-list.json'
         error:
           type: object
           properties:
@@ -2267,7 +2267,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Setting.System-get.json'
         error:
           type: object
           properties:
@@ -2285,7 +2285,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Shard-get.json'
         error:
           type: object
           properties:
@@ -2303,7 +2303,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Shard.Info-get.json'
         error:
           type: object
           properties:
@@ -2321,7 +2321,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Shard.Session-get.json'
         error:
           type: object
           properties:
@@ -2339,7 +2339,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Shard.Token-get.json'
         error:
           type: object
           properties:
@@ -2357,7 +2357,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Sheet.MruFc-list.json'
         error:
           type: object
           properties:
@@ -2375,7 +2375,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Template-list.json'
         error:
           type: object
           properties:
@@ -2393,7 +2393,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Office.Template.Sharing.Group-list.json'
         error:
           type: object
           properties:

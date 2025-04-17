@@ -1103,7 +1103,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.AMFA.Policy-get.json'
         error:
           type: object
           properties:
@@ -1121,7 +1121,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.AMFA.SuggestConn-get.json'
         error:
           type: object
           properties:
@@ -1139,7 +1139,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.Authenticator-list.json'
         error:
           type: object
           properties:
@@ -1157,7 +1157,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.Authenticator.Info-get.json'
         error:
           type: object
           properties:
@@ -1175,7 +1175,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.Authenticator.Verdict-get.json'
         error:
           type: object
           properties:
@@ -1193,7 +1193,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.Fido.Manage-list.json'
         error:
           type: object
           properties:
@@ -1211,7 +1211,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.Method-get.json'
         error:
           type: object
           properties:
@@ -1229,7 +1229,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.SecureSignIn.Package-get.json'
         error:
           type: object
           properties:

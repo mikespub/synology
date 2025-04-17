@@ -3095,7 +3095,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.Config.AutoBackup-list.json'
         error:
           type: object
           properties:
@@ -3113,7 +3113,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.Config.Backup-list.json'
         error:
           type: object
           properties:
@@ -3131,7 +3131,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.Service.NetworkBackup-get.json'
         error:
           type: object
           properties:
@@ -3149,7 +3149,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.App2.Backup-list.json'
         error:
           type: object
           properties:
@@ -3167,7 +3167,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.Repository-list.json'
         error:
           type: object
           properties:
@@ -3185,7 +3185,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.Storage.Share.Local-list.json'
         error:
           type: object
           properties:
@@ -3203,7 +3203,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Backup.Task-list.json'
         error:
           type: object
           properties:

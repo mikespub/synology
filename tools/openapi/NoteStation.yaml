@@ -2643,7 +2643,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Info-get.json'
         error:
           type: object
           properties:
@@ -2661,7 +2661,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Note-list.json'
         error:
           type: object
           properties:
@@ -2679,7 +2679,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Notebook-list.json'
         error:
           type: object
           properties:
@@ -2697,7 +2697,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Setting-get.json'
         error:
           type: object
           properties:
@@ -2715,7 +2715,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Setting.DSM-get.json'
         error:
           type: object
           properties:
@@ -2733,7 +2733,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Setting.Global-get.json'
         error:
           type: object
           properties:
@@ -2751,7 +2751,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Share.Priv-list.json'
         error:
           type: object
           properties:
@@ -2769,7 +2769,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Shortcut-list.json'
         error:
           type: object
           properties:
@@ -2787,7 +2787,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Smart-list.json'
         error:
           type: object
           properties:
@@ -2805,7 +2805,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Tag-list.json'
         error:
           type: object
           properties:
@@ -2823,7 +2823,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.NoteStation.Todo-list.json'
         error:
           type: object
           properties:

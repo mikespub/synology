@@ -377,7 +377,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Network.DHCPServer.PXE-get.json'
         error:
           type: object
           properties:
@@ -395,7 +395,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Network.DHCPServer.Vendor-get.json'
         error:
           type: object
           properties:

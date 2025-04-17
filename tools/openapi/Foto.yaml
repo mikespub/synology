@@ -4087,7 +4087,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Album-list.json'
         error:
           type: object
           properties:
@@ -4105,7 +4105,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Category-get.json'
         error:
           type: object
           properties:
@@ -4123,7 +4123,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.ConditionAlbum-list.json'
         error:
           type: object
           properties:
@@ -4141,7 +4141,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Folder-list.json'
         error:
           type: object
           properties:
@@ -4159,7 +4159,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.GeneralTag-list.json'
         error:
           type: object
           properties:
@@ -4177,7 +4177,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Geocoding-list.json'
         error:
           type: object
           properties:
@@ -4195,7 +4195,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Item-list.json'
         error:
           type: object
           properties:
@@ -4213,7 +4213,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.NormalAlbum-list.json'
         error:
           type: object
           properties:
@@ -4231,7 +4231,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Person-list.json'
         error:
           type: object
           properties:
@@ -4249,7 +4249,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.RecentlyAdded-list.json'
         error:
           type: object
           properties:
@@ -4267,7 +4267,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Browse.Timeline-get.json'
         error:
           type: object
           properties:
@@ -4285,7 +4285,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Favorite-list.json'
         error:
           type: object
           properties:
@@ -4303,7 +4303,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Index-get.json'
         error:
           type: object
           properties:
@@ -4321,7 +4321,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Search.Filter-list.json'
         error:
           type: object
           properties:
@@ -4339,7 +4339,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Setting.Admin-get.json'
         error:
           type: object
           properties:
@@ -4357,7 +4357,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Setting.Guest-get.json'
         error:
           type: object
           properties:
@@ -4375,7 +4375,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Setting.MobileCompatibility-get.json'
         error:
           type: object
           properties:
@@ -4393,7 +4393,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Setting.TeamSpace-get.json'
         error:
           type: object
           properties:
@@ -4411,7 +4411,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Setting.User-get.json'
         error:
           type: object
           properties:
@@ -4429,7 +4429,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Foto.Setting.Wizard-get.json'
         error:
           type: object
           properties:

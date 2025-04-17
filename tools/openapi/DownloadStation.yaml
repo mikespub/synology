@@ -641,7 +641,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation.BTSearch-list.json'
         error:
           type: object
           properties:
@@ -659,7 +659,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation.Info-getinfo.json'
         error:
           type: object
           properties:
@@ -677,7 +677,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation.RSS.Site-list.json'
         error:
           type: object
           properties:
@@ -695,7 +695,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation.Statistic-getinfo.json'
         error:
           type: object
           properties:
@@ -713,7 +713,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation.Task-list.json'
         error:
           type: object
           properties:
@@ -731,7 +731,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DownloadStation.Task-getinfo.json'
         error:
           type: object
           properties:

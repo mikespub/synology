@@ -1829,7 +1829,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Album-list.json'
         error:
           type: object
           properties:
@@ -1847,7 +1847,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Artist-list.json'
         error:
           type: object
           properties:
@@ -1865,7 +1865,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Composer-list.json'
         error:
           type: object
           properties:
@@ -1883,7 +1883,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Folder-list.json'
         error:
           type: object
           properties:
@@ -1901,7 +1901,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Genre-list.json'
         error:
           type: object
           properties:
@@ -1919,7 +1919,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Info-getinfo.json'
         error:
           type: object
           properties:
@@ -1937,7 +1937,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.MediaServer-list.json'
         error:
           type: object
           properties:
@@ -1955,7 +1955,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Playlist-list.json'
         error:
           type: object
           properties:
@@ -1973,7 +1973,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Radio-list.json'
         error:
           type: object
           properties:
@@ -1991,7 +1991,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.RemotePlayer-list.json'
         error:
           type: object
           properties:
@@ -2009,7 +2009,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.RemotePlayer-getinfo.json'
         error:
           type: object
           properties:
@@ -2027,7 +2027,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Search-list.json'
         error:
           type: object
           properties:
@@ -2045,7 +2045,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Song-list.json'
         error:
           type: object
           properties:
@@ -2063,7 +2063,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.Pin-list.json'
         error:
           type: object
           properties:
@@ -2081,7 +2081,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.VoiceAssistant.Challenge-get.json'
         error:
           type: object
           properties:
@@ -2099,7 +2099,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.AudioStation.VoiceAssistant.Info-get.json'
         error:
           type: object
           properties:

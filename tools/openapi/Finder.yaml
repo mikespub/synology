@@ -967,7 +967,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Finder.Bookmark-get.json'
         error:
           type: object
           properties:
@@ -985,7 +985,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Finder.Elastic.SearchHistory-get.json'
         error:
           type: object
           properties:
@@ -1003,7 +1003,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Finder.FileIndexing.Folder-list.json'
         error:
           type: object
           properties:
@@ -1021,7 +1021,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Finder.FileIndexing.Status-get.json'
         error:
           type: object
           properties:
@@ -1039,7 +1039,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Finder.Preference-get.json'
         error:
           type: object
           properties:
@@ -1057,7 +1057,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Finder.Settings-get.json'
         error:
           type: object
           properties:

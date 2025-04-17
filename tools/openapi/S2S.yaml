@@ -509,7 +509,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.S2S.Server-get.json'
         error:
           type: object
           properties:
@@ -527,7 +527,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.S2S.Server.Pair-list.json'
         error:
           type: object
           properties:
@@ -545,7 +545,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.S2S.Client.Job-list.json'
         error:
           type: object
           properties:

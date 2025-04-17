@@ -1831,7 +1831,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Docker.Container-list.json'
         error:
           type: object
           properties:
@@ -1849,7 +1849,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Docker.Container.Resource-get.json'
         error:
           type: object
           properties:
@@ -1867,7 +1867,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Docker.Image-list.json'
         error:
           type: object
           properties:
@@ -1885,7 +1885,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Docker.Network-list.json'
         error:
           type: object
           properties:
@@ -1903,7 +1903,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.Docker.Project-list.json'
         error:
           type: object
           properties:

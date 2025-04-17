@@ -487,7 +487,7 @@ components:
           type: boolean
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
-          $ref: '../schemas/object.json'
+          $ref: '../schemas/SYNO.DisasterRecovery.Log-list.json'
         error:
           type: object
           properties:
