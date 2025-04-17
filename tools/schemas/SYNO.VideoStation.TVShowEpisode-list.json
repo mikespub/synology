@@ -5,7 +5,6 @@
     "episodes": {
       "type": "array",
       "items": {}
-      "items": {}
     },
     "total": {
       "type": "integer"

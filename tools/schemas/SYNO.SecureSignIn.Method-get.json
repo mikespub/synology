@@ -5,7 +5,6 @@
     "auth_type": {
       "type": "array",
       "items": {}
-      "items": {}
     },
     "mode": {
       "type": "string"

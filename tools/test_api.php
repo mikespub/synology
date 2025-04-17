@@ -90,7 +90,13 @@ foreach ($api_list as $root => $json) {
 
                     // Validate
                     $validator = new JsonSchema\Validator();
-                    $validator->validate($data, (object) ['$ref' => 'file://' . realpath($schema_file)]);
+                    try {
+                        $validator->validate($data, (object) ['$ref' => 'file://' . realpath($schema_file)]);
+                    } catch (JsonSchema\Exception\JsonDecodingException $e) {
+                        echo "JSON Error: "  . $e->getMessage() . "\n";
+                        echo "Schema: $schema_file\n";
+                        exit;
+                    }
 
                     if ($validator->isValid()) {
                         echo "The supplied JSON validates against the schema.\n";

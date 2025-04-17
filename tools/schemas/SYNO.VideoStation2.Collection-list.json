@@ -49,7 +49,6 @@
           "preview_video": {
             "type": "array",
             "items": {}
-            "items": {}
           },
           "title": {
             "type": "string"
