@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.AuthForeign/v1/delete:
     get:
       tags:
@@ -189,7 +188,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.AuthForeign/v1/list:
     get:
       tags:
@@ -211,7 +209,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.AuthForeign/v1/get:
     get:
       tags:
@@ -233,7 +230,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.AuthForeign/v1/set:
     get:
       tags:
@@ -255,7 +251,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Cal/v5/create:
     get:
       tags:
@@ -277,7 +272,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Cal/v5/set:
     get:
       tags:
@@ -299,7 +293,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Cal/v5/delete:
     get:
       tags:
@@ -321,7 +314,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Cal/v5/list:
     get:
       tags:
@@ -343,7 +335,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Cal/v5/get:
     get:
       tags:
@@ -365,7 +356,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Chatbot/v1/receive:
     get:
       tags:
@@ -387,7 +377,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Chatbot/v1/send:
     get:
       tags:
@@ -409,7 +398,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Chatbot/v1/cancel:
     get:
       tags:
@@ -431,7 +419,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Contact/v1/list:
     get:
       tags:
@@ -453,7 +440,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Contact/v1/get_user_info:
     get:
       tags:
@@ -475,7 +461,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Contact/v1/notify_update_contact:
     get:
       tags:
@@ -497,7 +482,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Contact/v1/notify_reset_contact:
     get:
       tags:
@@ -519,7 +503,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Event/v5/create:
     get:
       tags:
@@ -541,7 +524,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Event/v5/set:
     get:
       tags:
@@ -563,7 +545,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Event/v5/subevent_set:
     get:
       tags:
@@ -585,7 +566,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Event/v5/invite_event_set:
     get:
       tags:
@@ -607,7 +587,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Event/v5/invite_subevent_set:
     get:
       tags:
@@ -629,7 +608,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Event/v5/delete:
     get:
       tags:
@@ -651,7 +629,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Event/v5/list:
     get:
       tags:
@@ -673,7 +650,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Event/v5/get:
     get:
       tags:
@@ -695,7 +671,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Event/v5/set_exdate:
     get:
       tags:
@@ -717,7 +692,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Event/v5/set_personal_property:
     get:
       tags:
@@ -739,7 +713,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.InviteMail/v1/reply:
     get:
       tags:
@@ -761,7 +734,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.InviteMailInit/v5/token:
     get:
       tags:
@@ -783,7 +755,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.InviteMailInit/v5/tokens:
     get:
       tags:
@@ -805,7 +776,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Proxy/v5/jitsi_list:
     get:
       tags:
@@ -827,7 +797,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Proxy/v5/jitsi:
     get:
       tags:
@@ -849,7 +818,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Proxy/v5/set_config:
     get:
       tags:
@@ -871,7 +839,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Proxy/v5/get_config:
     get:
       tags:
@@ -893,7 +860,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.SendMail/v1/send_cancel:
     get:
       tags:
@@ -915,7 +881,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Setting/v5/list:
     get:
       tags:
@@ -937,7 +902,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Setting/v5/set:
     get:
       tags:
@@ -959,7 +923,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Setting/v5/get:
     get:
       tags:
@@ -981,7 +944,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Share.Priv/v1/list:
     get:
       tags:
@@ -1003,7 +965,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Sharing/v1/get:
     get:
       tags:
@@ -1025,7 +986,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Sharing/v1/set:
     get:
       tags:
@@ -1047,7 +1007,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.SyncUser/v1/sync:
     get:
       tags:
@@ -1069,7 +1028,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.SyncUser/v1/convert_fake_email:
     get:
       tags:
@@ -1091,7 +1049,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.SyncUser/v1/check_convert_fake_email_status:
     get:
       tags:
@@ -1113,7 +1070,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.SyncUser/v1/has_converted_fake_email:
     get:
       tags:
@@ -1135,7 +1091,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Timezone/v5/list:
     get:
       tags:
@@ -1157,7 +1112,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Todo/v5/list:
     get:
       tags:
@@ -1179,7 +1133,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Todo/v5/get:
     get:
       tags:
@@ -1201,7 +1154,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Todo/v5/set:
     get:
       tags:
@@ -1223,7 +1175,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Todo/v5/create:
     get:
       tags:
@@ -1245,7 +1196,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Todo/v5/delete:
     get:
       tags:
@@ -1267,7 +1217,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.Todo/v5/count_todo:
     get:
       tags:
@@ -1289,7 +1238,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Cal.UserAction/v1/set:
     get:
       tags:
@@ -1311,7 +1259,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

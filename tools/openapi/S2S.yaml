@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Server/v1/set:
     get:
       tags:
@@ -189,7 +188,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Server.Pair/v1/list:
     get:
       tags:
@@ -211,7 +209,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Server.Pair/v1/get:
     get:
       tags:
@@ -233,7 +230,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Server.Pair/v1/delete:
     get:
       tags:
@@ -255,7 +251,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Client/v1/list_server:
     get:
       tags:
@@ -277,7 +272,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Client.Job/v1/list:
     get:
       tags:
@@ -299,7 +293,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Client.Job/v1/get:
     get:
       tags:
@@ -321,7 +314,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Client.Job/v1/set:
     get:
       tags:
@@ -343,7 +335,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Client.Job/v1/create:
     get:
       tags:
@@ -365,7 +356,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Client.Job/v1/delete:
     get:
       tags:
@@ -387,7 +377,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Client.Job/v1/start:
     get:
       tags:
@@ -409,7 +398,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Client.Job/v1/stop:
     get:
       tags:
@@ -431,7 +419,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Client.Job/v1/test_connection:
     get:
       tags:
@@ -453,7 +440,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.S2S.Client.Job/v1/export_log:
     get:
       tags:
@@ -475,7 +461,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

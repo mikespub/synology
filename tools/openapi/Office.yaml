@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Dictionary/v1/list:
     get:
       tags:
@@ -189,7 +188,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Doc.Snapshot/v1/get:
     get:
       tags:
@@ -211,7 +209,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Doc.Snapshot/v1/update:
     get:
       tags:
@@ -233,7 +230,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Doc.Snapshot/v1/update_html:
     get:
       tags:
@@ -255,7 +251,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Export/v1/download:
     get:
       tags:
@@ -277,7 +272,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Export/v1/save:
     get:
       tags:
@@ -299,7 +293,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Import/v1/start:
     get:
       tags:
@@ -321,7 +314,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Import/v1/status:
     get:
       tags:
@@ -343,7 +335,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Import/v1/stop:
     get:
       tags:
@@ -365,7 +356,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Import/v1/convert:
     get:
       tags:
@@ -387,7 +377,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Import/v1/info:
     get:
       tags:
@@ -409,7 +398,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Import/v1/check:
     get:
       tags:
@@ -431,7 +419,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Info/v1/get:
     get:
       tags:
@@ -453,7 +440,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Info.Constants/v1/get:
     get:
       tags:
@@ -475,7 +461,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Locale/v1/get:
     get:
       tags:
@@ -497,7 +482,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Locale/v1/list_datetime:
     get:
       tags:
@@ -519,7 +503,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Locale/v1/list_currency:
     get:
       tags:
@@ -541,7 +524,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Locale/v1/get_default:
     get:
       tags:
@@ -563,7 +545,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Locale/v1/list:
     get:
       tags:
@@ -585,7 +566,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Log/v1/create:
     get:
       tags:
@@ -607,7 +587,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Metrics/v1/get:
     get:
       tags:
@@ -629,7 +608,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node/v2/touch:
     get:
       tags:
@@ -651,7 +629,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node/v2/copy:
     get:
       tags:
@@ -673,7 +650,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Attachment/v2/list:
     get:
       tags:
@@ -695,7 +671,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Attachment/v2/delete:
     get:
       tags:
@@ -717,7 +692,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Attachment/v2/get:
     get:
       tags:
@@ -739,7 +713,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Attachment/v2/create:
     get:
       tags:
@@ -761,7 +734,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Delete/v1/start:
     get:
       tags:
@@ -783,7 +755,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Delete/v1/status:
     get:
       tags:
@@ -805,7 +776,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Delete/v1/stop:
     get:
       tags:
@@ -827,7 +797,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Encrypt/v1/check:
     get:
       tags:
@@ -849,7 +818,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Owner/v1/set:
     get:
       tags:
@@ -871,7 +839,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Version/v1/get:
     get:
       tags:
@@ -893,7 +860,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Version/v1/list:
     get:
       tags:
@@ -915,7 +881,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Version/v1/restore:
     get:
       tags:
@@ -937,7 +902,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Node.Version/v1/rename:
     get:
       tags:
@@ -959,7 +923,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Notification/v1/send:
     get:
       tags:
@@ -981,7 +944,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.OFile/v1/update:
     get:
       tags:
@@ -1003,7 +965,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Permission/v1/check:
     get:
       tags:
@@ -1025,7 +986,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Permission.User/v1/check:
     get:
       tags:
@@ -1047,7 +1007,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Presentation.Snapshot/v1/get:
     get:
       tags:
@@ -1069,7 +1028,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Presentation.Snapshot/v1/update:
     get:
       tags:
@@ -1091,7 +1049,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Resource/v2/get:
     get:
       tags:
@@ -1113,7 +1070,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.SCIM.Photo/v1/get:
     get:
       tags:
@@ -1135,7 +1091,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.SCIM.User/v1/get:
     get:
       tags:
@@ -1157,7 +1112,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.SCIM.UserGroup/v1/get:
     get:
       tags:
@@ -1179,7 +1133,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting/v1/get:
     get:
       tags:
@@ -1201,7 +1154,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting/v1/set:
     get:
       tags:
@@ -1223,7 +1175,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting.Font/v1/list:
     get:
       tags:
@@ -1245,7 +1196,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting.Font/v1/add:
     get:
       tags:
@@ -1267,7 +1217,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting.Font/v1/enable:
     get:
       tags:
@@ -1289,7 +1238,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting.Font/v1/disable:
     get:
       tags:
@@ -1311,7 +1259,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting.Font/v1/delete:
     get:
       tags:
@@ -1333,7 +1280,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting.Person/v1/get:
     get:
       tags:
@@ -1355,7 +1301,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting.Person/v1/set:
     get:
       tags:
@@ -1377,7 +1322,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting.System/v1/get:
     get:
       tags:
@@ -1399,7 +1343,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting.System/v1/set:
     get:
       tags:
@@ -1421,7 +1364,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting.UI/v1/get:
     get:
       tags:
@@ -1443,7 +1385,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Setting.UI/v1/set:
     get:
       tags:
@@ -1465,7 +1406,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Shard/v1/get:
     get:
       tags:
@@ -1487,7 +1427,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Shard.Def/v1/get:
     get:
       tags:
@@ -1509,7 +1448,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Shard.Framework/v1/init:
     get:
       tags:
@@ -1531,7 +1469,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Shard.Info/v1/get:
     get:
       tags:
@@ -1553,7 +1490,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Shard.JSConfig/v1/get:
     get:
       tags:
@@ -1575,7 +1511,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Shard.Session/v1/get:
     get:
       tags:
@@ -1597,7 +1532,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Shard.Token/v1/get:
     get:
       tags:
@@ -1619,7 +1553,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Shard.Type/v1/get:
     get:
       tags:
@@ -1641,7 +1574,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Sheet.MruFc/v1/list:
     get:
       tags:
@@ -1663,7 +1595,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Sheet.MruFc/v1/create:
     get:
       tags:
@@ -1685,7 +1616,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Sheet.Snapshot/v2/create:
     get:
       tags:
@@ -1707,7 +1637,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Sheet.Snapshot.History/v1/get:
     get:
       tags:
@@ -1729,7 +1658,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Snapshot/v4/get:
     get:
       tags:
@@ -1751,7 +1679,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Template/v1/publish:
     get:
       tags:
@@ -1773,7 +1700,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Template/v1/save:
     get:
       tags:
@@ -1795,7 +1721,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Template/v1/make:
     get:
       tags:
@@ -1817,7 +1742,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Template/v1/list:
     get:
       tags:
@@ -1839,7 +1763,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Template/v1/get:
     get:
       tags:
@@ -1861,7 +1784,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Template/v1/set:
     get:
       tags:
@@ -1883,7 +1805,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Template/v1/delete:
     get:
       tags:
@@ -1905,7 +1826,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Template/v1/request:
     get:
       tags:
@@ -1927,7 +1847,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Template.Permission/v1/set:
     get:
       tags:
@@ -1949,7 +1868,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Template.Sharing.Group/v1/list:
     get:
       tags:
@@ -1971,7 +1889,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Template.Thumb/v1/get:
     get:
       tags:
@@ -1993,7 +1910,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Theme/v1/apply:
     get:
       tags:
@@ -2015,7 +1931,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Theme/v1/list:
     get:
       tags:
@@ -2037,7 +1952,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Theme.Thumb/v1/get:
     get:
       tags:
@@ -2059,7 +1973,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.UserStatistics.Event/v1/create:
     get:
       tags:
@@ -2081,7 +1994,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Video/v1/download:
     get:
       tags:
@@ -2103,7 +2015,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Office.Video.Thumb/v1/get:
     get:
       tags:
@@ -2125,7 +2036,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

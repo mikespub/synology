@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SVSEXT.CMSActivation/v1/activate:
     get:
       tags:
@@ -189,7 +188,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

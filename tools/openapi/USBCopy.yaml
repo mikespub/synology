@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/create:
     get:
       tags:
@@ -189,7 +188,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/get:
     get:
       tags:
@@ -211,7 +209,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/get_filter:
     get:
       tags:
@@ -233,7 +230,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/set_setting:
     get:
       tags:
@@ -255,7 +251,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/set_trigger_time:
     get:
       tags:
@@ -277,7 +272,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/set_filter:
     get:
       tags:
@@ -299,7 +293,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/delete:
     get:
       tags:
@@ -321,7 +314,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/run:
     get:
       tags:
@@ -343,7 +335,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/cancel:
     get:
       tags:
@@ -365,7 +356,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/enable:
     get:
       tags:
@@ -387,7 +377,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/disable:
     get:
       tags:
@@ -409,7 +398,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/get_global_setting:
     get:
       tags:
@@ -431,7 +419,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/set_global_setting:
     get:
       tags:
@@ -453,7 +440,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.USBCopy/v1/get_log_list:
     get:
       tags:
@@ -475,7 +461,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

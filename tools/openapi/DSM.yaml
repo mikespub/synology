@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DSM.FindMe/v2/stop:
     get:
       tags:
@@ -189,7 +188,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DSM.FindMe/v2/start:
     get:
       tags:
@@ -211,7 +209,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DSM.Info/v2/getinfo:
     get:
       tags:
@@ -233,7 +230,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DSM.Network/v2/list:
     get:
       tags:
@@ -255,7 +251,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DSM.PortEnable/v1/is_pkg_enable:
     get:
       tags:
@@ -277,7 +272,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DSM.PortEnable/v1/is_port_block:
     get:
       tags:
@@ -299,7 +293,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DSM.PortEnable/v1/open_block_port:
     get:
       tags:
@@ -321,7 +314,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DSM.PushNotification/v2/requesttoken:
     get:
       tags:
@@ -343,7 +335,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

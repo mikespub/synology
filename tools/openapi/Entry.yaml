@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Entry.Request.Polling/v1/list:
     get:
       tags:
@@ -189,7 +188,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
+      parameters:
         - in: query
           name: task_id_prefix
           required: true
@@ -217,7 +216,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Entry.SocketIo/v1/listeners_count:
     get:
       tags:
@@ -239,7 +237,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Entry.SocketIo/v1/emit:
     get:
       tags:
@@ -261,7 +258,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

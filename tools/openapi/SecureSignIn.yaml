@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.AMFA.Mail.Ex/v1/get:
     get:
       tags:
@@ -189,7 +188,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.AMFA.Policy/v1/set:
     get:
       tags:
@@ -211,7 +209,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.AMFA.Policy/v1/get:
     get:
       tags:
@@ -233,7 +230,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.AMFA.SuggestConn/v1/get:
     get:
       tags:
@@ -255,7 +251,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator/v1/list:
     get:
       tags:
@@ -277,7 +272,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator/v1/revoke:
     get:
       tags:
@@ -299,7 +293,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator/v1/revokeAll:
     get:
       tags:
@@ -321,7 +314,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator/v1/update:
     get:
       tags:
@@ -343,7 +335,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator.Ex/v1/list:
     get:
       tags:
@@ -365,7 +356,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator.Ex/v1/revoke:
     get:
       tags:
@@ -387,7 +377,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator.Ex/v1/revokeAll:
     get:
       tags:
@@ -409,7 +398,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator.Info/v2/get:
     get:
       tags:
@@ -431,7 +419,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator.Registration/v2/register:
     get:
       tags:
@@ -453,7 +440,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator.Registration/v2/invite:
     get:
       tags:
@@ -475,7 +461,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator.Registration.Ex/v2/invite:
     get:
       tags:
@@ -497,7 +482,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator.Request/v1/revoke:
     get:
       tags:
@@ -519,7 +503,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator.Request/v1/status:
     get:
       tags:
@@ -541,7 +524,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Authenticator.Verdict/v2/get:
     get:
       tags:
@@ -563,7 +545,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Fido.Manage/v1/list:
     get:
       tags:
@@ -585,7 +566,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Fido.Manage/v1/update:
     get:
       tags:
@@ -607,7 +587,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Fido.Manage/v1/delete:
     get:
       tags:
@@ -629,7 +608,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Fido.Manage/v1/deleteAll:
     get:
       tags:
@@ -651,7 +629,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Fido.Manage.Ex/v1/list:
     get:
       tags:
@@ -673,7 +650,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Fido.Manage.Ex/v1/update:
     get:
       tags:
@@ -695,7 +671,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Fido.Manage.Ex/v1/delete:
     get:
       tags:
@@ -717,7 +692,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Fido.Manage.Ex/v1/deleteAll:
     get:
       tags:
@@ -739,7 +713,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Fido.Register/v1/get_attest:
     get:
       tags:
@@ -761,7 +734,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Fido.Register/v1/register:
     get:
       tags:
@@ -783,7 +755,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Fido.Register.Ex/v1/get_attest:
     get:
       tags:
@@ -805,7 +776,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Fido.Register.Ex/v1/register:
     get:
       tags:
@@ -827,7 +797,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Method/v1/get:
     get:
       tags:
@@ -849,7 +818,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Method/v1/set:
     get:
       tags:
@@ -871,7 +839,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Method.Admin/v1/get:
     get:
       tags:
@@ -893,7 +860,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Method.Admin/v1/reset:
     get:
       tags:
@@ -915,7 +881,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Method.Ex/v1/get:
     get:
       tags:
@@ -937,7 +902,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Method.Ex/v1/get_user:
     get:
       tags:
@@ -959,7 +923,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Method.Ex/v1/set:
     get:
       tags:
@@ -981,7 +944,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Package/v1/get:
     get:
       tags:
@@ -1003,7 +965,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Package/v1/set:
     get:
       tags:
@@ -1025,7 +986,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Package.Ex/v1/get:
     get:
       tags:
@@ -1047,7 +1007,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SecureSignIn.Package.Request/v1/available:
     get:
       tags:
@@ -1069,7 +1028,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

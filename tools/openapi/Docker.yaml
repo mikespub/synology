@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/delete:
     get:
       tags:
@@ -189,7 +188,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/export:
     get:
       tags:
@@ -211,7 +209,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/import:
     get:
       tags:
@@ -233,7 +230,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/get:
     get:
       tags:
@@ -255,7 +251,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/get_log:
     get:
       tags:
@@ -277,7 +272,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/get_process:
     get:
       tags:
@@ -299,7 +293,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/list:
     get:
       tags:
@@ -321,7 +314,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
+      parameters:
         - in: query
           name: offset
           required: true
@@ -355,7 +348,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/set:
     get:
       tags:
@@ -377,7 +369,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/set_start:
     get:
       tags:
@@ -399,7 +390,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/set_status:
     get:
       tags:
@@ -421,7 +411,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/signal:
     get:
       tags:
@@ -443,7 +432,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/start:
     get:
       tags:
@@ -465,7 +453,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/stop:
     get:
       tags:
@@ -487,7 +474,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/stats:
     get:
       tags:
@@ -509,7 +495,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container/v1/upload:
     get:
       tags:
@@ -531,7 +516,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container.Log/v1/export:
     get:
       tags:
@@ -553,7 +537,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container.Log/v1/get:
     get:
       tags:
@@ -575,7 +558,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container.Log/v1/get_date_by_id:
     get:
       tags:
@@ -597,7 +579,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container.Log/v1/get_date_list:
     get:
       tags:
@@ -619,7 +600,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container.Log/v1/search:
     get:
       tags:
@@ -641,7 +621,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container.PkgProfile/v1/create:
     get:
       tags:
@@ -663,7 +642,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container.PkgProfile/v1/remove:
     get:
       tags:
@@ -685,7 +663,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container.Profile/v1/duplicate:
     get:
       tags:
@@ -707,7 +684,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container.Profile/v1/export:
     get:
       tags:
@@ -729,7 +705,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container.Profile/v1/import:
     get:
       tags:
@@ -751,7 +726,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container.Profile/v1/upload:
     get:
       tags:
@@ -773,7 +747,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Container.Resource/v1/get:
     get:
       tags:
@@ -795,7 +768,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Image/v1/prune:
     get:
       tags:
@@ -817,7 +789,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Image/v1/list:
     get:
       tags:
@@ -839,7 +810,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
+      parameters:
         - in: query
           name: offset
           required: true
@@ -873,7 +844,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Image/v1/pull_status:
     get:
       tags:
@@ -895,7 +865,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Image/v1/upgrade_start:
     get:
       tags:
@@ -917,7 +886,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Image/v1/upgrade_status:
     get:
       tags:
@@ -939,7 +907,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Image/v1/export:
     get:
       tags:
@@ -961,7 +928,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Image/v1/import:
     get:
       tags:
@@ -983,7 +949,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Image/v1/delete:
     get:
       tags:
@@ -1005,7 +970,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Image/v1/upload:
     get:
       tags:
@@ -1027,7 +991,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Image/v1/get:
     get:
       tags:
@@ -1049,7 +1012,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Log/v1/list:
     get:
       tags:
@@ -1071,7 +1033,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Log/v1/clear:
     get:
       tags:
@@ -1093,7 +1054,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Log/v1/export:
     get:
       tags:
@@ -1115,7 +1075,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Migrate/v1/import_status:
     get:
       tags:
@@ -1137,7 +1096,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Migrate/v1/status:
     get:
       tags:
@@ -1159,7 +1117,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Migrate/v1/import:
     get:
       tags:
@@ -1181,7 +1138,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Network/v1/list:
     get:
       tags:
@@ -1203,7 +1159,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Network/v1/list_container:
     get:
       tags:
@@ -1225,7 +1180,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Network/v1/create:
     get:
       tags:
@@ -1247,7 +1201,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Network/v1/remove:
     get:
       tags:
@@ -1269,7 +1222,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Network/v1/connect:
     get:
       tags:
@@ -1291,7 +1243,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Network/v1/disconnect:
     get:
       tags:
@@ -1313,7 +1264,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Network/v1/set:
     get:
       tags:
@@ -1335,7 +1285,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Network/v1/get:
     get:
       tags:
@@ -1357,7 +1306,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/log:
     get:
       tags:
@@ -1379,7 +1327,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/get_share_info:
     get:
       tags:
@@ -1401,7 +1348,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/build_stream:
     get:
       tags:
@@ -1423,7 +1369,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/start_stream:
     get:
       tags:
@@ -1445,7 +1390,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/stop_stream:
     get:
       tags:
@@ -1467,7 +1411,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/restart_stream:
     get:
       tags:
@@ -1489,7 +1432,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/clean_stream:
     get:
       tags:
@@ -1511,7 +1453,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/delete_stream:
     get:
       tags:
@@ -1533,7 +1474,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/clean:
     get:
       tags:
@@ -1555,7 +1495,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/stop:
     get:
       tags:
@@ -1577,7 +1516,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/delete:
     get:
       tags:
@@ -1599,7 +1537,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/build:
     get:
       tags:
@@ -1621,7 +1558,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/start:
     get:
       tags:
@@ -1643,7 +1579,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/restart:
     get:
       tags:
@@ -1665,7 +1600,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/get:
     get:
       tags:
@@ -1687,7 +1621,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/update:
     get:
       tags:
@@ -1709,7 +1642,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/list:
     get:
       tags:
@@ -1731,7 +1663,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Project/v1/create:
     get:
       tags:
@@ -1753,7 +1684,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Registry/v2/tags:
     get:
       tags:
@@ -1775,7 +1705,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.Docker.Utils/v1/getAllShare:
     get:
       tags:
@@ -1797,7 +1726,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.MediaServer.ClientList/v1/save_client:
     get:
       tags:
@@ -189,7 +188,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.MediaServer.ClientList/v1/list_client:
     get:
       tags:
@@ -211,7 +209,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.MediaServer.ClientList/v1/list_profile:
     get:
       tags:
@@ -233,7 +230,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.MediaServer.IndexedFolder/v1/list:
     get:
       tags:
@@ -255,7 +251,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
+      parameters:
         - in: query
           name: media_type
           required: true
@@ -283,7 +279,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.MediaServer.Log/v1/download:
     get:
       tags:
@@ -305,7 +300,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.MediaServer.Log/v1/set:
     get:
       tags:
@@ -327,7 +321,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.MediaServer.Log/v1/get:
     get:
       tags:
@@ -349,7 +342,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.MediaServer.Menu/v1/get_lang_text:
     get:
       tags:
@@ -371,7 +363,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.MediaServer.Menu/v1/set:
     get:
       tags:
@@ -393,7 +384,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.MediaServer.Menu/v1/get:
     get:
       tags:
@@ -415,7 +405,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
+      parameters:
         - in: query
           name: template
           required: true
@@ -443,7 +433,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.MediaServer.Setting/v1/get:
     get:
       tags:
@@ -465,7 +454,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
+      parameters:
         - in: query
           name: section
           required: true
@@ -493,7 +482,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.MediaServer.VideoCollection/v1/get:
     get:
       tags:
@@ -515,7 +503,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

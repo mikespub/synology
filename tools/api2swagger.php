@@ -215,6 +215,7 @@ function generate_openapi($apilist, $required, $debug = false)
                     continue;
                 }
                 // add required params
+                $rest_output .= "      parameters:\n";
                 foreach ($required[$api][$method] as $name => $value) {
                     $rest_output .= replace_params($rest_param_tmpl, ['name' => $name, 'value' => $value]);
                 }

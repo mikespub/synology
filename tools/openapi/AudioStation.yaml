@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Artist/v4/list:
     get:
       tags:
@@ -189,7 +188,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Composer/v2/list:
     get:
       tags:
@@ -211,7 +209,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Cover/v3/getsongcover:
     get:
       tags:
@@ -233,7 +230,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Cover/v3/getfoldercover:
     get:
       tags:
@@ -255,7 +251,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Cover/v3/getcover:
     get:
       tags:
@@ -277,7 +272,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Download/v1/download:
     get:
       tags:
@@ -299,7 +293,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Folder/v3/list:
     get:
       tags:
@@ -321,7 +314,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Folder/v3/getinfo:
     get:
       tags:
@@ -343,7 +335,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Genre/v3/list:
     get:
       tags:
@@ -365,7 +356,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Genre/v3/list_default_genre:
     get:
       tags:
@@ -387,7 +377,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Info/v6/getinfo:
     get:
       tags:
@@ -409,7 +398,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Lyrics/v2/getlyrics:
     get:
       tags:
@@ -431,7 +419,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Lyrics/v2/setlyrics:
     get:
       tags:
@@ -453,7 +440,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.LyricsSearch/v2/searchlyrics:
     get:
       tags:
@@ -475,7 +461,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.MediaServer/v1/list:
     get:
       tags:
@@ -497,7 +482,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/list:
     get:
       tags:
@@ -519,7 +503,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/getinfo:
     get:
       tags:
@@ -541,7 +524,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/create:
     get:
       tags:
@@ -563,7 +545,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/delete:
     get:
       tags:
@@ -585,7 +566,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/rename:
     get:
       tags:
@@ -607,7 +587,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/copytolibrary:
     get:
       tags:
@@ -629,7 +608,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/updatesongs:
     get:
       tags:
@@ -651,7 +629,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/createsmart:
     get:
       tags:
@@ -673,7 +650,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/updatesmart:
     get:
       tags:
@@ -695,7 +671,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/editsharing:
     get:
       tags:
@@ -717,7 +692,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/saveplaying:
     get:
       tags:
@@ -739,7 +713,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/savesearch:
     get:
       tags:
@@ -761,7 +734,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Playlist/v3/removemissing:
     get:
       tags:
@@ -783,7 +755,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Proxy/v2/getstreamid:
     get:
       tags:
@@ -805,7 +776,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Proxy/v2/stream:
     get:
       tags:
@@ -827,7 +797,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Proxy/v2/getsonginfo:
     get:
       tags:
@@ -849,7 +818,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Proxy/v2/deletesonginfo:
     get:
       tags:
@@ -871,7 +839,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Radio/v2/list:
     get:
       tags:
@@ -893,7 +860,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Radio/v2/add:
     get:
       tags:
@@ -915,7 +881,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Radio/v2/search:
     get:
       tags:
@@ -937,7 +902,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Radio/v2/updateradios:
     get:
       tags:
@@ -959,7 +923,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.RemotePlayer/v3/list:
     get:
       tags:
@@ -981,7 +944,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.RemotePlayer/v3/getinfo:
     get:
       tags:
@@ -1003,7 +965,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.RemotePlayer/v3/getstatus:
     get:
       tags:
@@ -1025,7 +986,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.RemotePlayer/v3/getplaylist:
     get:
       tags:
@@ -1047,7 +1007,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.RemotePlayer/v3/updateplaylist:
     get:
       tags:
@@ -1069,7 +1028,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.RemotePlayer/v3/control:
     get:
       tags:
@@ -1091,7 +1049,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.RemotePlayer/v3/setmultiple:
     get:
       tags:
@@ -1113,7 +1070,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.RemotePlayer/v3/testpassword:
     get:
       tags:
@@ -1135,7 +1091,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.RemotePlayer/v3/setpassword:
     get:
       tags:
@@ -1157,7 +1112,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.RemotePlayerStatus/v2/getstatus:
     get:
       tags:
@@ -1179,7 +1133,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Search/v1/list:
     get:
       tags:
@@ -1201,7 +1154,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Song/v3/list:
     get:
       tags:
@@ -1223,7 +1175,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Song/v3/search:
     get:
       tags:
@@ -1245,7 +1196,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Song/v3/getinfo:
     get:
       tags:
@@ -1267,7 +1217,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Song/v3/setrating:
     get:
       tags:
@@ -1289,7 +1238,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Song/v3/setsharing:
     get:
       tags:
@@ -1311,7 +1259,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Song/v3/getsharing:
     get:
       tags:
@@ -1333,7 +1280,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Stream/v2/stream:
     get:
       tags:
@@ -1355,7 +1301,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Stream/v2/transcode:
     get:
       tags:
@@ -1377,7 +1322,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.WebPlayer/v1/getplaylist:
     get:
       tags:
@@ -1399,7 +1343,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.WebPlayer/v1/updateplaylist:
     get:
       tags:
@@ -1421,7 +1364,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Browse.Playlist/v1/add_track:
     get:
       tags:
@@ -1443,7 +1385,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Pin/v1/list:
     get:
       tags:
@@ -1465,7 +1406,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Pin/v1/pin:
     get:
       tags:
@@ -1487,7 +1427,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Pin/v1/rename:
     get:
       tags:
@@ -1509,7 +1448,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Pin/v1/reorder:
     get:
       tags:
@@ -1531,7 +1469,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Pin/v1/unpin:
     get:
       tags:
@@ -1553,7 +1490,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Tag/v1/getinfo:
     get:
       tags:
@@ -1575,7 +1511,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.Tag/v1/list:
     get:
       tags:
@@ -1597,7 +1532,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.VoiceAssistant.Browse/v1/count_search:
     get:
       tags:
@@ -1619,7 +1553,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.VoiceAssistant.Browse/v1/get_cover:
     get:
       tags:
@@ -1641,7 +1574,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.VoiceAssistant.Browse/v1/get_playlist:
     get:
       tags:
@@ -1663,7 +1595,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.VoiceAssistant.Browse/v1/search:
     get:
       tags:
@@ -1685,7 +1616,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.VoiceAssistant.Browse/v1/search_playlist:
     get:
       tags:
@@ -1707,7 +1637,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.VoiceAssistant.Challenge/v1/get:
     get:
       tags:
@@ -1729,7 +1658,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.VoiceAssistant.Info/v1/get:
     get:
       tags:
@@ -1751,7 +1679,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.VoiceAssistant.Stream/v1/stream:
     get:
       tags:
@@ -1773,7 +1700,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.AudioStation.VoiceAssistant.Stream/v1/transcode:
     get:
       tags:
@@ -1795,7 +1721,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.BTSearch/v1/list:
     get:
       tags:
@@ -189,7 +188,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.BTSearch/v1/getCategory:
     get:
       tags:
@@ -211,7 +209,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.BTSearch/v1/clean:
     get:
       tags:
@@ -233,7 +230,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.BTSearch/v1/getModule:
     get:
       tags:
@@ -255,7 +251,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Info/v2/getinfo:
     get:
       tags:
@@ -277,7 +272,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Info/v2/getconfig:
     get:
       tags:
@@ -299,7 +293,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Info/v2/setserverconfig:
     get:
       tags:
@@ -321,7 +314,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.RSS.Feed/v1/list:
     get:
       tags:
@@ -343,7 +335,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.RSS.Site/v1/list:
     get:
       tags:
@@ -365,7 +356,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.RSS.Site/v1/refresh:
     get:
       tags:
@@ -387,7 +377,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Schedule/v1/getconfig:
     get:
       tags:
@@ -409,7 +398,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Schedule/v1/setconfig:
     get:
       tags:
@@ -431,7 +419,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Statistic/v1/getinfo:
     get:
       tags:
@@ -453,7 +440,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Task/v3/list:
     get:
       tags:
@@ -475,7 +461,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Task/v3/getinfo:
     get:
       tags:
@@ -497,7 +482,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Task/v3/create:
     get:
       tags:
@@ -519,7 +503,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Task/v3/delete:
     get:
       tags:
@@ -541,7 +524,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Task/v3/resume:
     get:
       tags:
@@ -563,7 +545,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Task/v3/pause:
     get:
       tags:
@@ -585,7 +566,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.DownloadStation.Task/v3/edit:
     get:
       tags:
@@ -607,7 +587,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

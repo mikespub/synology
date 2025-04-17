@@ -167,7 +167,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/resume:
     get:
       tags:
@@ -189,7 +188,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/unlink_connection:
     get:
       tags:
@@ -211,7 +209,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/unlink_session:
     get:
       tags:
@@ -233,7 +230,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_available_clouds:
     get:
       tags:
@@ -255,7 +251,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_property:
     get:
       tags:
@@ -277,7 +272,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_config:
     get:
       tags:
@@ -299,7 +293,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/set_global_config:
     get:
       tags:
@@ -321,7 +314,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/set_personal_config:
     get:
       tags:
@@ -343,7 +335,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_user_info:
     get:
       tags:
@@ -365,7 +356,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_log:
     get:
       tags:
@@ -387,7 +377,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_recently_change:
     get:
       tags:
@@ -409,7 +398,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_oauth_info:
     get:
       tags:
@@ -431,7 +419,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_connection_setting:
     get:
       tags:
@@ -453,7 +440,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_session_setting:
     get:
       tags:
@@ -475,7 +461,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_selective_folder_list:
     get:
       tags:
@@ -497,7 +482,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_selective_folder_list_wizard:
     get:
       tags:
@@ -519,7 +503,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_selective_sync_config:
     get:
       tags:
@@ -541,7 +524,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_default_selective_sync_config:
     get:
       tags:
@@ -563,7 +545,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/re_auth:
     get:
       tags:
@@ -585,7 +566,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/re_oauth:
     get:
       tags:
@@ -607,7 +587,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/test_connection_s3:
     get:
       tags:
@@ -629,7 +608,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/test_connection_b2:
     get:
       tags:
@@ -651,7 +629,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/test_connection_openstack:
     get:
       tags:
@@ -673,7 +650,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/test_connection_webdav:
     get:
       tags:
@@ -695,7 +671,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/test_connection_gcs:
     get:
       tags:
@@ -717,7 +692,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/test_connection_acs:
     get:
       tags:
@@ -739,7 +713,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/test_task_setting:
     get:
       tags:
@@ -761,7 +734,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/set_connection_setting:
     get:
       tags:
@@ -783,7 +755,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/set_schedule_setting:
     get:
       tags:
@@ -805,7 +776,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/set_session_setting:
     get:
       tags:
@@ -827,7 +797,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/set_selective_sync_config:
     get:
       tags:
@@ -849,7 +818,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/list_conn:
     get:
       tags:
@@ -871,7 +839,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/list_sess:
     get:
       tags:
@@ -893,7 +860,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/list_s3_bucket:
     get:
       tags:
@@ -915,7 +881,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/list_openstack_region:
     get:
       tags:
@@ -937,7 +902,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/list_openstack_container:
     get:
       tags:
@@ -959,7 +923,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/create_s3_bucket:
     get:
       tags:
@@ -981,7 +944,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/list_gcs_bucket:
     get:
       tags:
@@ -1003,7 +965,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/create_gcs_bucket:
     get:
       tags:
@@ -1025,7 +986,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/list_gsd_drive:
     get:
       tags:
@@ -1047,7 +1007,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/update_gsd_conn_info:
     get:
       tags:
@@ -1069,7 +1028,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/list_b2_bucket:
     get:
       tags:
@@ -1091,7 +1049,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/list_share_point_sites:
     get:
       tags:
@@ -1113,7 +1070,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/list_share_point_drives:
     get:
       tags:
@@ -1135,7 +1091,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/create_b2_bucket:
     get:
       tags:
@@ -1157,7 +1112,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/list_acs_container:
     get:
       tags:
@@ -1179,7 +1133,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/create_acs_container:
     get:
       tags:
@@ -1201,7 +1154,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/create_openstack_container:
     get:
       tags:
@@ -1223,7 +1175,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/create_link:
     get:
       tags:
@@ -1245,7 +1196,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/create_session:
     get:
       tags:
@@ -1267,7 +1217,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/export_key:
     get:
       tags:
@@ -1289,7 +1238,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/export_key_by_name:
     get:
       tags:
@@ -1311,7 +1259,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/check_server_ever_encrypted:
     get:
       tags:
@@ -1333,7 +1280,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_conn_auth_info:
     get:
       tags:
@@ -1355,7 +1301,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/get_server_folder_list:
     get:
       tags:
@@ -1377,7 +1322,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/create_server_folder:
     get:
       tags:
@@ -1399,7 +1343,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/request_onedrive_access_token:
     get:
       tags:
@@ -1421,7 +1364,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/dump_event_tree:
     get:
       tags:
@@ -1443,7 +1385,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/megadisk_request_code:
     get:
       tags:
@@ -1465,7 +1406,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.CloudSync/v1/megadisk_confirm_code:
     get:
       tags:
@@ -1487,7 +1427,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:

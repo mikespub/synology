@@ -167,7 +167,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
+      parameters:
         - in: query
           name: offset
           required: true
@@ -201,7 +201,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Common.Statistic/v1/config_set:
     get:
       tags:
@@ -223,7 +222,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Common.Statistic/v1/config_get:
     get:
       tags:
@@ -245,7 +243,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Common.Statistic/v1/get:
     get:
       tags:
@@ -267,7 +264,7 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
+      parameters:
         - in: query
           name: task_id
           required: true
@@ -295,7 +292,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Common.Target/v1/private_key_verify:
     get:
       tags:
@@ -317,7 +313,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Common.Version/v1/check_file_log:
     get:
       tags:
@@ -339,7 +334,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Common.Version/v1/download_file_log:
     get:
       tags:
@@ -361,7 +355,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Explore.File/v1/list:
     get:
       tags:
@@ -383,7 +376,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Explore.File/v1/copy:
     get:
       tags:
@@ -405,7 +397,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Explore.File/v1/restore:
     get:
       tags:
@@ -427,7 +418,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Explore.File/v1/download:
     get:
       tags:
@@ -449,7 +439,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Explore.Folder/v1/list:
     get:
       tags:
@@ -471,7 +460,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Explore.Job/v1/list:
     get:
       tags:
@@ -493,7 +481,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Explore.Job/v1/cancel:
     get:
       tags:
@@ -515,7 +502,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Explore.Target/v1/get:
     get:
       tags:
@@ -537,7 +523,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Explore.Version/v1/list:
     get:
       tags:
@@ -559,7 +544,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Explore.Version/v1/summary:
     get:
       tags:
@@ -581,7 +565,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Fuse.Target/v1/get_avail_mountpoint:
     get:
       tags:
@@ -603,7 +586,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Fuse.Target/v1/mount_by_password:
     get:
       tags:
@@ -625,7 +607,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Fuse.Target/v1/mount_by_private:
     get:
       tags:
@@ -647,7 +628,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
   /SYNO.SDS.Backup.Client.Fuse.Target/v1/umount:
     get:
       tags:
@@ -669,7 +649,6 @@ paths:
                 type: object
       security:
         - query_sid: []
-      #parameters:
 components:
   securitySchemes:
     query_sid:
