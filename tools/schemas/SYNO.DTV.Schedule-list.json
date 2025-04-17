@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "schedules": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "start": {
       "type": "integer"

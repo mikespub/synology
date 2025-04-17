@@ -6,7 +6,8 @@
       "type": "integer"
     },
     "task": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "total": {
       "type": "integer"

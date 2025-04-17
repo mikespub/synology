@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "packages": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

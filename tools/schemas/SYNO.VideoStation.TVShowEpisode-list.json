@@ -3,7 +3,9 @@
   "type": "object",
   "properties": {
     "episodes": {
-      "type": "array"
+      "type": "array",
+      "items": {}
+      "items": {}
     },
     "total": {
       "type": "integer"

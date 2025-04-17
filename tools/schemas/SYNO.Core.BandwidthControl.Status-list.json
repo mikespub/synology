@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "status": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

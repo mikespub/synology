@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "group": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

@@ -174,7 +174,8 @@
       "type": "object",
       "properties": {
         "profiles": {
-          "type": "array"
+          "type": "array",
+          "items": {}
         },
         "total": {
           "type": "integer"

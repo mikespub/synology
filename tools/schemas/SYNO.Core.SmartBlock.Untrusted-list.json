@@ -6,7 +6,8 @@
       "type": "integer"
     },
     "users": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

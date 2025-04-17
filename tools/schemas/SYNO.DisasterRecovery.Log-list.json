@@ -9,7 +9,8 @@
       "type": "integer"
     },
     "log_list": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "offset": {
       "type": "integer"

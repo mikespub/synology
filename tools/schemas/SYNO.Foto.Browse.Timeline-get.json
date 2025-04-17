@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "section": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

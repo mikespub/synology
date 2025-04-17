@@ -9,7 +9,8 @@
       "type": "integer"
     },
     "tvshow": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "luns": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

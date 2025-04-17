@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "favorites": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "offset": {
       "type": "integer"

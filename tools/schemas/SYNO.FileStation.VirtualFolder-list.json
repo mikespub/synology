@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "folders": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "offset": {
       "type": "integer"

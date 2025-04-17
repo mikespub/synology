@@ -33,7 +33,8 @@
             "type": "integer"
           },
           "used_by": {
-            "type": "array"
+            "type": "array",
+            "items": {}
           }
         },
         "required": [

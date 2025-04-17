@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "task_ids": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

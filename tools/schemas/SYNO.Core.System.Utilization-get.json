@@ -120,7 +120,8 @@
       ]
     },
     "lun": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "memory": {
       "type": "object",
@@ -200,7 +201,8 @@
       }
     },
     "nfs": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "space": {
       "type": "object",

@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "printers": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

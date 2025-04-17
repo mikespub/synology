@@ -3,7 +3,9 @@
   "type": "object",
   "properties": {
     "items": {
-      "type": "array"
+      "type": "array",
+      "items": {}
+      "items": {}
     },
     "total": {
       "type": "integer"

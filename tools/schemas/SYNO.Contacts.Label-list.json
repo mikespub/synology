@@ -14,7 +14,8 @@
             "type": "integer"
           },
           "member": {
-            "type": "array"
+            "type": "array",
+            "items": {}
           },
           "member_count": {
             "type": "integer"

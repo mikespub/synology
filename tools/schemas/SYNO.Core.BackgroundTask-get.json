@@ -54,13 +54,16 @@
                   "type": "object",
                   "properties": {
                     "action_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "allow_users": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "application_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "i18n": {
                       "type": "string"
@@ -110,7 +113,8 @@
               "type": "boolean"
             },
             "tray_groups": {
-              "type": "array"
+              "type": "array",
+              "items": {}
             },
             "tray_icon_class": {
               "type": "string"
@@ -149,13 +153,16 @@
                   "type": "object",
                   "properties": {
                     "action_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "allow_users": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "application_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "i18n": {
                       "type": "string"
@@ -188,13 +195,16 @@
                   "type": "object",
                   "properties": {
                     "action_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "allow_users": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "application_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "i18n": {
                       "type": "string"
@@ -245,7 +255,8 @@
               "type": "boolean"
             },
             "tray_groups": {
-              "type": "array"
+              "type": "array",
+              "items": {}
             },
             "tray_icon_class": {
               "type": "string"
@@ -284,13 +295,16 @@
                   "type": "object",
                   "properties": {
                     "action_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "allow_users": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "application_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "enable_tray_tooltip": {
                       "type": "boolean"
@@ -327,13 +341,16 @@
                   "type": "object",
                   "properties": {
                     "action_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "allow_users": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "application_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "enable_tray_tooltip": {
                       "type": "boolean"
@@ -370,13 +387,16 @@
                   "type": "object",
                   "properties": {
                     "action_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "allow_users": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "application_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "enable_tray_tooltip": {
                       "type": "boolean"
@@ -419,10 +439,12 @@
                       }
                     },
                     "allow_users": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "application_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "enable_tray_tooltip": {
                       "type": "boolean"
@@ -479,7 +501,8 @@
               "type": "boolean"
             },
             "tray_groups": {
-              "type": "array"
+              "type": "array",
+              "items": {}
             },
             "tray_icon_class": {
               "type": "string"
@@ -518,13 +541,16 @@
                   "type": "object",
                   "properties": {
                     "action_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "allow_users": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "application_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "i18n": {
                       "type": "string"
@@ -557,13 +583,16 @@
                   "type": "object",
                   "properties": {
                     "action_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "allow_users": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "application_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "i18n": {
                       "type": "string"
@@ -596,13 +625,16 @@
                   "type": "object",
                   "properties": {
                     "action_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "allow_users": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "application_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "i18n": {
                       "type": "string"
@@ -654,7 +686,8 @@
               "type": "boolean"
             },
             "tray_groups": {
-              "type": "array"
+              "type": "array",
+              "items": {}
             },
             "tray_icon_class": {
               "type": "string"
@@ -693,13 +726,16 @@
                   "type": "object",
                   "properties": {
                     "action_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "allow_users": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "application_privileges": {
-                      "type": "array"
+                      "type": "array",
+                      "items": {}
                     },
                     "i18n": {
                       "type": "string"
@@ -749,7 +785,8 @@
               "type": "boolean"
             },
             "tray_groups": {
-              "type": "array"
+              "type": "array",
+              "items": {}
             },
             "tray_icon_class": {
               "type": "string"

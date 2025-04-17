@@ -6,7 +6,8 @@
       "type": "integer"
     },
     "list": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

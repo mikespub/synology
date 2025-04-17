@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "players": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

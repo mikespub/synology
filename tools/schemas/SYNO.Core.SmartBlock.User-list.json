@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "devices": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "total": {
       "type": "integer"

@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "jobs": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "offset": {
       "type": "integer"

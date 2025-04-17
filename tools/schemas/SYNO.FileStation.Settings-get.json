@@ -27,7 +27,8 @@
       "type": "object",
       "properties": {
         "items": {
-          "type": "array"
+          "type": "array",
+          "items": {}
         }
       },
       "required": [
@@ -38,7 +39,8 @@
       "type": "object",
       "properties": {
         "items": {
-          "type": "array"
+          "type": "array",
+          "items": {}
         }
       },
       "required": [
@@ -46,7 +48,8 @@
       ]
     },
     "link_limit": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "rf_allow": {
       "type": "string"
@@ -73,7 +76,8 @@
       "type": "object",
       "properties": {
         "items": {
-          "type": "array"
+          "type": "array",
+          "items": {}
         }
       },
       "required": [
@@ -84,7 +88,8 @@
       "type": "object",
       "properties": {
         "items": {
-          "type": "array"
+          "type": "array",
+          "items": {}
         }
       },
       "required": [

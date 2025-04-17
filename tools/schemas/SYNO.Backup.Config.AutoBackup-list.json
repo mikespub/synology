@@ -6,7 +6,8 @@
       "type": "integer"
     },
     "versions": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

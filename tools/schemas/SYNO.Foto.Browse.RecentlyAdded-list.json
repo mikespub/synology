@@ -3,7 +3,9 @@
   "type": "object",
   "properties": {
     "list": {
-      "type": "array"
+      "type": "array",
+      "items": {}
+      "items": {}
     }
   },
   "required": [

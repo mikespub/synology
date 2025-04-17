@@ -6,7 +6,8 @@
       "type": "boolean"
     },
     "ACL_list": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "charge": {
       "type": "integer"

@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "diskList": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "authenticators": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

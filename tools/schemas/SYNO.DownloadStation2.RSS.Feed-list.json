@@ -6,7 +6,8 @@
       "type": "boolean"
     },
     "items": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "total": {
       "type": "integer"

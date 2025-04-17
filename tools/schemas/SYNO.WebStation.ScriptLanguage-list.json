@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "scripts": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

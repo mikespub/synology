@@ -36,10 +36,12 @@
       "type": "boolean"
     },
     "sharing_force_selected_groups": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "sharing_force_selected_users": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "sharing_internal_level": {
       "type": "string"

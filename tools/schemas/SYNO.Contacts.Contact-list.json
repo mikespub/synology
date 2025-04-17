@@ -11,7 +11,8 @@
             "type": "object",
             "properties": {
               "label": {
-                "type": "array"
+                "type": "array",
+                "items": {}
               }
             },
             "required": [

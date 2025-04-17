@@ -147,10 +147,12 @@
       }
     },
     "general_tag": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "geocoding": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "iso": {
       "type": "array",
@@ -207,7 +209,8 @@
       }
     },
     "person": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "rating": {
       "type": "array",

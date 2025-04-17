@@ -9,7 +9,8 @@
       "type": "integer"
     },
     "video": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

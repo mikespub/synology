@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "job_list": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

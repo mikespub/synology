@@ -41,10 +41,12 @@
             "type": "string"
           },
           "mail": {
-            "type": "array"
+            "type": "array",
+            "items": {}
           },
           "owners": {
-            "type": "array"
+            "type": "array",
+            "items": {}
           },
           "profile_name": {
             "type": "string"
@@ -59,7 +61,8 @@
             "type": "null"
           },
           "shares": {
-            "type": "array"
+            "type": "array",
+            "items": {}
           },
           "status": {
             "type": "string"

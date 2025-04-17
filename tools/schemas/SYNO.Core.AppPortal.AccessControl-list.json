@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "entries": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

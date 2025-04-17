@@ -9,10 +9,12 @@
       "type": "boolean"
     },
     "time_machine_disable_shares": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "time_machine_shares": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "portals": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

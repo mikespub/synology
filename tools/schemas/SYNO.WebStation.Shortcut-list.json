@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "shortcuts": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

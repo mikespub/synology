@@ -6,7 +6,8 @@
       "type": "boolean"
     },
     "mail": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "subject_prefix": {
       "type": "string"

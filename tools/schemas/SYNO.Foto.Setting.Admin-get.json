@@ -15,7 +15,8 @@
       "type": "boolean"
     },
     "exclude_extension": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

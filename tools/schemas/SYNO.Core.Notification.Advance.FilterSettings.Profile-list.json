@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "profiles": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

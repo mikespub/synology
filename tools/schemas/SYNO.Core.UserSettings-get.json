@@ -59,7 +59,8 @@
           "type": "boolean"
         },
         "new_app_list": {
-          "type": "array"
+          "type": "array",
+          "items": {}
         },
         "rememberWindowState": {
           "type": "boolean"

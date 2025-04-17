@@ -9,10 +9,12 @@
       "type": "boolean"
     },
     "in_use": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "mail": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "send_welcome_mail": {
       "type": "boolean"

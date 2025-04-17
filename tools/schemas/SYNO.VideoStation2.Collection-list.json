@@ -47,7 +47,9 @@
             "type": "integer"
           },
           "preview_video": {
-            "type": "array"
+            "type": "array",
+            "items": {}
+            "items": {}
           },
           "title": {
             "type": "string"

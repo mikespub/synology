@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "hotSpares": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

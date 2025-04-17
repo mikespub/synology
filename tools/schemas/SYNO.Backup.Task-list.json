@@ -29,7 +29,8 @@
             "type": "string"
           },
           "ext3ShareList": {
-            "type": "array"
+            "type": "array",
+            "items": {}
           },
           "name": {
             "type": "string"

@@ -3,7 +3,9 @@
   "type": "object",
   "properties": {
     "clients": {
-      "type": "array"
+      "type": "array",
+      "items": {}
+      "items": {}
     },
     "offset": {
       "type": "integer"

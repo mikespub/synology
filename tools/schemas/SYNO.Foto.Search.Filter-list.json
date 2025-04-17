@@ -3,46 +3,60 @@
   "type": "object",
   "properties": {
     "aperture": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "camera": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "exposure_time_group": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "flash": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "focal_length_group": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "folder_filter": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "general_tag": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "geocoding": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "iso": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "item_type": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "lens": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "person": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "rating": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "time": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

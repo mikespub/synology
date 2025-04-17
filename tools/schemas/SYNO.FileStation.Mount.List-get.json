@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "isoList": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "mountConfig": {
       "type": "object",
@@ -21,7 +22,8 @@
       ]
     },
     "remoteList": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

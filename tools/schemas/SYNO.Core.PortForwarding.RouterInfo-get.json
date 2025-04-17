@@ -6,10 +6,12 @@
       "type": "integer"
     },
     "otherDeviceUsedTCPPorts": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "otherDeviceUsedUDPPorts": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

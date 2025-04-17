@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "conn": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "is_pause": {
       "type": "boolean"

@@ -9,7 +9,8 @@
       "type": "integer"
     },
     "user": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

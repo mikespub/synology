@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "rules": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "support_internal": {
       "type": "integer"

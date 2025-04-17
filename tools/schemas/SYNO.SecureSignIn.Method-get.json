@@ -3,7 +3,9 @@
   "type": "object",
   "properties": {
     "auth_type": {
-      "type": "array"
+      "type": "array",
+      "items": {}
+      "items": {}
     },
     "mode": {
       "type": "string"

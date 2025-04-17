@@ -15,7 +15,8 @@
       "type": "boolean"
     },
     "passwords": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "unzip_location": {
       "type": "string"
