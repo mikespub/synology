@@ -2,6 +2,9 @@
 
 namespace Synology;
 
+use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
+
 /**
  * Class AbstractApi
  *
@@ -53,6 +56,7 @@ abstract class AbstractApi
             ],
         ],
     ];
+    private $client = null;
 
     /**
      * Setup API
@@ -116,7 +120,7 @@ abstract class AbstractApi
      * @param ?int   $version
      * @param string $httpMethod
      *
-     * @return array|bool|\stdClass
+     * @return array|string|bool|\stdClass
      *
      * @throws Exception
      */
@@ -134,49 +138,46 @@ abstract class AbstractApi
         $params['method']  = $method;
 
         // create a new cURL resource
-        $ch = curl_init();
+        $client = $this->getHttpClient();
 
+        $url = $this->_getBaseUrl() . $path;
         if ($httpMethod !== 'post') {
-            $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params, '', $this->_separator, $this->enc_type);
             $this->log($url, 'Requested Url');
+            $this->log($params, 'Query Variable');
+            $response = $client->request('GET', $url, ['query' => $params]);
 
-            curl_setopt($ch, CURLOPT_URL, $url);
         } else {
-            $url = $this->_getBaseUrl() . $path;
             $this->log($url, 'Requested Url');
             $this->log($params, 'Post Variable');
-
-            // set the url, number of POST vars, POST data
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_POST, count($params));
-            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params, '', $this->_separator, $this->enc_type));
+            // verify if we need to send multipart/form-data, application/x-www-form-urlencoded or application/json ['json' => array]
+            $response = $client->request('POST', $this->_getBaseUrl() . $path, ['body' => $params]);
         }
 
-        // set URL and other appropriate options
-        curl_setopt($ch, CURLOPT_HEADER, 0);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, self::CONNECT_TIMEOUT);
-        curl_setopt($ch, CURLOPT_TIMEOUT_MS, self::REQUEST_TIMEOUT);
-
-        // Verify SSL or not
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, $this->_verifySSL ? 2 : 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->_verifySSL);
-
-        // grab URL and pass it to the browser
-        $result = curl_exec($ch);
-        $info   = curl_getinfo($ch);
+        // gets the response body as a string
+        $result = $response->getContent();
+        // returns info coming from the transport layer, such as "response_headers",
+        // "redirect_count", "start_time", "redirect_url", etc.
+        $info = $response->getInfo();
+        if (!isset($info['http_code'])) {
+            // gets the HTTP status code of the response
+            $status = $response->getStatusCode();
+            $info['http_code'] = $status;
+        }
+        if (!isset($info['content_typ'])) {
+            // gets the HTTP headers as string[][] with the header names lower-cased
+            $headers = $response->getHeaders();
+            $headers['content_type'] ??= ['unknown/unknown'];
+            $info['content_type'] = $headers['content_type'][0];
+        }
 
         $this->log($info['http_code'], 'Response code');
         if (200 == $info['http_code']) {
-            // close cURL resource, and free up system resources
-            curl_close($ch);
             if (preg_match('#(plain|text|json)#', $info['content_type'])) {
                 return $this->_parseRequest($api, $path, $result);
             } else {
                 return $result;
             }
         } else {
-            curl_close($ch);
             if ($info['total_time'] >= (self::REQUEST_TIMEOUT / 1000)) {
                 throw new Exception('Connection Timeout');
             } else {
@@ -248,6 +249,30 @@ abstract class AbstractApi
 
             echo $value . PHP_EOL;
         }
+    }
+
+    /**
+     * Summary of setHttpClient
+     * @param HttpClientInterface $client
+     * @return void
+     */
+    public function setHttpClient($client)
+    {
+        $this->client = $client;
+    }
+
+    /**
+     * Summary of getHttpClient
+     * @return HttpClientInterface
+     */
+    public function getHttpClient()
+    {
+        $this->client ??= HttpClient::create([
+            'verify_peer' => $this->_verifySSL,
+            'verify_host' => $this->_verifySSL,
+            'max_duration' => (float) self::REQUEST_TIMEOUT / 1000.0,
+        ]);
+        return $this->client;
     }
 
     /**

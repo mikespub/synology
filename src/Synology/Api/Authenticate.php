@@ -5,6 +5,7 @@ namespace Synology\Api;
 use Synology\AbstractApi;
 use Synology\Api;
 use Synology\Exception;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 /**
  * Class Authenticate
@@ -54,6 +55,16 @@ class Authenticate extends AbstractApi
     public function disconnect()
     {
         return $this->_authApi->disconnect();
+    }
+
+    /**
+     * Summary of setHttpClient
+     * @param HttpClientInterface $client
+     * @return void
+     */
+    public function setHttpClient($client)
+    {
+        $this->_authApi->setHttpClient($client);
     }
 
     /**
