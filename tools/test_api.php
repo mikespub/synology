@@ -102,11 +102,17 @@ foreach ($api_list as $root => $json) {
                         echo "The supplied JSON validates against the schema.\n";
                     } else {
                         echo "JSON does not validate. Violations:\n";
+                        $nullable = false;
                         foreach ($validator->getErrors() as $error) {
                             printf("[%s] %s\n", $error['property'], $error['message']);
+                            if (str_contains($error['message'], 'NULL value found, but an object is required')) {
+                                $nullable = true;
+                            }
                         }
                         echo "Schema: $schema_file\n";
-                        exit;
+                        if (!$nullable) {
+                            exit;
+                        }
                     }
                 }
                 continue;

@@ -7,6 +7,97 @@
       "items": {
         "type": "object",
         "properties": {
+          "Image": {
+            "type": "string"
+          },
+          "ImageID": {
+            "type": "string"
+          },
+          "Labels": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "NetworkSettings": {
+            "type": "object",
+            "properties": {
+              "Networks": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "properties": {
+                    "Aliases": {
+                      "type": "null"
+                    },
+                    "DriverOpts": {
+                      "type": "null"
+                    },
+                    "EndpointID": {
+                      "type": "string"
+                    },
+                    "Gateway": {
+                      "type": "string"
+                    },
+                    "GlobalIPv6Address": {
+                      "type": "string"
+                    },
+                    "GlobalIPv6PrefixLen": {
+                      "type": "integer"
+                    },
+                    "IPAMConfig": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "IPv4Address": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "IPv4Address"
+                      ]
+                    },
+                    "IPAddress": {
+                      "type": "string"
+                    },
+                    "IPPrefixLen": {
+                      "type": "integer"
+                    },
+                    "IPv6Gateway": {
+                      "type": "string"
+                    },
+                    "Links": {
+                      "type": "null"
+                    },
+                    "MacAddress": {
+                      "type": "string"
+                    },
+                    "NetworkID": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "Aliases",
+                    "DriverOpts",
+                    "EndpointID",
+                    "Gateway",
+                    "GlobalIPv6Address",
+                    "GlobalIPv6PrefixLen",
+                    "IPAMConfig",
+                    "IPAddress",
+                    "IPPrefixLen",
+                    "IPv6Gateway",
+                    "Links",
+                    "MacAddress",
+                    "NetworkID"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "Networks"
+            ]
+          },
           "State": {
             "type": "object",
             "properties": {
@@ -21,9 +112,6 @@
               },
               "FinishedAt": {
                 "type": "string"
-              },
-              "FinishedTs": {
-                "type": "integer"
               },
               "OOMKilled": {
                 "type": "boolean"
@@ -43,9 +131,6 @@
               "StartedAt": {
                 "type": "string"
               },
-              "StartedTs": {
-                "type": "integer"
-              },
               "Status": {
                 "type": "string"
               }
@@ -55,14 +140,12 @@
               "Error",
               "ExitCode",
               "FinishedAt",
-              "FinishedTs",
               "OOMKilled",
               "Paused",
               "Pid",
               "Restarting",
               "Running",
               "StartedAt",
-              "StartedTs",
               "Status"
             ]
           },
@@ -79,7 +162,7 @@
             "type": "boolean"
           },
           "finish_time": {
-            "type": "integer"
+            "type": "null"
           },
           "id": {
             "type": "string"
@@ -106,10 +189,14 @@
             "type": "string"
           },
           "up_time": {
-            "type": "integer"
+            "type": "null"
           }
         },
         "required": [
+          "Image",
+          "ImageID",
+          "Labels",
+          "NetworkSettings",
           "State",
           "cmd",
           "created",
