@@ -4,8 +4,6 @@
         - SYNO.%tag%
       summary: Return %method% for %api%
       operationId: %api%.%method%
-      parameters:
-        - $ref: '#/components/parameters/path_sid'
       responses:
         '200':
           description: Normal Response
@@ -21,3 +19,5 @@
                 type: object
       #security:
       #  - query_sid: []
+      parameters:
+        - $ref: '#/components/parameters/path_sid'

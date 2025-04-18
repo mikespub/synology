@@ -19,12 +19,12 @@ abstract class AbstractApi
     public const CONNECT_TIMEOUT = 2000; //2s
     public const REQUEST_TIMEOUT = 30000; //30s
 
+    protected $_serviceName = null;
+    protected $_namespace = null;
     private $_protocol = self::PROTOCOL_HTTP;
     private $_port = 80;
     private $_address = '';
     protected $_version = 1;
-    private $_serviceName = null;
-    private $_namespace = null;
     private $_debug = false;
     private $_verifySSL = false;
     private $_separator = '&';
@@ -163,7 +163,7 @@ abstract class AbstractApi
             $status = $response->getStatusCode();
             $info['http_code'] = $status;
         }
-        if (!isset($info['content_typ'])) {
+        if (!isset($info['content_type'])) {
             // gets the HTTP headers as string[][] with the header names lower-cased
             $headers = $response->getHeaders();
             $headers['content_type'] ??= ['unknown/unknown'];

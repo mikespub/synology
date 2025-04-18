@@ -1,0 +1,177 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "ActionPrivilege": {
+      "type": "array"
+    },
+    "AppPrivilege": {
+      "type": "object"
+    },
+    "CSSFiles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "GroupSettings": {
+      "type": "object"
+    },
+    "JSConfig": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      }
+    },
+    "Private": {
+      "type": "object"
+    },
+    "ServiceStatus": {
+      "type": "object"
+    },
+    "Session": {
+      "type": "object",
+      "properties": {
+        "boot_done": {
+          "type": "boolean"
+        },
+        "hostname": {
+          "type": "string"
+        },
+        "isLogined": {
+          "type": "boolean"
+        },
+        "isMobile": {
+          "type": "boolean"
+        },
+        "isPublic": {
+          "type": "boolean"
+        },
+        "is_admin": {
+          "type": "boolean"
+        },
+        "is_secure": {
+          "type": "boolean"
+        },
+        "lang": {
+          "type": "string"
+        },
+        "sys_lang": {
+          "type": "string"
+        },
+        "theme_cls": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "boot_done",
+        "hostname",
+        "isLogined",
+        "isMobile",
+        "isPublic",
+        "is_admin",
+        "is_secure",
+        "lang",
+        "sys_lang",
+        "theme_cls"
+      ]
+    },
+    "Sharing": {
+      "type": "object",
+      "properties": {
+        "app": {
+          "type": "null"
+        },
+        "auto_gc": {
+          "type": "boolean"
+        },
+        "enable_match_ip": {
+          "type": "boolean"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "expire_at": {
+          "type": "string"
+        },
+        "expire_times": {
+          "type": "integer"
+        },
+        "hash": {
+          "type": "string"
+        },
+        "owner_user": {
+          "type": "string"
+        },
+        "project_name": {
+          "type": "string"
+        },
+        "protect_groups": {
+          "type": "array"
+        },
+        "protect_title": {
+          "type": "string"
+        },
+        "protect_type": {
+          "type": "string"
+        },
+        "protect_users": {
+          "type": "array"
+        },
+        "redirect_type": {
+          "type": "string"
+        },
+        "redirect_uri": {
+          "type": "string"
+        },
+        "start_at": {
+          "type": "string"
+        },
+        "use_count": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "app",
+        "auto_gc",
+        "enable_match_ip",
+        "enabled",
+        "expire_at",
+        "expire_times",
+        "hash",
+        "owner_user",
+        "project_name",
+        "protect_groups",
+        "protect_title",
+        "protect_type",
+        "protect_users",
+        "redirect_type",
+        "redirect_uri",
+        "start_at",
+        "use_count"
+      ]
+    },
+    "Strings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      }
+    },
+    "UserSettings": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "ActionPrivilege",
+    "AppPrivilege",
+    "CSSFiles",
+    "GroupSettings",
+    "JSConfig",
+    "Private",
+    "ServiceStatus",
+    "Session",
+    "Sharing",
+    "Strings",
+    "UserSettings"
+  ]
+}

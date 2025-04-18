@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "additional": {
+            "type": "object",
+            "properties": {
+              "owner": {
+                "type": "object",
+                "properties": {
+                  "gid": {
+                    "type": "integer"
+                  },
+                  "group": {
+                    "type": "string"
+                  },
+                  "uid": {
+                    "type": "integer"
+                  },
+                  "user": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "gid",
+                  "group",
+                  "uid",
+                  "user"
+                ]
+              },
+              "perm": {
+                "type": "object",
+                "properties": {
+                  "acl": {
+                    "type": "object",
+                    "properties": {
+                      "append": {
+                        "type": "boolean"
+                      },
+                      "del": {
+                        "type": "boolean"
+                      },
+                      "exec": {
+                        "type": "boolean"
+                      },
+                      "read": {
+                        "type": "boolean"
+                      },
+                      "write": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "append",
+                      "del",
+                      "exec",
+                      "read",
+                      "write"
+                    ]
+                  },
+                  "is_acl_mode": {
+                    "type": "boolean"
+                  },
+                  "posix": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "acl",
+                  "is_acl_mode",
+                  "posix"
+                ]
+              },
+              "real_path": {
+                "type": "string"
+              },
+              "size": {
+                "type": "integer"
+              },
+              "time": {
+                "type": "object",
+                "properties": {
+                  "atime": {
+                    "type": "integer"
+                  },
+                  "crtime": {
+                    "type": "integer"
+                  },
+                  "ctime": {
+                    "type": "integer"
+                  },
+                  "mtime": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "atime",
+                  "crtime",
+                  "ctime",
+                  "mtime"
+                ]
+              }
+            },
+            "required": [
+              "owner",
+              "perm",
+              "real_path",
+              "size",
+              "time"
+            ]
+          },
+          "isdir": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "additional",
+          "isdir",
+          "name",
+          "path"
+        ]
+      }
+    }
+  },
+  "required": [
+    "files"
+  ]
+}

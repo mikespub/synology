@@ -29,12 +29,12 @@ class GenericClient extends Authenticate
     }
 
     /**
-     * Call a generic API
+     * Call a generic API method
      *
      * @param string $api
      * @param string $path
      * @param string $method
-     * @param array<mixed> $params
+     * @param array<mixed> $params param values should be json-encoded if API requestFormat is "JSON"
      * @param ?int   $version
      * @param string $httpMethod
      *

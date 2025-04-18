@@ -63,7 +63,7 @@ class FileStation extends Authenticate
             'offset'         => $offset,
             'sort_by'        => $sortBy,
             'sort_direction' => $sortDirection,
-            'additional'     => $additional ? 'real_path,owner,time,perm,volume_status' : '',
+            'additional'     => json_encode($additional ? ['real_path', 'owner', 'time', 'perm', 'volume_status'] : []),
         ]);
     }
 
@@ -119,7 +119,7 @@ class FileStation extends Authenticate
             'sort_direction' => $sortDirection,
             'pattern'        => $pattern,
             'filetype'       => $fileType,
-            'additional'     => $additional ? 'real_path,size,owner,time,perm' : '',
+            'additional'     => json_encode($additional ? ['real_path', 'size', 'owner', 'time', 'perm'] : []),
         ]);
     }
 
@@ -148,7 +148,7 @@ class FileStation extends Authenticate
             'sort_direction' => $sortDirection,
             'pattern'        => $pattern,
             'filetype'       => $fileType,
-            'additional'     => $additional ? 'real_path,size,owner,time,perm' : '',
+            'additional'     => json_encode($additional ? ['real_path', 'size', 'owner', 'time', 'perm'] : []),
         ]);
     }
 
@@ -174,7 +174,7 @@ class FileStation extends Authenticate
             'folder_path'  => $folder_path,
             'name'         => $name,
             'force_parent' => $force_parent,
-            'additional'   => $additional ? 'real_path,size,owner,time,perm' : '',
+            'additional'   => json_encode($additional ? ['real_path', 'size', 'owner', 'time', 'perm'] : []),
         ]);
     }
 }

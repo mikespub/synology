@@ -39,12 +39,13 @@ class Api extends AbstractApi
     /**
      * Get a list of Service and Apis
      *
-     * @return array
+     * @param string $query default "all"
+     * @return array<string, mixed>
      */
-    public function getAvailableApi()
+    public function getAvailableApi($query = "all")
     {
         $method = 'query';
-        $params = ['query' => 'all'];
+        $params = ['query' => $query];
         $version = 1;
         return $this->_request('Info', 'query.cgi', $method, $params, $version);
     }

@@ -175,6 +175,7 @@ function generate_openapi($apilist, $required, $debug = false)
                 $params['version'] = $values['minVersion'];
                 $methods = $values['methods'][$values['minVersion']] ?? [];
             }
+            $params['format'] = $values['requestFormat'] ?? false;
             echo "\t\t(" . count($methods) . ") " . implode(',', $methods) . "\n";
             $params['hash'] = '';
             if (in_array('list', $methods)) {
@@ -217,6 +218,10 @@ function generate_openapi($apilist, $required, $debug = false)
                 // add required params
                 $rest_output .= "      parameters:\n";
                 foreach ($required[$api][$method] as $name => $value) {
+                    if (!empty($params['format']) && $params['format'] == "JSON" && is_array($value)) {
+                        $value = "'" . json_encode($value) . "'";
+                    }
+                    $path_output .= replace_params($rest_param_tmpl, ['name' => $name, 'value' => $value]);
                     $rest_output .= replace_params($rest_param_tmpl, ['name' => $name, 'value' => $value]);
                 }
             }

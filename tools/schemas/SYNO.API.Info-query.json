@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "properties": {
+      "maxVersion": {
+        "type": "integer"
+      },
+      "minVersion": {
+        "type": "integer"
+      },
+      "path": {
+        "type": "string"
+      },
+      "requestFormat": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "maxVersion",
+      "minVersion",
+      "path"
+    ]
+  }
+}

@@ -36,6 +36,26 @@ class Authenticate extends AbstractApi
     }
 
     /**
+     * Get a list of Apis for this Service
+     *
+     * @param ?string $serviceName
+     * @return array<string, mixed>
+     */
+    public function getAvailableApi($serviceName = null)
+    {
+        $serviceName ??= $this->_serviceName;
+        $apiList = $this->_authApi->getAvailableApi();
+        if (str_starts_with($serviceName, $this->_namespace . '.')) {
+            $prefix = $serviceName . '.';
+        } else {
+            $prefix = $this->_namespace . '.' . $serviceName . '.';
+        }
+        return array_filter($apiList, function ($api) use ($prefix) {
+            return str_starts_with($api, $prefix);
+        }, ARRAY_FILTER_USE_KEY);
+    }
+
+    /**
      * Connect to Synology
      *
      * @param string $login

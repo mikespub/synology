@@ -59,6 +59,7 @@ foreach ($api_list as $root => $json) {
             $version = $values['minVersion'];
             $methods = $values['methods'][$version] ?? [];
         }
+        $format = $values['requestFormat'] ?? false;
         echo "\t$api_name\n";
         $todo = [];
         foreach ($methods as $method) {
@@ -75,6 +76,8 @@ foreach ($api_list as $root => $json) {
             $todo[] = 'list';
         } elseif (in_array('get', $methods)) {
             $todo[] = 'get';
+        } elseif ($api_name == 'SYNO.API.Info' && in_array('query', $methods)) {
+            $todo[] = 'query';
         }
         foreach ($todo as $method) {
             $synology = ClientFactory::getGeneric($service, $api_host, $api_port, $api_http, $version);
@@ -129,6 +132,11 @@ foreach ($api_list as $root => $json) {
             if (array_key_exists($api_name, $required) &&
                 array_key_exists($method, $required[$api_name])) {
                 $params = $required[$api_name][$method];
+                if (!empty($format) && $format == "JSON") {
+                    foreach ($params as $key => $value) {
+                        $params[$key] = json_encode($value);
+                    }
+                }
                 echo "Required:", $api_name, $method, print_r($params, true);
             }
             try {
