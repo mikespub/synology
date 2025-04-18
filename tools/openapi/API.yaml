@@ -242,7 +242,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/API.Auth_LoginResponse'
         default:
           description: Abnormal Response
           content:
@@ -435,6 +435,24 @@ components:
         data:
           type: object
           description: The data object contains all the response information described in each method.
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    API.Auth_LoginResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.API.Auth-login.json'
         error:
           type: object
           properties:

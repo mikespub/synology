@@ -38,7 +38,7 @@ class DownloadStation extends Authenticate
      */
     public function getInfo()
     {
-        return $this->_request('Info', 'DownloadStation/info.cgi', 'getinfo');
+        return $this->request('Info', 'DownloadStation/info.cgi', 'getinfo');
     }
 
     /**
@@ -48,7 +48,7 @@ class DownloadStation extends Authenticate
      */
     public function getConfig()
     {
-        return $this->_request('Info', 'DownloadStation/info.cgi', 'getconfig');
+        return $this->request('Info', 'DownloadStation/info.cgi', 'getconfig');
     }
 
     /**
@@ -62,7 +62,7 @@ class DownloadStation extends Authenticate
      */
     public function setConfig($params)
     {
-        return $this->_request('Info', 'DownloadStation/info.cgi', 'setserverconfig', $params, null, 'post');
+        return $this->request('Info', 'DownloadStation/info.cgi', 'setserverconfig', $params, null, 'post');
     }
 
     /**
@@ -72,7 +72,7 @@ class DownloadStation extends Authenticate
      */
     public function getScheduleConfig()
     {
-        return $this->_request('Schedule', 'DownloadStation/schedule.cgi', 'getconfig');
+        return $this->request('Schedule', 'DownloadStation/schedule.cgi', 'getconfig');
     }
 
     /**
@@ -86,7 +86,7 @@ class DownloadStation extends Authenticate
      */
     public function setScheduleConfig($params)
     {
-        return $this->_request('Schedule', 'DownloadStation/schedule.cgi', 'setserverconfig', $params, null, 'post');
+        return $this->request('Schedule', 'DownloadStation/schedule.cgi', 'setserverconfig', $params, null, 'post');
     }
 
     /**
@@ -113,7 +113,7 @@ class DownloadStation extends Authenticate
             $params['additional'] = implode(',', $additional);
         }
 
-        return $this->_request('Task', 'DownloadStation/task.cgi', 'list', $params);
+        return $this->request('Task', 'DownloadStation/task.cgi', 'list', $params);
     }
 
     /**
@@ -138,7 +138,7 @@ class DownloadStation extends Authenticate
             $params['additional'] = implode(',', $additional);
         }
 
-        return $this->_request('Task', 'DownloadStation/task.cgi', 'getinfo', $params);
+        return $this->request('Task', 'DownloadStation/task.cgi', 'getinfo', $params);
     }
 
     /**
@@ -172,7 +172,7 @@ class DownloadStation extends Authenticate
             $params['destination'] = $destination;
         }
 
-        return $this->_request('Task', 'DownloadStation/task.cgi', 'create', $params, null, 'post');
+        return $this->request('Task', 'DownloadStation/task.cgi', 'create', $params, null, 'post');
     }
 
     /**
@@ -196,7 +196,7 @@ class DownloadStation extends Authenticate
             $params['force_complete'] = 'true';
         }
 
-        return $this->_request('Task', 'DownloadStation/task.cgi', 'delete', $params, null, 'post');
+        return $this->request('Task', 'DownloadStation/task.cgi', 'delete', $params, null, 'post');
     }
 
     /**
@@ -215,7 +215,7 @@ class DownloadStation extends Authenticate
             $params['id'] = $taskId;
         }
 
-        return $this->_request('Task', 'DownloadStation/task.cgi', 'pause', $params, null, 'post');
+        return $this->request('Task', 'DownloadStation/task.cgi', 'pause', $params, null, 'post');
     }
 
     /**
@@ -234,7 +234,7 @@ class DownloadStation extends Authenticate
             $params['id'] = $taskId;
         }
 
-        return $this->_request('Task', 'DownloadStation/task.cgi', 'resume', $params, null, 'post');
+        return $this->request('Task', 'DownloadStation/task.cgi', 'resume', $params, null, 'post');
     }
 
     /**
@@ -244,7 +244,7 @@ class DownloadStation extends Authenticate
      */
     public function getStatistics()
     {
-        return $this->_request('Statistic', 'DownloadStation/task.cgi', 'getinfo');
+        return $this->request('Statistic', 'DownloadStation/task.cgi', 'getinfo');
     }
 
     /**
@@ -266,7 +266,7 @@ class DownloadStation extends Authenticate
             $params['limit'] = $limit;
         }
 
-        return $this->_request('RSS.Site', 'DownloadStation/RSSsite.cgi', 'list', $params);
+        return $this->request('RSS.Site', 'DownloadStation/RSSsite.cgi', 'list', $params);
     }
 
     /**
@@ -285,7 +285,7 @@ class DownloadStation extends Authenticate
             $params['id'] = $rssId;
         }
 
-        return $this->_request('RSS.Site', 'DownloadStation/RSSsite.cgi', 'list', []);
+        return $this->request('RSS.Site', 'DownloadStation/RSSsite.cgi', 'list', []);
     }
 
     /**
@@ -316,7 +316,7 @@ class DownloadStation extends Authenticate
             $params['limit'] = $limit;
         }
 
-        return $this->_request('RSS.Feed', 'DownloadStation/RSSfeed.cgi', 'list', $params);
+        return $this->request('RSS.Feed', 'DownloadStation/RSSfeed.cgi', 'list', $params);
     }
 
     /**
@@ -334,7 +334,7 @@ class DownloadStation extends Authenticate
             'module'  => $module,
         ];
 
-        return $this->_request('BTSearch', 'DownloadStation/btsearch.cgi', 'start', $params);
+        return $this->request('BTSearch', 'DownloadStation/btsearch.cgi', 'start', $params);
     }
 
     /**
@@ -362,7 +362,7 @@ class DownloadStation extends Authenticate
             'filter_title'    => $filterTitle,
         ];
 
-        return $this->_request('BTSearch', 'DownloadStation/btsearch.cgi', 'list', $params);
+        return $this->request('BTSearch', 'DownloadStation/btsearch.cgi', 'list', $params);
     }
 
     /**
@@ -372,7 +372,7 @@ class DownloadStation extends Authenticate
      */
     public function getCategory()
     {
-        return $this->_request('BTSearch', 'DownloadStation/btsearch.cgi', 'getCategory');
+        return $this->request('BTSearch', 'DownloadStation/btsearch.cgi', 'getCategory');
     }
 
     /**
@@ -384,7 +384,7 @@ class DownloadStation extends Authenticate
      */
     public function cleanSearch($taskId)
     {
-        return $this->_request('BTSearch', 'DownloadStation/btsearch.cgi', 'clean', ['taskid' => $taskId]);
+        return $this->request('BTSearch', 'DownloadStation/btsearch.cgi', 'clean', ['taskid' => $taskId]);
     }
 
     /**
@@ -394,6 +394,6 @@ class DownloadStation extends Authenticate
      */
     public function getModule()
     {
-        return $this->_request('BTSearch', 'DownloadStation/btsearch.cgi', 'getModule');
+        return $this->request('BTSearch', 'DownloadStation/btsearch.cgi', 'getModule');
     }
 }

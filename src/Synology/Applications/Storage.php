@@ -57,6 +57,6 @@ class Storage extends Authenticate
         $params = [];
         $version = static::API_VERSION;
 
-        return $this->_request($type, $path, $method, $params, $version);
+        return $this->request($type, $path, $method, $params, $version);
     }
 }

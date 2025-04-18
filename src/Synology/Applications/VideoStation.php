@@ -37,7 +37,7 @@ class VideoStation extends Authenticate
      */
     public function getInfo()
     {
-        return $this->_request('Info', 'VideoStation/info.cgi', 'getinfo');
+        return $this->request('Info', 'VideoStation/info.cgi', 'getinfo');
     }
 
     /**
@@ -81,7 +81,7 @@ class VideoStation extends Authenticate
                 throw new Exception('Unknown "' . $type . '" object');
         }
 
-        return $this->_request($type, $path, 'list', ['limit' => $limit, 'offset' => $offset]);
+        return $this->request($type, $path, 'list', ['limit' => $limit, 'offset' => $offset]);
     }
 
     /**
@@ -125,7 +125,7 @@ class VideoStation extends Authenticate
                 throw new Exception('Unknown "' . $type . '" object');
         }
 
-        return $this->_request($type, $path, 'search', [
+        return $this->request($type, $path, 'search', [
             'title' => $name,
             'limit' => $limit,
             'offset' => $offset,
@@ -173,7 +173,7 @@ class VideoStation extends Authenticate
                 throw new Exception('Unknow "' . $type . '" object');
         }
 
-        return $this->_request($type, $path, 'list', [
+        return $this->request($type, $path, 'list', [
             'limit' => $limit,
             'offset' => $offset,
             'sort_by' => $sortby,

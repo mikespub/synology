@@ -11,6 +11,10 @@ if (PHP_SAPI !== 'cli') {
     echo "This script is meant to run from commmand line\n";
     exit;
 }
+if (!file_exists(__DIR__ . '/.env') && empty($_ENV['API_HOST'])) {
+    echo "Copy tools/.env.sample to tools/.env and adapt as needed, or set environment variables\n";
+    exit;
+}
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 

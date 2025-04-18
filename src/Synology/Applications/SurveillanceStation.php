@@ -35,7 +35,7 @@ class SurveillanceStation extends Authenticate
      */
     public function getInfo()
     {
-        return $this->_request('Info', static::API_PATH, 'GetInfo');
+        return $this->request('Info', static::API_PATH, 'GetInfo');
     }
 
     /**
@@ -44,7 +44,7 @@ class SurveillanceStation extends Authenticate
      */
     public function getCameraList()
     {
-        return $this->_request('Camera', static::API_PATH, 'List');
+        return $this->request('Camera', static::API_PATH, 'List');
     }
 
     /**
@@ -57,7 +57,7 @@ class SurveillanceStation extends Authenticate
         $parameters = [
             'cameraId' => $cameraId,
         ];
-        return $this->_request('Camera', static::API_PATH, 'GetSnapshot', $parameters);
+        return $this->request('Camera', static::API_PATH, 'GetSnapshot', $parameters);
     }
 
     /**
@@ -76,7 +76,7 @@ class SurveillanceStation extends Authenticate
         $parameters = [
             'need_mobiles' => $need_mobiles,
         ];
-        return $this->_request('HomeMode', static::API_PATH, 'GetInfo', $parameters, 1);
+        return $this->request('HomeMode', static::API_PATH, 'GetInfo', $parameters, 1);
     }
 
     /**
@@ -94,7 +94,7 @@ class SurveillanceStation extends Authenticate
         $parameters = [
             'on' => $on,
         ];
-        return $this->_request('HomeMode', static::API_PATH, 'Switch', $parameters, 1);
+        return $this->request('HomeMode', static::API_PATH, 'Switch', $parameters, 1);
     }
 
 }

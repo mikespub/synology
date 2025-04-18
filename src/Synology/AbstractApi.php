@@ -19,17 +19,18 @@ abstract class AbstractApi
     public const CONNECT_TIMEOUT = 2000; //2s
     public const REQUEST_TIMEOUT = 30000; //30s
 
-    protected $_serviceName = null;
-    protected $_namespace = null;
-    private $_protocol = self::PROTOCOL_HTTP;
-    private $_port = 80;
-    private $_address = '';
-    protected $_version = 1;
-    private $_debug = false;
-    private $_verifySSL = false;
-    private $_separator = '&';
-    private $enc_type = PHP_QUERY_RFC3986;
-    private $_errorCodes = [
+    protected $serviceName = null;
+    protected $namespace = null;
+    protected $version = 1;
+    protected $associative = false;
+    private $protocol = self::PROTOCOL_HTTP;
+    private $port = 80;
+    private $address = '';
+    private $debug = false;
+    private $verifySSL = false;
+    private $separator = '&';
+    private $encoding = PHP_QUERY_RFC3986;
+    private $errorCodes = [
         '?' => [
             '?' => [
                 100 => 'Unknown error',
@@ -56,7 +57,7 @@ abstract class AbstractApi
             ],
         ],
     ];
-    private $client = null;
+    protected $client = null;
 
     /**
      * Setup API
@@ -71,21 +72,21 @@ abstract class AbstractApi
      */
     public function __construct($serviceName, $namespace, $address, $port = null, $protocol = self::PROTOCOL_HTTP, $version = 1, $verifySSL = false)
     {
-        $this->_serviceName = $serviceName;
-        $this->_namespace   = $namespace;
-        $this->_address     = $address;
-        $this->_verifySSL   = $verifySSL;
-        $this->_separator   = ini_get('arg_separator.output');
+        $this->serviceName = $serviceName;
+        $this->namespace   = $namespace;
+        $this->address     = $address;
+        $this->verifySSL   = $verifySSL;
+        $this->separator   = ini_get('arg_separator.output');
 
         if (!empty($port) && is_numeric($port)) {
-            $this->_port = (int) $port;
+            $this->port = (int) $port;
         }
 
         if (!empty($protocol)) {
-            $this->_protocol = $protocol;
+            $this->protocol = $protocol;
         }
 
-        $this->_version = $version;
+        $this->version = $version;
     }
 
     /**
@@ -93,9 +94,9 @@ abstract class AbstractApi
      *
      * @return string
      */
-    protected function _getBaseUrl()
+    protected function getBaseUrl()
     {
-        return $this->_protocol . '://' . $this->_address . ':' . $this->_port . '/webapi/';
+        return $this->protocol . '://' . $this->address . ':' . $this->port . '/webapi/';
     }
 
     /**
@@ -105,26 +106,26 @@ abstract class AbstractApi
      *
      * @return string
      */
-    private function _getApiName($api)
+    protected function getApiName($api)
     {
-        return $this->_namespace . '.' . $this->_serviceName . '.' . $api;
+        return $this->namespace . '.' . $this->serviceName . '.' . $api;
     }
 
     /**
      * Process a request
      *
-     * @param string $api
+     * @param string $api API type for SYNO.Service.Type...
      * @param string $path
      * @param string $method
      * @param array<mixed> $params
      * @param ?int   $version
      * @param string $httpMethod
      *
-     * @return array|string|bool|\stdClass
+     * @return array<mixed>|string|bool|\stdClass
      *
      * @throws Exception
      */
-    protected function _request($api, $path, $method, $params = [], $version = null, $httpMethod = 'get')
+    protected function request($api, $path, $method, $params = [], $version = null, $httpMethod = 'get')
     {
         if (!is_array($params)) {
             if (!empty($params)) {
@@ -133,14 +134,14 @@ abstract class AbstractApi
                 $params = [];
             }
         }
-        $params['api']     = $this->_getApiName($api);
-        $params['version'] = ((int) $version > 0) ? (int) $version : $this->_version;
+        $params['api']     = $this->getApiName($api);
+        $params['version'] = ((int) $version > 0) ? (int) $version : $this->version;
         $params['method']  = $method;
 
-        // create a new cURL resource
+        // get http client
         $client = $this->getHttpClient();
 
-        $url = $this->_getBaseUrl() . $path;
+        $url = $this->getBaseUrl() . $path;
         if ($httpMethod !== 'post') {
             $this->log($url, 'Requested Url');
             $this->log($params, 'Query Variable');
@@ -150,7 +151,7 @@ abstract class AbstractApi
             $this->log($url, 'Requested Url');
             $this->log($params, 'Post Variable');
             // verify if we need to send multipart/form-data, application/x-www-form-urlencoded or application/json ['json' => array]
-            $response = $client->request('POST', $this->_getBaseUrl() . $path, ['body' => $params]);
+            $response = $client->request('POST', $this->getBaseUrl() . $path, ['body' => $params]);
         }
 
         // gets the response body as a string
@@ -166,14 +167,14 @@ abstract class AbstractApi
         if (!isset($info['content_type'])) {
             // gets the HTTP headers as string[][] with the header names lower-cased
             $headers = $response->getHeaders();
-            $headers['content_type'] ??= ['unknown/unknown'];
-            $info['content_type'] = $headers['content_type'][0];
+            $headers['content-type'] ??= ['unknown/unknown'];
+            $info['content_type'] = $headers['content-type'][0];
         }
 
         $this->log($info['http_code'], 'Response code');
         if (200 == $info['http_code']) {
             if (preg_match('#(plain|text|json)#', $info['content_type'])) {
-                return $this->_parseRequest($api, $path, $result);
+                return $this->parseRequest($api, $path, $result);
             } else {
                 return $result;
             }
@@ -193,23 +194,27 @@ abstract class AbstractApi
      * @param string $json
      *
      * @throws Exception
-     * @return \stdClass|array|string|bool
+     * @return \stdClass|array<mixed>|string|bool
      */
-    private function _parseRequest($api, $path, $json)
+    private function parseRequest($api, $path, $json)
     {
         if (($data = json_decode(trim($json))) !== null) {
             if ($data->success == 1) {
                 if (isset($data->data)) {
+                    if ($this->associative && $data->data instanceof \stdClass) {
+                        // return top-level assoc array for data
+                        return (array) $data->data;
+                    }
                     return $data->data;
                 }
                 return true;
             } else {
                 $code = $data->error->code;
 
-                if (isset($this->_errorCodes[$path][$api][$code])) {
-                    throw new Exception($this->_errorCodes[$path][$api][$code], $code);
-                } elseif (isset($this->_errorCodes['?']['?'][$code])) {
-                    throw new Exception($this->_errorCodes['?']['?'][$code], $code);
+                if (isset($this->errorCodes[$path][$api][$code])) {
+                    throw new Exception($this->errorCodes[$path][$api][$code], $code);
+                } elseif (isset($this->errorCodes['?']['?'][$code])) {
+                    throw new Exception($this->errorCodes['?']['?'][$code], $code);
                 } else {
                     throw new Exception('Unknown error', $code);
                 }
@@ -225,7 +230,7 @@ abstract class AbstractApi
      */
     public function activateDebug()
     {
-        $this->_debug = true;
+        $this->debug = true;
 
         return $this;
     }
@@ -238,7 +243,7 @@ abstract class AbstractApi
      */
     protected function log($value, $key = null)
     {
-        if ($this->_debug) {
+        if ($this->debug) {
             if ($key != null) {
                 echo $key . ': ';
             }
@@ -268,19 +273,19 @@ abstract class AbstractApi
     public function getHttpClient()
     {
         $this->client ??= HttpClient::create([
-            'verify_peer' => $this->_verifySSL,
-            'verify_host' => $this->_verifySSL,
+            'verify_peer' => $this->verifySSL,
+            'verify_host' => $this->verifySSL,
             'max_duration' => (float) self::REQUEST_TIMEOUT / 1000.0,
         ]);
         return $this->client;
     }
 
     /**
-     * @param int $enc_type
+     * @param int $encoding
      */
-    public function setEncType($enc_type)
+    public function setEncType($encoding)
     {
-        $this->enc_type = $enc_type;
+        $this->encoding = $encoding;
     }
 
 }

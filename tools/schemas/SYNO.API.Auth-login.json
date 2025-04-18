@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "did": {
+      "type": "string"
+    },
+    "is_portal_port": {
+      "type": "boolean"
+    },
+    "sid": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "did",
+    "is_portal_port",
+    "sid"
+  ]
+}

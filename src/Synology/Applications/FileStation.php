@@ -38,7 +38,7 @@ class FileStation extends Authenticate
      */
     public function getInfo()
     {
-        return $this->_request('Info', static::API_PATH, 'getinfo');
+        return $this->request('Info', static::API_PATH, 'getinfo');
     }
 
     /**
@@ -57,7 +57,7 @@ class FileStation extends Authenticate
      */
     public function getShares($onlyWritable = false, $limit = 25, $offset = 0, $sortBy = 'name', $sortDirection = 'asc', $additional = false)
     {
-        return $this->_request('List', static::API_PATH, 'list_share', [
+        return $this->request('List', static::API_PATH, 'list_share', [
             'onlywritable'   => $onlyWritable,
             'limit'          => $limit,
             'offset'         => $offset,
@@ -91,7 +91,7 @@ class FileStation extends Authenticate
                 throw new Exception('Unknown "' . $type . '" object');
         }
 
-        return $this->_request($type, $path, 'getinfo', ['id' => $id]);
+        return $this->request($type, $path, 'getinfo', ['id' => $id]);
     }
 
     /**
@@ -111,7 +111,7 @@ class FileStation extends Authenticate
      */
     public function getList($path = '/home', $limit = 25, $offset = 0, $sortBy = 'name', $sortDirection = 'asc', $pattern = '', $fileType = 'all', $additional = false)
     {
-        return $this->_request('List', static::API_PATH, 'list', [
+        return $this->request('List', static::API_PATH, 'list', [
             'folder_path'    => $path,
             'limit'          => $limit,
             'offset'         => $offset,
@@ -140,7 +140,7 @@ class FileStation extends Authenticate
      */
     public function search($pattern, $path = '/home', $limit = 25, $offset = 0, $sortBy = 'name', $sortDirection = 'asc', $fileType = 'all', $additional = false)
     {
-        return $this->_request('List', static::API_PATH, 'list', [
+        return $this->request('List', static::API_PATH, 'list', [
             'folder_path'    => $path,
             'limit'          => $limit,
             'offset'         => $offset,
@@ -162,7 +162,7 @@ class FileStation extends Authenticate
      */
     public function download($path, $mode = 'open')
     {
-        return $this->_request('Download', static::API_PATH, 'download', [
+        return $this->request('Download', static::API_PATH, 'download', [
             'path' => $path,
             'mode' => $mode,
         ]);
@@ -170,7 +170,7 @@ class FileStation extends Authenticate
 
     public function createFolder($folder_path, $name, $force_parent = false, $additional = false)
     {
-        return $this->_request('CreateFolder', static::API_PATH, 'create', [
+        return $this->request('CreateFolder', static::API_PATH, 'create', [
             'folder_path'  => $folder_path,
             'name'         => $name,
             'force_parent' => $force_parent,

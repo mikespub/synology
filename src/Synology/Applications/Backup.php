@@ -57,7 +57,7 @@ class Backup extends Authenticate
         ];
         $version = static::API_VERSION;
 
-        return $this->_request($type, $path, $method, $params, $version);
+        return $this->request($type, $path, $method, $params, $version);
     }
 
     /**
@@ -77,6 +77,6 @@ class Backup extends Authenticate
         ];
         $version = static::API_VERSION;
 
-        return $this->_request($type, $path, $method, $params, $version);
+        return $this->request($type, $path, $method, $params, $version);
     }
 }

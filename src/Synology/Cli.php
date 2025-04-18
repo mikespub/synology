@@ -2,6 +2,8 @@
 
 namespace Synology;
 
+use Synology\Applications\ClientFactory;
+
 /**
  * Class Cli
  *
@@ -34,10 +36,10 @@ class Cli
      */
     public function __construct($address = null, $port = null, $username = null, $password = null, $protocol = null)
     {
-        $this->host = $address ?? (getenv('API_HOST') ?: '192.168.10.5');
-        $this->port = $port ?? (int) (getenv('API_PORT') ?: 5001);
-        $this->user = $username ?? (getenv('API_USER') ?: 'admin');
-        $this->pass = $password ?? (getenv('API_PASS') ?: '*****');
+        $this->host = $address ?? $_ENV['API_HOST'] ?? '192.168.10.5';
+        $this->port = $port ?? (int) ($_ENV['API_PORT'] ?? 5001);
+        $this->user = $username ?? $_ENV['API_USER'] ?? 'admin';
+        $this->pass = $password ?? $_ENV['API_PASS'] ?? '*****';
         $this->http = $protocol ?? (($this->port === 5001) ? 'https' : 'http');
         $this->tools = dirname(__DIR__, 2) . '/tools';
         $this->loadApiList($this->tools);
@@ -194,7 +196,7 @@ class Cli
      */
     public function parseParams($api, $method, $argv = null)
     {
-        $params = [];
+        $params = $this->askParams($api, $method);
         if (!empty($argv)) {
             foreach ($argv as $arg) {
                 [$key, $value] = explode('=', $arg);
@@ -205,15 +207,52 @@ class Cli
     }
 
     /**
+     * Summary of findMethod
+     * @param string $service
+     * @param string $api
+     * @param string $method
+     * @return array{0: string, 1: int}
+     */
+    public function findMethod($service, $api, $method)
+    {
+        $root = "SYNO.$service";
+        $json = $this->apilist[$root];
+        $values = $json[$api];
+        $version = $values['maxVersion'];
+        $methods = $values['methods'][$version] ?? false;
+        if (!$methods) {
+            $version = $values['minVersion'];
+            $methods = $values['methods'][$version] ?? [];
+        }
+        if (!in_array($method, $methods)) {
+            echo "Unknown Api Method $api $method\n";
+            return ['', 0];
+        }
+        return [$values['path'], $version];
+    }
+
+    /**
      * Summary of runMethod
      * @param string $api
      * @param string $method
      * @param array<string, mixed> $params
-     * @return string
+     * @return array<mixed>|string|bool|\stdClass
      */
     public function runMethod($api, $method, $params = [])
     {
-        return "Run $api $method " . str_replace("\n", "", var_export($params, true)) . "\n";
+        [$namespace, $service, $type] = explode('.', $api, 3);
+        [$path, $version] = $this->findMethod($service, $api, $method);
+        if (empty($path) || empty($version)) {
+            return "Run $api $method " . str_replace("\n", "", var_export($params, true)) . "\n";
+        }
+        $client = ClientFactory::getGeneric($service, $this->host, $this->port, $this->http);
+        if ($api == 'SYNO.API.Info' && $method == 'query') {
+            // no authentication needed
+        } else {
+            $client->connect($this->user, $this->pass);
+        }
+        $result = $client->call($type, $path, $method, $params, $version);
+        return $result;
     }
 
     /**

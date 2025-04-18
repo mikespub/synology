@@ -37,7 +37,7 @@ class Core extends Authenticate
      * @param int    $limit
      * @param int    $offset
      *
-     * @return array
+     * @return array<mixed>|\stdClass
      */
     public function getObjects($type, $limit = 25, $offset = 0)
     {
@@ -80,6 +80,6 @@ class Core extends Authenticate
                 throw new Exception('Unknown "' . $type . '" object');
         }
 
-        return $this->_request($type, $path, $method, ['limit' => $limit, 'offset' => $offset], $version);
+        return $this->request($type, $path, $method, ['limit' => $limit, 'offset' => $offset], $version);
     }
 }

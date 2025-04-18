@@ -2,6 +2,7 @@
 
 namespace Synology\Applications;
 
+use Synology\AbstractApi;
 use Synology\Api\Authenticate;
 use Synology\Exception;
 
@@ -38,12 +39,16 @@ class GenericClient extends Authenticate
      * @param ?int   $version
      * @param string $httpMethod
      *
-     * @return array|bool|\stdClass
+     * @return array<mixed>|string|bool|\stdClass
      *
      * @throws Exception
      */
     public function call($api, $path, $method, $params = [], $version = null, $httpMethod = 'get')
     {
-        return $this->_request($api, $path, $method, $params, $version, $httpMethod);
+        if ($this->getApiName($api) == 'SYNO.API.Info' && $method == 'query') {
+            // no authentication needed - skip Authenticate::request() and go directly to AbstractApi::request()
+            return AbstractApi::request($api, $path, $method, $params, $version, $httpMethod);
+        }
+        return $this->request($api, $path, $method, $params, $version, $httpMethod);
     }
 }

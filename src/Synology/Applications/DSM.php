@@ -38,7 +38,7 @@ class DSM extends Authenticate
      */
     public function getInfo()
     {
-        return $this->_request('Info', 'dsm/info.cgi', 'getinfo');
+        return $this->request('Info', 'dsm/info.cgi', 'getinfo');
     }
 
     /**
@@ -94,6 +94,6 @@ class DSM extends Authenticate
                 throw new Exception('Unknown "' . $type . '" object');
         }
 
-        return $this->_request($type, $path, 'list', ['limit' => $limit, 'offset' => $offset]);
+        return $this->request($type, $path, 'list', ['limit' => $limit, 'offset' => $offset]);
     }
 }

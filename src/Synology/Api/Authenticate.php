@@ -14,8 +14,8 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  */
 class Authenticate extends AbstractApi
 {
-    private $_authApi = null;
-    private $_sessionName = null;
+    private Api $authApi;
+    private string $sessionName;
 
     /**
      * Constructor
@@ -31,24 +31,24 @@ class Authenticate extends AbstractApi
     public function __construct($serviceName, $namespace, $address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
         parent::__construct($serviceName, $namespace, $address, $port, $protocol, $version, $verifySSL);
-        $this->_sessionName = $serviceName;
-        $this->_authApi     = new Api($address, $port, $protocol, $version);
+        $this->sessionName = $serviceName;
+        $this->authApi     = new Api($address, $port, $protocol, $version);
     }
 
     /**
      * Get a list of Apis for this Service
      *
      * @param ?string $serviceName
-     * @return array<string, mixed>
+     * @return array<string, \stdClass>
      */
     public function getAvailableApi($serviceName = null)
     {
-        $serviceName ??= $this->_serviceName;
-        $apiList = $this->_authApi->getAvailableApi();
-        if (str_starts_with($serviceName, $this->_namespace . '.')) {
+        $serviceName ??= $this->serviceName;
+        $apiList = $this->authApi->getAvailableApi();
+        if (str_starts_with($serviceName, $this->namespace . '.')) {
             $prefix = $serviceName . '.';
         } else {
-            $prefix = $this->_namespace . '.' . $serviceName . '.';
+            $prefix = $this->namespace . '.' . $serviceName . '.';
         }
         return array_filter($apiList, function ($api) use ($prefix) {
             return str_starts_with($api, $prefix);
@@ -66,15 +66,16 @@ class Authenticate extends AbstractApi
      */
     public function connect($login, $password, $code = null)
     {
-        return $this->_authApi->connect($login, $password, $this->_sessionName, $code);
+        return $this->authApi->connect($login, $password, $this->sessionName, $code);
     }
 
     /**
      * Disconnect to Synology
+     * @return Api
      */
     public function disconnect()
     {
-        return $this->_authApi->disconnect();
+        return $this->authApi->disconnect();
     }
 
     /**
@@ -84,7 +85,8 @@ class Authenticate extends AbstractApi
      */
     public function setHttpClient($client)
     {
-        $this->_authApi->setHttpClient($client);
+        $this->client = $client;
+        $this->authApi->setHttpClient($client);
     }
 
     /**
@@ -96,7 +98,7 @@ class Authenticate extends AbstractApi
      */
     public function getSessionId()
     {
-        return $this->_authApi->getSessionId();
+        return $this->authApi->getSessionId();
     }
 
     /**
@@ -109,7 +111,7 @@ class Authenticate extends AbstractApi
      */
     public function setSessionId($sid)
     {
-        $this->_authApi->setSessionId($sid);
+        $this->authApi->setSessionId($sid);
 
         return $this;
     }
@@ -121,13 +123,13 @@ class Authenticate extends AbstractApi
      */
     public function isConnected()
     {
-        return $this->_authApi->isConnected();
+        return $this->authApi->isConnected();
     }
 
     /**
      * {@inheritDoc}
      */
-    protected function _request($api, $path, $method, $params = [], $version = null, $httpMethod = 'get')
+    protected function request($api, $path, $method, $params = [], $version = null, $httpMethod = 'get')
     {
         if ($this->isConnected()) {
             if (!is_array($params)) {
@@ -140,7 +142,7 @@ class Authenticate extends AbstractApi
 
             $params['_sid'] = $this->getSessionId();
 
-            return parent::_request($api, $path, $method, $params, $version, $httpMethod);
+            return parent::request($api, $path, $method, $params, $version, $httpMethod);
         }
         throw new Exception('Not Connected');
     }
@@ -151,7 +153,7 @@ class Authenticate extends AbstractApi
     public function activateDebug()
     {
         parent::activateDebug();
-        $this->_authApi->activateDebug();
+        $this->authApi->activateDebug();
 
         return $this;
     }
@@ -166,7 +168,7 @@ class Authenticate extends AbstractApi
      */
     public function keepConnection($keepConnection = true)
     {
-        $this->_authApi->keepConnection($keepConnection);
+        $this->authApi->keepConnection($keepConnection);
 
         return $this;
     }

@@ -31,6 +31,7 @@ class ClientFactory
      * @param ?int    $port
      * @param ?string $protocol
      * @param ?int    $version @deprecated can vary per api method
+     * @return Authenticate
      */
     public static function getClient($serviceName, $address, $port = null, $protocol = null, $version = 1)
     {

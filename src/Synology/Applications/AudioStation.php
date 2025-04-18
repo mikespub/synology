@@ -38,7 +38,7 @@ class AudioStation extends Authenticate
      */
     public function getInfo()
     {
-        return $this->_request('Info', 'AudioStation/info.cgi', 'getinfo', [], 2);
+        return $this->request('Info', 'AudioStation/info.cgi', 'getinfo', [], 2);
     }
 
     /**
@@ -91,7 +91,7 @@ class AudioStation extends Authenticate
                 throw new Exception('Unknown "' . $type . '" object');
         }
 
-        return $this->_request($type, $path, 'list', ['limit' => $limit, 'offset' => $offset, 'additional' => $additional]);
+        return $this->request($type, $path, 'list', ['limit' => $limit, 'offset' => $offset, 'additional' => $additional]);
     }
 
     /**
@@ -121,7 +121,7 @@ class AudioStation extends Authenticate
                 throw new Exception('Unknown "' . $type . '" object');
         }
 
-        return $this->_request($type, $path, 'getinfo', ['id' => $id]);
+        return $this->request($type, $path, 'getinfo', ['id' => $id]);
     }
 
     /**
@@ -148,7 +148,7 @@ class AudioStation extends Authenticate
                 throw new Exception('Unknown "' . $type . '" object');
         }
 
-        return $this->_request('Cover', 'AudioStation/cover.cgi', $method, ['id' => $id]);
+        return $this->request('Cover', 'AudioStation/cover.cgi', $method, ['id' => $id]);
     }
 
     /**
@@ -164,7 +164,7 @@ class AudioStation extends Authenticate
      */
     public function searchSong($name, $limit = 25, $offset = 0, $sortBy = 'title', $sortDirection = 'asc')
     {
-        return $this->_request('Song', 'AudioStation/song.cgi', 'search', [
+        return $this->request('Song', 'AudioStation/song.cgi', 'search', [
             'title'          => $name,
             'limit'          => $limit,
             'offset'         => $offset,
@@ -185,7 +185,7 @@ class AudioStation extends Authenticate
      */
     public function listAlbumsOfArtist($artist, $limit = -1, $sortBy = 'name', $sortDirection = 'ASC')
     {
-        return $this->_request('Album', 'AudioStation/album.cgi', 'list', [
+        return $this->request('Album', 'AudioStation/album.cgi', 'list', [
             'artist'         => $artist,
             'limit'          => $limit,
             'sort_by'        => $sortBy,
@@ -207,7 +207,7 @@ class AudioStation extends Authenticate
      */
     public function listSongsInAlbum($artist, $album, $limit = -1, $sortBy = 'track', $sortDirection = 'ASC', $additional = 'song_tag,song_audio,song_rating')
     {
-        return $this->_request('Song', 'AudioStation/song.cgi', 'search', [
+        return $this->request('Song', 'AudioStation/song.cgi', 'search', [
             'album'          => $album,
             'album_artist'   => $artist,
             'limit'          => $limit,
@@ -219,7 +219,7 @@ class AudioStation extends Authenticate
 
     public function stream($id)
     {
-        return $this->_request('Stream', 'AudioStation/stream.cgi', 'stream', [
+        return $this->request('Stream', 'AudioStation/stream.cgi', 'stream', [
             'id' => $id,
         ], 2, 'get');
     }

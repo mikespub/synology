@@ -10,17 +10,17 @@ namespace Synology;
 class Api extends AbstractApi
 {
     public const API_SERVICE_NAME = 'API';
-    public const API_AUTH_VERSION = '6';
+    public const API_AUTH_VERSION = 6;
 
-    private $_sid = null;
-    private $_sessionName = 'default';
+    private ?string $sessionId = null;
+    private string $sessionName = 'default';
 
     /**
      * TRUE if the connection shouldn't be closed automatically.
      *
      * @var boolean
      */
-    private $_keepConnection = false;
+    private $keepConnection = false;
 
     /**
      * Info API setup
@@ -40,14 +40,16 @@ class Api extends AbstractApi
      * Get a list of Service and Apis
      *
      * @param string $query default "all"
-     * @return array<string, mixed>
+     * @return array<string, \stdClass>
      */
     public function getAvailableApi($query = "all")
     {
         $method = 'query';
         $params = ['query' => $query];
         $version = 1;
-        return $this->_request('Info', 'query.cgi', $method, $params, $version);
+        // get top-level assoc array instead of stdClass here
+        $this->associative = true;
+        return $this->request('Info', 'query.cgi', $method, $params, $version);
     }
 
     /**
@@ -57,33 +59,34 @@ class Api extends AbstractApi
      * @param string $password
      * @param ?string $sessionName
      * @param int|null $code
+     * @param int|null $auth_version
      *
      * @return Api
      */
     public function connect($username, $password, $sessionName = null, $code = null, $auth_version = self::API_AUTH_VERSION)
     {
         if (!empty($sessionName)) {
-            $this->_sessionName = $sessionName;
+            $this->sessionName = $sessionName;
         }
 
-        $this->log($this->_sessionName, 'Connect Session');
+        $this->log($this->sessionName, 'Connect Session');
         $this->log($username, 'User');
 
         $options = [
             'account' => $username,
             'passwd'  => $password,
-            'session' => $this->_sessionName,
+            'session' => $this->sessionName,
             'format'  => 'sid',
         ];
 
-        if ($this->_version > 2 && $code !== null) {
+        if ($this->version > 2 && $code !== null) {
             $options['otp_code'] = $code;
         }
 
-        $data = $this->_request('Auth', 'auth.cgi', 'login', $options, $auth_version);
+        $data = $this->request('Auth', 'auth.cgi', 'login', $options, $auth_version);
 
         // save session name id
-        $this->_sid = $data->sid;
+        $this->sessionId = $data->sid;
 
         return $this;
     }
@@ -95,9 +98,9 @@ class Api extends AbstractApi
      */
     public function disconnect()
     {
-        $this->log($this->_sessionName, 'Disconnect Session');
-        $this->_request('Auth', 'auth.cgi', 'logout', ['_sid' => $this->_sid, 'session' => $this->_sessionName]);
-        $this->_sid = null;
+        $this->log($this->sessionName, 'Disconnect Session');
+        $this->request('Auth', 'auth.cgi', 'logout', ['_sid' => $this->sessionId, 'session' => $this->sessionName]);
+        $this->sessionId = null;
 
         return $this;
     }
@@ -111,8 +114,8 @@ class Api extends AbstractApi
      */
     public function getSessionId()
     {
-        if ($this->_sid) {
-            return $this->_sid;
+        if ($this->sessionId) {
+            return $this->sessionId;
         } else {
             throw new Exception('Missing session');
         }
@@ -128,7 +131,7 @@ class Api extends AbstractApi
      */
     public function setSessionId($sid)
     {
-        $this->_sid = $sid;
+        $this->sessionId = $sid;
 
         return $this;
     }
@@ -140,7 +143,7 @@ class Api extends AbstractApi
      */
     public function isConnected()
     {
-        if (!empty($this->_sid)) {
+        if (!empty($this->sessionId)) {
             return true;
         }
 
@@ -154,7 +157,7 @@ class Api extends AbstractApi
      */
     public function getSessionName()
     {
-        return $this->_sessionName;
+        return $this->sessionName;
     }
 
     /**
@@ -167,14 +170,14 @@ class Api extends AbstractApi
      */
     public function keepConnection($keepConnection = true)
     {
-        $this->_keepConnection = $keepConnection;
+        $this->keepConnection = $keepConnection;
 
         return $this;
     }
 
     public function __destruct()
     {
-        if ($this->_sid !== null && !$this->_keepConnection) {
+        if ($this->sessionId !== null && !$this->keepConnection) {
             $this->disconnect();
         }
     }

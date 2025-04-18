@@ -61,7 +61,7 @@ class CloudSync extends Authenticate
         ];
         $version = static::API_VERSION;
 
-        return $this->_request($type, $path, $method, $params, $version);
+        return $this->request($type, $path, $method, $params, $version);
     }
 
     /**
@@ -85,7 +85,7 @@ class CloudSync extends Authenticate
         ];
         $version = static::API_VERSION;
 
-        return $this->_request($type, $path, $method, $params, $version);
+        return $this->request($type, $path, $method, $params, $version);
     }
 
     /**
@@ -105,7 +105,7 @@ class CloudSync extends Authenticate
         ];
         $version = static::API_VERSION;
 
-        return $this->_request($type, $path, $method, $params, $version);
+        return $this->request($type, $path, $method, $params, $version);
     }
 
     /**
@@ -130,6 +130,6 @@ class CloudSync extends Authenticate
         ];
         $version = static::API_VERSION;
 
-        return $this->_request($type, $path, $method, $params, $version, 'post');
+        return $this->request($type, $path, $method, $params, $version, 'post');
     }
 }

@@ -39,7 +39,7 @@ class CloudStationServer extends Authenticate
      */
     public function getConnection($sort_by = 'login_time', $sort_direction = 'DESC', $offset = 0, $limit = 50)
     {
-        return $this->_request('Connection', static::API_PATH, 'list', [
+        return $this->request('Connection', static::API_PATH, 'list', [
             'sort_by' => $sort_by,
             'sort_direction' => $sort_direction,
             'offset' => $offset,
@@ -61,7 +61,7 @@ class CloudStationServer extends Authenticate
      */
     public function getLog($offset = 0, $limit = 100, $keyword = '', $datefrom = '', $dateto = '', $logtype = '[]', $ipaddress = '')
     {
-        return $this->_request('Log', static::API_PATH, 'list', [
+        return $this->request('Log', static::API_PATH, 'list', [
             'target' => 'user',
             'share_type' => 'all',
             'offset' => $offset,
