@@ -20,6 +20,7 @@ class CoreTest extends TestCase
         $api->setHttpClient($client);
 
         $result = $api->getAvailableApi();
+        $this->assertIsArray($result);
         $result = array_keys($result);
         sort($result);
 
@@ -44,7 +45,6 @@ class CoreTest extends TestCase
         $this->assertInstanceOf(Core::class, $service);
 
         $result = $service->getObjects('User');
-        var_dump($result);
         $this->compareResultFile($result, $resultFile);
     }
 }

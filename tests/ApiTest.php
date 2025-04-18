@@ -20,6 +20,7 @@ class ApiTest extends TestCase
         $service->setHttpClient($client);
 
         $result = $service->getAvailableApi();
+        $this->assertIsArray($result);
         $this->compareResultFile($result, $resultFile, true);
     }
 }

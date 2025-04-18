@@ -83,15 +83,17 @@ class FileStation extends Authenticate
         switch ($type) {
             case 'List':
                 $path = static::API_PATH;
+                $params = ['path' => $id];
                 break;
             case 'Sharing':
                 $path = static::API_PATH;
+                $params = ['id' => $id];
                 break;
             default:
                 throw new Exception('Unknown "' . $type . '" object');
         }
 
-        return $this->request($type, $path, 'getinfo', ['id' => $id]);
+        return $this->request($type, $path, 'getinfo', $params);
     }
 
     /**
