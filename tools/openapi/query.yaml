@@ -52073,6 +52073,186 @@ components:
               type: array
               items:
                 type: object
+    CloudSync_Get_propertyResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_property.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_logResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_log.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_recently_changeResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_recently_change.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_connection_settingResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_connection_setting.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_session_settingResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_session_setting.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_selective_folder_listResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_selective_folder_list.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_selective_sync_configResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_selective_sync_config.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_List_connResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-list_conn.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_List_sessResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-list_sess.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_conn_auth_infoResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_conn_auth_info.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
     Contacts.Addressbook_ListResponse:
       type: object
       properties:

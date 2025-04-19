@@ -79,11 +79,18 @@ foreach ($api_list as $root => $json) {
         } elseif ($api_name == 'SYNO.API.Info' && in_array('query', $methods)) {
             $todo[] = 'query';
         }
-        foreach ($todo as $method) {
-            $synology = ClientFactory::getGeneric($service, $api_host, $api_port, $api_http, $version);
-            if (!is_a($synology, GenericClient::class)) {
-                continue;
+        // add methods where required params are defined
+        if (array_key_exists($api_name, $required)) {
+            foreach ($required[$api_name] as $method => $params) {
+                if (in_array('required', $params, true)) {
+                    continue;
+                }
+                if (!in_array($method, $todo)) {
+                    $todo[] = $method;
+                }
             }
+        }
+        foreach ($todo as $method) {
             $result_file = $tools_dir . '/results/' . $api_name . '-' . $method . '.json';
             $error_file = str_replace('/results/', '/errors/', $result_file);
             $schema_file = str_replace('/results/', '/schemas/', $result_file);
@@ -123,6 +130,10 @@ foreach ($api_list as $root => $json) {
             if (file_exists($error_file)) {
                 continue;
             }
+            $synology = ClientFactory::getGeneric($service, $api_host, $api_port, $api_http, $version);
+            if (!is_a($synology, GenericClient::class)) {
+                continue;
+            }
             $synology->connect($api_user, $api_pass);
             $type = str_replace("$root.", '', $api_name);
             if ($type === $root) {
@@ -134,7 +145,7 @@ foreach ($api_list as $root => $json) {
                 $params = $required[$api_name][$method];
                 if (!empty($format) && $format == "JSON") {
                     foreach ($params as $key => $value) {
-                        $params[$key] = json_encode($value);
+                        $params[$key] = json_encode($value, JSON_UNESCAPED_SLASHES);
                     }
                 }
                 echo "Required:", $api_name, $method, print_r($params, true);

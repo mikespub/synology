@@ -263,7 +263,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/CloudSync_Get_propertyResponse'
         default:
           description: Abnormal Response
           content:
@@ -272,6 +272,13 @@ paths:
                 type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: connection_id
+          required: true
+          schema:
+            type: string
+            default: 1
   /SYNO.CloudSync/v1/get_config:
     get:
       tags:
@@ -368,7 +375,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/CloudSync_Get_logResponse'
         default:
           description: Abnormal Response
           content:
@@ -377,6 +384,19 @@ paths:
                 type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: offset
+          required: true
+          schema:
+            type: string
+            default: 0
+        - in: query
+          name: limit
+          required: true
+          schema:
+            type: string
+            default: 10
   /SYNO.CloudSync/v1/get_recently_change:
     get:
       tags:
@@ -389,7 +409,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/CloudSync_Get_recently_changeResponse'
         default:
           description: Abnormal Response
           content:
@@ -431,7 +451,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/CloudSync_Get_connection_settingResponse'
         default:
           description: Abnormal Response
           content:
@@ -440,6 +460,13 @@ paths:
                 type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: connection_id
+          required: true
+          schema:
+            type: string
+            default: 1
   /SYNO.CloudSync/v1/get_session_setting:
     get:
       tags:
@@ -452,7 +479,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/CloudSync_Get_session_settingResponse'
         default:
           description: Abnormal Response
           content:
@@ -461,6 +488,13 @@ paths:
                 type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: session_id
+          required: true
+          schema:
+            type: string
+            default: 2
   /SYNO.CloudSync/v1/get_selective_folder_list:
     get:
       tags:
@@ -473,7 +507,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/CloudSync_Get_selective_folder_listResponse'
         default:
           description: Abnormal Response
           content:
@@ -482,6 +516,31 @@ paths:
                 type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: session_id
+          required: true
+          schema:
+            type: string
+            default: 2
+        - in: query
+          name: file_id
+          required: true
+          schema:
+            type: string
+            default: FF5A9A59014AF031!41822
+        - in: query
+          name: path
+          required: true
+          schema:
+            type: string
+            default: /
+        - in: query
+          name: exists_type
+          required: true
+          schema:
+            type: string
+            default: 'null'
   /SYNO.CloudSync/v1/get_selective_folder_list_wizard:
     get:
       tags:
@@ -515,7 +574,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/CloudSync_Get_selective_sync_configResponse'
         default:
           description: Abnormal Response
           content:
@@ -524,6 +583,13 @@ paths:
                 type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: session_id
+          required: true
+          schema:
+            type: string
+            default: 2
   /SYNO.CloudSync/v1/get_default_selective_sync_config:
     get:
       tags:
@@ -830,7 +896,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/CloudSync_List_connResponse'
         default:
           description: Abnormal Response
           content:
@@ -839,6 +905,13 @@ paths:
                 type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: is_tray
+          required: true
+          schema:
+            type: string
+            default: 'true'
   /SYNO.CloudSync/v1/list_sess:
     get:
       tags:
@@ -851,7 +924,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/CloudSync_List_sessResponse'
         default:
           description: Abnormal Response
           content:
@@ -860,6 +933,13 @@ paths:
                 type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: connection_id
+          required: true
+          schema:
+            type: string
+            default: 1
   /SYNO.CloudSync/v1/list_s3_bucket:
     get:
       tags:
@@ -1292,7 +1372,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/CloudSync_Get_conn_auth_infoResponse'
         default:
           description: Abnormal Response
           content:
@@ -1301,6 +1381,13 @@ paths:
                 type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: connection_id
+          required: true
+          schema:
+            type: string
+            default: 1
   /SYNO.CloudSync/v1/get_server_folder_list:
     get:
       tags:
@@ -1443,6 +1530,186 @@ components:
         data:
           type: object
           description: The data object contains all the response information described in each method.
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_propertyResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_property.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_logResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_log.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_recently_changeResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_recently_change.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_connection_settingResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_connection_setting.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_session_settingResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_session_setting.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_selective_folder_listResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_selective_folder_list.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_selective_sync_configResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_selective_sync_config.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_List_connResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-list_conn.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_List_sessResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-list_sess.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    CloudSync_Get_conn_auth_infoResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.CloudSync-get_conn_auth_info.json'
         error:
           type: object
           properties:

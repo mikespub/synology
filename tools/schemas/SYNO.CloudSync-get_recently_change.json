@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "history_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "integer"
+          },
+          "base_name": {
+            "type": "string"
+          },
+          "log_level": {
+            "type": "integer"
+          },
+          "path": {
+            "type": "string"
+          },
+          "session_id": {
+            "type": "integer"
+          },
+          "syncfolder_basename": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "action",
+          "base_name",
+          "log_level",
+          "path",
+          "session_id",
+          "syncfolder_basename"
+        ]
+      }
+    },
+    "is_admin_mode": {
+      "type": "boolean"
+    },
+    "processing_items": {
+      "type": "array"
+    },
+    "server_merge_items": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "history_items",
+    "is_admin_mode",
+    "processing_items",
+    "server_merge_items"
+  ]
+}

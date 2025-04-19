@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "access_key": {
+      "type": "string"
+    },
+    "access_token": {
+      "type": "string"
+    },
+    "auth_pass": {
+      "type": "string"
+    },
+    "auth_scheme": {
+      "type": "integer"
+    },
+    "auth_user": {
+      "type": "string"
+    },
+    "bucket_id": {
+      "type": "string"
+    },
+    "bucket_name": {
+      "type": "string"
+    },
+    "client_id": {
+      "type": "string"
+    },
+    "client_type": {
+      "type": "string"
+    },
+    "cloud_status": {
+      "type": "integer"
+    },
+    "conn_id": {
+      "type": "integer"
+    },
+    "container_name": {
+      "type": "string"
+    },
+    "distinct_member_home": {
+      "type": "boolean"
+    },
+    "download_url": {
+      "type": "string"
+    },
+    "openstack_api_key": {
+      "type": "string"
+    },
+    "openstack_domain_id": {
+      "type": "string"
+    },
+    "openstack_domain_name": {
+      "type": "string"
+    },
+    "openstack_identity_service_url": {
+      "type": "string"
+    },
+    "openstack_identity_service_version": {
+      "type": "string"
+    },
+    "openstack_password": {
+      "type": "string"
+    },
+    "openstack_proj_id": {
+      "type": "string"
+    },
+    "openstack_region": {
+      "type": "string"
+    },
+    "openstack_tenant_id": {
+      "type": "string"
+    },
+    "openstack_tenant_name": {
+      "type": "string"
+    },
+    "openstack_token": {
+      "type": "string"
+    },
+    "public_url": {
+      "type": "string"
+    },
+    "refresh_token": {
+      "type": "string"
+    },
+    "resource": {
+      "type": "string"
+    },
+    "root_folder_id": {
+      "type": "string"
+    },
+    "root_folder_path": {
+      "type": "string"
+    },
+    "secret_key": {
+      "type": "string"
+    },
+    "server_addr": {
+      "type": "string"
+    },
+    "service_host": {
+      "type": "string"
+    },
+    "system_group_id": {
+      "type": "string"
+    },
+    "team_member_id": {
+      "type": "string"
+    },
+    "team_shared_dropbox": {
+      "type": "boolean"
+    },
+    "unique_id": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "access_key",
+    "access_token",
+    "auth_pass",
+    "auth_scheme",
+    "auth_user",
+    "bucket_id",
+    "bucket_name",
+    "client_id",
+    "client_type",
+    "cloud_status",
+    "conn_id",
+    "container_name",
+    "distinct_member_home",
+    "download_url",
+    "openstack_api_key",
+    "openstack_domain_id",
+    "openstack_domain_name",
+    "openstack_identity_service_url",
+    "openstack_identity_service_version",
+    "openstack_password",
+    "openstack_proj_id",
+    "openstack_region",
+    "openstack_tenant_id",
+    "openstack_tenant_name",
+    "openstack_token",
+    "public_url",
+    "refresh_token",
+    "resource",
+    "root_folder_id",
+    "root_folder_path",
+    "secret_key",
+    "server_addr",
+    "service_host",
+    "system_group_id",
+    "team_member_id",
+    "team_shared_dropbox",
+    "unique_id",
+    "user_name"
+  ]
+}

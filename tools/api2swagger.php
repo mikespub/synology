@@ -218,8 +218,10 @@ function generate_openapi($apilist, $required, $debug = false)
                 // add required params
                 $rest_output .= "      parameters:\n";
                 foreach ($required[$api][$method] as $name => $value) {
-                    if (!empty($params['format']) && $params['format'] == "JSON" && is_array($value)) {
-                        $value = "'" . json_encode($value) . "'";
+                    if (!empty($params['format']) && $params['format'] == "JSON") {
+                        if (is_array($value) || is_null($value) || is_bool($value)) {
+                            $value = "'" . json_encode($value, JSON_UNESCAPED_SLASHES) . "'";
+                        }
                     }
                     $path_output .= replace_params($rest_param_tmpl, ['name' => $name, 'value' => $value]);
                     $rest_output .= replace_params($rest_param_tmpl, ['name' => $name, 'value' => $value]);

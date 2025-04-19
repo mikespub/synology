@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "client_type": {
+      "type": "string"
+    },
+    "isSSE": {
+      "type": "boolean"
+    },
+    "is_enabled_schedule": {
+      "type": "boolean"
+    },
+    "max_download_speed": {
+      "type": "integer"
+    },
+    "max_upload_speed": {
+      "type": "integer"
+    },
+    "part_size": {
+      "type": "integer"
+    },
+    "pull_event_period": {
+      "type": "integer"
+    },
+    "schedule_info": {
+      "type": "string"
+    },
+    "storage_class": {
+      "type": "string"
+    },
+    "task_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "client_type",
+    "isSSE",
+    "is_enabled_schedule",
+    "max_download_speed",
+    "max_upload_speed",
+    "part_size",
+    "pull_event_period",
+    "schedule_info",
+    "storage_class",
+    "task_name"
+  ]
+}

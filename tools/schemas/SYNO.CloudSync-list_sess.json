@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "sess": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cloud_type_str": {
+            "type": "string"
+          },
+          "conn_id": {
+            "type": "integer"
+          },
+          "error": {
+            "type": "integer"
+          },
+          "error_desc": {
+            "type": "string"
+          },
+          "link_status": {
+            "type": "integer"
+          },
+          "local_sync_path": {
+            "type": "string"
+          },
+          "remote_folder_id": {
+            "type": "string"
+          },
+          "remote_sync_path": {
+            "type": "string"
+          },
+          "sess_id": {
+            "type": "integer"
+          },
+          "sync_direction": {
+            "type": "string"
+          },
+          "sync_status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "cloud_type_str",
+          "conn_id",
+          "error",
+          "error_desc",
+          "link_status",
+          "local_sync_path",
+          "remote_folder_id",
+          "remote_sync_path",
+          "sess_id",
+          "sync_direction",
+          "sync_status"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "sess",
+    "total"
+  ]
+}

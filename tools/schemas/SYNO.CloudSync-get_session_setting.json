@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_server_encryption": {
+      "type": "boolean"
+    },
+    "enc_key_exportable": {
+      "type": "boolean"
+    },
+    "google_drive_convert_online_doc": {
+      "type": "boolean"
+    },
+    "no_delete": {
+      "type": "boolean"
+    },
+    "sync_attr_check_option": {
+      "type": "boolean"
+    },
+    "sync_direction": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "enable_server_encryption",
+    "enc_key_exportable",
+    "google_drive_convert_online_doc",
+    "no_delete",
+    "sync_attr_check_option",
+    "sync_direction"
+  ]
+}

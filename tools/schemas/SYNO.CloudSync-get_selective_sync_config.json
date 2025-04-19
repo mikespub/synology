@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "filtered_extensions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "filtered_max_upload_size": {
+      "type": "integer"
+    },
+    "filtered_names": {
+      "type": "array"
+    },
+    "filtered_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "user_defined_extensions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "user_defined_names": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "filtered_extensions",
+    "filtered_max_upload_size",
+    "filtered_names",
+    "filtered_paths",
+    "user_defined_extensions",
+    "user_defined_names"
+  ]
+}

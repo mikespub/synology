@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "auth_version": {
+      "type": "string"
+    },
+    "bucket_name": {
+      "type": "string"
+    },
+    "container_name": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "public_url": {
+      "type": "string"
+    },
+    "quota_total": {
+      "type": "integer"
+    },
+    "quota_used": {
+      "type": "integer"
+    },
+    "region": {
+      "type": "string"
+    },
+    "server_addr": {
+      "type": "string"
+    },
+    "shared_drive_name": {
+      "type": "string"
+    },
+    "storage_class": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "type_id": {
+      "type": "integer"
+    },
+    "user_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "auth_version",
+    "bucket_name",
+    "container_name",
+    "project_id",
+    "public_url",
+    "quota_total",
+    "quota_used",
+    "region",
+    "server_addr",
+    "shared_drive_name",
+    "storage_class",
+    "type",
+    "type_id",
+    "user_name"
+  ]
+}

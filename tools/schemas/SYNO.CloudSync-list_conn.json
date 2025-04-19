@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "conn": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cloud_status": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "link_status": {
+            "type": "integer"
+          },
+          "resource": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "task_display_name": {
+            "type": "string"
+          },
+          "task_name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "type_id": {
+            "type": "integer"
+          },
+          "unfinished_files": {
+            "type": "integer"
+          },
+          "user_id": {
+            "type": "string"
+          },
+          "user_name": {
+            "type": "string"
+          },
+          "error": {
+            "type": "integer"
+          },
+          "error_desc": {
+            "type": "string"
+          },
+          "error_type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "cloud_status",
+          "id",
+          "link_status",
+          "resource",
+          "status",
+          "task_display_name",
+          "task_name",
+          "type",
+          "type_id",
+          "unfinished_files",
+          "user_id",
+          "user_name"
+        ]
+      }
+    },
+    "is_admin_mode": {
+      "type": "boolean"
+    },
+    "is_pause": {
+      "type": "boolean"
+    },
+    "notification": {
+      "type": "object",
+      "properties": {
+        "file_count": {
+          "type": "integer"
+        },
+        "latest_file_info": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "type": "integer"
+            },
+            "log_level": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "action",
+            "log_level",
+            "name"
+          ]
+        }
+      },
+      "required": [
+        "file_count",
+        "latest_file_info"
+      ]
+    },
+    "total": {
+      "type": "integer"
+    },
+    "tray_status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "conn",
+    "is_admin_mode",
+    "is_pause",
+    "notification",
+    "total",
+    "tray_status"
+  ]
+}

@@ -108,6 +108,9 @@ abstract class AbstractApi
      */
     protected function getApiName($api)
     {
+        if (empty($api)) {
+            return $this->namespace . '.' . $this->serviceName;
+        }
         return $this->namespace . '.' . $this->serviceName . '.' . $api;
     }
 

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "children": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "exists_type": {
+            "type": "integer"
+          },
+          "file_id": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "exists_type",
+          "file_id",
+          "path",
+          "text"
+        ]
+      }
+    }
+  },
+  "required": [
+    "children"
+  ]
+}

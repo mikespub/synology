@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "integer"
+          },
+          "error_code": {
+            "type": "integer"
+          },
+          "file_name": {
+            "type": "string"
+          },
+          "file_type": {
+            "type": "string"
+          },
+          "log_level": {
+            "type": "integer"
+          },
+          "path": {
+            "type": "string"
+          },
+          "session_id": {
+            "type": "integer"
+          },
+          "time": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "action",
+          "error_code",
+          "file_name",
+          "file_type",
+          "log_level",
+          "path",
+          "session_id",
+          "time"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "items",
+    "total"
+  ]
+}
