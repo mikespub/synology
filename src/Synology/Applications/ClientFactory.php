@@ -45,7 +45,7 @@ class ClientFactory
     /**
      * Get Generic API Client for serviceName
      *
-     * @param string  $serviceName
+     * @param string  $serviceName for SYNO.Service[.*] API method calls
      * @param string  $address
      * @param ?int    $port
      * @param ?string $protocol

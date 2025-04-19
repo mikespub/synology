@@ -4,8 +4,9 @@
  * This file provides a command line interface and menu to call
  * the Synology API.
  *
- * $ cli.php <api> <method> <params>
- *
+ * ```
+ * $ php tools/cli.php <api> <method> <params>
+ * ```
  */
 if (PHP_SAPI !== 'cli') {
     echo "This script is meant to run from commmand line\n";

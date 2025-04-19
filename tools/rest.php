@@ -185,6 +185,14 @@ class RestApiGateway
         return $content;
     }
 
+    /**
+     * Summary of addApiMethods
+     * @param string $api
+     * @param array<string, mixed> $values
+     * @param array<string, mixed> $required
+     * @param string|false $sid
+     * @return string
+     */
     public function addApiMethods($api, $values, $required, $sid)
     {
         $version = $values['maxVersion'];

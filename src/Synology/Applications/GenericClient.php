@@ -18,11 +18,12 @@ class GenericClient extends Authenticate
     /**
      * Info API setup
      *
+     * @param string  $serviceName for SYNO.Service[.*] API method calls
      * @param string  $address
      * @param ?int    $port
      * @param ?string $protocol
-     * @param ?int    $version @deprecated can vary per api method
-     * @param bool    $verifySSL
+     * @param ?int    $version @deprecated can vary per API method
+     * @param bool    $verifySSL default false
      */
     public function __construct($serviceName, $address, $port = null, $protocol = null, $version = self::API_VERSION, $verifySSL = false)
     {
@@ -32,7 +33,7 @@ class GenericClient extends Authenticate
     /**
      * Call a generic API method
      *
-     * @param string $api
+     * @param string $api for SYNO.Service.API method calls
      * @param string $path
      * @param string $method
      * @param array<mixed> $params param values should be json-encoded if API requestFormat is "JSON"

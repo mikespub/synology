@@ -3,6 +3,7 @@
 namespace Synology;
 
 use Synology\Applications\ClientFactory;
+use Synology\Tools\ConfigFiles;
 
 /**
  * Class Cli
@@ -11,59 +12,9 @@ use Synology\Applications\ClientFactory;
  */
 class Cli
 {
+    use ConfigFiles;
+
     public const API_NAMESPACE = 'SYNO';
-    public const API_PATH = 'entry.cgi';
-
-    public string $host;
-    public int $port;
-    public string $http;
-    protected string $user;
-    protected string $pass;
-    protected string $tools;
-    /** @var array<string, mixed> */
-    protected array $apilist = [];
-    /** @var array<string, mixed> */
-    protected array $required = [];
-
-    /**
-     * Info API setup
-     *
-     * @param ?string $address
-     * @param ?int    $port
-     * @param ?string $username
-     * @param ?string $password
-     * @param ?string $protocol
-     */
-    public function __construct($address = null, $port = null, $username = null, $password = null, $protocol = null)
-    {
-        $this->host = $address ?? $_ENV['API_HOST'] ?? '192.168.10.5';
-        $this->port = $port ?? (int) ($_ENV['API_PORT'] ?? 5001);
-        $this->user = $username ?? $_ENV['API_USER'] ?? 'admin';
-        $this->pass = $password ?? $_ENV['API_PASS'] ?? '*****';
-        $this->http = $protocol ?? (($this->port === 5001) ? 'https' : 'http');
-        $this->tools = dirname(__DIR__, 2) . '/tools';
-        $this->loadApiList($this->tools);
-    }
-
-    /**
-     * Summary of loadApiList
-     * @param string $tools
-     * @return void
-     */
-    public function loadApiList($tools)
-    {
-        $file = $tools . '/combined.json';
-        if (is_file($file)) {
-            $contents = file_get_contents($file);
-            $this->apilist = json_decode($contents, true);
-            ksort($this->apilist);
-        }
-        $file = $tools . '/required.json';
-        if (is_file($file)) {
-            $contents = file_get_contents($file);
-            $this->required = json_decode($contents, true);
-        }
-    }
 
     /**
      * Summary of showMenu
@@ -105,8 +56,9 @@ class Cli
     public function selectService()
     {
         $services = [];
+        $prefix = static::API_NAMESPACE . '.';
         foreach ($this->apilist as $root => $json) {
-            $service = str_replace("SYNO.", "", $root);
+            $service = str_replace($prefix, "", $root);
             $services[$service] = "";
         }
         return $this->showMenu($services, "Service");
@@ -119,7 +71,7 @@ class Cli
      */
     public function selectApi($service)
     {
-        $root = "SYNO.$service";
+        $root = static::API_NAMESPACE . '.' . $service;
         $json = $this->apilist[$root];
         ksort($json);
         $apis = [];
@@ -143,7 +95,7 @@ class Cli
      */
     public function selectMethod($service, $api)
     {
-        $root = "SYNO.$service";
+        $root = static::API_NAMESPACE . '.' . $service;
         $json = $this->apilist[$root];
         $values = $json[$api];
         $version = $values['maxVersion'];
@@ -215,7 +167,7 @@ class Cli
      */
     public function findMethod($service, $api, $method)
     {
-        $root = "SYNO.$service";
+        $root = static::API_NAMESPACE . '.' . $service;
         $json = $this->apilist[$root];
         $values = $json[$api];
         $version = $values['maxVersion'];
@@ -315,11 +267,11 @@ class Cli
         if (count($argv) > 0) {
             $api = array_shift($argv);
             $pieces = explode('.', $api);
-            if ($pieces[0] !== "SYNO") {
-                array_unshift($pieces, "SYNO");
+            if ($pieces[0] !== static::API_NAMESPACE) {
+                array_unshift($pieces, static::API_NAMESPACE);
             }
             $service = $pieces[1];
-            $root = "SYNO.$service";
+            $root = static::API_NAMESPACE . '.' . $service;
             if (!array_key_exists($root, $this->apilist)) {
                 echo "Unknown Service $pieces[1]\n";
                 $this->loop();
