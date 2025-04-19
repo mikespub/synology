@@ -5657,7 +5657,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Backup.Task_GetResponse'
         default:
           description: Abnormal Response
           content:
@@ -5668,6 +5668,12 @@ paths:
       #  - query_sid: []
       parameters:
         - $ref: '#/components/parameters/path_sid'
+        - in: query
+          name: task_id
+          required: true
+          schema:
+            type: string
+            default: 1
   '/entry.cgi?api=SYNO.Backup.Task&version=1&method=mark&_sid={_sid}':
     get:
       tags:
@@ -44570,7 +44576,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/FileStation.List_List_shareResponse'
         default:
           description: Abnormal Response
           content:
@@ -44581,6 +44587,12 @@ paths:
       #  - query_sid: []
       parameters:
         - $ref: '#/components/parameters/path_sid'
+        - in: query
+          name: additional
+          required: true
+          schema:
+            type: string
+            default: '["real_path","owner","time","perm","volume_status"]'
   '/entry.cgi?api=SYNO.FileStation.List&version=2&method=getinfo&_sid={_sid}':
     get:
       tags:
@@ -97731,6 +97743,24 @@ components:
               type: array
               items:
                 type: object
+    Backup.Task_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.Backup.Task-get.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
     C2FS.Share_ListResponse:
       type: object
       properties:
@@ -102257,6 +102287,24 @@ components:
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
           $ref: '../schemas/SYNO.FileStation.List-list.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    FileStation.List_List_shareResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.FileStation.List-list_share.json'
         error:
           type: object
           properties:

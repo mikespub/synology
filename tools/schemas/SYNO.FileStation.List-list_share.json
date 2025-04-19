@@ -1,0 +1,195 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "offset": {
+      "type": "integer"
+    },
+    "shares": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "additional": {
+            "type": "object",
+            "properties": {
+              "owner": {
+                "type": "object",
+                "properties": {
+                  "gid": {
+                    "type": "integer"
+                  },
+                  "group": {
+                    "type": "string"
+                  },
+                  "uid": {
+                    "type": "integer"
+                  },
+                  "user": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "gid",
+                  "group",
+                  "uid",
+                  "user"
+                ]
+              },
+              "perm": {
+                "type": "object",
+                "properties": {
+                  "acl": {
+                    "type": "object",
+                    "properties": {
+                      "append": {
+                        "type": "boolean"
+                      },
+                      "del": {
+                        "type": "boolean"
+                      },
+                      "exec": {
+                        "type": "boolean"
+                      },
+                      "read": {
+                        "type": "boolean"
+                      },
+                      "write": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "append",
+                      "del",
+                      "exec",
+                      "read",
+                      "write"
+                    ]
+                  },
+                  "acl_enable": {
+                    "type": "boolean"
+                  },
+                  "adv_right": {
+                    "type": "object",
+                    "properties": {
+                      "disable_download": {
+                        "type": "boolean"
+                      },
+                      "disable_list": {
+                        "type": "boolean"
+                      },
+                      "disable_modify": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "disable_download",
+                      "disable_list",
+                      "disable_modify"
+                    ]
+                  },
+                  "is_acl_mode": {
+                    "type": "boolean"
+                  },
+                  "is_share_readonly": {
+                    "type": "boolean"
+                  },
+                  "posix": {
+                    "type": "integer"
+                  },
+                  "share_right": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "acl",
+                  "acl_enable",
+                  "adv_right",
+                  "is_acl_mode",
+                  "is_share_readonly",
+                  "posix",
+                  "share_right"
+                ]
+              },
+              "real_path": {
+                "type": "string"
+              },
+              "time": {
+                "type": "object",
+                "properties": {
+                  "atime": {
+                    "type": "integer"
+                  },
+                  "crtime": {
+                    "type": "integer"
+                  },
+                  "ctime": {
+                    "type": "integer"
+                  },
+                  "mtime": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "atime",
+                  "crtime",
+                  "ctime",
+                  "mtime"
+                ]
+              },
+              "volume_status": {
+                "type": "object",
+                "properties": {
+                  "freespace": {
+                    "type": "integer"
+                  },
+                  "readonly": {
+                    "type": "boolean"
+                  },
+                  "totalspace": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "freespace",
+                  "readonly",
+                  "totalspace"
+                ]
+              }
+            },
+            "required": [
+              "owner",
+              "perm",
+              "real_path",
+              "time",
+              "volume_status"
+            ]
+          },
+          "isdir": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "additional",
+          "isdir",
+          "name",
+          "path"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "offset",
+    "shares",
+    "total"
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "data_enc": {
+      "type": "boolean"
+    },
+    "data_type": {
+      "type": "string"
+    },
+    "ext3ShareList": {
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "repo_id": {
+      "type": "integer"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "app_config": {
+          "type": "array"
+        },
+        "app_list": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "app_name_list": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "backup_filter": {
+          "type": "object",
+          "properties": {
+            "exclude_list": {
+              "type": "array"
+            },
+            "whitelist": {
+              "type": "array"
+            }
+          },
+          "required": [
+            "exclude_list",
+            "whitelist"
+          ]
+        },
+        "backup_volumes": {
+          "type": "array"
+        },
+        "file_list": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "dataEncrypted": {
+                "type": "boolean"
+              },
+              "encryptedShare": {
+                "type": "boolean"
+              },
+              "fileSystem": {
+                "type": "string"
+              },
+              "fileSystemType": {
+                "type": "string"
+              },
+              "folderPath": {
+                "type": "string"
+              },
+              "fullPath": {
+                "type": "string"
+              },
+              "isValidSource": {
+                "type": "boolean"
+              },
+              "missing": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "dataEncrypted",
+              "encryptedShare",
+              "fileSystem",
+              "fileSystemType",
+              "folderPath",
+              "fullPath",
+              "isValidSource",
+              "missing"
+            ]
+          }
+        },
+        "folder_list": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "dataEncrypted": {
+                "type": "boolean"
+              },
+              "encryptedShare": {
+                "type": "boolean"
+              },
+              "fileSystem": {
+                "type": "string"
+              },
+              "fileSystemType": {
+                "type": "string"
+              },
+              "folderPath": {
+                "type": "string"
+              },
+              "fullPath": {
+                "type": "string"
+              },
+              "isValidSource": {
+                "type": "boolean"
+              },
+              "missing": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "dataEncrypted",
+              "encryptedShare",
+              "fileSystem",
+              "fileSystemType",
+              "folderPath",
+              "fullPath",
+              "isValidSource",
+              "missing"
+            ]
+          }
+        },
+        "share_list": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "dataEncrypted": {
+                "type": "boolean"
+              },
+              "encryptedShare": {
+                "type": "boolean"
+              },
+              "fileSystem": {
+                "type": "string"
+              },
+              "fileSystemType": {
+                "type": "string"
+              },
+              "fullPath": {
+                "type": "string"
+              },
+              "isValidSource": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "dataEncrypted",
+              "encryptedShare",
+              "fileSystem",
+              "fileSystemType",
+              "fullPath",
+              "isValidSource"
+            ]
+          }
+        }
+      },
+      "required": [
+        "app_config",
+        "app_list",
+        "app_name_list",
+        "backup_filter",
+        "backup_volumes",
+        "file_list",
+        "folder_list",
+        "share_list"
+      ]
+    },
+    "state": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "target_type": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "integer"
+    },
+    "transfer_type": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "data_enc",
+    "data_type",
+    "ext3ShareList",
+    "name",
+    "repo_id",
+    "source",
+    "state",
+    "status",
+    "target_id",
+    "target_type",
+    "task_id",
+    "transfer_type",
+    "type"
+  ]
+}

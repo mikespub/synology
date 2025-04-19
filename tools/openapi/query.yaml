@@ -52019,6 +52019,24 @@ components:
               type: array
               items:
                 type: object
+    Backup.Task_GetResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.Backup.Task-get.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
     C2FS.Share_ListResponse:
       type: object
       properties:
@@ -56545,6 +56563,24 @@ components:
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
           $ref: '../schemas/SYNO.FileStation.List-list.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    FileStation.List_List_shareResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.FileStation.List-list_share.json'
         error:
           type: object
           properties:

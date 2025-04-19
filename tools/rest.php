@@ -193,6 +193,7 @@ class RestApiGateway
             $version = $values['minVersion'];
             $methods = $values['methods'][$version] ?? [];
         }
+        $format = $values['requestFormat'] ?? false;
         $content = '<li>' . $api . ': ';
         foreach ($methods as $method) {
             if (empty($values['path'])) {
@@ -202,6 +203,11 @@ class RestApiGateway
             if (!empty($required[$api]) && !empty($required[$api][$method])) {
                 // check if values are "required"
                 $params = $required[$api][$method];
+                if (!empty($format) && $format == "JSON") {
+                    foreach ($params as $key => $value) {
+                        $params[$key] = json_encode($value, JSON_UNESCAPED_SLASHES);
+                    }
+                }
                 if ($sid) {
                     $params['_sid'] = $sid;
                 }
