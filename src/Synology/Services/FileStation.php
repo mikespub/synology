@@ -18,7 +18,7 @@ class FileStation extends BaseService
     public const API_VERSION = 3;
     protected ?FileStation\BackgroundTask $backgroundtaskSvc = null;
     protected ?FileStation\Favorite $favoriteSvc = null;
-    protected ?FileStation\List $listSvc = null;
+    protected ?FileStation\ListSvc $listSvc = null;
     protected ?FileStation\Mount $mountSvc = null;
     protected ?FileStation\Search $searchSvc = null;
     protected ?FileStation\Settings $settingsSvc = null;
@@ -56,11 +56,11 @@ class FileStation extends BaseService
      *
      * API: SYNO.FileStation.List
      * @see https://github.mikespub.net/synology/tools/?urls.primaryName=FileStation#/FileStation.List
-     * @return FileStation\List
+     * @return FileStation\ListSvc
      */
     public function list()
     {
-        $this->listSvc ??= new FileStation\List($this->client);
+        $this->listSvc ??= new FileStation\ListSvc($this->client);
         return $this->listSvc;
     }
 

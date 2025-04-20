@@ -5,7 +5,7 @@ namespace Synology\Services\FileStation;
 use Synology\Services\BaseService;
 
 /**
- * Class List - created automatically by ServiceGenerator
+ * Class ListSvc - created automatically by ServiceGenerator
  *
  * API: SYNO.FileStation.List
  * ```
@@ -14,7 +14,7 @@ use Synology\Services\BaseService;
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=FileStation#/FileStation.List
  * @package Synology\Services\FileStation
  */
-class List extends BaseService
+class ListSvc extends BaseService
 {
     public const API_SERVICE_NAME = 'FileStation.List';
     public const API_VERSION = 3;

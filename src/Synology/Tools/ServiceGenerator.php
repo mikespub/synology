@@ -244,7 +244,7 @@ class ServiceGenerator
                         'property' => strtolower($subset),
                     ];
                     // restricted class names
-                    if (in_array($subset, ['Default'])) {
+                    if (in_array($subset, ['Default', 'List'])) {
                         $replace['class'] .= 'Svc';
                     }
                     $output .= $this->replaceParams($templates['property'], $replace);
@@ -258,7 +258,7 @@ class ServiceGenerator
                         'client' => '->client',
                     ];
                     // restricted class names
-                    if (in_array($subset, ['Default'])) {
+                    if (in_array($subset, ['Default', 'List'])) {
                         $replace['class'] .= 'Svc';
                     }
                     $output .= $this->replaceParams($templates['function'], $replace);
@@ -303,7 +303,7 @@ class ServiceGenerator
                 'call' => strtolower($service) . '()->' . strtolower($subset) . '()->' . $name . '();',
             ];
             // restricted class names
-            if (in_array($subset, ['Default'])) {
+            if (in_array($subset, ['Default', 'List'])) {
                 $replace['class'] .= 'Svc';
             }
             $output = $this->replaceParams($templates['subset'], $replace);
