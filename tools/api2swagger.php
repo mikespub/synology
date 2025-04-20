@@ -22,11 +22,12 @@ if (PHP_SAPI !== 'cli') {
 }
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-use Synology\Tools\Generator;
+use Synology\Tools\OpenAPIGenerator;
+use Synology\Tools\ServiceGenerator;
 
 // TODO: run example.php afterwards to copy files for Swagger Editor
 
-$generator = new Generator();
+//$generator = new OpenAPIGenerator();
 //$basedir = dirname(__DIR__) . '/docs/';
 //$generator->refreshApiFiles($basedir);
 //$generator->mergeQueryFiles();
@@ -35,4 +36,6 @@ $generator = new Generator();
 //$json_file = __DIR__ . '/required.json';
 //$required = $generator->checkRequiredErrors();
 //file_put_contents($json_file, json_encode($required, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-$generator->generateOpenAPI();
+//$generator->generateOpenAPI();
+$generator = new ServiceGenerator();
+$generator->generateServices();

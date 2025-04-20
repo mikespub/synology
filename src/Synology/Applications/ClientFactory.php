@@ -3,6 +3,7 @@
 namespace Synology\Applications;
 
 use Synology\Api\Authenticate;
+use Synology\Services\ServiceClient;
 use Synology\Exception;
 
 /**
@@ -55,6 +56,22 @@ class ClientFactory
     public static function getGeneric($serviceName, $address, $port = null, $protocol = null, $version = 1)
     {
         $className = GenericClient::class;
+        return new $className($serviceName, $address, $port, $protocol, $version);
+    }
+
+    /**
+     * Get Service API Client
+     *
+     * @param string  $address
+     * @param ?int    $port
+     * @param ?string $protocol
+     * @param ?int    $version @deprecated can vary per api method
+     * @return GenericClient
+     */
+    public static function getServices($address, $port = null, $protocol = null, $version = 1)
+    {
+        $className = ServiceClient::class;
+        $serviceName = 'default';
         return new $className($serviceName, $address, $port, $protocol, $version);
     }
 }

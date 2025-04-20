@@ -284,6 +284,16 @@ abstract class AbstractApi
     }
 
     /**
+     * Summary of setServiceName
+     * @param string $serviceName
+     * @return void
+     */
+    public function setServiceName($serviceName)
+    {
+        $this->serviceName = $serviceName;
+    }
+
+    /**
      * @param int $encoding
      */
     public function setEncType($encoding)

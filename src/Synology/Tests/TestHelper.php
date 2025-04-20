@@ -4,6 +4,7 @@ namespace Synology\Tests;
 
 use Synology\Api\Authenticate;
 use Synology\Applications\ClientFactory;
+use Synology\Services\ServiceClient;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
@@ -101,12 +102,12 @@ trait TestHelper
 
     /**
      * Summary of compareResultFile
-     * @param mixed $result
      * @param string $resultFile
+     * @param mixed $result
      * @param bool $assoc
      * @return void
      */
-    protected function compareResultFile($result, $resultFile, $assoc = false)
+    protected function compareResultFile($resultFile, $result, $assoc = false)
     {
         $resultPath = $this->getResultsFilePath($resultFile);
         if ($assoc) {
@@ -116,5 +117,33 @@ trait TestHelper
             $expected = json_decode(file_get_contents($resultPath));
         }
         $this->assertEquals($expected, $result);
+    }
+
+    /**
+     * Summary of getServicesClient
+     * @param string $resultFile
+     * @return ServiceClient
+     */
+    protected function getServicesClient($resultFile): Authenticate
+    {
+        // get http client with loginFile first
+        $client = $this->getMockClient();
+        $loginFile = 'SYNO.API.Auth-login.json';
+        $responses = $this->getResponseFromFile($loginFile);
+        $client->setResponseFactory($responses);
+
+        // get services client for any service
+        $syno = ClientFactory::getServices($this->address, $this->port, $this->protocol, $this->version);
+        $syno->setHttpClient($client);
+
+        // connect with loginFile response
+        $syno->connect($this->user, $this->pass);
+        $this->assertTrue($syno->isConnected());
+
+        // set next response to resultFile
+        $responses = $this->getResponseFromFile($resultFile);
+        $client->setResponseFactory($responses);
+
+        return $syno;
     }
 }

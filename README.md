@@ -200,3 +200,20 @@ The OpenAPI files below are part of the Synology Office Suite WebAPI. They are d
 The [rest.php](./tools/rest.php) script acts as a basic REST API gateway for exploring the OpenAPI files. It must be copied in the base directory of your Web Station along with the `combined.json`, `required.json` and `rest_mapping.php` files if you want to use it.
 
 For most of the services, only the `list` or `getinfo` methods will actually work without additional parameters...
+
+## Generated OpenAPI Files and JSON Schemas
+
+See [OpenAPI Files](./tools/openapi/index.html) and [JSON Schemas](./tools/schemas/index.html) for supported API methods.
+
+## Generated Synology\Services Classes
+
+Usage for generated Services:
+```php
+use Synology\Applications\ClientFactory;
+
+$services = ClientFactory::getServices('192.168.10.5', 5001, 'https');
+$services->connect('admin', '****');
+// ...
+```
+
+See generated [Synology\Services](./src/Synology/Services/) classes.

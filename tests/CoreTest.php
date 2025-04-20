@@ -45,6 +45,6 @@ class CoreTest extends TestCase
         $this->assertInstanceOf(Core::class, $service);
 
         $result = $service->getObjects('User');
-        $this->compareResultFile($result, $resultFile);
+        $this->compareResultFile($resultFile, $result);
     }
 }

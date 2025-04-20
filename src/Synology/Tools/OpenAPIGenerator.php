@@ -3,9 +3,9 @@
 namespace Synology\Tools;
 
 /**
- * Summary of Generator
+ * Summary of OpenAPIGenerator
  */
-class Generator
+class OpenAPIGenerator
 {
     use ConfigFiles;
     use Templates;
@@ -33,31 +33,32 @@ class Generator
             $port = 5001;
         }
 
-        $header_tmpl = $this->loadTemplate('header');
-        $path_api_tmpl = $this->loadTemplate('path_api');
-        $path_method_tmpl = $this->loadTemplate('path_method');
-        $query_api_tmpl = $this->loadTemplate('query_api');
-        $query_path_tmpl = $this->loadTemplate('query_path');
-        $footer_tmpl = $this->loadTemplate('components');
-        $rest_header_tmpl = $this->loadTemplate('rest_header');
-        $rest_api_tmpl = $this->loadTemplate('rest_api');
-        $rest_method_tmpl = $this->loadTemplate('rest_method');
-        $rest_param_tmpl = $this->loadTemplate('rest_param');
-        $rest_footer_tmpl = $this->loadTemplate('rest_components');
-        $schema_tmpl = $this->loadTemplate('schema');
+        $templates = [];
+        $templates['header'] = $this->loadTemplate('header');
+        $templates['path_api'] = $this->loadTemplate('path_api');
+        $templates['path_method'] = $this->loadTemplate('path_method');
+        $templates['query_api'] = $this->loadTemplate('query_api');
+        $templates['query_path'] = $this->loadTemplate('query_path');
+        $templates['footer'] = $this->loadTemplate('components');
+        $templates['rest_header'] = $this->loadTemplate('rest_header');
+        $templates['rest_api'] = $this->loadTemplate('rest_api');
+        $templates['rest_method'] = $this->loadTemplate('rest_method');
+        $templates['rest_param'] = $this->loadTemplate('rest_param');
+        $templates['rest_footer'] = $this->loadTemplate('rest_components');
+        $templates['schema'] = $this->loadTemplate('schema');
 
         $params = [];
         $params['host'] = $host;
         $params['port'] = $port;
         $params['http'] = $http;
         $params['location'] = 'path';
-        $path_output = $this->replaceParams($header_tmpl, $params);
-        $path_output .= $path_api_tmpl;
-        $path_footer = $this->replaceParams($footer_tmpl, $params);
+        $path_output = $this->replaceParams($templates['header'], $params);
+        $path_output .= $templates['path_api'];
+        $path_footer = $this->replaceParams($templates['footer'], $params);
         $params['location'] = 'query';
-        $query_output = $this->replaceParams($header_tmpl, $params);
-        $query_output .= $query_api_tmpl;
-        $query_footer = $this->replaceParams($footer_tmpl, $params);
+        $query_output = $this->replaceParams($templates['header'], $params);
+        $query_output .= $templates['query_api'];
+        $query_footer = $this->replaceParams($templates['footer'], $params);
 
         $api2url = [];
         foreach ($this->apilist as $root => $json) {
@@ -67,9 +68,9 @@ class Generator
             $params['port'] = $port;
             $params['http'] = $http;
             $params['location'] = 'query';
-            $rest_output = $this->replaceParams($rest_header_tmpl, $params);
-            $rest_output .= $this->replaceParams($rest_api_tmpl, $params);
-            $rest_footer = $this->replaceParams($rest_footer_tmpl, $params);
+            $rest_output = $this->replaceParams($templates['rest_header'], $params);
+            $rest_output .= $this->replaceParams($templates['rest_api'], $params);
+            $rest_footer = $this->replaceParams($templates['rest_footer'], $params);
             foreach ($json as $api => $values) {
                 $params = [];
                 $params['api'] = $api;
@@ -116,7 +117,7 @@ class Generator
                 }
                 $params['methodlist'] = implode(', ', $methods);
                 $params['api2'] = implode('_', array_slice(explode('.', $api), 2));
-                $query_output .= $this->replaceParams($query_path_tmpl, $params);
+                $query_output .= $this->replaceParams($templates['query_path'], $params);
                 foreach ($methods as $method) {
                     $params['method'] = $method;
                     // find out if we have a specific schema file for this api method
@@ -125,17 +126,17 @@ class Generator
                         $params['schema'] = str_replace('SYNO.', '', $api) . '_' . ucfirst($method) . 'Response';
                         // schemas including type: array without items causes problems for Swagger UI - use "items": {} to support any type
                         $params['file'] = basename($schema_file);
-                        $path_footer .= $this->replaceParams($schema_tmpl, $params);
-                        $rest_footer .= $this->replaceParams($schema_tmpl, $params);
-                        $query_footer .= $this->replaceParams($schema_tmpl, $params);
+                        $path_footer .= $this->replaceParams($templates['schema'], $params);
+                        $rest_footer .= $this->replaceParams($templates['schema'], $params);
+                        $query_footer .= $this->replaceParams($templates['schema'], $params);
                     } else {
                         $params['schema'] = 'NormalResponse';
                     }
-                    $path_output .= $this->replaceParams($path_method_tmpl, $params);
+                    $path_output .= $this->replaceParams($templates['path_method'], $params);
                     if ($api == 'SYNO.API.Info' && $method == 'query') {
                         continue;
                     }
-                    $rest_output .= $this->replaceParams($rest_method_tmpl, $params);
+                    $rest_output .= $this->replaceParams($templates['rest_method'], $params);
                     if (empty($this->required[$api]) || empty($this->required[$api][$method])) {
                         continue;
                     }
@@ -147,8 +148,8 @@ class Generator
                                 $value = "'" . json_encode($value, JSON_UNESCAPED_SLASHES) . "'";
                             }
                         }
-                        $path_output .= $this->replaceParams($rest_param_tmpl, ['name' => $name, 'value' => $value]);
-                        $rest_output .= $this->replaceParams($rest_param_tmpl, ['name' => $name, 'value' => $value]);
+                        $path_output .= $this->replaceParams($templates['rest_param'], ['name' => $name, 'value' => $value]);
+                        $rest_output .= $this->replaceParams($templates['rest_param'], ['name' => $name, 'value' => $value]);
                     }
                 }
             }

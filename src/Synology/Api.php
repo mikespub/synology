@@ -178,7 +178,11 @@ class Api extends AbstractApi
     public function __destruct()
     {
         if ($this->sessionId !== null && !$this->keepConnection) {
-            $this->disconnect();
+            try {
+                $this->disconnect();
+            } catch (\Exception) {
+                // ...
+            }
         }
     }
 }

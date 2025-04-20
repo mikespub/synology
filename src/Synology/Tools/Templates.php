@@ -12,12 +12,23 @@ trait Templates
     /**
      * Summary of loadTemplate
      * @param string $name
+     * @param string $format
      * @return string
      */
-    public function loadTemplate($name)
+    public function loadTemplate($name, $format = '.yaml')
     {
-        $file = $this->tools . '/templates/' . $name . '.yaml';
+        $file = $this->tools . '/templates/' . $name . $format;
         return file_get_contents($file);
+    }
+
+    /**
+     * Summary of loadClassTemplate
+     * @param string $name
+     * @return string
+     */
+    public function loadClassTemplate($name)
+    {
+        return $this->loadTemplate($name, '.tmpl');
     }
 
     /**

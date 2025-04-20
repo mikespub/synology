@@ -21,6 +21,6 @@ class ApiTest extends TestCase
 
         $result = $service->getAvailableApi();
         $this->assertIsArray($result);
-        $this->compareResultFile($result, $resultFile, true);
+        $this->compareResultFile($resultFile, $result, true);
     }
 }
