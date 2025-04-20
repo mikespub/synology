@@ -24,7 +24,7 @@ class CompleteCollection extends BaseService
      *
      * API method: SYNO.ActiveInsight.CompleteCollection get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.ActiveInsight.CompleteCollection-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

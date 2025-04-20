@@ -24,7 +24,7 @@ class ISCSI extends BaseService
      *
      * API method: SYNO.Core.ISCSI.FCTarget list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ISCSI.FCTarget-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listFCTarget()
     {
@@ -43,7 +43,7 @@ class ISCSI extends BaseService
      *
      * API method: SYNO.Core.ISCSI.Host list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ISCSI.Host-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listHost()
     {
@@ -62,7 +62,7 @@ class ISCSI extends BaseService
      *
      * API method: SYNO.Core.ISCSI.LUN list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ISCSI.LUN-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listLUN()
     {
@@ -81,7 +81,7 @@ class ISCSI extends BaseService
      *
      * API method: SYNO.Core.ISCSI.Node list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ISCSI.Node-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listNode()
     {
@@ -100,7 +100,7 @@ class ISCSI extends BaseService
      *
      * API method: SYNO.Core.ISCSI.Replication list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ISCSI.Replication-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listReplication()
     {
@@ -119,7 +119,7 @@ class ISCSI extends BaseService
      *
      * API method: SYNO.Core.ISCSI.Target list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ISCSI.Target-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listTarget()
     {
@@ -138,7 +138,7 @@ class ISCSI extends BaseService
      *
      * API method: SYNO.Core.ISCSI.VMware list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ISCSI.VMware-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listVMware()
     {

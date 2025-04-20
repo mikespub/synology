@@ -820,7 +820,7 @@ class Core extends BaseService
      *
      * API method: SYNO.Core.BackgroundTask get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.BackgroundTask-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getBackgroundTask()
     {
@@ -839,7 +839,7 @@ class Core extends BaseService
      *
      * API method: SYNO.Core.Findhost list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Findhost-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listFindhost()
     {

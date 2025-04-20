@@ -24,7 +24,7 @@ class ExternalDevice extends BaseService
      *
      * API method: SYNO.Core.ExternalDevice.Printer list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ExternalDevice.Printer-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listPrinter()
     {
@@ -43,7 +43,7 @@ class ExternalDevice extends BaseService
      *
      * API method: SYNO.Core.ExternalDevice.Printer.BonjourSharing get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ExternalDevice.Printer.BonjourSharing-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getPrinterBonjourSharing()
     {
@@ -62,7 +62,7 @@ class ExternalDevice extends BaseService
      *
      * API method: SYNO.Core.ExternalDevice.Printer.Driver list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ExternalDevice.Printer.Driver-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listPrinterDriver()
     {
@@ -81,7 +81,7 @@ class ExternalDevice extends BaseService
      *
      * API method: SYNO.Core.ExternalDevice.Printer.OAuth get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ExternalDevice.Printer.OAuth-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getPrinterOAuth()
     {
@@ -100,7 +100,7 @@ class ExternalDevice extends BaseService
      *
      * API method: SYNO.Core.ExternalDevice.Storage.EUnit list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ExternalDevice.Storage.EUnit-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listStorageEUnit()
     {
@@ -119,7 +119,7 @@ class ExternalDevice extends BaseService
      *
      * API method: SYNO.Core.ExternalDevice.Storage.Setting get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ExternalDevice.Storage.Setting-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getStorageSetting()
     {
@@ -138,7 +138,7 @@ class ExternalDevice extends BaseService
      *
      * API method: SYNO.Core.ExternalDevice.Storage.USB list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ExternalDevice.Storage.USB-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listStorageUSB()
     {
@@ -157,7 +157,7 @@ class ExternalDevice extends BaseService
      *
      * API method: SYNO.Core.ExternalDevice.Storage.eSATA list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ExternalDevice.Storage.eSATA-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listStorageeSATA()
     {
@@ -176,7 +176,7 @@ class ExternalDevice extends BaseService
      *
      * API method: SYNO.Core.ExternalDevice.UPS get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.ExternalDevice.UPS-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getUPS()
     {

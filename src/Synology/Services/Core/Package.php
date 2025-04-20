@@ -24,7 +24,7 @@ class Package extends BaseService
      *
      * API method: SYNO.Core.Package list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Package-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class Package extends BaseService
      *
      * API method: SYNO.Core.Package.AutoUpgrade.Progress get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Package.AutoUpgrade.Progress-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getAutoUpgradeProgress()
     {
@@ -62,7 +62,7 @@ class Package extends BaseService
      *
      * API method: SYNO.Core.Package.FakeIFrame get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Package.FakeIFrame-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getFakeIFrame()
     {
@@ -81,7 +81,7 @@ class Package extends BaseService
      *
      * API method: SYNO.Core.Package.Feed list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Package.Feed-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listFeed()
     {
@@ -100,7 +100,7 @@ class Package extends BaseService
      *
      * API method: SYNO.Core.Package.Info get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Package.Info-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getInfo()
     {
@@ -119,7 +119,7 @@ class Package extends BaseService
      *
      * API method: SYNO.Core.Package.Log get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Package.Log-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getLog(string $name = "required")
     {
@@ -139,7 +139,7 @@ class Package extends BaseService
      *
      * API method: SYNO.Core.Package.MyDS get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Package.MyDS-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getMyDS()
     {
@@ -158,7 +158,7 @@ class Package extends BaseService
      *
      * API method: SYNO.Core.Package.Server list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Package.Server-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listServer()
     {
@@ -177,7 +177,7 @@ class Package extends BaseService
      *
      * API method: SYNO.Core.Package.Setting get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Package.Setting-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSetting()
     {

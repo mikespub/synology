@@ -24,7 +24,7 @@ class App2 extends BaseService
      *
      * API method: SYNO.Backup.App2.Backup list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.App2.Backup-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listBackup()
     {

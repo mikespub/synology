@@ -22,7 +22,7 @@ class DSM extends BaseService
      *
      * API method: SYNO.DSM.Info getinfo (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DSM.Info-getinfo.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getinfoInfo()
     {
@@ -41,7 +41,7 @@ class DSM extends BaseService
      *
      * API method: SYNO.DSM.Network list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DSM.Network-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listNetwork()
     {

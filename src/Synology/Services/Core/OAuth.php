@@ -24,7 +24,7 @@ class OAuth extends BaseService
      *
      * API method: SYNO.Core.OAuth.Scope get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.OAuth.Scope-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getScope()
     {
@@ -43,7 +43,7 @@ class OAuth extends BaseService
      *
      * API method: SYNO.Core.OAuth.Server get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.OAuth.Server-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getServer()
     {

@@ -24,7 +24,7 @@ class WebService extends BaseService
      *
      * API method: SYNO.WebStation.WebService.Portal list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.WebService.Portal-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listPortal()
     {
@@ -43,7 +43,7 @@ class WebService extends BaseService
      *
      * API method: SYNO.WebStation.WebService.Service list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.WebService.Service-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listService()
     {

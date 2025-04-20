@@ -24,7 +24,7 @@ class Share extends BaseService
      *
      * API method: SYNO.C2FS.Share list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.C2FS.Share-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

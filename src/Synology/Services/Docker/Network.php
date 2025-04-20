@@ -24,7 +24,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Docker.Network list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Docker.Network-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

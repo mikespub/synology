@@ -24,7 +24,7 @@ class DefaultSvc extends BaseService
      *
      * API method: SYNO.WebStation.Default get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.Default-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

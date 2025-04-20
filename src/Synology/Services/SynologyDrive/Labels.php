@@ -24,7 +24,7 @@ class Labels extends BaseService
      *
      * API method: SYNO.SynologyDrive.Labels list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDrive.Labels-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

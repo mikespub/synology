@@ -36,7 +36,7 @@ class Cal extends BaseService
      *
      * API method: SYNO.Cal.Timezone list (5)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Cal.Timezone-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listTimezone()
     {

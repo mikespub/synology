@@ -78,7 +78,7 @@ class DownloadStation extends BaseService
      *
      * API method: SYNO.DownloadStation.Statistic getinfo (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation.Statistic-getinfo.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getinfoStatistic()
     {

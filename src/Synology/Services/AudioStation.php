@@ -134,7 +134,7 @@ class AudioStation extends BaseService
      *
      * API method: SYNO.AudioStation.Album list (3)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Album-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listAlbum()
     {
@@ -153,7 +153,7 @@ class AudioStation extends BaseService
      *
      * API method: SYNO.AudioStation.Artist list (4)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Artist-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listArtist()
     {
@@ -172,7 +172,7 @@ class AudioStation extends BaseService
      *
      * API method: SYNO.AudioStation.Composer list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Composer-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listComposer()
     {
@@ -191,7 +191,7 @@ class AudioStation extends BaseService
      *
      * API method: SYNO.AudioStation.Info getinfo (6)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Info-getinfo.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getinfoInfo()
     {
@@ -210,7 +210,7 @@ class AudioStation extends BaseService
      *
      * API method: SYNO.AudioStation.MediaServer list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.MediaServer-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listMediaServer()
     {
@@ -229,7 +229,7 @@ class AudioStation extends BaseService
      *
      * API method: SYNO.AudioStation.Search list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Search-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listSearch()
     {

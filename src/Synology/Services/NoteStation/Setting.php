@@ -24,7 +24,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.NoteStation.Setting get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Setting-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {
@@ -43,7 +43,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.NoteStation.Setting.DSM get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Setting.DSM-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getDSM()
     {
@@ -62,7 +62,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.NoteStation.Setting.Global get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Setting.Global-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getGlobal()
     {

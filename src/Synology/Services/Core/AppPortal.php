@@ -24,7 +24,7 @@ class AppPortal extends BaseService
      *
      * API method: SYNO.Core.AppPortal list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.AppPortal-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class AppPortal extends BaseService
      *
      * API method: SYNO.Core.AppPortal.AccessControl list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.AppPortal.AccessControl-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listAccessControl()
     {
@@ -62,7 +62,7 @@ class AppPortal extends BaseService
      *
      * API method: SYNO.Core.AppPortal.Config get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.AppPortal.Config-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getConfig()
     {
@@ -81,7 +81,7 @@ class AppPortal extends BaseService
      *
      * API method: SYNO.Core.AppPortal.ReverseProxy list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.AppPortal.ReverseProxy-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listReverseProxy()
     {

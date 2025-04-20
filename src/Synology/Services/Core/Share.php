@@ -24,7 +24,7 @@ class Share extends BaseService
      *
      * API method: SYNO.Core.Share list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Share-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class Share extends BaseService
      *
      * API method: SYNO.Core.Share.KeyManager.AutoKey list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Share.KeyManager.AutoKey-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listKeyManagerAutoKey()
     {
@@ -62,7 +62,7 @@ class Share extends BaseService
      *
      * API method: SYNO.Core.Share.KeyManager.Key list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Share.KeyManager.Key-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listKeyManagerKey()
     {
@@ -81,7 +81,7 @@ class Share extends BaseService
      *
      * API method: SYNO.Core.Share.KeyManager.MachineKey get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Share.KeyManager.MachineKey-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getKeyManagerMachineKey()
     {

@@ -134,7 +134,7 @@ class FileStation extends BaseService
      *
      * API method: SYNO.FileStation.Info get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FileStation.Info-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getInfo()
     {
@@ -153,7 +153,7 @@ class FileStation extends BaseService
      *
      * API method: SYNO.FileStation.VirtualFolder list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FileStation.VirtualFolder-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listVirtualFolder()
     {

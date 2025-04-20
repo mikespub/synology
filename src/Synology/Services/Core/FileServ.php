@@ -24,7 +24,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.AFP get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.AFP-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getAFP()
     {
@@ -43,7 +43,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.FTP get (3)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.FTP-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getFTP()
     {
@@ -62,7 +62,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.FTP.SFTP get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.FTP.SFTP-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getFTPSFTP()
     {
@@ -81,7 +81,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.FTP.Security get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.FTP.Security-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getFTPSecurity()
     {
@@ -100,7 +100,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.NFS get (3)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.NFS-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getNFS()
     {
@@ -119,7 +119,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.NFS.AdvancedSetting get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.NFS.AdvancedSetting-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getNFSAdvancedSetting()
     {
@@ -138,7 +138,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.NFS.IDMap list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.NFS.IDMap-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listNFSIDMap()
     {
@@ -157,7 +157,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.NFS.Kerberos list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.NFS.Kerberos-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listNFSKerberos()
     {
@@ -176,7 +176,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.ReflinkCopy get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.ReflinkCopy-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getReflinkCopy()
     {
@@ -195,7 +195,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.Rsync.Account list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.Rsync.Account-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listRsyncAccount()
     {
@@ -214,7 +214,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.SMB get (3)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.SMB-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSMB()
     {
@@ -233,7 +233,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.SMB.ConfBackup get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.SMB.ConfBackup-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSMBConfBackup()
     {
@@ -252,7 +252,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.SMB.MSDFS get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.SMB.MSDFS-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSMBMSDFS()
     {
@@ -271,7 +271,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.ServiceDiscovery.WSTransfer get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.ServiceDiscovery.WSTransfer-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getServiceDiscoveryWSTransfer()
     {
@@ -290,7 +290,7 @@ class FileServ extends BaseService
      *
      * API method: SYNO.Core.FileServ.ServiceDiscovery get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.FileServ.ServiceDiscovery-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getServiceDiscovery()
     {

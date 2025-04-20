@@ -24,7 +24,7 @@ class Metrics extends BaseService
      *
      * API method: SYNO.SynologyDrive.Metrics.Token get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDrive.Metrics.Token-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getToken()
     {

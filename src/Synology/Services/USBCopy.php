@@ -22,7 +22,7 @@ class USBCopy extends BaseService
      *
      * API method: SYNO.USBCopy list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.USBCopy-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

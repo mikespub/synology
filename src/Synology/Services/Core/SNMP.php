@@ -24,7 +24,7 @@ class SNMP extends BaseService
      *
      * API method: SYNO.Core.SNMP get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.SNMP-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

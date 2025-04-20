@@ -24,7 +24,7 @@ class Region extends BaseService
      *
      * API method: SYNO.Core.Region.Language get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Region.Language-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getLanguage()
     {
@@ -43,7 +43,7 @@ class Region extends BaseService
      *
      * API method: SYNO.Core.Region.NTP get (3)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Region.NTP-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getNTP()
     {
@@ -62,7 +62,7 @@ class Region extends BaseService
      *
      * API method: SYNO.Core.Region.NTP.DateTimeFormat get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Region.NTP.DateTimeFormat-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getNTPDateTimeFormat()
     {
@@ -81,7 +81,7 @@ class Region extends BaseService
      *
      * API method: SYNO.Core.Region.NTP.Server get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Region.NTP.Server-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getNTPServer()
     {

@@ -24,7 +24,7 @@ class PHP extends BaseService
      *
      * API method: SYNO.WebStation.PHP get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.PHP-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {
@@ -43,7 +43,7 @@ class PHP extends BaseService
      *
      * API method: SYNO.WebStation.PHP.Profile list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.PHP.Profile-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listProfile()
     {

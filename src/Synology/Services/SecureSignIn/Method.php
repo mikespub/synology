@@ -24,7 +24,7 @@ class Method extends BaseService
      *
      * API method: SYNO.SecureSignIn.Method get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.Method-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

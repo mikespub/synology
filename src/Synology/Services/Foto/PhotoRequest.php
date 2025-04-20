@@ -24,7 +24,7 @@ class PhotoRequest extends BaseService
      *
      * API method: SYNO.Foto.PhotoRequest list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Foto.PhotoRequest-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list(int $offset = 0, int $limit = 10)
     {

@@ -316,7 +316,7 @@ class SynologyDrive extends BaseService
      *
      * API method: SYNO.SynologyDrive.DSM get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDrive.DSM-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getDSM()
     {
@@ -335,7 +335,7 @@ class SynologyDrive extends BaseService
      *
      * API method: SYNO.SynologyDrive.Statistics get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDrive.Statistics-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getStatistics()
     {

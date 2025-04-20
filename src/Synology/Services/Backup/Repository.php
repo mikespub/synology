@@ -24,7 +24,7 @@ class Repository extends BaseService
      *
      * API method: SYNO.Backup.Repository list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.Repository-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

@@ -24,7 +24,7 @@ class System extends BaseService
      *
      * API method: SYNO.Core.System.Status get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.System.Status-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getStatus()
     {
@@ -43,7 +43,7 @@ class System extends BaseService
      *
      * API method: SYNO.Core.System.Process list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.System.Process-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listProcess()
     {
@@ -62,7 +62,7 @@ class System extends BaseService
      *
      * API method: SYNO.Core.System.ProcessGroup list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.System.ProcessGroup-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listProcessGroup()
     {
@@ -81,7 +81,7 @@ class System extends BaseService
      *
      * API method: SYNO.Core.System.ResetButton get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.System.ResetButton-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getResetButton()
     {
@@ -100,7 +100,7 @@ class System extends BaseService
      *
      * API method: SYNO.Core.System.SystemHealth get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.System.SystemHealth-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getHealth()
     {
@@ -119,7 +119,7 @@ class System extends BaseService
      *
      * API method: SYNO.Core.System.Utilization get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.System.Utilization-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getUtilization()
     {

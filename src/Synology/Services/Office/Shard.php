@@ -24,7 +24,7 @@ class Shard extends BaseService
      *
      * API method: SYNO.Office.Shard get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Office.Shard-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {
@@ -43,7 +43,7 @@ class Shard extends BaseService
      *
      * API method: SYNO.Office.Shard.Info get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Office.Shard.Info-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getInfo()
     {
@@ -62,7 +62,7 @@ class Shard extends BaseService
      *
      * API method: SYNO.Office.Shard.Session get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Office.Shard.Session-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSession()
     {
@@ -81,7 +81,7 @@ class Shard extends BaseService
      *
      * API method: SYNO.Office.Shard.Token get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Office.Shard.Token-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getToken()
     {

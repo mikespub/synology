@@ -24,7 +24,7 @@ class AppNotify extends BaseService
      *
      * API method: SYNO.Core.AppNotify get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.AppNotify-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

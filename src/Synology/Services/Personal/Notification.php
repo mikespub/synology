@@ -24,7 +24,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Personal.Notification.Device list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Personal.Notification.Device-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listDevice()
     {
@@ -43,7 +43,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Personal.Notification.GDPR get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Personal.Notification.GDPR-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getGDPR()
     {
@@ -62,7 +62,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Personal.Notification.Identifier get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Personal.Notification.Identifier-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getIdentifier()
     {
@@ -81,7 +81,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Personal.Notification.Token get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Personal.Notification.Token-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getToken()
     {
@@ -100,7 +100,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Personal.Notification.VapidPublicKey get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Personal.Notification.VapidPublicKey-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getVapidPublicKey()
     {

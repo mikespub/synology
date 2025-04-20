@@ -24,7 +24,7 @@ class DSMNotify extends BaseService
      *
      * API method: SYNO.Core.DSMNotify.Strings get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.DSMNotify.Strings-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getStrings()
     {

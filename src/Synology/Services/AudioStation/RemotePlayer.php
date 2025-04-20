@@ -24,7 +24,7 @@ class RemotePlayer extends BaseService
      *
      * API method: SYNO.AudioStation.RemotePlayer list (3)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.RemotePlayer-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class RemotePlayer extends BaseService
      *
      * API method: SYNO.AudioStation.RemotePlayer getinfo (3)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.RemotePlayer-getinfo.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getinfo()
     {

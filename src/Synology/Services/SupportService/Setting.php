@@ -24,7 +24,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.SupportService.Setting get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SupportService.Setting-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

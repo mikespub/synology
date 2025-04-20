@@ -24,7 +24,7 @@ class ScriptLanguage extends BaseService
      *
      * API method: SYNO.WebStation.ScriptLanguage list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.ScriptLanguage-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class ScriptLanguage extends BaseService
      *
      * API method: SYNO.WebStation.ScriptLanguage.Utils get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.ScriptLanguage.Utils-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getUtils()
     {

@@ -24,7 +24,7 @@ class Certificate extends BaseService
      *
      * API method: SYNO.Core.Certificate.CRT list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Certificate.CRT-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listCRT()
     {
@@ -43,7 +43,7 @@ class Certificate extends BaseService
      *
      * API method: SYNO.Core.Certificate.LetsEncrypt.Account list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Certificate.LetsEncrypt.Account-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listLetsEncryptAccount()
     {

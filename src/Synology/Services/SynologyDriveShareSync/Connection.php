@@ -24,7 +24,7 @@ class Connection extends BaseService
      *
      * API method: SYNO.SynologyDriveShareSync.Connection list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDriveShareSync.Connection-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

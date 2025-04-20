@@ -24,7 +24,7 @@ class BTSearch extends BaseService
      *
      * API method: SYNO.DownloadStation.BTSearch list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation.BTSearch-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

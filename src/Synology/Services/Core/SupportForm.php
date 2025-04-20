@@ -24,7 +24,7 @@ class SupportForm extends BaseService
      *
      * API method: SYNO.Core.SupportForm.Form get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.SupportForm.Form-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getForm()
     {
@@ -43,7 +43,7 @@ class SupportForm extends BaseService
      *
      * API method: SYNO.Core.SupportForm.Service get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.SupportForm.Service-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getService()
     {

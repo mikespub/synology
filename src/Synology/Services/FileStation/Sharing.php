@@ -24,7 +24,7 @@ class Sharing extends BaseService
      *
      * API method: SYNO.FileStation.Sharing list (3)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FileStation.Sharing-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

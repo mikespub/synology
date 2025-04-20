@@ -24,7 +24,7 @@ class Pin extends BaseService
      *
      * API method: SYNO.AudioStation.Pin list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Pin-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

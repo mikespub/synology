@@ -24,7 +24,7 @@ class AdminSetting extends BaseService
      *
      * API method: SYNO.Contacts.AdminSetting get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Contacts.AdminSetting-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

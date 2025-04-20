@@ -24,7 +24,7 @@ class Task extends BaseService
      *
      * API method: SYNO.DownloadStation2.Task list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Task-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class Task extends BaseService
      *
      * API method: SYNO.DownloadStation2.Task.Statistic get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Task.Statistic-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getStatistic()
     {

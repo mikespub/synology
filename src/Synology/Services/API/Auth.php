@@ -24,7 +24,7 @@ class Auth extends BaseService
      *
      * API method: SYNO.API.Auth login (7)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.API.Auth-login.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function login(string $account = "username", string $passwd = "password", string $session = "default", string $format = "sid")
     {
@@ -47,7 +47,7 @@ class Auth extends BaseService
      *
      * API method: SYNO.API.Auth.Key get (7)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.API.Auth.Key-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getKey()
     {
@@ -66,7 +66,7 @@ class Auth extends BaseService
      *
      * API method: SYNO.API.Auth.Type get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.API.Auth.Type-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getType()
     {
@@ -85,7 +85,7 @@ class Auth extends BaseService
      *
      * API method: SYNO.API.Auth.UIConfig get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.API.Auth.UIConfig-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getUIConfig()
     {

@@ -24,7 +24,7 @@ class Song extends BaseService
      *
      * API method: SYNO.AudioStation.Song list (3)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Song-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

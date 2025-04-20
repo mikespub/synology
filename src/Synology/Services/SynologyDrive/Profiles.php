@@ -24,7 +24,7 @@ class Profiles extends BaseService
      *
      * API method: SYNO.SynologyDrive.Profiles list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDrive.Profiles-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

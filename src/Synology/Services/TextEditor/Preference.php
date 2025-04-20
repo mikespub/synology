@@ -24,7 +24,7 @@ class Preference extends BaseService
      *
      * API method: SYNO.TextEditor.Preference get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.TextEditor.Preference-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

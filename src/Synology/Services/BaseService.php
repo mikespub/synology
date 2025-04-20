@@ -2,8 +2,6 @@
 
 namespace Synology\Services;
 
-use Synology\Applications\GenericClient;
-
 /**
  * Class BaseService
  *
@@ -16,8 +14,13 @@ class BaseService
     public const API_VERSION = 1;
     public const API_PATH = 'entry.cgi';
 
-    protected GenericClient $client;
+    protected ServicesClient $client;
 
+    /**
+     * Set services client for calls
+     *
+     * @param ServicesClient $client
+     */
     public function __construct($client)
     {
         $this->client = $client;

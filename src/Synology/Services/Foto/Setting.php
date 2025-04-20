@@ -24,7 +24,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.Foto.Setting.Admin get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Foto.Setting.Admin-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getAdmin()
     {
@@ -43,7 +43,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.Foto.Setting.Guest get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Foto.Setting.Guest-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getGuest()
     {
@@ -62,7 +62,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.Foto.Setting.MobileCompatibility get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Foto.Setting.MobileCompatibility-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getMobileCompatibility()
     {
@@ -81,7 +81,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.Foto.Setting.TeamSpace get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Foto.Setting.TeamSpace-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getTeamSpace()
     {
@@ -100,7 +100,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.Foto.Setting.User get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Foto.Setting.User-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getUser()
     {
@@ -119,7 +119,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.Foto.Setting.Wizard get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Foto.Setting.Wizard-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getWizard()
     {

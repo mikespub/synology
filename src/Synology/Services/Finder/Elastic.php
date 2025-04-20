@@ -24,7 +24,7 @@ class Elastic extends BaseService
      *
      * API method: SYNO.Finder.Elastic.SearchHistory get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Finder.Elastic.SearchHistory-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSearchHistory()
     {

@@ -24,7 +24,7 @@ class Favorite extends BaseService
      *
      * API method: SYNO.FileStation.Favorite list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FileStation.Favorite-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

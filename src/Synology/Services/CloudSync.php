@@ -22,7 +22,7 @@ class CloudSync extends BaseService
      *
      * API method: SYNO.CloudSync get_property (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.CloudSync-get_property.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getProperty(int $connection_id = 1)
     {
@@ -42,7 +42,7 @@ class CloudSync extends BaseService
      *
      * API method: SYNO.CloudSync get_log (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.CloudSync-get_log.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getLog(int $offset = 0, int $limit = 10)
     {
@@ -63,7 +63,7 @@ class CloudSync extends BaseService
      *
      * API method: SYNO.CloudSync get_recently_change (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.CloudSync-get_recently_change.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getRecentlyChange()
     {
@@ -82,7 +82,7 @@ class CloudSync extends BaseService
      *
      * API method: SYNO.CloudSync get_connection_setting (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.CloudSync-get_connection_setting.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getConnectionSetting(int $connection_id = 1)
     {
@@ -102,7 +102,7 @@ class CloudSync extends BaseService
      *
      * API method: SYNO.CloudSync get_session_setting (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.CloudSync-get_session_setting.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSessionSetting(int $session_id = 2)
     {
@@ -122,7 +122,7 @@ class CloudSync extends BaseService
      *
      * API method: SYNO.CloudSync get_selective_folder_list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.CloudSync-get_selective_folder_list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSelectiveFolderList(int $session_id = 2, string $file_id = "FF5A9A59014AF031!41822", string $inPath = "/", ?string $exists_type = null)
     {
@@ -145,7 +145,7 @@ class CloudSync extends BaseService
      *
      * API method: SYNO.CloudSync get_selective_sync_config (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.CloudSync-get_selective_sync_config.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSelectiveSyncConfig(int $session_id = 2)
     {
@@ -165,7 +165,7 @@ class CloudSync extends BaseService
      *
      * API method: SYNO.CloudSync list_conn (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.CloudSync-list_conn.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listConn(bool $is_tray = true)
     {
@@ -185,7 +185,7 @@ class CloudSync extends BaseService
      *
      * API method: SYNO.CloudSync list_sess (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.CloudSync-list_sess.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listSess(int $connection_id = 1)
     {
@@ -205,7 +205,7 @@ class CloudSync extends BaseService
      *
      * API method: SYNO.CloudSync get_conn_auth_info (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.CloudSync-get_conn_auth_info.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getConnAuthInfo(int $connection_id = 1)
     {

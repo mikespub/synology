@@ -24,7 +24,7 @@ class SmartBlock extends BaseService
      *
      * API method: SYNO.Core.SmartBlock get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.SmartBlock-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {
@@ -43,7 +43,7 @@ class SmartBlock extends BaseService
      *
      * API method: SYNO.Core.SmartBlock.Trusted list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.SmartBlock.Trusted-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listTrusted()
     {
@@ -62,7 +62,7 @@ class SmartBlock extends BaseService
      *
      * API method: SYNO.Core.SmartBlock.Untrusted list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.SmartBlock.Untrusted-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listUntrusted()
     {
@@ -81,7 +81,7 @@ class SmartBlock extends BaseService
      *
      * API method: SYNO.Core.SmartBlock.User list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.SmartBlock.User-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listUser()
     {

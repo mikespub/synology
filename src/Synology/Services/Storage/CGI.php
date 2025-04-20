@@ -24,7 +24,7 @@ class CGI extends BaseService
      *
      * API method: SYNO.Storage.CGI.HddMan get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Storage.CGI.HddMan-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getHddMan()
     {
@@ -43,7 +43,7 @@ class CGI extends BaseService
      *
      * API method: SYNO.Storage.CGI.KMIP get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Storage.CGI.KMIP-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getKMIP()
     {
@@ -62,7 +62,7 @@ class CGI extends BaseService
      *
      * API method: SYNO.Storage.CGI.Smart.Scheduler list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Storage.CGI.Smart.Scheduler-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listSmartScheduler()
     {
@@ -81,7 +81,7 @@ class CGI extends BaseService
      *
      * API method: SYNO.Storage.CGI.Spare list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Storage.CGI.Spare-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listSpare()
     {
@@ -100,7 +100,7 @@ class CGI extends BaseService
      *
      * API method: SYNO.Storage.CGI.Spare.Conf get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Storage.CGI.Spare.Conf-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSpareConf()
     {

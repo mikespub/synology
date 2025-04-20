@@ -24,7 +24,7 @@ class Report extends BaseService
      *
      * API method: SYNO.Core.Report list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Report-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class Report extends BaseService
      *
      * API method: SYNO.Core.Report.Config get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Report.Config-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getConfig()
     {

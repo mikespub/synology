@@ -24,7 +24,7 @@ class RSS extends BaseService
      *
      * API method: SYNO.DownloadStation2.RSS.Feed list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.RSS.Feed-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listFeed()
     {

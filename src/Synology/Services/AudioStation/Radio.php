@@ -24,7 +24,7 @@ class Radio extends BaseService
      *
      * API method: SYNO.AudioStation.Radio list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Radio-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

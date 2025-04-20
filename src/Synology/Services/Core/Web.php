@@ -24,7 +24,7 @@ class Web extends BaseService
      *
      * API method: SYNO.Core.Web.DSM get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Web.DSM-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getDSM()
     {
@@ -43,7 +43,7 @@ class Web extends BaseService
      *
      * API method: SYNO.Core.Web.DSM.External get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Web.DSM.External-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getDSMExternal()
     {
@@ -62,7 +62,7 @@ class Web extends BaseService
      *
      * API method: SYNO.Core.Web.Security.HTTPCompression get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Web.Security.HTTPCompression-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSecurityHTTPCompression()
     {
@@ -81,7 +81,7 @@ class Web extends BaseService
      *
      * API method: SYNO.Core.Web.Security.TLSProfile get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Web.Security.TLSProfile-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSecurityTLSProfile()
     {

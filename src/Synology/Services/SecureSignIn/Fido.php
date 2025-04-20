@@ -24,7 +24,7 @@ class Fido extends BaseService
      *
      * API method: SYNO.SecureSignIn.Fido.Manage list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.Fido.Manage-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listManage()
     {

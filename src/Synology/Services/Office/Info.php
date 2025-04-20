@@ -24,7 +24,7 @@ class Info extends BaseService
      *
      * API method: SYNO.Office.Info get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Office.Info-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {
@@ -43,7 +43,7 @@ class Info extends BaseService
      *
      * API method: SYNO.Office.Info.Constants get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Office.Info.Constants-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getConstants()
     {

@@ -24,7 +24,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.Advance.CustomizedData get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.Advance.CustomizedData-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getAdvanceCustomizedData()
     {
@@ -43,7 +43,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.Advance.FilterSettings list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.Advance.FilterSettings-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listAdvanceFilterSettings()
     {
@@ -62,7 +62,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.Advance.FilterSettings.Profile list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.Advance.FilterSettings.Profile-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listAdvanceFilterSettingsProfile()
     {
@@ -81,7 +81,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.Advance.FilterSettings.Template list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.Advance.FilterSettings.Template-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listAdvanceFilterSettingsTemplate()
     {
@@ -100,7 +100,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.Advance.Variables get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.Advance.Variables-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getAdvanceVariables()
     {
@@ -119,7 +119,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.CMS.Conf get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.CMS.Conf-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getCMSConf()
     {
@@ -138,7 +138,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.Mail.Auth get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.Mail.Auth-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getMailAuth()
     {
@@ -157,7 +157,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.Mail.Conf get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.Mail.Conf-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getMailConf()
     {
@@ -176,7 +176,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.Push.AuthToken get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.Push.AuthToken-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getPushAuthToken()
     {
@@ -195,7 +195,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.Push.Conf get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.Push.Conf-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getPushConf()
     {
@@ -214,7 +214,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.Push.Mail get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.Push.Mail-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getPushMail()
     {
@@ -233,7 +233,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.Push.Mobile list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.Push.Mobile-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listPushMobile()
     {
@@ -252,7 +252,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.Push.Webhook.Provider list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.Push.Webhook.Provider-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listPushWebhookProvider()
     {
@@ -271,7 +271,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.SMS.Conf get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.SMS.Conf-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSMSConf()
     {
@@ -290,7 +290,7 @@ class Notification extends BaseService
      *
      * API method: SYNO.Core.Notification.SMS.Provider list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Notification.SMS.Provider-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listSMSProvider()
     {

@@ -24,7 +24,7 @@ class Conf extends BaseService
      *
      * API method: SYNO.SecurityAdvisor.Conf get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecurityAdvisor.Conf-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

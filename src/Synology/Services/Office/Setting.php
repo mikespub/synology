@@ -24,7 +24,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.Office.Setting get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Office.Setting-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {
@@ -43,7 +43,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.Office.Setting.Font list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Office.Setting.Font-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listFont()
     {
@@ -62,7 +62,7 @@ class Setting extends BaseService
      *
      * API method: SYNO.Office.Setting.System get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Office.Setting.System-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSystem()
     {

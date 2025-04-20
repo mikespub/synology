@@ -24,7 +24,7 @@ class User extends BaseService
      *
      * API method: SYNO.Core.User list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.User-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class User extends BaseService
      *
      * API method: SYNO.Core.User.Home get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.User.Home-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getHome()
     {
@@ -62,7 +62,7 @@ class User extends BaseService
      *
      * API method: SYNO.Core.User.PasswordExpiry get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.User.PasswordExpiry-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getPasswordExpiry()
     {
@@ -81,7 +81,7 @@ class User extends BaseService
      *
      * API method: SYNO.Core.User.PasswordPolicy get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.User.PasswordPolicy-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getPasswordPolicy()
     {
@@ -100,7 +100,7 @@ class User extends BaseService
      *
      * API method: SYNO.Core.User.UsernamePolicy list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.User.UsernamePolicy-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listnamePolicy()
     {

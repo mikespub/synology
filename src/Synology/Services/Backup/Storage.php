@@ -24,7 +24,7 @@ class Storage extends BaseService
      *
      * API method: SYNO.Backup.Storage.Share.Local list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.Storage.Share.Local-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listShareLocal()
     {

@@ -24,7 +24,7 @@ class Hardware extends BaseService
      *
      * API method: SYNO.Core.Hardware.BeepControl get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Hardware.BeepControl-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getBeepControl()
     {
@@ -43,7 +43,7 @@ class Hardware extends BaseService
      *
      * API method: SYNO.Core.Hardware.FanSpeed get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Hardware.FanSpeed-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getFanSpeed()
     {
@@ -62,7 +62,7 @@ class Hardware extends BaseService
      *
      * API method: SYNO.Core.Hardware.Hibernation get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Hardware.Hibernation-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getHibernation()
     {
@@ -81,7 +81,7 @@ class Hardware extends BaseService
      *
      * API method: SYNO.Core.Hardware.LCM get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Hardware.LCM-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getLCM()
     {
@@ -100,7 +100,7 @@ class Hardware extends BaseService
      *
      * API method: SYNO.Core.Hardware.Led.Brightness get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Hardware.Led.Brightness-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getLedBrightness()
     {
@@ -119,7 +119,7 @@ class Hardware extends BaseService
      *
      * API method: SYNO.Core.Hardware.MemoryLayout get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Hardware.MemoryLayout-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getMemoryLayout()
     {
@@ -138,7 +138,7 @@ class Hardware extends BaseService
      *
      * API method: SYNO.Core.Hardware.NeedReboot get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Hardware.NeedReboot-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getNeedReboot()
     {
@@ -157,7 +157,7 @@ class Hardware extends BaseService
      *
      * API method: SYNO.Core.Hardware.PowerRecovery get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Hardware.PowerRecovery-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getPowerRecovery()
     {
@@ -176,7 +176,7 @@ class Hardware extends BaseService
      *
      * API method: SYNO.Core.Hardware.SpectreMeltdown get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Hardware.SpectreMeltdown-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSpectreMeltdown()
     {
@@ -195,7 +195,7 @@ class Hardware extends BaseService
      *
      * API method: SYNO.Core.Hardware.VideoTranscoding get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Hardware.VideoTranscoding-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getVideoTranscoding()
     {
@@ -214,7 +214,7 @@ class Hardware extends BaseService
      *
      * API method: SYNO.Core.Hardware.ZRAM get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Hardware.ZRAM-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getZRAM()
     {

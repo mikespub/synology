@@ -24,7 +24,7 @@ class Log extends BaseService
      *
      * API method: SYNO.MediaServer.Log get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.MediaServer.Log-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

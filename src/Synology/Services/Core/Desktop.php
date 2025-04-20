@@ -24,7 +24,7 @@ class Desktop extends BaseService
      *
      * API method: SYNO.Core.Desktop.Initdata get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Desktop.Initdata-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getInitdata()
     {
@@ -43,7 +43,7 @@ class Desktop extends BaseService
      *
      * API method: SYNO.Core.Desktop.Timeout get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Desktop.Timeout-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getTimeout()
     {

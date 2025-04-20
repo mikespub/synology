@@ -24,7 +24,7 @@ class Security extends BaseService
      *
      * API method: SYNO.Core.Security.AutoBlock get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Security.AutoBlock-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getAutoBlock()
     {
@@ -43,7 +43,7 @@ class Security extends BaseService
      *
      * API method: SYNO.Core.Security.Firewall get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Security.Firewall-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getFirewall()
     {
@@ -62,7 +62,7 @@ class Security extends BaseService
      *
      * API method: SYNO.Core.Security.Firewall.Adapter list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Security.Firewall.Adapter-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listFirewallAdapter()
     {
@@ -81,7 +81,7 @@ class Security extends BaseService
      *
      * API method: SYNO.Core.Security.Firewall.Conf get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Security.Firewall.Conf-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getFirewallConf()
     {
@@ -100,7 +100,7 @@ class Security extends BaseService
      *
      * API method: SYNO.Core.Security.Firewall.Geoip list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Security.Firewall.Geoip-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listFirewallGeoip()
     {
@@ -119,7 +119,7 @@ class Security extends BaseService
      *
      * API method: SYNO.Core.Security.Firewall.Profile list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Security.Firewall.Profile-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listFirewallProfile()
     {
@@ -138,7 +138,7 @@ class Security extends BaseService
      *
      * API method: SYNO.Core.Security.DSM get (5)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Security.DSM-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getDSM()
     {
@@ -157,7 +157,7 @@ class Security extends BaseService
      *
      * API method: SYNO.Core.Security.DSM.Embed get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Security.DSM.Embed-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getDSMEmbed()
     {
@@ -176,7 +176,7 @@ class Security extends BaseService
      *
      * API method: SYNO.Core.Security.DSM.Proxy get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Security.DSM.Proxy-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getDSMProxy()
     {

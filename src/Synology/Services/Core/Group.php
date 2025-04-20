@@ -24,7 +24,7 @@ class Group extends BaseService
      *
      * API method: SYNO.Core.Group list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Group-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class Group extends BaseService
      *
      * API method: SYNO.Core.Group.ValidLocalAdmin list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Group.ValidLocalAdmin-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listValidLocalAdmin()
     {

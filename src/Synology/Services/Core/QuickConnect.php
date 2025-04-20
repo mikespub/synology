@@ -24,7 +24,7 @@ class QuickConnect extends BaseService
      *
      * API method: SYNO.Core.QuickConnect.Permission get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.QuickConnect.Permission-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getPermission()
     {
@@ -43,7 +43,7 @@ class QuickConnect extends BaseService
      *
      * API method: SYNO.Core.QuickConnect.RegisterSite get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.QuickConnect.RegisterSite-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getRegisterSite()
     {
@@ -62,7 +62,7 @@ class QuickConnect extends BaseService
      *
      * API method: SYNO.Core.QuickConnect.Upnp get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.QuickConnect.Upnp-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getUpnp()
     {

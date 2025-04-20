@@ -24,7 +24,7 @@ class RescueEmail extends BaseService
      *
      * API method: SYNO.Auth.RescueEmail get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Auth.RescueEmail-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

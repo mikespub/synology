@@ -24,7 +24,7 @@ class Application extends BaseService
      *
      * API method: SYNO.Personal.Application.Info get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Personal.Application.Info-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getInfo()
     {
@@ -43,7 +43,7 @@ class Application extends BaseService
      *
      * API method: SYNO.Personal.Application.Info.Local get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Personal.Application.Info.Local-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getInfoLocal()
     {

@@ -24,7 +24,7 @@ class Authenticator extends BaseService
      *
      * API method: SYNO.SecureSignIn.Authenticator list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.Authenticator-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class Authenticator extends BaseService
      *
      * API method: SYNO.SecureSignIn.Authenticator.Info get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.Authenticator.Info-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getInfo()
     {
@@ -62,7 +62,7 @@ class Authenticator extends BaseService
      *
      * API method: SYNO.SecureSignIn.Authenticator.Verdict get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.Authenticator.Verdict-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getVerdict()
     {

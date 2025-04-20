@@ -24,7 +24,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Core.Network get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Network-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {
@@ -43,7 +43,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Core.Network.Bond list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Network.Bond-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listBond()
     {
@@ -62,7 +62,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Core.Network.Ethernet list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Network.Ethernet-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listEthernet()
     {
@@ -81,7 +81,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Core.Network.IPv6.Router.Prefix list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Network.IPv6.Router.Prefix-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listIPv6RouterPrefix()
     {
@@ -100,7 +100,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Core.Network.Interface list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Network.Interface-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listInterface()
     {
@@ -119,7 +119,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Core.Network.OVS list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Network.OVS-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listOVS()
     {
@@ -138,7 +138,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Core.Network.PPPoE list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Network.PPPoE-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listPPPoE()
     {
@@ -157,7 +157,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Core.Network.Proxy get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Network.Proxy-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getProxy()
     {
@@ -176,7 +176,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Core.Network.VPN.L2TP list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Network.VPN.L2TP-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listVPNL2TP()
     {
@@ -195,7 +195,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Core.Network.VPN.OpenVPN list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Network.VPN.OpenVPN-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listVPNOpenVPN()
     {
@@ -214,7 +214,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Core.Network.VPN.OpenVPNWithConf list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Network.VPN.OpenVPNWithConf-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listVPNOpenVPNWithConf()
     {
@@ -233,7 +233,7 @@ class Network extends BaseService
      *
      * API method: SYNO.Core.Network.VPN.PPTP list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Network.VPN.PPTP-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listVPNPPTP()
     {

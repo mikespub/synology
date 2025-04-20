@@ -24,7 +24,7 @@ class Todo extends BaseService
      *
      * API method: SYNO.NoteStation.Todo list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Todo-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

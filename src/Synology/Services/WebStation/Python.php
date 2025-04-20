@@ -24,7 +24,7 @@ class Python extends BaseService
      *
      * API method: SYNO.WebStation.Python get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.Python-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {
@@ -43,7 +43,7 @@ class Python extends BaseService
      *
      * API method: SYNO.WebStation.Python.Profile list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.Python.Profile-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listProfile()
     {

@@ -24,7 +24,7 @@ class ListSvc extends BaseService
      *
      * API method: SYNO.FileStation.List list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FileStation.List-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list(string $folder_path = "/home", array $additional = ["real_path","size","owner","time","perm"])
     {
@@ -45,7 +45,7 @@ class ListSvc extends BaseService
      *
      * API method: SYNO.FileStation.List list_share (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FileStation.List-list_share.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listShare(array $additional = ["real_path","owner","time","perm","volume_status"])
     {
@@ -65,7 +65,7 @@ class ListSvc extends BaseService
      *
      * API method: SYNO.FileStation.List getinfo (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FileStation.List-getinfo.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getinfo(string $inPath = "/home", array $additional = ["real_path","size","owner","time","perm"])
     {

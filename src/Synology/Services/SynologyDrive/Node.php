@@ -24,7 +24,7 @@ class Node extends BaseService
      *
      * API method: SYNO.SynologyDrive.Node list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDrive.Node-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

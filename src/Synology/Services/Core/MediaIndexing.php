@@ -24,7 +24,7 @@ class MediaIndexing extends BaseService
      *
      * API method: SYNO.Core.MediaIndexing.IndexFolder get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.MediaIndexing.IndexFolder-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getIndexFolder()
     {
@@ -43,7 +43,7 @@ class MediaIndexing extends BaseService
      *
      * API method: SYNO.Core.MediaIndexing.Scheduler get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.MediaIndexing.Scheduler-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getScheduler()
     {
@@ -62,7 +62,7 @@ class MediaIndexing extends BaseService
      *
      * API method: SYNO.Core.MediaIndexing.ThumbnailQuality get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.MediaIndexing.ThumbnailQuality-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getThumbnailQuality()
     {

@@ -24,7 +24,7 @@ class Info extends BaseService
      *
      * API method: SYNO.SynologyDrive.Info get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDrive.Info-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

@@ -24,7 +24,7 @@ class Captcha extends BaseService
      *
      * API method: SYNO.DownloadStation2.Captcha list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Captcha-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

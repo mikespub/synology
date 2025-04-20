@@ -24,7 +24,7 @@ class Migration extends BaseService
      *
      * API method: SYNO.SynologyDrive.Migration.UserHome list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDrive.Migration.UserHome-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listUserHome()
     {

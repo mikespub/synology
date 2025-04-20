@@ -24,7 +24,7 @@ class Server extends BaseService
      *
      * API method: SYNO.S2S.Server get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.S2S.Server-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {
@@ -43,7 +43,7 @@ class Server extends BaseService
      *
      * API method: SYNO.S2S.Server.Pair list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.S2S.Server.Pair-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listPair()
     {

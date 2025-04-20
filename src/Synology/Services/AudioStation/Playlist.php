@@ -24,7 +24,7 @@ class Playlist extends BaseService
      *
      * API method: SYNO.AudioStation.Playlist list (3)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Playlist-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

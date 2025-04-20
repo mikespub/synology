@@ -24,7 +24,7 @@ class PortForwarding extends BaseService
      *
      * API method: SYNO.Core.PortForwarding.RouterConf get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.PortForwarding.RouterConf-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getRouterConf()
     {
@@ -43,7 +43,7 @@ class PortForwarding extends BaseService
      *
      * API method: SYNO.Core.PortForwarding.RouterInfo get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.PortForwarding.RouterInfo-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getRouterInfo()
     {
@@ -62,7 +62,7 @@ class PortForwarding extends BaseService
      *
      * API method: SYNO.Core.PortForwarding.RouterList list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.PortForwarding.RouterList-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listRouterList()
     {

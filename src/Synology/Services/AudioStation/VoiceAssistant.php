@@ -24,7 +24,7 @@ class VoiceAssistant extends BaseService
      *
      * API method: SYNO.AudioStation.VoiceAssistant.Challenge get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.VoiceAssistant.Challenge-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getChallenge()
     {
@@ -43,7 +43,7 @@ class VoiceAssistant extends BaseService
      *
      * API method: SYNO.AudioStation.VoiceAssistant.Info get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.VoiceAssistant.Info-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getInfo()
     {

@@ -24,7 +24,7 @@ class Browse extends BaseService
      *
      * API method: SYNO.FotoTeam.Browse.Folder list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.Folder-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listFolder(int $offset = 0, int $limit = 10)
     {
@@ -45,7 +45,7 @@ class Browse extends BaseService
      *
      * API method: SYNO.FotoTeam.Browse.GeneralTag list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.GeneralTag-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listGeneralTag(int $offset = 0, int $limit = 10)
     {
@@ -66,7 +66,7 @@ class Browse extends BaseService
      *
      * API method: SYNO.FotoTeam.Browse.Geocoding list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.Geocoding-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listGeocoding(int $offset = 0, int $limit = 10)
     {
@@ -87,7 +87,7 @@ class Browse extends BaseService
      *
      * API method: SYNO.FotoTeam.Browse.Item list (6)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.Item-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listItem(int $offset = 0, int $limit = 10)
     {
@@ -108,7 +108,7 @@ class Browse extends BaseService
      *
      * API method: SYNO.FotoTeam.Browse.Person list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.Person-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listPerson(int $offset = 0, int $limit = 10)
     {
@@ -129,7 +129,7 @@ class Browse extends BaseService
      *
      * API method: SYNO.FotoTeam.Browse.RecentlyAdded list (5)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.RecentlyAdded-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listRecentlyAdded(int $offset = 0, int $limit = 10)
     {
@@ -150,7 +150,7 @@ class Browse extends BaseService
      *
      * API method: SYNO.FotoTeam.Browse.Timeline get (5)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.Timeline-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getTimeline()
     {

@@ -24,7 +24,7 @@ class SyslogClient extends BaseService
      *
      * API method: SYNO.Core.SyslogClient.FileTransfer get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.SyslogClient.FileTransfer-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getFileTransfer()
     {
@@ -43,7 +43,7 @@ class SyslogClient extends BaseService
      *
      * API method: SYNO.Core.SyslogClient.Log list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.SyslogClient.Log-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listLog()
     {
@@ -62,7 +62,7 @@ class SyslogClient extends BaseService
      *
      * API method: SYNO.Core.SyslogClient.Setting.Notify get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.SyslogClient.Setting.Notify-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSettingNotify()
     {

@@ -24,7 +24,7 @@ class Sharing extends BaseService
      *
      * API method: SYNO.Core.Sharing list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Sharing-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class Sharing extends BaseService
      *
      * API method: SYNO.Core.Sharing.Initdata get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Sharing.Initdata-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getInitdata()
     {
@@ -62,7 +62,7 @@ class Sharing extends BaseService
      *
      * API method: SYNO.Core.Sharing.Session get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Sharing.Session-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSession()
     {

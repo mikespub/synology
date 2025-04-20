@@ -24,7 +24,7 @@ class Settings extends BaseService
      *
      * API method: SYNO.DownloadStation2.Settings.FileHosting list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Settings.FileHosting-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listFileHosting()
     {
@@ -43,7 +43,7 @@ class Settings extends BaseService
      *
      * API method: SYNO.DownloadStation2.Settings.AutoExtraction get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Settings.AutoExtraction-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getAutoExtraction()
     {
@@ -62,7 +62,7 @@ class Settings extends BaseService
      *
      * API method: SYNO.DownloadStation2.Settings.BT get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Settings.BT-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getBT()
     {
@@ -81,7 +81,7 @@ class Settings extends BaseService
      *
      * API method: SYNO.DownloadStation2.Settings.BTSearch list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Settings.BTSearch-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listBTSearch()
     {
@@ -100,7 +100,7 @@ class Settings extends BaseService
      *
      * API method: SYNO.DownloadStation2.Settings.Emule get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Settings.Emule-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getEmule()
     {
@@ -119,7 +119,7 @@ class Settings extends BaseService
      *
      * API method: SYNO.DownloadStation2.Settings.Emule.Location get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Settings.Emule.Location-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getEmuleLocation()
     {
@@ -138,7 +138,7 @@ class Settings extends BaseService
      *
      * API method: SYNO.DownloadStation2.Settings.FtpHttp get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Settings.FtpHttp-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getFtpHttp()
     {
@@ -157,7 +157,7 @@ class Settings extends BaseService
      *
      * API method: SYNO.DownloadStation2.Settings.Global get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Settings.Global-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getGlobal()
     {
@@ -176,7 +176,7 @@ class Settings extends BaseService
      *
      * API method: SYNO.DownloadStation2.Settings.Location get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Settings.Location-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getLocation()
     {
@@ -195,7 +195,7 @@ class Settings extends BaseService
      *
      * API method: SYNO.DownloadStation2.Settings.Nzb get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Settings.Nzb-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getNzb()
     {
@@ -214,7 +214,7 @@ class Settings extends BaseService
      *
      * API method: SYNO.DownloadStation2.Settings.Rss get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Settings.Rss-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getRss()
     {
@@ -233,7 +233,7 @@ class Settings extends BaseService
      *
      * API method: SYNO.DownloadStation2.Settings.Scheduler get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Settings.Scheduler-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getScheduler()
     {

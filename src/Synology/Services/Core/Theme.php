@@ -24,7 +24,7 @@ class Theme extends BaseService
      *
      * API method: SYNO.Core.Theme.Desktop get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Theme.Desktop-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getDesktop()
     {
@@ -43,7 +43,7 @@ class Theme extends BaseService
      *
      * API method: SYNO.Core.Theme.FileSharingLogin get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Theme.FileSharingLogin-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getFileSharingLogin()
     {
@@ -62,7 +62,7 @@ class Theme extends BaseService
      *
      * API method: SYNO.Core.Theme.Login get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Theme.Login-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getLogin()
     {

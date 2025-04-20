@@ -24,7 +24,7 @@ class Service extends BaseService
      *
      * API method: SYNO.Backup.Service.NetworkBackup get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.Service.NetworkBackup-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getNetworkBackup()
     {

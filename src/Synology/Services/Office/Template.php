@@ -24,7 +24,7 @@ class Template extends BaseService
      *
      * API method: SYNO.Office.Template list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Office.Template-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class Template extends BaseService
      *
      * API method: SYNO.Office.Template.Sharing.Group list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Office.Template.Sharing.Group-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listSharingGroup()
     {

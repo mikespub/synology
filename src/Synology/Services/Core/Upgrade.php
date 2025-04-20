@@ -24,7 +24,7 @@ class Upgrade extends BaseService
      *
      * API method: SYNO.Core.Upgrade.Group.Setting get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Upgrade.Group.Setting-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getGroupSetting()
     {
@@ -43,7 +43,7 @@ class Upgrade extends BaseService
      *
      * API method: SYNO.Core.Upgrade.Setting get (4)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Upgrade.Setting-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSetting()
     {

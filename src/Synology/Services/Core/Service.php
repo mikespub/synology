@@ -24,7 +24,7 @@ class Service extends BaseService
      *
      * API method: SYNO.Core.Service get (3)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Service-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {
@@ -43,7 +43,7 @@ class Service extends BaseService
      *
      * API method: SYNO.Core.Service.Conf get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Service.Conf-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getConf()
     {

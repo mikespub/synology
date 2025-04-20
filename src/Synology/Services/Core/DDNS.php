@@ -24,7 +24,7 @@ class DDNS extends BaseService
      *
      * API method: SYNO.Core.DDNS.Ethernet list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.DDNS.Ethernet-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listEthernet()
     {
@@ -43,7 +43,7 @@ class DDNS extends BaseService
      *
      * API method: SYNO.Core.DDNS.ExtIP list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.DDNS.ExtIP-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listExtIP()
     {
@@ -62,7 +62,7 @@ class DDNS extends BaseService
      *
      * API method: SYNO.Core.DDNS.Provider list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.DDNS.Provider-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listProvider()
     {
@@ -81,7 +81,7 @@ class DDNS extends BaseService
      *
      * API method: SYNO.Core.DDNS.Record list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.DDNS.Record-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listRecord()
     {

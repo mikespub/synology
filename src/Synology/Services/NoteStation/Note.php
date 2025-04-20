@@ -24,7 +24,7 @@ class Note extends BaseService
      *
      * API method: SYNO.NoteStation.Note list (4)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Note-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

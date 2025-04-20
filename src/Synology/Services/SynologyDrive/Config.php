@@ -24,7 +24,7 @@ class Config extends BaseService
      *
      * API method: SYNO.SynologyDrive.Config get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDrive.Config-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

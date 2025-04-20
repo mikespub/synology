@@ -24,7 +24,7 @@ class HTTP extends BaseService
      *
      * API method: SYNO.WebStation.HTTP.VHost list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.HTTP.VHost-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listVHost()
     {

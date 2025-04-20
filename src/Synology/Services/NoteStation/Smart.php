@@ -24,7 +24,7 @@ class Smart extends BaseService
      *
      * API method: SYNO.NoteStation.Smart list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Smart-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

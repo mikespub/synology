@@ -24,7 +24,7 @@ class Package extends BaseService
      *
      * API method: SYNO.DownloadStation2.Package.Info get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Package.Info-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getInfo()
     {
@@ -43,7 +43,7 @@ class Package extends BaseService
      *
      * API method: SYNO.DownloadStation2.Package.Module list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Package.Module-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listModule()
     {
@@ -62,7 +62,7 @@ class Package extends BaseService
      *
      * API method: SYNO.DownloadStation2.Package.Service get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DownloadStation2.Package.Service-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getService()
     {

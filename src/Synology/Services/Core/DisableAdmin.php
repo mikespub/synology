@@ -24,7 +24,7 @@ class DisableAdmin extends BaseService
      *
      * API method: SYNO.Core.DisableAdmin get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.DisableAdmin-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get()
     {

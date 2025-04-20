@@ -24,7 +24,7 @@ class Directory extends BaseService
      *
      * API method: SYNO.Core.Directory.Azure.SSO get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Directory.Azure.SSO-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getAzureSSO()
     {
@@ -43,7 +43,7 @@ class Directory extends BaseService
      *
      * API method: SYNO.Core.Directory.Domain.Schedule get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Directory.Domain.Schedule-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getDomainSchedule()
     {
@@ -62,7 +62,7 @@ class Directory extends BaseService
      *
      * API method: SYNO.Core.Directory.OIDC.SSO get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Directory.OIDC.SSO-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getOIDCSSO()
     {
@@ -81,7 +81,7 @@ class Directory extends BaseService
      *
      * API method: SYNO.Core.Directory.SSO.CAS get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Directory.SSO.CAS-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSSOCAS()
     {
@@ -100,7 +100,7 @@ class Directory extends BaseService
      *
      * API method: SYNO.Core.Directory.SSO.Profile list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Directory.SSO.Profile-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listSSOProfile()
     {
@@ -119,7 +119,7 @@ class Directory extends BaseService
      *
      * API method: SYNO.Core.Directory.SSO.SAML get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Directory.SSO.SAML-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSSOSAML()
     {
@@ -138,7 +138,7 @@ class Directory extends BaseService
      *
      * API method: SYNO.Core.Directory.SSO get (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Directory.SSO-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSSO()
     {
@@ -157,7 +157,7 @@ class Directory extends BaseService
      *
      * API method: SYNO.Core.Directory.SSO.IWA get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Directory.SSO.IWA-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSSOIWA()
     {
@@ -176,7 +176,7 @@ class Directory extends BaseService
      *
      * API method: SYNO.Core.Directory.SSO.Setting get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Directory.SSO.Setting-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSSOSetting()
     {
@@ -195,7 +195,7 @@ class Directory extends BaseService
      *
      * API method: SYNO.Core.Directory.WebSphere.SSO get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Directory.WebSphere.SSO-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getWebSphereSSO()
     {

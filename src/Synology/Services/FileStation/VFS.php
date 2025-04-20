@@ -24,7 +24,7 @@ class VFS extends BaseService
      *
      * API method: SYNO.FileStation.VFS.Connection list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FileStation.VFS.Connection-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listConnection()
     {
@@ -43,7 +43,7 @@ class VFS extends BaseService
      *
      * API method: SYNO.FileStation.VFS.Profile list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FileStation.VFS.Profile-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listProfile()
     {
@@ -62,7 +62,7 @@ class VFS extends BaseService
      *
      * API method: SYNO.FileStation.VFS.Protocol list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FileStation.VFS.Protocol-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listProtocol()
     {

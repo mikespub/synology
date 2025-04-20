@@ -24,7 +24,7 @@ class Task extends BaseService
      *
      * API method: SYNO.Backup.Task list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.Task-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class Task extends BaseService
      *
      * API method: SYNO.Backup.Task get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.Task-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function get(int $task_id = 1)
     {

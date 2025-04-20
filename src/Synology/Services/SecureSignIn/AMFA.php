@@ -24,7 +24,7 @@ class AMFA extends BaseService
      *
      * API method: SYNO.SecureSignIn.AMFA.Policy get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.AMFA.Policy-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getPolicy()
     {
@@ -43,7 +43,7 @@ class AMFA extends BaseService
      *
      * API method: SYNO.SecureSignIn.AMFA.SuggestConn get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.AMFA.SuggestConn-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getSuggestConn()
     {

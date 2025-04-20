@@ -24,7 +24,7 @@ class Image extends BaseService
      *
      * API method: SYNO.Docker.Image list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Docker.Image-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list(int $offset = 0, int $limit = 10)
     {

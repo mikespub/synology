@@ -24,7 +24,7 @@ class FileIndexing extends BaseService
      *
      * API method: SYNO.Finder.FileIndexing.Folder list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Finder.FileIndexing.Folder-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listFolder()
     {
@@ -43,7 +43,7 @@ class FileIndexing extends BaseService
      *
      * API method: SYNO.Finder.FileIndexing.Status get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Finder.FileIndexing.Status-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getStatus()
     {

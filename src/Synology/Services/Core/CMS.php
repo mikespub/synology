@@ -24,7 +24,7 @@ class CMS extends BaseService
      *
      * API method: SYNO.Core.CMS.Info get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.CMS.Info-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getInfo()
     {

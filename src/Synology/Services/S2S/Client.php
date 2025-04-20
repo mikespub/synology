@@ -24,7 +24,7 @@ class Client extends BaseService
      *
      * API method: SYNO.S2S.Client.Job list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.S2S.Client.Job-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listJob()
     {

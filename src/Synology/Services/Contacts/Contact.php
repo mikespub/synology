@@ -24,7 +24,7 @@ class Contact extends BaseService
      *
      * API method: SYNO.Contacts.Contact list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Contacts.Contact-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

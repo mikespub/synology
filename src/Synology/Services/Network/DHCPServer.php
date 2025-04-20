@@ -24,7 +24,7 @@ class DHCPServer extends BaseService
      *
      * API method: SYNO.Network.DHCPServer.PXE get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Network.DHCPServer.PXE-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getPXE()
     {
@@ -43,7 +43,7 @@ class DHCPServer extends BaseService
      *
      * API method: SYNO.Network.DHCPServer.Vendor get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Network.DHCPServer.Vendor-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getVendor()
     {

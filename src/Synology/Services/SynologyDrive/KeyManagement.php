@@ -24,7 +24,7 @@ class KeyManagement extends BaseService
      *
      * API method: SYNO.SynologyDrive.KeyManagement list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDrive.KeyManagement-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {

@@ -24,7 +24,7 @@ class Share extends BaseService
      *
      * API method: SYNO.NoteStation.Share.Priv list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Share.Priv-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listPriv()
     {

@@ -24,7 +24,7 @@ class LoginActivity extends BaseService
      *
      * API method: SYNO.SecurityAdvisor.LoginActivity list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecurityAdvisor.LoginActivity-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function list()
     {
@@ -43,7 +43,7 @@ class LoginActivity extends BaseService
      *
      * API method: SYNO.SecurityAdvisor.LoginActivity.User get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecurityAdvisor.LoginActivity.User-get.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function getUser()
     {

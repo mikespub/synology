@@ -24,7 +24,7 @@ class Search extends BaseService
      *
      * API method: SYNO.Foto.Search.Filter list (2)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Foto.Search.Filter-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listFilter()
     {

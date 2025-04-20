@@ -24,7 +24,7 @@ class Backup extends BaseService
      *
      * API method: SYNO.SDS.Backup.Client.Common.Log list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SDS.Backup.Client.Common.Log-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listClientCommonLog(int $offset = 0, int $limit = 10)
     {
@@ -45,7 +45,7 @@ class Backup extends BaseService
      *
      * API method: SYNO.SDS.Backup.Client.Explore.Job list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SDS.Backup.Client.Explore.Job-list.json
-     * @return array|bool|string|\stdClass
+     * @return array<mixed>|bool|string|\stdClass
      */
     public function listClientExploreJob()
     {
