@@ -3,7 +3,7 @@
 namespace Synology\Applications;
 
 use Synology\Api\Authenticate;
-use Synology\Services\ServiceClient;
+use Synology\Services\ServicesClient;
 use Synology\Exception;
 
 /**
@@ -70,7 +70,7 @@ class ClientFactory
      */
     public static function getServices($address, $port = null, $protocol = null, $version = 1)
     {
-        $className = ServiceClient::class;
+        $className = ServicesClient::class;
         $serviceName = 'default';
         return new $className($serviceName, $address, $port, $protocol, $version);
     }

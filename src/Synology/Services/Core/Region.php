@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Region - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Region
+ * ```
+ * $result = $syno->core()->region()->getLanguage();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Region
  * @package Synology\Services\Core
  */

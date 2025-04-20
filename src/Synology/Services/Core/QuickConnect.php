@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class QuickConnect - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.QuickConnect
+ * ```
+ * $result = $syno->core()->quickconnect()->getPermission();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.QuickConnect
  * @package Synology\Services\Core
  */

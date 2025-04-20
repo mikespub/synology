@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class DR - created automatically by ServiceGenerator
  *
  * API: SYNO.DR
+ * ```
+ * $result = $syno->dr()->node()->listCredential();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=DR
  * @package Synology\Services
  */
@@ -13,23 +16,18 @@ class DR extends BaseService
 {
     public const API_SERVICE_NAME = 'DR';
     public const API_VERSION = 1;
+    protected ?DR\Node $nodeSvc = null;
 
     /**
-     * Summary of listNodeCredential
+     * Summary of node
      *
-     * API method: SYNO.DR.Node.Credential list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.DR.Node.Credential-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.DR.Node
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=DR#/DR.Node
+     * @return DR\Node
      */
-    public function listNodeCredential()
+    public function node()
     {
-        $api = 'Node.Credential';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->nodeSvc ??= new DR\Node($this->client);
+        return $this->nodeSvc;
     }
 }

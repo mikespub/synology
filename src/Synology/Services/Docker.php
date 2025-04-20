@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class Docker - created automatically by ServiceGenerator
  *
  * API: SYNO.Docker
+ * ```
+ * $result = $syno->docker()->container()->list();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Docker
  * @package Synology\Services
  */
@@ -13,103 +16,60 @@ class Docker extends BaseService
 {
     public const API_SERVICE_NAME = 'Docker';
     public const API_VERSION = 1;
+    protected ?Docker\Container $containerSvc = null;
+    protected ?Docker\Image $imageSvc = null;
+    protected ?Docker\Network $networkSvc = null;
+    protected ?Docker\Project $projectSvc = null;
 
     /**
-     * Summary of listContainer
+     * Summary of container
      *
-     * API method: SYNO.Docker.Container list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Docker.Container-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Docker.Container
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Docker#/Docker.Container
+     * @return Docker\Container
      */
-    public function listContainer(int $offset = 0, int $limit = 10)
+    public function container()
     {
-        $api = 'Container';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-            'offset' => $offset,
-            'limit' => $limit,
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->containerSvc ??= new Docker\Container($this->client);
+        return $this->containerSvc;
     }
 
     /**
-     * Summary of getContainerResource
+     * Summary of image
      *
-     * API method: SYNO.Docker.Container.Resource get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Docker.Container.Resource-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Docker.Image
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Docker#/Docker.Image
+     * @return Docker\Image
      */
-    public function getContainerResource()
+    public function image()
     {
-        $api = 'Container.Resource';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->imageSvc ??= new Docker\Image($this->client);
+        return $this->imageSvc;
     }
 
     /**
-     * Summary of listImage
+     * Summary of network
      *
-     * API method: SYNO.Docker.Image list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Docker.Image-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Docker.Network
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Docker#/Docker.Network
+     * @return Docker\Network
      */
-    public function listImage(int $offset = 0, int $limit = 10)
+    public function network()
     {
-        $api = 'Image';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-            'offset' => $offset,
-            'limit' => $limit,
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->networkSvc ??= new Docker\Network($this->client);
+        return $this->networkSvc;
     }
 
     /**
-     * Summary of listNetwork
+     * Summary of project
      *
-     * API method: SYNO.Docker.Network list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Docker.Network-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Docker.Project
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Docker#/Docker.Project
+     * @return Docker\Project
      */
-    public function listNetwork()
+    public function project()
     {
-        $api = 'Network';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listProject
-     *
-     * API method: SYNO.Docker.Project list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Docker.Project-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listProject()
-    {
-        $api = 'Project';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->projectSvc ??= new Docker\Project($this->client);
+        return $this->projectSvc;
     }
 }

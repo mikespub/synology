@@ -1,13 +1,13 @@
 
     /**
-     * Summary of %lower%
+     * Summary of %property%
      *
-     * API: SYNO.%service%
+     * API: SYNO.%api%
      * @see https://github.mikespub.net/synology/tools/?urls.primaryName=%service%
-     * @return %service%
+     * @return %class%
      */
-    public function %lower%()
+    public function %property%()
     {
-        $this->%lower%Svc ??= new %service%($this%property%);
-        return $this->%lower%Svc;
+        $this->%property%Svc ??= new %class%($this%client%);
+        return $this->%property%Svc;
     }

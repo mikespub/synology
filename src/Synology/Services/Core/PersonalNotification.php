@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class PersonalNotification - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.PersonalNotification
+ * ```
+ * $result = $syno->core()->personalnotification()->listDevice();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.PersonalNotification
  * @package Synology\Services\Core
  */

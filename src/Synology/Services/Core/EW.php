@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class EW - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.EW
+ * ```
+ * $result = $syno->core()->ew()->getInfo();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.EW
  * @package Synology\Services\Core
  */

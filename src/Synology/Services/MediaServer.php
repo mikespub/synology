@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class MediaServer - created automatically by ServiceGenerator
  *
  * API: SYNO.MediaServer
+ * ```
+ * $result = $syno->mediaserver()->log()->get();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=MediaServer
  * @package Synology\Services
  */
@@ -13,42 +16,32 @@ class MediaServer extends BaseService
 {
     public const API_SERVICE_NAME = 'MediaServer';
     public const API_VERSION = 1;
+    protected ?MediaServer\Log $logSvc = null;
+    protected ?MediaServer\VideoCollection $videocollectionSvc = null;
 
     /**
-     * Summary of getLog
+     * Summary of log
      *
-     * API method: SYNO.MediaServer.Log get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.MediaServer.Log-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.MediaServer.Log
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=MediaServer#/MediaServer.Log
+     * @return MediaServer\Log
      */
-    public function getLog()
+    public function log()
     {
-        $api = 'Log';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->logSvc ??= new MediaServer\Log($this->client);
+        return $this->logSvc;
     }
 
     /**
-     * Summary of getVideoCollection
+     * Summary of videocollection
      *
-     * API method: SYNO.MediaServer.VideoCollection get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.MediaServer.VideoCollection-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.MediaServer.VideoCollection
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=MediaServer#/MediaServer.VideoCollection
+     * @return MediaServer\VideoCollection
      */
-    public function getVideoCollection()
+    public function videocollection()
     {
-        $api = 'VideoCollection';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->videocollectionSvc ??= new MediaServer\VideoCollection($this->client);
+        return $this->videocollectionSvc;
     }
 }

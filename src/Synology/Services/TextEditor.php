@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class TextEditor - created automatically by ServiceGenerator
  *
  * API: SYNO.TextEditor
+ * ```
+ * $result = $syno->texteditor()->preference()->get();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=TextEditor
  * @package Synology\Services
  */
@@ -13,23 +16,18 @@ class TextEditor extends BaseService
 {
     public const API_SERVICE_NAME = 'TextEditor';
     public const API_VERSION = 1;
+    protected ?TextEditor\Preference $preferenceSvc = null;
 
     /**
-     * Summary of getPreference
+     * Summary of preference
      *
-     * API method: SYNO.TextEditor.Preference get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.TextEditor.Preference-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.TextEditor.Preference
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=TextEditor#/TextEditor.Preference
+     * @return TextEditor\Preference
      */
-    public function getPreference()
+    public function preference()
     {
-        $api = 'Preference';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->preferenceSvc ??= new TextEditor\Preference($this->client);
+        return $this->preferenceSvc;
     }
 }

@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class PersonMailAccount - created automatically by ServiceGenerator
  *
  * API: SYNO.PersonMailAccount
+ * ```
+ * $result = $syno->personmailaccount()->get();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=PersonMailAccount
  * @package Synology\Services
  */

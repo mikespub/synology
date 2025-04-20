@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class SecurityScan - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.SecurityScan
+ * ```
+ * $result = $syno->core()->securityscan()->getConf();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.SecurityScan
  * @package Synology\Services\Core
  */

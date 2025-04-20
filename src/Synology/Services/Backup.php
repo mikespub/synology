@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class Backup - created automatically by ServiceGenerator
  *
  * API: SYNO.Backup
+ * ```
+ * $result = $syno->backup()->config()->listAutoBackup();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Backup
  * @package Synology\Services
  */
@@ -13,157 +16,88 @@ class Backup extends BaseService
 {
     public const API_SERVICE_NAME = 'Backup';
     public const API_VERSION = 1;
+    protected ?Backup\Config $configSvc = null;
+    protected ?Backup\Service $serviceSvc = null;
+    protected ?Backup\App2 $app2Svc = null;
+    protected ?Backup\Repository $repositorySvc = null;
+    protected ?Backup\Storage $storageSvc = null;
+    protected ?Backup\Task $taskSvc = null;
 
     /**
-     * Summary of listConfigAutoBackup
+     * Summary of config
      *
-     * API method: SYNO.Backup.Config.AutoBackup list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.Config.AutoBackup-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Backup.Config
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Backup#/Backup.Config
+     * @return Backup\Config
      */
-    public function listConfigAutoBackup()
+    public function config()
     {
-        $api = 'Config.AutoBackup';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->configSvc ??= new Backup\Config($this->client);
+        return $this->configSvc;
     }
 
     /**
-     * Summary of listConfigBackup
+     * Summary of service
      *
-     * API method: SYNO.Backup.Config.Backup list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.Config.Backup-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Backup.Service
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Backup#/Backup.Service
+     * @return Backup\Service
      */
-    public function listConfigBackup()
+    public function service()
     {
-        $api = 'Config.Backup';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->serviceSvc ??= new Backup\Service($this->client);
+        return $this->serviceSvc;
     }
 
     /**
-     * Summary of getServiceNetworkBackup
+     * Summary of app2
      *
-     * API method: SYNO.Backup.Service.NetworkBackup get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.Service.NetworkBackup-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Backup.App2
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Backup#/Backup.App2
+     * @return Backup\App2
      */
-    public function getServiceNetworkBackup()
+    public function app2()
     {
-        $api = 'Service.NetworkBackup';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->app2Svc ??= new Backup\App2($this->client);
+        return $this->app2Svc;
     }
 
     /**
-     * Summary of listApp2Backup
+     * Summary of repository
      *
-     * API method: SYNO.Backup.App2.Backup list (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.App2.Backup-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Backup.Repository
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Backup#/Backup.Repository
+     * @return Backup\Repository
      */
-    public function listApp2Backup()
+    public function repository()
     {
-        $api = 'App2.Backup';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 2;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->repositorySvc ??= new Backup\Repository($this->client);
+        return $this->repositorySvc;
     }
 
     /**
-     * Summary of listRepository
+     * Summary of storage
      *
-     * API method: SYNO.Backup.Repository list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.Repository-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Backup.Storage
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Backup#/Backup.Storage
+     * @return Backup\Storage
      */
-    public function listRepository()
+    public function storage()
     {
-        $api = 'Repository';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->storageSvc ??= new Backup\Storage($this->client);
+        return $this->storageSvc;
     }
 
     /**
-     * Summary of listStorageShareLocal
+     * Summary of task
      *
-     * API method: SYNO.Backup.Storage.Share.Local list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.Storage.Share.Local-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Backup.Task
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Backup#/Backup.Task
+     * @return Backup\Task
      */
-    public function listStorageShareLocal()
+    public function task()
     {
-        $api = 'Storage.Share.Local';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listTask
-     *
-     * API method: SYNO.Backup.Task list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.Task-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listTask()
-    {
-        $api = 'Task';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getTask
-     *
-     * API method: SYNO.Backup.Task get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Backup.Task-get.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getTask(int $task_id = 1)
-    {
-        $api = 'Task';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-            'task_id' => $task_id,
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->taskSvc ??= new Backup\Task($this->client);
+        return $this->taskSvc;
     }
 }

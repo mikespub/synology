@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class PortForwarding - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.PortForwarding
+ * ```
+ * $result = $syno->core()->portforwarding()->getRouterConf();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.PortForwarding
  * @package Synology\Services\Core
  */

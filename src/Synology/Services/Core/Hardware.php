@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Hardware - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Hardware
+ * ```
+ * $result = $syno->core()->hardware()->getBeepControl();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Hardware
  * @package Synology\Services\Core
  */

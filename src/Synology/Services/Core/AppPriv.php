@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class AppPriv - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.AppPriv
+ * ```
+ * $result = $syno->core()->apppriv()->listApp();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.AppPriv
  * @package Synology\Services\Core
  */

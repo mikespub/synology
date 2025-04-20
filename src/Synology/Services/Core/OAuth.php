@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class OAuth - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.OAuth
+ * ```
+ * $result = $syno->core()->oauth()->getScope();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.OAuth
  * @package Synology\Services\Core
  */

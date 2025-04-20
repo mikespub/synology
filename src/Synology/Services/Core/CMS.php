@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class CMS - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.CMS
+ * ```
+ * $result = $syno->core()->cms()->getInfo();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.CMS
  * @package Synology\Services\Core
  */

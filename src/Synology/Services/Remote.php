@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class Remote - created automatically by ServiceGenerator
  *
  * API: SYNO.Remote
+ * ```
+ * $result = $syno->remote()->credential()->getChallenge();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Remote
  * @package Synology\Services
  */
@@ -13,23 +16,18 @@ class Remote extends BaseService
 {
     public const API_SERVICE_NAME = 'Remote';
     public const API_VERSION = 1;
+    protected ?Remote\Credential $credentialSvc = null;
 
     /**
-     * Summary of getCredentialChallenge
+     * Summary of credential
      *
-     * API method: SYNO.Remote.Credential.Challenge get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Remote.Credential.Challenge-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Remote.Credential
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Remote#/Remote.Credential
+     * @return Remote\Credential
      */
-    public function getCredentialChallenge()
+    public function credential()
     {
-        $api = 'Credential.Challenge';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->credentialSvc ??= new Remote\Credential($this->client);
+        return $this->credentialSvc;
     }
 }

@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class DSM - created automatically by ServiceGenerator
  *
  * API: SYNO.DSM
+ * ```
+ * $result = $syno->dsm()->getinfoInfo();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=DSM
  * @package Synology\Services
  */

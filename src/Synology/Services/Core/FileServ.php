@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class FileServ - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.FileServ
+ * ```
+ * $result = $syno->core()->fileserv()->getAFP();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.FileServ
  * @package Synology\Services\Core
  */

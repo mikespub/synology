@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class AppPortal - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.AppPortal
+ * ```
+ * $result = $syno->core()->appportal()->list();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.AppPortal
  * @package Synology\Services\Core
  */
@@ -15,6 +18,25 @@ class AppPortal extends BaseService
 {
     public const API_SERVICE_NAME = 'Core.AppPortal';
     public const API_VERSION = 1;
+
+    /**
+     * Summary of list
+     *
+     * API method: SYNO.Core.AppPortal list (2)
+     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.AppPortal-list.json
+     * @return array|bool|string|\stdClass
+     */
+    public function list()
+    {
+        $api = '';
+        $path = static::API_PATH;
+        $method = 'list';
+        $version = 2;
+        $params = [
+        ];
+        $this->client->setServiceName(static::API_SERVICE_NAME);
+        return $this->client->call($api, $path, $method, $params, $version);
+    }
 
     /**
      * Summary of listAccessControl

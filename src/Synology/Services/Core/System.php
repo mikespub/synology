@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class System - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.System
+ * ```
+ * $result = $syno->core()->system()->getStatus();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.System
  * @package Synology\Services\Core
  */
@@ -93,13 +96,13 @@ class System extends BaseService
     }
 
     /**
-     * Summary of getSystemHealth
+     * Summary of getHealth
      *
      * API method: SYNO.Core.System.SystemHealth get (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.System.SystemHealth-get.json
      * @return array|bool|string|\stdClass
      */
-    public function getSystemHealth()
+    public function getHealth()
     {
         $api = 'SystemHealth';
         $path = static::API_PATH;

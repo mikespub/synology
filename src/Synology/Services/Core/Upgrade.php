@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Upgrade - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Upgrade
+ * ```
+ * $result = $syno->core()->upgrade()->getGroupSetting();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Upgrade
  * @package Synology\Services\Core
  */

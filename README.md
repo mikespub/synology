@@ -207,7 +207,7 @@ See [OpenAPI Files](./tools/openapi/index.html) and [JSON Schemas](./tools/schem
 
 ## Generated Synology\Services Classes
 
-Usage for generated Services:
+Usage for service classes:
 ```php
 use Synology\Applications\ClientFactory;
 

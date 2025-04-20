@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class C2FS - created automatically by ServiceGenerator
  *
  * API: SYNO.C2FS
+ * ```
+ * $result = $syno->c2fs()->share()->list();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=C2FS
  * @package Synology\Services
  */
@@ -13,23 +16,18 @@ class C2FS extends BaseService
 {
     public const API_SERVICE_NAME = 'C2FS';
     public const API_VERSION = 1;
+    protected ?C2FS\Share $shareSvc = null;
 
     /**
-     * Summary of listShare
+     * Summary of share
      *
-     * API method: SYNO.C2FS.Share list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.C2FS.Share-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.C2FS.Share
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=C2FS#/C2FS.Share
+     * @return C2FS\Share
      */
-    public function listShare()
+    public function share()
     {
-        $api = 'Share';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->shareSvc ??= new C2FS\Share($this->client);
+        return $this->shareSvc;
     }
 }

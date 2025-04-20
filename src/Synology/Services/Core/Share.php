@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Share - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Share
+ * ```
+ * $result = $syno->core()->share()->list();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Share
  * @package Synology\Services\Core
  */
@@ -15,6 +18,25 @@ class Share extends BaseService
 {
     public const API_SERVICE_NAME = 'Core.Share';
     public const API_VERSION = 1;
+
+    /**
+     * Summary of list
+     *
+     * API method: SYNO.Core.Share list (1)
+     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.Share-list.json
+     * @return array|bool|string|\stdClass
+     */
+    public function list()
+    {
+        $api = '';
+        $path = static::API_PATH;
+        $method = 'list';
+        $version = 1;
+        $params = [
+        ];
+        $this->client->setServiceName(static::API_SERVICE_NAME);
+        return $this->client->call($api, $path, $method, $params, $version);
+    }
 
     /**
      * Summary of listKeyManagerAutoKey

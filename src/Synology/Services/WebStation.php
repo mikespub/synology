@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class WebStation - created automatically by ServiceGenerator
  *
  * API: SYNO.WebStation
+ * ```
+ * $result = $syno->webstation()->getStatus();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=WebStation
  * @package Synology\Services
  */
@@ -13,233 +16,159 @@ class WebStation extends BaseService
 {
     public const API_SERVICE_NAME = 'WebStation';
     public const API_VERSION = 1;
+    protected ?WebStation\Backup $backupSvc = null;
+    protected ?WebStation\DefaultSvc $defaultSvc = null;
+    protected ?WebStation\ErrorPage $errorpageSvc = null;
+    protected ?WebStation\HTTP $httpSvc = null;
+    protected ?WebStation\PHP $phpSvc = null;
+    protected ?WebStation\Package $packageSvc = null;
+    protected ?WebStation\Python $pythonSvc = null;
+    protected ?WebStation\ScriptLanguage $scriptlanguageSvc = null;
+    protected ?WebStation\Shortcut $shortcutSvc = null;
+    protected ?WebStation\Task $taskSvc = null;
+    protected ?WebStation\WebService $webserviceSvc = null;
 
     /**
-     * Summary of listBackup
+     * Summary of backup
      *
-     * API method: SYNO.WebStation.Backup list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.Backup-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.WebStation.Backup
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=WebStation#/WebStation.Backup
+     * @return WebStation\Backup
      */
-    public function listBackup()
+    public function backup()
     {
-        $api = 'Backup';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->backupSvc ??= new WebStation\Backup($this->client);
+        return $this->backupSvc;
     }
 
     /**
-     * Summary of getDefault
+     * Summary of default
      *
-     * API method: SYNO.WebStation.Default get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.Default-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.WebStation.Default
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=WebStation#/WebStation.Default
+     * @return WebStation\DefaultSvc
      */
-    public function getDefault()
+    public function default()
     {
-        $api = 'Default';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->defaultSvc ??= new WebStation\DefaultSvc($this->client);
+        return $this->defaultSvc;
     }
 
     /**
-     * Summary of listErrorPage
+     * Summary of errorpage
      *
-     * API method: SYNO.WebStation.ErrorPage list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.ErrorPage-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.WebStation.ErrorPage
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=WebStation#/WebStation.ErrorPage
+     * @return WebStation\ErrorPage
      */
-    public function listErrorPage()
+    public function errorpage()
     {
-        $api = 'ErrorPage';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->errorpageSvc ??= new WebStation\ErrorPage($this->client);
+        return $this->errorpageSvc;
     }
 
     /**
-     * Summary of listHTTPVHost
+     * Summary of http
      *
-     * API method: SYNO.WebStation.HTTP.VHost list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.HTTP.VHost-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.WebStation.HTTP
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=WebStation#/WebStation.HTTP
+     * @return WebStation\HTTP
      */
-    public function listHTTPVHost()
+    public function http()
     {
-        $api = 'HTTP.VHost';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->httpSvc ??= new WebStation\HTTP($this->client);
+        return $this->httpSvc;
     }
 
     /**
-     * Summary of getPHP
+     * Summary of php
      *
-     * API method: SYNO.WebStation.PHP get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.PHP-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.WebStation.PHP
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=WebStation#/WebStation.PHP
+     * @return WebStation\PHP
      */
-    public function getPHP()
+    public function php()
     {
-        $api = 'PHP';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->phpSvc ??= new WebStation\PHP($this->client);
+        return $this->phpSvc;
     }
 
     /**
-     * Summary of listPHPProfile
+     * Summary of package
      *
-     * API method: SYNO.WebStation.PHP.Profile list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.PHP.Profile-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.WebStation.Package
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=WebStation#/WebStation.Package
+     * @return WebStation\Package
      */
-    public function listPHPProfile()
+    public function package()
     {
-        $api = 'PHP.Profile';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->packageSvc ??= new WebStation\Package($this->client);
+        return $this->packageSvc;
     }
 
     /**
-     * Summary of listPackage
+     * Summary of python
      *
-     * API method: SYNO.WebStation.Package list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.Package-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.WebStation.Python
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=WebStation#/WebStation.Python
+     * @return WebStation\Python
      */
-    public function listPackage()
+    public function python()
     {
-        $api = 'Package';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->pythonSvc ??= new WebStation\Python($this->client);
+        return $this->pythonSvc;
     }
 
     /**
-     * Summary of getPython
+     * Summary of scriptlanguage
      *
-     * API method: SYNO.WebStation.Python get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.Python-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.WebStation.ScriptLanguage
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=WebStation#/WebStation.ScriptLanguage
+     * @return WebStation\ScriptLanguage
      */
-    public function getPython()
+    public function scriptlanguage()
     {
-        $api = 'Python';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->scriptlanguageSvc ??= new WebStation\ScriptLanguage($this->client);
+        return $this->scriptlanguageSvc;
     }
 
     /**
-     * Summary of listPythonProfile
+     * Summary of shortcut
      *
-     * API method: SYNO.WebStation.Python.Profile list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.Python.Profile-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.WebStation.Shortcut
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=WebStation#/WebStation.Shortcut
+     * @return WebStation\Shortcut
      */
-    public function listPythonProfile()
+    public function shortcut()
     {
-        $api = 'Python.Profile';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->shortcutSvc ??= new WebStation\Shortcut($this->client);
+        return $this->shortcutSvc;
     }
 
     /**
-     * Summary of listScriptLanguage
+     * Summary of task
      *
-     * API method: SYNO.WebStation.ScriptLanguage list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.ScriptLanguage-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.WebStation.Task
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=WebStation#/WebStation.Task
+     * @return WebStation\Task
      */
-    public function listScriptLanguage()
+    public function task()
     {
-        $api = 'ScriptLanguage';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->taskSvc ??= new WebStation\Task($this->client);
+        return $this->taskSvc;
     }
 
     /**
-     * Summary of getScriptLanguageUtils
+     * Summary of webservice
      *
-     * API method: SYNO.WebStation.ScriptLanguage.Utils get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.ScriptLanguage.Utils-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.WebStation.WebService
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=WebStation#/WebStation.WebService
+     * @return WebStation\WebService
      */
-    public function getScriptLanguageUtils()
+    public function webservice()
     {
-        $api = 'ScriptLanguage.Utils';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listShortcut
-     *
-     * API method: SYNO.WebStation.Shortcut list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.Shortcut-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listShortcut()
-    {
-        $api = 'Shortcut';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->webserviceSvc ??= new WebStation\WebService($this->client);
+        return $this->webserviceSvc;
     }
 
     /**
@@ -254,63 +183,6 @@ class WebStation extends BaseService
         $api = 'Status';
         $path = static::API_PATH;
         $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listTask
-     *
-     * API method: SYNO.WebStation.Task list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.Task-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listTask()
-    {
-        $api = 'Task';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listWebServicePortal
-     *
-     * API method: SYNO.WebStation.WebService.Portal list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.WebService.Portal-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listWebServicePortal()
-    {
-        $api = 'WebService.Portal';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listWebServiceService
-     *
-     * API method: SYNO.WebStation.WebService.Service list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.WebStation.WebService.Service-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listWebServiceService()
-    {
-        $api = 'WebService.Service';
-        $path = static::API_PATH;
-        $method = 'list';
         $version = 1;
         $params = [
         ];

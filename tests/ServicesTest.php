@@ -4,21 +4,21 @@ namespace Synology\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Synology\Services\CloudSync;
-use Synology\Services\ServiceClient;
+use Synology\Services\ServicesClient;
 
-class ServiceTest extends TestCase
+class ServicesTest extends TestCase
 {
     use TestHelper;
 
-    public function testGetServiceClient(): void
+    public function testGetServicesClient(): void
     {
         $resultFile = 'SYNO.CloudSync-list_conn.json';
-        $service = $this->getServiceClient($resultFile);
+        $syno = $this->getServicesClient($resultFile);
 
-        $expected = ServiceClient::class;
-        $this->assertInstanceOf($expected, $service);
+        $expected = ServicesClient::class;
+        $this->assertInstanceOf($expected, $syno);
 
-        $cloudsync = $service->cloudsync();
+        $cloudsync = $syno->cloudsync();
 
         $expected = CloudSync::class;
         $this->assertInstanceOf($expected, $cloudsync);

@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class CloudSync - created automatically by ServiceGenerator
  *
  * API: SYNO.CloudSync
+ * ```
+ * $result = $syno->cloudsync()->getProperty();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=CloudSync
  * @package Synology\Services
  */

@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Virtualization - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Virtualization
+ * ```
+ * $result = $syno->core()->virtualization()->getHostCapability();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Virtualization
  * @package Synology\Services\Core
  */

@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Theme - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Theme
+ * ```
+ * $result = $syno->core()->theme()->getDesktop();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Theme
  * @package Synology\Services\Core
  */

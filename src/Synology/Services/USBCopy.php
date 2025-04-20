@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class USBCopy - created automatically by ServiceGenerator
  *
  * API: SYNO.USBCopy
+ * ```
+ * $result = $syno->usbcopy()->list();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=USBCopy
  * @package Synology\Services
  */

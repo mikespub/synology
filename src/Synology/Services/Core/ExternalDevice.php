@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class ExternalDevice - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.ExternalDevice
+ * ```
+ * $result = $syno->core()->externaldevice()->listPrinter();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.ExternalDevice
  * @package Synology\Services\Core
  */

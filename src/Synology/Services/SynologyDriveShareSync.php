@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class SynologyDriveShareSync - created automatically by ServiceGenerator
  *
  * API: SYNO.SynologyDriveShareSync
+ * ```
+ * $result = $syno->synologydrivesharesync()->config()->get();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=SynologyDriveShareSync
  * @package Synology\Services
  */
@@ -13,42 +16,32 @@ class SynologyDriveShareSync extends BaseService
 {
     public const API_SERVICE_NAME = 'SynologyDriveShareSync';
     public const API_VERSION = 1;
+    protected ?SynologyDriveShareSync\Config $configSvc = null;
+    protected ?SynologyDriveShareSync\Connection $connectionSvc = null;
 
     /**
-     * Summary of getConfig
+     * Summary of config
      *
-     * API method: SYNO.SynologyDriveShareSync.Config get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDriveShareSync.Config-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.SynologyDriveShareSync.Config
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=SynologyDriveShareSync#/SynologyDriveShareSync.Config
+     * @return SynologyDriveShareSync\Config
      */
-    public function getConfig()
+    public function config()
     {
-        $api = 'Config';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->configSvc ??= new SynologyDriveShareSync\Config($this->client);
+        return $this->configSvc;
     }
 
     /**
-     * Summary of listConnection
+     * Summary of connection
      *
-     * API method: SYNO.SynologyDriveShareSync.Connection list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SynologyDriveShareSync.Connection-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.SynologyDriveShareSync.Connection
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=SynologyDriveShareSync#/SynologyDriveShareSync.Connection
+     * @return SynologyDriveShareSync\Connection
      */
-    public function listConnection()
+    public function connection()
     {
-        $api = 'Connection';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->connectionSvc ??= new SynologyDriveShareSync\Connection($this->client);
+        return $this->connectionSvc;
     }
 }

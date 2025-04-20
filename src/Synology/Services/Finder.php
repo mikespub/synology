@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class Finder - created automatically by ServiceGenerator
  *
  * API: SYNO.Finder
+ * ```
+ * $result = $syno->finder()->bookmark()->get();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Finder
  * @package Synology\Services
  */
@@ -13,118 +16,74 @@ class Finder extends BaseService
 {
     public const API_SERVICE_NAME = 'Finder';
     public const API_VERSION = 1;
+    protected ?Finder\Bookmark $bookmarkSvc = null;
+    protected ?Finder\Elastic $elasticSvc = null;
+    protected ?Finder\FileIndexing $fileindexingSvc = null;
+    protected ?Finder\Preference $preferenceSvc = null;
+    protected ?Finder\Settings $settingsSvc = null;
 
     /**
-     * Summary of getBookmark
+     * Summary of bookmark
      *
-     * API method: SYNO.Finder.Bookmark get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Finder.Bookmark-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Finder.Bookmark
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Finder#/Finder.Bookmark
+     * @return Finder\Bookmark
      */
-    public function getBookmark()
+    public function bookmark()
     {
-        $api = 'Bookmark';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->bookmarkSvc ??= new Finder\Bookmark($this->client);
+        return $this->bookmarkSvc;
     }
 
     /**
-     * Summary of getElasticSearchHistory
+     * Summary of elastic
      *
-     * API method: SYNO.Finder.Elastic.SearchHistory get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Finder.Elastic.SearchHistory-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Finder.Elastic
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Finder#/Finder.Elastic
+     * @return Finder\Elastic
      */
-    public function getElasticSearchHistory()
+    public function elastic()
     {
-        $api = 'Elastic.SearchHistory';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->elasticSvc ??= new Finder\Elastic($this->client);
+        return $this->elasticSvc;
     }
 
     /**
-     * Summary of listFileIndexingFolder
+     * Summary of fileindexing
      *
-     * API method: SYNO.Finder.FileIndexing.Folder list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Finder.FileIndexing.Folder-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Finder.FileIndexing
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Finder#/Finder.FileIndexing
+     * @return Finder\FileIndexing
      */
-    public function listFileIndexingFolder()
+    public function fileindexing()
     {
-        $api = 'FileIndexing.Folder';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->fileindexingSvc ??= new Finder\FileIndexing($this->client);
+        return $this->fileindexingSvc;
     }
 
     /**
-     * Summary of getFileIndexingStatus
+     * Summary of preference
      *
-     * API method: SYNO.Finder.FileIndexing.Status get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Finder.FileIndexing.Status-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Finder.Preference
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Finder#/Finder.Preference
+     * @return Finder\Preference
      */
-    public function getFileIndexingStatus()
+    public function preference()
     {
-        $api = 'FileIndexing.Status';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->preferenceSvc ??= new Finder\Preference($this->client);
+        return $this->preferenceSvc;
     }
 
     /**
-     * Summary of getPreference
+     * Summary of settings
      *
-     * API method: SYNO.Finder.Preference get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Finder.Preference-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Finder.Settings
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Finder#/Finder.Settings
+     * @return Finder\Settings
      */
-    public function getPreference()
+    public function settings()
     {
-        $api = 'Preference';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getSettings
-     *
-     * API method: SYNO.Finder.Settings get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Finder.Settings-get.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getSettings()
-    {
-        $api = 'Settings';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->settingsSvc ??= new Finder\Settings($this->client);
+        return $this->settingsSvc;
     }
 }

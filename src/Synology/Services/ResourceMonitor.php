@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class ResourceMonitor - created automatically by ServiceGenerator
  *
  * API: SYNO.ResourceMonitor
+ * ```
+ * $result = $syno->resourcemonitor()->eventrule()->list();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=ResourceMonitor
  * @package Synology\Services
  */
@@ -13,61 +16,46 @@ class ResourceMonitor extends BaseService
 {
     public const API_SERVICE_NAME = 'ResourceMonitor';
     public const API_VERSION = 1;
+    protected ?ResourceMonitor\EventRule $eventruleSvc = null;
+    protected ?ResourceMonitor\Log $logSvc = null;
+    protected ?ResourceMonitor\Setting $settingSvc = null;
 
     /**
-     * Summary of listEventRule
+     * Summary of eventrule
      *
-     * API method: SYNO.ResourceMonitor.EventRule list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.ResourceMonitor.EventRule-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.ResourceMonitor.EventRule
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=ResourceMonitor#/ResourceMonitor.EventRule
+     * @return ResourceMonitor\EventRule
      */
-    public function listEventRule()
+    public function eventrule()
     {
-        $api = 'EventRule';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->eventruleSvc ??= new ResourceMonitor\EventRule($this->client);
+        return $this->eventruleSvc;
     }
 
     /**
-     * Summary of listLog
+     * Summary of log
      *
-     * API method: SYNO.ResourceMonitor.Log list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.ResourceMonitor.Log-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.ResourceMonitor.Log
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=ResourceMonitor#/ResourceMonitor.Log
+     * @return ResourceMonitor\Log
      */
-    public function listLog()
+    public function log()
     {
-        $api = 'Log';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->logSvc ??= new ResourceMonitor\Log($this->client);
+        return $this->logSvc;
     }
 
     /**
-     * Summary of getSetting
+     * Summary of setting
      *
-     * API method: SYNO.ResourceMonitor.Setting get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.ResourceMonitor.Setting-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.ResourceMonitor.Setting
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=ResourceMonitor#/ResourceMonitor.Setting
+     * @return ResourceMonitor\Setting
      */
-    public function getSetting()
+    public function setting()
     {
-        $api = 'Setting';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->settingSvc ??= new ResourceMonitor\Setting($this->client);
+        return $this->settingSvc;
     }
 }

@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class AudioStation - created automatically by ServiceGenerator
  *
  * API: SYNO.AudioStation
+ * ```
+ * $result = $syno->audiostation()->listAlbum();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=AudioStation
  * @package Synology\Services
  */
@@ -13,6 +16,118 @@ class AudioStation extends BaseService
 {
     public const API_SERVICE_NAME = 'AudioStation';
     public const API_VERSION = 3;
+    protected ?AudioStation\Folder $folderSvc = null;
+    protected ?AudioStation\Genre $genreSvc = null;
+    protected ?AudioStation\Playlist $playlistSvc = null;
+    protected ?AudioStation\Radio $radioSvc = null;
+    protected ?AudioStation\RemotePlayer $remoteplayerSvc = null;
+    protected ?AudioStation\Song $songSvc = null;
+    protected ?AudioStation\Pin $pinSvc = null;
+    protected ?AudioStation\VoiceAssistant $voiceassistantSvc = null;
+
+    /**
+     * Summary of folder
+     *
+     * API: SYNO.AudioStation.Folder
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=AudioStation#/AudioStation.Folder
+     * @return AudioStation\Folder
+     */
+    public function folder()
+    {
+        $this->folderSvc ??= new AudioStation\Folder($this->client);
+        return $this->folderSvc;
+    }
+
+    /**
+     * Summary of genre
+     *
+     * API: SYNO.AudioStation.Genre
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=AudioStation#/AudioStation.Genre
+     * @return AudioStation\Genre
+     */
+    public function genre()
+    {
+        $this->genreSvc ??= new AudioStation\Genre($this->client);
+        return $this->genreSvc;
+    }
+
+    /**
+     * Summary of playlist
+     *
+     * API: SYNO.AudioStation.Playlist
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=AudioStation#/AudioStation.Playlist
+     * @return AudioStation\Playlist
+     */
+    public function playlist()
+    {
+        $this->playlistSvc ??= new AudioStation\Playlist($this->client);
+        return $this->playlistSvc;
+    }
+
+    /**
+     * Summary of radio
+     *
+     * API: SYNO.AudioStation.Radio
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=AudioStation#/AudioStation.Radio
+     * @return AudioStation\Radio
+     */
+    public function radio()
+    {
+        $this->radioSvc ??= new AudioStation\Radio($this->client);
+        return $this->radioSvc;
+    }
+
+    /**
+     * Summary of remoteplayer
+     *
+     * API: SYNO.AudioStation.RemotePlayer
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=AudioStation#/AudioStation.RemotePlayer
+     * @return AudioStation\RemotePlayer
+     */
+    public function remoteplayer()
+    {
+        $this->remoteplayerSvc ??= new AudioStation\RemotePlayer($this->client);
+        return $this->remoteplayerSvc;
+    }
+
+    /**
+     * Summary of song
+     *
+     * API: SYNO.AudioStation.Song
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=AudioStation#/AudioStation.Song
+     * @return AudioStation\Song
+     */
+    public function song()
+    {
+        $this->songSvc ??= new AudioStation\Song($this->client);
+        return $this->songSvc;
+    }
+
+    /**
+     * Summary of pin
+     *
+     * API: SYNO.AudioStation.Pin
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=AudioStation#/AudioStation.Pin
+     * @return AudioStation\Pin
+     */
+    public function pin()
+    {
+        $this->pinSvc ??= new AudioStation\Pin($this->client);
+        return $this->pinSvc;
+    }
+
+    /**
+     * Summary of voiceassistant
+     *
+     * API: SYNO.AudioStation.VoiceAssistant
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=AudioStation#/AudioStation.VoiceAssistant
+     * @return AudioStation\VoiceAssistant
+     */
+    public function voiceassistant()
+    {
+        $this->voiceassistantSvc ??= new AudioStation\VoiceAssistant($this->client);
+        return $this->voiceassistantSvc;
+    }
 
     /**
      * Summary of listAlbum
@@ -72,44 +187,6 @@ class AudioStation extends BaseService
     }
 
     /**
-     * Summary of listFolder
-     *
-     * API method: SYNO.AudioStation.Folder list (3)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Folder-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listFolder()
-    {
-        $api = 'Folder';
-        $path = 'entry.cgi';
-        $method = 'list';
-        $version = 3;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listGenre
-     *
-     * API method: SYNO.AudioStation.Genre list (3)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Genre-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listGenre()
-    {
-        $api = 'Genre';
-        $path = 'entry.cgi';
-        $method = 'list';
-        $version = 3;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
      * Summary of getinfoInfo
      *
      * API method: SYNO.AudioStation.Info getinfo (6)
@@ -148,82 +225,6 @@ class AudioStation extends BaseService
     }
 
     /**
-     * Summary of listPlaylist
-     *
-     * API method: SYNO.AudioStation.Playlist list (3)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Playlist-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listPlaylist()
-    {
-        $api = 'Playlist';
-        $path = 'entry.cgi';
-        $method = 'list';
-        $version = 3;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listRadio
-     *
-     * API method: SYNO.AudioStation.Radio list (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Radio-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listRadio()
-    {
-        $api = 'Radio';
-        $path = 'entry.cgi';
-        $method = 'list';
-        $version = 2;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listRemotePlayer
-     *
-     * API method: SYNO.AudioStation.RemotePlayer list (3)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.RemotePlayer-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listRemotePlayer()
-    {
-        $api = 'RemotePlayer';
-        $path = 'entry.cgi';
-        $method = 'list';
-        $version = 3;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getinfoRemotePlayer
-     *
-     * API method: SYNO.AudioStation.RemotePlayer getinfo (3)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.RemotePlayer-getinfo.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getinfoRemotePlayer()
-    {
-        $api = 'RemotePlayer';
-        $path = 'entry.cgi';
-        $method = 'getinfo';
-        $version = 3;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
      * Summary of listSearch
      *
      * API method: SYNO.AudioStation.Search list (1)
@@ -235,82 +236,6 @@ class AudioStation extends BaseService
         $api = 'Search';
         $path = 'entry.cgi';
         $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listSong
-     *
-     * API method: SYNO.AudioStation.Song list (3)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Song-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listSong()
-    {
-        $api = 'Song';
-        $path = 'entry.cgi';
-        $method = 'list';
-        $version = 3;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listPin
-     *
-     * API method: SYNO.AudioStation.Pin list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.Pin-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listPin()
-    {
-        $api = 'Pin';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getVoiceAssistantChallenge
-     *
-     * API method: SYNO.AudioStation.VoiceAssistant.Challenge get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.VoiceAssistant.Challenge-get.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getVoiceAssistantChallenge()
-    {
-        $api = 'VoiceAssistant.Challenge';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getVoiceAssistantInfo
-     *
-     * API method: SYNO.AudioStation.VoiceAssistant.Info get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.AudioStation.VoiceAssistant.Info-get.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getVoiceAssistantInfo()
-    {
-        $api = 'VoiceAssistant.Info';
-        $path = static::API_PATH;
-        $method = 'get';
         $version = 1;
         $params = [
         ];

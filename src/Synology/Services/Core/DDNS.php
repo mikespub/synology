@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class DDNS - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.DDNS
+ * ```
+ * $result = $syno->core()->ddns()->listEthernet();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.DDNS
  * @package Synology\Services\Core
  */

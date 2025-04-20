@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class SyslogClient - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.SyslogClient
+ * ```
+ * $result = $syno->core()->syslogclient()->getFileTransfer();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.SyslogClient
  * @package Synology\Services\Core
  */

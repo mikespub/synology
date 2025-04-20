@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class NoteStation - created automatically by ServiceGenerator
  *
  * API: SYNO.NoteStation
+ * ```
+ * $result = $syno->notestation()->info()->get();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=NoteStation
  * @package Synology\Services
  */
@@ -13,213 +16,130 @@ class NoteStation extends BaseService
 {
     public const API_SERVICE_NAME = 'NoteStation';
     public const API_VERSION = 3;
+    protected ?NoteStation\Info $infoSvc = null;
+    protected ?NoteStation\Note $noteSvc = null;
+    protected ?NoteStation\Notebook $notebookSvc = null;
+    protected ?NoteStation\Setting $settingSvc = null;
+    protected ?NoteStation\Share $shareSvc = null;
+    protected ?NoteStation\Shortcut $shortcutSvc = null;
+    protected ?NoteStation\Smart $smartSvc = null;
+    protected ?NoteStation\Tag $tagSvc = null;
+    protected ?NoteStation\Todo $todoSvc = null;
 
     /**
-     * Summary of getInfo
+     * Summary of info
      *
-     * API method: SYNO.NoteStation.Info get (3)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Info-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.NoteStation.Info
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=NoteStation#/NoteStation.Info
+     * @return NoteStation\Info
      */
-    public function getInfo()
+    public function info()
     {
-        $api = 'Info';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 3;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->infoSvc ??= new NoteStation\Info($this->client);
+        return $this->infoSvc;
     }
 
     /**
-     * Summary of listNote
+     * Summary of note
      *
-     * API method: SYNO.NoteStation.Note list (4)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Note-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.NoteStation.Note
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=NoteStation#/NoteStation.Note
+     * @return NoteStation\Note
      */
-    public function listNote()
+    public function note()
     {
-        $api = 'Note';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 4;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->noteSvc ??= new NoteStation\Note($this->client);
+        return $this->noteSvc;
     }
 
     /**
-     * Summary of listNotebook
+     * Summary of notebook
      *
-     * API method: SYNO.NoteStation.Notebook list (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Notebook-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.NoteStation.Notebook
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=NoteStation#/NoteStation.Notebook
+     * @return NoteStation\Notebook
      */
-    public function listNotebook()
+    public function notebook()
     {
-        $api = 'Notebook';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 2;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->notebookSvc ??= new NoteStation\Notebook($this->client);
+        return $this->notebookSvc;
     }
 
     /**
-     * Summary of getSetting
+     * Summary of setting
      *
-     * API method: SYNO.NoteStation.Setting get (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Setting-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.NoteStation.Setting
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=NoteStation#/NoteStation.Setting
+     * @return NoteStation\Setting
      */
-    public function getSetting()
+    public function setting()
     {
-        $api = 'Setting';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 2;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->settingSvc ??= new NoteStation\Setting($this->client);
+        return $this->settingSvc;
     }
 
     /**
-     * Summary of getSettingDSM
+     * Summary of share
      *
-     * API method: SYNO.NoteStation.Setting.DSM get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Setting.DSM-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.NoteStation.Share
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=NoteStation#/NoteStation.Share
+     * @return NoteStation\Share
      */
-    public function getSettingDSM()
+    public function share()
     {
-        $api = 'Setting.DSM';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->shareSvc ??= new NoteStation\Share($this->client);
+        return $this->shareSvc;
     }
 
     /**
-     * Summary of getSettingGlobal
+     * Summary of shortcut
      *
-     * API method: SYNO.NoteStation.Setting.Global get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Setting.Global-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.NoteStation.Shortcut
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=NoteStation#/NoteStation.Shortcut
+     * @return NoteStation\Shortcut
      */
-    public function getSettingGlobal()
+    public function shortcut()
     {
-        $api = 'Setting.Global';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->shortcutSvc ??= new NoteStation\Shortcut($this->client);
+        return $this->shortcutSvc;
     }
 
     /**
-     * Summary of listSharePriv
+     * Summary of smart
      *
-     * API method: SYNO.NoteStation.Share.Priv list (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Share.Priv-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.NoteStation.Smart
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=NoteStation#/NoteStation.Smart
+     * @return NoteStation\Smart
      */
-    public function listSharePriv()
+    public function smart()
     {
-        $api = 'Share.Priv';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 2;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->smartSvc ??= new NoteStation\Smart($this->client);
+        return $this->smartSvc;
     }
 
     /**
-     * Summary of listShortcut
+     * Summary of tag
      *
-     * API method: SYNO.NoteStation.Shortcut list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Shortcut-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.NoteStation.Tag
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=NoteStation#/NoteStation.Tag
+     * @return NoteStation\Tag
      */
-    public function listShortcut()
+    public function tag()
     {
-        $api = 'Shortcut';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->tagSvc ??= new NoteStation\Tag($this->client);
+        return $this->tagSvc;
     }
 
     /**
-     * Summary of listSmart
+     * Summary of todo
      *
-     * API method: SYNO.NoteStation.Smart list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Smart-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.NoteStation.Todo
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=NoteStation#/NoteStation.Todo
+     * @return NoteStation\Todo
      */
-    public function listSmart()
+    public function todo()
     {
-        $api = 'Smart';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listTag
-     *
-     * API method: SYNO.NoteStation.Tag list (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Tag-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listTag()
-    {
-        $api = 'Tag';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 2;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listTodo
-     *
-     * API method: SYNO.NoteStation.Todo list (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.NoteStation.Todo-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listTodo()
-    {
-        $api = 'Todo';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 2;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->todoSvc ??= new NoteStation\Todo($this->client);
+        return $this->todoSvc;
     }
 }

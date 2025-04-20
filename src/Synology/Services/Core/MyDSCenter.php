@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class MyDSCenter - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.MyDSCenter
+ * ```
+ * $result = $syno->core()->mydscenter()->getAccount();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.MyDSCenter
  * @package Synology\Services\Core
  */

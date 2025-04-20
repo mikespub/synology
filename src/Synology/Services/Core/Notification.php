@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Notification - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Notification
+ * ```
+ * $result = $syno->core()->notification()->getAdvanceCustomizedData();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Notification
  * @package Synology\Services\Core
  */

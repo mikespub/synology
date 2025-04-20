@@ -4,7 +4,7 @@ namespace Synology\Tests;
 
 use Synology\Api\Authenticate;
 use Synology\Applications\ClientFactory;
-use Synology\Services\ServiceClient;
+use Synology\Services\ServicesClient;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
@@ -122,7 +122,7 @@ trait TestHelper
     /**
      * Summary of getServicesClient
      * @param string $resultFile
-     * @return ServiceClient
+     * @return ServicesClient
      */
     protected function getServicesClient($resultFile): Authenticate
     {

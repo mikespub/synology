@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Factory - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Factory
+ * ```
+ * $result = $syno->core()->factory()->getManutild();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Factory
  * @package Synology\Services\Core
  */

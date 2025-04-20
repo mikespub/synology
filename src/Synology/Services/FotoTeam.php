@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class FotoTeam - created automatically by ServiceGenerator
  *
  * API: SYNO.FotoTeam
+ * ```
+ * $result = $syno->fototeam()->browse()->listFolder();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=FotoTeam
  * @package Synology\Services
  */
@@ -13,187 +16,46 @@ class FotoTeam extends BaseService
 {
     public const API_SERVICE_NAME = 'FotoTeam';
     public const API_VERSION = 2;
+    protected ?FotoTeam\Browse $browseSvc = null;
+    protected ?FotoTeam\Index $indexSvc = null;
+    protected ?FotoTeam\Search $searchSvc = null;
 
     /**
-     * Summary of listBrowseFolder
+     * Summary of browse
      *
-     * API method: SYNO.FotoTeam.Browse.Folder list (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.Folder-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.FotoTeam.Browse
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=FotoTeam#/FotoTeam.Browse
+     * @return FotoTeam\Browse
      */
-    public function listBrowseFolder(int $offset = 0, int $limit = 10)
+    public function browse()
     {
-        $api = 'Browse.Folder';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 2;
-        $params = [
-            'offset' => $offset,
-            'limit' => $limit,
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->browseSvc ??= new FotoTeam\Browse($this->client);
+        return $this->browseSvc;
     }
 
     /**
-     * Summary of listBrowseGeneralTag
+     * Summary of index
      *
-     * API method: SYNO.FotoTeam.Browse.GeneralTag list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.GeneralTag-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.FotoTeam.Index
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=FotoTeam#/FotoTeam.Index
+     * @return FotoTeam\Index
      */
-    public function listBrowseGeneralTag(int $offset = 0, int $limit = 10)
+    public function index()
     {
-        $api = 'Browse.GeneralTag';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-            'offset' => $offset,
-            'limit' => $limit,
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->indexSvc ??= new FotoTeam\Index($this->client);
+        return $this->indexSvc;
     }
 
     /**
-     * Summary of listBrowseGeocoding
+     * Summary of search
      *
-     * API method: SYNO.FotoTeam.Browse.Geocoding list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.Geocoding-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.FotoTeam.Search
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=FotoTeam#/FotoTeam.Search
+     * @return FotoTeam\Search
      */
-    public function listBrowseGeocoding(int $offset = 0, int $limit = 10)
+    public function search()
     {
-        $api = 'Browse.Geocoding';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-            'offset' => $offset,
-            'limit' => $limit,
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listBrowseItem
-     *
-     * API method: SYNO.FotoTeam.Browse.Item list (6)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.Item-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listBrowseItem(int $offset = 0, int $limit = 10)
-    {
-        $api = 'Browse.Item';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 6;
-        $params = [
-            'offset' => $offset,
-            'limit' => $limit,
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listBrowsePerson
-     *
-     * API method: SYNO.FotoTeam.Browse.Person list (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.Person-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listBrowsePerson(int $offset = 0, int $limit = 10)
-    {
-        $api = 'Browse.Person';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 2;
-        $params = [
-            'offset' => $offset,
-            'limit' => $limit,
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listBrowseRecentlyAdded
-     *
-     * API method: SYNO.FotoTeam.Browse.RecentlyAdded list (5)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.RecentlyAdded-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listBrowseRecentlyAdded(int $offset = 0, int $limit = 10)
-    {
-        $api = 'Browse.RecentlyAdded';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 5;
-        $params = [
-            'offset' => $offset,
-            'limit' => $limit,
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getBrowseTimeline
-     *
-     * API method: SYNO.FotoTeam.Browse.Timeline get (5)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Browse.Timeline-get.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getBrowseTimeline()
-    {
-        $api = 'Browse.Timeline';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 5;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getIndex
-     *
-     * API method: SYNO.FotoTeam.Index get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Index-get.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getIndex()
-    {
-        $api = 'Index';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listSearchFilter
-     *
-     * API method: SYNO.FotoTeam.Search.Filter list (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.FotoTeam.Search.Filter-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listSearchFilter()
-    {
-        $api = 'Search.Filter';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 2;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->searchSvc ??= new FotoTeam\Search($this->client);
+        return $this->searchSvc;
     }
 }

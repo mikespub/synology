@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class ActionPriv - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.ActionPriv
+ * ```
+ * $result = $syno->core()->actionpriv()->listRole();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.ActionPriv
  * @package Synology\Services\Core
  */

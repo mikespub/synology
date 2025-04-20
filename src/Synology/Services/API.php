@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class API - created automatically by ServiceGenerator
  *
  * API: SYNO.API
+ * ```
+ * $result = $syno->api()->getinfoEncryption();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=API
  * @package Synology\Services
  */
@@ -13,81 +16,19 @@ class API extends BaseService
 {
     public const API_SERVICE_NAME = 'API';
     public const API_VERSION = 7;
+    protected ?API\Auth $authSvc = null;
 
     /**
-     * Summary of loginAuth
+     * Summary of auth
      *
-     * API method: SYNO.API.Auth login (7)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.API.Auth-login.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.API.Auth
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=API#/API.Auth
+     * @return API\Auth
      */
-    public function loginAuth()
+    public function auth()
     {
-        $api = 'Auth';
-        $path = static::API_PATH;
-        $method = 'login';
-        $version = 7;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getAuthKey
-     *
-     * API method: SYNO.API.Auth.Key get (7)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.API.Auth.Key-get.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getAuthKey()
-    {
-        $api = 'Auth.Key';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 7;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getAuthType
-     *
-     * API method: SYNO.API.Auth.Type get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.API.Auth.Type-get.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getAuthType()
-    {
-        $api = 'Auth.Type';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getAuthUIConfig
-     *
-     * API method: SYNO.API.Auth.UIConfig get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.API.Auth.UIConfig-get.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getAuthUIConfig()
-    {
-        $api = 'Auth.UIConfig';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->authSvc ??= new API\Auth($this->client);
+        return $this->authSvc;
     }
 
     /**

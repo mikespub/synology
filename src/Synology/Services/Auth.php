@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class Auth - created automatically by ServiceGenerator
  *
  * API: SYNO.Auth
+ * ```
+ * $result = $syno->auth()->rescueemail()->get();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Auth
  * @package Synology\Services
  */
@@ -13,23 +16,18 @@ class Auth extends BaseService
 {
     public const API_SERVICE_NAME = 'Auth';
     public const API_VERSION = 1;
+    protected ?Auth\RescueEmail $rescueemailSvc = null;
 
     /**
-     * Summary of getRescueEmail
+     * Summary of rescueemail
      *
-     * API method: SYNO.Auth.RescueEmail get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Auth.RescueEmail-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Auth.RescueEmail
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Auth#/Auth.RescueEmail
+     * @return Auth\RescueEmail
      */
-    public function getRescueEmail()
+    public function rescueemail()
     {
-        $api = 'RescueEmail';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->rescueemailSvc ??= new Auth\RescueEmail($this->client);
+        return $this->rescueemailSvc;
     }
 }

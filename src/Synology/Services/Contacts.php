@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class Contacts - created automatically by ServiceGenerator
  *
  * API: SYNO.Contacts
+ * ```
+ * $result = $syno->contacts()->addressbook()->list();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Contacts
  * @package Synology\Services
  */
@@ -13,118 +16,88 @@ class Contacts extends BaseService
 {
     public const API_SERVICE_NAME = 'Contacts';
     public const API_VERSION = 1;
+    protected ?Contacts\Addressbook $addressbookSvc = null;
+    protected ?Contacts\AdminSetting $adminsettingSvc = null;
+    protected ?Contacts\Contact $contactSvc = null;
+    protected ?Contacts\ExternalSource $externalsourceSvc = null;
+    protected ?Contacts\Info $infoSvc = null;
+    protected ?Contacts\Label $labelSvc = null;
 
     /**
-     * Summary of listAddressbook
+     * Summary of addressbook
      *
-     * API method: SYNO.Contacts.Addressbook list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Contacts.Addressbook-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Contacts.Addressbook
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Contacts#/Contacts.Addressbook
+     * @return Contacts\Addressbook
      */
-    public function listAddressbook()
+    public function addressbook()
     {
-        $api = 'Addressbook';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->addressbookSvc ??= new Contacts\Addressbook($this->client);
+        return $this->addressbookSvc;
     }
 
     /**
-     * Summary of getAdminSetting
+     * Summary of adminsetting
      *
-     * API method: SYNO.Contacts.AdminSetting get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Contacts.AdminSetting-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Contacts.AdminSetting
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Contacts#/Contacts.AdminSetting
+     * @return Contacts\AdminSetting
      */
-    public function getAdminSetting()
+    public function adminsetting()
     {
-        $api = 'AdminSetting';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->adminsettingSvc ??= new Contacts\AdminSetting($this->client);
+        return $this->adminsettingSvc;
     }
 
     /**
-     * Summary of listContact
+     * Summary of contact
      *
-     * API method: SYNO.Contacts.Contact list (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Contacts.Contact-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Contacts.Contact
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Contacts#/Contacts.Contact
+     * @return Contacts\Contact
      */
-    public function listContact()
+    public function contact()
     {
-        $api = 'Contact';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 2;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->contactSvc ??= new Contacts\Contact($this->client);
+        return $this->contactSvc;
     }
 
     /**
-     * Summary of listExternalSource
+     * Summary of externalsource
      *
-     * API method: SYNO.Contacts.ExternalSource list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Contacts.ExternalSource-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Contacts.ExternalSource
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Contacts#/Contacts.ExternalSource
+     * @return Contacts\ExternalSource
      */
-    public function listExternalSource()
+    public function externalsource()
     {
-        $api = 'ExternalSource';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->externalsourceSvc ??= new Contacts\ExternalSource($this->client);
+        return $this->externalsourceSvc;
     }
 
     /**
-     * Summary of getInfo
+     * Summary of info
      *
-     * API method: SYNO.Contacts.Info get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Contacts.Info-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Contacts.Info
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Contacts#/Contacts.Info
+     * @return Contacts\Info
      */
-    public function getInfo()
+    public function info()
     {
-        $api = 'Info';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->infoSvc ??= new Contacts\Info($this->client);
+        return $this->infoSvc;
     }
 
     /**
-     * Summary of listLabel
+     * Summary of label
      *
-     * API method: SYNO.Contacts.Label list (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Contacts.Label-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Contacts.Label
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Contacts#/Contacts.Label
+     * @return Contacts\Label
      */
-    public function listLabel()
+    public function label()
     {
-        $api = 'Label';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 2;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->labelSvc ??= new Contacts\Label($this->client);
+        return $this->labelSvc;
     }
 }

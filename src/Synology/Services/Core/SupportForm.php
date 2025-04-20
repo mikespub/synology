@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class SupportForm - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.SupportForm
+ * ```
+ * $result = $syno->core()->supportform()->getForm();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.SupportForm
  * @package Synology\Services\Core
  */

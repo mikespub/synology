@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class SecureSignIn - created automatically by ServiceGenerator
  *
  * API: SYNO.SecureSignIn
+ * ```
+ * $result = $syno->securesignin()->amfa()->getPolicy();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=SecureSignIn
  * @package Synology\Services
  */
@@ -13,156 +16,74 @@ class SecureSignIn extends BaseService
 {
     public const API_SERVICE_NAME = 'SecureSignIn';
     public const API_VERSION = 1;
+    protected ?SecureSignIn\AMFA $amfaSvc = null;
+    protected ?SecureSignIn\Authenticator $authenticatorSvc = null;
+    protected ?SecureSignIn\Fido $fidoSvc = null;
+    protected ?SecureSignIn\Method $methodSvc = null;
+    protected ?SecureSignIn\Package $packageSvc = null;
 
     /**
-     * Summary of getAMFAPolicy
+     * Summary of amfa
      *
-     * API method: SYNO.SecureSignIn.AMFA.Policy get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.AMFA.Policy-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.SecureSignIn.AMFA
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=SecureSignIn#/SecureSignIn.AMFA
+     * @return SecureSignIn\AMFA
      */
-    public function getAMFAPolicy()
+    public function amfa()
     {
-        $api = 'AMFA.Policy';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->amfaSvc ??= new SecureSignIn\AMFA($this->client);
+        return $this->amfaSvc;
     }
 
     /**
-     * Summary of getAMFASuggestConn
+     * Summary of authenticator
      *
-     * API method: SYNO.SecureSignIn.AMFA.SuggestConn get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.AMFA.SuggestConn-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.SecureSignIn.Authenticator
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=SecureSignIn#/SecureSignIn.Authenticator
+     * @return SecureSignIn\Authenticator
      */
-    public function getAMFASuggestConn()
+    public function authenticator()
     {
-        $api = 'AMFA.SuggestConn';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->authenticatorSvc ??= new SecureSignIn\Authenticator($this->client);
+        return $this->authenticatorSvc;
     }
 
     /**
-     * Summary of listAuthenticator
+     * Summary of fido
      *
-     * API method: SYNO.SecureSignIn.Authenticator list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.Authenticator-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.SecureSignIn.Fido
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=SecureSignIn#/SecureSignIn.Fido
+     * @return SecureSignIn\Fido
      */
-    public function listAuthenticator()
+    public function fido()
     {
-        $api = 'Authenticator';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->fidoSvc ??= new SecureSignIn\Fido($this->client);
+        return $this->fidoSvc;
     }
 
     /**
-     * Summary of getAuthenticatorInfo
+     * Summary of method
      *
-     * API method: SYNO.SecureSignIn.Authenticator.Info get (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.Authenticator.Info-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.SecureSignIn.Method
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=SecureSignIn#/SecureSignIn.Method
+     * @return SecureSignIn\Method
      */
-    public function getAuthenticatorInfo()
+    public function method()
     {
-        $api = 'Authenticator.Info';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 2;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->methodSvc ??= new SecureSignIn\Method($this->client);
+        return $this->methodSvc;
     }
 
     /**
-     * Summary of getAuthenticatorVerdict
+     * Summary of package
      *
-     * API method: SYNO.SecureSignIn.Authenticator.Verdict get (2)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.Authenticator.Verdict-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.SecureSignIn.Package
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=SecureSignIn#/SecureSignIn.Package
+     * @return SecureSignIn\Package
      */
-    public function getAuthenticatorVerdict()
+    public function package()
     {
-        $api = 'Authenticator.Verdict';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 2;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listFidoManage
-     *
-     * API method: SYNO.SecureSignIn.Fido.Manage list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.Fido.Manage-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listFidoManage()
-    {
-        $api = 'Fido.Manage';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getMethod
-     *
-     * API method: SYNO.SecureSignIn.Method get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.Method-get.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getMethod()
-    {
-        $api = 'Method';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getPackage
-     *
-     * API method: SYNO.SecureSignIn.Package get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.SecureSignIn.Package-get.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getPackage()
-    {
-        $api = 'Package';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->packageSvc ??= new SecureSignIn\Package($this->client);
+        return $this->packageSvc;
     }
 }

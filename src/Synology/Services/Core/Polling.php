@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Polling - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Polling
+ * ```
+ * $result = $syno->core()->polling()->getData();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Polling
  * @package Synology\Services\Core
  */

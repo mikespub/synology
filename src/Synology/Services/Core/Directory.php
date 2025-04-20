@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Directory - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Directory
+ * ```
+ * $result = $syno->core()->directory()->getAzureSSO();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Directory
  * @package Synology\Services\Core
  */

@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class MediaIndexing - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.MediaIndexing
+ * ```
+ * $result = $syno->core()->mediaindexing()->getIndexFolder();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.MediaIndexing
  * @package Synology\Services\Core
  */

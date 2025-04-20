@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Security - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Security
+ * ```
+ * $result = $syno->core()->security()->getAutoBlock();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Security
  * @package Synology\Services\Core
  */

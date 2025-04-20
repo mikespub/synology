@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class DSMNotify - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.DSMNotify
+ * ```
+ * $result = $syno->core()->dsmnotify()->getStrings();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.DSMNotify
  * @package Synology\Services\Core
  */

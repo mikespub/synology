@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class BandwidthControl - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.BandwidthControl
+ * ```
+ * $result = $syno->core()->bandwidthcontrol()->listStatus();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.BandwidthControl
  * @package Synology\Services\Core
  */

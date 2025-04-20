@@ -4,6 +4,14 @@
             "query": "all"
         }
     },
+    "SYNO.API.Auth": {
+        "login": {
+            "account": "username",
+            "passwd": "password",
+            "session": "default",
+            "format": "sid"
+        }
+    },
     "SYNO.Backup.Task": {
         "get": {
             "task_id": 1

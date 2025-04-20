@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Desktop - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Desktop
+ * ```
+ * $result = $syno->core()->desktop()->getInitdata();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Desktop
  * @package Synology\Services\Core
  */

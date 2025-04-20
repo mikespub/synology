@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Web - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Web
+ * ```
+ * $result = $syno->core()->web()->getDSM();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Web
  * @package Synology\Services\Core
  */

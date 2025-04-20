@@ -21,6 +21,10 @@ class ServiceGenerator
         $services = [];
         foreach ($this->apilist as $root => $json) {
             $service = explode('.', $root)[1];
+            $count = $this->countSubsetMethods($root, $json);
+            echo "Service $service:\n";
+            echo json_encode($count, JSON_PRETTY_PRINT);
+            echo "\n";
             foreach ($json as $api => $values) {
                 $version = $values['maxVersion'];
                 $methods = $values['methods'][$version] ?? false;
@@ -44,16 +48,23 @@ class ServiceGenerator
                     'methods' => [],
                     'subsets' => [],
                 ];
-                // @todo improve rules for splitting
+                // improve rules for splitting
                 $split = false;
-                if ($service == 'Core' && (count($methods) > 1 || count(explode('.', $api)) > 3)) {
+                $type = str_replace($root, '', $api);
+                if (!empty($type)) {
+                    $subset = explode('.', $type)[1];
+                } else {
+                    $subset = '';
+                }
+                $count[$subset] ??= 0;
+                if ($count[$subset] > 1 || count(explode('.', $api)) > 3) {
                     $split = true;
                 }
                 foreach ($methods as $method) {
                     $type = str_replace($root, '', $api);
                     if ($split) {
                         $subset = explode('.', $type)[1];
-                        $type = str_replace('.' . $subset . '.', '', $type);
+                        $type = str_replace('.' . $subset, '', $type);
                     } else {
                         $subset = '';
                     }
@@ -119,32 +130,69 @@ class ServiceGenerator
             }
         }
         ksort($services);
-        $this->updateServiceClient($basedir, $services);
+        $this->updateServicesClient($basedir, $services);
         $this->updateServiceFiles($basedir, $services);
     }
 
     /**
-     * Summary of updateServiceClient
+     * Summary of countSubsetMethods
+     * @param string $root
+     * @param array<string, mixed> $json
+     * @return array<string, int>
+     */
+    public function countSubsetMethods($root, $json)
+    {
+        $count = [];
+        foreach ($json as $api => $values) {
+            $version = $values['maxVersion'];
+            $methods = $values['methods'][$version] ?? false;
+            if (!$methods) {
+                $version = $values['minVersion'];
+                $methods = $values['methods'][$version] ?? [];
+            }
+            $type = str_replace($root, '', $api);
+            if (empty($type)) {
+                continue;
+            }
+            $subset = explode('.', $type)[1];
+            $count[$subset] ??= 0;
+            $count[$subset] += count($methods);
+        }
+        return $count;
+    }
+
+    /**
+     * Summary of updateServicesClient
      * @param string $basedir for src/Synology/Services
      * @param array<string, mixed> $services
      * @return void
      */
-    public function updateServiceClient($basedir, $services)
+    public function updateServicesClient($basedir, $services)
     {
-        $filepath = $basedir . '/ServiceClient.php';
+        $filepath = $basedir . '/ServicesClient.php';
         $templates = [];
         $templates['property'] = $this->loadClassTemplate('class_property');
         $templates['function'] = $this->loadClassTemplate('class_function');
         $output = $this->loadClassTemplate('class_client');
         foreach ($services as $service => $info) {
-            $lower = strtolower($service);
-            $output .= $this->replaceParams($templates['property'], ['service' => $service, 'lower' => $lower]);
+            $replace = [
+                'class' => $service,
+                'property' => strtolower($service),
+            ];
+            $output .= $this->replaceParams($templates['property'], params: $replace);
         }
         foreach ($services as $service => $info) {
-            $lower = strtolower($service);
-            $output .= $this->replaceParams($templates['function'], ['service' => $service, 'lower' => $lower, 'property' => '']);
+            $replace = [
+                'api' => $service,
+                'service' => $service,
+                'class' => $service,
+                'property' => strtolower($service),
+                'client' => '',
+            ];
+            $output .= $this->replaceParams($templates['function'], $replace);
         }
         $output .= $this->loadClassTemplate('class_footer');
+        echo "DONE: $filepath\n";
         file_put_contents($filepath, $output);
     }
 
@@ -173,7 +221,17 @@ class ServiceGenerator
             //if (file_exists($filepath)) {
             //    continue;
             //}
-            $params = ['service' => $service, 'version' => $info['version']];
+            if (!empty($info['methods'])) {
+                $name = array_keys($info['methods'])[0];
+            } else {
+                $subset = array_keys($info['subsets'])[0];
+                $name = strtolower($subset) . '()->' . array_keys($info['subsets'][$subset])[0];
+            }
+            $params = [
+                'service' => $service,
+                'version' => $info['version'],
+                'call' => strtolower($service) . '()->' . $name . '();',
+            ];
             $output = $this->replaceParams($templates['header'], $params);
             if (!empty($info['subsets'])) {
                 $readme .= "        <ul>\n";
@@ -181,11 +239,28 @@ class ServiceGenerator
                 foreach ($info['subsets'] as $subset => $vars) {
                     $part = strtolower($subset);
                     $readme .= "            <li>\$syno->$lower()->$part() : <a href=\"./$service/$subset.php\">Synology\\Services\\$service\\$subset</a></li>\n";
-                    $replace = ['service' => $service . '\\' . $subset, 'lower' => strtolower($subset)];
+                    $replace = [
+                        'class' => $service . '\\' . $subset,
+                        'property' => strtolower($subset),
+                    ];
+                    // restricted class names
+                    if (in_array($subset, ['Default'])) {
+                        $replace['class'] .= 'Svc';
+                    }
                     $output .= $this->replaceParams($templates['property'], $replace);
                 }
                 foreach ($info['subsets'] as $subset => $vars) {
-                    $replace = ['service' => $service . '\\' . $subset, 'lower' => strtolower($subset), 'property' => '->client'];
+                    $replace = [
+                        'api' => $service . '.' . $subset,
+                        'service' => $service . '#/' . $service . '.' . $subset,
+                        'class' => $service . '\\' . $subset,
+                        'property' => strtolower($subset),
+                        'client' => '->client',
+                    ];
+                    // restricted class names
+                    if (in_array($subset, ['Default'])) {
+                        $replace['class'] .= 'Svc';
+                    }
                     $output .= $this->replaceParams($templates['function'], $replace);
                 }
                 $readme .= "        </ul>\n";
@@ -195,12 +270,13 @@ class ServiceGenerator
             }
             $output .= $this->replaceParams($templates['footer'], $params);
             $filepath = $basedir . '/' . $service . '.php';
-            echo "TODO: $filepath\n";
+            echo "DONE: $filepath\n";
             file_put_contents($filepath, $output);
             $readme .= "    </li>\n";
         }
         $readme .= "</ul>\n\n";
         $filepath = $basedir . '/README.md';
+        echo "DONE: $filepath\n";
         file_put_contents($filepath, $readme);
     }
 
@@ -218,14 +294,25 @@ class ServiceGenerator
             mkdir($basedir . '/' . $service);
         }
         foreach ($info['subsets'] as $subset => $vars) {
-            $replace = ['service' => $service, 'subset' => $subset, 'version' => $info['version']];
+            $name = array_keys($info['subsets'][$subset])[0];
+            $replace = [
+                'service' => $service,
+                'subset' => $subset,
+                'class' => $subset,
+                'version' => $info['version'],
+                'call' => strtolower($service) . '()->' . strtolower($subset) . '()->' . $name . '();',
+            ];
+            // restricted class names
+            if (in_array($subset, ['Default'])) {
+                $replace['class'] .= 'Svc';
+            }
             $output = $this->replaceParams($templates['subset'], $replace);
             foreach ($info['subsets'][$subset] as $name => $vars) {
                 $output .= $this->replaceParams($templates['method'], $vars);
             }
             $output .= $this->replaceParams($templates['footer'], $replace);
-            $filepath = $basedir . '/' . $service . '/' . $subset . '.php';
-            echo "TODO: $filepath\n";
+            $filepath = $basedir . '/' . $service . '/' . $replace['class'] . '.php';
+            echo "DONE: $filepath\n";
             file_put_contents($filepath, $output);
         }
     }

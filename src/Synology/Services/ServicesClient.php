@@ -5,11 +5,11 @@ namespace Synology\Services;
 use Synology\Applications\GenericClient;
 
 /**
- * Class ServiceClient
+ * Class ServicesClient
  *
  * @package Synology\Services
  */
-class ServiceClient extends GenericClient
+class ServicesClient extends GenericClient
 {
     protected ?API $apiSvc = null;
     protected ?ActiveInsight $activeinsightSvc = null;

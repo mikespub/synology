@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class Certificate - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.Certificate
+ * ```
+ * $result = $syno->core()->certificate()->listCRT();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.Certificate
  * @package Synology\Services\Core
  */

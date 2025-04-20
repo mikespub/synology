@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class OAUTH - created automatically by ServiceGenerator
  *
  * API: SYNO.OAUTH
+ * ```
+ * $result = $syno->oauth()->client()->list();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=OAUTH
  * @package Synology\Services
  */
@@ -13,80 +16,60 @@ class OAUTH extends BaseService
 {
     public const API_SERVICE_NAME = 'OAUTH';
     public const API_VERSION = 1;
+    protected ?OAUTH\Client $clientSvc = null;
+    protected ?OAUTH\Common $commonSvc = null;
+    protected ?OAUTH\Log $logSvc = null;
+    protected ?OAUTH\Token $tokenSvc = null;
 
     /**
-     * Summary of listClient
+     * Summary of client
      *
-     * API method: SYNO.OAUTH.Client list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.OAUTH.Client-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.OAUTH.Client
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=OAUTH#/OAUTH.Client
+     * @return OAUTH\Client
      */
-    public function listClient()
+    public function client()
     {
-        $api = 'Client';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->clientSvc ??= new OAUTH\Client($this->client);
+        return $this->clientSvc;
     }
 
     /**
-     * Summary of getCommon
+     * Summary of common
      *
-     * API method: SYNO.OAUTH.Common get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.OAUTH.Common-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.OAUTH.Common
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=OAUTH#/OAUTH.Common
+     * @return OAUTH\Common
      */
-    public function getCommon()
+    public function common()
     {
-        $api = 'Common';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->commonSvc ??= new OAUTH\Common($this->client);
+        return $this->commonSvc;
     }
 
     /**
-     * Summary of listLog
+     * Summary of log
      *
-     * API method: SYNO.OAUTH.Log list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.OAUTH.Log-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.OAUTH.Log
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=OAUTH#/OAUTH.Log
+     * @return OAUTH\Log
      */
-    public function listLog()
+    public function log()
     {
-        $api = 'Log';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->logSvc ??= new OAUTH\Log($this->client);
+        return $this->logSvc;
     }
 
     /**
-     * Summary of listToken
+     * Summary of token
      *
-     * API method: SYNO.OAUTH.Token list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.OAUTH.Token-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.OAUTH.Token
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=OAUTH#/OAUTH.Token
+     * @return OAUTH\Token
      */
-    public function listToken()
+    public function token()
     {
-        $api = 'Token';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->tokenSvc ??= new OAUTH\Token($this->client);
+        return $this->tokenSvc;
     }
 }

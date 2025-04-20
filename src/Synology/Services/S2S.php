@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class S2S - created automatically by ServiceGenerator
  *
  * API: SYNO.S2S
+ * ```
+ * $result = $syno->s2s()->server()->get();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=S2S
  * @package Synology\Services
  */
@@ -13,61 +16,32 @@ class S2S extends BaseService
 {
     public const API_SERVICE_NAME = 'S2S';
     public const API_VERSION = 1;
+    protected ?S2S\Server $serverSvc = null;
+    protected ?S2S\Client $clientSvc = null;
 
     /**
-     * Summary of getServer
+     * Summary of server
      *
-     * API method: SYNO.S2S.Server get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.S2S.Server-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.S2S.Server
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=S2S#/S2S.Server
+     * @return S2S\Server
      */
-    public function getServer()
+    public function server()
     {
-        $api = 'Server';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->serverSvc ??= new S2S\Server($this->client);
+        return $this->serverSvc;
     }
 
     /**
-     * Summary of listServerPair
+     * Summary of client
      *
-     * API method: SYNO.S2S.Server.Pair list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.S2S.Server.Pair-list.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.S2S.Client
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=S2S#/S2S.Client
+     * @return S2S\Client
      */
-    public function listServerPair()
+    public function client()
     {
-        $api = 'Server.Pair';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of listClientJob
-     *
-     * API method: SYNO.S2S.Client.Job list (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.S2S.Client.Job-list.json
-     * @return array|bool|string|\stdClass
-     */
-    public function listClientJob()
-    {
-        $api = 'Client.Job';
-        $path = static::API_PATH;
-        $method = 'list';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->clientSvc ??= new S2S\Client($this->client);
+        return $this->clientSvc;
     }
 }

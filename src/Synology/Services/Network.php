@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class Network - created automatically by ServiceGenerator
  *
  * API: SYNO.Network
+ * ```
+ * $result = $syno->network()->dhcpserver()->getPXE();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Network
  * @package Synology\Services
  */
@@ -13,42 +16,18 @@ class Network extends BaseService
 {
     public const API_SERVICE_NAME = 'Network';
     public const API_VERSION = 1;
+    protected ?Network\DHCPServer $dhcpserverSvc = null;
 
     /**
-     * Summary of getDHCPServerPXE
+     * Summary of dhcpserver
      *
-     * API method: SYNO.Network.DHCPServer.PXE get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Network.DHCPServer.PXE-get.json
-     * @return array|bool|string|\stdClass
+     * API: SYNO.Network.DHCPServer
+     * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Network#/Network.DHCPServer
+     * @return Network\DHCPServer
      */
-    public function getDHCPServerPXE()
+    public function dhcpserver()
     {
-        $api = 'DHCPServer.PXE';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
-    }
-
-    /**
-     * Summary of getDHCPServerVendor
-     *
-     * API method: SYNO.Network.DHCPServer.Vendor get (1)
-     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Network.DHCPServer.Vendor-get.json
-     * @return array|bool|string|\stdClass
-     */
-    public function getDHCPServerVendor()
-    {
-        $api = 'DHCPServer.Vendor';
-        $path = static::API_PATH;
-        $method = 'get';
-        $version = 1;
-        $params = [
-        ];
-        $this->client->setServiceName(static::API_SERVICE_NAME);
-        return $this->client->call($api, $path, $method, $params, $version);
+        $this->dhcpserverSvc ??= new Network\DHCPServer($this->client);
+        return $this->dhcpserverSvc;
     }
 }

@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class ISCSI - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.ISCSI
+ * ```
+ * $result = $syno->core()->iscsi()->listFCTarget();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.ISCSI
  * @package Synology\Services\Core
  */

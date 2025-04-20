@@ -8,6 +8,9 @@ use Synology\Services\BaseService;
  * Class User - created automatically by ServiceGenerator
  *
  * API: SYNO.Core.User
+ * ```
+ * $result = $syno->core()->user()->list();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Core#/Core.User
  * @package Synology\Services\Core
  */
@@ -15,6 +18,25 @@ class User extends BaseService
 {
     public const API_SERVICE_NAME = 'Core.User';
     public const API_VERSION = 1;
+
+    /**
+     * Summary of list
+     *
+     * API method: SYNO.Core.User list (1)
+     * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.User-list.json
+     * @return array|bool|string|\stdClass
+     */
+    public function list()
+    {
+        $api = '';
+        $path = static::API_PATH;
+        $method = 'list';
+        $version = 1;
+        $params = [
+        ];
+        $this->client->setServiceName(static::API_SERVICE_NAME);
+        return $this->client->call($api, $path, $method, $params, $version);
+    }
 
     /**
      * Summary of getHome
@@ -74,13 +96,13 @@ class User extends BaseService
     }
 
     /**
-     * Summary of listUsernamePolicy
+     * Summary of listnamePolicy
      *
      * API method: SYNO.Core.User.UsernamePolicy list (1)
      * @see https://github.mikespub.net/synology/tools/schemas/SYNO.Core.User.UsernamePolicy-list.json
      * @return array|bool|string|\stdClass
      */
-    public function listUsernamePolicy()
+    public function listnamePolicy()
     {
         $api = 'UsernamePolicy';
         $path = static::API_PATH;

@@ -6,6 +6,9 @@ namespace Synology\Services;
  * Class Package - created automatically by ServiceGenerator
  *
  * API: SYNO.Package
+ * ```
+ * $result = $syno->package()->list();
+ * ```
  * @see https://github.mikespub.net/synology/tools/?urls.primaryName=Package
  * @package Synology\Services
  */
