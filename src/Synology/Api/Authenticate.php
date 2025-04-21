@@ -57,16 +57,19 @@ class Authenticate extends AbstractApi
 
     /**
      * Connect to Synology
+     * @see https://kb.synology.com/en-global/DG/DSM_Login_Web_API_Guide/3
      *
      * @param string $login
      * @param string $password
-     * @param int|null $code
+     * @param int|null $code for Example 2: Login with OTP
+     * @param ?string $deviceName for Example 3: Login with OTP and to enable to omit 2-factor verification
+     * @param ?string $deviceId for Example 4: Login with omitted OTP
      *
      * @return Api
      */
-    public function connect($login, $password, $code = null)
+    public function connect($login, $password, $code = null, $deviceName = null, $deviceId = null)
     {
-        return $this->authApi->connect($login, $password, $this->sessionName, $code);
+        return $this->authApi->connect($login, $password, $this->sessionName, $code, $deviceName, $deviceId);
     }
 
     /**
@@ -76,6 +79,15 @@ class Authenticate extends AbstractApi
     public function disconnect()
     {
         return $this->authApi->disconnect();
+    }
+
+    /**
+     * Refresh SynoToken to avoid CSRF
+     * @return string|null
+     */
+    public function refreshToken()
+    {
+        return $this->authApi->refreshToken();
     }
 
     /**
@@ -117,6 +129,24 @@ class Authenticate extends AbstractApi
     }
 
     /**
+     * Get device id (if any) for next login with omitted OTP - see Example 3 & 4 above
+     * @return string|null
+     */
+    public function getDeviceId()
+    {
+        return $this->authApi->getDeviceId();
+    }
+
+    /**
+     * Get current SynoToken to avoid CSRF (if any)
+     * @return string|null
+     */
+    public function getSynoToken()
+    {
+        return $this->authApi->getSynoToken();
+    }
+
+    /**
      * Return true if connected
      *
      * @return boolean
@@ -141,6 +171,7 @@ class Authenticate extends AbstractApi
             }
 
             $params['_sid'] = $this->getSessionId();
+            // @todo send + refresh SynoToken if requested
 
             return parent::request($api, $path, $method, $params, $version, $httpMethod);
         }
