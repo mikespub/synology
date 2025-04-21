@@ -2,9 +2,9 @@
 
 namespace Synology;
 
-//const API_HOST = '192.168.2.127';
-const API_HOST = 'diskstation';
-const API_PORT = 5000;
+//const SYNO_HOST = '192.168.2.127';
+const SYNO_HOST = 'diskstation';
+const SYNO_PORT = 5000;
 
 const API_KEY_PORTAINER = 'ptr_...';
 const API_KEY_TRAEFIK = '...';
@@ -545,8 +545,8 @@ class RestApiGateway
     }
 }
 
-$address = API_HOST;
-$port = API_PORT;
+$address = SYNO_HOST;
+$port = SYNO_PORT;
 $options = [
     //'config_dir' => 'api/example',
     'config_dir' => __DIR__,

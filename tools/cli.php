@@ -12,7 +12,7 @@ if (PHP_SAPI !== 'cli') {
     echo "This script is meant to run from commmand line\n";
     exit;
 }
-if (!file_exists(__DIR__ . '/.env') && empty($_ENV['API_HOST'])) {
+if (!file_exists(__DIR__ . '/.env') && empty($_ENV['SYNO_HOST'])) {
     echo "Copy tools/.env.sample to tools/.env and adapt as needed, or set environment variables\n";
     exit;
 }

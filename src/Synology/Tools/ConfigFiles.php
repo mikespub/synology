@@ -23,6 +23,9 @@ trait ConfigFiles
     public string $http;
     protected string $user;
     protected string $pass;
+    protected ?int $code = null;
+    protected ?string $deviceName = null;
+    protected ?string $deviceId = null;
     protected string $tools;
     /** @var array<string, mixed> */
     protected array $apilist = [];
@@ -37,10 +40,13 @@ trait ConfigFiles
      * @param ?string $username
      * @param ?string $password
      * @param ?string $protocol
+     * @param ?int    $code
+     * @param ?string $deviceName
+     * @param ?string $deviceId
      */
-    public function __construct($address = null, $port = null, $username = null, $password = null, $protocol = null)
+    public function __construct($address = null, $port = null, $username = null, $password = null, $protocol = null, $code = null, $deviceName = null, $deviceId = null)
     {
-        $this->setEnvVars($address, $port, $username, $password, $protocol);
+        $this->setEnvVars($address, $port, $username, $password, $protocol, $code, $deviceName, $deviceId);
         $tools = dirname(__DIR__, 3) . '/tools';
         $this->loadApiList($tools);
     }
@@ -52,15 +58,21 @@ trait ConfigFiles
      * @param ?string $username
      * @param ?string $password
      * @param ?string $protocol
+     * @param ?int    $code
+     * @param ?string $deviceName
+     * @param ?string $deviceId
      * @return void
      */
-    public function setEnvVars($address = null, $port = null, $username = null, $password = null, $protocol = null)
+    public function setEnvVars($address = null, $port = null, $username = null, $password = null, $protocol = null, $code = null, $deviceName = null, $deviceId = null)
     {
-        $this->host = $address ?? $_ENV['API_HOST'] ?? 'localhost';
-        $this->port = (int) ($port ?? $_ENV['API_PORT'] ?? 5001);
-        $this->user = $username ?? $_ENV['API_USER'] ?? 'admin';
-        $this->pass = $password ?? $_ENV['API_PASS'] ?? '*****';
+        $this->host = $address ?? $_ENV['SYNO_HOST'] ?? 'localhost';
+        $this->port = (int) ($port ?? $_ENV['SYNO_PORT'] ?? 5001);
+        $this->user = $username ?? $_ENV['SYNO_USER'] ?? 'admin';
+        $this->pass = $password ?? $_ENV['SYNO_PASS'] ?? '*****';
         $this->http = $protocol ?? (($this->port === 5001) ? 'https' : 'http');
+        $this->code = $code ?? $_ENV['SYNO_OTP_CODE'] ?? null;
+        $this->deviceName = $deviceName ?? $_ENV['SYNO_DEVICE_NAME'] ?? null;
+        $this->deviceId = $deviceId ?? $_ENV['SYNO_DEVICE_ID'] ?? null;
     }
 
     /**
@@ -74,7 +86,7 @@ trait ConfigFiles
     {
         $client = ClientFactory::getGeneric($service, $this->host, $this->port, $this->http, $version);
         if ($connect) {
-            $client->connect($this->user, $this->pass);
+            $client->connect($this->user, $this->pass, $this->code, $this->deviceName, $this->deviceId);
         }
         return $client;
     }
