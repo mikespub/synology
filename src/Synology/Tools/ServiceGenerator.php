@@ -22,9 +22,6 @@ class ServiceGenerator
         foreach ($this->apilist as $root => $json) {
             $service = explode('.', $root)[1];
             $count = $this->countSubsetMethods($root, $json);
-            echo "Service $service:\n";
-            echo json_encode($count, JSON_PRETTY_PRINT);
-            echo "\n";
             foreach ($json as $api => $values) {
                 $version = $values['maxVersion'];
                 $methods = $values['methods'][$version] ?? false;

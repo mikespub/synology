@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "ActionPrivilege": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "AppPrivilege": {
       "type": "object"
@@ -107,7 +108,8 @@
           "type": "string"
         },
         "protect_groups": {
-          "type": "array"
+          "type": "array",
+          "items": {}
         },
         "protect_title": {
           "type": "string"
@@ -116,7 +118,8 @@
           "type": "string"
         },
         "protect_users": {
-          "type": "array"
+          "type": "array",
+          "items": {}
         },
         "redirect_type": {
           "type": "string"

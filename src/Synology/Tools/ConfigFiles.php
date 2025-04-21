@@ -4,6 +4,7 @@ namespace Synology\Tools;
 
 use Synology\Applications\ClientFactory;
 use Synology\Applications\GenericClient;
+use Synology\Services\ServicesClient;
 
 /**
  * Summary of ConfigFiles
@@ -89,6 +90,20 @@ trait ConfigFiles
             $client->connect($this->user, $this->pass, $this->code, $this->deviceName, $this->deviceId);
         }
         return $client;
+    }
+
+    /**
+     * Summary of getServicesClient
+     * @param bool   $connect default true
+     * @return ServicesClient
+     */
+    public function getServicesClient($connect = true)
+    {
+        $syno = ClientFactory::getServices($this->host, $this->port, $this->http);
+        if ($connect) {
+            $syno->connect($this->user, $this->pass, $this->code, $this->deviceName, $this->deviceId);
+        }
+        return $syno;
     }
 
     /**

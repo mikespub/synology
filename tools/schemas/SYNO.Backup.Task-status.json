@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "is_modified": {
+      "type": "boolean"
+    },
+    "last_bkp_end_time": {
+      "type": "string"
+    },
+    "last_bkp_error": {
+      "type": "string"
+    },
+    "last_bkp_error_code": {
+      "type": "integer"
+    },
+    "last_bkp_result": {
+      "type": "string"
+    },
+    "last_bkp_success_time": {
+      "type": "string"
+    },
+    "last_bkp_success_version": {
+      "type": "string"
+    },
+    "last_bkp_time": {
+      "type": "string"
+    },
+    "next_bkp_time": {
+      "type": "string"
+    },
+    "schedule": {
+      "type": "object",
+      "properties": {
+        "schedule": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string"
+            },
+            "date_type": {
+              "type": "integer"
+            },
+            "hour": {
+              "type": "integer"
+            },
+            "last_work_hour": {
+              "type": "integer"
+            },
+            "min": {
+              "type": "integer"
+            },
+            "monthly_week": {
+              "type": "array",
+              "items": {}
+            },
+            "next_trigger_time": {
+              "type": "string"
+            },
+            "repeat": {
+              "type": "integer"
+            },
+            "repeat_hour": {
+              "type": "integer"
+            },
+            "repeat_hour_store_config": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "repeat_min": {
+              "type": "integer"
+            },
+            "repeat_min_store_config": {
+              "type": "array",
+              "items": {}
+            },
+            "week_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "date",
+            "date_type",
+            "hour",
+            "last_work_hour",
+            "min",
+            "monthly_week",
+            "next_trigger_time",
+            "repeat",
+            "repeat_hour",
+            "repeat_hour_store_config",
+            "repeat_min",
+            "repeat_min_store_config",
+            "week_name"
+          ]
+        },
+        "schedule_enable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "schedule",
+        "schedule_enable"
+      ]
+    },
+    "state": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "is_modified",
+    "last_bkp_end_time",
+    "last_bkp_error",
+    "last_bkp_error_code",
+    "last_bkp_result",
+    "last_bkp_success_time",
+    "last_bkp_success_version",
+    "last_bkp_time",
+    "next_bkp_time",
+    "schedule",
+    "state",
+    "status",
+    "task_id"
+  ]
+}

@@ -13,8 +13,34 @@
         }
     },
     "SYNO.Backup.Task": {
+        "list": {
+            "sort_by": "name",
+            "additional": [
+                "last_bkp_time",
+                "last_bkp_result",
+                "get_source",
+                "is_modified",
+                "progress_title_type"
+            ]
+        },
         "get": {
-            "task_id": 1
+            "task_id": 1,
+            "additional": [
+                "repository",
+                "schedule"
+            ]
+        },
+        "status": {
+            "task_id": 1,
+            "blOnline": false,
+            "additional": [
+                "last_bkp_time",
+                "next_bkp_time",
+                "last_bkp_result",
+                "is_modified",
+                "last_bkp_progress",
+                "last_bkp_success_version"
+            ]
         }
     },
     "SYNO.CloudSync": {

@@ -346,6 +346,30 @@ paths:
       #  - query_sid: []
       parameters:
         - $ref: '#/components/parameters/path_sid'
+        - in: query
+          name: account
+          required: true
+          schema:
+            type: string
+            default: username
+        - in: query
+          name: passwd
+          required: true
+          schema:
+            type: string
+            default: password
+        - in: query
+          name: session
+          required: true
+          schema:
+            type: string
+            default: default
+        - in: query
+          name: format
+          required: true
+          schema:
+            type: string
+            default: sid
   '/entry.cgi?api=SYNO.API.Auth.Key&version=7&method=grant&_sid={_sid}':
     get:
       tags:
@@ -5346,6 +5370,18 @@ paths:
       #  - query_sid: []
       parameters:
         - $ref: '#/components/parameters/path_sid'
+        - in: query
+          name: sort_by
+          required: true
+          schema:
+            type: string
+            default: name
+        - in: query
+          name: additional
+          required: true
+          schema:
+            type: string
+            default: '["last_bkp_time","last_bkp_result","get_source","is_modified","progress_title_type"]'
   '/entry.cgi?api=SYNO.Backup.Task&version=1&method=delete&_sid={_sid}':
     get:
       tags:
@@ -5634,7 +5670,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NormalResponse'
+                $ref: '#/components/schemas/Backup.Task_StatusResponse'
         default:
           description: Abnormal Response
           content:
@@ -5645,6 +5681,24 @@ paths:
       #  - query_sid: []
       parameters:
         - $ref: '#/components/parameters/path_sid'
+        - in: query
+          name: task_id
+          required: true
+          schema:
+            type: string
+            default: 1
+        - in: query
+          name: blOnline
+          required: true
+          schema:
+            type: string
+            default: 'false'
+        - in: query
+          name: additional
+          required: true
+          schema:
+            type: string
+            default: '["last_bkp_time","next_bkp_time","last_bkp_result","is_modified","last_bkp_progress","last_bkp_success_version"]'
   '/entry.cgi?api=SYNO.Backup.Task&version=1&method=get&_sid={_sid}':
     get:
       tags:
@@ -5674,6 +5728,12 @@ paths:
           schema:
             type: string
             default: 1
+        - in: query
+          name: additional
+          required: true
+          schema:
+            type: string
+            default: '["repository","schedule"]'
   '/entry.cgi?api=SYNO.Backup.Task&version=1&method=mark&_sid={_sid}':
     get:
       tags:
@@ -97733,6 +97793,24 @@ components:
           description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
         data:
           $ref: '../schemas/SYNO.Backup.Task-list.json'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: An integer number error code will be returned when a request fails.
+            errors:
+              type: array
+              items:
+                type: object
+    Backup.Task_StatusResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+        data:
+          $ref: '../schemas/SYNO.Backup.Task-status.json'
         error:
           type: object
           properties:

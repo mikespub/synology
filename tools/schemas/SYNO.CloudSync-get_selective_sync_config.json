@@ -12,7 +12,8 @@
       "type": "integer"
     },
     "filtered_names": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "filtered_paths": {
       "type": "array",
@@ -27,7 +28,8 @@
       }
     },
     "user_defined_names": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [

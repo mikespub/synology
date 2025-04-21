@@ -32,11 +32,193 @@
             "type": "array",
             "items": {}
           },
+          "is_modified": {
+            "type": "boolean"
+          },
+          "last_bkp_end_time": {
+            "type": "string"
+          },
+          "last_bkp_result": {
+            "type": "string"
+          },
+          "last_bkp_time": {
+            "type": "string"
+          },
           "name": {
             "type": "string"
           },
           "repo_id": {
             "type": "integer"
+          },
+          "source": {
+            "type": "object",
+            "properties": {
+              "app_config": {
+                "type": "array",
+                "items": {}
+              },
+              "app_list": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "app_name_list": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "backup_filter": {
+                "type": "object",
+                "properties": {
+                  "exclude_list": {
+                    "type": "array",
+                    "items": {}
+                  },
+                  "whitelist": {
+                    "type": "array",
+                    "items": {}
+                  }
+                },
+                "required": [
+                  "exclude_list",
+                  "whitelist"
+                ]
+              },
+              "backup_volumes": {
+                "type": "array",
+                "items": {}
+              },
+              "file_list": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "dataEncrypted": {
+                      "type": "boolean"
+                    },
+                    "encryptedShare": {
+                      "type": "boolean"
+                    },
+                    "fileSystem": {
+                      "type": "string"
+                    },
+                    "fileSystemType": {
+                      "type": "string"
+                    },
+                    "folderPath": {
+                      "type": "string"
+                    },
+                    "fullPath": {
+                      "type": "string"
+                    },
+                    "isValidSource": {
+                      "type": "boolean"
+                    },
+                    "missing": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "dataEncrypted",
+                    "encryptedShare",
+                    "fileSystem",
+                    "fileSystemType",
+                    "folderPath",
+                    "fullPath",
+                    "isValidSource",
+                    "missing"
+                  ]
+                }
+              },
+              "folder_list": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "dataEncrypted": {
+                      "type": "boolean"
+                    },
+                    "encryptedShare": {
+                      "type": "boolean"
+                    },
+                    "fileSystem": {
+                      "type": "string"
+                    },
+                    "fileSystemType": {
+                      "type": "string"
+                    },
+                    "folderPath": {
+                      "type": "string"
+                    },
+                    "fullPath": {
+                      "type": "string"
+                    },
+                    "isValidSource": {
+                      "type": "boolean"
+                    },
+                    "missing": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "dataEncrypted",
+                    "encryptedShare",
+                    "fileSystem",
+                    "fileSystemType",
+                    "folderPath",
+                    "fullPath",
+                    "isValidSource",
+                    "missing"
+                  ]
+                }
+              },
+              "share_list": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "properties": {
+                    "dataEncrypted": {
+                      "type": "boolean"
+                    },
+                    "encryptedShare": {
+                      "type": "boolean"
+                    },
+                    "fileSystem": {
+                      "type": "string"
+                    },
+                    "fileSystemType": {
+                      "type": "string"
+                    },
+                    "fullPath": {
+                      "type": "string"
+                    },
+                    "isValidSource": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "dataEncrypted",
+                    "encryptedShare",
+                    "fileSystem",
+                    "fileSystemType",
+                    "fullPath",
+                    "isValidSource"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "app_config",
+              "app_list",
+              "app_name_list",
+              "backup_filter",
+              "backup_volumes",
+              "file_list",
+              "folder_list",
+              "share_list"
+            ]
           },
           "state": {
             "type": "string"
@@ -64,8 +246,13 @@
           "data_enc",
           "data_type",
           "ext3ShareList",
+          "is_modified",
+          "last_bkp_end_time",
+          "last_bkp_result",
+          "last_bkp_time",
           "name",
           "repo_id",
+          "source",
           "state",
           "status",
           "target_id",

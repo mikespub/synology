@@ -251,6 +251,31 @@ paths:
                 type: object
       security:
         - query_sid: []
+      parameters:
+        - in: query
+          name: account
+          required: true
+          schema:
+            type: string
+            default: username
+        - in: query
+          name: passwd
+          required: true
+          schema:
+            type: string
+            default: password
+        - in: query
+          name: session
+          required: true
+          schema:
+            type: string
+            default: default
+        - in: query
+          name: format
+          required: true
+          schema:
+            type: string
+            default: sid
   /SYNO.API.Auth.Key/v7/grant:
     get:
       tags:

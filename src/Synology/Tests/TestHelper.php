@@ -133,7 +133,7 @@ trait TestHelper
         $client->setResponseFactory($responses);
 
         // get services client for any service
-        $syno = ClientFactory::getServices($this->address, $this->port, $this->protocol, $this->version);
+        $syno = ClientFactory::getServices($this->address, $this->port, $this->protocol);
         $syno->setHttpClient($client);
 
         // connect with loginFile response

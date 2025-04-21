@@ -9,7 +9,8 @@
       "type": "string"
     },
     "ext3ShareList": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "name": {
       "type": "string"
@@ -17,11 +18,127 @@
     "repo_id": {
       "type": "integer"
     },
+    "repository": {
+      "type": "object",
+      "properties": {
+        "bucket": {
+          "type": "string"
+        },
+        "container": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "repo_id": {
+          "type": "integer"
+        },
+        "secret": {
+          "type": "string"
+        },
+        "target_type": {
+          "type": "string"
+        },
+        "transfer_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "bucket",
+        "container",
+        "key",
+        "name",
+        "repo_id",
+        "secret",
+        "target_type",
+        "transfer_type"
+      ]
+    },
+    "schedule": {
+      "type": "object",
+      "properties": {
+        "schedule": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string"
+            },
+            "date_type": {
+              "type": "integer"
+            },
+            "hour": {
+              "type": "integer"
+            },
+            "last_work_hour": {
+              "type": "integer"
+            },
+            "min": {
+              "type": "integer"
+            },
+            "monthly_week": {
+              "type": "array",
+              "items": {}
+            },
+            "next_trigger_time": {
+              "type": "string"
+            },
+            "repeat": {
+              "type": "integer"
+            },
+            "repeat_hour": {
+              "type": "integer"
+            },
+            "repeat_hour_store_config": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "repeat_min": {
+              "type": "integer"
+            },
+            "repeat_min_store_config": {
+              "type": "array",
+              "items": {}
+            },
+            "week_name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "date",
+            "date_type",
+            "hour",
+            "last_work_hour",
+            "min",
+            "monthly_week",
+            "next_trigger_time",
+            "repeat",
+            "repeat_hour",
+            "repeat_hour_store_config",
+            "repeat_min",
+            "repeat_min_store_config",
+            "week_name"
+          ]
+        },
+        "schedule_enable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "schedule",
+        "schedule_enable"
+      ]
+    },
     "source": {
       "type": "object",
       "properties": {
         "app_config": {
-          "type": "array"
+          "type": "array",
+          "items": {}
         },
         "app_list": {
           "type": "array",
@@ -39,10 +156,12 @@
           "type": "object",
           "properties": {
             "exclude_list": {
-              "type": "array"
+              "type": "array",
+              "items": {}
             },
             "whitelist": {
-              "type": "array"
+              "type": "array",
+              "items": {}
             }
           },
           "required": [
@@ -51,7 +170,8 @@
           ]
         },
         "backup_volumes": {
-          "type": "array"
+          "type": "array",
+          "items": {}
         },
         "file_list": {
           "type": "array",
@@ -211,6 +331,8 @@
     "ext3ShareList",
     "name",
     "repo_id",
+    "repository",
+    "schedule",
     "source",
     "state",
     "status",

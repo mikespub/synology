@@ -40,10 +40,12 @@
       "type": "boolean"
     },
     "processing_items": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     },
     "server_merge_items": {
-      "type": "array"
+      "type": "array",
+      "items": {}
     }
   },
   "required": [
